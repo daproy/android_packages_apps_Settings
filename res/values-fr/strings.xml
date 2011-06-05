@@ -1407,4 +1407,8 @@
     <!-- Summary for connection overrides via profiles -->
     <string name="profile_connectionoverrides_summary">Activer/désactiver</string>
 
+    <!-- Proximity work-around -->
+    <string name="is_inaccurate_proximity_title">Capteur de proximité</string>
+    <string name="is_inaccurate_proximity_summary">Correctif pour le capteur de proximité, utiliser cette option pour obliger l\'écran à rester allumé après un appel.</string>
+
 </resources>

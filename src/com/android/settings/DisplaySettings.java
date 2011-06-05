@@ -45,9 +45,12 @@ public class DisplaySettings extends PreferenceActivity implements
     private static final String KEY_SCREEN_TIMEOUT = "screen_timeout";
     private static final String KEY_ANIMATIONS = "animations";
     private static final String KEY_ACCELEROMETER = "accelerometer";
+    private static final String IS_INACCURATE_PROXIMITY = "is_inaccurate_proximity";
 
     private ListPreference mAnimations;
     private CheckBoxPreference mAccelerometer;
+    private CheckBoxPreference mInaccurateProximityPref;
+
     private float[] mAnimationScales;
 
     private IWindowManager mWindowManager;
@@ -71,6 +74,13 @@ public class DisplaySettings extends PreferenceActivity implements
                 resolver, SCREEN_OFF_TIMEOUT, FALLBACK_SCREEN_TIMEOUT_VALUE)));
         screenTimeoutPreference.setOnPreferenceChangeListener(this);
         disableUnusableTimeouts(screenTimeoutPreference);
+
+        /* In-accurate proximity */
+        mInaccurateProximityPref = (CheckBoxPreference) findPreference(IS_INACCURATE_PROXIMITY);
+        if (mInaccurateProximityPref != null) {
+            mInaccurateProximityPref.setChecked(Settings.System.getInt(getContentResolver(),
+                    Settings.System.INACCURATE_PROXIMITY_WORKAROUND, 0) == 1);
+        }
     }
 
     private void disableUnusableTimeouts(ListPreference screenTimeoutPreference) {
@@ -165,6 +175,11 @@ public class DisplaySettings extends PreferenceActivity implements
             Settings.System.putInt(getContentResolver(),
                     Settings.System.ACCELEROMETER_ROTATION,
                     mAccelerometer.isChecked() ? 1 : 0);
+        }
+        if (preference == mInaccurateProximityPref) {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.INACCURATE_PROXIMITY_WORKAROUND,
+                    mInaccurateProximityPref.isChecked() ? 1 : 0);
         }
         return true;
     }
