@@ -74,7 +74,6 @@ public class WifiSettings extends PreferenceActivity implements DialogInterface.
 
     private DetailedState mLastState;
     private WifiInfo mLastInfo;
-    private int mLastPriority;
 
     private boolean mResetNetworks = false;
     private int mKeyStoreNetworkId = -1;
@@ -317,23 +316,6 @@ public class WifiSettings extends PreferenceActivity implements DialogInterface.
             return;
         }
 
-        // Reset the priority of each network if it goes too high.
-        if (mLastPriority > 1000000) {
-            for (int i = mAccessPoints.getPreferenceCount() - 1; i >= 0; --i) {
-                AccessPoint accessPoint = (AccessPoint) mAccessPoints.getPreference(i);
-                if (accessPoint.networkId != -1) {
-                    WifiConfiguration c = new WifiConfiguration();
-                    c.adhocSSID = accessPoint.adhoc;
-                    c.networkId = accessPoint.networkId;
-                    c.priority = 0;
-                    mWifiManager.updateNetwork(c);
-                }
-            }
-            mLastPriority = 0;
-        }
-
-        // Set to the highest priority and save the configuration.
-        config.priority = ++mLastPriority;
         mWifiManager.updateNetwork(config);
         saveNetworks();
 
@@ -365,12 +347,7 @@ public class WifiSettings extends PreferenceActivity implements DialogInterface.
 
         List<WifiConfiguration> configs = mWifiManager.getConfiguredNetworks();
         if (configs != null) {
-            mLastPriority = 0;
             for (WifiConfiguration config : configs) {
-                if (config.priority > mLastPriority) {
-                    mLastPriority = config.priority;
-                }
-
                 // Shift the status to make enableNetworks() more efficient.
                 if (config.status == Status.CURRENT) {
                     config.status = Status.ENABLED;
