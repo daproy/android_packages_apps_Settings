@@ -169,20 +169,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/wifi_show_password" />
-
-            <TextView
-                    style="?android:attr/textAppearanceSmallInverse"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dip"
-                    android:text="@string/wifi_priority" />
-
-            <EditText android:id="@+id/priority"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:singleLine="true"
-                    android:numeric="decimal"
-                    android:maxLength="5" />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

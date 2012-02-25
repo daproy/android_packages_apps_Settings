@@ -57,7 +57,6 @@ class WifiDialog extends AlertDialog implements View.OnClickListener,
     private TextView mSsid;
     private int mSecurity;
     private TextView mPassword;
-    private TextView mPriority;
 
     private Spinner mEapMethod;
     private Spinner mEapCaCert;
@@ -105,8 +104,6 @@ class WifiDialog extends AlertDialog implements View.OnClickListener,
             config.networkId = mAccessPoint.networkId;
             config.adhocSSID = mAccessPoint.adhoc;
         }
-
-        config.priority = (mPriority.length() == 0) ? 0 : Integer.parseInt(mPriority.getText().toString());
 
         switch (mSecurity) {
             case AccessPoint.SECURITY_NONE:
@@ -299,14 +296,6 @@ class WifiDialog extends AlertDialog implements View.OnClickListener,
 
             if (mAccessPoint != null && mAccessPoint.networkId != -1) {
                 mPassword.setHint(R.string.wifi_unchanged);
-            }
-        }
-
-        if (mPriority == null) {
-            mPriority = (TextView) mView.findViewById(R.id.priority);
-            if (mAccessPoint != null && mAccessPoint.networkId != -1) {
-                WifiConfiguration config = mAccessPoint.getConfig();
-                mPriority.setText(Integer.toString(config.priority));
             }
         }
 
