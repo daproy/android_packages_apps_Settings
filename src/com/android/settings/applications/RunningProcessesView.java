@@ -359,6 +359,30 @@ public class RunningProcessesView extends FrameLayout
         return 0;
     }
 
+    private long readTotalMem() {
+        try {
+            long memTotal = 0;
+            FileInputStream is = new FileInputStream("/proc/meminfo");
+            int len = is.read(mBuffer);
+            is.close();
+            final int BUFLEN = mBuffer.length;
+            for (int i=0; i<len && (memTotal == 0); i++) {
+                if (matchText(mBuffer, i, "MemTotal")) {
+                    i += 8;
+                    memTotal = extractMemValue(mBuffer, i);
+                }
+                while (i < BUFLEN && mBuffer[i] != '\n') {
+                    i++;
+                }
+            }
+            return memTotal;
+        } catch (java.io.FileNotFoundException e) {
+        } catch (java.io.IOException e) {
+        }
+        return 0;
+    }
+
+
     
     void refreshUi(boolean dataChanged) {
         if (dataChanged) {
@@ -386,10 +410,14 @@ public class RunningProcessesView extends FrameLayout
                 mLastNumBackgroundProcesses = mState.mNumBackgroundProcesses;
                 mLastBackgroundProcessMemory = mState.mBackgroundProcessMemory;
                 mLastAvailMemory = availMem;
-                String sizeStr = Formatter.formatShortFileSize(getContext(),
-                        mLastAvailMemory + mLastBackgroundProcessMemory);
+                long freeMem = mLastAvailMemory + mLastBackgroundProcessMemory;
+                String sizeStr = Formatter.formatShortFileSize(getContext(), freeMem);
                 mBackgroundProcessText.setText(getResources().getString(
                         R.string.service_background_processes, sizeStr));
+                sizeStr = Formatter.formatShortFileSize(getContext(),
+                        readTotalMem() - freeMem);
+                mForegroundProcessText.setText(getResources().getString(
+                        R.string.service_foreground_processes, sizeStr));
             }
             if (mLastNumForegroundProcesses != mState.mNumForegroundProcesses
                     || mLastForegroundProcessMemory != mState.mForegroundProcessMemory
@@ -399,15 +427,18 @@ public class RunningProcessesView extends FrameLayout
                 mLastForegroundProcessMemory = mState.mForegroundProcessMemory;
                 mLastNumServiceProcesses = mState.mNumServiceProcesses;
                 mLastServiceProcessMemory = mState.mServiceProcessMemory;
+                /*
                 String sizeStr = Formatter.formatShortFileSize(getContext(),
                         mLastForegroundProcessMemory + mLastServiceProcessMemory);
                 mForegroundProcessText.setText(getResources().getString(
                         R.string.service_foreground_processes, sizeStr));
+                */
             }
             
-            float totalMem = availMem + mLastBackgroundProcessMemory
-                    + mLastForegroundProcessMemory + mLastServiceProcessMemory;
-            mColorBar.setRatios(mLastForegroundProcessMemory/totalMem,
+            float totalMem = readTotalMem();
+            float totalShownMem = availMem + mLastBackgroundProcessMemory
+                    + mLastServiceProcessMemory;
+            mColorBar.setRatios((totalMem-totalShownMem)/totalMem,
                     mLastServiceProcessMemory/totalMem,
                     mLastBackgroundProcessMemory/totalMem);
         }
