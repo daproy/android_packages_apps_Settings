@@ -1736,6 +1736,8 @@
     <string name="lockpattern_settings_enable_summary">Must draw pattern to unlock screen</string>
     <!-- Security & location settings screen, setting check box title. This setting controls whether a visible green line is drawn as the user moves his finger around while drawing the unlock pattern.  If checked, this line is drawn.  If unchecked, there is nothing drawn so the user does not reveal his pattern while he unlocks the phone.-->
     <string name="lockpattern_settings_enable_visible_pattern_title">Use visible pattern</string>
+    <!-- Security & location settings screen, setting check box title. This setting controls whether a visible red line will be drawn after the user has drawn the unlock pattern incorrectly.  If checked, this line is drawn.  If unchecked, there is nothing drawn so the user does not reveal his pattern while he unlocks the phone.-->
+    <string name="lockpattern_settings_enable_error_path_title">Show pattern error</string>
     <!-- Security & location settings screen, setting check box title. This setting controls whether tactile feedback will be produced when the user draws the pattern.-->
     <string name="lockpattern_settings_enable_tactile_feedback_title">Use tactile feedback</string>
     <!-- Security & location settings screen, setting option name when user has never set an unlock pattern -->
@@ -1787,7 +1789,7 @@
     <!-- Applications settings screen, setting check box title. If checked, the system allows installation of applications that are downloaded from random places, such as web sites.  -->
     <string name="install_applications">Unknown sources</string>
     <!-- Applications settings screen, setting check box summary.  This is the summary for "Unknown sources" checkbox  -->
-    <string name="install_unknown_applications">Allow installation of non-Market applications</string>
+    <string name="install_unknown_applications">Allow installation of non-Play Store applications</string>
     <!-- Applications settings screen, message text of alert that appears if user selects the "Unknown sources" check box -->
     <string name="install_all_warning">Your phone and personal data are more vulnerable to attack by applications
  from unknown sources. You agree that you are solely responsible for any
@@ -2315,14 +2317,14 @@ found in the list of installed applications.</string>
          selects to disable accessibility. This avoids accidental disabling. -->
     <string name="accessibility_service_disable_warning">Disable accessibility?</string>
     <!-- Title for the prompt that lets users know that they have no accessibility related apps
-         installed and that they can install TalkBack from Market. -->
+         installed and that they can install TalkBack from Play Store. -->
     <string name="accessibility_service_no_apps_title">No accessibility related applications found
         </string>
     <!-- Message for the prompt that lets users know that they have no accessibility related apps
-         installed and that they can install TalkBack from Market. -->
+         installed and that they can install TalkBack from Play Store. -->
     <string name="accessibility_service_no_apps_message">You do not have any accessibility related
-        applications installed.\n\nYou can download a screen reader for your device from Android
-        Market.\n\nClick "OK" to install the screen reader.</string>
+        applications installed.\n\nYou can download a screen reader for your device from Google
+        Play.\n\nClick "OK" to install the screen reader.</string>
 
     <!-- Accessibility settings: Power button category -->
     <string name="accessibility_power_button_category">Power button</string>
