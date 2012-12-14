@@ -467,6 +467,12 @@ public class ManageApplications extends Fragment implements
             mRunningProcessesView.setVisibility(View.VISIBLE);
             mLoadingContainer.setVisibility(View.GONE);
         }
+
+        private void releaseTab() {
+            if (mApplications != null) {
+                mApplications.releaseApplicationsAdapter();
+            }
+        }
     }
     private final ArrayList<TabInfo> mTabs = new ArrayList<TabInfo>();
     private int mNumTabs;
@@ -858,6 +864,20 @@ public class ManageApplications extends Fragment implements
         public void onMovedToScrapHeap(View view) {
             mActive.remove(view);
         }
+
+        private void releaseApplicationsAdapter() {
+            if (mBaseEntries != null) {
+                mBaseEntries.clear();
+            }
+
+            if (mEntries != null) {
+                mEntries.clear();
+            }
+
+            if (mSession != null) {
+                mSession.release();
+            }
+        }
     }
 
     @Override
@@ -1136,6 +1156,15 @@ public class ManageApplications extends Fragment implements
     @Override
     public void onDestroy() {
         getActivity().unbindService(mContainerConnection);
+
+        if (mApplicationsState != null) {
+            mApplicationsState.releaseApplicationState();
+        }
+
+        for (int i = 0; i < mTabs.size(); i++) {
+            mTabs.get(i).releaseTab();
+        }
+
         super.onDestroy();
     }
 
