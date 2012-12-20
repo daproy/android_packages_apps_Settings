@@ -9,6 +9,7 @@
     android:paddingRight="5dp"
     android:orientation="vertical">
 
+<<<<<<< HEAD
     <TextView
         android:id="@+id/seek_text"
         android:layout_width="match_parent"
@@ -17,6 +18,8 @@
         android:layout_marginLeft="10dip"
         android:layout_marginRight="10dip" />
 
+=======
+>>>>>>> 1817ef6... Port: AOKP navbar navring to settings
     <SeekBar
         android:id="@+id/seek_bar"
         android:layout_width="match_parent"

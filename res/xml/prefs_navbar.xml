@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/header_summary_navbar"
+	xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+        <CheckBoxPreference
+                android:key="enable_nav_bar"
+                android:title="@string/navbar_enable_bar" />
+
+        <ListPreference
+                android:entries="@array/pref_navigation_menu_entries"
+                android:entryValues="@array/pref_navigation_menu_values"
+                android:key="pref_menu_display"
+                android:title="@string/title_pref_menu_display"
+                android:summary="@string/summary_pref_menu_display" />
+
+        <ListPreference
+                android:entries="@array/pref_navigation_menu_display_entries"
+                android:entryValues="@array/pref_navigation_menu_display_values"
+                android:key="navbar_menu_display"
+                android:title="@string/title_pref_navigation_menu_display"
+                android:summary="@string/summary_pref_navigation_menu_display" />
+        <ListPreference
+                android:entries="@array/navigation_bar_qty_entries"
+                android:entryValues="@array/navigation_bar_qty_values"
+                android:key="navbar_qty"
+                android:title="@string/navbar_qty_title"
+                android:summary="@string/navbar_qty_summary" />
+
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+                android:key="nav_button_color"
+                android:title="@string/navigation_bar_tint_title"
+                android:defaultValue="#FFFFFF" />
+
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+                android:key="nav_button_glow_color"
+                android:title="@string/navigation_bar_glow_tint_title"
+                android:summary="@string/navigation_bar_glow_tint_summary"
+                android:defaultValue="#FFFFFF" />
+
+        <CheckBoxPreference
+                android:key="navigation_bar_menu_arrow_keys"
+                android:title="@string/navigation_bar_menu_arrow_keys_title"
+                android:summary="@string/navigation_bar_menu_arrow_keys_summary" />
+
+        <PreferenceCategory
+                android:key="navbar_buttons"
+                android:title="@string/navbar_button_cat">
+
+        </PreferenceCategory>
+
+        <PreferenceCategory
+                android:key="navbar_ring"
+                android:title="@string/navbar_ring_cat">
+        <ListPreference
+                android:entries="@array/pref_navring_amount_entries"
+                android:entryValues="@array/pref_navring_amount_values"
+                android:key="pref_navring_amount"
+                android:title="@string/title_navring_amount"
+                android:summary="@string/summary_navring_amount" />
+
+        <CheckBoxPreference
+                android:key="enable_navring_long"
+                android:title="@string/navring_enable_long" />
+
+        <Preference
+                android:key="navring_settings"
+                android:title="@string/interface_navring_settings_title"
+                android:summary="@string/interface_navring_settings_summary" />
+        </PreferenceCategory>
+
+        <PreferenceCategory
+                android:key="advanced_cat"
+                android:title="@string/advanced_settings">
+
+                <ListPreference
+                    android:entries="@array/glow_times_entries"
+                    android:entryValues="@array/glow_times_values"
+                    android:key="glow_times"
+                    android:title="@string/glow_times_title"
+                    android:defaultValue="100|10"
+                    android:persistent="false" />
+
+                <ListPreference
+                        android:entries="@array/navigation_bar_height_entries"
+                        android:entryValues="@array/navigation_bar_height"
+                        android:key="navigation_bar_height"
+                        android:title="@string/navigation_bar_height_title"
+                        android:summary="@string/navigation_bar_height_summary" />
+
+                <ListPreference
+                        android:entries="@array/navigation_bar_height_landscape_entries"
+                        android:entryValues="@array/navigation_bar_height_landscape"
+                        android:key="navigation_bar_height_landscape"
+                        android:title="@string/navigation_bar_height_landscape_title"
+                        android:summary="@string/navigation_bar_height_landscape_summary" />
+
+                <ListPreference
+                        android:entries="@array/navigation_bar_width_entries"
+                        android:entryValues="@array/navigation_bar_width"
+                        android:key="navigation_bar_width"
+                        android:title="@string/navigation_bar_width_title"
+                        android:summary="@string/navigation_bar_width_summary" />
+
+        <Preference
+            android:key="width_help"
+            android:enabled="false"
+            android:title="@string/navbar_width_help_title"
+            android:summary="@string/navbar_width_help_summary" />
+
+        <com.android.settings.aokp.widgets.SeekBarPreference
+            android:key="button_transparency"
+            android:title="@string/button_transparency_title" />
+
+        </PreferenceCategory>
+        <PreferenceCategory
+            android:key="navbar_widgets_cat"
+            android:title="@string/navbar_widgets">
+            <Preference 
+                android:key="navigation_bar_widgets"
+                android:title="@string/navbar_widgets_title" />
+        </PreferenceCategory>
+</PreferenceScreen>
