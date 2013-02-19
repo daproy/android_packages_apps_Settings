@@ -1,0 +1,29 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+        android:title="@string/hybrid_settings_title"
+        xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+
+    <PreferenceCategory
+        android:key="ui"
+        android:title="@string/hybrid_settings_title">
+
+        <!--PreferenceScreen
+            android:key="system_dpi"
+            android:fragment="com.android.settings.beerbong.DpiPreferences"
+            android:title="@string/system_dpi_title"
+            android:summary="@string/system_dpi_summary" /-->
+
+        <!--ListPreference
+            android:entries="@array/uimode_entries"
+            android:entryValues="@array/uimode_values"
+            android:key="ui_mode"
+            android:title="@string/uimode_title" /-->
+
+        <PreferenceScreen
+            android:key="dpi_groups"
+            android:fragment="com.android.settings.beerbong.DpiGroups"
+            android:title="@string/dpi_groups_title"
+            android:summary="@string/dpi_groups_summary" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
