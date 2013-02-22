@@ -5166,6 +5166,20 @@
     <!-- Hybrid -->
     <string name="hybrid_settings_title">Hybrid settings</string>
 
+    <string name="uimode_title">UIMode</string>
+    <string name="uimode_phone">Phone</string>
+    <string name="uimode_phablet">Phablet</string>
+    <string name="uimode_tablet">Tablet</string>
+
+    <string name="dpi_settings_title">System density</string>
+    <string name="system_dpi_title">System density</string>
+    <string name="system_dpi_summary">Current system density:</string>
+    <string name="system_dpi_standar_title">Standard density</string>
+    <string name="system_dpi_standar_summary">Select the density from a list</string>
+    <string name="system_dpi_custom_title">Specify custom density</string>
+    <string name="system_dpi_custom_hint">120 to 480</string>
+    <string name="system_dpi_custom_summary">Select a custom density from 120 to 480</string>
+
     <string name="dpi_groups_title">DPI Groups</string>
     <string name="dpi_groups_summary">Define wich apps should be in each DPI group</string>
     <string name="dpi_group_title">DPI Group</string>

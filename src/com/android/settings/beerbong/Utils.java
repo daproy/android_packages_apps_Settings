@@ -17,6 +17,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.PowerManager;
+import android.provider.Settings;
 
 import com.android.settings.R;
 
@@ -101,7 +102,8 @@ public class Utils {
     }
 
     public static void restartUI() {
-        execute(new String[] { "pkill -TERM -f com.android.systemui" }, 0);
+//        execute(new String[] { "pkill -TERM -f com.android.systemui" }, 0);
+        Settings.System.putInt(mContext.getContentResolver(), Settings.System.USER_INTERFACE_STATE, 1);
     }
 
     public static void reboot() {

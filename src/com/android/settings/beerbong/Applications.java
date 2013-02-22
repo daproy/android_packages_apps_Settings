@@ -1,10 +1,7 @@
 package com.android.settings.beerbong;
 
-import java.io.BufferedReader;
-import java.io.DataInputStream;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -35,11 +32,9 @@ public class Applications {
         public int dpi;
     }
 
-    private static class AppComparator implements Comparator {
+    private static class AppComparator implements Comparator<BeerbongAppInfo> {
 
-        public int compare(Object o1, Object o2) {
-            BeerbongAppInfo a1 = (BeerbongAppInfo) o1;
-            BeerbongAppInfo a2 = (BeerbongAppInfo) o2;
+        public int compare(BeerbongAppInfo a1, BeerbongAppInfo a2) {
             return a1.name.compareTo(a2.name);
         }
     }
@@ -53,7 +48,7 @@ public class Applications {
 
     private static final CMDProcessor cmd = new CMDProcessor();
 
-    private static List<BeerbongAppInfo> appList = new ArrayList();
+    private static List<BeerbongAppInfo> appList = new ArrayList<BeerbongAppInfo>();
     private static int mLastDpi = 0;
 
     public static void addApplication(Context mContext, String packageName) {
@@ -72,7 +67,7 @@ public class Applications {
                 cmd.su.runWaitFor(String.format(APPEND_CMD, app.pack + ".dpi", String.valueOf(dpi)));
             }
             if (app.pack.equals("com.android.systemui")) {
-//                Utils.restartUI();
+                Utils.restartUI();
             } else {
                 try {
                     IActivityManager am = ActivityManagerNative.getDefault();
@@ -81,6 +76,52 @@ public class Applications {
                     // ignore
                 }
             }
+        } finally {
+            mount("ro");
+        }
+        checkAutoBackup(mContext);
+    }
+
+    public static void addSystem(Context mContext, int dpi) {
+
+        if (!mount("rw")) {
+            throw new RuntimeException("Could not remount /system rw");
+        }
+        try {
+            if (propExists("android.dpi")) {
+                cmd.su.runWaitFor(String.format(REPLACE_CMD, "android.dpi", String.valueOf(dpi)));
+            } else {
+                cmd.su.runWaitFor(String.format(APPEND_CMD, "android.dpi", String.valueOf(dpi)));
+            }
+            if (propExists("com.android.systemui.dpi")) {
+                cmd.su.runWaitFor(String.format(REPLACE_CMD, "com.android.systemui.dpi", String.valueOf(dpi)));
+            } else {
+                cmd.su.runWaitFor(String.format(APPEND_CMD, "com.android.systemui.dpi", String.valueOf(dpi)));
+            }
+            Utils.restartUI();
+        } finally {
+            mount("ro");
+        }
+        checkAutoBackup(mContext);
+    }
+
+    public static void addSystemLayout(Context mContext, String layout) {
+
+        if (!mount("rw")) {
+            throw new RuntimeException("Could not remount /system rw");
+        }
+        try {
+            if (propExists("android.layout")) {
+                cmd.su.runWaitFor(String.format(REPLACE_CMD, "android.layout", layout));
+            } else {
+                cmd.su.runWaitFor(String.format(APPEND_CMD, "android.layout", layout));
+            }
+            if (propExists("com.android.systemui.layout")) {
+                cmd.su.runWaitFor(String.format(REPLACE_CMD, "com.android.systemui.layout", layout));
+            } else {
+                cmd.su.runWaitFor(String.format(APPEND_CMD, "com.android.systemui.layout", layout));
+            }
+            Utils.restartUI();
         } finally {
             mount("ro");
         }
@@ -96,7 +137,7 @@ public class Applications {
                 cmd.su.runWaitFor(String.format(REPLACE_CMD, packageName + ".dpi", "0"));
             }
             if (packageName.equals("com.android.systemui")) {
-//                Utils.restartUI();
+                Utils.restartUI();
             } else {
                 try {
                     IActivityManager am = ActivityManagerNative.getDefault();
@@ -126,7 +167,7 @@ public class Applications {
 
         String sdpi = String.valueOf(dpi);
 
-        List<BeerbongAppInfo> items = new ArrayList();
+        List<BeerbongAppInfo> items = new ArrayList<BeerbongAppInfo>();
 
         Iterator it = properties.keySet().iterator();
         while (it.hasNext()) {
@@ -235,23 +276,5 @@ public class Applications {
                 return app;
         }
         return null;
-    }
-
-    private static String read() throws Exception {
-        StringBuffer sb = new StringBuffer();
-
-        FileInputStream fstream = new FileInputStream("/system/etc/beerbong/properties.conf");
-
-        DataInputStream in = new DataInputStream(fstream);
-        BufferedReader br = new BufferedReader(new InputStreamReader(in));
-        String line = br.readLine();
-
-        while (line != null) {
-
-            sb.append(line + "\n");
-            line = br.readLine();
-
-        }
-        return sb.toString();
     }
 }

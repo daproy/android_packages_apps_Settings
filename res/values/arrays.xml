@@ -1283,4 +1283,34 @@
     </string-array>
 
     <!-- **** CYANOGENMOD ADDITIONS END **** -->
+
+    <string-array name="entries_dpi_system_window">
+        <item>120</item>
+        <item>160</item>
+        <item>213</item>
+        <item>240</item>
+        <item>320</item>
+        <item>480</item>
+    </string-array>
+
+    <string-array name="values_dpi_system_window" translatable="false">
+        <item>120</item>
+        <item>160</item>
+        <item>213</item>
+        <item>240</item>
+        <item>320</item>
+        <item>480</item>
+    </string-array>
+
+    <string-array name="uimode_entries">
+        <item>@string/uimode_phone</item>
+        <item>@string/uimode_phablet</item>
+        <item>@string/uimode_tablet</item>
+    </string-array>
+
+    <string-array name="uimode_values" translatable="false">
+        <item>360</item>
+        <item>600</item>
+        <item>1000</item>
+    </string-array>
 </resources>

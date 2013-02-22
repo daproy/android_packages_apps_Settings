@@ -6,17 +6,17 @@
         android:key="ui"
         android:title="@string/hybrid_settings_title">
 
-        <!--PreferenceScreen
+        <ListPreference
+            android:key="ui_mode"
+            android:entries="@array/uimode_entries"
+            android:entryValues="@array/uimode_values"
+            android:title="@string/uimode_title" />
+
+        <PreferenceScreen
             android:key="system_dpi"
             android:fragment="com.android.settings.beerbong.DpiPreferences"
             android:title="@string/system_dpi_title"
-            android:summary="@string/system_dpi_summary" /-->
-
-        <!--ListPreference
-            android:entries="@array/uimode_entries"
-            android:entryValues="@array/uimode_values"
-            android:key="ui_mode"
-            android:title="@string/uimode_title" /-->
+            android:summary="@string/system_dpi_summary" />
 
         <PreferenceScreen
             android:key="dpi_groups"

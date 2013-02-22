@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/dpi_settings_title">
+
+        <!-- Dpi window -->
+        <ListPreference
+            android:key="system_dpi_window"
+            android:title="@string/system_dpi_standar_title"
+            android:summary="@string/system_dpi_standar_summary"
+            android:dialogTitle="@string/system_dpi_standar_title"
+            android:entries="@array/entries_dpi_system_window"
+            android:entryValues="@array/values_dpi_system_window" />   
+
+	    <EditTextPreference
+	        android:key="custom_dpi_text"
+	        android:dialogTitle="@string/system_dpi_custom_title"
+	        android:hint="@string/system_dpi_custom_hint"
+	        android:title="@string/system_dpi_custom_title"
+	        android:summary="@string/system_dpi_custom_summary"
+	        android:inputType="number" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -3,8 +3,10 @@ package com.android.settings.beerbong;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.os.Bundle;
+import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
+import android.util.ExtendedPropertiesUtils;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -12,10 +14,8 @@ import com.android.settings.SettingsPreferenceFragment;
 public class HybridSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
-    // private static final String PREF_UI_MODE = "ui_mode";
-
-    // private PreferenceScreen mDpiScreen;
-    // private ListPreference mUimode;
+    private PreferenceScreen mDpiScreen;
+    private ListPreference mUimode;
 
     private Context mContext;
 
@@ -24,50 +24,49 @@ public class HybridSettings extends SettingsPreferenceFragment implements
         super.onCreate(savedInstanceState);
         mContext = getActivity();
         Utils.setContext(mContext);
-//        ContentResolver resolver = getActivity().getContentResolver();
+        // ContentResolver resolver = getActivity().getContentResolver();
 
         addPreferencesFromResource(R.xml.hybrid_settings);
 
-        // mDpiScreen = (PreferenceScreen) findPreference("system_dpi");
-        // updateDensityTextSummary();
-        //
-        // mUimode = (ListPreference) findPreference(PREF_UI_MODE);
-        //
-        // int uiMode =
-        // Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
-        // Settings.System.UI_MODE, 0);
-        // mUimode.setValue(String.valueOf(uiMode));
-        // mUimode.setSummary(mUimode.getEntry());
-        // mUimode.setOnPreferenceChangeListener(this);
+        mDpiScreen = (PreferenceScreen) findPreference("system_dpi");
+        updateDensityTextSummary();
+
+        mUimode = (ListPreference) findPreference("ui_mode");
+
+        String prop = ExtendedPropertiesUtils.getProperty("android.layout");
+        if (!"0".equals(prop)) {
+            mUimode.setValue(prop);
+            mUimode.setSummary(mUimode.getEntry());
+        }
+        mUimode.setOnPreferenceChangeListener(this);
     }
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen,
             Preference preference) {
-        // updateDensityTextSummary();
+        updateDensityTextSummary();
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
         final String key = preference.getKey();
-        // if (PREF_UI_MODE.equals(key)) {
-        // int uiMode = Integer.valueOf((String) objValue);
-        // int index = mUimode.findIndexOfValue((String) objValue);
-        // Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
-        // Settings.System.UI_MODE,
-        // uiMode);
-        // mUimode.setSummary(mUimode.getEntries()[index]);
-        // Utils.reboot();
-        // }
+        if ("ui_mode".equals(key)) {
+            String layout = (String) objValue;
+            int index = mUimode.findIndexOfValue(layout);
+            Applications.addSystemLayout(mContext, layout);
+            mUimode.setSummary(mUimode.getEntries()[index]);
+        }
 
         return true;
     }
 
-    // private void updateDensityTextSummary() {
-    // String prop = Utils.getProperty("qemu.sf.lcd_density");
-    // if (prop == null)
-    // prop = Utils.getProperty("ro.sf.lcd_density");
-    // mDpiScreen.setSummary(getResources().getString(R.string.system_dpi_summary)
-    // + " " + prop);
-    // }
+    private void updateDensityTextSummary() {
+        String prop = ExtendedPropertiesUtils.getProperty("android.dpi",
+                ExtendedPropertiesUtils
+                        .getProperty(ExtendedPropertiesUtils.BEERBONG_PREFIX
+                                + "rom_default_dpi"));
+        mDpiScreen.setSummary(getResources().getString(
+                R.string.system_dpi_summary)
+                + " " + prop);
+    }
 }
