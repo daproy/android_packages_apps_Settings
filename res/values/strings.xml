@@ -5191,11 +5191,11 @@
     <string name="dpi_groups_remove_app">Remove %s application from group?</string>
     <string name="dpi_groups_backuprestore_title">Backup and restore</string>
     <string name="dpi_groups_auto_backup">Auto backup</string>
-    <string name="dpi_groups_auto_backup_summary">Perform an auto backup everytime you change the configuration</string>
+    <string name="dpi_groups_auto_backup_summary">Save your configuration with every change</string>
     <string name="dpi_groups_backup_title">Backup</string>
-    <string name="dpi_groups_backup_summary">Backup your groups configuration</string>
+    <string name="dpi_groups_backup_summary">Backup your configuration</string>
     <string name="dpi_groups_restore_title">Restore</string>
-    <string name="dpi_groups_restore_summary">Restore your groups configuration</string>
+    <string name="dpi_groups_restore_summary">Restore your configuration</string>
     <string name="dpi_groups_backup_done">Backup of configuration file done</string>
     <string name="dpi_groups_restore_done">Configuration file restored</string>
     <string name="dpi_groups_restore_default_title">Restore default groups</string>
