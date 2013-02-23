@@ -5207,6 +5207,9 @@
     <string name="custom_dpi">Current dpi:</string>
     <string name="customdpigroup_group_exists">The selected custom dpi group already exists.</string>
 
+    <string name="navbar_height_title">NavigationBar height</string>
+    <string name="navbar_height_summary">Specify the navigationBar height</string>
+
     <string name="alert_reboot">Reboot needed</string>
     <string name="alert_reboot_message">This change needs a reboot to be applied. Do you want to reboot now?</string>
 </resources>

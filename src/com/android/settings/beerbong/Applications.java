@@ -17,6 +17,7 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
 import android.os.UserHandle;
+import android.util.ExtendedPropertiesUtils;
 import android.widget.Toast;
 
 import com.android.settings.R;
@@ -98,6 +99,7 @@ public class Applications {
             } else {
                 cmd.su.runWaitFor(String.format(APPEND_CMD, "com.android.systemui.dpi", String.valueOf(dpi)));
             }
+            ExtendedPropertiesUtils.refreshProperties();
             Utils.restartUI();
         } finally {
             mount("ro");
@@ -121,7 +123,29 @@ public class Applications {
             } else {
                 cmd.su.runWaitFor(String.format(APPEND_CMD, "com.android.systemui.layout", layout));
             }
+            ExtendedPropertiesUtils.refreshProperties();
             Utils.restartUI();
+        } finally {
+            mount("ro");
+        }
+        checkAutoBackup(mContext);
+    }
+
+    public static void addProperty(Context mContext, String property, int value, boolean restartui) {
+
+        if (!mount("rw")) {
+            throw new RuntimeException("Could not remount /system rw");
+        }
+        try {
+            if (propExists("android.layout")) {
+                cmd.su.runWaitFor(String.format(REPLACE_CMD, property, value));
+            } else {
+                cmd.su.runWaitFor(String.format(APPEND_CMD, property, value));
+            }
+            ExtendedPropertiesUtils.refreshProperties();
+            if (restartui) {
+                Utils.restartUI();
+            }
         } finally {
             mount("ro");
         }
