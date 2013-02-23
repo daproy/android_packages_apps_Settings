@@ -62,7 +62,7 @@ public class DpiGroupPreference extends Preference {
                     public void onClick(DialogInterface dialog, int whichButton) {
                         dialog.dismiss();
 
-                        String list = mContext.getSharedPreferences(DpiGroups.PREFS_NAME, 0).getString(
+                        String list = mContext.getSharedPreferences(Applications.PREFS_NAME, 0).getString(
                                 DpiGroups.PROPERTY_CUSTOM_DPI_LIST, DpiGroups.DEFAULT_GROUPS);
                         String[] groupsStringArray = list.split("\\|");
                         String groups = "";
@@ -72,7 +72,7 @@ public class DpiGroupPreference extends Preference {
                             }
                         }
 
-                        SharedPreferences settings = mContext.getSharedPreferences(DpiGroups.PREFS_NAME, 0);
+                        SharedPreferences settings = mContext.getSharedPreferences(Applications.PREFS_NAME, 0);
                         SharedPreferences.Editor editor = settings.edit();
                         editor.putString(DpiGroups.PROPERTY_CUSTOM_DPI_LIST, groups);
                         editor.commit();

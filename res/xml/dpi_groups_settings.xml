@@ -20,25 +20,4 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory
-        android:title="@string/dpi_groups_backuprestore_title">
-
-	    <CheckBoxPreference
-            android:key="dpi_groups_auto_backup"
-            android:title="@string/dpi_groups_auto_backup"
-            android:summary="@string/dpi_groups_auto_backup_summary"
-            android:defaultValue="false" />
-
-        <Preference
-            android:key="dpi_groups_backup"
-            android:title="@string/dpi_groups_backup_title"
-            android:summary="@string/dpi_groups_backup_summary" />
-
-        <Preference
-            android:key="dpi_groups_restore"
-            android:title="@string/dpi_groups_restore_title"
-            android:summary="@string/dpi_groups_restore_summary" />
-
-    </PreferenceCategory>
-
 </PreferenceScreen>

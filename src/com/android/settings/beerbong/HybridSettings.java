@@ -3,8 +3,10 @@ package com.android.settings.beerbong;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
@@ -24,6 +26,9 @@ public class HybridSettings extends SettingsPreferenceFragment implements
     private PreferenceScreen mDpiScreen;
     private ListPreference mUimode;
     private Preference mNavbarHeight;
+    private CheckBoxPreference mAutoBackup;
+    private Preference mBackup;
+    private Preference mRestore;
 
     private Context mContext;
 
@@ -41,12 +46,24 @@ public class HybridSettings extends SettingsPreferenceFragment implements
 
         mUimode = (ListPreference) findPreference("ui_mode");
 
-        int prop = ExtendedPropertiesUtils.getActualProperty("com.android.systemui.layout");
+        int prop = ExtendedPropertiesUtils
+                .getActualProperty("com.android.systemui.layout");
         mUimode.setValue(String.valueOf(prop));
         mUimode.setSummary(mUimode.getEntry());
         mUimode.setOnPreferenceChangeListener(this);
 
         mNavbarHeight = findPreference("navbar_height");
+
+        mAutoBackup = (CheckBoxPreference) findPreference("dpi_groups_auto_backup");
+        mBackup = findPreference("dpi_groups_backup");
+        mRestore = findPreference("dpi_groups_restore");
+
+        boolean isAutoBackup = mContext.getSharedPreferences(Applications.PREFS_NAME, 0)
+                .getBoolean(Applications.PROPERTY_AUTO_BACKUP, false);
+
+        mAutoBackup.setChecked(isAutoBackup);
+
+        mRestore.setEnabled(Applications.backupExists());
 
         updateSummaries();
     }
@@ -56,6 +73,17 @@ public class HybridSettings extends SettingsPreferenceFragment implements
             Preference preference) {
         if (preference == mNavbarHeight) {
             showNavbarHeightDialog();
+        } else if (preference == mBackup) {
+            Applications.backup(mContext);
+        } else if (preference == mRestore) {
+            Applications.restore(mContext);
+        } else if (preference == mAutoBackup) {
+            SharedPreferences settings = mContext.getSharedPreferences(
+                    Applications.PREFS_NAME, 0);
+            SharedPreferences.Editor editor = settings.edit();
+            editor.putBoolean(Applications.PROPERTY_AUTO_BACKUP,
+                    ((CheckBoxPreference) preference).isChecked());
+            editor.commit();
         }
         updateSummaries();
         return super.onPreferenceTreeClick(preferenceScreen, preference);
@@ -83,6 +111,8 @@ public class HybridSettings extends SettingsPreferenceFragment implements
                 .getActualProperty("com.android.systemui.layout");
         int index = mUimode.findIndexOfValue(String.valueOf(layout));
         mUimode.setSummary(mUimode.getEntries()[index]);
+
+        mRestore.setEnabled(Applications.backupExists());
     }
 
     private void showNavbarHeightDialog() {
@@ -96,7 +126,8 @@ public class HybridSettings extends SettingsPreferenceFragment implements
         LayoutInflater factory = LayoutInflater.from(getActivity());
         final View alphaDialog = factory.inflate(R.layout.seekbar_dialog, null);
         SeekBar seekbar = (SeekBar) alphaDialog.findViewById(R.id.seek_bar);
-        final TextView seektext = (TextView) alphaDialog.findViewById(R.id.seek_text);
+        final TextView seektext = (TextView) alphaDialog
+                .findViewById(R.id.seek_text);
         OnSeekBarChangeListener seekBarChangeListener = new OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekbar, int progress,

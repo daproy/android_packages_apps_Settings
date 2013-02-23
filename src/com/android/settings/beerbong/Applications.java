@@ -24,6 +24,9 @@ import com.android.settings.R;
 
 public class Applications {
 
+    protected static final String PREFS_NAME = "custom_dpi_groups_preference";
+    protected static final String PROPERTY_AUTO_BACKUP = "auto_backup";
+
     public static class BeerbongAppInfo {
 
         public String name = "";
@@ -40,7 +43,7 @@ public class Applications {
         }
     }
 
-    private static final String BACKUP = "/data/data/com.android.settings/files/properties.conf";
+    private static final String BACKUP = "/data/data/com.android.settings/files/properties.back";
 
     private static final String APPEND_CMD = "echo \"%s=%s\" >> /system/etc/beerbong/properties.conf";
     private static final String REPLACE_CMD = "busybox sed -i \"/%s/ c %<s=%s\" /system/etc/beerbong/properties.conf";
@@ -56,16 +59,19 @@ public class Applications {
         addApplication(mContext, findAppInfo(mContext, packageName), mLastDpi);
     }
 
-    public static void addApplication(Context mContext, BeerbongAppInfo app, int dpi) {
+    public static void addApplication(Context mContext, BeerbongAppInfo app,
+            int dpi) {
 
         if (!mount("rw")) {
             throw new RuntimeException("Could not remount /system rw");
         }
         try {
             if (propExists(app.pack + ".dpi")) {
-                cmd.su.runWaitFor(String.format(REPLACE_CMD, app.pack + ".dpi", String.valueOf(dpi)));
+                cmd.su.runWaitFor(String.format(REPLACE_CMD, app.pack + ".dpi",
+                        String.valueOf(dpi)));
             } else {
-                cmd.su.runWaitFor(String.format(APPEND_CMD, app.pack + ".dpi", String.valueOf(dpi)));
+                cmd.su.runWaitFor(String.format(APPEND_CMD, app.pack + ".dpi",
+                        String.valueOf(dpi)));
             }
             if (app.pack.equals("com.android.systemui")) {
                 Utils.restartUI();
@@ -90,14 +96,18 @@ public class Applications {
         }
         try {
             if (propExists("android.dpi")) {
-                cmd.su.runWaitFor(String.format(REPLACE_CMD, "android.dpi", String.valueOf(dpi)));
+                cmd.su.runWaitFor(String.format(REPLACE_CMD, "android.dpi",
+                        String.valueOf(dpi)));
             } else {
-                cmd.su.runWaitFor(String.format(APPEND_CMD, "android.dpi", String.valueOf(dpi)));
+                cmd.su.runWaitFor(String.format(APPEND_CMD, "android.dpi",
+                        String.valueOf(dpi)));
             }
             if (propExists("com.android.systemui.dpi")) {
-                cmd.su.runWaitFor(String.format(REPLACE_CMD, "com.android.systemui.dpi", String.valueOf(dpi)));
+                cmd.su.runWaitFor(String.format(REPLACE_CMD,
+                        "com.android.systemui.dpi", String.valueOf(dpi)));
             } else {
-                cmd.su.runWaitFor(String.format(APPEND_CMD, "com.android.systemui.dpi", String.valueOf(dpi)));
+                cmd.su.runWaitFor(String.format(APPEND_CMD,
+                        "com.android.systemui.dpi", String.valueOf(dpi)));
             }
             ExtendedPropertiesUtils.refreshProperties();
             Utils.restartUI();
@@ -114,14 +124,18 @@ public class Applications {
         }
         try {
             if (propExists("android.layout")) {
-                cmd.su.runWaitFor(String.format(REPLACE_CMD, "android.layout", layout));
+                cmd.su.runWaitFor(String.format(REPLACE_CMD, "android.layout",
+                        layout));
             } else {
-                cmd.su.runWaitFor(String.format(APPEND_CMD, "android.layout", layout));
+                cmd.su.runWaitFor(String.format(APPEND_CMD, "android.layout",
+                        layout));
             }
             if (propExists("com.android.systemui.layout")) {
-                cmd.su.runWaitFor(String.format(REPLACE_CMD, "com.android.systemui.layout", layout));
+                cmd.su.runWaitFor(String.format(REPLACE_CMD,
+                        "com.android.systemui.layout", layout));
             } else {
-                cmd.su.runWaitFor(String.format(APPEND_CMD, "com.android.systemui.layout", layout));
+                cmd.su.runWaitFor(String.format(APPEND_CMD,
+                        "com.android.systemui.layout", layout));
             }
             ExtendedPropertiesUtils.refreshProperties();
             Utils.restartUI();
@@ -131,7 +145,8 @@ public class Applications {
         checkAutoBackup(mContext);
     }
 
-    public static void addProperty(Context mContext, String property, int value, boolean restartui) {
+    public static void addProperty(Context mContext, String property,
+            int value, boolean restartui) {
 
         if (!mount("rw")) {
             throw new RuntimeException("Could not remount /system rw");
@@ -158,7 +173,8 @@ public class Applications {
         }
         try {
             if (propExists(packageName)) {
-                cmd.su.runWaitFor(String.format(REPLACE_CMD, packageName + ".dpi", "0"));
+                cmd.su.runWaitFor(String.format(REPLACE_CMD, packageName
+                        + ".dpi", "0"));
             }
             if (packageName.equals("com.android.systemui")) {
                 Utils.restartUI();
@@ -184,7 +200,8 @@ public class Applications {
 
         try {
             properties = new Properties();
-            properties.load(new FileInputStream("/system/etc/beerbong/properties.conf"));
+            properties.load(new FileInputStream(
+                    "/system/etc/beerbong/properties.conf"));
         } catch (Throwable t) {
             throw new RuntimeException(t);
         }
@@ -201,7 +218,10 @@ public class Applications {
                 BeerbongAppInfo bAppInfo = findAppInfo(mContext, packageName);
 
                 if (bAppInfo == null) {
-                    removeApplication(mContext, packageName.substring(0, packageName.lastIndexOf(".dpi")));
+                    removeApplication(
+                            mContext,
+                            packageName.substring(0,
+                                    packageName.lastIndexOf(".dpi")));
                 } else {
                     items.add(bAppInfo);
                 }
@@ -219,7 +239,8 @@ public class Applications {
 
         try {
             properties = new Properties();
-            properties.load(new FileInputStream("/system/etc/beerbong/properties.conf"));
+            properties.load(new FileInputStream(
+                    "/system/etc/beerbong/properties.conf"));
         } catch (Throwable t) {
             throw new RuntimeException(t);
         }
@@ -227,7 +248,8 @@ public class Applications {
         PackageManager pm = mContext.getPackageManager();
 
         List<ApplicationInfo> mPackageList = pm.getInstalledApplications(0);
-        BeerbongAppInfo[] items = new BeerbongAppInfo[mPackageList == null ? 0 : mPackageList.size()];
+        BeerbongAppInfo[] items = new BeerbongAppInfo[mPackageList == null ? 0
+                : mPackageList.size()];
 
         appList.clear();
 
@@ -238,8 +260,8 @@ public class Applications {
             items[i].icon = pm.getApplicationIcon(app);
             items[i].pack = app.packageName;
             items[i].info = app;
-            items[i].dpi = properties.getProperty(app.packageName) == null ? 0 : Integer.parseInt(properties
-                    .getProperty(app.packageName));
+            items[i].dpi = properties.getProperty(app.packageName) == null ? 0
+                    : Integer.parseInt(properties.getProperty(app.packageName));
             appList.add(items[i]);
         }
         Arrays.sort(items, new AppComparator());
@@ -247,24 +269,21 @@ public class Applications {
     }
 
     public static void backup(Context mContext) {
-        Utils.execute(new String[] {
-                "cd /data/data/com.android.settings",
-                "mkdir files",
-                "chmod 777 files",
+        Utils.execute(new String[] { "cd /data/data/com.android.settings",
+                "mkdir files", "chmod 777 files",
                 "cp /system/etc/beerbong/properties.conf " + BACKUP,
-                "chmod 644 " + BACKUP
-        }, 0);
-        Toast.makeText(mContext, R.string.dpi_groups_backup_done, Toast.LENGTH_SHORT).show();
+                "chmod 644 " + BACKUP }, 0);
+        Toast.makeText(mContext, R.string.dpi_groups_backup_done,
+                Toast.LENGTH_SHORT).show();
     }
 
     public static void restore(Context mContext) {
-        Utils.execute(new String[] {
-                Utils.MOUNT_SYSTEM_RW,
+        Utils.execute(new String[] { Utils.MOUNT_SYSTEM_RW,
                 "cp " + BACKUP + " /system/etc/beerbong/properties.conf",
                 "chmod 644 /system/etc/beerbong/properties.conf",
-                Utils.MOUNT_SYSTEM_RO
-        }, 0);
-        Toast.makeText(mContext, R.string.dpi_groups_restore_done, Toast.LENGTH_SHORT).show();
+                Utils.MOUNT_SYSTEM_RO }, 0);
+        Toast.makeText(mContext, R.string.dpi_groups_restore_done,
+                Toast.LENGTH_SHORT).show();
     }
 
     public static boolean backupExists() {
@@ -272,24 +291,29 @@ public class Applications {
     }
 
     private static void checkAutoBackup(Context mContext) {
-        boolean isAutoBackup = mContext.getSharedPreferences(DpiGroups.PREFS_NAME, 0).getBoolean(
-                DpiGroups.PROPERTY_AUTO_BACKUP, false);
+        boolean isAutoBackup = mContext.getSharedPreferences(
+                PREFS_NAME, 0).getBoolean(
+                PROPERTY_AUTO_BACKUP, false);
         if (isAutoBackup) {
             backup(mContext);
         }
     }
 
     private static boolean mount(String read_value) {
-        return cmd.su.runWaitFor(String.format(REMOUNT_CMD, read_value)).success();
+        return cmd.su.runWaitFor(String.format(REMOUNT_CMD, read_value))
+                .success();
     }
 
     private static boolean propExists(String prop) {
-        return cmd.su.runWaitFor(String.format(PROP_EXISTS_CMD, prop)).success();
+        return cmd.su.runWaitFor(String.format(PROP_EXISTS_CMD, prop))
+                .success();
     }
 
-    private static BeerbongAppInfo findAppInfo(Context mContext, String packageName) {
+    private static BeerbongAppInfo findAppInfo(Context mContext,
+            String packageName) {
         if (packageName.endsWith(".dpi")) {
-            packageName = packageName.substring(0, packageName.lastIndexOf(".dpi"));
+            packageName = packageName.substring(0,
+                    packageName.lastIndexOf(".dpi"));
         }
         if (appList.size() == 0) {
             getApplicationList(mContext);
