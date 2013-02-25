@@ -175,15 +175,9 @@ public class AppWidgetLoader<Item extends AppWidgetLoader.LabelledItem> {
     /**
      * Create list entries for installed {@link AppWidgetProviderInfo} widgets.
      */
-
-    void putInstalledAppWidgets(List<Item> items, int categoryFilter) {
+    void putInstalledAppWidgets(List<Item> items, int categoryFilter, boolean showall) {
         List<AppWidgetProviderInfo> installed =
                 mAppWidgetManager.getInstalledProviders(categoryFilter);
-        putAppWidgetItems(installed, null, items, categoryFilter, false);
-
-    void putInstalledAppWidgets(List<Item> items, int categoryFilter, boolean showall) {
-        List<AppWidgetProviderInfo> installed = mAppWidgetManager.getInstalledProviders();
         putAppWidgetItems(installed, null, items, categoryFilter, showall);
-
     }
 }
