@@ -158,10 +158,10 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         }
 
         mDualPanel = (CheckBoxPreference) findPreference(KEY_DUAL_PANEL);
-        mDualPanel.setChecked(Settings.System.getBoolean(mContext.getContentResolver(), Settings.System.FORCE_DUAL_PANEL, false));
+        mDualPanel.setChecked(Settings.System.getBoolean(getContentResolver(), Settings.System.FORCE_DUAL_PANEL, false));
 
         mUseAltResolver = (CheckBoxPreference) findPreference(PREF_USE_ALT_RESOLVER);
-        mUseAltResolver.setChecked(Settings.System.getBoolean(mContext.getContentResolver(),
+        mUseAltResolver.setChecked(Settings.System.getBoolean(getContentResolver(),
                 Settings.System.ACTIVITY_RESOLVER_USE_ALT, false));
     }
 
@@ -399,7 +399,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                     mVolumeWake.isChecked() ? 1 : 0);
             return true;
         } else if (preference == mDualPanel) {
-            Settings.System.putBoolean(mContext.getContentResolver(), Settings.System.FORCE_DUAL_PANEL, ((CheckBoxPreference) preference).isChecked());
+            Settings.System.putBoolean(getContentResolver(), Settings.System.FORCE_DUAL_PANEL, ((CheckBoxPreference) preference).isChecked());
             return true;
         } else if (preference == mUseAltResolver) {
             Settings.System.putBoolean(getActivity().getContentResolver(),
