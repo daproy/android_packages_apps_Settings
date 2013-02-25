@@ -69,4 +69,10 @@
             android:summary="@string/pref_volume_wake_summary"
             android:defaultValue="false" />
 
+        <CheckBoxPreference
+            android:key="force_dualpanel"
+            android:title="@string/force_dualpanel_title"
+            android:summary="@string/force_dualpanel_summary"
+            android:defaultValue="false" />
+
 </PreferenceScreen>
