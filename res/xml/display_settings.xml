@@ -75,4 +75,10 @@
             android:summary="@string/force_dualpanel_summary"
             android:defaultValue="false" />
 
+        <CheckBoxPreference
+             android:key="use_alt_resolver"
+             android:title="@string/alt_resolver_title"
+             android:summary="@string/alt_resolver_summary"
+             android:defaultValue="false" />
+
 </PreferenceScreen>

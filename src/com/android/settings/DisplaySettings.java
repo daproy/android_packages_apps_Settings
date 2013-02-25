@@ -64,6 +64,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_WAKEUP_CATEGORY = "category_wakeup_options";
     private static final String KEY_VOLUME_WAKE = "pref_volume_wake";
     private static final String KEY_DUAL_PANEL = "force_dualpanel";
+    private static final String PREF_USE_ALT_RESOLVER = "use_alt_resolver";
 
     // Strings used for building the summary
     private static final String ROTATION_ANGLE_0 = "0";
@@ -77,6 +78,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
 
     private CheckBoxPreference mVolumeWake;
     private CheckBoxPreference mDualPanel;
+    private CheckBoxPreference mUseAltResolver;
     private PreferenceScreen mDisplayRotationPreference;
     private WarnedListPreference mFontSizePref;
 
@@ -158,6 +160,9 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         mDualPanel = (CheckBoxPreference) findPreference(KEY_DUAL_PANEL);
         mDualPanel.setChecked(Settings.System.getBoolean(mContext.getContentResolver(), Settings.System.FORCE_DUAL_PANEL, false));
 
+        mUseAltResolver = (CheckBoxPreference) findPreference(PREF_USE_ALT_RESOLVER);
+        mUseAltResolver.setChecked(Settings.System.getBoolean(mContext.getContentResolver(),
+                Settings.System.ACTIVITY_RESOLVER_USE_ALT, false));
     }
 
     private void updateDisplayRotationPreferenceDescription() {
@@ -395,6 +400,11 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             return true;
         } else if (preference == mDualPanel) {
             Settings.System.putBoolean(mContext.getContentResolver(), Settings.System.FORCE_DUAL_PANEL, ((CheckBoxPreference) preference).isChecked());
+            return true;
+        } else if (preference == mUseAltResolver) {
+            Settings.System.putBoolean(getActivity().getContentResolver(),
+                    Settings.System.ACTIVITY_RESOLVER_USE_ALT,
+                    ((CheckBoxPreference) preference).isChecked());
             return true;
         }
 

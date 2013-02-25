@@ -5017,6 +5017,10 @@
     <string name="force_dualpanel_title">Force dual panel in settings</string>
     <string name="force_dualpanel_summary">This will enable/disable dual panel in settings"</string>
 
+    <!-- Alternate default app picker -->
+    <string name="alt_resolver_title">Use Alt Default App Picker</string>
+    <string name="alt_resolver_summary">Use Alternate Default App Picker</string>
+
     <!-- Setting checkbox summary for displaying USB debugging notification -->
     <string name="adb_notify">USB debugging notify</string>
     <string name="adb_notify_summary">Display a notification when USB debugging is connected</string>
