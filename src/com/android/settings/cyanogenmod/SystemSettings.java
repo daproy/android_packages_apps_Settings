@@ -25,6 +25,7 @@ import android.os.UserHandle;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
+import android.util.ExtendedPropertiesUtils;
 import android.util.Log;
 import android.view.IWindowManager;
 
@@ -74,21 +75,11 @@ public class SystemSettings extends SettingsPreferenceFragment {
                 }
             }
 
-            // Only show the hardware keys config on a device that does not have a navbar
-            // and the navigation bar config on phones that has a navigation bar
-            boolean removeKeys = false;
-            boolean removeNavbar = false;
-            IWindowManager windowManager = IWindowManager.Stub.asInterface(
-                    ServiceManager.getService(Context.WINDOW_SERVICE));
-            try {
-                if (windowManager.hasNavigationBar()) {
-                    removeKeys = true;
-                } else {
-                    removeNavbar = true;
-                }
-            } catch (RemoteException e) {
-                // Do nothing
-            }
+            // Only show the hardware keys config on a device that does have them
+            // and the navigation bar config when we're not in tabletui
+            boolean removeKeys = !getResources().getBoolean(
+                        com.android.internal.R.bool.config_hasHardwareKeys);
+            boolean removeNavbar = ExtendedPropertiesUtils.isTablet();
 
             // Act on the above
             if (removeKeys) {
