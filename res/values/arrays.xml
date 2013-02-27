@@ -1169,7 +1169,7 @@
         <item>EEEE MM/dd</item>
         <item>Custom java format</item>
     </string-array>
-
+    
     <string-array name="clock_date_format_values">
         <item>dd/MM/yy</item>
         <item>MM/dd/yy</item>
@@ -1190,6 +1190,87 @@
         <item>EEEE dd/MM</item>
         <item>EEEE MM/dd</item>
         <item>Custom java format</item>
+    </string-array>
+    
+    <!-- Pie Controls -->
+    <string-array name="all_color_style_entries" translatable="false">
+        <item>@string/all_color</item>
+        <item>@string/stock_color</item>
+    </string-array>
+
+    <string-array name="all_color_style_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="entries_pie_gravity">
+        <item>@string/pie_gravity_left</item>
+        <item>@string/pie_gravity_top</item>
+        <item>@string/pie_gravity_right</item>
+        <item>@string/pie_gravity_bottom</item>
+    </string-array>
+
+    <string-array name="values_pie_gravity" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="entries_pie_size">
+        <item>@string/pie_size_small</item>
+        <item>@string/pie_size_default</item>
+        <item>@string/pie_size_large</item>
+        <item>@string/pie_size_gigantic</item>
+    </string-array>
+
+    <string-array name="values_pie_size" translatable="false">
+        <item>0.8</item>
+        <item>1.0</item>
+        <item>1.2</item>
+        <item>1.4</item>
+    </string-array>
+
+    <string-array name="entries_pie_mode">
+        <item>@string/pie_mode_bare</item>
+        <item>@string/pie_mode_quick</item>
+        <item>@string/pie_mode_default</item>
+        <item>@string/pie_mode_slow</item>
+    </string-array>
+
+    <string-array name="values_pie_mode" translatable="false">
+        <item>-1</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="entries_pie_gap">
+        <item>@string/pie_gap_none</item>
+        <item>@string/pie_gap_small</item>
+        <item>@string/pie_gap_big</item>
+        <item>@string/pie_gap_huge</item>
+    </string-array>
+
+    <string-array name="values_pie_gap" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="entries_pie_trigger">
+        <item>@string/pie_trigger_small</item>
+        <item>@string/pie_trigger_normal</item>
+        <item>@string/pie_trigger_big</item>
+        <item>@string/pie_trigger_huge</item>
+    </string-array>
+
+    <string-array name="values_pie_trigger" translatable="false">
+        <item>0.5</item>
+        <item>1.0</item>
+        <item>2.0</item>
+        <item>3.0</item>
     </string-array>
 
     <string-array name="entries_status_bar_battery" translatable="false">
@@ -1667,5 +1748,6 @@
        <item>2</item>
        <item>3</item>
    </string-array>
+
 
 </resources>

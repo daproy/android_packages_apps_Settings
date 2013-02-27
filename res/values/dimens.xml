@@ -61,5 +61,18 @@
     <dimen name="keyguard_appwidget_picker_margin_left">6dip</dimen>
     <dimen name="keyguard_appwidget_picker_margin_right">6dip</dimen>
     <integer name="keyguard_appwidget_picker_cols">1</integer>
+    
+    <!--  Amount of Margin to offset NavRing in Portrait Mode -->
+    <dimen name="navring_left_margin_port">-600dp</dimen>
+    <!--  Amount of Margin to offset NavRing in Landscape Mode -->
+    <dimen name="navring_left_margin_land">-800dp</dimen>
+    <!--  Height of NavRing in Tablet Mode Landscape -->
+    <dimen name="navring_height_tablet_landscape">300dp</dimen>
+    <!--  Height of NavRing in Tablet Mode Portrait -->
+    <dimen name="navring_height_tablet_portrait">250dp</dimen>
+    <!--  Radius of NavRing in Tablet Mode Landscape -->
+    <dimen name="navring_radius_tablet_landscape">300dp</dimen>
+    <!--  Radius of NavRing in Tablet Mode Landscape -->
+    <dimen name="navring_radius_tablet_portrait">300dp</dimen>
 
 </resources>

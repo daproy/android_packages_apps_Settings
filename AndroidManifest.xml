@@ -1606,15 +1606,19 @@
 
         <activity android:name=".cyanogenmod.QuickSettingsTilesStyle" />
 
-	<activity android:name=".cyanogenmod.NotificationDrawerStyle" />
+	    <activity android:name=".cyanogenmod.NotificationDrawerStyle" />
 
-	<activity android:name=".cyanogenmod.StatusBar" />
+	    <activity android:name=".cyanogenmod.StatusBar" />
       
         <activity android:name=".cyanogenmod.StatusBarStyle" />
 
         <activity android:name=".cyanogenmod.StatusBarClockStyle" />
 
         <activity android:name=".RamBar" />
+        
+        <activity android:name=".cyanogenmod.Pie" />
+        
+        <activity android:name=".cyanogenmod.PieColor" />
 
         <activity android:name=".aokp.NavRingTargets" />
 
