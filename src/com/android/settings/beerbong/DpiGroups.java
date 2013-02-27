@@ -2,6 +2,7 @@ package com.android.settings.beerbong;
 
 import java.io.FileInputStream;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -123,7 +124,7 @@ public class DpiGroups extends SettingsPreferenceFragment {
         String[] groupsStringArray = mGroupsString.split("\\|");
         ArrayList<Integer> mGroupsList = new ArrayList<Integer>();
         for (String s : groupsStringArray) {
-            if (s != null && s != "") {
+            if (s != null && !s.equals("")) {
                 mGroupsList.add(Integer.parseInt(s));
             }
         }
@@ -132,30 +133,31 @@ public class DpiGroups extends SettingsPreferenceFragment {
         Iterator it = properties.keySet().iterator();
         while (it.hasNext()) {
             String packageName = (String) it.next();
-            if (!packageName.startsWith("com.android.systemui")
-                    && !packageName.startsWith("android.")
-                    && packageName.endsWith(".dpi")) {
 
-                String dpi = properties.getProperty(packageName);
+            String dpi = properties.getProperty(packageName);
 
-                if (!"0".equals(dpi)
-                        && mGroupsList.indexOf(Integer.parseInt(dpi)) < 0) {
-                    Applications.removeApplication(
-                            mContext,
-                            packageName.substring(0,
-                                    packageName.indexOf(".dpi")));
-                } else {
-
-                    if (hashMap.get(dpi) == null)
-                        hashMap.put(dpi, 0);
-                    int count = hashMap.get(dpi);
-                    count++;
-                    hashMap.put(dpi, count);
-                }
+            if (hashMap.get(dpi) == null) {
+                hashMap.put(dpi, 0);
             }
+
+            if (!"0".equals(dpi) && !Applications.isPartOfSystem(packageName)
+                    && mGroupsList.indexOf(Integer.parseInt(dpi)) < 0) {
+                mGroupsString += "|" + dpi;
+                mGroupsList.add(Integer.parseInt(dpi));
+            }
+            int count = hashMap.get(dpi);
+            count++;
+            hashMap.put(dpi, count);
         }
 
+        SharedPreferences settings = mContext.getSharedPreferences(Applications.PREFS_NAME, 0);
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putString(PROPERTY_CUSTOM_DPI_LIST, mGroupsString);
+        editor.commit();
+
         mCategory.removeAll();
+
+        Collections.sort(mGroupsList);
 
         for (int i = 0; i < mGroupsList.size(); i++) {
 

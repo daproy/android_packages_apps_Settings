@@ -192,6 +192,13 @@ public class Applications {
         checkAutoBackup(mContext);
     }
 
+    public static boolean isPartOfSystem(String packageName) {
+        return packageName.startsWith(ExtendedPropertiesUtils.BEERBONG_PREFIX) ||
+                packageName.startsWith("com.android.systemui.statusbar.") ||
+                packageName.startsWith("com.android.systemui.navbar.") ||
+                packageName.endsWith(".layout");
+    }
+
     public static BeerbongAppInfo[] getApplicationList(Context mContext, int dpi) {
 
         mLastDpi = dpi;
