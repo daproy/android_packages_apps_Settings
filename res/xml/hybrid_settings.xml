@@ -18,6 +18,17 @@
             android:title="@string/system_dpi_title"
             android:summary="@string/system_dpi_summary" />
 
+        <ListPreference
+            android:key="apps_ui_mode"
+            android:entries="@array/uimode_entries"
+            android:entryValues="@array/uimode_values"
+            android:title="@string/appsuimode_title" />
+
+        <Preference
+            android:key="apps_dpi"
+            android:title="@string/apps_dpi_title"
+            android:summary="@string/apps_dpi_summary" />
+
         <PreferenceScreen
             android:key="dpi_groups"
             android:fragment="com.android.settings.beerbong.DpiGroups"

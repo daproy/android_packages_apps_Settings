@@ -145,6 +145,26 @@ public class Applications {
         checkAutoBackup(mContext);
     }
 
+    public static void addAppsLayout(Context mContext, String layout) {
+
+        if (!mount("rw")) {
+            throw new RuntimeException("Could not remount /system rw");
+        }
+        try {
+            if (propExists("%user_default_layout")) {
+                cmd.su.runWaitFor(String.format(REPLACE_CMD, "%user_default_layout",
+                        layout));
+            } else {
+                cmd.su.runWaitFor(String.format(APPEND_CMD, "%user_default_layout",
+                        layout));
+            }
+            ExtendedPropertiesUtils.refreshProperties();
+        } finally {
+            mount("ro");
+        }
+        checkAutoBackup(mContext);
+    }
+
     public static void addProperty(Context mContext, String property,
             int value, boolean restartui) {
 

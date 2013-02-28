@@ -5238,6 +5238,14 @@
     <string name="system_dpi_custom_hint">120 to 480</string>
     <string name="system_dpi_custom_summary">Select a custom density from 120 to 480</string>
 
+    <string name="appsuimode_title">Apps UIMode</string>
+
+    <string name="apps_dpi_title">Apps density</string>
+    <string name="apps_dpi_summary">Current apps density:</string>
+    <string name="apps_dpi_custom_title">Specify density</string>
+    <string name="apps_dpi_custom_hint">120 to 480</string>
+    <string name="apps_dpi_custom_summary">Select a density from 120 to 480</string>
+
     <string name="dpi_groups_title">DPI Groups</string>
     <string name="dpi_groups_summary">Define wich apps should be in each DPI group</string>
     <string name="dpi_group_title">DPI Group</string>

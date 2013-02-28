@@ -24,7 +24,9 @@ public class HybridSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     private PreferenceScreen mDpiScreen;
+    private Preference mAppsDpi;
     private ListPreference mUimode;
+    private ListPreference mAppsUimode;
     private Preference mNavbarHeight;
     private CheckBoxPreference mAutoBackup;
     private Preference mBackup;
@@ -33,6 +35,8 @@ public class HybridSettings extends SettingsPreferenceFragment implements
     private Context mContext;
 
     private int mNavbarHeightProgress;
+
+    private int mAppDpiProgress;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -44,6 +48,8 @@ public class HybridSettings extends SettingsPreferenceFragment implements
 
         mDpiScreen = (PreferenceScreen) findPreference("system_dpi");
 
+        mAppsDpi = findPreference("apps_dpi");
+
         mUimode = (ListPreference) findPreference("ui_mode");
 
         int prop = ExtendedPropertiesUtils
@@ -51,6 +57,17 @@ public class HybridSettings extends SettingsPreferenceFragment implements
         mUimode.setValue(String.valueOf(prop));
         mUimode.setSummary(mUimode.getEntry());
         mUimode.setOnPreferenceChangeListener(this);
+
+        mAppsUimode = (ListPreference) findPreference("apps_ui_mode");
+
+        int aprop = ExtendedPropertiesUtils
+                .getActualProperty(ExtendedPropertiesUtils.BEERBONG_PREFIX + "user_default_layout");
+        if (aprop == 0) {
+            aprop = prop;
+        }
+        mAppsUimode.setValue(String.valueOf(aprop));
+        mAppsUimode.setSummary(mAppsUimode.getEntry());
+        mAppsUimode.setOnPreferenceChangeListener(this);
 
         mNavbarHeight = findPreference("navbar_height");
 
@@ -84,6 +101,8 @@ public class HybridSettings extends SettingsPreferenceFragment implements
             editor.putBoolean(Applications.PROPERTY_AUTO_BACKUP,
                     ((CheckBoxPreference) preference).isChecked());
             editor.commit();
+        } else if (preference == mAppsDpi) {
+            showAppsDpiDialog();
         }
         updateSummaries();
         return super.onPreferenceTreeClick(preferenceScreen, preference);
@@ -94,6 +113,9 @@ public class HybridSettings extends SettingsPreferenceFragment implements
         if ("ui_mode".equals(key)) {
             String layout = (String) objValue;
             Applications.addSystemLayout(mContext, layout);
+        } else if ("apps_ui_mode".equals(key)) {
+            String layout = (String) objValue;
+            Applications.addAppsLayout(mContext, layout);
         }
 
         updateSummaries();
@@ -107,10 +129,27 @@ public class HybridSettings extends SettingsPreferenceFragment implements
                 R.string.system_dpi_summary)
                 + " " + dpi);
 
+        dpi = ExtendedPropertiesUtils
+                .getActualProperty(ExtendedPropertiesUtils.BEERBONG_PREFIX + "user_default_dpi");
+        if (dpi == 0) {
+            dpi = ExtendedPropertiesUtils.getActualProperty("com.android.systemui.dpi");
+        }
+        mAppsDpi.setSummary(getResources().getString(
+                R.string.apps_dpi_summary)
+                + " " + dpi);
+
         int layout = ExtendedPropertiesUtils
                 .getActualProperty("com.android.systemui.layout");
         int index = mUimode.findIndexOfValue(String.valueOf(layout));
         mUimode.setSummary(mUimode.getEntries()[index]);
+
+        int alayout = ExtendedPropertiesUtils
+                .getActualProperty(ExtendedPropertiesUtils.BEERBONG_PREFIX + "user_default_layout");
+        if (alayout == 0) {
+            alayout = layout;
+        }
+        index = mAppsUimode.findIndexOfValue(String.valueOf(alayout));
+        mAppsUimode.setSummary(mAppsUimode.getEntries()[index]);
 
         mRestore.setEnabled(Applications.backupExists());
     }
@@ -165,6 +204,64 @@ public class HybridSettings extends SettingsPreferenceFragment implements
                         Applications.addProperty(mContext,
                                 "com.android.systemui.navbar.dpi",
                                 mNavbarHeightProgress, true);
+                    }
+                }).create().show();
+    }
+
+    private void showAppsDpiDialog() {
+        Resources res = getResources();
+        String cancel = res.getString(R.string.cancel);
+        String ok = res.getString(R.string.ok);
+        String title = res.getString(R.string.apps_dpi_custom_title);
+        int savedProgress = ExtendedPropertiesUtils
+                .getActualProperty(ExtendedPropertiesUtils.BEERBONG_PREFIX + "user_default_dpi");
+        if (savedProgress == 0) {
+            savedProgress = ExtendedPropertiesUtils.getActualProperty("com.android.systemui.dpi");
+        }
+        savedProgress = (savedProgress - 120) / 5;
+
+        LayoutInflater factory = LayoutInflater.from(getActivity());
+        final View alphaDialog = factory.inflate(R.layout.seekbar_dialog, null);
+        SeekBar seekbar = (SeekBar) alphaDialog.findViewById(R.id.seek_bar);
+        final TextView seektext = (TextView) alphaDialog
+                .findViewById(R.id.seek_text);
+        OnSeekBarChangeListener seekBarChangeListener = new OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekbar, int progress,
+                    boolean fromUser) {
+                mAppDpiProgress = 120 + (seekbar.getProgress() * 5);
+                seektext.setText(String.valueOf(mAppDpiProgress));
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekbar) {
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekbar) {
+            }
+        };
+        seektext.setText(String.valueOf(120 + (savedProgress * 5)));
+        seekbar.setMax(72);
+        seekbar.setProgress(savedProgress);
+        seekbar.setOnSeekBarChangeListener(seekBarChangeListener);
+        new AlertDialog.Builder(getActivity())
+                .setTitle(title)
+                .setView(alphaDialog)
+                .setNegativeButton(cancel,
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog,
+                                    int which) {
+                                // nothing
+                            }
+                        })
+                .setPositiveButton(ok, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Applications.addProperty(mContext,
+                                ExtendedPropertiesUtils.BEERBONG_PREFIX + "user_default_dpi",
+                                mAppDpiProgress, false);
                     }
                 }).create().show();
     }
