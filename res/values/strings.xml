@@ -5014,12 +5014,18 @@
     <string name="pref_volume_wake_summary">Pressing the volume rocker up/down will wake the device</string>
 
     <!-- Force dual panel -->
+    <string name="display_category_beerdisplay_options_title">Beer Display Options</string>
     <string name="force_dualpanel_title">Force dual panel in settings</string>
     <string name="force_dualpanel_summary">This will enable/disable dual panel in settings"</string>
 
     <!-- Alternate default app picker -->
     <string name="alt_resolver_title">Use Alt Default App Picker</string>
     <string name="alt_resolver_summary">Use Alternate Default App Picker</string>
+
+     <!-- Custom Carrier Text -->
+    <string name="custom_carrier_label_title">Custom carrier label</string>
+    <string name="custom_carrier_label_explain">Please enter a new label. Leave blank to revert to stock label.</string>
+    <string name="custom_carrier_label_notset">Custom label currently not set</string>
 
     <!-- Setting checkbox summary for displaying USB debugging notification -->
     <string name="adb_notify">USB debugging notify</string>
@@ -5218,6 +5224,8 @@
 
     <!-- Show All Widgets -->
     <string name="keyguard_picker_all_widgets_title">Show all widgets</string>
+
+   
 
     <!-- **** CYANOGENMOD ADDITIONS END **** -->
 
