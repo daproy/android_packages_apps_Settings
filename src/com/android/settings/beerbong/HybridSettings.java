@@ -159,8 +159,8 @@ public class HybridSettings extends SettingsPreferenceFragment implements
         String cancel = res.getString(R.string.cancel);
         String ok = res.getString(R.string.ok);
         String title = res.getString(R.string.navbar_height_title);
-        int savedProgress = ExtendedPropertiesUtils
-                .getActualProperty("com.android.systemui.navbar.dpi") / 5;
+        int savedProgress = Integer.parseInt(ExtendedPropertiesUtils
+                .getProperty("com.android.systemui.navbar.dpi")) / 5;
 
         LayoutInflater factory = LayoutInflater.from(getActivity());
         final View alphaDialog = factory.inflate(R.layout.seekbar_dialog, null);
