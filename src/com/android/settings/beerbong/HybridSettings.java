@@ -94,6 +94,7 @@ public class HybridSettings extends SettingsPreferenceFragment implements
             Applications.backup(mContext);
         } else if (preference == mRestore) {
             Applications.restore(mContext);
+            Utils.reboot();
         } else if (preference == mAutoBackup) {
             SharedPreferences settings = mContext.getSharedPreferences(
                     Applications.PREFS_NAME, 0);
