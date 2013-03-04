@@ -13,7 +13,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.CheckBoxPreference;
 import android.preference.Preference;
 import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
@@ -129,7 +128,7 @@ public class DpiGroups extends SettingsPreferenceFragment {
             }
         }
 
-        Map<String, Integer> hashMap = new HashMap();
+        Map<String, Integer> hashMap = new HashMap<String, Integer>();
         Iterator it = properties.keySet().iterator();
         while (it.hasNext()) {
             String packageName = (String) it.next();
@@ -140,14 +139,15 @@ public class DpiGroups extends SettingsPreferenceFragment {
                 hashMap.put(dpi, 0);
             }
 
-            if (!"0".equals(dpi) && !Applications.isPartOfSystem(packageName)
-                    && mGroupsList.indexOf(Integer.parseInt(dpi)) < 0) {
-                mGroupsString += "|" + dpi;
-                mGroupsList.add(Integer.parseInt(dpi));
+            if (!"0".equals(dpi) && !Applications.isPartOfSystem(packageName)) {
+                if (mGroupsList.indexOf(Integer.parseInt(dpi)) < 0) {
+                    mGroupsString += "|" + dpi;
+                    mGroupsList.add(Integer.parseInt(dpi));
+                }
+                int count = hashMap.get(dpi);
+                count++;
+                hashMap.put(dpi, count);
             }
-            int count = hashMap.get(dpi);
-            count++;
-            hashMap.put(dpi, count);
         }
 
         SharedPreferences settings = mContext.getSharedPreferences(Applications.PREFS_NAME, 0);
