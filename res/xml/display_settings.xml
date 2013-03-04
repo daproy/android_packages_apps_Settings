@@ -68,8 +68,8 @@
             android:title="@string/pref_volume_wake_title"
             android:summary="@string/pref_volume_wake_summary"
             android:defaultValue="false" />
-	
-	 <PreferenceCategory
+
+        <PreferenceCategory
             android:key="category_beerdisplay_options"
             android:title="@string/display_category_beerdisplay_options_title"/>
 
@@ -85,7 +85,7 @@
              android:summary="@string/alt_resolver_summary"
              android:defaultValue="false" />
 
-	<PreferenceScreen
+        <PreferenceScreen
             android:key="custom_carrier_label"
             android:title="@string/custom_carrier_label_title" />
 

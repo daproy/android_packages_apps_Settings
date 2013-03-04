@@ -20,15 +20,16 @@ package com.android.settings;
 
 import static android.provider.Settings.System.SCREEN_OFF_TIMEOUT;
 
-import android.app.AlertDialog;
+import java.util.ArrayList;
+
 import android.app.ActivityManagerNative;
+import android.app.AlertDialog;
 import android.app.Dialog;
-import android.app.DialogFragment;
-import android.content.DialogInterface;
 import android.app.admin.DevicePolicyManager;
 import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.res.Configuration;
@@ -48,15 +49,10 @@ import android.preference.PreferenceScreen;
 import android.provider.Settings;
 import android.text.Spannable;
 import android.util.Log;
+import android.widget.EditText;
 
 import com.android.internal.view.RotationPolicy;
 import com.android.settings.cyanogenmod.DisplayRotation;
-import com.android.settings.Utils;
-
-
-import android.widget.EditText;
-
-import java.util.ArrayList;
 
 public class DisplaySettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, OnPreferenceClickListener {
@@ -100,10 +96,9 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
 
     private WifiDisplayStatus mWifiDisplayStatus;
     private Preference mWifiDisplayPreference;
-	
-    Context mContext;
+
     private String mCustomLabelText = null;
-	
+
     private ContentObserver mAccelerometerRotationObserver =
             new ContentObserver(new Handler()) {
         @Override
@@ -124,7 +119,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ContentResolver resolver = getActivity().getContentResolver();
-	
 
         addPreferencesFromResource(R.xml.display_settings);
 
@@ -178,10 +172,10 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         mUseAltResolver = (CheckBoxPreference) findPreference(PREF_USE_ALT_RESOLVER);
         mUseAltResolver.setChecked(Settings.System.getBoolean(getContentResolver(),
                 Settings.System.ACTIVITY_RESOLVER_USE_ALT, false));
-	
-	mCustomLabel = findPreference(PREF_CUSTOM_CARRIER_LABEL);
+
+        mCustomLabel = findPreference(PREF_CUSTOM_CARRIER_LABEL);
         updateCustomLabelTextSummary();
-	
+
     }
 
     private void updateDisplayRotationPreferenceDescription() {
@@ -321,19 +315,16 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                 fontSizeNames[index]));
     }
     
-     private void updateCustomLabelTextSummary() { 
+    private void updateCustomLabelTextSummary() { 
         mCustomLabelText = Settings.System.getString(getActivity().getContentResolver(),
                 Settings.System.CUSTOM_CARRIER_LABEL);
-		
+
         if (mCustomLabelText == null || mCustomLabelText.length() == 0) {
             mCustomLabel.setSummary(R.string.custom_carrier_label_notset);
         } else {
             mCustomLabel.setSummary(mCustomLabelText);
-	    
         }
     }
-
-
 
     @Override
     public void onResume() {
@@ -439,11 +430,11 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                     Settings.System.ACTIVITY_RESOLVER_USE_ALT,
                     ((CheckBoxPreference) preference).isChecked());
             return true;
-	} else if (preference == mCustomLabel) {
+        } else if (preference == mCustomLabel) {
             AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
             alert.setTitle(R.string.custom_carrier_label_title);
             alert.setMessage(R.string.custom_carrier_label_explain);
-	    
+
             // Set an EditText view to get user input
             final EditText input = new EditText(getActivity());
             input.setText(mCustomLabelText != null ? mCustomLabelText : "");
@@ -455,10 +446,9 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                     Settings.System.putString(getActivity().getContentResolver(),
                             Settings.System.CUSTOM_CARRIER_LABEL, value);
                     updateCustomLabelTextSummary();
-		    
-		    Intent i = new Intent();
+                    Intent i = new Intent();
                     i.setAction("com.android.settings.LABEL_CHANGED");
-                    mContext.sendBroadcast(i);
+                    getActivity().sendBroadcast(i);
                 }
             });
             alert.setNegativeButton(getResources().getString(R.string.cancel),

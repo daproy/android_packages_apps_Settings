@@ -5013,8 +5013,9 @@
     <string name="pref_volume_wake_title">Volume rocker wake</string>
     <string name="pref_volume_wake_summary">Pressing the volume rocker up/down will wake the device</string>
 
+    <string name="display_category_beerdisplay_options_title">Additional Options</string>
+
     <!-- Force dual panel -->
-    <string name="display_category_beerdisplay_options_title">Beer Display Options</string>
     <string name="force_dualpanel_title">Force dual panel in settings</string>
     <string name="force_dualpanel_summary">This will enable/disable dual panel in settings"</string>
 
@@ -5224,8 +5225,6 @@
 
     <!-- Show All Widgets -->
     <string name="keyguard_picker_all_widgets_title">Show all widgets</string>
-
-   
 
     <!-- **** CYANOGENMOD ADDITIONS END **** -->
 
