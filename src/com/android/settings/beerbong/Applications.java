@@ -172,7 +172,7 @@ public class Applications {
             throw new RuntimeException("Could not remount /system rw");
         }
         try {
-            if (propExists("android.layout")) {
+            if (propExists(property)) {
                 cmd.su.runWaitFor(String.format(REPLACE_CMD, property, value));
             } else {
                 cmd.su.runWaitFor(String.format(APPEND_CMD, property, value));
