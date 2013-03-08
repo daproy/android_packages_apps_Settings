@@ -1354,4 +1354,32 @@
         <item>600</item>
         <item>1000</item>
     </string-array>
+
+   <!-- CRT off animation mode -->
+    <string-array name="entries_system_power_crt_mode">
+        <item>@string/system_power_crt_mode_horizontal</item>
+        <item>@string/system_power_crt_mode_vertical</item>
+        <item>@string/system_power_crt_mode_both</item>
+    </string-array>
+
+    <string-array name="values_system_power_crt_mode" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+   <!-- Notification behavior preferences -->
+    <string-array name="notifs_beh_entries">
+        <item>Normal</item>
+        <item>Never expand</item>
+        <item>Always expand</item>
+        <item>Old style</item>
+    </string-array>
+
+    <string-array name="notifs_beh_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
 </resources>
