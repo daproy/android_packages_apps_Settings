@@ -202,7 +202,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         mNotificationsBehavior = (ListPreference) findPreference(KEY_NOTIFICATION_BEHAVIOUR);
         mNotificationsBehavior.setValue(String.valueOf(CurrentBehavior));
         mNotificationsBehavior.setSummary(mNotificationsBehavior.getEntry());
-+        mNotificationsBehavior.setOnPreferenceChangeListener(this);
+        mNotificationsBehavior.setOnPreferenceChangeListener(this);
 
     }
 
