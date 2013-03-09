@@ -5295,6 +5295,10 @@
     <string name="customdpigroup_summary">Add a custom dpi group</string>
     <string name="custom_dpi">Current dpi:</string>
     <string name="customdpigroup_group_exists">The selected custom dpi group already exists.</string>
+    <string name="per_app_layout_title">Per app layout</string>
+    <string name="per_app_layout_summary">Define layout for each app</string>
+    <string name="per_app_layout_list_title">Application list</string>
+    <string name="per_app_layout_alert_title">Select a layout</string>
 
     <string name="navbar_height_title">NavigationBar height</string>
     <string name="navbar_height_summary">Specify the navigationBar height</string>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:key="per_app_layout_list"
+        android:title="@string/per_app_layout_title">
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -89,6 +89,42 @@ public class Applications {
         checkAutoBackup(mContext);
     }
 
+    public static void addApplicationLayout(Context mContext,
+            String packageName, int layout) {
+        addApplicationLayout(mContext, findAppInfo(mContext, packageName),
+                layout);
+    }
+
+    public static void addApplicationLayout(Context mContext,
+            BeerbongAppInfo app, int layout) {
+
+        if (!mount("rw")) {
+            throw new RuntimeException("Could not remount /system rw");
+        }
+        try {
+            if (propExists(app.pack + ".layout")) {
+                cmd.su.runWaitFor(String.format(REPLACE_CMD, app.pack
+                        + ".layout", String.valueOf(layout)));
+            } else {
+                cmd.su.runWaitFor(String.format(APPEND_CMD, app.pack
+                        + ".layout", String.valueOf(layout)));
+            }
+            if (app.pack.equals("com.android.systemui")) {
+                Utils.restartUI();
+            } else {
+                try {
+                    IActivityManager am = ActivityManagerNative.getDefault();
+                    am.forceStopPackage(app.pack, UserHandle.myUserId());
+                } catch (android.os.RemoteException ex) {
+                    // ignore
+                }
+            }
+        } finally {
+            mount("ro");
+        }
+        checkAutoBackup(mContext);
+    }
+
     public static void addSystem(Context mContext, int dpi) {
 
         if (!mount("rw")) {
@@ -152,11 +188,11 @@ public class Applications {
         }
         try {
             if (propExists("%user_default_layout")) {
-                cmd.su.runWaitFor(String.format(REPLACE_CMD, "%user_default_layout",
-                        layout));
+                cmd.su.runWaitFor(String.format(REPLACE_CMD,
+                        "%user_default_layout", layout));
             } else {
-                cmd.su.runWaitFor(String.format(APPEND_CMD, "%user_default_layout",
-                        layout));
+                cmd.su.runWaitFor(String.format(APPEND_CMD,
+                        "%user_default_layout", layout));
             }
             ExtendedPropertiesUtils.refreshProperties();
         } finally {
@@ -213,10 +249,10 @@ public class Applications {
     }
 
     public static boolean isPartOfSystem(String packageName) {
-        return packageName.startsWith(ExtendedPropertiesUtils.BEERBONG_PREFIX) ||
-                packageName.startsWith("com.android.systemui.statusbar.") ||
-                packageName.startsWith("com.android.systemui.navbar.") ||
-                packageName.endsWith(".layout");
+        return packageName.startsWith(ExtendedPropertiesUtils.BEERBONG_PREFIX)
+                || packageName.startsWith("com.android.systemui.statusbar.")
+                || packageName.startsWith("com.android.systemui.navbar.")
+                || packageName.endsWith(".layout");
     }
 
     public static BeerbongAppInfo[] getApplicationList(Context mContext, int dpi) {
@@ -318,9 +354,8 @@ public class Applications {
     }
 
     private static void checkAutoBackup(Context mContext) {
-        boolean isAutoBackup = mContext.getSharedPreferences(
-                PREFS_NAME, 0).getBoolean(
-                PROPERTY_AUTO_BACKUP, false);
+        boolean isAutoBackup = mContext.getSharedPreferences(PREFS_NAME, 0)
+                .getBoolean(PROPERTY_AUTO_BACKUP, false);
         if (isAutoBackup) {
             backup(mContext);
         }
