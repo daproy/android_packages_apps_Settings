@@ -15,7 +15,7 @@
 -->
 
 <PreferenceScreen
-    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/status_bar_title">
 
     <!-- Status bar tweaks -->
