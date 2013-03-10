@@ -158,7 +158,7 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
                 + "");
 
         mBatteryBarColor = (ColorPickerPreference) findPreference(PREF_BATT_BAR_COLOR);
-	mBatteryBarColor.setOnPreferenceChangeListener(this);
+        mBatteryBarColor.setOnPreferenceChangeListener(this);
         mBatteryBarChargingAnimation = (CheckBoxPreference) findPreference(PREF_BATT_ANIMATE);
         mBatteryBarChargingAnimation.setChecked(Settings.System.getInt(
                 getActivity().getContentResolver(),
