@@ -5004,6 +5004,16 @@
     <string name="status_bar_battery_status_percentage">Percentage</string>
     <string name="status_bar_battery_status_circle">Circle</string>
     <string name="status_bar_battery_status_circle_percentage">Circle with percentage</string>
+    <string name="circle_mod_cat">Circle battery options</string>
+    <string name="circle_battery_color">Circle color</string>
+    <string name="circle_battery_text_color">Circle text color</string>
+    <string name="circle_battery_animation_speed">Circle animation speed</string>
+    <string name="circle_battery_animation_speed_none">None</string>
+    <string name="circle_battery_animation_speed_slow">Slow</string>
+    <string name="circle_battery_animation_speed_stock">Normal</string>
+    <string name="circle_battery_animation_speed_fast">Fast</string>
+    <string name="circle_battery_reset_title">Reset circle colors</string>
+    <string name="circle_battery_reset_summary">Reset circle colors to apply installed theme engine colors</string>
 
     <!-- Status bar | Clock -->
     <string name="status_bar_clock">Clock and date</string>

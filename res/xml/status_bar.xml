@@ -40,6 +40,33 @@
             android:entries="@array/entries_status_bar_battery"
             android:entryValues="@array/values_status_bar_battery" />
 
+     <PreferenceScreen
+        android:key="circle_mod_cat"
+        android:title="@string/circle_mod_cat">
+	
+	<com.android.settings.cyanogenmod.colorpicker.ColorPickerPreference
+            	android:key="circle_battery_color"
+            	android:title="@string/circle_battery_color"
+            	android:defaultValue="#33B5E5" />
+
+            <com.android.settings.cyanogenmod.colorpicker.ColorPickerPreference
+            	android:key="circle_battery_text_color"
+            	android:title="@string/circle_battery_text_color"
+            	android:defaultValue="#33B5E5" />
+
+            <ListPreference
+            	android:key="circle_battery_animation_speed"
+            	android:title="@string/circle_battery_animation_speed"
+            	android:entries="@array/circle_battery_animation_speed_entries"
+            	android:entryValues="@array/circle_battery_animation_speed_values" />
+
+            <Preference
+            	android:key="circle_battery_reset"
+            	android:title="@string/circle_battery_reset_title"
+            	android:summary="@string/circle_battery_reset_summary" />
+		
+	</PreferenceScreen>
+
         <PreferenceScreen
         android:key="battery_bar_cat"
         android:title="@string/battery_bar_cat">
@@ -50,7 +77,7 @@
                 android:entries="@array/battery_bar_entries"
                 android:entryValues="@array/battery_bar_values" />
 
-            <ListPreference
+	    <ListPreference
                 android:key="battery_bar_style"
                 android:title="@string/battery_bar_style_title"
                 android:entries="@array/battery_bar_style_entries"
