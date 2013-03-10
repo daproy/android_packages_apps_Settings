@@ -1235,6 +1235,21 @@
         <item>4</item>
     </string-array>
 
+   <string-array name="circle_battery_animation_speed_entries" >
+        <item>@string/circle_battery_animation_speed_none</item>
+        <item>@string/circle_battery_animation_speed_slow</item>
+        <item>@string/circle_battery_animation_speed_stock</item>
+        <item>@string/circle_battery_animation_speed_fast</item>
+    </string-array>
+
+    <string-array name="circle_battery_animation_speed_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>3</item>
+        <item>5</item>
+    </string-array>
+
+
     <string-array name="entries_status_bar_signal" translatable="false">
         <item>@string/status_bar_style_icon</item>
         <item>@string/status_bar_signal_text_show_text</item>
