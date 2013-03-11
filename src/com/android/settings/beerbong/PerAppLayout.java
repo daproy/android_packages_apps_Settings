@@ -48,9 +48,9 @@ public class PerAppLayout extends SettingsPreferenceFragment {
 
         for (int i = 0; i < items.length; i++) {
             
-            if (items[i].pack.equals("com.android.systemui")) {
-                continue;
-            }
+//            if (items[i].pack.equals("com.android.systemui")) {
+//                continue;
+//            }
             
             Preference pref = new Preference(mContext);
             Applications.BeerbongAppInfo bAppInfo = items[i];
@@ -58,7 +58,7 @@ public class PerAppLayout extends SettingsPreferenceFragment {
             pref.setKey(bAppInfo.pack);
             pref.setTitle(bAppInfo.name);
             pref.setIcon(bAppInfo.icon);
-            pref.setLayoutResource(com.android.internal.R.layout.preference);
+            pref.setLayoutResource(R.layout.simple_preference2);
 
             int currentLayout = ExtendedPropertiesUtils
                     .getActualProperty(bAppInfo.pack + ".layout");

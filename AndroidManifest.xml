@@ -1578,6 +1578,8 @@
 
         <activity android:name=".cyanogenmod.QuickSettings" />
 
+        <activity android:name=".cyanogenmod.QuickSettingsTilesStyle" />
+
 	<activity android:name=".cyanogenmod.NotificationDrawerStyle" />
 
 	<activity android:name=".cyanogenmod.StatusBar" />

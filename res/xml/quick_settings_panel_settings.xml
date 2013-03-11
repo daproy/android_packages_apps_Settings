@@ -33,7 +33,7 @@
             android:key="collapse_panel"
             android:title="@string/title_collapse_panel"
             android:summary="@string/summary_collapse_panel" />
-
+	
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -46,6 +46,12 @@
             android:summary="@string/tile_picker_summary"
             android:fragment="com.android.settings.cyanogenmod.QuickSettingsTiles" />
 
+        <PreferenceScreen
+            android:key="quicksettings_tiles_style"
+            android:fragment="com.android.settings.cyanogenmod.QuickSettingsTilesStyle"
+            android:title="@string/quicksettings_tiles_style"
+            android:summary="@string/summary_quicksettings_tiles_style" />
+   	
         <MultiSelectListPreference
             android:key="pref_ring_mode"
             android:dialogTitle="@string/pref_ring_mode_title"
