@@ -1508,8 +1508,6 @@
 
         <activity android:name=".cyanogenmod.SystemSettings" />
 
-        <activity android:name=".cyanogenmod.PerformanceSettings" />
-
         <activity android:name="Settings$QuietHoursSettingsActivity"
                 android:label="@string/quiet_hours_title"
                 android:taskAffinity=""
@@ -1577,6 +1575,8 @@
         <activity android:name=".cyanogenmod.PowerMenu" />
 
         <activity android:name=".cyanogenmod.QuickSettings" />
+
+        <activity android:name=".cyanogenmod.QuickSettingsTilesStyle" />
 
 	<activity android:name=".cyanogenmod.NotificationDrawerStyle" />
 
