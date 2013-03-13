@@ -263,6 +263,9 @@ public class HybridSettings extends SettingsPreferenceFragment implements
                         Applications.addProperty(mContext,
                                 ExtendedPropertiesUtils.BEERBONG_PREFIX + "user_default_dpi",
                                 mAppDpiProgress, false);
+                        Applications.addProperty(mContext,
+                                ExtendedPropertiesUtils.BEERBONG_PREFIX + "system_default_dpi",
+                                mAppDpiProgress, false);
                     }
                 }).create().show();
     }
