@@ -514,7 +514,7 @@ public class ColorPickerView extends View {
             height = (int) (widthAllowed - PANEL_SPACING - HUE_PANEL_WIDTH);
 
             //If calculated height (based on the width) is more than the allowed height.
-            if (height > heightAllowed || getTag().equals("landscape")) {
+            if (height > heightAllowed || "landscape".equals(getTag())) {
                 height = heightAllowed;
                 width = (int) (height + PANEL_SPACING + HUE_PANEL_WIDTH);
             } else {
