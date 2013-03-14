@@ -4895,8 +4895,8 @@
     <string name="hardware_keys_action_voice_search">Voice search</string>
     <string name="hardware_keys_action_in_app_search">In-app search</string>
 
-    <!-- Navigation Bar #CM -->
-    <string name="navigation_bar_title">Navigation bar</string>
+    <!-- Navigation Bar -->
+    <string name="navigation_bar_title">Buttons and layout</string>
     <string name="navigation_bar_help_text">1 - To begin editing, tap the lock icon\n\n2 - Tap any button to assign or change functionality\n\n3 - Long press any button to rearrange the order\n\n4 - To save, tap the lock icon again\n\n5 - To restore system default, tap the reset button\n\n</string>
     <string name="navigation_bar_tips">&#8226; Actions can only be assigned to one button at a time\n\n&#8226; The home button cannot be re-assigned\n\n&#8226; Side buttons cannot be rearranged</string>
     <string name="navigation_bar_tips_title">Quick tips</string>
@@ -5150,6 +5150,7 @@
     <string name="title_tile_screen_timeout">Screen timeout</string>
     <string name="title_tile_usb_tether">USB Tether</string>
     <string name="title_tile_quiet_hours">Quiet hours</string>
+    <string name="title_tile_volume">Volume</string>
 
     <string name="title_dynamic_tiles">Dynamic tiles</string>
     <string name="dynamic_tiles_note_title">Note</string>
@@ -5278,11 +5279,14 @@
     <string name="advanced_reboot_title">Advanced reboot</string>
     <string name="advanced_reboot_summary">When unlocked, include options in the power menu for rebooting into recovery or bootloader</string>
 
-    <!-- Navigation ring -->
-    <string name="navigation_ring_title">Navigation ring</string>
-    <string name="navring_target_reset_message">Delete all user created navigation shortcuts and restore to default?</string>
-    <string name="navring_target_reset">Navigation ring shortcuts reset to default</string>
-    <string name="navring_target_save">Navigation ring shortcuts saved</string>
+    <!-- Navigation bar buttons and shortcuts category title -->
+    <string name="navigation_bar_category">Navigation bar</string>
+
+    <!-- Navigation ring shortcuts -->
+    <string name="navigation_ring_title">Quick launch shortcuts</string>
+    <string name="navring_target_reset_message">Delete all user created navigation bar shortcuts and restore to default?</string>
+    <string name="navring_target_reset">Navigation bar shortcuts reset to default</string>
+    <string name="navring_target_save">Navigation bar shortcuts saved</string>
     <string name="navring_action_open_ime_switcher">Open IME Switcher</string>
     <string name="navring_action_kill_app">Kill app</string>
     <string name="navring_action_none">None</string>
@@ -5387,4 +5391,5 @@
 
     <string name="alert_reboot">Reboot needed</string>
     <string name="alert_reboot_message">This change needs a reboot to be applied. Do you want to reboot now?</string>
+
 </resources>
