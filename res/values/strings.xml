@@ -5392,4 +5392,6 @@
     <string name="alert_reboot">Reboot needed</string>
     <string name="alert_reboot_message">This change needs a reboot to be applied. Do you want to reboot now?</string>
 
+    <string name="goo_manager">GooManager</string>
+
 </resources>

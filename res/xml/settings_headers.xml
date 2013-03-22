@@ -232,7 +232,7 @@
         android:id="@+id/gooupdater"
         android:fragment="com.android.settings.beerbong.gooupdater.GooFragment"
         android:icon="@drawable/ic_settings_backup"
-        android:title="GooUpdater" />
+        android:title="@string/goo_manager" />
 
     <!-- Date & Time -->
     <header

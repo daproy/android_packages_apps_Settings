@@ -137,6 +137,7 @@
             android:name=".cyanogenmod.superuser.SuReceiver"
             android:permission="android.permission.REPORT_SUPERUSER" />
 
+        <activity android:name="com.android.settings.beerbong.gooupdater.GooActivity" />
 
         <!-- Settings -->
 
