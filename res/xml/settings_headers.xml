@@ -228,11 +228,22 @@
         android:title="@string/superuser" />
 
     <!-- GooUpdater -->
+<<<<<<< HEAD
     <header
         android:id="@+id/gooupdater"
         android:fragment="com.android.settings.beerbong.gooupdater.GooFragment"
         android:icon="@drawable/ic_settings_backup"
         android:title="@string/goo_manager" />
+=======
+    <header android:id="@+id/gooupdater"
+            android:title="GooUpdater"
+            android:icon="@drawable/ic_settings_backup" >
+        <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="com.beerbong.gooupdater"
+                android:targetClass="com.beerbong.gooupdater.MainActivity" />
+    </header>
+>>>>>>> parent of 0afd844... Add GooUpdater as a fragment (WIP)
 
     <!-- Date & Time -->
     <header
