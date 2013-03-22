@@ -229,7 +229,7 @@
 
     <!-- GooUpdater -->
     <header android:id="@+id/gooupdater"
-            android:title="GooUpdater"
+            android:title="@string/goo_updater"
             android:icon="@drawable/ic_settings_backup" >
         <intent
                 android:action="android.intent.action.MAIN"
