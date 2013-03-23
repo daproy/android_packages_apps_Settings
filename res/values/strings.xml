@@ -4548,6 +4548,11 @@
     <string name="lockscreen_battery_status_charging">Only when charging</string>
     <string name="lockscreen_battery_status_alwayson">Always on</string>
 
+    <!-- Lock screen Rotation -->
+    <string name="lockscreen_auto_rotate_title">Allow lockscreen rotation</string>
+    <string name="lockscreen_auto_rotate_summary">Lockscreen will have the ability to rotate. This is dependent of Auto-rotation in display</string>
+    <string name="lockscreen_no_rotate_summary">System auto rotate is disabled. Enable it for this option.</string>
+
     <!-- Profiles settings  -->
     <string name="profiles_settings_title">Profiles</string>
     <string name="profiles_general_title">General</string>
@@ -5075,6 +5080,7 @@
     <string name="notification_background_default_wallpaper">Default background</string>
     <string name="notification_drawer_custom_background_dialog_title">Choose color</string>
     <string name="notif_wallpaper_alpha_title">Notification background transparency</string>
+    <string name="notif_alpha_title">Notification Rows transparency</string>
 
     <!-- CRT Off Mode -->
     <string name="system_power_crt_screen_off_title">CRT Screen Off</string>
