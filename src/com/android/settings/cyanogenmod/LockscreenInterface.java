@@ -41,6 +41,7 @@ import android.view.Display;
 import android.view.Window;
 import android.widget.Toast;
 
+import com.android.internal.view.RotationPolicy;
 import com.android.settings.R;
 import com.android.settings.Utils;
 import com.android.settings.SettingsPreferenceFragment;
@@ -61,10 +62,12 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
     private static final String KEY_LOCKSCREEN_MAXIMIZE_WIDGETS = "lockscreen_maximize_widgets";
     private static final String KEY_BACKGROUND = "lockscreen_background";
     private static final String KEY_SCREEN_SECURITY = "screen_security";
+    private static final String PREF_LOCKSCREEN_AUTO_ROTATE = "lockscreen_auto_rotate";
 
     private ListPreference mCustomBackground;
     private ListPreference mBatteryStatus;
     private CheckBoxPreference mMaximizeWidgets;
+    private CheckBoxPreference mLockscreenAutoRotate;
 
     private File mWallpaperImage;
     private File mWallpaperTemporary;
@@ -118,6 +121,16 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
 
         mWallpaperImage = new File(getActivity().getFilesDir() + "/lockwallpaper");
         mWallpaperTemporary = new File(getActivity().getCacheDir() + "/lockwallpaper.tmp");
+
+        mLockscreenAutoRotate = (CheckBoxPreference)findPreference(PREF_LOCKSCREEN_AUTO_ROTATE);
+        mLockscreenAutoRotate.setChecked(Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
+                Settings.System.LOCKSCREEN_AUTO_ROTATE, 0) == 1);
+
+        if (RotationPolicy.isRotationLocked(getActivity())) {
+            mLockscreenAutoRotate.setEnabled(false);
+            mLockscreenAutoRotate.setSummary(getResources().getString(R.string.lockscreen_no_rotate_summary));
+        }
+      
     }
 
     private void updateCustomBackgroundSummary() {
@@ -196,11 +209,16 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
             boolean value = (Boolean) objValue;
             Settings.System.putInt(cr, Settings.System.LOCKSCREEN_MAXIMIZE_WIDGETS, value ? 1 : 0);
             return true;
+        } else if (preference == mLockscreenAutoRotate) {
+            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
+                    Settings.System.LOCKSCREEN_AUTO_ROTATE, mLockscreenAutoRotate.isChecked() ? 1 : 0);
+            return true;
         } else if (preference == mCustomBackground) {
             int selection = mCustomBackground.findIndexOfValue(objValue.toString());
             return handleBackgroundSelection(selection);
         }
         return false;
+        
     }
 
     private boolean handleBackgroundSelection(int selection) {
