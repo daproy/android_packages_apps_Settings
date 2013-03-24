@@ -123,8 +123,9 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
         mWallpaperTemporary = new File(getActivity().getCacheDir() + "/lockwallpaper.tmp");
 
         mLockscreenAutoRotate = (CheckBoxPreference)findPreference(PREF_LOCKSCREEN_AUTO_ROTATE);
-        mLockscreenAutoRotate.setChecked(Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
+        mLockscreenAutoRotate.setChecked(Settings.System.getInt(getActivity().getContentResolver(),
                 Settings.System.LOCKSCREEN_AUTO_ROTATE, 0) == 1);
+        mLockscreenAutoRotate.setOnPreferenceChangeListener(this);
 
         if (RotationPolicy.isRotationLocked(getActivity())) {
             mLockscreenAutoRotate.setEnabled(false);
@@ -210,8 +211,8 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
             Settings.System.putInt(cr, Settings.System.LOCKSCREEN_MAXIMIZE_WIDGETS, value ? 1 : 0);
             return true;
         } else if (preference == mLockscreenAutoRotate) {
-            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
-                    Settings.System.LOCKSCREEN_AUTO_ROTATE, mLockscreenAutoRotate.isChecked() ? 1 : 0);
+            boolean value = (Boolean) objValue;
+            Settings.System.putInt(cr, Settings.System.LOCKSCREEN_AUTO_ROTATE, value ? 1 : 0);
             return true;
         } else if (preference == mCustomBackground) {
             int selection = mCustomBackground.findIndexOfValue(objValue.toString());
