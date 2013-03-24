@@ -42,8 +42,6 @@ public class SystemSettings extends SettingsPreferenceFragment {
     private static final String KEY_BATTERY_LIGHT = "battery_light";
     private static final String KEY_HARDWARE_KEYS = "hardware_keys";
     private static final String KEY_NAVIGATION_BAR = "navigation_bar";
-    private static final String KEY_NAVIGATION_RING = "navigation_ring";
-    private static final String KEY_NAVIGATION_BAR_CATEGORY = "navigation_bar_category";
     private static final String KEY_LOCK_CLOCK = "lock_clock";
     private static final String KEY_STATUS_BAR = "status_bar";
     private static final String KEY_QUICK_SETTINGS = "quick_settings_panel";
@@ -87,14 +85,16 @@ public class SystemSettings extends SettingsPreferenceFragment {
                 prefScreen.removePreference(findPreference(KEY_HARDWARE_KEYS));
             }
             if (removeNavbar) {
+<<<<<<< HEAD
+=======
+                prefScreen.removePreference(findPreference(KEY_NAVIGATION_BAR));
+>>>>>>> parent of c7177f8... Settings: Navigation bar Quick launch shortcuts (1 of 2)
             }
         } else {
             // Secondary user is logged in, remove all primary user specific preferences
             prefScreen.removePreference(findPreference(KEY_BATTERY_LIGHT));
             prefScreen.removePreference(findPreference(KEY_HARDWARE_KEYS));
             prefScreen.removePreference(findPreference(KEY_NAVIGATION_BAR));
-            prefScreen.removePreference(findPreference(KEY_NAVIGATION_RING));
-            prefScreen.removePreference(findPreference(KEY_NAVIGATION_BAR_CATEGORY));
             prefScreen.removePreference(findPreference(KEY_STATUS_BAR));
             prefScreen.removePreference(findPreference(KEY_QUICK_SETTINGS));
             prefScreen.removePreference(findPreference(KEY_POWER_MENU));
