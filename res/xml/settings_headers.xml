@@ -74,7 +74,7 @@
         android:id="@+id/nav_bar"
         android:fragment="com.android.settings.aokp.Navbar"
         android:title="@string/title_navbar"
-        android:icon="@drawable/ic_rom_control_navigation_bar" />
+        android:icon="@drawable/ic_rom_control_navigation_bar" />  
 
     <!-- Launcher -->
     <header
