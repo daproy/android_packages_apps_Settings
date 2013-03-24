@@ -26,12 +26,12 @@
                 android:title="@string/navbar_qty_title"
                 android:summary="@string/navbar_qty_summary" />
 
-        <net.margaritov.preference.colorpicker.ColorPickerPreference
+        <com.android.cyanogenmod.colorpicker.ColorPickerPreference
                 android:key="nav_button_color"
                 android:title="@string/navigation_bar_tint_title"
                 android:defaultValue="#FFFFFF" />
 
-        <net.margaritov.preference.colorpicker.ColorPickerPreference
+        <com.android.cyanogenmod.colorpicker.ColorPickerPreference
                 android:key="nav_button_glow_color"
                 android:title="@string/navigation_bar_glow_tint_title"
                 android:summary="@string/navigation_bar_glow_tint_summary"

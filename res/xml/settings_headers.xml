@@ -17,120 +17,6 @@
 <preference-headers
         xmlns:android="http://schemas.android.com/apk/res/android">
 
-<<<<<<< HEAD
-=======
-    <!-- KILLRModifier -->
-    <header android:title="@string/header_category_interface" />
-
-    <!-- KILLRHome -->
-    <header
-        android:id="@+id/launcher_settings"
-        android:title="@string/launcher_settings_title"
-        android:icon="@drawable/ic_settings_killrhome"
-        android:summary="@string/header_summary_home" />
-
-    <!-- Quick Settings -->
-    <header
-        android:id="@+id/quick_settings_panel_settings"
-        android:title="@string/quick_settings_panel_title"
-        android:icon="@drawable/ic_settings_qs"
-        android:summary="@string/quick_settings_title"
-        android:fragment="com.android.settings.cyanogenmod.QuickSettings" />
-
-     <header
-        android:id="@+id/nav_bar"
-        android:fragment="com.android.settings.aokp.Navbar"
-        android:title="@string/title_navbar"
-        android:icon="@drawable/ic_rom_control_navigation_bar"
-        android:summary="@string/header_summary_navbar" />
-
-    <!-- Status Bar -->
-    <header
-        android:id="@+id/status_bar"
-        android:title="@string/status_bar_title" 
-        android:fragment="com.android.settings.cyanogenmod.StatusBar"
-        android:icon="@drawable/ic_settings_status_bar"
-        android:summary="@string/header_summary_status_bar" />
-
-    <!-- Battery -->
-    <header
-        android:id="@+id/statusbar_battery"
-        android:title="@string/battery"
-        android:fragment="com.android.settings.aokp.StatusBarBattery"
-        android:icon="@drawable/ic_rom_control_battery"
-        android:summary="@string/header_summary_battery" />
-
-    <!-- Lock screen -->
-    <header
-        android:id="@+id/lock_screen_settings"
-        android:title="@string/lock_screen_title"
-        android:icon="@drawable/ic_settings_lockscreen"
-        android:summary="@string/header_summary_lockscreen"
-        android:fragment="com.android.settings.cyanogenmod.LockscreenInterface" />
-
-    <!-- Power Menu -->
-    <header
-        android:id="@+id/power_menu_settings"
-        android:title="@string/power_menu_title"
-        android:icon="@drawable/ic_power_menu"
-        android:summary="@string/header_power_menu"
-        android:fragment="com.android.settings.cyanogenmod.PowerMenu" />
-
-    <!-- Themes -->
-    <header
-        android:id="@+id/themes_settings"
-        android:icon="@drawable/ic_settings_themes"
-        android:summary="@string/header_summary_themes"
-        android:title="@string/themes_settings_title">
-        <intent
-            android:action="android.intent.action.MAIN"
-            android:targetPackage="com.tmobile.themechooser"
-            android:targetClass="com.tmobile.themechooser.ThemeChooser" />
-    </header>
-
-    <!-- Extended -->
-    <header
-        android:id="@+id/system_settings"
-        android:icon="@drawable/ic_settings_system"
-        android:summary="@string/header_summary_system_settings"
-        android:fragment="com.android.settings.cyanogenmod.SystemSettings"
-        android:title="@string/system_settings_title" />
-
-    <!-- Profiles -->
-    <header
-        android:id="@+id/profiles_settings"
-        android:title="@string/profiles_settings_title"
-        android:icon="@drawable/ic_settings_profiles"
-        android:summary="@string/header_summary_profiles"
-        android:fragment="com.android.settings.profiles.ProfilesSettings" />
-
-    <!-- Quiet hours -->
-    <header
-        android:id="@+id/quiet_hours_settings"
-        android:title="@string/header_quiet_hours"
-        android:icon="@drawable/ic_settings_quiet_hours"
-        android:summary="@string/quiet_hours_title"
-        android:fragment="com.android.settings.cyanogenmod.QuietHours" />
-
-    <!-- Speed Demon -->
-    <header android:id="@+id/speeddemon"
-            android:title="@string/speeddemon_title"
-            android:summary="@string/header_summary_speeddemon"
-            android:icon="@drawable/ic_settings_speeddemon" >
-        <intent
-                android:action="android.intent.action.MAIN"
-                android:targetClass="com.brewcrewfoo.performance.activities.MainActivity"
-                android:targetPackage="com.brewcrewfoo.performance" />
-    </header>
-
-    <!-- Development -->
-    <header
-        android:id="@+id/development_settings"
-        android:fragment="com.android.settings.DevelopmentSettings"
-        android:icon="@drawable/ic_settings_development"
-        android:summary="@string/header_summary_development"
-        android:title="@string/development_settings_title" />
->>>>>>> 1817ef6... Port: AOKP navbar navring to settings
 
     <!-- WIRELESS and NETWORKS -->
     <header android:id="@+id/wireless_section"
@@ -182,6 +68,13 @@
         android:title="@string/hybrid_settings_title"
         android:icon="@drawable/ic_settings_jellybeer"
         android:fragment="com.android.settings.beerbong.HybridSettings" />
+
+    <!-- Navbar -->
+    <header
+        android:id="@+id/nav_bar"
+        android:fragment="com.android.settings.aokp.Navbar"
+        android:title="@string/title_navbar"
+        android:icon="@drawable/ic_rom_control_navigation_bar" />
 
     <!-- Launcher -->
     <header

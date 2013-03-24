@@ -1576,21 +1576,17 @@
         <activity android:name=".cyanogenmod.PowerMenu" />
 
         <activity android:name=".cyanogenmod.QuickSettings" />
-<<<<<<< HEAD
-=======
 
         <activity android:name=".cyanogenmod.QuietHours" />
->>>>>>> 1817ef6... Port: AOKP navbar navring to settings
 
         <activity android:name=".cyanogenmod.QuickSettingsTilesStyle" />
 
 	<activity android:name=".cyanogenmod.NotificationDrawerStyle" />
 
-<<<<<<< HEAD
 	<activity android:name=".cyanogenmod.StatusBar" />
 
         <activity android:name=".cyanogenmod.StatusBarClockStyle" />
-=======
+
         <activity android:name=".aokp.NavRingTargets" />
 
         <activity android:name=".aokp.NavBarItemPreference" />
@@ -1600,7 +1596,6 @@
         <activity android:name=".aokp.SeekBarPreference" />
 
         <activity android:name=".aokp.TouchInterceptor" />
->>>>>>> 1817ef6... Port: AOKP navbar navring to settings
 
         <activity android:name=".profiles.NFCProfile"
                 android:theme="@android:style/Theme.NoDisplay">

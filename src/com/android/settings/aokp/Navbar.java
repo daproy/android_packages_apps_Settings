@@ -60,7 +60,7 @@ import com.android.settings.aokp.widgets.NavBarItemPreference;
 import com.android.settings.aokp.widgets.SeekBarPreference;
 import com.android.settings.aokp.NavRingTargets;
 
-import net.margaritov.preference.colorpicker.ColorPickerPreference;
+import com.android.cyanogenmod.colorpicker.ColorPickerPreference;
 
 public class Navbar extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener, ShortcutPickerHelper.OnPickListener {

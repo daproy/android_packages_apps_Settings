@@ -5278,24 +5278,7 @@
     <string name="battery_bar_thickness_title">Battery bar thickness</string>
     <string name="battery_bar_animate_title">Charging animation</string>
     <string name="battery_bar_animate_summary">The charging animation may result in a poor user experience. Enable at your own discretion.</string>
-<<<<<<< HEAD
 
-    <string name="dialog_color_picker">Color picker</string>
-    <string name="press_color_to_apply">Tap on color to apply</string>
-    <string name="arrow_right" translatable="false">\u2192</string>
-    <string name="arrow_down" translatable="false">\u2193</string>
-    <string name="hex_hint" translatable="false">#FF000000</string>
-    <string name="ics_color" translatable="false">!!!</string>
-=======
-    <string name="dont_show">Don\'t show</string>
-    <string name="icon_only">Stock Icon only</string>
-    <string name="text_only">Stock Text only</string>
-
-    <!-- Battery styles -->
-    <string name="icon_with_text">Stock with Offset Percent</string>
-    <string name="icon_with_centered_text">Stock with Centered Percent</string>
-    <string name="circlemod">Circle Gear</string>
-    <string name="stub">KillrStub</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
@@ -5304,16 +5287,15 @@
     <string name="arrow_down">↓</string>
     <string name="hex">Hex:</string>
     <string name="hex_hint">#FF000000</string>
->>>>>>> 1817ef6... Port: AOKP navbar navring to settings
     <string name="set">Set</string>
     <string name="hex">Hex:</string>
 
-<<<<<<< HEAD
+
     <!-- Advanced reboot options -->
     <string name="advanced_reboot_title">Advanced reboot</string>
     <string name="advanced_reboot_summary">When unlocked, include options in the power menu for rebooting into recovery or bootloader</string>
 
-<<<<<<< HEAD
+
     <!-- Navigation bar buttons and shortcuts category title -->
     <string name="navigation_bar_category">Navigation bar</string>
 
@@ -5428,7 +5410,7 @@
     <string name="alert_reboot_message">This change needs a reboot to be applied. Do you want to reboot now?</string>
 
     <string name="goo_updater">GooUpdater</string>
-=======
+
     <!-- Navigation Bar -->
     <string name="title_navbar">NavBar Modifier</string>
     <string name="header_summary_navbar">Setup NavBar</string>
@@ -5592,11 +5574,6 @@
     <string name="use_custom_app_summary">Use custom application instead of the recent applications dialog</string>
     <string name="select_custom_app_title">Select custom application</string>
     <string name="group_applications">Applications</string>
-
-    <!-- Speed Demon -->
-    <string name="header_summary_speeddemon">Get Demonic with your speed</string>
-    <string name="speeddemon_title">Speed Demon</string>
->>>>>>> 1817ef6... Port: AOKP navbar navring to settings
 
 
 </resources>

@@ -1429,7 +1429,6 @@
         <item>4</item>
     </string-array>
 
-<<<<<<< HEAD
     <!-- **** CYANOGENMOD ADDITIONS END **** -->
 
     <string-array name="entries_dpi_system_window">
@@ -1531,7 +1530,6 @@
         <item>1005</item>
     </string-array>
 
-=======
     <!-- NavBar -->
     <string-array name="pref_navigation_menu_entries" translatable="false">
         <item>@string/right</item>
@@ -1707,5 +1705,5 @@
         <item>250|25</item>
         <item>500|50</item>
     </string-array>
->>>>>>> 1817ef6... Port: AOKP navbar navring to settings
+
 </resources>
