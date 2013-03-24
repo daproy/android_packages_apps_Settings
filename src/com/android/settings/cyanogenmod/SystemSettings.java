@@ -85,10 +85,7 @@ public class SystemSettings extends SettingsPreferenceFragment {
                 prefScreen.removePreference(findPreference(KEY_HARDWARE_KEYS));
             }
             if (removeNavbar) {
-<<<<<<< HEAD
-=======
                 prefScreen.removePreference(findPreference(KEY_NAVIGATION_BAR));
->>>>>>> parent of c7177f8... Settings: Navigation bar Quick launch shortcuts (1 of 2)
             }
         } else {
             // Secondary user is logged in, remove all primary user specific preferences
