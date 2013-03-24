@@ -1577,6 +1577,8 @@
 
         <activity android:name=".cyanogenmod.QuickSettings" />
 
+        <activity android:name=".cyanogenmod.QuietHours" />
+
         <activity android:name=".cyanogenmod.QuickSettingsTilesStyle" />
 
 	<activity android:name=".cyanogenmod.NotificationDrawerStyle" />
@@ -1584,6 +1586,16 @@
 	<activity android:name=".cyanogenmod.StatusBar" />
 
         <activity android:name=".cyanogenmod.StatusBarClockStyle" />
+
+        <activity android:name=".aokp.NavRingTargets" />
+
+        <activity android:name=".aokp.NavBarItemPreference" />
+
+        <activity android:name=".aokp.WidgetConfigurationFragment" />
+
+        <activity android:name=".aokp.SeekBarPreference" />
+
+        <activity android:name=".aokp.TouchInterceptor" />
 
         <activity android:name=".profiles.NFCProfile"
                 android:theme="@android:style/Theme.NoDisplay">
@@ -1685,6 +1697,16 @@
                 <action android:name="android.provider.Contacts.PROFILE_CHANGED" />
             </intent-filter>
         </receiver>
+
+        <activity
+            android:name=".aokp.Navbar"
+            android:label="@string/title_navbar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.android.settings.SHORTCUT" />
+            </intent-filter>
+        </activity>
 
     </application>
 </manifest>
