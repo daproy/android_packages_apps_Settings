@@ -69,7 +69,7 @@
 
     </PreferenceCategory>
 
-    <!--PreferenceCategory
+    <PreferenceCategory
 	    android:title="@string/notification_style_grouptitle">
 
         <Preference
@@ -78,6 +78,6 @@
             android:title="@string/notification_style_title"
             android:summary="@string/notification_style_summary" />
 
-    </PreferenceCategory-->
+    </PreferenceCategory>
 
 </PreferenceScreen>
