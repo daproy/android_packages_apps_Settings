@@ -1577,8 +1577,6 @@
 
         <activity android:name=".cyanogenmod.QuickSettings" />
 
-        <activity android:name=".cyanogenmod.QuietHours" />
-
         <activity android:name=".cyanogenmod.QuickSettingsTilesStyle" />
 
 	<activity android:name=".cyanogenmod.NotificationDrawerStyle" />
@@ -1587,7 +1585,7 @@
 
         <activity android:name=".cyanogenmod.StatusBarClockStyle" />
 
-        <activity android:name=".aokp.NavRingTargets" />
+        <activity android:name=".cyanogenmod.NavRingTargets" />
 
         <activity android:name=".aokp.NavBarItemPreference" />
 
@@ -1699,7 +1697,7 @@
         </receiver>
 
         <activity
-            android:name=".aokp.Navbar"
+            android:name=".cyanogenmod.Navbar"
             android:label="@string/title_navbar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
