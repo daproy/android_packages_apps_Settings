@@ -229,7 +229,7 @@
 
     <!-- GooUpdater -->
     <header android:id="@+id/gooupdater"
-            android:title="GooUpdater"
+            android:title="@string/goo_updater"
             android:icon="@drawable/ic_settings_backup" >
         <intent
                 android:action="android.intent.action.MAIN"
@@ -257,6 +257,13 @@
         android:fragment="com.android.settings.DevelopmentSettings"
         android:icon="@drawable/ic_settings_development"
         android:title="@string/development_settings_title" />
+
+    <!-- Superuser -->
+    <header
+        android:id="@+id/superuser"
+        android:fragment="com.android.settings.cyanogenmod.superuser.PolicyNativeFragment"
+        android:icon="@drawable/ic_action_permission"
+        android:title="@string/superuser" />
 
     <!-- Performance -->
     <header
