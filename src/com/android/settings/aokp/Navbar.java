@@ -59,8 +59,9 @@ import com.android.settings.aokp.util.ShortcutPickerHelper;
 import com.android.settings.aokp.widgets.NavBarItemPreference;
 import com.android.settings.aokp.widgets.SeekBarPreference;
 import com.android.settings.aokp.NavRingTargets;
+import com.android.settings.aokp.WidgetConfigurationFragment;
 
-import com.android.cyanogenmod.colorpicker.ColorPickerPreference;
+import com.android.settings.cyanogenmod.colorpicker.ColorPickerPreference;
 
 public class Navbar extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener, ShortcutPickerHelper.OnPickListener {
