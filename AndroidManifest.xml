@@ -1585,7 +1585,7 @@
 
         <activity android:name=".cyanogenmod.StatusBarClockStyle" />
 
-        <activity android:name=".cyanogenmod.NavRingTargets" />
+        <activity android:name=".aokp.NavRingTargets" />
 
         <activity android:name=".aokp.NavBarItemPreference" />
 
@@ -1697,7 +1697,7 @@
         </receiver>
 
         <activity
-            android:name=".cyanogenmod.Navbar"
+            android:name=".aokp.Navbar"
             android:label="@string/title_navbar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
