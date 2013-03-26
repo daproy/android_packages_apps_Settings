@@ -77,6 +77,10 @@
                     android:persistent="false" />
 
         <com.android.settings.aokp.widgets.SeekBarPreference
+            android:key="navigation_bar_alpha"
+            android:title="@string/navigation_bar_alpha_title" />
+
+        <com.android.settings.aokp.widgets.SeekBarPreference
             android:key="button_transparency"
             android:title="@string/button_transparency_title" />
 
