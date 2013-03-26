@@ -73,10 +73,6 @@ public class Navbar extends SettingsPreferenceFragment implements
     private static final String PREF_NAV_GLOW_COLOR = "nav_button_glow_color";
     private static final String PREF_GLOW_TIMES = "glow_times";
     private static final String PREF_NAVBAR_QTY = "navbar_qty";
-    private static final String ENABLE_NAVIGATION_BAR = "enable_navigation_bar";
-    private static final String NAVIGATION_BAR_HEIGHT = "navigation_bar_height";
-    private static final String NAVIGATION_BAR_HEIGHT_LANDSCAPE = "navigation_bar_height_landscape";
-    private static final String NAVIGATION_BAR_WIDTH = "navigation_bar_width";
     private static final String PREF_NAVRING_AMOUNT = "pref_navring_amount";
     private static final String ENABLE_NAVRING_LONG = "enable_navring_long";
     private static final String NAVIGATION_BAR_WIDGETS = "navigation_bar_widgets";
@@ -84,8 +80,6 @@ public class Navbar extends SettingsPreferenceFragment implements
 
     public static final int REQUEST_PICK_CUSTOM_ICON = 200;
     public static final int REQUEST_PICK_LANDSCAPE_ICON = 201;
-    private static final int DIALOG_NAVBAR_ENABLE = 203;
-    private static final int DIALOG_NAVBAR_HEIGHT_REBOOT = 204;
 
     public static final String PREFS_NAV_BAR = "navbar";
     protected Context mContext;
@@ -100,10 +94,6 @@ public class Navbar extends SettingsPreferenceFragment implements
     ListPreference mNavBarMenuDisplay;
     ListPreference mNavBarButtonQty;
     ListPreference mNavRingButtonQty;
-    CheckBoxPreference mEnableNavigationBar;
-    ListPreference mNavigationBarHeight;
-    ListPreference mNavigationBarHeightLandscape;
-    ListPreference mNavigationBarWidth;
     SeekBarPreference mButtonAlpha;
     CheckBoxPreference mEnableNavringLong;
     CheckBoxPreference mMenuArrowKeysCheckBox;
@@ -165,12 +155,6 @@ public class Navbar extends SettingsPreferenceFragment implements
 
         mPicker = new ShortcutPickerHelper(this, this);
 
-        boolean hasNavBarByDefault = mContext.getResources().getBoolean(
-                com.android.internal.R.bool.config_showNavigationBar);
-        mEnableNavigationBar = (CheckBoxPreference) findPreference("enable_nav_bar");
-        mEnableNavigationBar.setChecked(Settings.System.getInt(getContentResolver(),
-                Settings.System.NAVIGATION_BAR_SHOW, hasNavBarByDefault ? 1 : 0) == 1);
-
         mNavigationBarColor = (ColorPickerPreference) findPreference(PREF_NAV_COLOR);
         mNavigationBarColor.setOnPreferenceChangeListener(this);
 
@@ -187,19 +171,6 @@ public class Navbar extends SettingsPreferenceFragment implements
         mButtonAlpha.setInitValue((int) (defaultAlpha * 100));
         mButtonAlpha.setOnPreferenceChangeListener(this);
 
-        // don't allow devices that must use a navigation bar to disable it
-        if (hasNavBarByDefault) {
-            prefs.removePreference(mEnableNavigationBar);
-        }
-
-        mNavigationBarHeight = (ListPreference) findPreference("navigation_bar_height");
-        mNavigationBarHeight.setOnPreferenceChangeListener(this);
-
-        mNavigationBarHeightLandscape = (ListPreference) findPreference("navigation_bar_height_landscape");
-        mNavigationBarHeightLandscape.setOnPreferenceChangeListener(this);
-
-        mNavigationBarWidth = (ListPreference) findPreference("navigation_bar_width");
-        mNavigationBarWidth.setOnPreferenceChangeListener(this);
         mConfigureWidgets = findPreference(NAVIGATION_BAR_WIDGETS);
 
         mMenuArrowKeysCheckBox = (CheckBoxPreference) findPreference(PREF_MENU_ARROWS);
@@ -258,14 +229,7 @@ public class Navbar extends SettingsPreferenceFragment implements
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen,
             Preference preference) {
-        if (preference == mEnableNavigationBar) {
-
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.NAVIGATION_BAR_SHOW,
-                    ((CheckBoxPreference) preference).isChecked() ? 1 : 0);
-            Helpers.restartSystemUI();
-            return true;
-        } else if (preference == mEnableNavringLong) {
+       if (preference == mEnableNavringLong) {
 
             Settings.System.putBoolean(getActivity().getContentResolver(),
                     Settings.System.SYSTEMUI_NAVRING_LONG_ENABLE,
@@ -320,32 +284,6 @@ public class Navbar extends SettingsPreferenceFragment implements
                     Settings.System.NAVIGATION_BAR_BUTTONS_QTY, val);
             refreshSettings();
             return true;
-        } else if (preference == mNavigationBarWidth) {
-            String newVal = (String) newValue;
-            int dp = Integer.parseInt(newVal);
-            int width = mapChosenDpToPixels(dp);
-            Settings.System.putInt(getContentResolver(), Settings.System.NAVIGATION_BAR_WIDTH,
-                    width);
-            //showDialog(DIALOG_NAVBAR_HEIGHT_REBOOT);
-            return true;
-        } else if (preference == mNavigationBarHeight) {
-            String newVal = (String) newValue;
-            int dp = Integer.parseInt(newVal);
-            int height = mapChosenDpToPixels(dp);
-            Settings.System.putInt(getContentResolver(), Settings.System.NAVIGATION_BAR_HEIGHT,
-                    height);
-            //showDialog(DIALOG_NAVBAR_HEIGHT_REBOOT);
-            return true;
-        } else if (preference == mNavigationBarHeightLandscape) {
-            String newVal = (String) newValue;
-            int dp = Integer.parseInt(newVal);
-            int height = mapChosenDpToPixels(dp);
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.NAVIGATION_BAR_HEIGHT_LANDSCAPE,
-                    height);
-            //showDialog(DIALOG_NAVBAR_HEIGHT_REBOOT);
-            return true;
-
         } else if ((preference.getKey().startsWith("navbar_action"))
                 || (preference.getKey().startsWith("navbar_longpress"))) {
             boolean longpress = preference.getKey().startsWith("navbar_longpress_");
@@ -426,41 +364,6 @@ public class Navbar extends SettingsPreferenceFragment implements
             // TODO : FIXME
     }
 
-    @Override
-    public Dialog onCreateDialog(int dialogId) {
-        switch (dialogId) {
-            case DIALOG_NAVBAR_HEIGHT_REBOOT:
-                return new AlertDialog.Builder(getActivity())
-                        .setTitle(getResources().getString(R.string.navbar_height_dialog_title))
-                        .setMessage(
-                                getResources().getString(R.string.navbar_height_dialog_summary))
-                        .setCancelable(false)
-                        .setNeutralButton(
-                                getResources()
-                                        .getString(R.string.navbar_height_dialog_button_later),
-                                new DialogInterface.OnClickListener() {
-
-                                    @Override
-                                    public void onClick(DialogInterface dialog, int which) {
-                                        dialog.dismiss();
-                                    }
-                                })
-                        .setPositiveButton(
-                                getResources().getString(
-                                        R.string.navbar_height_dialog_button_reboot),
-                                new DialogInterface.OnClickListener() {
-
-                                    @Override
-                                    public void onClick(DialogInterface dialog, int which) {
-                                        PowerManager pm = (PowerManager) getActivity()
-                                                .getSystemService(Context.POWER_SERVICE);
-                                        pm.reboot("Rebooting with new bar height");
-                                    }
-                                })
-                        .create();
-        }
-        return null;
-    }
 
     private void updateGlowTimesSummary() {
         int resId;
@@ -487,25 +390,6 @@ public class Navbar extends SettingsPreferenceFragment implements
         mGlowTimes.setSummary(getResources().getString(resId));
     }
 
-    public int mapChosenDpToPixels(int dp) {
-        switch (dp) {
-            case 48:
-                return getResources().getDimensionPixelSize(R.dimen.navigation_bar_48);
-            case 44:
-                return getResources().getDimensionPixelSize(R.dimen.navigation_bar_44);
-            case 42:
-                return getResources().getDimensionPixelSize(R.dimen.navigation_bar_42);
-            case 40:
-                return getResources().getDimensionPixelSize(R.dimen.navigation_bar_40);
-            case 36:
-                return getResources().getDimensionPixelSize(R.dimen.navigation_bar_36);
-            case 30:
-                return getResources().getDimensionPixelSize(R.dimen.navigation_bar_30);
-            case 24:
-                return getResources().getDimensionPixelSize(R.dimen.navigation_bar_24);
-        }
-        return -1;
-    }
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode == Activity.RESULT_OK) {
