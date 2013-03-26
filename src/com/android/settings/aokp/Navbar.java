@@ -357,7 +357,7 @@ public class Navbar extends SettingsPreferenceFragment implements
             return true;
         } else if (preference == mNavBarAlpha) {
             float val = (float) (Integer.parseInt((String)newValue) * 0.01);
-            return Settings.System.putFloat(getActivity().getContentResolver(),
+            Settings.System.putFloat(getActivity().getContentResolver(),
                     Settings.System.NAVIGATION_BAR_ALPHA,
                     val);
             return true;
