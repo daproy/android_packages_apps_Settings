@@ -124,7 +124,7 @@ public class WifiSettings extends SettingsPreferenceFragment
     private WifiManager.ActionListener mSaveListener;
     private WifiManager.ActionListener mForgetListener;
     private boolean mP2pSupported;
-
+    private boolean mIbssSupported;
 
     private WifiEnabler mWifiEnabler;
     // An access point being editted is stored here.
@@ -592,7 +592,8 @@ public class WifiSettings extends SettingsPreferenceFragment
             mSelectedAccessPoint = (AccessPoint) preference;
             /** Bypass dialog for unsecured, unsaved networks */
             if (mSelectedAccessPoint.security == AccessPoint.SECURITY_NONE &&
-                    mSelectedAccessPoint.networkId == INVALID_NETWORK_ID) {
+                    mSelectedAccessPoint.networkId == INVALID_NETWORK_ID &&
+                    !mSelectedAccessPoint.isIBSS) {
                 mSelectedAccessPoint.generateOpenNetworkConfig();
                 mWifiManager.connect(mSelectedAccessPoint.getConfig(), mConnectListener);
             } else {
@@ -631,7 +632,7 @@ public class WifiSettings extends SettingsPreferenceFragment
                 }
                 // If it's still null, fine, it's for Add Network
                 mSelectedAccessPoint = ap;
-                mDialog = new WifiDialog(getActivity(), this, ap, mDlgEdit);
+                mDialog = new WifiDialog(getActivity(), this, ap, mDlgEdit, mIbssSupported);
                 return mDialog;
             case WPS_PBC_DIALOG_ID:
                 return new WpsDialog(getActivity(), WpsInfo.PBC);
@@ -772,9 +773,13 @@ public class WifiSettings extends SettingsPreferenceFragment
         final List<ScanResult> results = mWifiManager.getScanResults();
         if (results != null) {
             for (ScanResult result : results) {
-                // Ignore hidden and ad-hoc networks.
-                if (result.SSID == null || result.SSID.length() == 0 ||
-                        result.capabilities.contains("[IBSS]")) {
+                // Ignore hidden networks.
+                if (result.SSID == null || result.SSID.length() == 0) {
+                    continue;
+                }
+
+                // Ignore IBSS if chipset does not support them
+                if (!mIbssSupported && result.capabilities.contains("[IBSS]")) {
                     continue;
                 }
 
@@ -892,6 +897,9 @@ public class WifiSettings extends SettingsPreferenceFragment
 
         switch (state) {
             case WifiManager.WIFI_STATE_ENABLED:
+                // this function only returns valid results in enabled state
+                mIbssSupported = mWifiManager.isIbssSupported();
+
                 mScanner.resume();
                 return; // not break, to avoid the call to pause() below
 
