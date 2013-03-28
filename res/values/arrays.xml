@@ -1540,4 +1540,127 @@
         <item>1005</item>
     </string-array>
 
+    <!-- NavBar -->
+    <string-array name="pref_navigation_menu_entries" translatable="false">
+        <item>@string/right</item>
+        <item>@string/left</item>
+        <item>@string/both</item>
+        <item>@string/dont_show</item>
+    </string-array>
+
+    <!-- right is the default, easier to keep 0 as first index -->
+    <string-array name="pref_navigation_menu_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="pref_navigation_menu_display_entries" translatable="false">
+        <item>@string/default_jb_behavior</item>
+        <item>@string/always_show_invincible_icons</item>
+        <item>@string/always_show</item>
+        <item>@string/default_jb_with_invincible_icons_when_hidden</item>
+    </string-array>
+    <string-array name="pref_navigation_menu_display_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="navigation_bar_qty_entries" translatable="false">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="navigation_bar_qty_values" translatable="false">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="navbar_button_entries" translatable="false">
+        <item>@string/home</item>
+        <item>@string/back</item>
+        <item>@string/recents</item>
+        <item>@string/lastapp</item>
+        <item>@string/search</item>
+        <item>@string/screenshot</item>
+        <item>@string/menu</item>
+        <item>@string/open_ime_switcher</item>
+        <item>@string/kill_app</item>
+        <item>@string/power</item>
+        <item>@string/notifications</item>
+        <item>@string/custom_app</item>
+        <item>@string/blank</item>
+    </string-array>
+    <string-array name="navbar_button_values" translatable="false">
+        <item>**home**</item>
+        <item>**back**</item>
+        <item>**recents**</item>
+        <item>**lastapp**</item>
+        <item>**search**</item>
+        <item>**screenshot**</item>
+        <item>**menu**</item>
+        <item>**ime**</item>
+        <item>**kill**</item>
+        <item>**power**</item>
+        <item>**notifications**</item>
+        <item>**app**</item>
+        <item>**null**</item>
+    </string-array>
+    <string-array name="navring_dialog_entries" translatable="false">
+        <item>@string/none</item>
+        <item>@string/take_screenshot</item>
+        <item>@string/open_ime_switcher</item>
+        <item>@string/ring_vib</item>
+        <item>@string/ring_silent</item>
+        <item>@string/ring_vib_silent</item>
+        <item>@string/kill_app</item>
+        <item>@string/screen_off</item>
+        <item>@string/google_now</item>
+        <item>@string/select_application</item>
+    </string-array>
+    <string-array name="navring_dialog_values" translatable="false">
+        <item>**null**</item>
+        <item>**screenshot**</item>
+        <item>**ime**</item>
+        <item>**ring_vib**</item>
+        <item>**ring_silent**</item>
+        <item>**ring_vib_silent**</item>
+        <item>**kill**</item>
+        <item>**lastapp**</item>
+        <item>**power**</item>
+        <item>**assist**</item>
+        <item>**app**</item>
+    </string-array>
+    <string-array name="pref_navring_amount_entries" translatable="false">
+        <item>@string/one_target</item>
+        <item>@string/two_targets</item>
+        <item>@string/three_targets</item>
+        <item>@string/four_targets</item>
+        <item>@string/five_targets</item>
+    </string-array>
+    <string-array name="pref_navring_amount_values" translatable="false">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="glow_times_entries" translatable="false">
+        <item>@string/glow_times_off</item>
+        <item>@string/glow_times_superquick</item>
+        <item>@string/glow_times_quick</item>
+        <item>@string/glow_times_normal</item>
+    </string-array>
+    <string-array name="glow_times_values" translatable="false">
+        <item>0|0</item>
+        <item>100|10</item>
+        <item>250|25</item>
+        <item>500|50</item>
+    </string-array>
+
 </resources>
