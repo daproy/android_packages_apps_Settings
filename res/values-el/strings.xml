@@ -1879,7 +1879,7 @@
     <string name="device_hostname">Hostname συσκευής</string>
 
     <!-- About phone screen,  setting option name-->
-    <string name="mod_version">Έκδοση CyanogenMod</string>
+    <string name="mod_version">Έκδοση JellyBeer</string>
     <string name="mod_version_default">Άγνωστη</string>
     <!-- About phone screen, build date of ROM -->
     <string name="build_date">Ημερομηνία έκδοσης</string>

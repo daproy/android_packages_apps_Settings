@@ -1879,7 +1879,7 @@
     <string name="device_hostname">Enhedens værtsnavn</string>
 
     <!-- About phone screen, setting option name-->
-    <string name="mod_version">CyanogenMod-version</string>
+    <string name="mod_version">JellyBeer-version</string>
     <string name="mod_version_default">Ukendt</string>
     <!-- About phone screen, build date of ROM -->
     <string name="build_date">Kørselsdato</string>

@@ -1871,7 +1871,7 @@
     <string name="device_hostname">Ім’я пристрою</string>
 
     <!-- About phone screen, setting option name-->
-    <string name="mod_version">Версія CyanogenMod</string>
+    <string name="mod_version">Версія JellyBeer</string>
     <string name="mod_version_default">Невідомо</string>
 
     <!-- About phone screen, build date of ROM -->

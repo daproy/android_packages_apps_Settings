@@ -1897,7 +1897,7 @@
     <string name="device_hostname">Eszköz elérési neve</string>
 
     <!-- About phone screen,  setting option name-->
-    <string name="mod_version">CyanogenMod verzió</string>
+    <string name="mod_version">JellyBeer verzió</string>
     <string name="mod_version_default">Ismeretlen</string>
     <!-- About phone screen, build date of ROM -->
     <string name="build_date">Build dátuma</string>

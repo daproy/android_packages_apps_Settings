@@ -2349,7 +2349,7 @@
     <string name="preview_carrier_title">キャリア</string>
 
     <!-- About device screen, version of modification of Android. -->
-    <string name="mod_version">CyanogenMod バージョン</string>
+    <string name="mod_version">JellyBeer バージョン</string>
     <string name="mod_version_default">不明</string>
 
     <!-- About device screen, build date of ROM. -->

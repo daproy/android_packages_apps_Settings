@@ -1875,7 +1875,7 @@
     <string name="device_hostname">Hostname des Geräts</string>
 
     <!-- About phone scree - Setting option name -->
-    <string name="mod_version">CyanogenMod-Version</string>
+    <string name="mod_version">JellyBeer-Version</string>
     <string name="mod_version_default">Unbekannt</string>
 
     <!-- About phone screen - Build date of ROM -->

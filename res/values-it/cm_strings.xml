@@ -67,7 +67,7 @@
     <string name="notification_convert_sound_to_vibration_title">Vibra alle notifiche</string>
     <string name="notification_convert_sound_to_vibration_summary">In modalità vibrazione, tutte le notifiche faranno vibrare il dispositivo indipendentemente dalla impostazioni delle applicazioni</string>
     <string name="device_hostname">Hostname dispositivo</string>
-    <string name="mod_version">Versione CyanogenMod</string>
+    <string name="mod_version">Versione JellyBeer</string>
     <string name="mod_version_default">Sconoscito</string>
     <string name="build_date">Data build</string>
     <string name="build_date_default">2012-01-01-0000</string>

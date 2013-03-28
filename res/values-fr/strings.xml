@@ -1881,7 +1881,7 @@
     <string name="headset_category_title">Casque audio</string>
 
     <!-- About phone screen,  setting option name-->
-    <string name="mod_version">Version CyanogenMod</string>
+    <string name="mod_version">Version JellyBeer</string>
     <string name="mod_version_default">Inconnue</string>
     <!-- About phone screen, build date of ROM -->
     <string name="build_date">Date de compilation</string>
