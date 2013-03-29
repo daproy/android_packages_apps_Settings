@@ -1619,6 +1619,7 @@
         <item>@string/ring_silent</item>
         <item>@string/ring_vib_silent</item>
         <item>@string/kill_app</item>
+        <item>@string/lastapp</item>
         <item>@string/screen_off</item>
         <item>@string/google_now</item>
         <item>@string/select_application</item>
