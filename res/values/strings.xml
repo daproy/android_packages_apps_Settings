@@ -5448,7 +5448,7 @@
     <string name="navbar_action_notifications">Notifications</string>
     <string name="navbar_action_none">Empty</string>
     <string name="navbar_widgets">Navigation Bar Widgets</string>
-    <string name="navigation_bar_color_title">Navigation bar color</string>!!!
+    <string name="navigation_bar_color_title">Navigation bar color</string>
     <string name="navigation_bar_tint_title">Navigation bar button color</string>
     <string name="navigation_bar_glow_tint_title">Navigation bar glow color</string>
     <string name="navigation_bar_glow_tint_summary">When you press on a button, there is a glow. Use this to change the color of the glow.</string>
