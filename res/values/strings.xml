@@ -5277,7 +5277,7 @@
     <string name="arrow_down">↓</string>
     <string name="hex">Hex:</string>
     <string name="hex_hint">#FF000000</string>
-    <string name="ics_color" translatable="false">!!!</string>
+    <string name="ics_color" translatable="false">Holo</string>
     <string name="set">Set</string>
     <string name="hex">Hex:</string>
 
@@ -5448,6 +5448,7 @@
     <string name="navbar_action_notifications">Notifications</string>
     <string name="navbar_action_none">Empty</string>
     <string name="navbar_widgets">Navigation Bar Widgets</string>
+    <string name="navigation_bar_color_title">Navigation bar color</string>
     <string name="navigation_bar_tint_title">Navigation bar button color</string>
     <string name="navigation_bar_glow_tint_title">Navigation bar glow color</string>
     <string name="navigation_bar_glow_tint_summary">When you press on a button, there is a glow. Use this to change the color of the glow.</string>
@@ -5466,7 +5467,7 @@
     <string name="navbar_widgets_delete">Delete widget</string>
     <string name="navigation_bar_menu_arrow_keys_title">Menu arrow keys</string>
     <string name="navigation_bar_menu_arrow_keys_summary">Show arrow keys in the navigation bar while typing</string>
-    <string name="navigation_bar_alpha_title">Navigation bar opacity</string>
+    <string name="navigation_bar_alpha_title">Navigation and Status bar opacity</string>
 
     <!-- Nav Ring Targets -->
     <string name="header_summary_navring">Setup NavRing</string>
