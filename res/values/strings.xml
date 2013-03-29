@@ -5496,7 +5496,7 @@
     <string name="interface_navring_settings_title">Navigation bar ring</string>
     <string name="interface_navring_settings_summary">Edit your custom nav ring apps</string>
     <string name="title_navring_amount">Number of nav ring targets</string>
-    <string name="summary_navring_amount">How many ring targets you want? *Changing this will reset your current targets and restart your System UI*</string>
+    <string name="summary_navring_amount">How many ring targets you want?</string>
     <string name="interface_navring_custom_pref_summary">Release on target to launch </string>
     <string name="interface_navring_pref_default_summary">Tap to select a custom ring target activity</string>
     <string name="interface_navring_assist_title">Google Now</string>

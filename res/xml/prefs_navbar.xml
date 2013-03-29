@@ -44,7 +44,7 @@
 
         </PreferenceCategory>
 
-        <!--PreferenceCategory
+        <PreferenceCategory
                 android:key="navbar_ring"
                 android:title="@string/navbar_ring_cat">
         <ListPreference
@@ -54,15 +54,15 @@
                 android:title="@string/title_navring_amount"
                 android:summary="@string/summary_navring_amount" />
 
-        <CheckBoxPreference
+        <!--CheckBoxPreference
                 android:key="enable_navring_long"
-                android:title="@string/navring_enable_long" />
+                android:title="@string/navring_enable_long" /-->
 
         <Preference
                 android:key="navring_settings"
                 android:title="@string/interface_navring_settings_title"
                 android:summary="@string/interface_navring_settings_summary" />
-        </PreferenceCategory-->
+        </PreferenceCategory>
 
         <PreferenceCategory
                 android:key="advanced_cat"
