@@ -5570,5 +5570,23 @@
     <string name="select_custom_app_title">Select custom application</string>
     <string name="group_applications">Applications</string>
 
+    <!-- Recents Ram Bar -->
+    <string name="ram_bar">Recents RAM bar</string>
+    <string name="ram_bar_note_title">Note</string>
+    <string name="ram_bar_note_summary">This rambar shows how android is really using your available ram. Please note that having apps open in the background and cached helps for your device to open your apps faster. For further explanations on how android memory (RAM) managment works, please follow the help button in the menu.</string>
+    <string name="ram_bar_mode_title">Recents RAM bar mode</string>
+    <string name="ram_bar_mode_dialog_title">Show on recents RAM bar</string>
+    <string name="ram_bar_none">None</string>
+    <string name="ram_bar_apps">Applications</string>
+    <string name="ram_bar_cache">Applications and cache</string>
+    <string name="ram_bar_other">Applications, cache and other</string>
+    <string name="ram_bar_style_cat">Recents RAM bar style</string>
+    <string name="ram_bar_color_app_mem_color">Applications RAM color</string>
+    <string name="ram_bar_color_cache_mem_color">Cache RAM color</string>
+    <string name="ram_bar_color_total_mem_color">Other RAM color</string>
+    <string name="ram_bar_color_enabled">Enabled</string>
+    <string name="ram_bar_color_disabled">Disabled</string>
+    <string name="ram_bar_button_help">Help</string>
+    <string name="ram_bar_button_reset">Reset colors</string> 
 
 </resources>

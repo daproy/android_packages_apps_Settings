@@ -1585,6 +1585,8 @@
 
         <activity android:name=".cyanogenmod.StatusBarClockStyle" />
 
+        <activity android:name=".cyanogenmod.RamBar" />
+
         <activity android:name=".aokp.NavRingTargets" />
 
         <activity android:name=".aokp.NavBarItemPreference" />
@@ -1613,6 +1615,16 @@
         <!-- CyanogenMod activities End -->
 
         <!-- Pseudo-activity used to provide an intent-filter entry point to encryption settings -->
+        <activity android:name="Settings$ASSRamBarActivity"
+                android:label="@string/ram_bar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.android.settings.cyanogenmod.RamBar" />
+        </activity>
+
         <activity android:name="Settings$CryptKeeperSettingsActivity"
                 android:label="@string/crypt_keeper_encrypt_title">
             <intent-filter>

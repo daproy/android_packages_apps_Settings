@@ -55,6 +55,7 @@ import android.widget.EditText;
 
 import com.android.internal.view.RotationPolicy;
 import com.android.settings.cyanogenmod.DisplayRotation;
+import com.android.settings.cyanogenmod.RamBar;
 
 public class DisplaySettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, OnPreferenceClickListener {
@@ -97,6 +98,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private Preference mCustomLabel;
     private ListPreference mNotificationsBehavior;
     private CheckBoxPreference mWakeUpWhenPluggedOrUnplugged;
+    private Preference mRamBar;
     private PreferenceScreen mDisplayRotationPreference;
     private WarnedListPreference mFontSizePref;
 
@@ -211,7 +213,8 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         mWakeUpWhenPluggedOrUnplugged.setChecked(Settings.System.getInt(getActivity().getContentResolver(),
                         Settings.System.WAKEUP_WHEN_PLUGGED_UNPLUGGED, 1) == 1);
 	
-
+        mRamBar = findPreference(KEY_RECENTS_RAM_BAR);
+        updateRamBar();
       
     }
 
@@ -363,9 +366,19 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         }
     }
 
+    private void updateRamBar() {
+        int ramBarMode = Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
+                Settings.System.RECENTS_RAM_BAR_MODE, 0);
+        if (ramBarMode != 0)
+            mRamBar.setSummary(getResources().getString(R.string.ram_bar_color_enabled));
+        else
+            mRamBar.setSummary(getResources().getString(R.string.ram_bar_color_disabled));
+    }
+
     @Override
     public void onResume() {
         super.onResume();
+        updateRamBar();
         updateDisplayRotationPreferenceDescription();
 
         RotationPolicy.registerRotationPolicyListener(getActivity(),
@@ -388,7 +401,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     @Override
     public void onPause() {
         super.onPause();
-
+        updateRamBar();
         RotationPolicy.unregisterRotationPolicyListener(getActivity(),
                 mRotationPolicyListener);
 
