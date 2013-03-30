@@ -1585,7 +1585,7 @@
 
         <activity android:name=".cyanogenmod.StatusBarClockStyle" />
 
-        <activity android:name=".cyanogenmod.RamBar" />
+        <activity android:name=".RamBar" />
 
         <activity android:name=".aokp.NavRingTargets" />
 
@@ -1622,7 +1622,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
-                android:value="com.android.settings.cyanogenmod.RamBar" />
+                android:value="com.android.settings.RamBar" />
         </activity>
 
         <activity android:name="Settings$CryptKeeperSettingsActivity"

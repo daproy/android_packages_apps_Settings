@@ -55,7 +55,6 @@ import android.widget.EditText;
 
 import com.android.internal.view.RotationPolicy;
 import com.android.settings.cyanogenmod.DisplayRotation;
-import com.android.settings.cyanogenmod.RamBar;
 
 public class DisplaySettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, OnPreferenceClickListener {
@@ -78,6 +77,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final CharSequence PREF_POWER_CRT_MODE = "system_power_crt_mode";
     private static final CharSequence PREF_POWER_CRT_SCREEN_OFF = "system_power_crt_screen_off";
     private static final String KEY_WAKEUP_WHEN_PLUGGED_UNPLUGGED = "wakeup_when_plugged_unplugged";
+    private static final String KEY_RECENTS_RAM_BAR = "recents_ram_bar";
 
     // Strings used for building the summary
     private static final String ROTATION_ANGLE_0 = "0";
