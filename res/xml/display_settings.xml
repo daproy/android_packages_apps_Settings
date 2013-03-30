@@ -114,4 +114,9 @@
             android:summary="@string/wakeup_when_plugged_unplugged_summary"
             android:defaultValue="true" />
 
+       <PreferenceScreen
+            android:key="recents_ram_bar"
+            android:fragment="com.android.settings.RamBar"
+            android:title="@string/ram_bar" />
+
 </PreferenceScreen>
