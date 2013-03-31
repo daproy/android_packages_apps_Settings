@@ -26,7 +26,7 @@
         <com.android.settings.cyanogenmod.colorpicker.ColorPickerPreference
             android:key="clock_color"
             android:title="@string/clock_color_title"
-            android:defaultValue="@android:color/holo_blue_light"
+            android:defaultValue="0xff33b5e5"
             android:dependency="status_bar_show_clock" />
 
         <ListPreference

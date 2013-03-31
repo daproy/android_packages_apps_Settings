@@ -44,17 +44,17 @@
         <com.android.settings.cyanogenmod.colorpicker.ColorPickerPreference
             android:key="ram_bar_color_app_mem"
             android:title="@string/ram_bar_color_app_mem_color"
-            android:defaultValue="#33B5E5" />
+            android:defaultValue="0xff33b5e5" />
 
         <com.android.settings.cyanogenmod.colorpicker.ColorPickerPreference
             android:key="ram_bar_color_cache_mem"
             android:title="@string/ram_bar_color_cache_mem_color"
-            android:defaultValue="#00AA00" />
+            android:defaultValue="0xff00aa00" />
 
         <com.android.settings.cyanogenmod.colorpicker.ColorPickerPreference
             android:key="ram_bar_color_total_mem"
             android:title="@string/ram_bar_color_total_mem_color"
-            android:defaultValue="#AAAAAA" />
+            android:defaultValue="0xffaaaaaa" />
 
     </PreferenceCategory>
 

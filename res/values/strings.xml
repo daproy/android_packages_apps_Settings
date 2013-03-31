@@ -5418,7 +5418,7 @@
     <string name="goo_updater">GooUpdater</string>
 
     <!-- Navigation Bar -->
-    <string name="title_navbar">NavBar Modifier</string>
+    <string name="title_navbar">NavBar modifier</string>
     <string name="header_summary_navbar">Setup NavBar</string>
     <string name="navigation_bar">Navigation bar</string>
     <string name="navbar_button_cat">Navigation bar buttons</string>

@@ -47,12 +47,12 @@
 	<com.android.settings.cyanogenmod.colorpicker.ColorPickerPreference
             	android:key="circle_battery_color"
             	android:title="@string/circle_battery_color"
-            	android:defaultValue="#33B5E5" />
+            	android:defaultValue="0xff0099cc" />
 
             <com.android.settings.cyanogenmod.colorpicker.ColorPickerPreference
             	android:key="circle_battery_text_color"
             	android:title="@string/circle_battery_text_color"
-            	android:defaultValue="#33B5E5" />
+            	android:defaultValue="0xff0099cc" />
 
             <ListPreference
             	android:key="circle_battery_animation_speed"
@@ -91,7 +91,7 @@
             <com.android.settings.cyanogenmod.colorpicker.ColorPickerPreference
                 android:key="battery_bar_color"
                 android:title="@string/battery_bar_color"
-                android:defaultValue="#33B5E5" />
+                android:defaultValue="0xff0099cc" />
 
             <ListPreference
                 android:key="battery_bar_thickness"
