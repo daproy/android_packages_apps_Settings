@@ -64,7 +64,6 @@ public class SystemSettings extends SettingsPreferenceFragment {
         // and the navigation bar config when we're not in tabletui
         boolean removeKeys = !getResources().getBoolean(
                     com.android.internal.R.bool.config_hasHardwareKeys);
-        boolean removeNavbar = ExtendedPropertiesUtils.isTablet();
 
         // Determine which user is logged in
         mIsPrimary = UserHandle.myUserId() == UserHandle.USER_OWNER;
@@ -85,9 +84,6 @@ public class SystemSettings extends SettingsPreferenceFragment {
             // Act on the above
             if (removeKeys) {
                 prefScreen.removePreference(findPreference(KEY_HARDWARE_KEYS));
-            }
-            if (removeNavbar) {
-                prefScreen.removePreference(findPreference(KEY_NAVIGATION_BAR));
             }
         } else {
             // Secondary user is logged in, remove all primary user specific preferences
