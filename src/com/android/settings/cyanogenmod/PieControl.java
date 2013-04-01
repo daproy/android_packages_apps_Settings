@@ -7,6 +7,7 @@ import android.os.Handler;
 import android.preference.CheckBoxPreference;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
+import com.android.settings.widget.SeekBarPreference;
 import android.preference.SeekBarDialogPreference;
 import android.provider.Settings;
 
@@ -32,9 +33,12 @@ public class PieControl extends SettingsPreferenceFragment
     private CheckBoxPreference mPieControl;
     private SeekBarDialogPreference mPieSize;
     private CheckBoxPreference[] mTrigger = new CheckBoxPreference[4];
+
     ColorPickerPreference mPieColor;
     ColorPickerPreference mPieSelectedColor;
     ColorPickerPreference mPieOutlineColor;
+    SeekBarPreference mPieStart;
+    SeekBarPreference mPieDistance;
 
     private ContentObserver mPieTriggerObserver = new ContentObserver(new Handler()) {
         @Override
@@ -69,6 +73,13 @@ public class PieControl extends SettingsPreferenceFragment
         mPieSelectedColor.setOnPreferenceChangeListener(this);
         mPieOutlineColor = (ColorPickerPreference) prefs.findPreference("pie_outline_color");
         mPieOutlineColor.setOnPreferenceChangeListener(this);
+        mPieStart = (SeekBarPreference) prefs.findPreference("pie_start");
+        mPieStart.setProperty(Settings.System.PIE_START);
+        mPieStart.setOnPreferenceChangeListener(this);
+        mPieDistance = (SeekBarPreference) prefs.findPreference("pie_distance");
+        mPieStart.setProperty(Settings.System.PIE_DISTANCE);
+        mPieDistance.setOnPreferenceChangeListener(this);
+
 
         for (int i = 0; i < TRIGGER.length; i++) {
             mTrigger[i] = (CheckBoxPreference) prefs.findPreference(TRIGGER[i]);
@@ -115,6 +126,16 @@ public class PieControl extends SettingsPreferenceFragment
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.PIE_OUTLINE_COLOR, intHex);
             Utils.restartUI(getActivity());
+        } else if (preference == mPieStart) {
+            float valStat = Float.parseFloat((String) newValue);
+            Settings.System.putFloat(getActivity().getContentResolver(),
+                    Settings.System.PIE_START,
+                    valStat / 100);
+        } else if (preference == mPieDistance) {
+            float valStat = Float.parseFloat((String) newValue);
+            Settings.System.putFloat(getActivity().getContentResolver(),
+                    Settings.System.PIE_DISTANCE,
+                    valStat / 100);
         } else {
             int triggerSlots = 0;
             for (int i = 0; i < mTrigger.length; i++) {

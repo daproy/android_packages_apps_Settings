@@ -35,7 +35,7 @@ import android.view.MenuItem;
 
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.R;
-import com.android.settings.Utils;
+import com.android.settings.hybrid.Utils;
 import com.android.settings.utils.Helpers;
 import com.android.settings.widget.SeekBarPreference;
 
@@ -171,6 +171,7 @@ public class QuickSettingsTilesStyle extends SettingsPreferenceFragment implemen
                     Settings.System.QUICK_TILES_PER_ROW,
                     value);
             mTilesPerRow.setSummary(mTilesPerRow.getEntries()[index]);
+            Utils.restartUI(getActivity());
             return true;
         } else if (preference == mQuickTilesBgColor) {
             String hex = ColorPickerPreference.convertToARGB(
