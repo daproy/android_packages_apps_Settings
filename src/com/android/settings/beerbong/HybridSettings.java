@@ -27,14 +27,11 @@ public class HybridSettings extends SettingsPreferenceFragment implements
     private Preference mAppsDpi;
     private ListPreference mUimode;
     private ListPreference mAppsUimode;
-    private Preference mNavbarHeight;
     private CheckBoxPreference mAutoBackup;
     private Preference mBackup;
     private Preference mRestore;
 
     private Context mContext;
-
-    private int mNavbarHeightProgress;
 
     private int mAppDpiProgress;
 
@@ -69,8 +66,6 @@ public class HybridSettings extends SettingsPreferenceFragment implements
         mAppsUimode.setSummary(mAppsUimode.getEntry());
         mAppsUimode.setOnPreferenceChangeListener(this);
 
-        mNavbarHeight = findPreference("navbar_height");
-
         mAutoBackup = (CheckBoxPreference) findPreference("dpi_groups_auto_backup");
         mBackup = findPreference("dpi_groups_backup");
         mRestore = findPreference("dpi_groups_restore");
@@ -88,9 +83,7 @@ public class HybridSettings extends SettingsPreferenceFragment implements
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen,
             Preference preference) {
-        if (preference == mNavbarHeight) {
-            showNavbarHeightDialog();
-        } else if (preference == mBackup) {
+        if (preference == mBackup) {
             Applications.backup(mContext);
         } else if (preference == mRestore) {
             Applications.restore(mContext);
@@ -153,60 +146,6 @@ public class HybridSettings extends SettingsPreferenceFragment implements
         mAppsUimode.setSummary(mAppsUimode.getEntries()[index]);
 
         mRestore.setEnabled(Applications.backupExists());
-    }
-
-    private void showNavbarHeightDialog() {
-        Resources res = getResources();
-        String cancel = res.getString(R.string.cancel);
-        String ok = res.getString(R.string.ok);
-        String title = res.getString(R.string.navbar_height_title);
-        int savedProgress = Integer.parseInt(ExtendedPropertiesUtils
-                .getProperty("com.android.systemui.navbar.dpi")) / 5;
-
-        LayoutInflater factory = LayoutInflater.from(getActivity());
-        final View alphaDialog = factory.inflate(R.layout.seekbar_dialog, null);
-        SeekBar seekbar = (SeekBar) alphaDialog.findViewById(R.id.seek_bar);
-        final TextView seektext = (TextView) alphaDialog
-                .findViewById(R.id.seek_text);
-        OnSeekBarChangeListener seekBarChangeListener = new OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekbar, int progress,
-                    boolean fromUser) {
-                mNavbarHeightProgress = seekbar.getProgress() * 5;
-                seektext.setText(mNavbarHeightProgress + "%");
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekbar) {
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekbar) {
-            }
-        };
-        seektext.setText((savedProgress * 5) + "%");
-        seekbar.setMax(20);
-        seekbar.setProgress(savedProgress);
-        seekbar.setOnSeekBarChangeListener(seekBarChangeListener);
-        new AlertDialog.Builder(getActivity())
-                .setTitle(title)
-                .setView(alphaDialog)
-                .setNegativeButton(cancel,
-                        new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog,
-                                    int which) {
-                                // nothing
-                            }
-                        })
-                .setPositiveButton(ok, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Applications.addProperty(mContext,
-                                "com.android.systemui.navbar.dpi",
-                                mNavbarHeightProgress, true);
-                    }
-                }).create().show();
     }
 
     private void showAppsDpiDialog() {

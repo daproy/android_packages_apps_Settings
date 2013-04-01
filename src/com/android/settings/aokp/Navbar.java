@@ -37,6 +37,7 @@ import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
 import android.provider.MediaStore;
 import android.provider.Settings;
+import android.util.ExtendedPropertiesUtils;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -47,6 +48,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.SeekBar;
+import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -61,6 +64,7 @@ import com.android.settings.aokp.widgets.SeekBarPreference;
 import com.android.settings.aokp.NavRingTargets;
 import com.android.settings.aokp.WidgetConfigurationFragment;
 
+import com.android.settings.beerbong.Applications;
 import com.android.settings.cyanogenmod.colorpicker.ColorPickerPreference;
 
 public class Navbar extends SettingsPreferenceFragment implements
@@ -85,6 +89,7 @@ public class Navbar extends SettingsPreferenceFragment implements
     public static final String PREFS_NAV_BAR = "navbar";
     protected Context mContext;
 
+    private Preference mNavbarHeight;
     Preference mNavRingTargets;
 
     // move these later
@@ -104,6 +109,8 @@ public class Navbar extends SettingsPreferenceFragment implements
 
     private int mPendingIconIndex = -1;
     private NavBarCustomAction mPendingNavBarCustomAction = null;
+
+    private int mNavbarHeightProgress;
 
     private static class NavBarCustomAction {
         String activitySettingName;
@@ -125,6 +132,8 @@ public class Navbar extends SettingsPreferenceFragment implements
         addPreferencesFromResource(R.xml.prefs_navbar);
 
         PreferenceScreen prefs = getPreferenceScreen();
+
+        mNavbarHeight = findPreference("navbar_height");
 
         mPicker = new ShortcutPickerHelper(this, this);
 
@@ -240,7 +249,9 @@ public class Navbar extends SettingsPreferenceFragment implements
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen,
             Preference preference) {
-       if (preference == mEnableNavringLong) {
+        if (preference == mNavbarHeight) {
+            showNavbarHeightDialog();
+        } else if (preference == mEnableNavringLong) {
 
             Settings.System.putBoolean(getActivity().getContentResolver(),
                     Settings.System.SYSTEMUI_NAVRING_LONG_ENABLE,
@@ -745,6 +756,60 @@ public class Navbar extends SettingsPreferenceFragment implements
         public void onResume() {
             super.onResume();
         }
+    }
+
+    private void showNavbarHeightDialog() {
+        Resources res = getResources();
+        String cancel = res.getString(R.string.cancel);
+        String ok = res.getString(R.string.ok);
+        String title = res.getString(R.string.navbar_height_title);
+        int savedProgress = Integer.parseInt(ExtendedPropertiesUtils
+                .getProperty("com.android.systemui.navbar.dpi")) / 5;
+
+        LayoutInflater factory = LayoutInflater.from(getActivity());
+        final View alphaDialog = factory.inflate(R.layout.seekbar_dialog, null);
+        SeekBar seekbar = (SeekBar) alphaDialog.findViewById(R.id.seek_bar);
+        final TextView seektext = (TextView) alphaDialog
+                .findViewById(R.id.seek_text);
+        OnSeekBarChangeListener seekBarChangeListener = new OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekbar, int progress,
+                    boolean fromUser) {
+                mNavbarHeightProgress = seekbar.getProgress() * 5;
+                seektext.setText(mNavbarHeightProgress + "%");
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekbar) {
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekbar) {
+            }
+        };
+        seektext.setText((savedProgress * 5) + "%");
+        seekbar.setMax(20);
+        seekbar.setProgress(savedProgress);
+        seekbar.setOnSeekBarChangeListener(seekBarChangeListener);
+        new AlertDialog.Builder(getActivity())
+                .setTitle(title)
+                .setView(alphaDialog)
+                .setNegativeButton(cancel,
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog,
+                                    int which) {
+                                // nothing
+                            }
+                        })
+                .setPositiveButton(ok, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Applications.addProperty(mContext,
+                                "com.android.systemui.navbar.dpi",
+                                mNavbarHeightProgress, true);
+                    }
+                }).create().show();
     }
 
 }
