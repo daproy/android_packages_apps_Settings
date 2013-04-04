@@ -3,8 +3,8 @@ package com.android.settings.aokp.util;
 
 import android.os.AsyncTask;
 
-import com.android.settings.aokp.objects.EasyPair;
-import com.android.settings.aokp.util.CMDProcessor;
+import com.android.settings.utils.CMDProcessor;
+import com.android.settings.utils.EasyPair;
 import com.android.settings.utils.Helpers;
 
 /**
