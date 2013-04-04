@@ -5,7 +5,7 @@ import android.os.AsyncTask;
 
 import com.android.settings.aokp.objects.EasyPair;
 import com.android.settings.aokp.util.CMDProcessor;
-import com.android.settings.aokp.util.Helpers;
+import com.android.settings.utils.Helpers;
 
 /**
  * An abstract implentation of AsyncTask

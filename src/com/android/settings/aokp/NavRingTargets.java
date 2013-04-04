@@ -23,7 +23,6 @@ import java.net.URISyntaxException;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
-import com.android.settings.aokp.util.Helpers;
 import com.android.settings.aokp.util.ShortcutPickerHelper;
 import com.android.settings.aokp.widgets.NavBarItemPreference;
 
