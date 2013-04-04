@@ -1,4 +1,4 @@
-package com.android.settings.util;
+package com.android.settings.utils;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -20,7 +20,7 @@ import android.text.format.DateFormat;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.android.settings.util.CMDProcessor.CommandResult;
+import com.android.settings.utils.CMDProcessor.CommandResult;
 
 public class Helpers {
 

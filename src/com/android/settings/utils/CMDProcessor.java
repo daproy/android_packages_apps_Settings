@@ -1,4 +1,4 @@
-package com.android.settings.util;
+package com.android.settings.utils;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
