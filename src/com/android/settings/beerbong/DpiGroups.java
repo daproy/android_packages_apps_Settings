@@ -45,8 +45,6 @@ public class DpiGroups extends SettingsPreferenceFragment {
         super.onCreate(savedInstanceState);
         mContext = getActivity();
 
-        Utils.setContext(mContext);
-
         addPreferencesFromResource(R.xml.dpi_groups_settings);
 
         PreferenceScreen prefSet = getPreferenceScreen();

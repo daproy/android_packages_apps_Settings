@@ -20,8 +20,6 @@ public class AppListPreference extends SettingsPreferenceFragment {
         super.onCreate(savedInstanceState);
         mContext = getActivity();
 
-        Utils.setContext(mContext);
-
         addPreferencesFromResource(R.xml.dpi_group_app_list);
 
         final PreferenceScreen prefSet = getPreferenceScreen();

@@ -32,8 +32,6 @@ public class PerAppLayout extends SettingsPreferenceFragment {
         super.onCreate(savedInstanceState);
         mContext = getActivity();
 
-        Utils.setContext(mContext);
-
         addPreferencesFromResource(R.xml.per_app_layout_list);
 
         final PreferenceScreen prefSet = getPreferenceScreen();

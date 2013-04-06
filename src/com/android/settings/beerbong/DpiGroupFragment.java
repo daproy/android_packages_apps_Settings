@@ -31,8 +31,6 @@ public class DpiGroupFragment extends SettingsPreferenceFragment {
 
         mContext = getActivity();
 
-        Utils.setContext(mContext);
-
         addPreferencesFromResource(R.xml.dpi_group);
 
         PreferenceScreen prefSet = getPreferenceScreen();

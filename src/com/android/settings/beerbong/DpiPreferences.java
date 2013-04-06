@@ -36,8 +36,6 @@ public class DpiPreferences extends SettingsPreferenceFragment implements
         super.onCreate(savedInstanceState);
         mContext = getActivity();
 
-        Utils.setContext(mContext);
-
         addPreferencesFromResource(R.xml.dpi_settings);
 
         PreferenceScreen prefSet = getPreferenceScreen();
