@@ -1888,6 +1888,20 @@
     <string name="build_date">Fecha de compilación</string>
     <string name="cpu_info">CPU</string>
     <string name="mem_info">Memoria</string>
+    <string name="anonymous_statistics_title">Estadísticas CyanogenMod</string>
+    <string name="anonymous_statistics_summary">Ayude a mejorar CyanogenMod mediante el envío anónimo de estadísticas</string>
+    <string name="anonymous_statistics_warning_title">Aviso</string>
+    <string name="anonymous_statistics_warning">Permitiendo la recopilación y envío de estadísticas de CyanogenMod, autoriza el envío de información de carácter no personal a los desarrolladores de CyanogenMod para realizar un seguimiento de las instalaciones que realice en los dispositivos. La información enviada incluye un identificador único que no compromete su privacidad o su información personal. Esta información es enviada durante el arranque.\n\nPara ver un ejemplo de la información enviada, pulse en \u00ABPrevisualizar datos\u00BB</string>
+    <string name="enable_reporting_title">Activar envío estadísticas</string>
+    <string name="preview_data_title">Previsualizar datos</string>
+    <string name="view_stats_title">Ver estadísticas</string>
+    <string name="anonymous_learn_more">Leer más</string>
+    <string name="anonymous_notification_desc">Activar o desactivar estadísticas de CyanogenMod</string>
+    <string name="preview_id_title">Identificador único</string>
+    <string name="preview_device_title">Dispositivo</string>
+    <string name="preview_version_title">Versión</string>
+    <string name="preview_country_title">País</string>
+    <string name="preview_carrier_title">Operadora móvil</string>
     <string name="header_category_interface">Interfaz gráfica</string>
     <string name="launcher_settings_title">Inicio</string>
     <string name="themes_settings_title">Temas</string>
@@ -2308,11 +2322,13 @@
     <string name="title_tile_battery">Batería</string>
     <string name="title_tile_bluetooth">Bluetooth</string>
     <string name="title_tile_brightness">Brillo</string>
+    <string name="title_tile_expanded_desktop">Extender escritorio</string>
     <string name="title_tile_gps">GPS</string>
     <string name="title_tile_lte">LTE</string>
     <string name="title_tile_lockscreen">Bloqueo</string>
     <string name="title_tile_mobiledata">Datos móviles</string>
     <string name="title_tile_networkmode">Modo de red</string>
+    <string name="title_tile_nfc">NFC</string>
     <string name="title_tile_profile">Perfil</string>
     <string name="title_tile_screen_timeout">Tiempo de espera</string>
     <string name="title_tile_settings">Ajustes</string>
@@ -2332,6 +2348,7 @@
     <string name="dynamic_tiles_note_summary">Los controles dinámicos no siempre estarán visibles y sólo se mostrarán por un evento del sistema</string>
     <string name="title_dynamic_alarm">Alarma</string>
     <string name="title_dynamic_bugreport">Informe de error</string>
+    <string name="title_dynamic_dock_battery">Batería de la base</string>
     <string name="title_dynamic_ime">Selector IME</string>
     <string name="title_dynamic_usbtether">Anclaje USB</string>
     <string name="title_dynamic_wifi">Wi-Fi Direct</string>
@@ -2417,11 +2434,9 @@
     <string name="navring_action_torch">Linterna</string>
     <string name="navring_action_google_now">Google Now</string>
     <string name="navring_choose_action_title">Elegir acción</string>
-
-    <string name="pie_control_title">Controles emergentes</string>
+    <string name="pie_control_title">Controles flotantes</string>
     <string name="pie_control_enabled">Habilitados cuando el escritorio extendido esté activado</string>
     <string name="pie_control_disabled">Deshabilitados</string>
-    <string name="pie_control_search_title">Mostrar botón Búsqueda</string>
     <string name="pie_control_size">Tamaño de los controles</string>
     <string name="pie_control_trigger_positions">Zonas de activación</string>
     <string name="pie_control_trigger_left">Borde izquierdo</string>

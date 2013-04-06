@@ -1877,6 +1877,24 @@
     <string name="cpu_info">Procesor</string>
     <string name="mem_info">Pamięć</string>
 
+    <string name="anonymous_statistics_title">Statystyki CyanogenMod</string>
+    <string name="anonymous_statistics_summary">Pomóż ulepszyć CyanogenMod, pozwalając na wysyłanie anonimowych statystyk</string>
+    <string name="anonymous_statistics_warning_title">Informacje</string>
+    <string name="anonymous_statistics_warning">Udział w statystykach zezwoli na przesyłanie anonimowych danych twórcom CyanogenModa w celu badania liczby aktywnych urządzeń. Raport zawiera unikatowy ID, który nie zagraża Twojej prywatności ani danym osobowym. Dane są przesyłane przy każdym uruchomieniu.\n\nAby zobaczyć przykładowe wysyłane informacje, podejrzyj swoje dane.</string>
+    <string name="enable_reporting_title">Włącz raportowanie</string>
+    <string name="preview_data_title">Podejrzyj swoje dane</string>
+    <string name="preview_data_summary">%s</string>
+    <string name="view_stats_title">Zobacz statystyki</string>
+    <string name="anonymous_learn_more">Dowiedz się więcej</string>
+
+    <string name="anonymous_notification_desc">Włącz lub wyłącz statystyki CyanogenMod</string>
+
+    <string name="preview_id_title">Unikatowy ID</string>
+    <string name="preview_device_title">Urządzenie</string>
+    <string name="preview_version_title">Wersja</string>
+    <string name="preview_country_title">Kraj</string>
+    <string name="preview_carrier_title">Operator GSM</string>
+
     <string name="header_category_interface">INTERFEJS</string>
 
     <string name="launcher_settings_title">Ekran domowy</string>
@@ -2380,12 +2398,14 @@
     <string name="title_tile_usb_tether">Tethering USB</string>
     <string name="title_tile_quiet_hours">Godziny ciszy</string>
     <string name="title_tile_volume">Głośność</string>
+    <string name="title_tile_expanded_desktop">Rozszerzony pulpit</string>
 
     <string name="title_dynamic_tiles">Dynamiczne przełączniki</string>
     <string name="dynamic_tiles_note_title">Uwaga</string>
     <string name="dynamic_tiles_note_summary">Dynamiczne przełączniki pojawiają się tylko w wybranych sytuacjach systemowych</string>
     <string name="title_dynamic_alarm">Alarm</string>
     <string name="title_dynamic_bugreport">Raportowanie błędów</string>
+    <string name="title_dynamic_dock_battery">Stacja dokująca</string>
     <string name="title_dynamic_ime">Zmiana metody wprowadzania</string>
     <string name="title_dynamic_usbtether">Tethering USB</string>
     <string name="title_dynamic_wifi">Wi-Fi</string>
@@ -2510,7 +2530,6 @@
     <string name="pie_control_title">Wysuwane przyciski nawigacji</string>
     <string name="pie_control_enabled">Włączone w trybie rozszerzonego pulpitu</string>
     <string name="pie_control_disabled">Wyłączone</string>
-    <string name="pie_control_search_title">Pokaż przycisk wyszukiwania</string>
     <string name="pie_control_size">Rozmiar przycisków nawigacji</string>
     <string name="pie_control_trigger_positions">Lokalizacja aktywatora</string>
     <string name="pie_control_trigger_left">Lewa krawędź ekranu</string>
@@ -2519,10 +2538,10 @@
     <string name="pie_control_trigger_top">Górna krawędź ekranu</string>
     <string name="pie_control_trigger_top_summary">Przy górnej krawędzi będzie wyświetlana jedynie nawigacja</string>
 
-    <!-- Sound settings screen, setting check box label -->
     <string name="volume_adjust_sounds_enable_title">Dźwięk regulacji głośności</string>
-    <!-- Sound settings screen, setting check box summary -->
     <string name="volume_adjust_sounds_enable_summary">Odtwarzaj dźwięk podczas regulacji głośności za pomocą przycisków</string>
+
+    <string name="accessibility_home_button_answers_call_prerefence_title">Odbieraj połączenia przyciskiem home</string>
 
     <!-- **** CYANOGENMOD ADDITIONS END **** -->
 </resources>
