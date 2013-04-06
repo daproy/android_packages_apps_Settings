@@ -1,10 +1,14 @@
 package com.android.settings.beerbong;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Enumeration;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
@@ -104,45 +108,62 @@ public class PerAppLayout extends SettingsPreferenceFragment {
         }
     }
 
-    private String[] getLayouts(String apkPath) {
-        try {
-            ZipFile zip = new ZipFile(new File(apkPath));
-            List<String> foundLayouts = new ArrayList<String>();
-            foundLayouts.add("360");
-            try {
-                Enumeration<ZipEntry> zipFileEntries = (Enumeration<ZipEntry>) zip
-                        .entries();
-                while (zipFileEntries.hasMoreElements()) {
-                    ZipEntry entry = (ZipEntry) zipFileEntries.nextElement();
-                    String currentEntry = entry.getName();
-                    int index = -1;
-                    if (currentEntry.startsWith("res/layout")
-                            && (index = currentEntry.indexOf("w")) >= 0) {
-                        while (index >= 0) {
-                            int i = index + 1;
-                            String layout = "";
-                            while (i < currentEntry.length()
-                                    && Character
-                                            .isDigit(currentEntry.charAt(i))) {
-                                layout += currentEntry.charAt(i);
-                                i++;
-                            }
-                            if (!"".equals(layout)
-                                    && foundLayouts.indexOf(layout) < 0) {
-                                foundLayouts.add(layout);
-                            }
-                            currentEntry = currentEntry.substring(index + 1);
-                            index = currentEntry.indexOf("w");
-                        }
-                    }
+    private static final String[] DEPRECATED_CONTAINERS = {"xlarge", "xhdpi", "large", "hdpi", "normal", "mdpi", "small", "ldpi"};
+    private static final String[] DEPRECATED_SIZES = {"720", "720", "600", "600", "360", "360", "360", "360"};
+    private final Pattern pattern1 = Pattern.compile("^res/(.*)/");
+    private final Pattern pattern2 = Pattern.compile("^[a-z]+-[sw]+(\\d+)dp-?[sw]*(\\d*)");
+    
+    private String[] getLayouts(String filename) {
+        ArrayList<String> containers = new ArrayList<String>();
+        boolean lessThan360 = false;      
+        try {   
+            HashSet<String> hash = new HashSet<String>();            
+            ZipFile zip = new ZipFile(filename);
+            Enumeration<? extends ZipEntry> zippedFiles = zip.entries();
+
+            // Find all folders in res directory
+            while (zippedFiles.hasMoreElements()) {
+                Matcher matcher = pattern1.matcher(zippedFiles.nextElement().getName());
+                if (matcher.find()){
+                    hash.add(matcher.group(1));
                 }
-            } finally {
-                zip.close();
             }
-            return foundLayouts.toArray(new String[foundLayouts.size()]);
-        } catch (IOException ex) {
-            ex.printStackTrace();
-            return null;
+
+            // Search for matches
+            Iterator<String> itr = hash.iterator();
+            while(itr.hasNext()) {
+                String match = itr.next();
+                for(int i=0; i<DEPRECATED_CONTAINERS.length; i++)
+                    match = match.replaceFirst("layout-"+DEPRECATED_CONTAINERS[i], "layout-sw"+DEPRECATED_SIZES[i]+"dp");
+
+                Matcher matcher = pattern2.matcher(match);
+                if (matcher.find()) {
+                    String result = matcher.group(2).equals("") ? matcher.group(1) : matcher.group(2);
+                    if (Integer.parseInt(result) <= 360){
+                        lessThan360 = true;
+                    }
+                    containers.add(result);
+                }
+            }
+        } catch (IOException e) {
+            // We're dead here, hopefully will never happen
         }
+
+        // Add minimal default if not already present
+        if (!lessThan360){
+            containers.add("360");
+        }
+    
+        // Kill duplicates and sort
+        HashSet<String> hash = new HashSet<String>(containers);
+        containers.clear();
+        containers.addAll(hash);
+        Collections.sort(containers, new Comparator<String>() {
+            public int compare(String s1, String s2) {
+                return Integer.parseInt(s1) > Integer.parseInt(s2) ? 1 : -1;
+            }
+        });
+
+        return containers.toArray(new String[containers.size()]);
     }
 }
