@@ -5408,6 +5408,13 @@
     <string name="per_app_layout_summary">Define layout for each app</string>
     <string name="per_app_layout_list_title">Application list</string>
     <string name="per_app_layout_alert_title">Select a layout</string>
+    <string name="widgets_title">Widgets</string>
+    <string name="widgets_summary">Define the list of widgets</string>
+    <string name="add_widget">Add widget</string>
+    <string name="widget_list">Widgets list</string>
+    <string name="widget_alert_remove_widget">Remove widget</string>
+    <string name="widget_remove_widget">Remove %s widget from list?</string>
+    <string name="widget_add_title">Choose an application</string>
 
     <string name="navbar_height_title">NavigationBar height</string>
     <string name="navbar_height_summary">Specify the navigationBar height</string>

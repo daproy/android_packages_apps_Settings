@@ -41,6 +41,12 @@
             android:title="@string/per_app_layout_title"
             android:summary="@string/per_app_layout_summary" />
 
+        <PreferenceScreen
+            android:key="widgets"
+            android:fragment="com.android.settings.beerbong.Widgets"
+            android:title="@string/widgets_title"
+            android:summary="@string/widgets_summary" />
+
     </PreferenceCategory>
 
     <PreferenceCategory

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:key="widgets_title"
+        android:title="@string/widgets_title">
+
+        <PreferenceScreen
+            android:key="add_widget"
+            android:fragment="com.android.settings.beerbong.WidgetListPreference"
+            android:title="@string/add_widget" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="widget_list"
+        android:title="@string/widget_list">
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
