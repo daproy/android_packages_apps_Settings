@@ -301,7 +301,8 @@ public class Applications {
         return packageName.startsWith(ExtendedPropertiesUtils.BEERBONG_PREFIX)
                 || packageName.startsWith("com.android.systemui.statusbar.")
                 || packageName.startsWith("com.android.systemui.navbar.")
-                || packageName.endsWith(".layout");
+                || packageName.endsWith(".layout")
+                || packageName.endsWith(".force");
     }
 
     public static BeerbongAppInfo[] getApplicationList(Context mContext, int dpi) {
