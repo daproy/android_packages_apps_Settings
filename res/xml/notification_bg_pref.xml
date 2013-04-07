@@ -40,4 +40,10 @@
             android:key="notification_alpha"
             android:title="@string/notif_alpha_title" />
 
+       <ListPreference
+            android:key="notifications_behaviour"
+            android:title="@string/notification_behaviour_title"
+            android:entries="@array/notifs_beh_entries"
+            android:entryValues="@array/notifs_beh_values" />
+
 </PreferenceScreen>
