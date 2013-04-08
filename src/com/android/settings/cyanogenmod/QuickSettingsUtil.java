@@ -42,6 +42,7 @@ import static com.android.internal.util.cm.QSConstants.TILE_USER;
 import static com.android.internal.util.cm.QSConstants.TILE_VOLUME;
 import static com.android.internal.util.cm.QSConstants.TILE_WIFI;
 import static com.android.internal.util.cm.QSConstants.TILE_WIFIAP;
+import static com.android.internal.util.cm.QSConstants.TILE_HYBRID;
 import static com.android.internal.util.cm.QSUtils.deviceSupportsBluetooth;
 import static com.android.internal.util.cm.QSUtils.deviceSupportsTelephony;
 
@@ -132,6 +133,9 @@ public class QuickSettingsUtil {
         TILES.put(TILE_USER, new QuickSettingsUtil.TileInfo(
                 TILE_USER, R.string.title_tile_user,
                 "com.android.systemui:drawable/ic_qs_default_user"));
+        TILES.put(TILE_HYBRID, new QuickSettingsUtil.TileInfo(
+                TILE_HYBRID, R.string.title_tile_hybrid,
+                "com.android.systemui:drawable/ic_qs_hybrid"));
     }
 
     public static String getCurrentTiles(Context context) {

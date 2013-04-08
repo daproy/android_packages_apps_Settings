@@ -89,12 +89,6 @@
             android:key="custom_carrier_label"
             android:title="@string/custom_carrier_label_title" />
 
-	<ListPreference
-            android:key="notifications_behaviour"
-            android:title="@string/notification_behaviour_title"
-            android:entries="@array/notifs_beh_entries"
-            android:entryValues="@array/notifs_beh_values" />
-
 	<CheckBoxPreference
             android:key="system_power_crt_screen_off"
             android:summary="@string/system_power_crt_screen_off_summary"
@@ -107,6 +101,12 @@
             android:entries="@array/entries_system_power_crt_mode"
             android:entryValues="@array/values_system_power_crt_mode"
             android:dependency="system_power_crt_screen_off" />
+        
+       <ListPreference
+            android:key="notifications_behaviour"
+            android:title="@string/notification_behaviour_title"
+            android:entries="@array/notifs_beh_entries"
+            android:entryValues="@array/notifs_beh_values" />
 
 	<CheckBoxPreference
             android:key="wakeup_when_plugged_unplugged"
