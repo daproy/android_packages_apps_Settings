@@ -1,4 +1,4 @@
-package com.android.settings.beerbong;
+package com.android.settings.hybrid;
 
 import java.io.FileInputStream;
 import java.util.ArrayList;

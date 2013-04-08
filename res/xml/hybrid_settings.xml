@@ -14,7 +14,7 @@
 
         <PreferenceScreen
             android:key="system_dpi"
-            android:fragment="com.android.settings.beerbong.DpiPreferences"
+            android:fragment="com.android.settings.hybrid.DpiPreferences"
             android:title="@string/system_dpi_title"
             android:summary="@string/system_dpi_summary" />
 
@@ -31,19 +31,19 @@
 
         <PreferenceScreen
             android:key="dpi_groups"
-            android:fragment="com.android.settings.beerbong.DpiGroups"
+            android:fragment="com.android.settings.hybrid.DpiGroups"
             android:title="@string/dpi_groups_title"
             android:summary="@string/dpi_groups_summary" />
 
         <PreferenceScreen
             android:key="per_app_layout"
-            android:fragment="com.android.settings.beerbong.PerAppLayout"
+            android:fragment="com.android.settings.hybrid.PerAppLayout"
             android:title="@string/per_app_layout_title"
             android:summary="@string/per_app_layout_summary" />
 
         <PreferenceScreen
             android:key="widgets"
-            android:fragment="com.android.settings.beerbong.Widgets"
+            android:fragment="com.android.settings.hybrid.Widgets"
             android:title="@string/widgets_title"
             android:summary="@string/widgets_summary" />
 

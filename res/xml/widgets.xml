@@ -9,7 +9,7 @@
 
         <PreferenceScreen
             android:key="add_widget"
-            android:fragment="com.android.settings.beerbong.WidgetListPreference"
+            android:fragment="com.android.settings.hybrid.WidgetListPreference"
             android:title="@string/add_widget" />
 
     </PreferenceCategory>

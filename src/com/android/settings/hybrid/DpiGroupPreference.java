@@ -1,4 +1,4 @@
-package com.android.settings.beerbong;
+package com.android.settings.hybrid;
 
 import android.app.AlertDialog;
 import android.app.FragmentTransaction;

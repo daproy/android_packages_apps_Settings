@@ -67,7 +67,7 @@
         android:id="@+id/hybrid_settings"
         android:title="@string/hybrid_settings_title"
         android:icon="@drawable/ic_settings_jellybeer"
-        android:fragment="com.android.settings.beerbong.HybridSettings" />
+        android:fragment="com.android.settings.hybrid.HybridSettings" />
 
     <!-- Navbar -->
     <header
