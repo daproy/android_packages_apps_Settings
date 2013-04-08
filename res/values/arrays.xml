@@ -1530,6 +1530,32 @@
         <item>1005</item>
     </string-array>
 
+    <!-- Status Bar alpha mode-->
+    <string-array name="entries_status_bar_alpha_mode">
+        <item>@string/status_bar_alpha_mode_home</item>
+        <item>@string/status_bar_alpha_mode_default</item>
+        <item>@string/status_bar_alpha_mode_always</item>
+    </string-array>
+
+    <string-array name="values_status_bar_alpha_mode" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+   <!-- Navigation Bar alpha mode-->
+    <string-array name="entries_nav_bar_alpha_mode">
+        <item>@string/nav_bar_alpha_mode_home</item>
+        <item>@string/nav_bar_alpha_mode_default</item>
+        <item>@string/nav_bar_alpha_mode_always</item>
+    </string-array>
+
+    <string-array name="values_nav_bar_alpha_mode" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
     <!-- NavBar -->
     <string-array name="pref_navigation_menu_entries" translatable="false">
         <item>@string/right</item>

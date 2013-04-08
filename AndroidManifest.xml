@@ -1609,6 +1609,8 @@
 	<activity android:name=".cyanogenmod.NotificationDrawerStyle" />
 
 	<activity android:name=".cyanogenmod.StatusBar" />
+      
+        <activity android:name=".cyanogenmod.StatusBarStyle" />
 
         <activity android:name=".cyanogenmod.StatusBarClockStyle" />
 
