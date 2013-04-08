@@ -44,13 +44,13 @@ public class Widgets extends SettingsPreferenceFragment {
 
     private void updateList() {
 
-        Applications.BeerbongAppInfo[] items = Applications.getWidgetList(mContext);
+        Applications.AppInfo[] items = Applications.getWidgetList(mContext);
 
         mWidgetList.removeAll();
 
         for (int i = 0; i < items.length; i++) {
             Preference pref = new Preference(mContext);
-            Applications.BeerbongAppInfo bAppInfo = items[i];
+            Applications.AppInfo bAppInfo = items[i];
 
             pref.setKey(bAppInfo.pack);
             pref.setTitle(bAppInfo.name);

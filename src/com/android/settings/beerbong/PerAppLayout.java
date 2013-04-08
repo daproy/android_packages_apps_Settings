@@ -43,7 +43,7 @@ public class PerAppLayout extends SettingsPreferenceFragment {
         mAppList = (PreferenceCategory) prefSet
                 .findPreference("per_app_layout_list");
 
-        Applications.BeerbongAppInfo[] items = Applications
+        Applications.AppInfo[] items = Applications
                 .getApplicationList(mContext);
 
         mAppList.removeAll();
@@ -55,7 +55,7 @@ public class PerAppLayout extends SettingsPreferenceFragment {
 //            }
             
             Preference pref = new Preference(mContext);
-            Applications.BeerbongAppInfo bAppInfo = items[i];
+            Applications.AppInfo bAppInfo = items[i];
 
             pref.setKey(bAppInfo.pack);
             pref.setTitle(bAppInfo.name);
