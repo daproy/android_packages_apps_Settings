@@ -26,13 +26,13 @@ public class WidgetListPreference extends SettingsPreferenceFragment {
 
         mWidgetList = (PreferenceCategory) prefSet.findPreference("widget_list");
 
-        Applications.BeerbongAppInfo[] items = Applications.getApplicationList(mContext);
+        Applications.AppInfo[] items = Applications.getApplicationList(mContext);
 
         mWidgetList.removeAll();
 
         for (int i = 0; i < items.length; i++) {
             Preference pref = new Preference(mContext);
-            Applications.BeerbongAppInfo bAppInfo = items[i];
+            Applications.AppInfo bAppInfo = items[i];
 
             pref.setKey(bAppInfo.pack);
             pref.setTitle(bAppInfo.name);
