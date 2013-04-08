@@ -49,9 +49,9 @@ public class StatusBarStyle extends SettingsPreferenceFragment implements
     private static final String PREF_STATUS_BAR_ALPHA_MODE = "status_bar_alpha_mode";
     private static final String PREF_STATUS_BAR_COLOR = "status_bar_color";
 
-    private SeekBarPreference mStatusbarTransparency;
-    private ColorPickerPreference mStatusBarColor;
-    private ListPreference mAlphaMode;
+    SeekBarPreference mStatusbarTransparency;
+    ColorPickerPreference mStatusBarColor;
+    ListPreference mAlphaMode;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -72,11 +72,7 @@ public class StatusBarStyle extends SettingsPreferenceFragment implements
 
         mStatusBarColor = (ColorPickerPreference) findPreference(PREF_STATUS_BAR_COLOR);
         mStatusBarColor.setOnPreferenceChangeListener(this);
-        int intColor = Settings.System.getInt(getActivity().getContentResolver(),
-                    Settings.System.STATUS_BAR_COLOR, 0xff000000);
-        String hexColor = String.format("#%08x", (0xffffffff & intColor));
-        mStatusBarColor.setNewPreviewColor(intColor);
-
+   
         float statBarTransparency = 0.0f;
         try{
             statBarTransparency = Settings.System.getFloat(getActivity()
@@ -114,7 +110,7 @@ public class StatusBarStyle extends SettingsPreferenceFragment implements
                 Settings.System.putInt(getActivity().getContentResolver(),
                         Settings.System.STATUS_NAV_BAR_ALPHA_MODE, 1);
                 Settings.System.putInt(getActivity().getContentResolver(),
-                        Settings.System.STATUS_BAR_COLOR, 0xff000000);
+                        Settings.System.STATUS_BAR_COLOR, -1);
 
                 Settings.System.putFloat(getActivity().getContentResolver(),
                        Settings.System.STATUS_BAR_ALPHA, 0.0f);
@@ -144,7 +140,7 @@ public class StatusBarStyle extends SettingsPreferenceFragment implements
             String hex = ColorPickerPreference.convertToARGB(
                     Integer.valueOf(String.valueOf(newValue)));
             preference.setSummary(hex);
-            int intHex = ColorPickerPreference.convertToColorInt(hex);
+            int intHex = ColorPickerPreference.convertToColorInt(hex) & 0x00FFFFFF;
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.STATUS_BAR_COLOR, intHex);
             return true;
