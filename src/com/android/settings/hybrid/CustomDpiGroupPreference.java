@@ -1,4 +1,4 @@
-package com.android.settings.beerbong;
+package com.android.settings.hybrid;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -1,4 +1,4 @@
-package com.android.settings.beerbong;
+package com.android.settings.hybrid;
 
 import java.io.IOException;
 import java.util.ArrayList;

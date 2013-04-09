@@ -63,7 +63,7 @@ import com.android.settings.aokp.widgets.SeekBarPreference;
 import com.android.settings.aokp.NavRingTargets;
 import com.android.settings.aokp.WidgetConfigurationFragment;
 
-import com.android.settings.beerbong.Applications;
+import com.android.settings.hybrid.Applications;
 import com.android.settings.cyanogenmod.colorpicker.ColorPickerPreference;
 
 public class Navbar extends SettingsPreferenceFragment implements
