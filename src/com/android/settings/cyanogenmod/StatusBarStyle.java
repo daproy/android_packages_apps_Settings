@@ -37,7 +37,7 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.R;
 import com.android.settings.Utils;
 import com.android.settings.utils.Helpers;
-import com.android.settings.aokp.widgets.SeekBarPreference;
+import com.android.settings.widget.SeekBarPreference;
 
 import com.android.settings.cyanogenmod.colorpicker.ColorPickerPreference;
 
@@ -81,7 +81,9 @@ public class StatusBarStyle extends SettingsPreferenceFragment implements
             statBarTransparency = 0.0f;
             Settings.System.putFloat(getActivity().getContentResolver(), Settings.System.STATUS_BAR_ALPHA, 0.0f);
         }
-        mStatusbarTransparency = (SeekBarPreference) findPreference("status_bar_alpha");
+        mStatusbarTransparency = (SeekBarPreference) findPreference(PREF_STATUS_BAR_ALPHA);
+        mStatusbarTransparency.setProperty(Settings.System.STATUS_BAR_ALPHA);
+        mStatusbarTransparency.setInitValue((int) (statBarTransparency * 100));
         mStatusbarTransparency.setOnPreferenceChangeListener(this);
 
         mAlphaMode = (ListPreference) prefs.findPreference(PREF_STATUS_BAR_ALPHA_MODE);
