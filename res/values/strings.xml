@@ -5487,7 +5487,7 @@
     <string name="navigation_bar_menu_arrow_keys_title">Menu arrow keys</string>
     <string name="navigation_bar_menu_arrow_keys_summary">Show arrow keys in the navigation bar while typing</string>
     <string name="navigation_bar_alpha_title">Navigation bar opacity</string>
-    <string name="nav_bar_alpha_mode_dialog_text_title">Show navigation bar transparency</string>
+    <string name="nav_bar_alpha_mode_dialog_text_title">Show navigation and status bar transparency</string>
     <string name="nav_bar_alpha_mode_text_title">Transparency mode</string>
     <string name="nav_bar_alpha_mode_home">on launcher</string>
     <string name="nav_bar_alpha_mode_default">on launcher and lockscreen</string>
