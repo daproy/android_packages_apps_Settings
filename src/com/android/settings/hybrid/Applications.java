@@ -90,7 +90,7 @@ public class Applications {
 
     public static void addSystemLayout(Context mContext, String layout) {
         setProperties(mContext, "com.android.systemui", new String[] { "android.layout",
-                "com.android.systemui.dlayoutpi" }, layout, true);
+                "com.android.systemui.layout" }, layout, true);
     }
 
     public static void addAppsLayout(Context mContext, String layout) {
