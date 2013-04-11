@@ -806,7 +806,9 @@ public class Settings extends PreferenceActivity
         } else {
             mLastHeader = header;
         }
-        setTitle(mLastHeader.titleRes);
+        if (android.provider.Settings.System.getBoolean(getContentResolver(), android.provider.Settings.System.FORCE_DUAL_PANEL, false)) {
+            setTitle(mLastHeader.titleRes);
+        }
     }
 
     @Override
