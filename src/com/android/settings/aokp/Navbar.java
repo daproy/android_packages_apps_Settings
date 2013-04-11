@@ -81,6 +81,7 @@ public class Navbar extends SettingsPreferenceFragment implements
     private static final String ENABLE_NAVRING_LONG = "enable_navring_long";
     private static final String NAVIGATION_BAR_WIDGETS = "navigation_bar_widgets";
     private static final String PREF_MENU_ARROWS = "navigation_bar_menu_arrow_keys";
+    private static final String PREF_NAV_BAR_ALPHA_MODE = "nav_bar_alpha_mode";
 
     public static final int REQUEST_PICK_CUSTOM_ICON = 200;
     public static final int REQUEST_PICK_LANDSCAPE_ICON = 201;
@@ -102,6 +103,7 @@ public class Navbar extends SettingsPreferenceFragment implements
     ListPreference mNavRingButtonQty;
     SeekBarPreference mButtonAlpha;
     SeekBarPreference mNavBarAlpha;
+    ListPreference mAlphaMode;
     CheckBoxPreference mEnableNavringLong;
     CheckBoxPreference mMenuArrowKeysCheckBox;
     Preference mConfigureWidgets;
@@ -194,6 +196,13 @@ public class Navbar extends SettingsPreferenceFragment implements
         mNavBarAlpha = (SeekBarPreference) findPreference("navigation_bar_alpha");
         mNavBarAlpha.setOnPreferenceChangeListener(this);
 
+        mAlphaMode = (ListPreference) prefs.findPreference(PREF_NAV_BAR_ALPHA_MODE);
+        int alphaMode = Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.STATUS_NAV_BAR_ALPHA_MODE, 1);
+        mAlphaMode.setValue(String.valueOf(alphaMode));
+        mAlphaMode.setSummary(mAlphaMode.getEntry());
+        mAlphaMode.setOnPreferenceChangeListener(this);
+
         refreshSettings();
         setHasOptionsMenu(true);
         updateGlowTimesSummary();
@@ -209,6 +218,8 @@ public class Navbar extends SettingsPreferenceFragment implements
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.reset:
+                Settings.System.putInt(getActivity().getContentResolver(),
+                        Settings.System.STATUS_NAV_BAR_ALPHA_MODE, 1);
                 Settings.System.putInt(getActivity().getContentResolver(),
                         Settings.System.NAVIGATION_BAR_COLOR, -1);
                 Settings.System.putInt(getActivity().getContentResolver(),
@@ -385,6 +396,13 @@ public class Navbar extends SettingsPreferenceFragment implements
             Settings.System.putFloat(getActivity().getContentResolver(),
                     Settings.System.NAVIGATION_BAR_ALPHA,
                     val);
+            return true;
+        } else if (preference == mAlphaMode) {
+            int alphaMode = Integer.valueOf((String) newValue);
+            int index = mAlphaMode.findIndexOfValue((String) newValue);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.STATUS_NAV_BAR_ALPHA_MODE, alphaMode);
+            mAlphaMode.setSummary(mAlphaMode.getEntries()[index]);
             return true;
         }
         return false;

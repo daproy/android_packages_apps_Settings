@@ -5425,6 +5425,17 @@
 
     <string name="goo_updater">GooUpdater</string>
 
+    <!-- Status bar background style -->
+    <string name="status_bar_transparency_title">Status bar transparency</string>
+    <string name="status_bar_color_title">Status bar color</string>
+    <string name="status_bar_background_style">Status bar background</string>
+    <string name="status_bar_alpha_mode_dialog_text_title">Show navigation and status bar transparency</string>
+    <string name="status_bar_alpha_mode_text_title">Transparency mode</string>
+    <string name="status_bar_alpha_mode_home">on launcher</string>
+    <string name="status_bar_alpha_mode_default">on launcher and lockscreen</string>
+    <string name="status_bar_alpha_mode_always">always</string>
+    <string name="status_bar_style_reset">Reset</string>
+
     <!-- Navigation Bar -->
     <string name="title_navbar">NavBar modifier</string>
     <string name="header_summary_navbar">Setup NavBar</string>
@@ -5475,7 +5486,12 @@
     <string name="navbar_widgets_delete">Delete widget</string>
     <string name="navigation_bar_menu_arrow_keys_title">Menu arrow keys</string>
     <string name="navigation_bar_menu_arrow_keys_summary">Show arrow keys in the navigation bar while typing</string>
-    <string name="navigation_bar_alpha_title">Navigation and Status bar opacity</string>
+    <string name="navigation_bar_alpha_title">Navigation bar opacity</string>
+    <string name="nav_bar_alpha_mode_dialog_text_title">Show navigation and status bar transparency</string>
+    <string name="nav_bar_alpha_mode_text_title">Transparency mode</string>
+    <string name="nav_bar_alpha_mode_home">on launcher</string>
+    <string name="nav_bar_alpha_mode_default">on launcher and lockscreen</string>
+    <string name="nav_bar_alpha_mode_always">always</string>
 
     <!-- Nav Ring Targets -->
     <string name="header_summary_navring">Setup NavRing</string>
