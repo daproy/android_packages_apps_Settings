@@ -806,6 +806,7 @@ public class Settings extends PreferenceActivity
         } else {
             mLastHeader = header;
         }
+        setTitle(mLastHeader.titleRes);
     }
 
     @Override
