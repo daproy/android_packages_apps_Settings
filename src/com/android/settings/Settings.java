@@ -806,8 +806,12 @@ public class Settings extends PreferenceActivity
         } else {
             mLastHeader = header;
         }
-        if (android.provider.Settings.System.getBoolean(getContentResolver(), android.provider.Settings.System.FORCE_DUAL_PANEL, false)) {
-            setTitle(mLastHeader.titleRes);
+        if (onIsMultiPane()) {
+            try {
+                setTitle(mLastHeader.titleRes);
+            } catch (Throwable t) {
+                setTitle(R.string.settings_label);
+            }
         }
     }
 
