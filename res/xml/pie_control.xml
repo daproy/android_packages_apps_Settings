@@ -40,6 +40,10 @@
         android:key="pie_outline_color"
         android:title="@string/pie_outline_color_title" />
 
+    <com.android.settings.cyanogenmod.colorpicker.ColorPickerPreference
+        android:key="pie_long_press_color"
+        android:title="@string/pie_long_press_color_title" />
+
     <com.android.settings.widget.SeekBarPreference
             android:key="pie_start"
             android:title="@string/pie_start_title"

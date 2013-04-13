@@ -37,6 +37,7 @@ public class PieControl extends SettingsPreferenceFragment
     ColorPickerPreference mPieColor;
     ColorPickerPreference mPieSelectedColor;
     ColorPickerPreference mPieOutlineColor;
+    ColorPickerPreference mPieLongpressColor;
     SeekBarPreference mPieStart;
     SeekBarPreference mPieDistance;
 
@@ -73,6 +74,8 @@ public class PieControl extends SettingsPreferenceFragment
         mPieSelectedColor.setOnPreferenceChangeListener(this);
         mPieOutlineColor = (ColorPickerPreference) prefs.findPreference("pie_outline_color");
         mPieOutlineColor.setOnPreferenceChangeListener(this);
+        mPieLongpressColor = (ColorPickerPreference) prefs.findPreference("pie_long_press_color");
+        mPieLongpressColor.setOnPreferenceChangeListener(this);
         mPieStart = (SeekBarPreference) prefs.findPreference("pie_start");
         mPieStart.setProperty(Settings.System.PIE_START);
         mPieStart.setOnPreferenceChangeListener(this);
@@ -125,6 +128,14 @@ public class PieControl extends SettingsPreferenceFragment
             int intHex = ColorPickerPreference.convertToColorInt(hex);
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.PIE_OUTLINE_COLOR, intHex);
+            Utils.restartUI(getActivity());
+        } else if (preference == mPieLongpressColor) {
+            String hex = ColorPickerPreference.convertToARGB(
+                    Integer.valueOf(String.valueOf(newValue)));
+            preference.setSummary(hex);
+            int intHex = ColorPickerPreference.convertToColorInt(hex);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.PIE_LONG_PRESS_COLOR, intHex);
             Utils.restartUI(getActivity());
         } else if (preference == mPieStart) {
             float valStat = Float.parseFloat((String) newValue);
