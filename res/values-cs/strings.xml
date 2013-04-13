@@ -1883,7 +1883,7 @@
     <string name="start_time_title">Začátek</string>
     <string name="end_time_title">Konec</string>
     <string name="device_hostname">Hostitelské jméno zařízení</string>
-    <string name="mod_version">Verze CyanogenModu</string>
+    <string name="mod_version">Verze JellyBeer</string>
     <string name="mod_version_default">Neznámý</string>
     <string name="build_date">Datum sestavení</string>
     <string name="build_date_default">2012-01-01-0000</string>

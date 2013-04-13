@@ -77,6 +77,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final CharSequence PREF_POWER_CRT_MODE = "system_power_crt_mode";
     private static final CharSequence PREF_POWER_CRT_SCREEN_OFF = "system_power_crt_screen_off";
     private static final String KEY_WAKEUP_WHEN_PLUGGED_UNPLUGGED = "wakeup_when_plugged_unplugged";
+    private static final String KEY_RECENTS_RAM_BAR = "recents_ram_bar";
 
     // Strings used for building the summary
     private static final String ROTATION_ANGLE_0 = "0";
@@ -97,6 +98,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private Preference mCustomLabel;
     private ListPreference mNotificationsBehavior;
     private CheckBoxPreference mWakeUpWhenPluggedOrUnplugged;
+    private Preference mRamBar;
     private PreferenceScreen mDisplayRotationPreference;
     private WarnedListPreference mFontSizePref;
 
@@ -211,7 +213,8 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         mWakeUpWhenPluggedOrUnplugged.setChecked(Settings.System.getInt(getActivity().getContentResolver(),
                         Settings.System.WAKEUP_WHEN_PLUGGED_UNPLUGGED, 1) == 1);
 	
-
+        mRamBar = findPreference(KEY_RECENTS_RAM_BAR);
+        updateRamBar();
       
     }
 
@@ -363,9 +366,19 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         }
     }
 
+    private void updateRamBar() {
+        int ramBarMode = Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
+                Settings.System.RECENTS_RAM_BAR_MODE, 0);
+        if (ramBarMode != 0)
+            mRamBar.setSummary(getResources().getString(R.string.ram_bar_color_enabled));
+        else
+            mRamBar.setSummary(getResources().getString(R.string.ram_bar_color_disabled));
+    }
+
     @Override
     public void onResume() {
         super.onResume();
+        updateRamBar();
         updateDisplayRotationPreferenceDescription();
 
         RotationPolicy.registerRotationPolicyListener(getActivity(),
@@ -388,7 +401,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     @Override
     public void onPause() {
         super.onPause();
-
+        updateRamBar();
         RotationPolicy.unregisterRotationPolicyListener(getActivity(),
                 mRotationPolicyListener);
 

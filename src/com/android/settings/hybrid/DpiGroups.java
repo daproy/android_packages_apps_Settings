@@ -1,4 +1,4 @@
-package com.android.settings.beerbong;
+package com.android.settings.hybrid;
 
 import java.io.FileInputStream;
 import java.util.ArrayList;
@@ -44,8 +44,6 @@ public class DpiGroups extends SettingsPreferenceFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mContext = getActivity();
-
-        Utils.setContext(mContext);
 
         addPreferencesFromResource(R.xml.dpi_groups_settings);
 
@@ -133,20 +131,23 @@ public class DpiGroups extends SettingsPreferenceFragment {
         while (it.hasNext()) {
             String packageName = (String) it.next();
 
-            String dpi = properties.getProperty(packageName);
+            if (Applications.isAppDpiProperty(packageName)) {
 
-            if (hashMap.get(dpi) == null) {
-                hashMap.put(dpi, 0);
-            }
-
-            if (!"0".equals(dpi) && !Applications.isPartOfSystem(packageName)) {
-                if (mGroupsList.indexOf(Integer.parseInt(dpi)) < 0) {
-                    mGroupsString += "|" + dpi;
-                    mGroupsList.add(Integer.parseInt(dpi));
+                String dpi = properties.getProperty(packageName);
+    
+                if (hashMap.get(dpi) == null) {
+                    hashMap.put(dpi, 0);
                 }
-                int count = hashMap.get(dpi);
-                count++;
-                hashMap.put(dpi, count);
+    
+                if (!"0".equals(dpi)) {
+                    if (mGroupsList.indexOf(Integer.parseInt(dpi)) < 0) {
+                        mGroupsString += "|" + dpi;
+                        mGroupsList.add(Integer.parseInt(dpi));
+                    }
+                    int count = hashMap.get(dpi);
+                    count++;
+                    hashMap.put(dpi, count);
+                }
             }
         }
 

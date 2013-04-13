@@ -137,7 +137,21 @@
             android:name=".cyanogenmod.superuser.SuReceiver"
             android:permission="android.permission.REPORT_SUPERUSER" />
 
-        <activity android:name="com.android.settings.beerbong.gooupdater.GooActivity" />
+        <receiver
+            android:name=".cyanogenmod.superuser.PackageChangeReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <data android:scheme="package" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <data android:scheme="package" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
 
         <!-- Settings -->
 
@@ -1508,6 +1522,19 @@
         <activity android:name=".cyanogenmod.PowerWidget" />
 
         <activity android:name=".cyanogenmod.SystemSettings" />
+        <activity android:name="Settings$SystemSettingsActivity"
+                android:label="@string/system_settings_title"
+                android:taskAffinity=""
+                android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.android.settings.cyanogenmod.SystemSettings" />
+            <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
+                android:resource="@id/system_settings" />
+        </activity>
 
         <activity android:name="Settings$QuietHoursSettingsActivity"
                 android:label="@string/quiet_hours_title"
@@ -1582,8 +1609,12 @@
 	<activity android:name=".cyanogenmod.NotificationDrawerStyle" />
 
 	<activity android:name=".cyanogenmod.StatusBar" />
+      
+        <activity android:name=".cyanogenmod.StatusBarStyle" />
 
         <activity android:name=".cyanogenmod.StatusBarClockStyle" />
+
+        <activity android:name=".RamBar" />
 
         <activity android:name=".aokp.NavRingTargets" />
 
@@ -1610,9 +1641,27 @@
 
         <activity android:name=".ApnEditor" />
 
+        <activity android:name="Settings$AnonymousStatsActivity"
+                android:label="@string/anonymous_statistics_title"
+                android:configChanges="orientation|keyboardHidden|screenSize"
+                android:clearTaskOnLaunch="true">
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.android.settings.cmstats.AnonymousStats" />
+        </activity>
+
         <!-- CyanogenMod activities End -->
 
         <!-- Pseudo-activity used to provide an intent-filter entry point to encryption settings -->
+        <activity android:name="Settings$ASSRamBarActivity"
+                android:label="@string/ram_bar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.android.settings.RamBar" />
+        </activity>
+
         <activity android:name="Settings$CryptKeeperSettingsActivity"
                 android:label="@string/crypt_keeper_encrypt_title">
             <intent-filter>
@@ -1658,7 +1707,27 @@
                 android:resource="@id/display_settings" />
         </activity>
 
-        <activity android:name=".beerbong.HybridSettings" />
+        <activity android:name="Settings$HybridSettingsActivity"
+                android:label="@string/hybrid_settings_title"
+                android:taskAffinity=""
+                android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.android.settings.hybrid.HybridSettings" />
+            <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
+                android:resource="@id/hybrid_settings" />
+        </activity>
+
+        <activity android:name=".hybrid.HybridSettings"
+            android:label="HybridSettings" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
 
         <receiver android:name=".widget.SettingsAppWidgetProvider"
                 android:label="@string/gadget_title"

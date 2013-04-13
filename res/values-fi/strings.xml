@@ -1857,7 +1857,7 @@
     <string name="start_time_title">Alkaa</string>
     <string name="end_time_title">Loppuu</string>
     <string name="device_hostname">Laitteen verkkonimi</string>
-    <string name="mod_version">CyanogenMod-versio</string>
+    <string name="mod_version">JellyBeer-versio</string>
     <string name="mod_version_default">Tuntematon</string>
     <string name="build_date">Luontipäivä</string>
     <string name="build_date_default">2012-01-01-0000</string>

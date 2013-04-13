@@ -1871,7 +1871,7 @@
     <string name="device_hostname">שם המכשיר</string>
 
     <!-- About phone screen,  setting option name-->
-    <string name="mod_version">גרסת CyanogenMod</string>
+    <string name="mod_version">גרסת JellyBeer</string>
     <string name="mod_version_default">לא ידועה</string>
     <!-- About phone screen, build date of ROM -->
     <string name="build_date">תאריך Build</string>

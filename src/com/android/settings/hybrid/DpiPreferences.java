@@ -1,4 +1,4 @@
-package com.android.settings.beerbong;
+package com.android.settings.hybrid;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -35,8 +35,6 @@ public class DpiPreferences extends SettingsPreferenceFragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mContext = getActivity();
-
-        Utils.setContext(mContext);
 
         addPreferencesFromResource(R.xml.dpi_settings);
 

@@ -1,4 +1,4 @@
-package com.android.settings.beerbong;
+package com.android.settings.hybrid;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -20,21 +20,19 @@ public class AppListPreference extends SettingsPreferenceFragment {
         super.onCreate(savedInstanceState);
         mContext = getActivity();
 
-        Utils.setContext(mContext);
-
         addPreferencesFromResource(R.xml.dpi_group_app_list);
 
         final PreferenceScreen prefSet = getPreferenceScreen();
 
         mAppList = (PreferenceCategory) prefSet.findPreference("dpi_group_app_list");
 
-        Applications.BeerbongAppInfo[] items = Applications.getApplicationList(mContext);
+        Applications.AppInfo[] items = Applications.getApplicationList(mContext);
 
         mAppList.removeAll();
 
         for (int i = 0; i < items.length; i++) {
             Preference pref = new Preference(mContext);
-            Applications.BeerbongAppInfo bAppInfo = items[i];
+            Applications.AppInfo bAppInfo = items[i];
 
             pref.setKey(bAppInfo.pack);
             pref.setTitle(bAppInfo.name);

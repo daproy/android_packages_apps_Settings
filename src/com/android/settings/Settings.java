@@ -381,10 +381,23 @@ public class Settings extends PreferenceActivity
 
     @Override
     public Intent onBuildStartFragmentIntent(String fragmentName, Bundle args,
+            CharSequence titleText, CharSequence shortTitleText) {
+        Intent intent = super.onBuildStartFragmentIntent(fragmentName, args,
+                titleText, shortTitleText);
+        onBuildStartFragmentIntentHelper(fragmentName, intent);
+        return intent;
+    }
+
+    @Override
+    public Intent onBuildStartFragmentIntent(String fragmentName, Bundle args,
             int titleRes, int shortTitleRes) {
         Intent intent = super.onBuildStartFragmentIntent(fragmentName, args,
                 titleRes, shortTitleRes);
+        onBuildStartFragmentIntentHelper(fragmentName, intent);
+        return intent;
+    }
 
+    private void onBuildStartFragmentIntentHelper(String fragmentName, Intent intent) {
         // some fragments want to avoid split actionbar
         if (DataUsageSummary.class.getName().equals(fragmentName) ||
                 PowerUsageSummary.class.getName().equals(fragmentName) ||
@@ -406,9 +419,7 @@ public class Settings extends PreferenceActivity
                 ZonePicker.class.getName().equals(fragmentName)) {
             intent.putExtra(EXTRA_CLEAR_UI_OPTIONS, true);
         }
-
         intent.setClass(this, SubSettings.class);
-        return intent;
     }
 
     /**
@@ -795,6 +806,13 @@ public class Settings extends PreferenceActivity
         } else {
             mLastHeader = header;
         }
+        if (onIsMultiPane()) {
+            try {
+                setTitle(mLastHeader.titleRes);
+            } catch (Throwable t) {
+                setTitle(R.string.settings_label);
+            }
+        }
     }
 
     @Override
@@ -879,4 +897,6 @@ public class Settings extends PreferenceActivity
     public static class ProfilesSettingsActivity extends Settings { /* empty */ }
     public static class QuietHoursSettingsActivity extends Settings { /* empty */ }
     public static class DreamSettingsActivity extends Settings { /* empty */ }
+    public static class SystemSettingsActivity extends Settings { /* empty */ }
+    public static class HybridSettingsActivity extends Settings { /* empty */ }
 }

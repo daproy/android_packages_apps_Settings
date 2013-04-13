@@ -1897,7 +1897,7 @@
     <string name="device_hostname">设备网络名</string>
 
     <!-- About phone screen,  setting option name-->
-    <string name="mod_version">CyanogenMod 版本</string>
+    <string name="mod_version">JellyBeer 版本</string>
     <string name="mod_version_default">未知</string>
     <!-- About phone screen, build date of ROM -->
     <string name="build_date">编译日期</string>

@@ -1874,7 +1874,7 @@
     <string name="start_time_title">Início</string>
     <string name="end_time_title">Fim</string>
     <string name="device_hostname">Nome do dispositivo</string>
-    <string name="mod_version">Versão CyanogenMod</string>
+    <string name="mod_version">Versão JellyBeer</string>
     <string name="mod_version_default">Desconhecida</string>
     <string name="build_date">Data de compilação</string>
     <string name="build_date_default">2012-01-01-0000</string>
@@ -2430,4 +2430,22 @@
     <string name="navring_action_torch">Lig/Desl. lanterna</string>
     <string name="navring_action_google_now">Google Now</string>
     <string name="navring_choose_action_title">Escolher ação</string>
+    <string name="swap_volume_buttons_title">Inverter botões de volume</string>
+    <string name="swap_volume_buttons_summary">Inverter botões de volume quando virar a tela</string>
+    <string name="wifi_mode">Modo</string>
+    <string name="wifi_mode_ibss">Rede Ad-Hoc (IBSS)</string>
+    <string name="wifi_mode_ibss_short">Ad-Hoc</string>
+    <string name="pie_control_title">Controles circulares</string>
+    <string name="pie_control_enabled">Ativar quando a área de trabalho Expandida estiver ativa</string>
+    <string name="pie_control_disabled">Desativado</string>
+    <string name="pie_control_size">Tamanho dos botões de navegação</string>
+    <string name="pie_control_trigger_positions">Posições de ativação</string>
+    <string name="pie_control_trigger_left">Borda esquerda da tela</string>
+    <string name="pie_control_trigger_bottom">Borda inferior da tela</string>
+    <string name="pie_control_trigger_right">Borda direita da tela</string>
+    <string name="pie_control_trigger_top">Borda superior da tela</string>
+    <string name="pie_control_trigger_top_summary">Somente navegação sera exibida na parte superior</string>
+    <string name="title_tile_volume">Volume</string>
+    <string name="title_tile_expanded_desktop">Área de trabalho expandida</string>
+    <string name="title_dynamic_dock_battery">Bateria do dock</string>
 </resources>

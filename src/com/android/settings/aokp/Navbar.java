@@ -37,6 +37,7 @@ import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
 import android.provider.MediaStore;
 import android.provider.Settings;
+import android.util.ExtendedPropertiesUtils;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -47,6 +48,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.SeekBar;
+import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -54,13 +57,13 @@ import android.widget.Toast;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
-import com.android.settings.aokp.util.Helpers;
 import com.android.settings.aokp.util.ShortcutPickerHelper;
 import com.android.settings.aokp.widgets.NavBarItemPreference;
 import com.android.settings.aokp.widgets.SeekBarPreference;
 import com.android.settings.aokp.NavRingTargets;
 import com.android.settings.aokp.WidgetConfigurationFragment;
 
+import com.android.settings.hybrid.Applications;
 import com.android.settings.cyanogenmod.colorpicker.ColorPickerPreference;
 
 public class Navbar extends SettingsPreferenceFragment implements
@@ -69,6 +72,7 @@ public class Navbar extends SettingsPreferenceFragment implements
     // move these later
     private static final String PREF_MENU_UNLOCK = "pref_menu_display";
     private static final String PREF_NAVBAR_MENU_DISPLAY = "navbar_menu_display";
+    private static final String NAVIGATION_BAR_COLOR = "nav_bar_color";
     private static final String PREF_NAV_COLOR = "nav_button_color";
     private static final String PREF_NAV_GLOW_COLOR = "nav_button_glow_color";
     private static final String PREF_GLOW_TIMES = "glow_times";
@@ -77,6 +81,7 @@ public class Navbar extends SettingsPreferenceFragment implements
     private static final String ENABLE_NAVRING_LONG = "enable_navring_long";
     private static final String NAVIGATION_BAR_WIDGETS = "navigation_bar_widgets";
     private static final String PREF_MENU_ARROWS = "navigation_bar_menu_arrow_keys";
+    private static final String PREF_NAV_BAR_ALPHA_MODE = "nav_bar_alpha_mode";
 
     public static final int REQUEST_PICK_CUSTOM_ICON = 200;
     public static final int REQUEST_PICK_LANDSCAPE_ICON = 201;
@@ -84,9 +89,11 @@ public class Navbar extends SettingsPreferenceFragment implements
     public static final String PREFS_NAV_BAR = "navbar";
     protected Context mContext;
 
+    private Preference mNavbarHeight;
     Preference mNavRingTargets;
 
     // move these later
+    ColorPickerPreference mNavigationColor;
     ColorPickerPreference mNavigationBarColor;
     ColorPickerPreference mNavigationBarGlowColor;
     ListPreference mGlowTimes;
@@ -96,12 +103,15 @@ public class Navbar extends SettingsPreferenceFragment implements
     ListPreference mNavRingButtonQty;
     SeekBarPreference mButtonAlpha;
     SeekBarPreference mNavBarAlpha;
+    ListPreference mAlphaMode;
     CheckBoxPreference mEnableNavringLong;
     CheckBoxPreference mMenuArrowKeysCheckBox;
     Preference mConfigureWidgets;
 
     private int mPendingIconIndex = -1;
     private NavBarCustomAction mPendingNavBarCustomAction = null;
+
+    private int mNavbarHeightProgress;
 
     private static class NavBarCustomAction {
         String activitySettingName;
@@ -123,6 +133,8 @@ public class Navbar extends SettingsPreferenceFragment implements
         addPreferencesFromResource(R.xml.prefs_navbar);
 
         PreferenceScreen prefs = getPreferenceScreen();
+
+        mNavbarHeight = findPreference("navbar_height");
 
         mPicker = new ShortcutPickerHelper(this, this);
 
@@ -151,10 +163,13 @@ public class Navbar extends SettingsPreferenceFragment implements
                 Settings.System.NAVIGATION_BAR_BUTTONS_QTY, 3) + "");
 
         mEnableNavringLong = (CheckBoxPreference) findPreference("enable_navring_long");
-        mEnableNavringLong.setChecked(Settings.System.getBoolean(getContentResolver(),
-                Settings.System.SYSTEMUI_NAVRING_LONG_ENABLE, false));
+        /*mEnableNavringLong.setChecked(Settings.System.getBoolean(getContentResolver(),
+                Settings.System.SYSTEMUI_NAVRING_LONG_ENABLE, false));*/
 
         mPicker = new ShortcutPickerHelper(this, this);
+
+        mNavigationColor = (ColorPickerPreference) findPreference(NAVIGATION_BAR_COLOR);
+        mNavigationColor.setOnPreferenceChangeListener(this);
 
         mNavigationBarColor = (ColorPickerPreference) findPreference(PREF_NAV_COLOR);
         mNavigationBarColor.setOnPreferenceChangeListener(this);
@@ -181,6 +196,13 @@ public class Navbar extends SettingsPreferenceFragment implements
         mNavBarAlpha = (SeekBarPreference) findPreference("navigation_bar_alpha");
         mNavBarAlpha.setOnPreferenceChangeListener(this);
 
+        mAlphaMode = (ListPreference) prefs.findPreference(PREF_NAV_BAR_ALPHA_MODE);
+        int alphaMode = Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.STATUS_NAV_BAR_ALPHA_MODE, 1);
+        mAlphaMode.setValue(String.valueOf(alphaMode));
+        mAlphaMode.setSummary(mAlphaMode.getEntry());
+        mAlphaMode.setOnPreferenceChangeListener(this);
+
         refreshSettings();
         setHasOptionsMenu(true);
         updateGlowTimesSummary();
@@ -196,6 +218,10 @@ public class Navbar extends SettingsPreferenceFragment implements
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.reset:
+                Settings.System.putInt(getActivity().getContentResolver(),
+                        Settings.System.STATUS_NAV_BAR_ALPHA_MODE, 1);
+                Settings.System.putInt(getActivity().getContentResolver(),
+                        Settings.System.NAVIGATION_BAR_COLOR, -1);
                 Settings.System.putInt(getActivity().getContentResolver(),
                         Settings.System.NAVIGATION_BAR_TINT, Integer.MIN_VALUE);
                 Settings.System.putInt(getActivity().getContentResolver(),
@@ -233,7 +259,9 @@ public class Navbar extends SettingsPreferenceFragment implements
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen,
             Preference preference) {
-       if (preference == mEnableNavringLong) {
+        if (preference == mNavbarHeight) {
+            showNavbarHeightDialog();
+        } else if (preference == mEnableNavringLong) {
 
             Settings.System.putBoolean(getActivity().getContentResolver(),
                     Settings.System.SYSTEMUI_NAVRING_LONG_ENABLE,
@@ -320,6 +348,14 @@ public class Navbar extends SettingsPreferenceFragment implements
             }
             refreshSettings();
             return true;
+        } else if (preference == mNavigationColor) {
+            String hex = ColorPickerPreference.convertToARGB(
+                    Integer.valueOf(String.valueOf(newValue)));
+            preference.setSummary(hex);
+            int intHex = ColorPickerPreference.convertToColorInt(hex) & 0x00FFFFFF;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.NAVIGATION_BAR_COLOR, intHex);
+            return true;
         } else if (preference == mNavigationBarColor) {
             String hex = ColorPickerPreference.convertToARGB(
                     Integer.valueOf(String.valueOf(newValue)));
@@ -360,6 +396,13 @@ public class Navbar extends SettingsPreferenceFragment implements
             Settings.System.putFloat(getActivity().getContentResolver(),
                     Settings.System.NAVIGATION_BAR_ALPHA,
                     val);
+            return true;
+        } else if (preference == mAlphaMode) {
+            int alphaMode = Integer.valueOf((String) newValue);
+            int index = mAlphaMode.findIndexOfValue((String) newValue);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.STATUS_NAV_BAR_ALPHA_MODE, alphaMode);
+            mAlphaMode.setSummary(mAlphaMode.getEntries()[index]);
             return true;
         }
         return false;
@@ -730,6 +773,60 @@ public class Navbar extends SettingsPreferenceFragment implements
         public void onResume() {
             super.onResume();
         }
+    }
+
+    private void showNavbarHeightDialog() {
+        Resources res = getResources();
+        String cancel = res.getString(R.string.cancel);
+        String ok = res.getString(R.string.ok);
+        String title = res.getString(R.string.navbar_height_title);
+        int savedProgress = Integer.parseInt(ExtendedPropertiesUtils
+                .getProperty("com.android.systemui.navbar.dpi")) / 5;
+
+        LayoutInflater factory = LayoutInflater.from(getActivity());
+        final View alphaDialog = factory.inflate(R.layout.seekbar_dialog, null);
+        SeekBar seekbar = (SeekBar) alphaDialog.findViewById(R.id.seek_bar);
+        final TextView seektext = (TextView) alphaDialog
+                .findViewById(R.id.seek_text);
+        OnSeekBarChangeListener seekBarChangeListener = new OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekbar, int progress,
+                    boolean fromUser) {
+                mNavbarHeightProgress = seekbar.getProgress() * 5;
+                seektext.setText(mNavbarHeightProgress + "%");
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekbar) {
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekbar) {
+            }
+        };
+        seektext.setText((savedProgress * 5) + "%");
+        seekbar.setMax(20);
+        seekbar.setProgress(savedProgress);
+        seekbar.setOnSeekBarChangeListener(seekBarChangeListener);
+        new AlertDialog.Builder(getActivity())
+                .setTitle(title)
+                .setView(alphaDialog)
+                .setNegativeButton(cancel,
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog,
+                                    int which) {
+                                // nothing
+                            }
+                        })
+                .setPositiveButton(ok, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Applications.addProperty(mContext,
+                                "com.android.systemui.navbar.dpi",
+                                mNavbarHeightProgress, true);
+                    }
+                }).create().show();
     }
 
 }

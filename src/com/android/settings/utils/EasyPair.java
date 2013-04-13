@@ -1,5 +1,4 @@
-
-package com.android.settings.aokp.objects;
+package com.android.settings.utils;
 
 import android.util.Pair;
 
