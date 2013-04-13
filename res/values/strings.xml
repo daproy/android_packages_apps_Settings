@@ -5282,7 +5282,6 @@
     <string name="hex_hint">#ff000000</string>
     <string name="set">Set</string>
     <string name="hex">Hex:</string>
-    <string name="dialog_indicator_color_title">Select color</string> 
 
 
     <!-- Advanced reboot options -->
