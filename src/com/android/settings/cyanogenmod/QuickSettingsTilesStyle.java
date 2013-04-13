@@ -35,7 +35,7 @@ import android.view.MenuItem;
 
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.R;
-import com.android.settings.hyrbid.Utils;
+import com.android.settings.hybrid.Utils;
 import com.android.settings.utils.Helpers;
 import com.android.settings.widget.SeekBarPreference;
 
