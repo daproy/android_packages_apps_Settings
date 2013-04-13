@@ -43,69 +43,67 @@ public class PerAppLayout extends SettingsPreferenceFragment {
         mAppList = (PreferenceCategory) prefSet
                 .findPreference("per_app_layout_list");
 
-        Applications.AppInfo[] items = Applications
-                .getApplicationList(mContext);
-
         mAppList.removeAll();
 
-        for (int i = 0; i < items.length; i++) {
-            
-//            if (items[i].pack.equals("com.android.systemui")) {
-//                continue;
-//            }
-            
-            Preference pref = new Preference(mContext);
-            Applications.AppInfo bAppInfo = items[i];
+        (new Thread() {
+            @Override
+            public void run() {
 
-            pref.setKey(bAppInfo.pack);
-            pref.setTitle(bAppInfo.name);
-            pref.setIcon(bAppInfo.icon);
-            pref.setLayoutResource(R.layout.simple_preference2);
+                Applications.AppInfo[] items = Applications
+                        .getApplicationList(mContext);
 
-            int currentLayout = ExtendedPropertiesUtils
-                    .getActualProperty(bAppInfo.pack + ".layout");
+                for (int i = 0; i < items.length; i++) {
 
-            pref.setSummary(currentLayout + "dp");
+                    Preference pref = new Preference(mContext);
+                    Applications.AppInfo bAppInfo = items[i];
 
-            ApplicationInfo appInfo = ExtendedPropertiesUtils
-                    .getAppInfoFromPackageName(bAppInfo.pack);
-            final String[] layouts = getLayouts(
-            /*
-             * ExtendedPropertiesUtils.getActualProperty(ExtendedPropertiesUtils.
-             * BEERBONG_PREFIX + "rom_default_layout"),
-             */appInfo.sourceDir);
+                    pref.setKey(bAppInfo.pack);
+                    pref.setTitle(bAppInfo.name);
+                    pref.setIcon(bAppInfo.icon);
+                    pref.setLayoutResource(R.layout.simple_preference2);
 
-            pref.setOnPreferenceClickListener(new OnPreferenceClickListener() {
+                    int currentLayout = ExtendedPropertiesUtils
+                            .getActualProperty(bAppInfo.pack + ".layout");
 
-                public boolean onPreferenceClick(final Preference preference) {
-                    AlertDialog.Builder builder = new AlertDialog.Builder(
-                            mContext);
-                    builder.setTitle(R.string.per_app_layout_alert_title);
-                    builder.setItems(layouts,
-                            new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog,
-                                        int item) {
-                                    Applications.addApplicationLayout(mContext,
-                                            preference.getKey(),
-                                            Integer.parseInt(layouts[item]));
-                                    preference.setSummary(layouts[item] + "dp");
-                                }
-                            });
-                    builder.setNegativeButton(R.string.cancel,
-                            new DialogInterface.OnClickListener() {
+                    pref.setSummary(currentLayout + "dp");
 
-                                public void onClick(DialogInterface dialog,
-                                        int whichButton) {
-                                    dialog.dismiss();
-                                }
-                            });
-                    AlertDialog alert = builder.create();
-                    alert.show();
-                    return false;
+                    ApplicationInfo appInfo = ExtendedPropertiesUtils
+                            .getAppInfoFromPackageName(bAppInfo.pack);
+                    final String[] layouts = getLayouts(appInfo.sourceDir);
+
+                    pref.setOnPreferenceClickListener(new OnPreferenceClickListener() {
+
+                        public boolean onPreferenceClick(final Preference preference) {
+                            AlertDialog.Builder builder = new AlertDialog.Builder(
+                                    mContext);
+                            builder.setTitle(R.string.per_app_layout_alert_title);
+                            builder.setItems(layouts,
+                                    new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog,
+                                                int item) {
+                                            Applications.addApplicationLayout(mContext,
+                                                    preference.getKey(),
+                                                    Integer.parseInt(layouts[item]));
+                                            preference.setSummary(layouts[item] + "dp");
+                                        }
+                                    });
+                            builder.setNegativeButton(R.string.cancel,
+                                    new DialogInterface.OnClickListener() {
+
+                                        public void onClick(DialogInterface dialog,
+                                                int whichButton) {
+                                            dialog.dismiss();
+                                        }
+                                    });
+                            AlertDialog alert = builder.create();
+                            alert.show();
+                            return false;
+                        }
+                    });
+                    mAppList.addPreference(pref);
                 }
-            });
-            mAppList.addPreference(pref);
-        }
+            }
+        }).start();
     }
 
     private static final String[] DEPRECATED_CONTAINERS = {"xlarge", "xhdpi", "large", "hdpi", "normal", "mdpi", "small", "ldpi"};
