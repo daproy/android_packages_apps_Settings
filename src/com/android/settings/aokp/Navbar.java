@@ -134,7 +134,10 @@ public class Navbar extends SettingsPreferenceFragment implements
 
         PreferenceScreen prefs = getPreferenceScreen();
 
+        boolean isTablet = ExtendedPropertiesUtils.isTablet();
+
         mNavbarHeight = findPreference("navbar_height");
+        mNavbarHeight.setEnabled(!isTablet);
 
         mPicker = new ShortcutPickerHelper(this, this);
 
