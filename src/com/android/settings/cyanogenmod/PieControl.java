@@ -80,7 +80,7 @@ public class PieControl extends SettingsPreferenceFragment
         mPieStart.setProperty(Settings.System.PIE_START);
         mPieStart.setOnPreferenceChangeListener(this);
         mPieDistance = (SeekBarPreference) prefs.findPreference("pie_distance");
-        mPieStart.setProperty(Settings.System.PIE_DISTANCE);
+        mPieDistance.setProperty(Settings.System.PIE_DISTANCE);
         mPieDistance.setOnPreferenceChangeListener(this);
 
 
