@@ -26,6 +26,12 @@
             android:fragment="com.android.settings.cyanogenmod.StatusBarStyle"
             android:key="status_bar_background_style"
             android:title="@string/status_bar_background_style" />
+        
+   <CheckBoxPreference
+            android:key="status_bar_auto_hide"
+            android:title="@string/auto_hide_statusbar"
+            android:summary="@string/auto_hide_statusbar_summary"
+            android:defaultValue="false" />
 
     <PreferenceScreen
             android:fragment="com.android.settings.cyanogenmod.StatusBarClockStyle"

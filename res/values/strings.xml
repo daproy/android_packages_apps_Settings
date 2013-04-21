@@ -5620,5 +5620,9 @@
     <string name="pie_long_press_color_title">PIE longpress color</string>
     <string name="pie_start_title">PIE trigger height</string>
     <string name="pie_distance_title">PIE trigger distance</string>
+    
+    <!-- Auto-Hide Status Bar -->
+    <string name="auto_hide_statusbar">Auto Hide statusbar</string>
+    <string name="auto_hide_statusbar_summary">Statusbar hides itself when there are no notifications</string>
 
 </resources>
