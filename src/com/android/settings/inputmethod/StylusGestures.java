@@ -15,14 +15,6 @@
 
 package com.android.settings.inputmethod;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeMap;
-
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
@@ -35,15 +27,17 @@ import android.os.Bundle;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
-import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
+import java.util.Collections;
+import java.util.List;
+
 public class StylusGestures extends SettingsPreferenceFragment implements
-        OnPreferenceChangeListener {
+        Preference.OnPreferenceChangeListener {
 
     public static final String TAG = "Stylus Gestures";
     public static final String KEY_SPEN_ENABLE = "enable_spen";
@@ -67,6 +61,9 @@ public class StylusGestures extends SettingsPreferenceFragment implements
     private Context mContext;
     private ContentResolver mResolver;
 
+    private String[] mActionNames;
+    private String[] mActionValues;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,46 +71,30 @@ public class StylusGestures extends SettingsPreferenceFragment implements
         mContext = getActivity();
         mResolver = getContentResolver();
 
+        Resources resources = mContext.getResources();
+        mActionNames = resources.getStringArray(R.array.gestures_entries);
+        mActionValues = resources.getStringArray(R.array.gestures_values);
+
         // Setup the preferences
         mEnableGestures = (CheckBoxPreference) findPreference(KEY_SPEN_ENABLE);
         mEnableGestures.setChecked(Settings.System.getInt(mResolver,
                 Settings.System.ENABLE_STYLUS_GESTURES, 0) == 1);
 
-        mSwipeLeft = (ListPreference) findPreference(KEY_SPEN_LEFT);
-        String packageName = Settings.System.getString(mResolver,
-                Settings.System.GESTURES_LEFT_SWIPE);
-        addApplicationEntries(mSwipeLeft, packageName);
-        mSwipeLeft.setOnPreferenceChangeListener(this);
+        // Setup the gestures
+        mSwipeLeft   = setupGesturePref(KEY_SPEN_LEFT,   Settings.System.GESTURES_LEFT_SWIPE);
+        mSwipeRight  = setupGesturePref(KEY_SPEN_RIGHT,  Settings.System.GESTURES_RIGHT_SWIPE);
+        mSwipeUp     = setupGesturePref(KEY_SPEN_UP,     Settings.System.GESTURES_UP_SWIPE);
+        mSwipeDown   = setupGesturePref(KEY_SPEN_DOWN,   Settings.System.GESTURES_DOWN_SWIPE);
+        mSwipeLong   = setupGesturePref(KEY_SPEN_LONG,   Settings.System.GESTURES_LONG_PRESS);
+        mSwipeDouble = setupGesturePref(KEY_SPEN_DOUBLE, Settings.System.GESTURES_DOUBLE_TAP);
+    }
 
-        mSwipeRight = (ListPreference) findPreference(KEY_SPEN_RIGHT);
-        packageName = Settings.System.getString(mResolver,
-                Settings.System.GESTURES_RIGHT_SWIPE);
-        addApplicationEntries(mSwipeRight, packageName);
-        mSwipeRight.setOnPreferenceChangeListener(this);
-
-        mSwipeUp = (ListPreference) findPreference(KEY_SPEN_UP);
-        packageName = Settings.System.getString(mResolver,
-                Settings.System.GESTURES_UP_SWIPE);
-        addApplicationEntries(mSwipeUp, packageName);
-        mSwipeUp.setOnPreferenceChangeListener(this);
-
-        mSwipeDown = (ListPreference) findPreference(KEY_SPEN_DOWN);
-        packageName = Settings.System.getString(mResolver,
-                Settings.System.GESTURES_DOWN_SWIPE);
-        addApplicationEntries(mSwipeDown, packageName);
-        mSwipeDown.setOnPreferenceChangeListener(this);
-
-        mSwipeLong = (ListPreference) findPreference(KEY_SPEN_LONG);
-        packageName = Settings.System.getString(mResolver,
-                Settings.System.GESTURES_LONG_PRESS);
-        addApplicationEntries(mSwipeLong, packageName);
-        mSwipeLong.setOnPreferenceChangeListener(this);
-
-        mSwipeDouble = (ListPreference) findPreference(KEY_SPEN_DOUBLE);
-        packageName = Settings.System.getString(mResolver,
-                Settings.System.GESTURES_DOUBLE_TAP);
-        addApplicationEntries(mSwipeDouble, packageName);
-        mSwipeDouble.setOnPreferenceChangeListener(this);
+    private ListPreference setupGesturePref(String key, String settingName) {
+        ListPreference pref = (ListPreference) findPreference(key);
+        String setting = Settings.System.getString(mResolver, settingName);
+        addApplicationEntries(pref, setting);
+        pref.setOnPreferenceChangeListener(this);
+        return pref;
     }
 
     @Override
@@ -124,129 +105,116 @@ public class StylusGestures extends SettingsPreferenceFragment implements
                     Settings.System.ENABLE_STYLUS_GESTURES,
                     ((CheckBoxPreference) preference).isChecked() ? 1 : 0);
             return true;
-
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        String packageName = newValue.toString();
+        String settingName = null;
+
         if (preference == mSwipeLeft) {
-            Settings.System.putString(mResolver,
-                    Settings.System.GESTURES_LEFT_SWIPE, packageName);
-            setPrefValue(mSwipeLeft, packageName);
+            settingName = Settings.System.GESTURES_LEFT_SWIPE;
         } else if (preference == mSwipeRight) {
-            Settings.System.putString(mResolver,
-                    Settings.System.GESTURES_RIGHT_SWIPE, packageName);
-            setPrefValue(mSwipeRight, packageName);
+            settingName = Settings.System.GESTURES_RIGHT_SWIPE;
         } else if (preference == mSwipeUp) {
-            Settings.System.putString(mResolver,
-                    Settings.System.GESTURES_UP_SWIPE, packageName);
-            setPrefValue(mSwipeUp, packageName);
+            settingName = Settings.System.GESTURES_UP_SWIPE;
         } else if (preference == mSwipeDown) {
-            Settings.System.putString(mResolver,
-                    Settings.System.GESTURES_DOWN_SWIPE, packageName);
-            setPrefValue(mSwipeDown, packageName);
+            settingName = Settings.System.GESTURES_DOWN_SWIPE;
         } else if (preference == mSwipeLong) {
-            Settings.System.putString(mResolver,
-                    Settings.System.GESTURES_LONG_PRESS, packageName);
-            setPrefValue(mSwipeLong, packageName);
+            settingName = Settings.System.GESTURES_LONG_PRESS;
         } else if (preference == mSwipeDouble) {
-            Settings.System.putString(mResolver,
-                    Settings.System.GESTURES_DOUBLE_TAP, packageName);
-            setPrefValue(mSwipeDouble, packageName);
+            settingName = Settings.System.GESTURES_DOUBLE_TAP;
+        } else {
+            return false;
         }
 
-        return false;
+        String packageName = newValue.toString();
+        Settings.System.putString(mResolver, settingName, packageName);
+        setPrefValue((ListPreference)preference, packageName);
+        return true;
     }
 
     private String mapUpdateValue(String time) {
-        Resources resources = mContext.getResources();
-
-        String[] actionNames = resources
-                .getStringArray(R.array.gestures_entries);
-        String[] actionValues = resources
-                .getStringArray(R.array.gestures_values);
-        for (int i = 0; i < actionValues.length; i++) {
-            if (actionValues[i].equalsIgnoreCase(time)) {
-                return actionNames[i];
+        for (int i = 0; i < mActionValues.length; i++) {
+            if (mActionValues[i].equalsIgnoreCase(time)) {
+                return mActionNames[i];
             }
         }
         return null;
     }
 
     private void setPrefValue(ListPreference pref, String packageName) {
-        if (packageName == null)
+        if (packageName == null) {
             return;
+        }
         String text = mapUpdateValue(packageName);
         if (text != null) {
             pref.setValue(packageName);
             pref.setSummary(text);
         } else {
-            String appName = getAppName(packageName);
+            CharSequence appName = getAppName(packageName);
             if (appName != null) {
                 pref.setValue(packageName);
                 pref.setSummary(appName);
             } else {
-                pref.setSummary(packageName + " not installed");
+                pref.setSummary(mContext.getString(R.string.stylus_app_not_installed,
+                    packageName));
             }
         }
 
     }
 
     private void addApplicationEntries(ListPreference pref, String packageName) {
-        PackageManager pm = this.getPackageManager();
-        Resources resources = mContext.getResources();
-
-        String[] actionNames = resources
-                .getStringArray(R.array.gestures_entries);
-        String[] actionValues = resources
-                .getStringArray(R.array.gestures_values);
-
-        List<String> entryList = new ArrayList<String> (Arrays.asList(actionNames));
-        List<String> entryListValue = new ArrayList<String> (Arrays.asList(actionValues));
-        Map<String, String> prefMap = new TreeMap<String, String>();
+        PackageManager pm = getPackageManager();
 
         Intent intent = new Intent(Intent.ACTION_MAIN, null);
         intent.addCategory(Intent.CATEGORY_LAUNCHER);
         List<ResolveInfo> list = pm.queryIntentActivities(intent,
                 PackageManager.PERMISSION_GRANTED);
 
-        for (ResolveInfo rInfo : list) {
-            String pkgName = rInfo.activityInfo.applicationInfo.packageName;
-            String appName = rInfo.activityInfo.applicationInfo.loadLabel(pm)
-                    .toString();
-            prefMap.put(appName, pkgName);
+        Collections.sort(list, new ResolveInfo.DisplayNameComparator(pm));
+
+        int count = list.size() + mActionValues.length;
+        CharSequence[] entries = new CharSequence[count];
+        CharSequence[] values = new CharSequence[count];
+
+        // Step 1: copy in predefined actions
+        for (int i = 0; i < mActionValues.length; i++) {
+            entries[i] = mActionNames[i];
+            values[i] = mActionValues[i];
         }
-        getSortedListsUsingMap(prefMap, entryListValue, entryList);
-        pref.setEntries((String[]) entryList.toArray(new String[entryList
-                .size()]));
-        pref.setEntryValues((String[]) entryListValue
-                .toArray(new String[entryListValue.size()]));
+
+        // Step 2: copy in resolved activities
+        for (int i = mActionValues.length; i < count; i++) {
+            ResolveInfo info = list.get(i - mActionValues.length);
+            CharSequence label = info.loadLabel(pm);
+            if (label == null) {
+                label = info.activityInfo.name;
+            }
+
+            entries[i] = label;
+            values[i] = info.activityInfo.applicationInfo.packageName;
+        }
+
+        pref.setEntries(entries);
+        pref.setEntryValues(values);
         setPrefValue(pref, packageName);
     }
 
-    private String getAppName(String packageName) {
+    private CharSequence getAppName(String packageName) {
         final PackageManager pm = mContext.getPackageManager();
         ApplicationInfo ai;
+
         try {
             ai = pm.getApplicationInfo(packageName, 0);
         } catch (final NameNotFoundException e) {
             ai = null;
         }
-        String applicationName = (String) (ai != null ? pm
-                .getApplicationLabel(ai) : null);
-        return applicationName;
-    }
 
-    private void getSortedListsUsingMap(Map map, List list1, List list2) {
-        Set<Map.Entry> set = map.entrySet();
-        Iterator<Map.Entry> iterator = set.iterator();
-        while (iterator.hasNext()) {
-            Map.Entry entry = iterator.next();
-            list2.add(entry.getKey().toString());
-            list1.add(entry.getValue().toString());
+        if (ai != null) {
+            return pm.getApplicationLabel(ai);
         }
+        return null;
     }
 }

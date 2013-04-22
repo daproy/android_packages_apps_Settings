@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2007 The Android Open Source Project
-     Copyright (C) 2013 The CyanogenMod Project
-
-     Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
-
-          http://www.apache.org/licenses/LICENSE-2.0
-
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
+<!--
+/*
+**
+** Copyright 2007 The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
 -->
-
-<resources xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Choices for timezone picker first level.
          These values will be used as search terms for TimeZone displayName
          strings. --> <skip />
@@ -75,7 +76,7 @@
         <!-- Do not translate. -->
         <item>1800000</item>
     </string-array>
-
+    
     <!-- Display settings.  The delay in inactivity before the dream is shown. These are shown in a list dialog. -->
     <string-array name="dream_timeout_entries">
         <item>Never</item>
@@ -107,8 +108,8 @@
         <!-- Do not translate. -->
         <item>1800000</item>
     </string-array>
-
-    <!-- Security settings.  The delay after screen is turned off until device locks.
+    
+    <!-- Security settings.  The delay after screen is turned off until device locks. 
          These are shown in a list dialog. -->
     <string-array name="lock_after_timeout_entries">
         <item>Immediately</item>
@@ -143,7 +144,7 @@
         <!-- Do not translate. -->
         <item>1800000</item>
     </string-array>
-
+    
     <string-array name="entries_font_size">
         <item msgid="6490061470416867723">Small</item>
         <item msgid="3579015730662088893">Normal</item>
@@ -157,7 +158,7 @@
         <item>1.15</item>
         <item>1.30</item>
     </string-array>
-
+    
     <!-- TTS settings -->
 
     <!-- Default speech rate choices -->
@@ -185,7 +186,6 @@
         <item>High</item>
         <item>Very high</item>
     </string-array>
-
     <!-- Do not translate. -->
     <string-array name="tts_pitch_values">
         <item>50</item>
@@ -210,6 +210,7 @@
         <item>ita</item>
         <item>spa</item>
     </string-array>
+
 
     <!-- Wi-Fi settings -->
 
@@ -412,34 +413,6 @@
         <item>2</item>
     </string-array>
 
-    <!-- Wi-Fi settings. Presented as a list dialog to the user to choose the Wi-Fi region code. -->
-    <string-array name="wifi_countrycode_entries">
-        <item>United States</item>
-        <item>Canada, Taiwan</item>
-        <item>Germany</item>
-        <item>Europe</item>
-        <item>Japan, Russia</item>
-        <item>Australia</item>
-        <item>China</item>
-        <item>Korea</item>
-        <item>Turkey</item>
-        <item>Singapore</item>
-        <item>Brazil</item>
-    </string-array>
-
-    <string-array name="wifi_countrycode_values" translatable="false">
-        <item>US</item>
-        <item>CA</item>
-        <item>DE</item>
-        <item>GB</item>
-        <item>JP</item>
-        <item>AU</item>
-        <item>CN</item>
-        <item>KR</item>
-        <item>TR</item>
-        <item>SG</item>
-        <item>BR</item>
-    </string-array>
 
     <!-- Display options for UsageStats class -->
     <string-array name="usage_stats_display_order_types">
@@ -579,7 +552,7 @@
     <string-array name="long_press_timeout_selector_titles">
         <!-- A title for the option for short long-press timeout [CHAR LIMIT=25] -->
         <item>Short</item>
-        <!-- A title for the option for medium long-press timeout [CHAR LIMIT=25] -->
+        <!-- A title for the option for medium long-press timeout [CHAR LIMIT=25] -->        
         <item>Medium</item>
         <!-- A title for the option for long long-press timeout [CHAR LIMIT=25] -->
         <item>Long</item>

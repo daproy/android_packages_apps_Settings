@@ -2192,7 +2192,7 @@ public class DataUsageSummary extends Fragment {
     }
 
     /**
-     * Test if device has a mobile data radio with SIM in ready state.
+     * Test if device has a mobile data radio with subscription in ready state.
      */
     public static boolean hasReadyMobileRadio(Context context) {
         if (TEST_RADIOS) {
@@ -2200,10 +2200,9 @@ public class DataUsageSummary extends Fragment {
         }
 
         final ConnectivityManager conn = ConnectivityManager.from(context);
-        final TelephonyManager tele = TelephonyManager.from(context);
 
-        // require both supported network and ready SIM
-        return conn.isNetworkSupported(TYPE_MOBILE) && tele.getSimState() == SIM_STATE_READY;
+        // require both supported network and subscription
+        return conn.isNetworkSupported(TYPE_MOBILE) && hasSubscription(context);
     }
 
     /**
@@ -2267,6 +2266,14 @@ public class DataUsageSummary extends Fragment {
     }
 
     /**
+     * Test if device has either a SIM card or a phone number (for SIM-less CDMA).
+     */
+    private static boolean hasSubscription(Context context) {
+        final TelephonyManager tele = TelephonyManager.from(context);
+        return tele.getSimState() == SIM_STATE_READY || !TextUtils.isEmpty(tele.getLine1Number());
+    }
+
+    /**
      * Inflate a {@link Preference} style layout, adding the given {@link View}
      * widget into {@link android.R.id#widget_frame}.
      */
@@ -2320,8 +2327,7 @@ public class DataUsageSummary extends Fragment {
         // build combined list of all limited networks
         final ArrayList<CharSequence> limited = Lists.newArrayList();
 
-        final TelephonyManager tele = TelephonyManager.from(context);
-        if (tele.getSimState() == SIM_STATE_READY) {
+        if (hasSubscription(context)) {
             final String subscriberId = getActiveSubscriberId(context);
             if (mPolicyEditor.hasLimitedPolicy(buildTemplateMobileAll(subscriberId))) {
                 limited.add(getText(R.string.data_usage_list_mobile));

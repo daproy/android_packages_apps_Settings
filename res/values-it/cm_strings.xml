@@ -387,8 +387,8 @@
     <string name="navigation_bar_reset_toast">Barra di navigazione ripristinata</string>
     <string name="navigation_bar_menu_editable">Modificabile</string>
     <string name="navigation_bar_menu_locked">Bloccata</string>
-    <string name="power_widget_title">Power widget</string>
-    <string name="title_expanded_widget">Power widget</string>
+    <string name="power_widget_title">Widget alimentazione</string>
+    <string name="title_expanded_widget">Widget alimentazione</string>
     <string name="power_widget_behavior">Comportamento widget</string>
     <string name="title_expanded_hide_onchange">Nascondi dopo modifica</string>
     <string name="title_expanded_hide_indicator">Nascondi indicatori</string>
@@ -581,14 +581,11 @@
     <string name="cyanogenmod_waiver_body">Cambiare questa impostazione può essere contro le leggi del tuo stato/governo.\n\nPremendo \'OK\' più sotto, accetti quanto riportato in questo avviso, e dichiari di esonerare e sollevare CyanogenMod e i suoi collaboratori da ogni responsabilità civile e penale.</string>
     <string name="light_sensor_current_value">Valore attuale sensore luminosità: <xliff:g id="light_level">%d</xliff:g> lux</string>
     <string name="auto_brightness_dialog_title">Livelli automatici di luminosità</string>
-    <string name="auto_brightness_level_format"><xliff:g id="start_level">%1$s</xliff:g> -\n<xliff:g id="end_level">%2$s</xliff:g> lux</string>
-    <string name="auto_brightness_brightness_format"><xliff:g id="percent">%s</xliff:g>%%</string>
+    <string name="auto_brightness_level_format"><xliff:g id="level">%1$d</xliff:g> lux</string>
+    <string name="auto_brightness_last_level_format"><xliff:g id="level">%1$d</xliff:g> -\n\u221e lux</string>
     <string name="auto_brightness_adjust_button">Regola</string>
     <string name="auto_brightness_reset_button">Ripristina</string>
-    <string name="auto_brightness_lux_dialog_title">Luminosità ambiente</string>
     <string name="auto_brightness_split_dialog_title">Soglia di luminosità</string>
-    <string name="auto_brightness_start_lux">Inizio intervallo (lux)</string>
-    <string name="auto_brightness_end_lux">Fine intervallo (lux)</string>
     <string name="auto_brightness_reset_dialog_title">Ripristina livelli?</string>
     <string name="auto_brightness_reset_confirmation">Tutti i livelli di luminosità saranno ripristinati ai rispettivi valori di default.</string>
     <string name="auto_brightness_split_lux_format">Soglia (tra <xliff:g id="min">%1$d</xliff:g> e <xliff:g id="max">%2$d</xliff:g> lux)</string>
@@ -619,9 +616,12 @@
     <string name="wifi_mode">Modalità</string>
     <string name="wifi_mode_ibss">Rete Ad-Hoc (IBSS)</string>
     <string name="wifi_mode_ibss_short">Ad-Hoc</string>
+    <string name="wifi_ibss_freq_title">Canale / Frequenza</string>
+    <string name="wifi_channel">Canale</string>
+    <string name="wifi_mhz">MHz</string>
     <string name="pie_control_title">Controlli a disco</string>
-    <string name="pie_control_enabled">Attiva quando il Desktop esteso è attivo</string>
-    <string name="pie_control_disabled">Disattivato</string>
+    <string name="pie_control_enabled">\"Pie controls\": attivati quando il Desktop esteso è attivo</string>
+    <string name="pie_control_disabled">\"Pie controls\": disattivati</string>
     <string name="pie_control_size">Dimensione tasti</string>
     <string name="pie_control_trigger_positions">Bordi di attivazione</string>
     <string name="pie_control_trigger_left">Bordo sinistro dello schermo</string>
@@ -629,4 +629,29 @@
     <string name="pie_control_trigger_right">Bordo destro dello schermo</string>
     <string name="pie_control_trigger_top">Bordo superiore dello schermo</string>
     <string name="pie_control_trigger_top_summary">Verranno mostrati solo i tasti per la navigazione</string>
+    <string name="gestures_settings_title">Gesti con lo stilo</string>
+    <string name="category_spen_title">Gesti con lo stilo</string>
+    <string name="enable_subcat_title">Stilo</string>
+    <string name="enable_spen_title_head">Abilita i gesti con lo stilo</string>
+    <string name="enable_spen_summary_head">Associa azioni personalizzate allo scorrimento dello stilo (con pulsante premuto). Attenzione: le applicazioni non riceveranno input dalla pressione dello stilo</string>
+    <string name="gestures_subcat_title">Gesti</string>
+    <string name="gestures_left_spen_title_head">Scorrimento a sinistra</string>
+    <string name="gestures_left_spen_summary_head">Lancia azione personalizzata su scorrimento a sinistra</string>
+    <string name="gestures_right_spen_title_head">Scorrimento a destra</string>
+    <string name="gestures_right_spen_summary_head">Lancia azione personalizzata su scorrimento a destra</string>
+    <string name="gestures_up_spen_title_head">Scorrimento in alto</string>
+    <string name="gestures_up_spen_summary_head">Lancia azione personalizzata su scorrimento in alto</string>
+    <string name="gestures_down_spen_title_head">Scorrimento in basso</string>
+    <string name="gestures_down_spen_summary_head">Lancia azione personalizzata su scorrimento in basso</string>
+    <string name="gestures_long_spen_title_head">Pressione prolungata</string>
+    <string name="gestures_long_spen_summary_head">Lancia azione personalizzata su pressione prolungata</string>
+    <string name="gestures_double_spen_title_head">Doppio tocco</string>
+    <string name="gestures_double_spen_summary_head">Lancia azione personalizzata su doppio tocco</string>
+    <string name="gestures_action_empty">Nessuna azione</string>
+    <string name="gestures_action_home">Emula il tasto Home</string>
+    <string name="gestures_action_back">Emula il tasto Indietro</string>
+    <string name="gestures_action_menu">Emula il tasto Menu</string>
+    <string name="gestures_action_search">Ricerca</string>
+    <string name="gestures_action_recent">Applicazioni recenti</string>
+    <string name="stylus_app_not_installed">%s non è installata</string>
 </resources>
