@@ -744,7 +744,7 @@ public class Navbar extends SettingsPreferenceFragment implements
         if(mNavBarAlpha != null) {
             final float defaultNavAlpha = Settings.System.getFloat(getActivity()
                     .getContentResolver(), Settings.System.NAVIGATION_BAR_ALPHA,
-                    0.8f);
+                    1.0f);
             mNavBarAlpha.setInitValue(Math.round(defaultNavAlpha * 100));
         }
         refreshSettings();
