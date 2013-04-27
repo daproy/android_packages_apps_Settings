@@ -78,6 +78,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final CharSequence PREF_POWER_CRT_SCREEN_OFF = "system_power_crt_screen_off";
     private static final String KEY_WAKEUP_WHEN_PLUGGED_UNPLUGGED = "wakeup_when_plugged_unplugged";
     private static final String KEY_RECENTS_RAM_BAR = "recents_ram_bar";
+    private static final String PREF_HIDE_EXTRAS = "hide_extras";        
 
     // Strings used for building the summary
     private static final String ROTATION_ANGLE_0 = "0";
@@ -95,6 +96,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private ListPreference mCrtMode;
     private CheckBoxPreference mCrtOff;
     private CheckBoxPreference mUseAltResolver;
+    CheckBoxPreference mHideExtras;
     private Preference mCustomLabel;
     private ListPreference mNotificationsBehavior;
     private CheckBoxPreference mWakeUpWhenPluggedOrUnplugged;
@@ -186,11 +188,14 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         mUseAltResolver.setChecked(Settings.System.getBoolean(getContentResolver(),
                 Settings.System.ACTIVITY_RESOLVER_USE_ALT, false));
 
+        mHideExtras = (CheckBoxPreference) findPreference(PREF_HIDE_EXTRAS);
+        mHideExtras.setChecked(Settings.System.getBoolean(getContentResolver(), Settings.System.HIDE_EXTRAS_SYSTEM_BAR, false));
+
         mCustomLabel = findPreference(PREF_CUSTOM_CARRIER_LABEL);
         updateCustomLabelTextSummary();
 
 
-	// use this to enable/disable crt on feature // thanks Slim
+	    // use this to enable/disable crt on feature // thanks Slim
         boolean isCrtOffChecked = (Settings.System.getBoolean(mContentResolver,
                         Settings.System.SYSTEM_POWER_ENABLE_CRT_OFF, true));
         mCrtOff = (CheckBoxPreference) findPreference(PREF_POWER_CRT_SCREEN_OFF);
@@ -203,13 +208,13 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                 Settings.System.SYSTEM_POWER_CRT_MODE, crtMode)));
         mCrtMode.setOnPreferenceChangeListener(this);
 
-	int CurrentBehavior = Settings.System.getInt(getContentResolver(), Settings.System.NOTIFICATIONS_BEHAVIOUR, 0);
+	    int CurrentBehavior = Settings.System.getInt(getContentResolver(), Settings.System.NOTIFICATIONS_BEHAVIOUR, 0);
         mNotificationsBehavior = (ListPreference) findPreference(KEY_NOTIFICATION_BEHAVIOUR);
         mNotificationsBehavior.setValue(String.valueOf(CurrentBehavior));
         mNotificationsBehavior.setSummary(mNotificationsBehavior.getEntry());
         mNotificationsBehavior.setOnPreferenceChangeListener(this);
 
-	mWakeUpWhenPluggedOrUnplugged = (CheckBoxPreference) findPreference(KEY_WAKEUP_WHEN_PLUGGED_UNPLUGGED);
+	    mWakeUpWhenPluggedOrUnplugged = (CheckBoxPreference) findPreference(KEY_WAKEUP_WHEN_PLUGGED_UNPLUGGED);
         mWakeUpWhenPluggedOrUnplugged.setChecked(Settings.System.getInt(getActivity().getContentResolver(),
                         Settings.System.WAKEUP_WHEN_PLUGGED_UNPLUGGED, 1) == 1);
 	
@@ -472,7 +477,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             Settings.System.putInt(getContentResolver(), Settings.System.VOLUME_WAKE_SCREEN,
                     mVolumeWake.isChecked() ? 1 : 0);
             return true;
-	} else if (preference == mWakeUpWhenPluggedOrUnplugged) {
+	    } else if (preference == mWakeUpWhenPluggedOrUnplugged) {
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.WAKEUP_WHEN_PLUGGED_UNPLUGGED,
                     mWakeUpWhenPluggedOrUnplugged.isChecked() ? 1 : 0);
@@ -485,11 +490,16 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                     Settings.System.ACTIVITY_RESOLVER_USE_ALT,
                     ((CheckBoxPreference) preference).isChecked());
             return true;
-	} else if (preference == mCrtOff) {
+	    } else if (preference == mCrtOff) {
             Settings.System.putBoolean(mContentResolver,
                     Settings.System.SYSTEM_POWER_ENABLE_CRT_OFF,
                     ((TwoStatePreference) preference).isChecked());
-	    return true;
+	        return true;
+        } else if (preference == mHideExtras) {
+            Settings.System.putBoolean(getActivity().getContentResolver(),
+                    Settings.System.HIDE_EXTRAS_SYSTEM_BAR,
+                    ((CheckBoxPreference) preference).isChecked());
+            return true;
         } else if (preference == mCustomLabel) {
             AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
             alert.setTitle(R.string.custom_carrier_label_title);
@@ -536,16 +546,14 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             }
         } if (KEY_FONT_SIZE.equals(key)) {
             writeFontSizePreference(objValue);
-	}
-	if (preference == mCrtMode) {
+	    } if (preference == mCrtMode) {
             int crtMode = Integer.valueOf((String) objValue);
             int index = mCrtMode.findIndexOfValue((String) objValue);
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.SYSTEM_POWER_CRT_MODE, crtMode);
             mCrtMode.setSummary(mCrtMode.getEntries()[index]);
             return true;
-	}
-	if (preference == mNotificationsBehavior) {
+	    } if (preference == mNotificationsBehavior) {
             String val = (String) objValue;
                      Settings.System.putInt(getContentResolver(), Settings.System.NOTIFICATIONS_BEHAVIOUR,
             Integer.valueOf(val));
@@ -553,7 +561,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             mNotificationsBehavior.setSummary(mNotificationsBehavior.getEntries()[index]);
             return true;
         }    
-	return true;
+	    return true;
               		
     }
 
@@ -576,7 +584,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                 return true;
             } else {
               mFontSizePref.click();
-	    }
+	        }
 	    
         }
         return false;

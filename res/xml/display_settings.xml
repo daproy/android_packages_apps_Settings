@@ -84,12 +84,18 @@
              android:title="@string/alt_resolver_title"
              android:summary="@string/alt_resolver_summary"
              android:defaultValue="false" />
+    
+       <CheckBoxPreference
+             android:key="hide_extras"
+             android:title= "@string/hide_extras"
+             android:summary= "@string/hide_extras_summary"
+             android:defaultValue="false" />
 
         <PreferenceScreen
             android:key="custom_carrier_label"
             android:title="@string/custom_carrier_label_title" />
 
-	<CheckBoxPreference
+	    <CheckBoxPreference
             android:key="system_power_crt_screen_off"
             android:summary="@string/system_power_crt_screen_off_summary"
             android:title="@string/system_power_crt_screen_off_title" />
@@ -108,7 +114,7 @@
             android:entries="@array/notifs_beh_entries"
             android:entryValues="@array/notifs_beh_values" />
 
-	<CheckBoxPreference
+	   <CheckBoxPreference
             android:key="wakeup_when_plugged_unplugged"
             android:title="@string/wakeup_when_plugged_unplugged_title"
             android:summary="@string/wakeup_when_plugged_unplugged_summary"
