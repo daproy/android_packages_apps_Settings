@@ -5001,8 +5001,8 @@
     <string name="force_dualpanel_summary">This will enable/disable dual panel in settings"</string>
 
     <!-- Alternate default app picker -->
-    <string name="alt_resolver_title">Use Alt Default App Picker</string>
-    <string name="alt_resolver_summary">Use Alternate Default App Picker</string>
+    <string name="alt_resolver_title">Use alt default app picker</string>
+    <string name="alt_resolver_summary">Use alternate default app picker</string>
 
      <!-- Custom Carrier Text -->
     <string name="custom_carrier_label_title">Custom carrier label</string>
@@ -5023,10 +5023,10 @@
     <string name="notification_background_default_wallpaper">Default background</string>
     <string name="notification_drawer_custom_background_dialog_title">Choose color</string>
     <string name="notif_wallpaper_alpha_title">Notification background transparency</string>
-    <string name="notif_alpha_title">Notification Rows transparency</string>
+    <string name="notif_alpha_title">Notification rows transparency</string>
 
     <!-- CRT Off Mode -->
-    <string name="system_power_crt_screen_off_title">CRT Screen Off</string>
+    <string name="system_power_crt_screen_off_title">CRT screen off</string>
     <string name="system_power_crt_screen_off_summary">Screen will animate an Electron Beam when turned off</string>
     <string name="system_power_crt_mode_title">CRT animation mode</string>
     <string name="system_power_crt_mode_dialog_title">Show CRT animation</string>
@@ -5257,7 +5257,7 @@
 
     <!-- Pie controls -->
     <string name="pie_control_title">Pie controls</string>
-    <string name="pie_control_enabled">Floating controls when Expanded desktop is enabled</string>
+    <string name="pie_control_enabled">Floating controls when Expanded Desktop is enabled</string>
     <string name="pie_control_disabled">Floating controls disabled</string>
     <string name="pie_control_size">Navigation key size</string>
     <string name="pie_control_trigger_positions">Trigger positions</string>
@@ -5363,8 +5363,6 @@
     <string name="widget_remove_widget">Remove %s widget from list?</string>
     <string name="widget_add_title">Choose an application</string>
 
-    <string name="navbar_height_title">NavigationBar height</string>
-    <string name="navbar_height_summary">Specify the navigationBar height</string>
 
     <string name="alert_reboot">Reboot needed</string>
     <string name="alert_reboot_message">This change needs a reboot to be applied. Do you want to reboot now?</string>
@@ -5385,6 +5383,8 @@
     <!-- Navigation Bar -->
     <string name="title_navbar">NavBar modifier</string>
     <string name="header_summary_navbar">Setup NavBar</string>
+    <string name="navbar_height_title">Navigation bar height</string>
+    <string name="navbar_height_summary">Specify the navigation bar height</string>
     <string name="navigation_bar">Navigation bar</string>
     <string name="navbar_button_cat">Navigation bar buttons</string>
     <string name="title_pref_menu_display">Menu location</string>
@@ -5412,7 +5412,7 @@
     <string name="navbar_action_power">Power</string>
     <string name="navbar_action_notifications">Notifications</string>
     <string name="navbar_action_none">Empty</string>
-    <string name="navbar_widgets">Navigation Bar Widgets</string>
+    <string name="navbar_widgets">Navigation bar widgets</string>
     <string name="navigation_bar_color_title">Navigation bar color</string>
     <string name="navigation_bar_tint_title">Navigation bar button color</string>
     <string name="navigation_bar_glow_tint_title">Navigation bar glow color</string>
@@ -5532,7 +5532,7 @@
     <!-- Menu Strings -->
     <string name="menu_nav_bar_reset">Reset nav bar</string>
     <string name="custom_app_icon_successfully">"'s icon set successfully!"</string>
-    <string name="title_navring">Navigation Ring</string>
+    <string name="title_navring">Navigation ring</string>
 
     <!-- Shortcut picker -->
     <string name="use_custom_app_title">Use custom application</string>
@@ -5572,7 +5572,7 @@
     <string name="auto_hide_statusbar_summary">Statusbar hides itself when there are no notifications</string>
 
     <!-- TabUI Extras Hide -->
-    <string name="hide_extras">Hide Extras</string>
-    <string name="hide_extras_summary">Hide some systembar stuff i.e. the compat mode button(requires UI restart)</string>
+    <string name="hide_extras">Hide extras</string>
+    <string name="hide_extras_summary">Hides extra buttons in tabUI (requires UI restart)</string>
     
 </resources>

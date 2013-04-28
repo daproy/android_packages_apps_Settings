@@ -3,10 +3,6 @@
     android:title="@string/header_summary_navbar"
 	xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-        <Preference
-            android:key="navbar_height"
-            android:title="@string/navbar_height_title"
-            android:summary="@string/navbar_height_summary" />
 
         <ListPreference
                 android:entries="@array/pref_navigation_menu_entries"
@@ -21,6 +17,12 @@
                 android:key="navbar_menu_display"
                 android:title="@string/title_pref_navigation_menu_display"
                 android:summary="@string/summary_pref_navigation_menu_display" />
+    
+    
+        <Preference
+                android:key="navbar_height"
+                android:title="@string/navbar_height_title"
+                android:summary="@string/navbar_height_summary" />
 
         <ListPreference
                 android:entries="@array/navigation_bar_qty_entries"
