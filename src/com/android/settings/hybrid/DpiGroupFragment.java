@@ -72,39 +72,42 @@ public class DpiGroupFragment extends SettingsPreferenceFragment {
             pref.setIcon(bAppInfo.icon);
             pref.setLayoutResource(R.layout.simple_preference);
 
-            pref.setOnPreferenceClickListener(new OnPreferenceClickListener() {
+            if (!"android".equals(bAppInfo.pack) && !"com.android.systemui".equals(bAppInfo.pack)) {
 
-                public boolean onPreferenceClick(final Preference preference) {
-                    AlertDialog.Builder alert = new AlertDialog.Builder(mContext);
-                    alert.setTitle(R.string.dpi_groups_alert_remove_app);
+                pref.setOnPreferenceClickListener(new OnPreferenceClickListener() {
+    
+                    public boolean onPreferenceClick(final Preference preference) {
+                        AlertDialog.Builder alert = new AlertDialog.Builder(mContext);
+                        alert.setTitle(R.string.dpi_groups_alert_remove_app);
+    
+                        String title = (String) preference.getTitle();
+    
+                        String summary = mContext.getResources().getString(R.string.dpi_groups_remove_app,
+                                new Object[] { title });
+    
+                        alert.setMessage(summary);
 
-                    String title = (String) preference.getTitle();
-
-                    String summary = mContext.getResources().getString(R.string.dpi_groups_remove_app,
-                            new Object[] { title });
-
-                    alert.setMessage(summary);
-
-                    alert.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
-
-                        public void onClick(DialogInterface dialog, int whichButton) {
-                            dialog.dismiss();
-                            Applications.removeApplication(mContext, preference.getKey());
-                            updateList();
-                        }
-                    });
-                    alert.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
-
-                        public void onClick(DialogInterface dialog, int whichButton) {
-                            dialog.dismiss();
-                        }
-                    });
-
-                    alert.show();
-
-                    return false;
-                }
-            });
+                        alert.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+    
+                            public void onClick(DialogInterface dialog, int whichButton) {
+                                dialog.dismiss();
+                                Applications.removeApplication(mContext, preference.getKey());
+                                updateList();
+                            }
+                        });
+                        alert.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+    
+                            public void onClick(DialogInterface dialog, int whichButton) {
+                                dialog.dismiss();
+                            }
+                        });
+    
+                        alert.show();
+    
+                        return false;
+                    }
+                });
+            }
             mAppList.addPreference(pref);
         }
     }
