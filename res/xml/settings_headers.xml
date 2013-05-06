@@ -234,14 +234,14 @@
         android:icon="@drawable/ic_action_permission"
         android:title="@string/superuser" />
 
-    <!-- GooUpdater -->
-    <header android:id="@+id/gooupdater"
-            android:title="@string/goo_updater"
+    <!-- OTAPlatform -->
+    <header android:id="@+id/otaplatform"
+            android:title="@string/ota_platform"
             android:icon="@drawable/ic_settings_backup" >
         <intent
                 android:action="android.intent.action.MAIN"
-                android:targetPackage="com.beerbong.gooupdater"
-                android:targetClass="com.beerbong.gooupdater.MainActivity" />
+                android:targetPackage="com.beerbong.otaplatform"
+                android:targetClass="com.beerbong.otaplatform.MainActivity" />
     </header>
 
     <!-- Date & Time -->
