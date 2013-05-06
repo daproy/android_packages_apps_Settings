@@ -73,7 +73,7 @@
     <string name="notification_convert_sound_to_vibration_title">Δόνηση κατά την ειδοποίηση</string>
     <string name="notification_convert_sound_to_vibration_summary">Στη λειτουργία δόνησης, όλες οι ειδοποιήσεις θα προκαλούν δόνηση, ανεξάρτητα από τη ρύθμιση της κάθε εφαρμογής</string>
     <string name="device_hostname">Hostname συσκευής</string>
-    <string name="mod_version">Έκδοση CyanogenMod</string>
+    <string name="mod_version">Έκδοση JellyBeer</string>
     <string name="mod_version_default">Άγνωστη</string>
     <string name="build_date">Ημερομηνία έκδοσης</string>
     <string name="build_date_default">2013-01-01-0000</string>

@@ -61,7 +61,7 @@
     <string name="start_time_title">Begin</string>
     <string name="end_time_title">Einde</string>
     <string name="device_hostname">Hostnaam apparaat</string>
-    <string name="mod_version">CyanogenMod-versie</string>
+    <string name="mod_version">JellyBeer-versie</string>
     <string name="mod_version_default">Onbekend</string>
     <string name="build_date">Build-datum</string>
     <string name="build_date_default">2012-01-01-0000</string>

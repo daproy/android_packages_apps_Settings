@@ -63,7 +63,7 @@
     <string name="notification_convert_sound_to_vibration_title">Rezgés értesítéskor</string>
     <string name="notification_convert_sound_to_vibration_summary">Rezgő módban az értesítések az egyes alkalmazások beállításaitól függetlenül mindig rezegni fognak</string>
     <string name="device_hostname">Eszköz elérési neve</string>
-    <string name="mod_version">CyanogenMod verzió</string>
+    <string name="mod_version">JellyBeer verzió</string>
     <string name="mod_version_default">Ismeretlen</string>
     <string name="build_date">Build dátuma</string>
     <string name="build_date_default">2012-01-01-0000</string>

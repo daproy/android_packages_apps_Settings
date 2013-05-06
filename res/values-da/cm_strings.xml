@@ -73,7 +73,7 @@
     <string name="notification_convert_sound_to_vibration_title">Vibrér ved meddelelse</string>
     <string name="notification_convert_sound_to_vibration_summary">I vibreringstilstand vil alle meddelelser vibrere, uanset individuelle app-indstillinger.</string>
     <string name="device_hostname">Enhedens værtsnavn</string>
-    <string name="mod_version">CyanogenMod-version</string>
+    <string name="mod_version">JellyBeer-version</string>
     <string name="mod_version_default">Ukendt</string>
     <string name="build_date">Kørselsdato</string>
     <string name="build_date_default">2012-01-01-0000</string>
