@@ -89,15 +89,8 @@ public class Applications {
     }
 
     public static void addSystemLayout(Context mContext, String layout) {
-        if ("1000".equals(layout)) {
-            setProperty(mContext, "com.android.systemui", "com.android.systemui.navbar.dpi", "100", 
-                    false);
-            setProperties(mContext, "com.android.systemui", new String[] { "android.layout",
-                    "com.android.systemui.layout" }, layout, true);
-        } else {
-            setProperties(mContext, "com.android.systemui", new String[] { "android.layout",
-                    "com.android.systemui.layout" }, layout, true);
-        }
+        setProperties(mContext, "com.android.systemui", new String[] { "android.layout",
+                "com.android.systemui.layout" }, layout, true);
     }
 
     public static void addAppsLayout(Context mContext, String layout) {
