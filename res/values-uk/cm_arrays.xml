@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2012-2013 The CyanogenMod Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string-array name="volume_overlay_entries">
+        <item>Одиночна</item>
+        <item>Розширювана</item>
+        <item>Розширена</item>
+        <item>Не показувати</item>
+    </string-array>
+    <string-array name="pref_zram_size_entries">
+        <item>Викл.</item>
+        <item>10%</item>
+        <item>18% (типово)</item>
+        <item>26%</item>
+    </string-array>
+    <string-array name="profile_entries">
+        <item>Вкл.</item>
+        <item>Викл.</item>
+        <item>Не визначено</item>
+    </string-array>
+    <string-array name="profile_connection_entries">
+        <item>Викл.</item>
+        <item>Вкл.</item>
+    </string-array>
+    <string-array name="entries_network_widget">
+        <item>2G | 3G+2G</item>
+        <item>Тільки 2G/3G</item>
+        <item>2G | Тільки 3G | 3G+2G</item>
+    </string-array>
+    <string-array name="entries_screentimeout_widget">
+        <item>15 сек. | 1 хв. | 5 хв.</item>
+        <item>30 сек. | 2 хв. | 5 хв.</item>
+    </string-array>
+    <string-array name="entries_flash_widget">
+        <item>Звичайний</item>
+        <item>Повна яскравість</item>
+    </string-array>
+    <string-array name="haptic_feedback_entries">
+        <item>Налаштування системи</item>
+        <item>Вкл.</item>
+        <item>Викл.</item>
+    </string-array>
+    <string-array name="entries_status_bar_am_pm">
+        <item>Нормальный</item>
+        <item>Маленький</item>
+        <item>Немає (типово)</item>
+    </string-array>
+    <string-array name="wifi_countrycode_entries">
+        <item>США</item>
+        <item>Канада, Тайвань</item>
+        <item>Німеччина</item>
+        <item>Європа</item>
+        <item>Японія, Росія</item>
+        <item>Австралія</item>
+        <item>Китай</item>
+        <item>Корея</item>
+        <item>Турція</item>
+        <item>Сингапур</item>
+        <item>Бразилія</item>
+    </string-array>
+</resources>

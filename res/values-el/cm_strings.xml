@@ -17,10 +17,6 @@
     <string name="bluetooth_mas_request">Αίτημα πρόσβασης μηνυμάτων</string>
     <string name="bluetooth_mas_acceptance_dialog_text">Η συσκευή %1$s ζητά πρόσβαση στα μηνύματά σας. Να επιτραπεί η πρόσβαση στο %2$s;</string>
     <string name="bluetooth_mas_remember_choice">Να μην ερωτηθώ ξανά</string>
-    <string name="lock_pattern_size_3">3x3</string>
-    <string name="lock_pattern_size_4">4x4</string>
-    <string name="lock_pattern_size_5">5x5</string>
-    <string name="lock_pattern_size_6">6x6</string>
     <string name="wifi_mode">Τύπος</string>
     <string name="wifi_mode_ibss">Δίκτυο Ad-Hoc (IBSS)</string>
     <string name="wifi_mode_ibss_short">Ad-Hoc</string>
@@ -76,7 +72,6 @@
     <string name="mod_version">Έκδοση JellyBeer</string>
     <string name="mod_version_default">Άγνωστη</string>
     <string name="build_date">Ημερομηνία έκδοσης</string>
-    <string name="build_date_default">2013-01-01-0000</string>
     <string name="cpu_info">CPU</string>
     <string name="mem_info">Μνήμη</string>
     <string name="anonymous_statistics_title">Στατιστικά CyanogenMod</string>
@@ -89,7 +84,6 @@
         των δεδομένων που αποστέλλονται, πατήστε στην Προεπισκόπηση δεδομένων.</string>
     <string name="enable_reporting_title">Ενεργοποίηση αναφοράς</string>
     <string name="preview_data_title">Προεπισκόπηση δεδομένων</string>
-    <string name="preview_data_summary">%s</string>
     <string name="view_stats_title">Εμφάνιση στατιστικών</string>
     <string name="anonymous_learn_more">Μάθετε περισσότερα</string>
     <string name="anonymous_notification_desc">Ενεργοποίηση ή απενεργοποίηση των στατιστικών του CyanogenMod</string>
@@ -164,7 +158,6 @@
     <string name="choose_soundtone">Ήχος ειδοποίησης</string>
     <string name="choose_ringtone">Ήχος κλήσης</string>
     <string name="soundtone_title">Ήχος ειδοποίησης</string>
-    <string name="soundtone_summary">""</string>
     <string name="profile_appgroups_title">Γκρουπ εφαρμογών</string>
     <string name="profile_applist_title">Εφαρμογές</string>
     <string name="profile_new_appgroup">Νέο γκρουπ εφαρμογών</string>
@@ -234,17 +227,13 @@
     <string name="processor_summary">Αλλαγή governor και συχνότητας CPU</string>
     <string name="cpu_cur_freq_title">Τρέχουσα συχνότητα CPU</string>
     <string name="cpu_governors_title">CPU governor</string>
-    <string name="cpu_governors_summary">%S</string>
     <string name="cpu_min_freq_title">Ελάχιστη συχνότητα CPU</string>
-    <string name="cpu_min_freq_summary">%s</string>
     <string name="cpu_max_freq_title">Μέγιστη συχνότητα CPU</string>
-    <string name="cpu_max_freq_summary">%s</string>
     <string name="cpu_set_on_boot">Εφαρμογή κατά την εκκίνηση</string>
     <string name="cpu_set_on_boot_summary">Επαναφορά ρυθμίσεων επεξεργαστή κατά την εκκίνηση</string>
     <string name="io_scheds_title">I/O scheduler</string>
     <string name="io_scheds_summary">Αλλαγή I/O scheduler</string>
     <string name="io_sched_title">I/O scheduler</string>
-    <string name="io_sched_summary">%S</string>
     <string name="io_sched_set_on_boot">Εφαρμογή κατά την εκκίνηση</string>
     <string name="io_sched_set_on_boot_summary">Επαναφορά ρυθμίσεων I/O scheduler κατά την εκκίνηση</string>
     <string name="memory_management_title">Διαχείριση μνήμης</string>
@@ -334,7 +323,7 @@
     <string name="notification_light_voicemail_title">Μήνυμα τηλεφωνητή</string>
     <string name="edit_light_settings">Επεξεργασία φωτεινού παλμού</string>
     <string name="pulse_speed_title">Ταχύτητα και μήκος παλμού</string>
-    <string name="picker_arrow">→</string>
+    <string name="picker_arrow">\u2192</string>
     <string name="default_time">Κανονικό</string>
     <string name="custom_time">Προσαρμοσμένο</string>
     <string name="dialog_test">Δοκιμή</string>
@@ -592,7 +581,7 @@
     <string name="cyanogenmod_waiver_body">Η αλλαγή αυτής της ρύθμισης μπορεί να είναι ενάντια στη νομοθεσία της πολιτείας ή της κυβέρνησης σας.\n\nΕπιλέγοντας \'OK\' παρακάτω, αποδέχεστε αυτή την προειδοποίηση και απαλλάσετε το CyanogenMod και τους συνεργάτες του από όλες τις νομικές ευθύνες και υποχρεώσεις.</string>
     <string name="light_sensor_current_value">Τρέχουσα τιμή του αισθητήρα φωτός: <xliff:g id="light_level">%d</xliff:g> lux</string>
     <string name="auto_brightness_dialog_title">Επίπεδα αυτόματης φωτεινότητας</string>
-    <string name="auto_brightness_level_format"><xliff:g id="start_level">%1$s</xliff:g> -\n<xliff:g id="end_level">%2$s</xliff:g> lux</string>
+    <string name="auto_brightness_level_format"><xliff:g id="level">%1$d</xliff:g> lux</string>
     <string name="auto_brightness_last_level_format"><xliff:g id="level">%1$d</xliff:g> -\n\u221e lux</string>
     <string name="auto_brightness_adjust_button">Ρύθμιση</string>
     <string name="auto_brightness_close_button">Κλείσιμο</string>
@@ -605,7 +594,7 @@
     <string name="auto_brightness_reset_confirmation">Θα γίνει επαναφορά όλων των επιπέδων φωτεινότητας στις προεπιλεγμένες ρυθμίσεις τους.</string>
     <string name="auto_brightness_split_lux_format">Θέση διαχωρισμού (μεταξύ <xliff:g id="min">%1$d</xliff:g> και <xliff:g id="max">%2$d</xliff:g> lux)</string>
     <string name="auto_brightness_level_options">Επιλογές επιπέδων φωτός</string>
-    <string name="auto_brightness_menu_edit_lux">Εύρος φωτεινότητας περιβάλλοντος</string>
+    <string name="auto_brightness_menu_edit">Επεξεργασία</string>
     <string name="auto_brightness_menu_split">Διαχωρισμός</string>
     <string name="auto_brightness_menu_remove">Αφαίρεση</string>
     <string name="auto_brightness_preview">Προεπισκόπιση</string>

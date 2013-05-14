@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--  Copyright (C) 2013 The CyanogenMod Project
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2012-2013 The CyanogenMod Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -12,60 +12,59 @@
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
- -->
-
+-->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string-array name="volume_overlay_entries">
-    <item>Singolo</item>
-    <item>Estendibile</item>
-    <item>Esteso</item>
-    <item>Nascosto</item>
-  </string-array>
-  <string-array name="pref_zram_size_entries">
-    <item>Disattivato</item>
-    <item>10%</item>
-    <item>18% (predefinito)</item>
-    <item>26%</item>
-  </string-array>
-  <string-array name="profile_entries">
-    <item>Attivato</item>
-    <item>Disattivato</item>
-    <item>Non sovrascrivere</item>
-  </string-array>
-  <string-array name="profile_connection_entries">
-    <item>Disattivato</item>
-    <item>Attivato</item>
-  </string-array>
-  <string-array name="entries_network_widget">
-    <item>2G/3G+2G</item>
-    <item>2G/Solo 3G</item>
-    <item>2G/Solo 3G/3G+2G</item>
-  </string-array>
-  <string-array name="entries_flash_widget">
-    <item>Normale</item>
-    <item>Elevato</item>
-  </string-array>
-  <string-array name="haptic_feedback_entries">
-    <item>Usa impostazione predefinita</item>
-    <item>Attivato</item>
-    <item>Disattivato</item>
-  </string-array>
-  <string-array name="entries_status_bar_am_pm">
-    <item>Normale</item>
-    <item>Piccolo</item>
-    <item>Nessuno (predefinito)</item>
-  </string-array>
-  <string-array name="wifi_countrycode_entries">
-    <item>Stati Uniti</item>
-    <item>Canada, Taiwan</item>
-    <item>Germania</item>
-    <item>Europa</item>
-    <item>Giappone, Russia</item>
-    <item>Australia</item>
-    <item>Cina</item>
-    <item>Corea</item>
-    <item>Turchia</item>
-    <item>Singapore</item>
-    <item>Brasile</item>
-  </string-array>
+    <string-array name="volume_overlay_entries">
+        <item>Singolo</item>
+        <item>Estendibile</item>
+        <item>Esteso</item>
+        <item>Nascosto</item>
+    </string-array>
+    <string-array name="pref_zram_size_entries">
+        <item>Disattivato</item>
+        <item>10%</item>
+        <item>18% (predefinito)</item>
+        <item>26%</item>
+    </string-array>
+    <string-array name="profile_entries">
+        <item>Attivato</item>
+        <item>Disattivato</item>
+        <item>Non sovrascrivere</item>
+    </string-array>
+    <string-array name="profile_connection_entries">
+        <item>Disattivato</item>
+        <item>Attivato</item>
+    </string-array>
+    <string-array name="entries_network_widget">
+        <item>2G/3G+2G</item>
+        <item>2G/Solo 3G</item>
+        <item>2G/Solo 3G/3G+2G</item>
+    </string-array>
+    <string-array name="entries_flash_widget">
+        <item>Normale</item>
+        <item>Elevato</item>
+    </string-array>
+    <string-array name="haptic_feedback_entries">
+        <item>Usa impostazione predefinita</item>
+        <item>Attivato</item>
+        <item>Disattivato</item>
+    </string-array>
+    <string-array name="entries_status_bar_am_pm">
+        <item>Normale</item>
+        <item>Piccolo</item>
+        <item>Nessuno (predefinito)</item>
+    </string-array>
+    <string-array name="wifi_countrycode_entries">
+        <item>Stati Uniti</item>
+        <item>Canada, Taiwan</item>
+        <item>Germania</item>
+        <item>Europa</item>
+        <item>Giappone, Russia</item>
+        <item>Australia</item>
+        <item>Cina</item>
+        <item>Corea</item>
+        <item>Turchia</item>
+        <item>Singapore</item>
+        <item>Brasile</item>
+    </string-array>
 </resources>

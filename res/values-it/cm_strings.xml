@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--  
-     Copyright (C) 2013 The CyanogenMod Project
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2012-2013 The CyanogenMod Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -13,8 +12,7 @@
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
- -->
-
+-->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="font_size_preview_text">Quel fez sghembo copre davanti</string>
     <string name="bluetooth_mas_request">Richiesta di accesso ai messaggi</string>
@@ -70,7 +68,6 @@
     <string name="mod_version">Versione JellyBeer</string>
     <string name="mod_version_default">Sconoscito</string>
     <string name="build_date">Data build</string>
-    <string name="build_date_default">2012-01-01-0000</string>
     <string name="cpu_info">CPU</string>
     <string name="mem_info">Memoria</string>
     <string name="anonymous_statistics_title">Statistiche CyanogenMod</string>
@@ -79,7 +76,6 @@
     <string name="anonymous_statistics_warning">Consentire di inviare statistiche anonime permetterà l\'invio di dati non personali agli sviluppatori di Cyanogenmod per contare il numero di installazioni uniche sui diversi terminali. Le informazioni inviate includono un identificativo univoco che non compromette la tua privacy o i tuoi dati personali. I dati sono inviati ad ogni avvio.\n\nPer un esempio dei dati inviati premere su Anteprima dati.</string>
     <string name="enable_reporting_title">Attiva invio</string>
     <string name="preview_data_title">Anteprima dati</string>
-    <string name="preview_data_summary">%s</string>
     <string name="view_stats_title">Guarda statistiche</string>
     <string name="anonymous_learn_more">Maggiori informazioni</string>
     <string name="anonymous_notification_desc">Attiva o disattiva le statistiche CyanogenMod</string>
@@ -154,7 +150,6 @@
     <string name="choose_soundtone">Scegli suoneria notifiche</string>
     <string name="choose_ringtone">Scegli suoneria telefono</string>
     <string name="soundtone_title">Suoneria notifiche</string>
-    <string name="soundtone_summary"></string>
     <string name="profile_appgroups_title">Gruppi applicazioni</string>
     <string name="profile_applist_title">Applicazioni</string>
     <string name="profile_new_appgroup">Nuovo gruppo applicazioni</string>
@@ -224,17 +219,13 @@
     <string name="processor_summary">Seleziona il governor e la velocità della CPU</string>
     <string name="cpu_cur_freq_title">Frequenza CPU attuale</string>
     <string name="cpu_governors_title">Governor CPU</string>
-    <string name="cpu_governors_summary">%S</string>
     <string name="cpu_min_freq_title">Frequenza minima CPU</string>
-    <string name="cpu_min_freq_summary">%s</string>
     <string name="cpu_max_freq_title">Frequenza massima CPU</string>
-    <string name="cpu_max_freq_summary">%s</string>
     <string name="cpu_set_on_boot">Imposta all\'avvio</string>
     <string name="cpu_set_on_boot_summary">Reimposta i parametri selezionati ad ogni riavvio</string>
     <string name="io_scheds_title">Schedulatore I/O</string>
     <string name="io_scheds_summary">Cambia lo schedulatore I/O</string>
     <string name="io_sched_title">Schedulatore I/O</string>
-    <string name="io_sched_summary">%S</string>
     <string name="io_sched_set_on_boot">Imposta all\'avvio</string>
     <string name="io_sched_set_on_boot_summary">Reimposta le impostazioni dello schedulatore I/O ad ogni riavvio</string>
     <string name="memory_management_title">Gestione memoria</string>
@@ -268,6 +259,7 @@
     <string name="icon_picker_calendar">Calendario</string>
     <string name="icon_picker_camera">Fotocamera</string>
     <string name="icon_picker_chrome">Chrome</string>
+    <string name="icon_picker_contacts">Contatti</string>
     <string name="icon_picker_email">Email</string>
     <string name="icon_picker_email2">Email Holo</string>
     <string name="icon_picker_facebook">Facebook</string>
@@ -312,6 +304,7 @@
     <string name="profile_select">Seleziona profilo</string>
     <string name="link_volume_ringtones">Collega volume suoneria e notifiche</string>
     <string name="link_volume_mutes">Collega silenz. suoneria e notifiche</string>
+    <string name="volume_keys_control_ring_stream">I tasti volume regolano la suoneria</string>
     <string name="notification_light_general_title">Generale</string>
     <string name="notification_light_applist_title">Applicazioni</string>
     <string name="notification_light_phonelist_title">Telefono</string>
@@ -323,7 +316,7 @@
     <string name="notification_light_voicemail_title">Messaggio vocale</string>
     <string name="edit_light_settings">Modifica impostazioni luce</string>
     <string name="pulse_speed_title">Durata e velocità del lampeggio</string>
-    <string name="picker_arrow">→</string>
+    <string name="picker_arrow">\u2192</string>
     <string name="default_time">Normale</string>
     <string name="custom_time">Personalizzato</string>
     <string name="dialog_test">Test</string>
@@ -584,15 +577,44 @@
     <string name="auto_brightness_level_format"><xliff:g id="level">%1$d</xliff:g> lux</string>
     <string name="auto_brightness_last_level_format"><xliff:g id="level">%1$d</xliff:g> -\n\u221e lux</string>
     <string name="auto_brightness_adjust_button">Regola</string>
+    <string name="auto_brightness_close_button">Chiudi</string>
     <string name="auto_brightness_reset_button">Ripristina</string>
-    <string name="auto_brightness_split_dialog_title">Soglia di luminosità</string>
+    <string name="auto_brightness_split_dialog_title">Dividi livelli luminosità</string>
+    <string name="auto_brightness_level_dialog_title">Impostazioni luminosità</string>
+    <string name="auto_brightness_lux">Luminosità ambientale (lux)</string>
+    <string name="auto_brightness_backlight">Luminosità schermo (%)</string>
     <string name="auto_brightness_reset_dialog_title">Ripristina livelli?</string>
-    <string name="auto_brightness_reset_confirmation">Tutti i livelli di luminosità saranno ripristinati ai rispettivi valori di default.</string>
-    <string name="auto_brightness_split_lux_format">Soglia (tra <xliff:g id="min">%1$d</xliff:g> e <xliff:g id="max">%2$d</xliff:g> lux)</string>
+    <string name="auto_brightness_reset_confirmation">Tutti i livelli di luminosità saranno riportati ai rispettivi valori predefiniti.</string>
+    <string name="auto_brightness_split_lux_format">Dividi posizione (tra <xliff:g id="min">%1$d</xliff:g> e <xliff:g id="max">%2$d</xliff:g> lux)</string>
     <string name="auto_brightness_level_options">Impostazioni livelli luminosità</string>
-    <string name="auto_brightness_menu_edit_lux">Luminosità ambiente</string>
-    <string name="auto_brightness_menu_split">Soglia</string>
+    <string name="auto_brightness_menu_edit">Modifica</string>
+    <string name="auto_brightness_menu_split">Dividi</string>
     <string name="auto_brightness_menu_remove">Rimuovi</string>
+    <string name="auto_brightness_preview">Anteprima</string>
+    <string name="auto_brightness_preview_dialog_title">Anteprima curva luminosità</string>
+    <string name="auto_brightness_help_dialog_title">Guida</string>
+    <string name="auto_brightness_help_text"><b>Come viene calcolata la luminosità?</b>
+\n\n
+La curva di luminosità viene calcolata eseguendo una <i>interpolazione spline di terzo grado</i>
+su un dato numero di <i>punti di controllo</i>. Non è un algoritmo che fa rimanere costante
+la luminosità dello schermo in determinati intervalli di luminosità ambientale. In questo modo,
+piccole variazioni di luce ambientale non causano grandi variazioni di luminosità dello schermo;
+tuttavia, può essere arduo predire le esatte conseguenze di una modifica nei punti di controllo.\n
+Per rimediare a questo, si può esaminare un\'anteprima della curva calcolata. Si noti che
+l\'anteprima mostra la curva in scala <i>logaritmica</i>, in modo che i punti di controllo
+possano essere visualizzati distintamente. Se si usasse una scala lineare, non sarebbe
+possibile distinguere i punti di controllo - tendenzialmente più importanti - nella gamma
+più bassa di luminosità ambientale.\n\n
+<b>Come modificare la curva di luminosità?</b>\n\n
+Ogni riga nella lista corrisponde ad un <i>punto di controllo</i> della curva di luminosità.
+Per modificare il livello di luminosità del punto, puoi usare il controllo a scorrimento
+presente in ciascuna riga. La luminosità dello schermo sarà variata in accordo con il valore
+del controllo a scorrimento per fornire un\'anteprima del livello di luminosità.\n
+Altre opzioni sono disponibili premendo a lungo una riga. Selezionando \'Modifica\', puoi modificare
+il livello di luce ambientale del punto di controllo, ed anche inserire manualmente il valore
+desiderato di luminosità dello schermo. Selezionando \'Dividi\' puoi dividere una riga, per
+inserire punti di controllo aggiuntivi. \'Rimuovi\' cancella la riga selezionata.
+    </string>
     <string name="advanced_reboot_title">Riavvio avanzato</string>
     <string name="advanced_reboot_summary">Quando attivato include, nel menu apposito, opzioni per il riavvio in modalità recovery o bootloader</string>
     <string name="navigation_bar_category">Barra di navigazione</string>
@@ -616,9 +638,6 @@
     <string name="wifi_mode">Modalità</string>
     <string name="wifi_mode_ibss">Rete Ad-Hoc (IBSS)</string>
     <string name="wifi_mode_ibss_short">Ad-Hoc</string>
-    <string name="wifi_ibss_freq_title">Canale / Frequenza</string>
-    <string name="wifi_channel">Canale</string>
-    <string name="wifi_mhz">MHz</string>
     <string name="pie_control_title">Controlli a disco</string>
     <string name="pie_control_enabled">\"Pie controls\": attivati quando il Desktop esteso è attivo</string>
     <string name="pie_control_disabled">\"Pie controls\": disattivati</string>
@@ -654,4 +673,12 @@
     <string name="gestures_action_search">Ricerca</string>
     <string name="gestures_action_recent">Applicazioni recenti</string>
     <string name="stylus_app_not_installed">%s non è installata</string>
+    <string name="wifi_ibss_freq_title">Canale / Frequenza</string>
+    <string name="wifi_channel">Canale</string>
+    <string name="wifi_mhz">MHz</string>
+    <string name="power_notifications_category_title">Notifica cavo alimentazione</string>
+    <string name="power_notifications_enable_title">Abilita</string>
+    <string name="power_notifications_vibrate_title">Vibra</string>
+    <string name="power_notifications_ringtone_title">Suono di notifica</string>
+    <string name="power_notifications_ringtone_silent">Silenzioso</string>
 </resources>

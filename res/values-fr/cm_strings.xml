@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2012-2013 The CyanogenMod Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,8 +12,7 @@
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
- -->
-
+-->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="bluetooth_mas_request">Demande d\'accès aux messages</string>
     <string name="bluetooth_mas_acceptance_dialog_text">%1$s souhaite accéder à vos messages. Donner l\'accès à %2$s\u00A0?</string>
@@ -72,7 +71,6 @@
     <string name="mod_version">Version JellyBeer</string>
     <string name="mod_version_default">Inconnue</string>
     <string name="build_date">Date de compilation</string>
-    <string name="build_date_default">2012-01-01-0000</string>
     <string name="cpu_info">CPU</string>
     <string name="mem_info">Mémoire</string>
     <string name="anonymous_statistics_title">Statistiques CyanogenMod</string>
@@ -81,7 +79,6 @@
     <string name="anonymous_statistics_warning">Autoriser l\'envoi de statistiques permet aux développeurs du système CyanogenMod de collecter des données anonymes afin de comptabiliser le nombre d\'installations par type d\'appareil. Les informations envoyées contiennent un identifiant unique de appareil afin de limiter les doublons et en aucune manière ne compromet la sécurité de vos données. Ce jeu d\'informations est envoyé à chaque redémarrage pour ne conserver que les installations actives.\n\nVous pouvez visualiser ces données en sélectionnant \"Prévisualiser les données\".</string>
     <string name="enable_reporting_title">Activer l\'envoi</string>
     <string name="preview_data_title">Prévisualiser les données</string>
-    <string name="preview_data_summary">%s</string>
     <string name="view_stats_title">Afficher les statistiques</string>
     <string name="anonymous_learn_more">En savoir plus…</string>
     <string name="anonymous_notification_desc">Activer ou non les statistiques CyanogenMod</string>
@@ -157,7 +154,6 @@
     <string name="choose_soundtone">Son de notification</string>
     <string name="choose_ringtone">Choix de la sonnerie</string>
     <string name="soundtone_title">Son de notification</string>
-    <string name="soundtone_summary">""</string>
     <string name="profile_appgroups_title">Groupes d\'applications</string>
     <string name="profile_applist_title">Applications</string>
     <string name="profile_new_appgroup">Nouveau groupe d\'applications</string>
@@ -227,17 +223,13 @@
     <string name="processor_summary">Changer la stratégie et la fréquence du processeur</string>
     <string name="cpu_cur_freq_title">Fréquence actuelle</string>
     <string name="cpu_governors_title">Stratégie</string>
-    <string name="cpu_governors_summary">%S</string>
     <string name="cpu_min_freq_title">Fréquence minimale</string>
-    <string name="cpu_min_freq_summary">%s</string>
     <string name="cpu_max_freq_title">Fréquence maximale</string>
-    <string name="cpu_max_freq_summary">%s</string>
     <string name="cpu_set_on_boot">Appliquer au démarrage</string>
     <string name="cpu_set_on_boot_summary">Appliquer les paramètres du processeur au démarrage</string>
     <string name="io_scheds_title">Horloge E/S</string>
     <string name="io_scheds_summary">Changer l\'horloge E/S</string>
     <string name="io_sched_title">Horloge E/S</string>
-    <string name="io_sched_summary">%S</string>
     <string name="io_sched_set_on_boot">Appliquer au démarrage</string>
     <string name="io_sched_set_on_boot_summary">Appliquer les paramètres d\'horloge E/S au démarrage</string>
     <string name="memory_management_title">Gestion de la mémoire</string>
@@ -271,6 +263,7 @@
     <string name="icon_picker_calendar">Agenda</string>
     <string name="icon_picker_camera">Appareil photo</string>
     <string name="icon_picker_chrome">Chrome</string>
+    <string name="icon_picker_contacts">Contacts</string>
     <string name="icon_picker_email">Email</string>
     <string name="icon_picker_email2">Email Holo</string>
     <string name="icon_picker_facebook">Facebook</string>
@@ -315,6 +308,7 @@
     <string name="profile_select">Sélectionner un profil</string>
     <string name="link_volume_ringtones">Lier le volume des alertes à la sonnerie</string>
     <string name="link_volume_mutes">Silence commun pour alertes et sonnerie</string>
+    <string name="volume_keys_control_ring_stream">Les boutons de volume contrôlent le volume de la sonnerie</string>
     <string name="notification_light_general_title">Général</string>
     <string name="notification_light_applist_title">Applications</string>
     <string name="notification_light_phonelist_title">Téléphone</string>
@@ -326,7 +320,7 @@
     <string name="notification_light_voicemail_title">Messagerie vocale</string>
     <string name="edit_light_settings">Paramètres de la LED</string>
     <string name="pulse_speed_title">Durée d\'impulsion et vitesse</string>
-    <string name="picker_arrow">→</string>
+    <string name="picker_arrow">\u2192</string>
     <string name="default_time">Normale</string>
     <string name="custom_time">Personnalisée</string>
     <string name="dialog_test">Tester</string>
@@ -589,15 +583,32 @@
     <string name="auto_brightness_level_format"><xliff:g id="level">%1$d</xliff:g> lux</string>
     <string name="auto_brightness_last_level_format"><xliff:g id="level">%1$d</xliff:g> -\n\u221e lux</string>
     <string name="auto_brightness_adjust_button">Ajuster</string>
+    <string name="auto_brightness_close_button">Quitter</string>
     <string name="auto_brightness_reset_button">Réinitialiser</string>
     <string name="auto_brightness_split_dialog_title">Division du niveau de luminosité</string>
+    <string name="auto_brightness_level_dialog_title">Définir le niveau de lumière</string>
+    <string name="auto_brightness_lux">Luminosité ambiante (lux)</string>
+    <string name="auto_brightness_backlight">Luminosité de l\'écran (%)</string>
     <string name="auto_brightness_reset_dialog_title">Réinitialiser les niveaux\u00A0?</string>
     <string name="auto_brightness_reset_confirmation">Tous les niveaux de luminosité seront réinitialisés à leurs réglages par défaut.</string>
     <string name="auto_brightness_split_lux_format">Position de coupure (entre <xliff:g id="min">%1$d</xliff:g> et <xliff:g id="max">%2$d</xliff:g> lux)</string>
     <string name="auto_brightness_level_options">Options de niveau de lumière</string>
-    <string name="auto_brightness_menu_edit_lux">Plage de luminosité ambiante</string>
+    <string name="auto_brightness_menu_edit">Modifier</string>
     <string name="auto_brightness_menu_split">Diviser</string>
     <string name="auto_brightness_menu_remove">Supprimer</string>
+    <string name="auto_brightness_preview">Prévisualiser</string>
+    <string name="auto_brightness_preview_dialog_title">Aperçu de la courbe de luminosité</string>
+    <string name="auto_brightness_help_dialog_title">Aide</string>
+    <string name="auto_brightness_help_text"><b>Comment est calculée la luminosité\u00A0?</b>
+\n\n
+La courbe de luminosité est calculée en effectuant l\'<i>interpolation d\'une courbe cubique</i> sur un certain nombre de <i>points de contrôle</i>. C\'est un calcul précis dans lequel la luminosité de l\'écran ne reste pas constante pour une plage déterminée de luminosité ambiante. De cette manière, les légers changements de luminosité ambiante ne provoquent pas de grands sauts de luminosité de l\'écran, néanmoins il est plus difficile de prédire les conséquences exactes de l\'évolution des points de contrôle.\n
+Pour vous aider, un aperçu de la courbe calculée peut être examiné. Noter que l\'aperçu montre une courbe avec une échelle <i>logarithmique</i>, de sorte que tous les points de contrôle peuvent être affichés distinctement. Lorsque vous utilisez une échelle linéaire, il n\'est pas possible de distinguer la tendance des points de contrôle les plus importants dans la fourchette basse de luminosité ambiante.
+\n\n
+<b>Comment éditer la courbe de luminosité\u00A0?</b>
+\n\n
+Chaque ligne de la liste correspond à un <i>point de contrôle</i> de la courbe de luminosité. Pour modifier le niveau de luminosité d\'un point, vous pouvez utiliser le curseur présent sur chaque ligne. Lorsque vous toucherez le curseur, la luminosité de l\'écran sera modifiée en conséquence pour prévisualiser le niveau de lumière.\n
+Des options supplémentaires sont disponibles en appuyant longtemps sur une ligne. En sélectionnant \'Modifier\', vous pouvez modifier le niveau du point de contrôle de luminosité ambiante ou saisir manuellement la luminosité de l\'écran désirée. En sélectionnant \'Diviser\' vous pouvez séparer une ligne en deux afin d\'insérer des points de contrôle supplémentaires. Enfin, \'Supprimer\' efface la ligne sélectionnée.
+    </string>
     <string name="advanced_reboot_title">Redémarrage avancé</string>
     <string name="advanced_reboot_summary">Inclure les options de redémarrage en mode recovery et bootloader dans le menu marche/arrêt lorsque l\'appareil est déverrouillé</string>
     <string name="navigation_bar_category">Barre de navigation</string>

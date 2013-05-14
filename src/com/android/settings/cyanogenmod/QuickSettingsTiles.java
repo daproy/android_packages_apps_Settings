@@ -22,9 +22,11 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
+import android.content.res.Resources.NotFoundException;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -33,6 +35,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.FrameLayout;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -57,8 +60,10 @@ public class QuickSettingsTiles extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        mDragView = new DraggableGridView(getActivity(), null);
+        mDragView = new DraggableGridView(getActivity());
         mContainer = container;
+        mContainer.setClipChildren(false);
+        mContainer.setClipToPadding(false);
         mInflater = inflater;
         PackageManager pm = getActivity().getPackageManager();
         if (pm != null) {
@@ -68,11 +73,48 @@ public class QuickSettingsTiles extends Fragment {
                 mSystemUiResources = null;
             }
         }
+
         int colCount = Settings.System.getInt(getActivity().getContentResolver(),
                 Settings.System.QUICK_TILES_PER_ROW, 3);
         updateTileTextSize(colCount);
+
+        int panelWidth = getItemFromSystemUi("notification_panel_width", "dimen");
+        if (panelWidth != 0) {
+            FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(panelWidth,
+                    FrameLayout.LayoutParams.MATCH_PARENT, Gravity.CENTER_HORIZONTAL);
+            mDragView.setLayoutParams(params);
+        }
+        int cellHeight = getItemFromSystemUi("quick_settings_cell_height", "dimen");
+        if (cellHeight != 0) {
+            mDragView.setCellHeight(cellHeight);
+        }
+        int cellGap = getItemFromSystemUi("quick_settings_cell_gap", "dimen");
+        if (cellGap != 0) {
+            mDragView.setCellGap(cellGap);
+        }
+        int columnCount = getItemFromSystemUi("quick_settings_num_columns", "integer");
+        if (columnCount != 0) {
+            mDragView.setColumnCount(columnCount);
+        }
         mTileAdapter = new TileAdapter(getActivity(), 0);
         return mDragView;
+    }
+
+    private int getItemFromSystemUi(String name, String type) {
+        if (mSystemUiResources != null) {
+            int resId = (int) mSystemUiResources.getIdentifier(name, type, "com.android.systemui");
+            if (resId > 0) {
+                try {
+                    if (type.equals("dimen")) {
+                        return (int) mSystemUiResources.getDimension(resId);
+                    } else {
+                        return mSystemUiResources.getInteger(resId);
+                    }
+                } catch (NotFoundException e) {
+                }
+            }
+        }
+        return 0;
     }
 
     void genTiles() {
@@ -181,7 +223,7 @@ public class QuickSettingsTiles extends Fragment {
     public void onResume() {
         super.onResume();
         if (Utils.isPhone(getActivity())) {
-            mContainer.setPadding(20, 0, 0, 0);
+            mContainer.setPadding(20, 0, 20, 0);
         }
     }
 
