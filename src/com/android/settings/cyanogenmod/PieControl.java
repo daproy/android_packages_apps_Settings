@@ -79,9 +79,8 @@ public class PieControl extends SettingsPreferenceFragment
         mPieOutlineColor.setOnPreferenceChangeListener(this);
         mPieLongpressColor = (ColorPickerPreference) prefs.findPreference("pie_long_press_color");
         mPieLongpressColor.setOnPreferenceChangeListener(this);
-        mPieSensitivity = (ListPreference) prefSet.findPreference(PIE_SENSITIVITY);
+        mPieSensitivity = (ListPreference) prefs.findPreference(PIE_SENSITIVITY);
         mPieSensitivity.setOnPreferenceChangeListener(this);
-        mPieSize = (SeekBarDialogPreference) prefSet.findPreference(PIE_SIZE);
 
         for (int i = 0; i < TRIGGER.length; i++) {
             mTrigger[i] = (CheckBoxPreference) prefs.findPreference(TRIGGER[i]);
