@@ -44,18 +44,6 @@
         android:key="pie_long_press_color"
         android:title="@string/pie_long_press_color_title" />
 
-    <com.android.settings.widget.SeekBarPreference
-            android:key="pie_start"
-            android:title="@string/pie_start_title"
-            android:max="50"
-            android:defaultValue="3" />
-
-    <com.android.settings.widget.SeekBarPreference
-            android:key="pie_distance"
-            android:title="@string/pie_distance_title"
-            android:max="50"
-            android:defaultValue="8" />
-
     <PreferenceCategory
         android:title="@string/pie_control_trigger_positions">
 
