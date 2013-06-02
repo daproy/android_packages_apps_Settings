@@ -5,7 +5,6 @@ import android.database.ContentObserver;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.CheckBoxPreference;
-import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
 import com.android.settings.widget.SeekBarPreference;
@@ -23,7 +22,6 @@ public class PieControl extends SettingsPreferenceFragment
 
     private static final int DEFAULT_POSITION = 1 << 1; // this equals Position.BOTTOM.FLAG
     private static final String PIE_CONTROL = "pie_control_checkbox";
-    private static final String PIE_SENSITIVITY = "pie_control_sensitivity";
     private static final String PIE_SIZE = "pie_control_size";
     private static final String[] TRIGGER = {
         "pie_control_trigger_left",
@@ -33,7 +31,6 @@ public class PieControl extends SettingsPreferenceFragment
     };
  
     private CheckBoxPreference mPieControl;
-    private ListPreference mPieSensitivity;
     private SeekBarDialogPreference mPieSize;
     private CheckBoxPreference[] mTrigger = new CheckBoxPreference[4];
 
@@ -79,8 +76,6 @@ public class PieControl extends SettingsPreferenceFragment
         mPieOutlineColor.setOnPreferenceChangeListener(this);
         mPieLongpressColor = (ColorPickerPreference) prefs.findPreference("pie_long_press_color");
         mPieLongpressColor.setOnPreferenceChangeListener(this);
-        mPieSensitivity = (ListPreference) prefs.findPreference(PIE_SENSITIVITY);
-        mPieSensitivity.setOnPreferenceChangeListener(this);
 
         for (int i = 0; i < TRIGGER.length; i++) {
             mTrigger[i] = (CheckBoxPreference) prefs.findPreference(TRIGGER[i]);
@@ -135,12 +130,6 @@ public class PieControl extends SettingsPreferenceFragment
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.PIE_LONG_PRESS_COLOR, intHex);
             Utils.restartUI(getActivity());
-        } else if (preference == mPieSensitivity) {
-            String newState = (String) newValue;
-            Settings.System.putString(getContentResolver(),
-                    Settings.System.PIE_SENSITIVITY, newState);
-            mPieSensitivity.setSummary(
-                    mPieSensitivity.getEntries()[Integer.parseInt(newState) - 1]);
         } else {
             int triggerSlots = 0;
             for (int i = 0; i < mTrigger.length; i++) {
@@ -164,16 +153,11 @@ public class PieControl extends SettingsPreferenceFragment
                 Settings.System.PIE_CONTROLS, 0) == 1);
         propagatePieControl(mPieControl.isChecked());
 
-        int sensitivity = Settings.System.getInt(getContentResolver(),
-                Settings.System.PIE_SENSITIVITY, 3);
-        mPieSensitivity.setValue(Integer.toString(sensitivity));
-
         getContentResolver().registerContentObserver(
                 Settings.System.getUriFor(Settings.System.PIE_POSITIONS), true,
                 mPieTriggerObserver);
 
         updatePieTriggers();
-        updateSensitivity();
     }
 
     @Override
@@ -186,7 +170,6 @@ public class PieControl extends SettingsPreferenceFragment
         for (int i = 0; i < mTrigger.length; i++) {
             mTrigger[i].setEnabled(value);
         }
-        mPieSensitivity.setEnabled(value);
         mPieSize.setEnabled(value);
     }
 
@@ -201,12 +184,6 @@ public class PieControl extends SettingsPreferenceFragment
                 mTrigger[i].setChecked(false);
             }
         }
-    }
-
-    private void updateSensitivity() {
-        int triggerSlots = Settings.System.getInt(getContentResolver(),
-                Settings.System.PIE_SENSITIVITY, 3);
-        mPieSensitivity.setSummary(mPieSensitivity.getEntry());
     }
 
 }
