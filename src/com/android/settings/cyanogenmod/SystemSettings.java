@@ -67,11 +67,6 @@ public class SystemSettings extends SettingsPreferenceFragment  implements
         addPreferencesFromResource(R.xml.system_settings);
         PreferenceScreen prefScreen = getPreferenceScreen();
 
-        // Only show the hardware keys config on a device that does have them
-        // and the navigation bar config when we're not in tabletui
-        boolean removeKeys = !getResources().getBoolean(
-                    com.android.internal.R.bool.config_hasHardwareKeys);
-
         // Determine which user is logged in
         mIsPrimary = UserHandle.myUserId() == UserHandle.USER_OWNER;
         if (mIsPrimary) {
@@ -86,6 +81,22 @@ public class SystemSettings extends SettingsPreferenceFragment  implements
                     updateBatteryPulseDescription();
                     mBatteryPulse = null;
                 }
+            }
+
+            // Only show the hardware keys config on a device that does not have a navbar
+            // and the navigation bar config on phones that has a navigation bar
+            boolean removeKeys = false;
+            boolean removeNavbar = false;
+            IWindowManager windowManager = IWindowManager.Stub.asInterface(
+                    ServiceManager.getService(Context.WINDOW_SERVICE));
+            try {
+                if (windowManager.hasNavigationBar()) {
+                    removeKeys = true;
+                } else {
+                    removeNavbar = true;
+                }
+            } catch (RemoteException e) {
+                // Do nothing
             }
 
             // Act on the above
@@ -112,8 +123,6 @@ public class SystemSettings extends SettingsPreferenceFragment  implements
             }
         }
 
-        // Pie controls
-        mPieControl = (PreferenceScreen) findPreference(KEY_PIE_CONTROL);
 
         // Expanded desktop
         mExpandedDesktopPref = (ListPreference) findPreference(KEY_EXPANDED_DESKTOP);
@@ -137,7 +146,6 @@ public class SystemSettings extends SettingsPreferenceFragment  implements
         } catch (RemoteException e) {
             Log.e(TAG, "Error getting navigation bar status");
         }
-
         // Don't display the lock clock preference if its not installed
         removePreferenceIfPackageNotInstalled(findPreference(KEY_LOCK_CLOCK));
     }
