@@ -48,16 +48,16 @@ public class SystemSettings extends SettingsPreferenceFragment  implements
     private static final String KEY_QUICK_SETTINGS = "quick_settings_panel";
     private static final String KEY_NOTIFICATION_DRAWER = "notification_drawer";
     private static final String KEY_POWER_MENU = "power_menu";
-    private static final String KEY_PIE_CONTROL = "pie_control";
     private static final String KEY_EXPANDED_DESKTOP = "expanded_desktop";
     private static final String KEY_EXPANDED_DESKTOP_NO_NAVBAR = "expanded_desktop_no_navbar";
 
     private PreferenceScreen mNotificationPulse;
     private PreferenceScreen mBatteryPulse;
-    private PreferenceScreen mPieControl;
     private ListPreference mExpandedDesktopPref;
     private CheckBoxPreference mExpandedDesktopNoNavbarPref;
 
+    private PreferenceScreen mNotificationPulse;
+    private PreferenceScreen mBatteryPulse;
     private boolean mIsPrimary;
 
     @Override
@@ -77,8 +77,6 @@ public class SystemSettings extends SettingsPreferenceFragment  implements
                 if (getResources().getBoolean(
                         com.android.internal.R.bool.config_intrusiveBatteryLed) == false) {
                     prefScreen.removePreference(mBatteryPulse);
-                } else {
-                    updateBatteryPulseDescription();
                     mBatteryPulse = null;
                 }
             }
@@ -119,7 +117,8 @@ public class SystemSettings extends SettingsPreferenceFragment  implements
         if (mNotificationPulse != null) {
             if (!getResources().getBoolean(com.android.internal.R.bool.config_intrusiveNotificationLed)) {
                 prefScreen.removePreference(mNotificationPulse);
-                mNotificationPulse = null;
+            } else {
+                updateLightPulseDescription();
             }
         }
 
@@ -157,10 +156,6 @@ public class SystemSettings extends SettingsPreferenceFragment  implements
         // All users
         if (mNotificationPulse != null) {
             updateLightPulseDescription();
-        }
-        if (mPieControl != null) {
-            updatePieControlDescription();
-        }
 
         // Primary user only
         if (mIsPrimary && mBatteryPulse != null) {
@@ -205,14 +200,6 @@ public class SystemSettings extends SettingsPreferenceFragment  implements
         }
      }
 
-    private void updatePieControlDescription() {
-        if (Settings.System.getInt(getActivity().getContentResolver(),
-                Settings.System.PIE_CONTROLS, 0) == 1) {
-            mPieControl.setSummary(getString(R.string.pie_control_enabled));
-        } else {
-            mPieControl.setSummary(getString(R.string.pie_control_disabled));
-        }
-    }
 
     private void updateExpandedDesktop(int value) {
         ContentResolver cr = getContentResolver();
@@ -233,6 +220,12 @@ public class SystemSettings extends SettingsPreferenceFragment  implements
             Settings.System.putInt(cr, Settings.System.POWER_MENU_EXPANDED_DESKTOP_ENABLED, 1);
             summary = R.string.expanded_desktop_no_status_bar;
         }
+    }
+
+    private boolean removePreferenceIfPackageNotInstalled(Preference preference) {
+        String intentUri = ((PreferenceScreen) preference).getIntent().toUri(1);
+        Pattern pattern = Pattern.compile("component=([^/]+)/");
+        Matcher matcher = pattern.matcher(intentUri);
 
         if (mExpandedDesktopPref != null && summary != -1) {
             mExpandedDesktopPref.setSummary(res.getString(summary));

@@ -4774,4 +4774,5 @@
     <string name="battery_bar_animate_summary">The charging animation may result in a poor user experience. Enable at your own discretion.</string>
 
     <string name="quick_pulldown_summary_always">Always pull down Quick Settings unless there are dismissible notifications</string>
+
 </resources>
