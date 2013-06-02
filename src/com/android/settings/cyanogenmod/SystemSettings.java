@@ -56,8 +56,6 @@ public class SystemSettings extends SettingsPreferenceFragment  implements
     private ListPreference mExpandedDesktopPref;
     private CheckBoxPreference mExpandedDesktopNoNavbarPref;
 
-    private PreferenceScreen mNotificationPulse;
-    private PreferenceScreen mBatteryPulse;
     private boolean mIsPrimary;
 
     @Override
@@ -156,6 +154,7 @@ public class SystemSettings extends SettingsPreferenceFragment  implements
         // All users
         if (mNotificationPulse != null) {
             updateLightPulseDescription();
+        }
 
         // Primary user only
         if (mIsPrimary && mBatteryPulse != null) {
@@ -219,16 +218,6 @@ public class SystemSettings extends SettingsPreferenceFragment  implements
         } else if (value == 2) {
             Settings.System.putInt(cr, Settings.System.POWER_MENU_EXPANDED_DESKTOP_ENABLED, 1);
             summary = R.string.expanded_desktop_no_status_bar;
-        }
-    }
-
-    private boolean removePreferenceIfPackageNotInstalled(Preference preference) {
-        String intentUri = ((PreferenceScreen) preference).getIntent().toUri(1);
-        Pattern pattern = Pattern.compile("component=([^/]+)/");
-        Matcher matcher = pattern.matcher(intentUri);
-
-        if (mExpandedDesktopPref != null && summary != -1) {
-            mExpandedDesktopPref.setSummary(res.getString(summary));
         }
     }
 }
