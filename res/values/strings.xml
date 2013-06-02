@@ -4645,7 +4645,6 @@
     <string name="pie_color_title">PIE button color</string>
     <string name="pie_selected_color_title">PIE selected button color</string>
     <string name="pie_outline_color_title">PIE button color outline</string>
-    <string name="pie_long_press_color_title">PIE longpress color</string>
 
     <!-- TabUI Extras Hide -->
     <string name="hide_extras">Hide extras</string>
