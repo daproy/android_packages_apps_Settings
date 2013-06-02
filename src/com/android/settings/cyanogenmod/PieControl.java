@@ -73,12 +73,6 @@ public class PieControl extends SettingsPreferenceFragment
         mPieSelectedColor.setOnPreferenceChangeListener(this);
         mPieOutlineColor = (ColorPickerPreference) prefs.findPreference("pie_outline_color");
         mPieOutlineColor.setOnPreferenceChangeListener(this);
-        mPieStart = (SeekBarPreference) prefs.findPreference("pie_start");
-        mPieStart.setProperty(Settings.System.PIE_START);
-        mPieStart.setOnPreferenceChangeListener(this);
-        mPieDistance = (SeekBarPreference) prefs.findPreference("pie_distance");
-        mPieStart.setProperty(Settings.System.PIE_DISTANCE);
-        mPieDistance.setOnPreferenceChangeListener(this);
 
 
         for (int i = 0; i < TRIGGER.length; i++) {
@@ -126,27 +120,6 @@ public class PieControl extends SettingsPreferenceFragment
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.PIE_OUTLINE_COLOR, intHex);
             Utils.restartUI(getActivity());
-<<<<<<< HEAD
-        } else if (preference == mPieLongpressColor) {
-            String hex = ColorPickerPreference.convertToARGB(
-                    Integer.valueOf(String.valueOf(newValue)));
-            preference.setSummary(hex);
-            int intHex = ColorPickerPreference.convertToColorInt(hex);
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.PIE_LONG_PRESS_COLOR, intHex);
-            Utils.restartUI(getActivity());
-=======
-        } else if (preference == mPieStart) {
-            float valStat = Float.parseFloat((String) newValue);
-            Settings.System.putFloat(getActivity().getContentResolver(),
-                    Settings.System.PIE_START,
-                    valStat / 100);
-        } else if (preference == mPieDistance) {
-            float valStat = Float.parseFloat((String) newValue);
-            Settings.System.putFloat(getActivity().getContentResolver(),
-                    Settings.System.PIE_DISTANCE,
-                    valStat / 100);
->>>>>>> parent of 2aea7bc... Long Press Colour
         } else {
             int triggerSlots = 0;
             for (int i = 0; i < mTrigger.length; i++) {
