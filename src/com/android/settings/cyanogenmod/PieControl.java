@@ -13,9 +13,6 @@ import android.provider.Settings;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.settings.hybrid.Utils;
-
-import com.android.settings.cyanogenmod.colorpicker.ColorPickerPreference;
 
 public class PieControl extends SettingsPreferenceFragment
                         implements Preference.OnPreferenceChangeListener {
@@ -33,12 +30,6 @@ public class PieControl extends SettingsPreferenceFragment
     private CheckBoxPreference mPieControl;
     private SeekBarDialogPreference mPieSize;
     private CheckBoxPreference[] mTrigger = new CheckBoxPreference[4];
-
-    ColorPickerPreference mPieColor;
-    ColorPickerPreference mPieSelectedColor;
-    ColorPickerPreference mPieOutlineColor;
-    SeekBarPreference mPieStart;
-    SeekBarPreference mPieDistance;
 
     private ContentObserver mPieTriggerObserver = new ContentObserver(new Handler()) {
         @Override
@@ -67,13 +58,6 @@ public class PieControl extends SettingsPreferenceFragment
         mPieControl = (CheckBoxPreference) prefs.findPreference(PIE_CONTROL);
         mPieControl.setOnPreferenceChangeListener(this);
         mPieSize = (SeekBarDialogPreference) prefs.findPreference(PIE_SIZE);
-        mPieColor = (ColorPickerPreference) prefs.findPreference("pie_color");
-        mPieColor.setOnPreferenceChangeListener(this);
-        mPieSelectedColor = (ColorPickerPreference) prefs.findPreference("pie_selected_color");
-        mPieSelectedColor.setOnPreferenceChangeListener(this);
-        mPieOutlineColor = (ColorPickerPreference) prefs.findPreference("pie_outline_color");
-        mPieOutlineColor.setOnPreferenceChangeListener(this);
-
 
         for (int i = 0; i < TRIGGER.length; i++) {
             mTrigger[i] = (CheckBoxPreference) prefs.findPreference(TRIGGER[i]);
@@ -96,30 +80,6 @@ public class PieControl extends SettingsPreferenceFragment
             Settings.System.putInt(getContentResolver(),
                     Settings.System.PIE_CONTROLS, newState ? 1 : 0);
             propagatePieControl(newState);
-        } else if (preference == mPieColor) {
-           String hex = ColorPickerPreference.convertToARGB(
-                    Integer.valueOf(String.valueOf(newValue)));
-            preference.setSummary(hex);
-            int intHex = ColorPickerPreference.convertToColorInt(hex);
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.PIE_COLOR, intHex);
-            Utils.restartUI(getActivity());
-        } else if (preference == mPieSelectedColor) {
-            String hex = ColorPickerPreference.convertToARGB(
-                    Integer.valueOf(String.valueOf(newValue)));
-            preference.setSummary(hex);
-            int intHex = ColorPickerPreference.convertToColorInt(hex);
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.PIE_SELECTED_COLOR, intHex);
-            Utils.restartUI(getActivity());
-        } else if (preference == mPieOutlineColor) {
-            String hex = ColorPickerPreference.convertToARGB(
-                    Integer.valueOf(String.valueOf(newValue)));
-            preference.setSummary(hex);
-            int intHex = ColorPickerPreference.convertToColorInt(hex);
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.PIE_OUTLINE_COLOR, intHex);
-            Utils.restartUI(getActivity());
         } else {
             int triggerSlots = 0;
             for (int i = 0; i < mTrigger.length; i++) {

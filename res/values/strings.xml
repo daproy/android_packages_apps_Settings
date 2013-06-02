@@ -4640,11 +4640,6 @@
     <string name="ram_bar_color_disabled">Disabled</string>
     <string name="ram_bar_button_help">Help</string>
     <string name="ram_bar_button_reset">Reset colors</string> 
- 
-    <!-- PIE Extras -->
-    <string name="pie_color_title">PIE button color</string>
-    <string name="pie_selected_color_title">PIE selected button color</string>
-    <string name="pie_outline_color_title">PIE button color outline</string>
 
     <!-- TabUI Extras Hide -->
     <string name="hide_extras">Hide extras</string>

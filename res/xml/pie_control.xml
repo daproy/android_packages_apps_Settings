@@ -28,18 +28,6 @@
         android:title="@string/pie_control_size"
         android:dialogTitle="@string/pie_control_size" />
 
-    <com.android.settings.cyanogenmod.colorpicker.ColorPickerPreference
-        android:key="pie_color"
-        android:title="@string/pie_color_title" />
-
-    <com.android.settings.cyanogenmod.colorpicker.ColorPickerPreference
-        android:key="pie_selected_color"
-        android:title="@string/pie_selected_color_title" />
-
-    <com.android.settings.cyanogenmod.colorpicker.ColorPickerPreference
-        android:key="pie_outline_color"
-        android:title="@string/pie_outline_color_title" />
-
     <PreferenceCategory
         android:title="@string/pie_control_trigger_positions">
 
