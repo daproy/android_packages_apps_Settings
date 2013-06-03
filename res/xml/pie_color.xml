@@ -1,62 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-        <CheckBoxPreference
-            android:key="pie_enable_color"
-            android:title="@string/pie_color_style_title" />
+    <CheckBoxPreference
+        android:key="pie_enable_color"
+        android:title="@string/pie_color_style_title" />
 
-        <com.android.settings.cyanogenmod.colorpicker.ColorPickerPreference
-                android:key="pie_button_color"
-                android:title="@string/pie_button_color_title"
-                android:defaultValue="#ffffff"
-                android:dependency="pie_enable_color" />
+    <com.android.settings.cyanogenmod.colorpicker.ColorPickerPreference
+        android:key="pie_button_color"
+        android:title="@string/pie_button_color_title"
+        android:defaultValue="0xffffffff"
+        android:dependency="pie_enable_color" />
 
 	<com.android.settings.cyanogenmod.colorpicker.ColorPickerPreference
 		android:key="pie_background"
 		android:title="@string/pie_background_title"
-		android:defaultValue="#aaff005e"
-                android:dependency="pie_enable_color" />
+		android:defaultValue="0xaaff005e"
+        android:dependency="pie_enable_color" />
 
 	<com.android.settings.cyanogenmod.colorpicker.ColorPickerPreference
 		android:key="pie_select"
 		android:title="@string/pie_select_title"
-		android:defaultValue="#aadbff00"
-                android:dependency="pie_enable_color" />
+		android:defaultValue="0xaadbff00"
+        android:dependency="pie_enable_color" />
 
 	<com.android.settings.cyanogenmod.colorpicker.ColorPickerPreference
 		android:key="pie_outlines"
 		android:title="@string/pie_outlines_title"
-		android:defaultValue="#55ffffff"
-                android:dependency="pie_enable_color" />
+		android:defaultValue="0x55ffffff"
+        android:dependency="pie_enable_color" />
 
 	<com.android.settings.cyanogenmod.colorpicker.ColorPickerPreference
 		android:key="pie_status_clock"
 		android:title="@string/pie_status_clock_title"
-		android:defaultValue="#ffffff"
-                android:dependency="pie_enable_color" />
+		android:defaultValue="0xffffffff"
+        android:dependency="pie_enable_color" />
 
 	<com.android.settings.cyanogenmod.colorpicker.ColorPickerPreference
 		android:key="pie_status"
 		android:title="@string/pie_status_title"
-		android:defaultValue="#ffffff"
-                android:dependency="pie_enable_color" />
+		android:defaultValue="0xffffffff"
+        android:dependency="pie_enable_color" />
 
 	<com.android.settings.cyanogenmod.colorpicker.ColorPickerPreference
 		android:key="pie_chevron_left"
 		android:title="@string/pie_chevron_left_title"
-		android:defaultValue="#0999cc"
-                android:dependency="pie_enable_color" />
+		android:defaultValue="0xff0999cc"
+        android:dependency="pie_enable_color" />
 
 	<com.android.settings.cyanogenmod.colorpicker.ColorPickerPreference
 		android:key="pie_chevron_right"
 		android:title="@string/pie_chevron_right_title"
-		android:defaultValue="#33b5e5"
-                android:dependency="pie_enable_color" />
+		android:defaultValue="0xff33b5e5"
+        android:dependency="pie_enable_color" />
 
-        <com.android.settings.cyanogenmod.colorpicker.ColorPickerPreference
-                android:key="pie_juice"
-                android:title="@string/pie_juice_title"
-                android:defaultValue="#33b5e5"
-                android:dependency="pie_enable_color" />
+    <com.android.settings.cyanogenmod.colorpicker.ColorPickerPreference
+        android:key="pie_juice"
+        android:title="@string/pie_juice_title"
+        android:defaultValue="0xff33b5e5"
+        android:dependency="pie_enable_color" />
 
 </PreferenceScreen>
