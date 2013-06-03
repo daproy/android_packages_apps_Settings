@@ -15,19 +15,22 @@
 		android:key="pie_background"
 		android:title="@string/pie_background_title"
 		android:defaultValue="0xaaff005e"
-        android:dependency="pie_enable_color" />
+        android:dependency="pie_enable_color"
+        alphaSlider="true" />
 
 	<com.android.settings.cyanogenmod.colorpicker.ColorPickerPreference
 		android:key="pie_select"
 		android:title="@string/pie_select_title"
 		android:defaultValue="0xaadbff00"
-        android:dependency="pie_enable_color" />
+        android:dependency="pie_enable_color"
+        alphaSlider="true" />
 
 	<com.android.settings.cyanogenmod.colorpicker.ColorPickerPreference
 		android:key="pie_outlines"
 		android:title="@string/pie_outlines_title"
 		android:defaultValue="0x55ffffff"
-        android:dependency="pie_enable_color" />
+        android:dependency="pie_enable_color"
+        alphaSlider="true" />
 
 	<com.android.settings.cyanogenmod.colorpicker.ColorPickerPreference
 		android:key="pie_status_clock"
