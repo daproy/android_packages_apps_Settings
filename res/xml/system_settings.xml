@@ -78,7 +78,7 @@
         android:title="@string/hardware_keys_title" />
     
     <PreferenceScreen
-        android:key="pie_control"
+        android:key="nav_bar"
         android:fragment="com.android.settings.aokp.Navbar"
         android:title="@string/title_navbar" />
     

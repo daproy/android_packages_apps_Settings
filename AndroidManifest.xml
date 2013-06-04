@@ -1619,6 +1619,8 @@
         <activity android:name=".cyanogenmod.Pie" />
         
         <activity android:name=".cyanogenmod.PieColor" />
+        
+        <activity android:name=".aokp.Navbar" />
 
         <activity android:name=".aokp.NavRingTargets" />
 
@@ -1768,16 +1770,6 @@
                 <action android:name="android.provider.Contacts.PROFILE_CHANGED" />
             </intent-filter>
         </receiver>
-
-        <activity
-            android:name=".aokp.Navbar"
-            android:label="@string/title_navbar" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="com.android.settings.SHORTCUT" />
-            </intent-filter>
-        </activity>
 
     </application>
 </manifest>
