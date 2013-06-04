@@ -69,13 +69,6 @@
         android:icon="@drawable/ic_settings_jellybeer"
         android:fragment="com.android.settings.hybrid.HybridSettings" />
 
-    <!-- Navbar -->
-    <header
-        android:id="@+id/nav_bar"
-        android:fragment="com.android.settings.aokp.Navbar"
-        android:title="@string/title_navbar"
-        android:icon="@drawable/ic_rom_control_navigation_bar" />  
-
     <!-- Launcher -->
     <header
         android:id="@+id/launcher_settings"

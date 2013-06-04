@@ -79,6 +79,11 @@
     
     <PreferenceScreen
         android:key="pie_control"
+        android:fragment="com.android.settings.aokp.Navbar"
+        android:title="@string/title_navbar" />
+    
+    <PreferenceScreen
+        android:key="pie_control"
         android:fragment="com.android.settings.cyanogenmod.Pie"
         android:title="@string/pie_controls_title"
         android:summary="@string/pie_controls_summary" />

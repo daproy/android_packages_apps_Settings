@@ -4463,7 +4463,7 @@
     <string name="status_bar_style_reset">Reset</string>
 
     <!-- Navigation Bar -->
-    <string name="title_navbar">NavBar modifier</string>
+    <string name="title_navbar">Navbar modifier</string>
     <string name="header_summary_navbar">Setup NavBar</string>
     <string name="navbar_height_title">Navigation bar height</string>
     <string name="navbar_height_summary">Specify the navigation bar height</string>
@@ -4716,10 +4716,6 @@
     <string name="hex">Hex:</string>
 
     <string name="display_category_beerdisplay_options_title">Additional Options</string>
-
-    <!-- Force dual panel -->
-    <string name="force_dualpanel_title">Force dual panel in settings</string>
-    <string name="force_dualpanel_summary">This will enable/disable dual panel in settings"</string>
 
     <!-- Alternate default app picker -->
     <string name="alt_resolver_title">Use alt default app picker</string>

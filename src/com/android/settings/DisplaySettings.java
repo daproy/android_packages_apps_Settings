@@ -70,7 +70,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_DISPLAY_ROTATION = "display_rotation";
     private static final String KEY_WAKEUP_CATEGORY = "category_wakeup_options";
     private static final String KEY_VOLUME_WAKE = "pref_volume_wake";
-    private static final String KEY_DUAL_PANEL = "force_dualpanel";
     private static final String PREF_USE_ALT_RESOLVER = "use_alt_resolver";
     private static final String PREF_CUSTOM_CARRIER_LABEL = "custom_carrier_label";
     private static final String KEY_NOTIFICATION_BEHAVIOUR = "notifications_behaviour";	
@@ -92,7 +91,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static ContentResolver mContentResolver;
 
     private CheckBoxPreference mVolumeWake;
-    private CheckBoxPreference mDualPanel;
     private ListPreference mCrtMode;
     private CheckBoxPreference mCrtOff;
     private CheckBoxPreference mUseAltResolver;
@@ -180,9 +178,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                         Settings.System.VOLUME_WAKE_SCREEN, 0) == 1);
             }
         }
-
-        mDualPanel = (CheckBoxPreference) findPreference(KEY_DUAL_PANEL);
-        mDualPanel.setChecked(Settings.System.getBoolean(getContentResolver(), Settings.System.FORCE_DUAL_PANEL, false));
 
         mUseAltResolver = (CheckBoxPreference) findPreference(PREF_USE_ALT_RESOLVER);
         mUseAltResolver.setChecked(Settings.System.getBoolean(getContentResolver(),
@@ -481,9 +476,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.WAKEUP_WHEN_PLUGGED_UNPLUGGED,
                     mWakeUpWhenPluggedOrUnplugged.isChecked() ? 1 : 0);
-            return true;
-        } else if (preference == mDualPanel) {
-            Settings.System.putBoolean(getContentResolver(), Settings.System.FORCE_DUAL_PANEL, ((CheckBoxPreference) preference).isChecked());
             return true;
         } else if (preference == mUseAltResolver) {
             Settings.System.putBoolean(getActivity().getContentResolver(),
