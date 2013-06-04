@@ -22,11 +22,8 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
-import android.content.res.Resources.NotFoundException;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.provider.Settings;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -35,7 +32,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.FrameLayout;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -47,23 +43,19 @@ import com.android.settings.cyanogenmod.QuickSettingsUtil.TileInfo;
 
 import java.util.ArrayList;
 public class QuickSettingsTiles extends Fragment {
-
+    
     private static final int MENU_RESET = Menu.FIRST;
-
+    
     DraggableGridView mDragView;
     private ViewGroup mContainer;
     LayoutInflater mInflater;
     Resources mSystemUiResources;
     TileAdapter mTileAdapter;
-
-    private int mTileTextSize;
-
+    
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        mDragView = new DraggableGridView(getActivity());
+        mDragView = new DraggableGridView(getActivity(), null);
         mContainer = container;
-        mContainer.setClipChildren(false);
-        mContainer.setClipToPadding(false);
         mInflater = inflater;
         PackageManager pm = getActivity().getPackageManager();
         if (pm != null) {
@@ -73,50 +65,10 @@ public class QuickSettingsTiles extends Fragment {
                 mSystemUiResources = null;
             }
         }
-
-        int colCount = Settings.System.getInt(getActivity().getContentResolver(),
-                Settings.System.QUICK_TILES_PER_ROW, 3);
-        updateTileTextSize(colCount);
-
-        int panelWidth = getItemFromSystemUi("notification_panel_width", "dimen");
-        if (panelWidth != 0) {
-            FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(panelWidth,
-                    FrameLayout.LayoutParams.MATCH_PARENT, Gravity.CENTER_HORIZONTAL);
-            mDragView.setLayoutParams(params);
-        }
-        int cellHeight = getItemFromSystemUi("quick_settings_cell_height", "dimen");
-        if (cellHeight != 0) {
-            mDragView.setCellHeight(cellHeight);
-        }
-        int cellGap = getItemFromSystemUi("quick_settings_cell_gap", "dimen");
-        if (cellGap != 0) {
-            mDragView.setCellGap(cellGap);
-        }
-        int columnCount = getItemFromSystemUi("quick_settings_num_columns", "integer");
-        if (columnCount != 0) {
-            mDragView.setColumnCount(columnCount);
-        }
         mTileAdapter = new TileAdapter(getActivity(), 0);
         return mDragView;
     }
-
-    private int getItemFromSystemUi(String name, String type) {
-        if (mSystemUiResources != null) {
-            int resId = (int) mSystemUiResources.getIdentifier(name, type, "com.android.systemui");
-            if (resId > 0) {
-                try {
-                    if (type.equals("dimen")) {
-                        return (int) mSystemUiResources.getDimension(resId);
-                    } else {
-                        return mSystemUiResources.getInteger(resId);
-                    }
-                } catch (NotFoundException e) {
-                }
-            }
-        }
-        return 0;
-    }
-
+    
     void genTiles() {
         mDragView.removeAllViews();
         ArrayList<String> tiles = QuickSettingsUtil.getTileListFromString(QuickSettingsUtil.getCurrentTiles(getActivity()));
@@ -128,7 +80,7 @@ public class QuickSettingsTiles extends Fragment {
         }
         addTile(R.string.profiles_add, null, R.drawable.ic_menu_add, false);
     }
-
+    
     /**
      * Adds a tile to the dragview
      * @param titleId - string id for tile text in systemui
@@ -142,7 +94,6 @@ public class QuickSettingsTiles extends Fragment {
             tileView = (View) mInflater.inflate(R.layout.quick_settings_tile_generic, null, false);
             final TextView name = (TextView) tileView.findViewById(R.id.tile_textview);
             name.setText(titleId);
-            name.setTextSize(1, mTileTextSize);
             name.setCompoundDrawablesRelativeWithIntrinsicBounds(0, iconRegId, 0, 0);
         } else {
             final boolean isUserTile = titleId == QuickSettingsUtil.TILES.get(TILE_USER).getTitleResId();
@@ -172,7 +123,7 @@ public class QuickSettingsTiles extends Fragment {
         }
         mDragView.addView(tileView, newTile ? mDragView.getChildCount() - 1 : mDragView.getChildCount());
     }
-
+    
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
@@ -215,28 +166,28 @@ public class QuickSettingsTiles extends Fragment {
                 builder.create().show();
             }
         });
-
+        
         setHasOptionsMenu(true);
     }
-
+    
     @Override
     public void onResume() {
         super.onResume();
         if (Utils.isPhone(getActivity())) {
-            mContainer.setPadding(20, 0, 20, 0);
+            mContainer.setPadding(20, 0, 0, 0);
         }
     }
-
+    
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-
+        
         menu.add(0, MENU_RESET, 0, R.string.profile_reset_title)
-                .setIcon(R.drawable.ic_settings_backup) // use the backup icon
-                .setAlphabeticShortcut('r')
-                .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM |
-                MenuItem.SHOW_AS_ACTION_WITH_TEXT);
+        .setIcon(R.drawable.ic_settings_backup) // use the backup icon
+        .setAlphabeticShortcut('r')
+        .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM |
+                         MenuItem.SHOW_AS_ACTION_WITH_TEXT);
     }
-
+    
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -247,7 +198,7 @@ public class QuickSettingsTiles extends Fragment {
                 return false;
         }
     }
-
+    
     private void resetTiles() {
         AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
         alert.setTitle(R.string.tiles_reset_title);
@@ -261,55 +212,39 @@ public class QuickSettingsTiles extends Fragment {
         alert.setNegativeButton(R.string.cancel, null);
         alert.create().show();
     }
-
-    private void updateTileTextSize(int column) {
-        // adjust the tile text size based on column count
-        switch (column) {
-            case 5:
-                mTileTextSize = 7;
-                break;
-            case 4:
-                mTileTextSize = 10;
-                break;
-            case 3:
-            default:
-                mTileTextSize = 12;
-                break;
-        }
-    }
-
+    
     @SuppressWarnings("rawtypes")
     static class TileAdapter extends ArrayAdapter {
-
+        
         String[] mTileKeys;
         Resources mResources;
-
+        
         public TileAdapter(Context context, int textViewResourceId) {
             super(context, android.R.layout.simple_list_item_1);
             mTileKeys = new String[getCount()];
             QuickSettingsUtil.TILES.keySet().toArray(mTileKeys);
             mResources = context.getResources();
         }
-
+        
         @Override
         public int getCount() {
             return QuickSettingsUtil.TILES.size();
         }
-
+        
         @Override
         public Object getItem(int position) {
             int resid = QuickSettingsUtil.TILES.get(mTileKeys[position])
-                    .getTitleResId();
+            .getTitleResId();
             return mResources.getString(resid);
         }
-
+        
         public String getTileId(int position) {
             return QuickSettingsUtil.TILES.get(mTileKeys[position])
-                    .getId();
+            .getId();
         }
-
+        
     }
-
+    
     public interface OnRearrangeListener {
         public abstract void onRearrange(int oldIndex, int newIndex);
         public abstract void onDelete(int index);
