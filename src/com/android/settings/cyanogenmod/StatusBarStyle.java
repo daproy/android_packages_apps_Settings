@@ -37,7 +37,7 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.R;
 import com.android.settings.Utils;
 import com.android.settings.utils.Helpers;
-import com.android.settings.widget.SeekBarPreference;
+import com.android.settings.aokp.widgets.SeekBarPreference;
 
 import com.android.settings.cyanogenmod.colorpicker.ColorPickerPreference;
 
@@ -82,8 +82,6 @@ public class StatusBarStyle extends SettingsPreferenceFragment implements
             Settings.System.putFloat(getActivity().getContentResolver(), Settings.System.STATUS_BAR_ALPHA, 0.0f);
         }
         mStatusbarTransparency = (SeekBarPreference) findPreference(PREF_STATUS_BAR_ALPHA);
-        mStatusbarTransparency.setProperty(Settings.System.STATUS_BAR_ALPHA);
-        mStatusbarTransparency.setInitValue((int) (statBarTransparency * 100));
         mStatusbarTransparency.setOnPreferenceChangeListener(this);
 
         mAlphaMode = (ListPreference) prefs.findPreference(PREF_STATUS_BAR_ALPHA_MODE);
@@ -111,10 +109,6 @@ public class StatusBarStyle extends SettingsPreferenceFragment implements
                         Settings.System.STATUS_NAV_BAR_ALPHA_MODE, 1);
                 Settings.System.putInt(getActivity().getContentResolver(),
                         Settings.System.STATUS_BAR_COLOR, -1);
-
-                Settings.System.putFloat(getActivity().getContentResolver(),
-                       Settings.System.STATUS_BAR_ALPHA, 0.0f);
-
                 refreshSettings();
                 return true;
              default:
@@ -131,10 +125,10 @@ public class StatusBarStyle extends SettingsPreferenceFragment implements
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mStatusbarTransparency) {
-            float valStat = Float.parseFloat((String) newValue);
+            float val = (float) (Integer.parseInt((String)newValue) * 0.01);
             Settings.System.putFloat(getActivity().getContentResolver(),
                     Settings.System.STATUS_BAR_ALPHA,
-                    valStat / 100);
+                    val);
             return true;
         } else if (preference == mStatusBarColor) {
             String hex = ColorPickerPreference.convertToARGB(
