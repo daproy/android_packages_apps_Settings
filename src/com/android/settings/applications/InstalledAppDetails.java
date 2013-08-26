@@ -289,7 +289,7 @@ public class InstalledAppDetails extends Fragment
     }
 
     private void initMoveButton() {
-        if (Environment.isExternalStorageEmulated()) {
+        if (!Environment.isExternalAppsAvailableAndMounted()) {
             mMoveAppButton.setVisibility(View.INVISIBLE);
             return;
         }
@@ -453,7 +453,7 @@ public class InstalledAppDetails extends Fragment
         mExternalCodeSize = (TextView)view.findViewById(R.id.external_code_size_text);
         mExternalDataSize = (TextView)view.findViewById(R.id.external_data_size_text);
 
-        if (Environment.isExternalStorageEmulated()) {
+        if (!Environment.isExternalAppsAvailableAndMounted()) {
             ((View)mExternalCodeSize.getParent()).setVisibility(View.GONE);
             ((View)mExternalDataSize.getParent()).setVisibility(View.GONE);
         }
@@ -966,7 +966,7 @@ public class InstalledAppDetails extends Fragment
             mHaveSizes = true;
             long codeSize = mAppEntry.codeSize;
             long dataSize = mAppEntry.dataSize;
-            if (Environment.isExternalStorageEmulated()) {
+            if (!Environment.isExternalAppsAvailableAndMounted()) {
                 codeSize += mAppEntry.externalCodeSize;
                 dataSize +=  mAppEntry.externalDataSize;
             } else {

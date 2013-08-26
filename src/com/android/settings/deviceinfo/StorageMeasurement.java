@@ -249,7 +249,7 @@ public class StorageMeasurement {
                 long codeSize = stats.codeSize;
                 long dataSize = stats.dataSize;
                 long cacheSize = stats.cacheSize;
-                if (Environment.isExternalStorageEmulated()) {
+                if (!Environment.isExternalAppsAvailableAndMounted()) {
                     // Include emulated storage when measuring internal. OBB is
                     // shared on emulated storage, so treat as code.
                     codeSize += stats.externalCodeSize + stats.externalObbSize;
