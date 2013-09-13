@@ -977,4 +977,13 @@
     <string name="lockscreen_allow_all_summary">Allow legacy widgets that don\'t natively support lock screen placement</string>
     <string name="lockscreen_allow_all_warning">Some widgets may not behave as expected when placed on the lock screen.  Other widgets may expose your personal data to anyone who accesses your device.  Please be mindful of these warnings before continuing.</string>
 
+    <!-- App moving -->
+    <string name="app_moving_enable">Enable app moving</string>
+    <string name="app_moving_disable">Disable app moving</string>
+    <string name="app_moving_reboot_title">Reboot now?</string>
+    <string name="app_moving_reboot_enabled_desc">Successfully enabled application moving.\n\nThe device needs to be rebooted for the setting to take effect.</string>
+    <string name="app_moving_reboot_disabled_desc">Successfully disabled application moving.\n\nThe device needs to be rebooted for the setting to take effect.</string>
+    <string name="app_moving_reboot_now_button">Reboot now</string>
+    <string name="app_moving_reboot_later_button">Reboot later</string>
+
 </resources>

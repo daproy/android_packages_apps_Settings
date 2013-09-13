@@ -41,6 +41,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.IBinder;
+import android.os.PowerManager;
 import android.os.RemoteException;
 import android.os.ServiceManager;
 import android.os.UserHandle;
@@ -77,6 +78,7 @@ import com.android.settings.Settings.StorageUseActivity;
 import com.android.settings.applications.ApplicationsState.AppEntry;
 import com.android.settings.deviceinfo.StorageMeasurement;
 import com.android.settings.Utils;
+import com.android.internal.util.slim.AppMoving;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -144,6 +146,7 @@ public class ManageApplications extends Fragment implements
     private static final String EXTRA_SORT_ORDER = "sortOrder";
     private static final String EXTRA_SHOW_BACKGROUND = "showBackground";
     private static final String EXTRA_DEFAULT_LIST_TYPE = "defaultListType";
+    private static final String EXTRA_REBOOT_DIALOG = "rebootDialog";
     private static final String EXTRA_RESET_DIALOG = "resetDialog";
 
     // attributes used as keys when passing values to InstalledAppDetails activity
@@ -169,7 +172,9 @@ public class ManageApplications extends Fragment implements
     public static final int SORT_ORDER_SIZE = MENU_OPTIONS_BASE + 5;
     public static final int SHOW_RUNNING_SERVICES = MENU_OPTIONS_BASE + 6;
     public static final int SHOW_BACKGROUND_PROCESSES = MENU_OPTIONS_BASE + 7;
-    public static final int RESET_APP_PREFERENCES = MENU_OPTIONS_BASE + 8;
+    public static final int APP_MOVING_ENABLE = MENU_OPTIONS_BASE + 8;
+    public static final int APP_MOVING_DISABLE = MENU_OPTIONS_BASE + 9;
+    public static final int RESET_APP_PREFERENCES = MENU_OPTIONS_BASE + 10;
     // sort order
     private int mSortOrder = SORT_ORDER_ALPHA;
     
@@ -464,6 +469,7 @@ public class ManageApplications extends Fragment implements
     private View mRootView;
     private ViewPager mViewPager;
 
+    AlertDialog mRebootDialog;
     AlertDialog mResetDialog;
 
     class MyPagerAdapter extends PagerAdapter
@@ -920,6 +926,10 @@ public class ManageApplications extends Fragment implements
             ((PreferenceFrameLayout.LayoutParams) rootView.getLayoutParams()).removeBorders = true;
         }
 
+        if (savedInstanceState != null && savedInstanceState.getBoolean(EXTRA_REBOOT_DIALOG)) {
+            buildRebootDialog();
+        }
+
         if (savedInstanceState != null && savedInstanceState.getBoolean(EXTRA_RESET_DIALOG)) {
             buildResetDialog();
         }
@@ -960,6 +970,9 @@ public class ManageApplications extends Fragment implements
             outState.putInt(EXTRA_DEFAULT_LIST_TYPE, mDefaultListType);
         }
         outState.putBoolean(EXTRA_SHOW_BACKGROUND, mShowBackground);
+        if (mRebootDialog != null) {
+            outState.putBoolean(EXTRA_REBOOT_DIALOG, true);
+        }
         if (mResetDialog != null) {
             outState.putBoolean(EXTRA_RESET_DIALOG, true);
         }
@@ -977,6 +990,12 @@ public class ManageApplications extends Fragment implements
     @Override
     public void onStop() {
         super.onStop();
+
+        if (mRebootDialog != null) {
+            mRebootDialog.dismiss();
+            mRebootDialog = null;
+        }
+
         if (mResetDialog != null) {
             mResetDialog.dismiss();
             mResetDialog = null;
@@ -1047,7 +1066,11 @@ public class ManageApplications extends Fragment implements
                 .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
         menu.add(0, SHOW_BACKGROUND_PROCESSES, 3, R.string.show_background_processes)
                 .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
-        menu.add(0, RESET_APP_PREFERENCES, 4, R.string.reset_app_preferences)
+        menu.add(0, APP_MOVING_ENABLE, 4, R.string.app_moving_enable)
+                .setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
+        menu.add(0, APP_MOVING_DISABLE, 5, R.string.app_moving_disable)
+                .setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
+        menu.add(0, RESET_APP_PREFERENCES, 6, R.string.reset_app_preferences)
                 .setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
         updateOptionsMenu();
     }
@@ -1085,6 +1108,8 @@ public class ManageApplications extends Fragment implements
             mOptionsMenu.findItem(SORT_ORDER_SIZE).setVisible(false);
             mOptionsMenu.findItem(SHOW_RUNNING_SERVICES).setVisible(showingBackground);
             mOptionsMenu.findItem(SHOW_BACKGROUND_PROCESSES).setVisible(!showingBackground);
+            mOptionsMenu.findItem(APP_MOVING_ENABLE).setVisible(false);
+            mOptionsMenu.findItem(APP_MOVING_DISABLE).setVisible(false);
             mOptionsMenu.findItem(RESET_APP_PREFERENCES).setVisible(false);
             mShowBackground = showingBackground;
         } else {
@@ -1092,7 +1117,25 @@ public class ManageApplications extends Fragment implements
             mOptionsMenu.findItem(SORT_ORDER_SIZE).setVisible(mSortOrder != SORT_ORDER_SIZE);
             mOptionsMenu.findItem(SHOW_RUNNING_SERVICES).setVisible(false);
             mOptionsMenu.findItem(SHOW_BACKGROUND_PROCESSES).setVisible(false);
+            mOptionsMenu.findItem(APP_MOVING_ENABLE).setVisible(!AppMoving.isEnabled());
+            mOptionsMenu.findItem(APP_MOVING_DISABLE).setVisible(AppMoving.isEnabled());
             mOptionsMenu.findItem(RESET_APP_PREFERENCES).setVisible(true);
+        }
+    }
+
+    void buildRebootDialog() {
+        if (mRebootDialog == null) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+            builder.setTitle(R.string.app_moving_reboot_title);
+            if (AppMoving.isEnabled()) {
+                builder.setMessage(R.string.app_moving_reboot_enabled_desc);
+            } else {
+                builder.setMessage(R.string.app_moving_reboot_disabled_desc);
+            }
+            builder.setPositiveButton(R.string.app_moving_reboot_now_button, this);
+            builder.setNegativeButton(R.string.app_moving_reboot_later_button, null);
+            mRebootDialog = builder.show();
+            mRebootDialog.setOnDismissListener(this);
         }
     }
 
@@ -1110,7 +1153,9 @@ public class ManageApplications extends Fragment implements
 
     @Override
     public void onDismiss(DialogInterface dialog) {
-        if (mResetDialog == dialog) {
+        if (mRebootDialog == dialog) {
+            mRebootDialog = null;
+        } else if (mResetDialog == dialog) {
             mResetDialog = null;
         }
     }
@@ -1118,7 +1163,12 @@ public class ManageApplications extends Fragment implements
 
     @Override
     public void onClick(DialogInterface dialog, int which) {
-        if (mResetDialog == dialog) {
+        if (mRebootDialog == dialog) {
+            mRebootDialog = null;
+            PowerManager pm = (PowerManager)
+                    getActivity().getSystemService(Context.POWER_SERVICE);
+            pm.reboot(null);
+        } else if (mResetDialog == dialog) {
             final PackageManager pm = getActivity().getPackageManager();
             final IPackageManager mIPm = IPackageManager.Stub.asInterface(
                     ServiceManager.getService("package"));
@@ -1205,6 +1255,12 @@ public class ManageApplications extends Fragment implements
             if (mCurTab != null && mCurTab.mRunningProcessesView != null) {
                 mCurTab.mRunningProcessesView.mAdapter.setShowBackground(true);
             }
+        } else if (menuId == APP_MOVING_ENABLE) {
+            AppMoving.setEnabled(true);
+            buildRebootDialog();
+        } else if (menuId == APP_MOVING_DISABLE) {
+            AppMoving.setEnabled(false);
+            buildRebootDialog();
         } else if (menuId == RESET_APP_PREFERENCES) {
             buildResetDialog();
         } else {
