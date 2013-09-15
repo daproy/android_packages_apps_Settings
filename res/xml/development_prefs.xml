@@ -83,6 +83,9 @@
         android:entries="@array/root_access_entries"
         android:entryValues="@array/root_access_values" />
 
+    <Preference android:key="restart_systemui"
+            android:title="@string/restart_systemui" />
+
     <PreferenceCategory android:key="debug_debugging_category"
             android:title="@string/debug_debugging_category">
 
