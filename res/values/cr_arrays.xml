@@ -410,4 +410,26 @@
         <item>@string/telo_radio_2g_20min</item>
     </string-array>
 
+    <!-- Identicons -->
+    <string-array name="identicons_style_entries" translatable="false">
+        <item>@string/identicons_style_retro</item>
+        <item>@string/identicons_style_contemporary</item>
+        <item>@string/identicons_style_spirograph</item>
+        <item>@string/identicons_style_dotmatrix</item>
+    </string-array>
+
+    <string-array name="identicons_style_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <array name="identicons_style_icons" translatable="false">
+        <item>@drawable/ic_identicons_style_retro</item>
+        <item>@drawable/ic_identicons_style_contemporary</item>
+        <item>@drawable/ic_identicons_style_spirograph</item>
+        <item>@drawable/ic_identicons_style_dotmatrix</item>
+    </array>
+
 </resources>

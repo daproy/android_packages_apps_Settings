@@ -19,6 +19,12 @@
             android:entries="@array/media_scanner_on_boot_entries"
             android:entryValues="@array/media_scanner_on_boot_values" />
 
+        <PreferenceScreen
+            android:key="identicons"
+            android:fragment="com.android.settings.chameleonos.labs.identicons.IdenticonsSettings"
+            android:icon="@drawable/ic_settings_identicons"
+            android:title="@string/identicons_title" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>

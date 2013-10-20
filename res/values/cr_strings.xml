@@ -372,4 +372,27 @@
     <string name="telo_radio_go_3g_unlock_title">3G Unlock</string>
     <string name="telo_radio_go_3g_unlock_summary">When device is unlocked network mode switches to 3G again.</string>
 
+    <!-- Identicons -->
+    <string name="identicons_title">Identicons</string>
+    <string name="identicons_enabled_title">Identicons</string>
+    <string name="identicons_enabled_summary">Use identicon as default contact picture when creating new contacts</string>
+    <string name="identicons_style_title">Identicon style</string>
+    <string name="identicons_style_summary">Choose an identicon style to use</string>
+    <string name="identicons_create_title">Create identicons</string>
+    <string name="identicons_create_summary">Create identicons for existing contacts without a contact photo</string>
+    <string name="identicons_creation_service_running_title">Creating identicons</string>
+    <string name="identicons_creation_service_running_summary"></string>
+    <string name="identicons_creation_service_contact_summary">Processing %s</string>
+    <string name="identicons_creation_service_contact_summary_finishing">Tying up loose ends...</string>
+    <string name="identicons_remove_title">Remove identicons</string>
+    <string name="identicons_remove_summary">Remove identicon from contacts that have one set</string>
+    <string name="identicons_remove_service_running_title">Removing identicons</string>
+    <string name="identicons_remove_service_running_summary"></string>
+    <string name="identicons_remove_service_contact_summary">Processing photo %1$d/%2$d</string>
+    <string name="identicons_remove_service_contact_summary_finishing">Tying up loose ends...</string>
+    <string name="identicons_style_retro">Retro</string>
+    <string name="identicons_style_contemporary">Contemporary</string>
+    <string name="identicons_style_spirograph">Spirograph</string>
+    <string name="identicons_style_dotmatrix">Dot matrix</string>
+
 </resources>
