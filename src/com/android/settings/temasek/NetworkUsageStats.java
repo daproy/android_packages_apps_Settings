@@ -28,10 +28,12 @@ public class NetworkUsageStats extends SettingsPreferenceFragment implements OnP
     private static final String STATUS_BAR_NETWORK_STATS = "status_bar_show_network_stats";
     private static final String STATUS_BAR_NETWORK_STATS_UPDATE = "status_bar_network_status_update";
     private static final String STATUS_BAR_NETWORK_COLOR = "status_bar_network_color";
+    private static final String STATUS_BAR_NETWORK_HIDE = "status_bar_network_hide";
     
     private ListPreference mStatusBarNetStatsUpdate;
     private CheckBoxPreference mStatusBarNetworkStats;
     private ColorPickerPreference mStatusBarNetworkColor;
+    private CheckBoxPreference mStatusBarNetworkHide;
     
     private static final int MENU_RESET = Menu.FIRST;
 
@@ -72,6 +74,11 @@ public class NetworkUsageStats extends SettingsPreferenceFragment implements OnP
         String hexColor = String.format("#%08x", (0xffffffff & intColor));
         mStatusBarNetworkColor.setSummary(hexColor);
         mStatusBarNetworkColor.setNewPreviewColor(intColor);
+
+	// hide if there's no traffic
+	mStatusBarNetworkHide = (CheckBoxPreference) prefSet.findPreference(STATUS_BAR_NETWORK_HIDE);
+	mStatusBarNetworkHide.setChecked((Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
+                Settings.System.STATUS_BAR_NETWORK_HIDE, 0) == 1));
 
   	setHasOptionsMenu(true);
     }
@@ -143,6 +150,11 @@ public class NetworkUsageStats extends SettingsPreferenceFragment implements OnP
             value = mStatusBarNetworkStats.isChecked();
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                     Settings.System.STATUS_BAR_NETWORK_STATS, value ? 1 : 0);
+            return true;
+	} else if (preference == mStatusBarNetworkHide) {
+            value = mStatusBarNetworkHide.isChecked();
+            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
+                    Settings.System.STATUS_BAR_NETWORK_HIDE, value ? 1 : 0);
             return true;
         }
         return false;
