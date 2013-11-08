@@ -21,6 +21,12 @@
             android:entryValues="@array/values_status_bar_network_stats_update"
             android:dependency="status_bar_show_network_stats" />
 
+	<net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="status_bar_network_color"
+            android:title="@string/status_bar_network_usage_color_style"
+            android:defaultValue="#ffffff" 
+	    android:dependency="status_bar_show_network_stats" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
