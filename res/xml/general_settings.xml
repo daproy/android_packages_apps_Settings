@@ -25,6 +25,12 @@
             android:icon="@drawable/ic_settings_identicons"
             android:title="@string/identicons_title" />
 
+	<!-- CPU info overlay -->
+	<CheckBoxPreference
+            android:key="show_cpu_info"
+            android:title="@string/show_cpu_info"
+            android:summary="@string/show_cpu_info_summary"/>     
+
     </PreferenceCategory>
 
 </PreferenceScreen>
