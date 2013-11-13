@@ -51,9 +51,15 @@ public class SettingsPreferenceFragment extends PreferenceFragment implements Di
 
     private String mHelpUrl;
 
+<<<<<<< HEAD
+=======
+    //Needed for Lockscreen Notifications
+    protected Context mContext;
+
     // Need to use AOKP Custom system animation
     protected ContentResolver mContentRes; 
 
+>>>>>>> 0fefb52... AOKP custom system animations (2/2)
     // Cache the content resolver for async callbacks
     private ContentResolver mContentResolver;
 
@@ -61,11 +67,14 @@ public class SettingsPreferenceFragment extends PreferenceFragment implements Di
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
+<<<<<<< HEAD
+=======
         mContext = getActivity().getApplicationContext();
 
 	// Need to use AOKP Custom system animation
         mContentRes = getActivity().getContentResolver(); 
 
+>>>>>>> 0fefb52... AOKP custom system animations (2/2)
         // Prepare help url and enable menu if necessary
         int helpResource = getHelpResource();
         if (helpResource != 0) {
@@ -327,9 +336,27 @@ public class SettingsPreferenceFragment extends PreferenceFragment implements Di
             return false;
         }
     }
+<<<<<<< HEAD
+=======
+
+    public boolean isPackageInstalled(String packageName) {
+        if (packageName != null) {
+            try {
+                PackageInfo pi = getPackageManager().getPackageInfo(packageName, 0);
+                if (!pi.applicationInfo.enabled) {
+                    return false;
+                }
+            } catch (NameNotFoundException e) {
+                return false;
+            }
+        }
+
+        return true;
+    }
 
     // Need to AOKP Custom system animation
     public void setTitle(int resId) {
         getActivity().setTitle(resId);
     }  
+>>>>>>> 0fefb52... AOKP custom system animations (2/2)
 }
