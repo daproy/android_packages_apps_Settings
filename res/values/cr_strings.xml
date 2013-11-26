@@ -286,4 +286,9 @@
     <string name="hw_keys_title">Hardware keys</string>
     <string name="hw_keys_summary">Enable hardware keys</string>
 
+    <!--Quick unlock -->
+    <string name="unlock_quick_unlock_control_title">Quick unlock</string>
+    <string name="unlock_quick_unlock_control_summary">Unlock automatically when the correct PIN/pas
+sword is entered</string>
+
 </resources>
