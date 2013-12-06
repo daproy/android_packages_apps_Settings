@@ -772,4 +772,7 @@
     <string name="recents_long_press_qs_panel">QS panel</string>
     <string name="recents_long_press_power_menu">Power menu</string>
 
+    <!-- Quick settings panel  -->
+    <string name="title_tile_music">Music</string>
+
 </resources>
