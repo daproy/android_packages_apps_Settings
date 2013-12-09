@@ -266,6 +266,11 @@ public class Status extends PreferenceActivity {
     protected void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
+        ActionBar mActionBar = getActionBar();
+        if (mActionBar != null) {
+            mActionBar.setDisplayHomeAsUpEnabled(true);
+        }
+
         mHandler = new MyHandler(this);
 
         mCM = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
@@ -418,6 +423,15 @@ public class Status extends PreferenceActivity {
             intent.putExtra(SelectSubscription.TARGET_CLASS,
                     "com.android.settings.deviceinfo.msim.MSimSubscriptionStatus");
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+            return true;
+        }
+        return false;
     }
 
     @Override
