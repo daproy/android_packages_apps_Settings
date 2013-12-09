@@ -58,11 +58,13 @@ public class OmniFeatures extends SettingsPreferenceFragment implements
     private static final String SMS_BREATH = "sms_breath";
     private static final String MISSED_CALL_BREATH = "missed_call_breath";
     private static final String VOICEMAIL_BREATH = "voicemail_breath";
+    private static final String STATUS_BAR_NETWORK_ACTIVITY = "status_bar_network_activity";
 
     private CheckBoxPreference mStatusBarCustomHeader;
     private CheckBoxPreference mSMSBreath;
     private CheckBoxPreference mMissedCallBreath;
     private CheckBoxPreference mVoicemailBreath;
+    private CheckBoxPreference mStatusBarNetworkActivity;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -91,6 +93,11 @@ public class OmniFeatures extends SettingsPreferenceFragment implements
         mVoicemailBreath.setChecked(Settings.System.getInt(resolver,
                 Settings.System.KEY_VOICEMAIL_BREATH, 0) == 1);
         mVoicemailBreath.setOnPreferenceChangeListener(this);
+
+        mStatusBarNetworkActivity = (CheckBoxPreference) prefSet.findPreference(STATUS_BAR_NETWORK_ACTIVITY);
+        mStatusBarNetworkActivity.setChecked(Settings.System.getInt(resolver,
+            Settings.System.STATUS_BAR_NETWORK_ACTIVITY, 0) == 1);
+        mStatusBarNetworkActivity.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -114,6 +121,9 @@ public class OmniFeatures extends SettingsPreferenceFragment implements
         } else if (preference == mVoicemailBreath) {
             boolean value = (Boolean) objValue;
             Settings.System.putInt(resolver, Settings.System.KEY_VOICEMAIL_BREATH, value ? 1 : 0);
+        } else if (preference == mStatusBarNetworkActivity) {
+            boolean value = (Boolean) objValue;
+            Settings.System.putInt(resolver, Settings.System.STATUS_BAR_NETWORK_ACTIVITY, value ? 1 : 0);
         } else {
             return false;
         }
