@@ -7,7 +7,8 @@
     <!-- Do NOT translate this -->
    <string name="temasek_version_default">Build V66</string>
 
-    <!-- QS Power menu -->
-    <string name="title_tile_power">Power Menu</string>      
+    <!-- QS and navring Power menu -->
+    <string name="title_tile_power">Power Menu</string> 
+    <string name="navring_action_power_menu">Power menu</string>       
 
 </resources>
