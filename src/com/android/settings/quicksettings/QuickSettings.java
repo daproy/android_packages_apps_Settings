@@ -28,6 +28,7 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.Vibrator;
+import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.MultiSelectListPreference;
 import android.preference.Preference;
@@ -54,6 +55,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements
     private static final String GENERAL_SETTINGS = "pref_general_settings";
     private static final String STATIC_TILES = "static_tiles";
     private static final String DYNAMIC_TILES = "pref_dynamic_tiles";
+    private static final String PREF_FLIP_QS_TILES = "flip_qs_tiles";
 
     private MultiSelectListPreference mRingMode;
     private ListPreference mNetworkMode;
@@ -62,6 +64,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements
     private PreferenceCategory mGeneralSettings;
     private PreferenceCategory mStaticTiles;
     private PreferenceCategory mDynamicTiles;
+    private CheckBoxPreference mFlipQsTiles;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -108,6 +111,10 @@ public class QuickSettings extends SettingsPreferenceFragment implements
         } else {
             mStaticTiles.removePreference(mRingMode);
         }
+
+        mFlipQsTiles = (CheckBoxPreference) findPreference(PREF_FLIP_QS_TILES);
+        mFlipQsTiles.setChecked(Settings.System.getInt(resolver,
+                Settings.System.QUICK_SETTINGS_TILES_FLIP, 0) == 1);
 
         // Add the network mode preference
         mNetworkMode = (ListPreference) prefSet.findPreference(EXP_NETWORK_MODE);
@@ -202,6 +209,11 @@ public class QuickSettings extends SettingsPreferenceFragment implements
             int index = mScreenTimeoutMode.findIndexOfValue((String) newValue);
             Settings.System.putInt(resolver, Settings.System.EXPANDED_SCREENTIMEOUT_MODE, value);
             mScreenTimeoutMode.setSummary(mScreenTimeoutMode.getEntries()[index]);
+            return true;
+        } else if (preference == mFlipQsTiles) {
+            Settings.System.putInt(resolver,
+                    Settings.System.QUICK_SETTINGS_TILES_FLIP,
+                    ((CheckBoxPreference) preference).isChecked() ? 1 : 0);
             return true;
         }
         return false;

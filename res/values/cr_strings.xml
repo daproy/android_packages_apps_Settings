@@ -729,4 +729,8 @@
     <string name="title_floating_window">Floating window</string>
     <string name="summary_floating_window">Open Quick Settings tiles in floating window</string>
 
+    <!-- QuickSettings fliptiles -->
+    <string name="flip_qs_tiles_title">Flip tiles</string>
+    <string name="flip_qs_tiles_summary">Flips the tiles on touch</string>
+
 </resources>
