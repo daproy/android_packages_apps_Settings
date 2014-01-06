@@ -34,6 +34,7 @@ import android.preference.PreferenceScreen;
 import android.telephony.MSimTelephonyManager;
 import android.util.Log;
 import android.widget.Toast;
+import android.provider.Settings;
 
 import com.android.settings.deviceinfo.msim.MSimStatus;
 
@@ -242,6 +243,9 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
                     getActivity().getSharedPreferences(DevelopmentSettings.PREF_FILE,
                             Context.MODE_PRIVATE).edit().putBoolean(
                                     DevelopmentSettings.PREF_SHOW, true).apply();
+                    Settings.Secure.putInt(getActivity().getContentResolver(),
+                            Settings.Secure.DEVELOPER_OPTIONS_ENABLED, 1);
+
                     if (mDevHitToast != null) {
                         mDevHitToast.cancel();
                     }
