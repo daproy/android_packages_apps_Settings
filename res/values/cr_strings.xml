@@ -185,7 +185,9 @@
     <string name="status_bar_ticker_summary">Notification text animation in the statusbar</string>
     <string name="clock_font_style_title">Font</string>
     <string name="clock_font_bold">Bold</string>
+    <string name="clock_font_condensed">Condensed</string>
     <string name="clock_font_light">Light</string>
+    <string name="clock_font_light_italic">Light Italic</string>
     <string name="clock_font_normal">Normal</string>
 
     <!-- Partition Info -->
