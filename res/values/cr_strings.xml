@@ -183,6 +183,10 @@
     <string name="status_bar_clock_style_reset_message">Reset clock color?</string>
     <string name="status_bar_ticker_title">Notification Ticker</string>
     <string name="status_bar_ticker_summary">Notification text animation in the statusbar</string>
+    <string name="clock_font_style_title">Font</string>
+    <string name="clock_font_bold">Bold</string>
+    <string name="clock_font_light">Light</string>
+    <string name="clock_font_normal">Normal</string>
 
     <!-- Partition Info -->
     <string name="partition_info_title">View partition information</string>
