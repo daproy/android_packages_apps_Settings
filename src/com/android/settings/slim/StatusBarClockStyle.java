@@ -117,7 +117,7 @@ public class StatusBarClockStyle extends SettingsPreferenceFragment
         mFontStyle.setOnPreferenceChangeListener(this);
         mFontStyle.setValue(Integer.toString(Settings.System.getInt(getActivity()
                 .getContentResolver(), Settings.System.STATUSBAR_CLOCK_FONT_STYLE,
-                0)));
+                4)));
         mFontStyle.setSummary(mFontStyle.getEntry());
 
         mClockAmPmStyle = (ListPreference) prefSet.findPreference(PREF_AM_PM_STYLE);
