@@ -233,4 +233,7 @@
     <string name="media_scanner_on_boot_ask">Ask to scan (notification)</string>
     <string name="media_scanner_on_boot_disabled">Do not scan media</string>
 
+    <!-- SuperSU -->
+    <string name="supersu_title">SuperSU</string>
+
 </resources>
