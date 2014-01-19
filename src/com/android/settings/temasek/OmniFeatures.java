@@ -55,8 +55,14 @@ public class OmniFeatures extends SettingsPreferenceFragment implements
     private static final String TAG = "OmniFeatures";
 
     private static final String STATUS_BAR_CUSTOM_HEADER = "custom_status_bar_header";
+    private static final String SMS_BREATH = "sms_breath";
+    private static final String MISSED_CALL_BREATH = "missed_call_breath";
+    private static final String VOICEMAIL_BREATH = "voicemail_breath";
 
     private CheckBoxPreference mStatusBarCustomHeader;
+    private CheckBoxPreference mSMSBreath;
+    private CheckBoxPreference mMissedCallBreath;
+    private CheckBoxPreference mVoicemailBreath;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -70,6 +76,21 @@ public class OmniFeatures extends SettingsPreferenceFragment implements
         mStatusBarCustomHeader.setChecked(Settings.System.getInt(resolver,
             Settings.System.STATUS_BAR_CUSTOM_HEADER, 0) == 1);
         mStatusBarCustomHeader.setOnPreferenceChangeListener(this);
+
+        mSMSBreath = (CheckBoxPreference) findPreference(SMS_BREATH);
+        mSMSBreath.setChecked(Settings.System.getInt(resolver,
+                Settings.System.KEY_SMS_BREATH, 0) == 1);
+        mSMSBreath.setOnPreferenceChangeListener(this);
+
+        mMissedCallBreath = (CheckBoxPreference) findPreference(MISSED_CALL_BREATH);
+        mMissedCallBreath.setChecked(Settings.System.getInt(resolver,
+                Settings.System.KEY_MISSED_CALL_BREATH, 0) == 1);
+        mMissedCallBreath.setOnPreferenceChangeListener(this);
+
+        mVoicemailBreath = (CheckBoxPreference) findPreference(VOICEMAIL_BREATH);
+        mVoicemailBreath.setChecked(Settings.System.getInt(resolver,
+                Settings.System.KEY_VOICEMAIL_BREATH, 0) == 1);
+        mVoicemailBreath.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -84,6 +105,15 @@ public class OmniFeatures extends SettingsPreferenceFragment implements
             Settings.System.putInt(resolver,
                 Settings.System.STATUS_BAR_CUSTOM_HEADER, value ? 1 : 0);
            Helpers.restartSystemUI();
+        } else if (preference == mSMSBreath) {
+            boolean value = (Boolean) objValue;
+            Settings.System.putInt(resolver, Settings.System.KEY_SMS_BREATH, value ? 1 : 0);
+        } else if (preference == mMissedCallBreath) {
+            boolean value = (Boolean) objValue;
+            Settings.System.putInt(resolver, Settings.System.KEY_MISSED_CALL_BREATH, value ? 1 : 0);
+        } else if (preference == mVoicemailBreath) {
+            boolean value = (Boolean) objValue;
+            Settings.System.putInt(resolver, Settings.System.KEY_VOICEMAIL_BREATH, value ? 1 : 0);
         } else {
             return false;
         }
