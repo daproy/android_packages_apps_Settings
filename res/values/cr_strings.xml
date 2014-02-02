@@ -707,4 +707,7 @@
     <string name="haptic_qs_tiles_title">Vibrate on touch</string>
     <string name="haptic_qs_tiles_summary">Vibrate when touching tiles</string>
 
+    <!-- TRDS tile -->
+    <string name="title_tile_theme">Theme switcher</string>
+
 </resources>
