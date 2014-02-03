@@ -39,6 +39,11 @@
             android:entryValues="@array/toast_animation_values"
             android:persistent="false" />
 
+        <PreferenceScreen
+            android:key="progressbar_settings"
+            android:fragment="com.android.settings.temasek.fragments.ProgressBar"
+            android:title="@string/progressbar_title" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
