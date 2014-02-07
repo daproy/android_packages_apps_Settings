@@ -28,7 +28,7 @@
             android:key="progressbar_reverse"
             android:title="@string/progressbar_reverse_title" />
 
-        <com.android.settings.cyanogenmod.SeekBarPreference
+        <com.android.settings.cyanogenmod.NEWSeekBarPreference
             android:key="progressbar_speed"
             android:persistent="false"
             android:title="@string/progressbar_speed_title"
@@ -39,7 +39,7 @@
             settings:unitsRight=""
             android:defaultValue="10" />
 
-        <com.android.settings.cyanogenmod.SeekBarPreference
+        <com.android.settings.cyanogenmod.NEWSeekBarPreference
             android:key="progressbar_width"
             android:persistent="false"
             android:title="@string/progressbar_width_title"
@@ -50,7 +50,7 @@
             settings:unitsRight="dp"
             android:defaultValue="4" />
 
-        <com.android.settings.cyanogenmod.SeekBarPreference
+        <com.android.settings.cyanogenmod.NEWSeekBarPreference
             android:key="progressbar_length"
             android:persistent="false"
             android:title="@string/progressbar_length_title"
@@ -61,7 +61,7 @@
             settings:unitsRight="dp"
             android:defaultValue="10" />
 
-        <com.android.settings.cyanogenmod.SeekBarPreference
+        <com.android.settings.cyanogenmod.NEWSeekBarPreference
             android:key="progressbar_count"
             android:persistent="false"
             android:title="@string/progressbar_count_title"
