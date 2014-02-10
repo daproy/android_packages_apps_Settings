@@ -74,7 +74,7 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="@string/pie_additional_options">
+        android:title="@string/additional_options_title">
 
         <CheckBoxPreference
             android:key="pie_mirror_right"

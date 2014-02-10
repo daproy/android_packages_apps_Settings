@@ -47,7 +47,7 @@
         android:dependency="pie_control" />
 
     <PreferenceCategory
-        android:title="@string/pie_additional_options">
+        android:title="@string/additional_options_title">
 
         <ListPreference
             android:key="pie_menu"
