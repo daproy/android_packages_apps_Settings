@@ -59,6 +59,12 @@
                 android:icon="@drawable/ring_notif"
                 android:title="@string/notification_volume_option_title" />
 
+        <!-- Live volume steps -->
+        <PreferenceScreen
+                android:key="volume_steps_settings"
+                android:fragment="com.android.settings.temasek.VolumeSteps"
+                android:title="@string/volume_steps_title" />
+
         <!-- Also vibrate for calls -->
         <SwitchPreference
                 android:key="vibrate_when_ringing"
