@@ -495,5 +495,11 @@
     <string name="progressbar_color_3_title">Color3</string>
     <string name="progressbar_color_4_title">Color4</string>
     <string name="sample_progressbar_text">ProgressBar : Preview</string>
+    <string name="progressbar_interpolator">Interpolator</string>
+    <string name="progressbar_none">None</string>
+    <string name="progressbar_acclerate">Accelerate</string>
+    <string name="progressbar_linear">Linear</string>
+    <string name="progressbar_acceleratedecelerate">AccelerateDecelerate</string>
+    <string name="progressbar_decelerate">Decelerate</string>
 
 </resources>

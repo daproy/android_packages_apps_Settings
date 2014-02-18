@@ -92,6 +92,13 @@
         android:title="@string/progressbar_color_4_title"
         android:defaultValue="#ffffff" />
 
+    <ListPreference
+            android:key="progressbar_interpolators"
+            android:title="@string/progressbar_interpolator"
+            android:entries="@array/progressbar_interpolators_entries"
+            android:entryValues="@array/progressbar_interpolators_values"
+            android:persistent="false" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>

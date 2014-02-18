@@ -501,4 +501,21 @@
         <item>15</item>
     </string-array>
 
+    <!-- ProgressBar -->
+    <string-array name="progressbar_interpolators_entries">
+        <item>@string/progressbar_none</item>
+        <item>@string/progressbar_acclerate</item>
+        <item>@string/progressbar_linear</item>
+        <item>@string/progressbar_acceleratedecelerate</item>
+        <item>@string/progressbar_decelerate</item>
+    </string-array>
+
+    <string-array name="progressbar_interpolators_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
 </resources>
