@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.temasek.fragments;
+package com.android.settings.cyanogenmod;
 
 import android.app.AlertDialog;
 import android.content.ContentResolver;
@@ -55,10 +55,10 @@ public class ProgressBar extends SettingsPreferenceFragment implements
 
 	private CheckBoxPreference mprogressbar_mirror;
 	private CheckBoxPreference mprogressbar_reverse;
-	private SeekBarPreference mprogressbar_speed;
-	private SeekBarPreference mprogressbar_width;
-	private SeekBarPreference mprogressbar_length;
-	private SeekBarPreference mprogressbar_count;
+	private NEWSeekBarPreference mprogressbar_speed;
+	private NEWSeekBarPreference mprogressbar_width;
+	private NEWSeekBarPreference mprogressbar_length;
+	private NEWSeekBarPreference mprogressbar_count;
 	private ColorPickerPreference mprogressbar_color_1;
 	private ColorPickerPreference mprogressbar_color_2;
 	private ColorPickerPreference mprogressbar_color_3;
@@ -86,22 +86,22 @@ public class ProgressBar extends SettingsPreferenceFragment implements
 		mprogressbar_reverse = (CheckBoxPreference) findPreference(PROGRESSBAR_REVERSE);
 		mprogressbar_mirror.setChecked(Settings.System.getInt(getContentResolver(), Settings.System.PROGRESSBAR_REVERSE, 0) == 1);
 
-		mprogressbar_speed = (SeekBarPreference) findPreference(PROGRESSBAR_SPEED);
+		mprogressbar_speed = (NEWSeekBarPreference) findPreference(PROGRESSBAR_SPEED);
 		mprogressbar_speed.setValue(Settings.System.getInt(getContentResolver(),
 		                            Settings.System.PROGRESSBAR_SPEED, 4));
 		mprogressbar_speed.setOnPreferenceChangeListener(this);
 
-		mprogressbar_width = (SeekBarPreference) findPreference(PROGRESSBAR_WIDTH);
+		mprogressbar_width = (NEWSeekBarPreference) findPreference(PROGRESSBAR_WIDTH);
 		mprogressbar_width.setValue(Settings.System.getInt(getContentResolver(),
 		                            Settings.System.PROGRESSBAR_WIDTH, 4));
 		mprogressbar_width.setOnPreferenceChangeListener(this);
 
-		mprogressbar_length = (SeekBarPreference) findPreference(PROGRESSBAR_LENGTH);
+		mprogressbar_length = (NEWSeekBarPreference) findPreference(PROGRESSBAR_LENGTH);
 		mprogressbar_length.setValue(Settings.System.getInt(getContentResolver(),
 		                             Settings.System.PROGRESSBAR_LENGTH, 10));
 		mprogressbar_length.setOnPreferenceChangeListener(this);
 
-		mprogressbar_count = (SeekBarPreference) findPreference(PROGRESSBAR_COUNT);
+		mprogressbar_count = (NEWSeekBarPreference) findPreference(PROGRESSBAR_COUNT);
 		mprogressbar_count.setValue(Settings.System.getInt(getContentResolver(),
 		                            Settings.System.PROGRESSBAR_COUNT, 6));
 		mprogressbar_count.setOnPreferenceChangeListener(this);
