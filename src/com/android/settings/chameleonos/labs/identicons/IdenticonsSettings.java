@@ -40,7 +40,7 @@ public class IdenticonsSettings extends SettingsPreferenceFragment implements
     private static final String KEY_REMOVE = "identicons_remove";
 
     private SwitchPreference mEnabledPref;
-    private ImageListPreference mStylePref;
+    private ImageListPreferenceChOS mStylePref;
 
     private CharSequence mPreviousTitle;
 
@@ -56,7 +56,7 @@ public class IdenticonsSettings extends SettingsPreferenceFragment implements
         mEnabledPref.setOnPreferenceChangeListener(this);
 
         PreferenceScreen prefSet = getPreferenceScreen();
-        mStylePref = (ImageListPreference) prefSet.findPreference(KEY_STYLE);
+        mStylePref = (ImageListPreferenceChOS) prefSet.findPreference(KEY_STYLE);
         mStylePref.setOnPreferenceChangeListener(this);
         int style = Settings.System.getInt(getContentResolver(),
                 Settings.System.IDENTICONS_STYLE, 0);

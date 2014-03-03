@@ -24,13 +24,13 @@
         android:summary="@string/identicons_enabled_summary"
         android:defaultValue="false" />
 
-    <com.android.settings.chameleonos.labs.identicons.ImageListPreference
+    <com.android.settings.chameleonos.labs.identicons.ImageListPreferenceChOS
         android:key="identicons_style"
         android:title="@string/identicons_style_title"
         android:summary="@string/identicons_style_summary"
         android:entries="@array/identicons_style_entries"
         android:entryValues="@array/identicons_style_values"
-        settings:entryImages="@array/identicons_style_icons"
+        settings:entryImagez="@array/identicons_style_icons"
         android:defaultValue="0"/>
 
     <Preference

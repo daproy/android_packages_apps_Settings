@@ -36,7 +36,7 @@ import android.widget.ListAdapter;
 import com.android.settings.R;
 
 @ChaosLab(name="QuickStats", classification=Classification.NEW_CLASS)
-public class ImageListPreference extends ListPreference {
+public class ImageListPreferenceChOS extends ListPreference {
     private int[] mResourceIds = null;
     private int mRadioDrawableId;
 
@@ -45,10 +45,10 @@ public class ImageListPreference extends ListPreference {
      * @param context application context.
      * @param attrs custom xml attributes.
      */
-    public ImageListPreference(Context context, AttributeSet attrs) {
+    public ImageListPreferenceChOS(Context context, AttributeSet attrs) {
         super(context, attrs);
         TypedArray typedArray = context.obtainStyledAttributes(attrs,
-                R.styleable.ImageListPreference);
+                R.styleable.ImageListPreferenceChOS);
 
         String[] imageNames = context.getResources().getStringArray(
                 typedArray.getResourceId(typedArray.getIndexCount()-1, -1));

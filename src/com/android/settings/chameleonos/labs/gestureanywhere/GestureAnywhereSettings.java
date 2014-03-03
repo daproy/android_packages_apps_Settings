@@ -28,7 +28,7 @@ import android.provider.Settings;
 import android.view.Gravity;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.settings.beanstalk.SeekBarPreferenceChOS;
+import com.android.settings.crdroid.SeekBarPreferenceCHOS;
 
 public class GestureAnywhereSettings extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {
@@ -43,9 +43,9 @@ public class GestureAnywhereSettings extends SettingsPreferenceFragment implemen
 
     private SwitchPreference mEnabledPref;
     private ListPreference mPositionPref;
-    private SeekBarPreferenceChOS mTriggerWidthPref;
-    private SeekBarPreferenceChOS mTriggerTopPref;
-    private SeekBarPreferenceChOS mTriggerBottomPref;
+    private SeekBarPreferenceCHOS mTriggerWidthPref;
+    private SeekBarPreferenceCHOS mTriggerTopPref;
+    private SeekBarPreferenceCHOS mTriggerBottomPref;
 
     private CharSequence mPreviousTitle;
 
@@ -68,17 +68,17 @@ public class GestureAnywhereSettings extends SettingsPreferenceFragment implemen
         mPositionPref.setValue(String.valueOf(position));
         updatePositionSummary(position);
 
-        mTriggerWidthPref = (SeekBarPreferenceChOS) findPreference(KEY_TRIGGER_WIDTH);
+        mTriggerWidthPref = (SeekBarPreferenceCHOS) findPreference(KEY_TRIGGER_WIDTH);
         mTriggerWidthPref.setValue(Settings.System.getInt(getContentResolver(),
                 Settings.System.GESTURE_ANYWHERE_TRIGGER_WIDTH, 10));
         mTriggerWidthPref.setOnPreferenceChangeListener(this);
 
-        mTriggerTopPref = (SeekBarPreferenceChOS) findPreference(KEY_TRIGGER_TOP);
+        mTriggerTopPref = (SeekBarPreferenceCHOS) findPreference(KEY_TRIGGER_TOP);
         mTriggerTopPref.setValue(Settings.System.getInt(getContentResolver(),
                 Settings.System.GESTURE_ANYWHERE_TRIGGER_TOP, 0));
         mTriggerTopPref.setOnPreferenceChangeListener(this);
 
-        mTriggerBottomPref = (SeekBarPreferenceChOS) findPreference(KEY_TRIGGER_BOTTOM);
+        mTriggerBottomPref = (SeekBarPreferenceCHOS) findPreference(KEY_TRIGGER_BOTTOM);
         mTriggerBottomPref.setValue(Settings.System.getInt(getContentResolver(),
                 Settings.System.GESTURE_ANYWHERE_TRIGGER_HEIGHT, 100));
         mTriggerBottomPref.setOnPreferenceChangeListener(this);
