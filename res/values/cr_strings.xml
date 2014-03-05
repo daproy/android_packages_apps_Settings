@@ -220,4 +220,7 @@
     <string name="general_settings_style_title">General options</string>
     <string name="restart_systemui">Restart SystemUI</string>
 
+    <!-- Lockscreen battery ring -->
+    <string name="battery_around_lockscreen_ring">Battery around unlock ring</string>
+
 </resources>
