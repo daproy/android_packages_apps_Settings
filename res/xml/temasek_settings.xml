@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/temasek_settings_title"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+
+    <PreferenceScreen
+        android:key="omni_features"
+        android:fragment="com.android.settings.temasek.OmniFeatures"
+        android:title="@string/omni_features_title" />
+
+</PreferenceScreen>
