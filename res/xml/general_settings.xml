@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:title="@string/general_settings_title">
+
+    <PreferenceCategory
+        android:title="@string/general_settings_style_title">
+
+        <!-- Restart SystemUI -->
+        <Preference android:key="restart_systemui"
+            android:title="@string/restart_systemui" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
