@@ -10,4 +10,9 @@
         android:fragment="com.android.settings.temasek.OmniFeatures"
         android:title="@string/omni_features_title" />
 
+    <PreferenceScreen
+        android:key="general_settings"
+        android:fragment="com.android.settings.temasek.GeneralSettings"
+        android:title="@string/general_settings_title" />
+
 </PreferenceScreen>
