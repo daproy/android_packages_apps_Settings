@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.preference.ListPreference;
 import android.preference.CheckBoxPreference;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
@@ -20,8 +21,10 @@ public class GeneralSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String RESTART_SYSTEMUI = "restart_systemui";
+    private static final String PREF_MEDIA_SCANNER_ON_BOOT = "media_scanner_on_boot";
 
     private Preference mRestartSystemUI;
+    private ListPreference mMsob;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -30,6 +33,12 @@ public class GeneralSettings extends SettingsPreferenceFragment implements
         addPreferencesFromResource(R.xml.general_settings);
 
         mRestartSystemUI = findPreference(RESTART_SYSTEMUI);
+
+        mMsob = (ListPreference) findPreference(PREF_MEDIA_SCANNER_ON_BOOT);
+        mMsob.setValue(String.valueOf(Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.MEDIA_SCANNER_ON_BOOT, 0)));
+        mMsob.setSummary(mMsob.getEntry());
+        mMsob.setOnPreferenceChangeListener(this);
 
     }
 
@@ -48,6 +57,16 @@ public class GeneralSettings extends SettingsPreferenceFragment implements
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        String value = (String) newValue;
+        if (preference == mMsob) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.MEDIA_SCANNER_ON_BOOT,
+                    Integer.valueOf(value));
+
+            mMsob.setValue(String.valueOf(value));
+            mMsob.setSummary(mMsob.getEntry());
+            return true;
+        }
         return false;
     }
 }

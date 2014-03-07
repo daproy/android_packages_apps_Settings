@@ -12,6 +12,13 @@
         <Preference android:key="restart_systemui"
             android:title="@string/restart_systemui" />
 
+        <ListPreference
+            android:key="media_scanner_on_boot"
+            android:title="@string/media_scanner_on_boot_title"
+            android:persistent="false"
+            android:entries="@array/media_scanner_on_boot_entries"
+            android:entryValues="@array/media_scanner_on_boot_values" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
