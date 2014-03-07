@@ -293,5 +293,9 @@
     <string name="smart_pulldown_off">Off</string>
     <string name="smart_pulldown_dismissable">Dismissable</string>
     <string name="smart_pulldown_persistent">Persistent</string>
+  
+    <!-- Custom Recent Settings -->
+    <string name="custom_recent_title">Switch Recents styles</string>
+    <string name="custom_recent_summary">Tick to Slim recents or untick for stock recents. TICKING OR UNTICKING THIS BOX WILL RESTART YOUR SYSTEMUI</string>
 
 </resources>
