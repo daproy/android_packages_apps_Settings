@@ -30,7 +30,7 @@
             android:id="@+id/animations"  
             android:title="@string/title_animation_controls"  
             android:summary="@string/header_summary_animation"  
-            android:fragment="com.android.settings.crdroid.fragments.AnimationControls" />
+            android:fragment="com.android.settings.temasek.fragments.AnimationControls" />
 
     </PreferenceCategory>
 
