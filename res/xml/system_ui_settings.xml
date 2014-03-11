@@ -39,6 +39,11 @@
         android:fragment="com.android.settings.crdroid.RecentsPanelSettings"
         android:title="@string/recents_panel_settings_title" />
 
+    <PreferenceScreen
+        android:key="gesture_anywhere"
+        android:fragment="com.android.settings.chameleonos.labs.gestureanywhere.GestureAnywhereSettings"
+        android:title="@string/gesture_anywhere_title" />
+
     <PreferenceCategory
             android:key="expanded_desktop_category"
             android:title="@string/power_menu_expanded_desktop" >
@@ -71,11 +76,6 @@
             android:targetPackage="com.cyanogenmod.settings.device"
             android:targetClass="com.cyanogenmod.settings.device.TouchscreenGestureSettings" />
     </Preference>
-
-    <PreferenceScreen
-        android:key="gesture_anywhere"
-        android:fragment="com.android.settings.chameleonos.labs.gestureanywhere.GestureAnywhereSettings"
-        android:title="@string/gesture_anywhere_title" />
 
     <PreferenceCategory
         android:key="navigation_bar"
