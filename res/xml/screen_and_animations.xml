@@ -32,6 +32,13 @@
             android:summary="@string/header_summary_animation"  
             android:fragment="com.android.settings.temasek.fragments.AnimationControls" />
 
+        <ListPreference
+            android:key="toast_animation"
+            android:title="@string/toast_animation_title"
+            android:entries="@array/toast_animation_entries"
+            android:entryValues="@array/toast_animation_values"
+            android:persistent="false" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
