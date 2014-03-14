@@ -138,7 +138,7 @@ public class ApnSettings extends SettingsPreferenceFragment implements
         if (MSimTelephonyManager.getDefault().isMultiSimEnabled()) {
             mPreferApnUri = Uri.parse(PREFERRED_APN_URI + "/" + mSubscription);
         } else {
-            mPreferApnUri = PREFERAPN_URI;
+            mPreferApnUri = Uri.parse(PREFERRED_APN_URI);
         }
         Log.d(TAG, "Preferred APN Uri is set to '" + mPreferApnUri.toString() + "'");
 
