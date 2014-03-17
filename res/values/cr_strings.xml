@@ -761,4 +761,15 @@
      <string name="is_inaccurate_proximity_title">Inaccurate proximity</string>
      <string name="is_inaccurate_proximity_summary">Work-around for inaccurate proximity sensors: this will force phone to turn on the screen after the call has ended.</string>
 
+    <!-- NavBar long press actions -->
+    <string name="navbar_long_press_title">Long press actions</string>
+    <string name="recents_long_press_title">Recents long press actions</string>
+    <string name="recents_long_press_none">None</string>
+    <string name="recents_long_press_last_app">Last app</string>
+    <string name="recents_long_press_screenshot">Screenshot</string>
+    <string name="recents_long_press_kill_app">Kill app</string>
+    <string name="recents_long_press_notif_panel">Notifications panel</string>
+    <string name="recents_long_press_qs_panel">QS panel</string>
+    <string name="recents_long_press_power_menu">Power menu</string>
+
 </resources>
