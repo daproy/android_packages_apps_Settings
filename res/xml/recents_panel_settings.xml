@@ -112,4 +112,15 @@
             android:summary="@string/ram_bar_note_summary"
             android:selectable="false" />
 
+     <PreferenceCategory
+         android:title="@string/category_app_circle_bar_title">
+ 
+             <PreferenceScreen
+                 android:id="@+id/app_circle_sidebar"
+                 android:title="@string/app_circle_bar_title"
+                 android:summary="@string/app_circle_sidebar_summary_real"
+                 android:fragment="com.android.settings.mahdi.omni.AppCircleSidebar" />
+ 
+     </PreferenceCategory>
+
 </PreferenceScreen>
