@@ -223,4 +223,9 @@
     <!-- Lockscreen battery ring -->
     <string name="battery_around_lockscreen_ring">Battery around unlock ring</string>
 
+    <!-- Lockscreen Lid Settings -->
+    <string name="smart_cover_category_title">Smart cover</string>
+    <string name="smart_cover_wake_title">Smart cover wake</string>
+    <string name="smart_cover_wake_summary">Wakeup device when smart cover opens</string>
+
 </resources>
