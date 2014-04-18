@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- About phone screen, Temasek version -->
+    <string name="temasek_version_title">Temasek unofficial version</string>
+    <!-- Do NOT translate this -->
+   <string name="temasek_version_default">Build V66</string>
+
+</resources>
