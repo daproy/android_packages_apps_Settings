@@ -793,7 +793,7 @@
     <string name="recent_panel_85">85%</string>
     <string name="recent_panel_70">70%</string>
     <string name="recent_panel_expanded_mode_title">Расширенный режим</string>
-    <string name="recent_panel_expanded_mode_summary">Предварительный просмотр последних задач в расширенном режиме</string>
+    <string name="recent_panel_expanded_mode_summary">Предварительный просмотр последних задач в расширенном виде</string>
     <string name="recent_panel_expanded_mode_auto">Авто (по умолчанию)</string>
     <string name="recent_panel_expanded_mode_always">Всегда</string>
     <string name="recent_panel_expanded_mode_never">Никогда</string>

@@ -159,6 +159,8 @@
   <string name="wake_when_plugged_or_unplugged_title">Включение при зарядке</string>
   <string name="wake_when_plugged_or_unplugged_summary">Включать экран при подключении или отключении источника питания</string>
   <string name="screen_animation_off_title">Анимация выключения</string>
+  <string name="screen_animation_style_title">Анимация выключения</string>
+  <string name="screen_animation_style_disabled">Отключена</string>
   <string name="screen_animation_style_electronbeam">Пучок электронов</string>
   <string name="screen_animation_style_fade">Затухание</string>
   <string name="edit_light_settings">Изменение настроек индикатора</string>
@@ -224,6 +226,8 @@
   <string name="tile_picker_title">Плитки и размещение</string>
   <string name="tile_picker_summary">Просмотр, выбор или изменение размещения отображаемых плиток</string>
   <string name="tile_choose_title">Выбор плитки</string>
+  <string name="title_qs_small_icons">Показывать маленькие плитки</string>
+  <string name="summary_qs_small_icons">Используйте небольшие плитки, чтобы увеличить число столбцов</string>
   <string name="title_tile_airplane">Режим полёта</string>
   <string name="title_tile_battery">Батарея</string>
   <string name="title_tile_bluetooth">Bluetooth</string>
