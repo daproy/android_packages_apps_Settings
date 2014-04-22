@@ -12,7 +12,7 @@
 
     <!-- General strings -->
     <string name="default_string">Default</string>
-    <string name="recent_panel_settings_title" >Recent panel settings</string>
+    <string name="recent_panel_settings_title">Recent panel settings</string>
     <string name="reset">Reset</string>
     <string name="enabled">Enabled</string>
     <string name="disabled">Disabled</string>
