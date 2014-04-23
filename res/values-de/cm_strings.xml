@@ -157,7 +157,9 @@
   <string name="adaptive_backlight_title">Adaptive Beleuchtung</string>
   <string name="adaptive_backlight_summary">Die Hintergrundbeleuchtung des Bildschirms intelligent regeln, um die Akkulaufzeit zu verbessern</string>
   <string name="wake_when_plugged_or_unplugged_title">Beim Einstecken aufwecken</string>
+  <string name="wake_when_plugged_or_unplugged_summary">Weckt das Display beim Verbinden und Trennen des Ladegerätes auf.</string>
   <string name="screen_animation_off_title">Abschaltanimation</string>
+  <string name="screen_animation_style_title">Abschaltanimation</string>
   <string name="screen_animation_style_electronbeam">Elektronenstrahl</string>
   <string name="screen_animation_style_fade">Ausblenden</string>
   <string name="edit_light_settings">Farbeinstellungen ändern</string>
@@ -223,6 +225,8 @@
   <string name="tile_picker_title">Kacheln anordnen</string>
   <string name="tile_picker_summary">Kacheln auswählen oder ihre Reihenfolge ändern</string>
   <string name="tile_choose_title">Kachel auswählen</string>
+  <string name="title_qs_small_icons">Kleinere Kacheln verwenden</string>
+  <string name="summary_qs_small_icons">Verwendet kleinere Kacheln um die angezeigten Reihen zu reduzieren.</string>
   <string name="title_tile_airplane">Flugmodus</string>
   <string name="title_tile_battery">Akkustand</string>
   <string name="title_tile_bluetooth">Bluetooth</string>
@@ -451,6 +455,7 @@ Mittels \"Entfernen\" kann die ausgewählte Stützstelle aus dem Helligkeitsverl
   <string name="privacy_guard_manager_show_system_apps">Integrierte Apps anzeigen</string>
   <string name="privacy_guard_manager_filter_permissions">Berechtigungsfilter</string>
   <string name="privacy_guard_advanced_settings_title">Erweitert</string>
+  <string name="privacy_guard_notification_title">Zeige Benachrichtigungen</string>
   <string name="blacklist_title">Sperrliste</string>
   <string name="blacklist_edit_dialog_title">Sperrlisteneintrag bearbeiten</string>
   <string name="blacklist_prefs">Einstellungen</string>
@@ -529,6 +534,7 @@ Mittels \"Entfernen\" kann die ausgewählte Stützstelle aus dem Helligkeitsverl
   <string name="lock_clock_summary">Einstellungen des Standard-Widgets auf Sperr- und Startbildschirm anpassen</string>
   <string name="power_notifications_category_title">Ladegeräte-Töne</string>
   <string name="power_notifications_enable_title">Aktivieren</string>
+  <string name="power_notifications_enable_summary">Spielt einen Ton beim Verbinden und Trennen des Ladegerätes ab.</string>
   <string name="power_notifications_vibrate_title">Vibrieren</string>
   <string name="power_notifications_ringtone_title">Benachrichtigungston</string>
   <string name="power_notifications_ringtone_silent">Kein Ton</string>
