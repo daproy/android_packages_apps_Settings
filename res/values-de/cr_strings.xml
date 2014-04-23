@@ -10,7 +10,7 @@
 
     <!-- General strings -->
     <string name="default_string">Voreinstellung</string>
-    <string name="recents_panel_settings_title">Anwendungsverlauf</string>
+    <string name="recent_panel_settings_title">Anwendungsverlauf</string>
     <string name="reset">Zurücksetzen</string>
     <string name="enabled">Aktiviert</string>
     <string name="disabled">Deaktiviert</string>
