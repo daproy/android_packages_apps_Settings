@@ -659,4 +659,12 @@
     <string name="volume_panel_timeout_title">Volume panel Timeout</string>
     <string name="volume_panel_timeout_summary">Time until the volume panel to hide</string>
 
+    <!-- QuickSettings style options -->
+    <string name="quicksettings_tiles_style">Quick settings style</string>
+    <string name="summary_quicksettings_tiles_style">Quick settings style options</string>
+    <string name="quicksettings_tiles_style_additional_options">Additional options</string>
+    <string name="tiles_per_row_title">Tiles per row</string>
+    <string name="tiles_per_row_duplicate_landscape_title">Scale landscape quantity</string>
+    <string name="tiles_per_row_duplicate_landscape_summary">Landscape view doubles tiles per row quantity</string>
+
 </resources>
