@@ -657,4 +657,12 @@
     <string name="volume_panel_timeout_title">Regler Anzeigedauer</string>
     <string name="volume_panel_timeout_summary">Legt die Anzeigedauer des Lautstärkereglers fest.</string>
 
+    <!-- QuickSettings style options -->
+    <string name="quicksettings_tiles_style">Optik</string>
+    <string name="summary_quicksettings_tiles_style">Anpassen der Kacheln</string>
+    <string name="quicksettings_tiles_style_additional_options">Weitere Optionen</string>
+    <string name="tiles_per_row_title">Kacheln pro Reihe</string>
+    <string name="tiles_per_row_duplicate_landscape_title">An Querformat anpassen</string>
+    <string name="tiles_per_row_duplicate_landscape_summary">Im Querformat wird die Kachelanzahl pro Reihe verdoppelt.</string>
+    
 </resources>
