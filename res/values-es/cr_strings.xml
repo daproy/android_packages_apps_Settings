@@ -4,8 +4,6 @@
 
     <!-- About phone screen, Temasek version -->
     <string name="temasek_version_title">Temasek unofficial version</string>
-    <!-- Do NOT translate this -->
-    <string name="temasek_version_default">V71</string>
 
     <!-- temasek spare parts -->
     <string name="temasek_settings_title">Repuestos de Temasek</string>
@@ -609,7 +607,7 @@
     <string name="progressbar_reset_message">¿Restaurar el estilo de la barra de progreso por defecto?</string>
 
     <!-- UI debug setting: show CPU info? [CHAR LIMIT=25] -->
-    <string name="show_cpu_info">Mostrar informacion del CPU</string>>
+    <string name="show_cpu_info">Mostrar informacion del CPU</string>
     <!-- UI debug setting: show cpu usage summary [CHAR LIMIT=50] -->
     <string name="show_cpu_info_summary">Información del CPU superpuesta sobre cualquier actividad</string>    
     
