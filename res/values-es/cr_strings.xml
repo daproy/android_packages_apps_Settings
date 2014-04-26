@@ -59,6 +59,21 @@
     <!-- Lock before unlock -->
     <string name="lock_before_unlock_title">Mostrar deslizador antes del desbloqueo seguro</string>
     <string name="lock_before_unlock_summary">Muestra el panel deslizable antes de activar el mecanismo de bloqueo seguro</string>
+    
+    <!-- QuickSettings style options -->
+    <string name="quick_tiles_bg_no_title">NOTA</string>
+    <string name="quick_tiles_bg_summary">Todos los cambios de colores y fondo alfa reflejarán directamente en las cintas QS</string>
+    <string name="quicksettings_tiles_style">Estilo de ajustes rápidos</string>
+    <string name="summary_quicksettings_tiles_style">Opciones de estilo de ajustes rápidos</string>
+    <string name="quicksettings_tiles_style_additional_options">Opciones adicionales</string>
+    <string name="tiles_per_row_title">Azulejos por fila</string>
+    <string name="tiles_per_row_duplicate_landscape_title">Escala de cantidad de azulejos en modo paisaje</string>
+    <string name="tiles_per_row_duplicate_landscape_summary">Duplicar la cantidad de azulejos por fila en modo paisaje</string>
+    <string name="quick_tiles_bg_color_title">Color de fondo de azulejos</string>
+    <string name="quick_tiles_bg_pressed_color_title">Color de fondo de azulejos cuando se presionan</string>
+    <string name="quick_tiles_text_color_title">Color de texto de los azulejos</string>
+    <string name="quick_tiles_alpha_title">Transparencia de fondo de los azulejos</string>
+    <string name="qs_style_reset_message">¿Resetear todos los colores al valor por defecto?</string>
 
     <!--  Recent clear all -->
     <string name="recents_clear_all_button">Botón para limpiar todo de recientes</string>
@@ -662,7 +677,7 @@
     <string name="summary_quicksettings_tiles_style">Opciones de estilo de ajustes rápidos</string>
     <string name="quicksettings_tiles_style_additional_options">Opciones adicionales</string>
     <string name="tiles_per_row_title">Azulejos por fila</string>
-    <string name="tiles_per_row_duplicate_landscape_title">Escala de cantidad de azulejos en modo landscape</string>
-    <string name="tiles_per_row_duplicate_landscape_summary">Duplicar la cantidad de azulejos por de fila en modo paisaje</string>
+    <string name="tiles_per_row_duplicate_landscape_title">Escala de cantidad de azulejos en modo paisaje</string>
+    <string name="tiles_per_row_duplicate_landscape_summary">Duplicar la cantidad de azulejos por fila en modo paisaje</string>
 
 </resources>
