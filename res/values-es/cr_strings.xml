@@ -135,7 +135,7 @@
     <string name="clock_date_display_summary">Mostrar Fechas personalizadas antes del reloj</string>
     <string name="clock_date_style">Estilo de fecha</string>
     <string name="clock_date_format">Formato de fecha</string>
-    <string name="clock_date_string_edittext_title">Debe estar en un formato de fecha por ejemplo. MM/dd/yy</string>
+    <string name="clock_date_string_edittext_title">Debe estar en un formato de fecha por ejemplo. MM/dd/AA</string>
     <string name="clock_date_string_edittext_summary">Introducir cadena</string>
     <string name="am_pm_clock_normal">Tamaño de la fuente normal</string>
     <string name="am_pm_clock_small">Tamaño de la fuente pequeño</string>
@@ -152,7 +152,7 @@
     <string name="clock_font_bold">Audáz</string>
     <string name="clock_font_condensed">Condensada</string>
     <string name="clock_font_light">Clara</string>
-    <string name="clock_font_light_italic">Italica clara</string>
+    <string name="clock_font_light_italic">Itálica clara</string>
     <string name="clock_font_normal">Normal</string>
   
     <!-- Lockscreen Notifications -->
@@ -325,12 +325,12 @@
     <string name="noti_reminder_summary">Entre con una notificación y establecer un recordatorio para la misma</string>
     <string name="noti_reminder_interval">Intervalo del tirón</string>
     <string name="noti_reminder_interval_1s">1 segundo</string>
-    <string name="noti_reminder_interval_1dot5s">1.5 seconds</string>
-    <string name="noti_reminder_interval_2s">2 segundo</string>
-    <string name="noti_reminder_interval_2dot5s">2.5 segundo</string>
-    <string name="noti_reminder_interval_3s">3 segundo</string>
-    <string name="noti_reminder_interval_3dot5s">3.5 segundo</string>
-    <string name="noti_reminder_interval_4s">4 segundo</string>
+    <string name="noti_reminder_interval_1dot5s">1.5 segundos</string>
+    <string name="noti_reminder_interval_2s">2 segundos</string>
+    <string name="noti_reminder_interval_2dot5s">2.5 segundos</string>
+    <string name="noti_reminder_interval_3s">3 segundos</string>
+    <string name="noti_reminder_interval_3dot5s">3.5 segundos</string>
+    <string name="noti_reminder_interval_4s">4 segundos</string>
 
     <!-- Custom notification panel header -->
     <string name="omni_features_title">Características de Omni</string>
@@ -423,7 +423,7 @@
     <string name="listview_translate_right">Trasladar (Derecha)</string>
 
     <!-- ListView interpolator -->
-    <string name="listview_interpolator_title">ListView Interpolador</string>
+    <string name="listview_interpolator_title">ListView interpolador</string>
     <string name="listview_accelerate_interpolator">acelerar_interpolador</string>
     <string name="listview_decelerate_interpolator">desacelerar_interpolador</string>
     <string name="listview_accelerate_decelerate_interpolator">acelerar_desacelerar_interpolador</string>
@@ -597,7 +597,7 @@
     <string name="progressbar_color_2_title">Color2</string>
     <string name="progressbar_color_3_title">Color3</string>
     <string name="progressbar_color_4_title">Color4</string>
-    <string name="sample_progressbar_text">Barra de progreos : Avance</string>
+    <string name="sample_progressbar_text">Barra de progreso : Avance</string>
     <string name="progressbar_interpolator">Interpolador</string>
     <string name="progressbar_none">Ninguno</string>
     <string name="progressbar_acclerate">Acelerar</string>
@@ -656,5 +656,13 @@
     <!-- Volume pane timeout -->
     <string name="volume_panel_timeout_title">Tiempo para el panel de volumen</string>
     <string name="volume_panel_timeout_summary">Tiempo para que el panel de volumen se oculte</string>
+    
+    <!-- QuickSettings style options -->
+    <string name="quicksettings_tiles_style">Estilo de ajustes rápidos</string>
+    <string name="summary_quicksettings_tiles_style">Opciones de estilo de ajustes rápidos</string>
+    <string name="quicksettings_tiles_style_additional_options">Opciones adicionales</string>
+    <string name="tiles_per_row_title">Azulejos por fila</string>
+    <string name="tiles_per_row_duplicate_landscape_title">Escala de cantidad de azulejos en modo landscape</string>
+    <string name="tiles_per_row_duplicate_landscape_summary">Duplicar la cantidad de azulejos por de fila en modo paisaje</string>
 
 </resources>
