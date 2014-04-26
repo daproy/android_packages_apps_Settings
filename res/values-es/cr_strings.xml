@@ -6,7 +6,7 @@
     <string name="temasek_version_title">Temasek unofficial version</string>
 
     <!-- temasek spare parts -->
-    <string name="temasek_settings_title">Repuestos de Temasek</string>
+    <string name="temasek_settings_title">Configuraciones de Temasek</string>
 
     <!-- General strings -->
     <string name="default_string">Predeterminado</string>
