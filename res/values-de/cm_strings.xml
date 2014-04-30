@@ -253,6 +253,7 @@
   <string name="title_tile_network_adb">ADB über Netzwerk</string>
   <string name="title_dynamic_tiles">Dynamische Kacheln</string>
   <string name="dynamic_tiles_note_title">Hinweis</string>
+  <string name="dynamic_tiles_note_summary">Dynamische Kacheln sind nur sichtbar, wenn das entsprechende Systemereignis eintritt.</string>
   <string name="title_dynamic_alarm">Wecker</string>
   <string name="title_dynamic_bugreport">Fehlerprotokollierung</string>
   <string name="title_dynamic_dock_battery">Dock-Akku</string>
@@ -586,6 +587,8 @@
   <string name="expanded_desktop_disabled">Deaktiviert</string>
   <string name="expanded_desktop_status_bar">Statusleiste anzeigen</string>
   <string name="expanded_desktop_no_status_bar">Statusleiste verbergen</string>
+  <string name="expanded_desktop_system_bars_visibility">Auf Sperrbildschirm deaktivieren</string>
+    <string name="expanded_desktop_system_bars_visibility_summary">Zeigt die Status- und Navigationsleiste auf dem Sperrbildschirm trotz erweitertem Desktop.</string>
   <string name="power_menu_profiles_title">Profilwechsel</string>
   <string name="power_menu_airplane_title">Flugmodus</string>
   <string name="power_menu_user_title">Benutzer</string>
