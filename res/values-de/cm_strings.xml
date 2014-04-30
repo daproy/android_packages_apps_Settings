@@ -373,6 +373,7 @@
   <string name="wallpaper_settings_title">Hintergründe</string>
   <string name="performance_settings_title">Leistung</string>
   <string name="performance_settings_warning_title">VORSICHT</string>
+  <string name="performance_settings_warning">Diese Einstellungen sind experimentell und jede Änderung kann Instabilität, Abstürze, Datenverluste oder Hardwareausfälle verursachen.\n\nBitte sende keine Supportanfragen, wenn Änderungen an den Standardeinstellungen vorgenommen wurden.</string>
   <string name="performance_set_on_boot">Beim Booten einstellen</string>
   <string name="processor_title">Prozessor</string>
   <string name="cpu_cur_freq_title">Aktuelle Taktfrequenz</string>
