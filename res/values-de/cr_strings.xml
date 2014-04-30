@@ -59,7 +59,7 @@
     <!-- Lock before unlock -->
     <string name="lock_before_unlock_title">Sperrbildschirm vor PIN-Abfrage</string>
     <string name="lock_before_unlock_summary">Zeigt den Sperrbildschirm vor der PIN-Abfrage.</string>
-
+    
     <!--  Recent clear all -->
     <string name="recent_clear_all_button">Leeren durch Tastendruck</string>
     <string name="show_recent_clear_all_button_title">Taste verwenden</string>
@@ -658,11 +658,19 @@
     <string name="volume_panel_timeout_summary">Legt die Anzeigedauer des Lautstärkereglers fest.</string>
 
     <!-- QuickSettings style options -->
+    <string name="quick_tiles_bg_no_title">ANMERKUNG</string>
+    <string name="quick_tiles_bg_summary">Alle Farb- und Transparenzänderungen wirken sich auf die Schnelleinstellungen aus!</string>
     <string name="quicksettings_tiles_style">Optik</string>
     <string name="summary_quicksettings_tiles_style">Anpassen der Kacheln</string>
     <string name="quicksettings_tiles_style_additional_options">Weitere Optionen</string>
     <string name="tiles_per_row_title">Kacheln pro Reihe</string>
     <string name="tiles_per_row_duplicate_landscape_title">An Querformat anpassen</string>
     <string name="tiles_per_row_duplicate_landscape_summary">Im Querformat wird die Kachelanzahl pro Reihe verdoppelt.</string>
+    <string name="quick_tiles_bg_color_title">Hintergrundfarbe</string>
+    <string name="quick_tiles_bg_pressed_color_title">Hintergrundfarbe gedrückt</string>
+    <string name="quick_tiles_text_color_title">Textfarbe</string>
+    <string name="quick_tiles_alpha_title">Hintergrundtransparenz</string>
+    <string name="qs_style_reset_message">Alle Farben auf Standardwerte zurücksetzen?</string>
+    
     
 </resources>
