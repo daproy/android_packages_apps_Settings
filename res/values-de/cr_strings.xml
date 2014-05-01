@@ -159,7 +159,7 @@
     <!-- Lockscreen Notifications -->
     <string name="notifications_on_lockscreen">Benachrichtigungen auf dem Sperrbildschirm</string>
     <string name="notifications_on_lockscreen_summary">Wähle eine Methode, ausstehende Benachrichtigungen auf dem Sperrbildschirm anzuzeigen.</string>
-    <string name="notifications_on_lockscreen_warning_summary">Es ist nur eine(!) der beiden Methoden - Benachrichtigungen auf dem Sperrbildschirm anzuzeigen - nutzbar, da bei Aktivierung einer Anzeigemethode die Andere automatisch deaktiviert wird. Nach dem Deaktivieren muss die jeweils andere Methode manuell reaktiviert werden.</string>
+    <string name="notifications_on_lockscreen_warning_summary">Es ist nur eine(!) der beiden Methoden - Benachrichtigungen auf dem Sperrbildschirm anzuzeigen - nutzbar, da bei Aktivierung einer Anzeigemethode die Andere automatisch deaktiviert wird. Nach dem Deaktivieren muss die jeweils andere Methode ggf. manuell reaktiviert werden.</string>
     
     <string name="general">Allgemein</string>
     <string name="layout">Aussehen</string>
