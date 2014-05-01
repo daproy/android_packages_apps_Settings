@@ -136,6 +136,7 @@
   <string name="notification_vibrate_during_calls_title">Während Anruf vibrieren</string>
   <string name="notification_vibrate_during_calls_summary">Bei eingehenden Benachrichtigungen während eines Anrufs sanft vibrieren</string>
   <string name="volume_adjust_sounds_enable_title">Änderungston</string>
+  <string name="volume_adjust_sounds_enable_summary">Spielt einen Ton beim Ändern der Lautstärke durch die Lautstärke-Tasten.</string>
   <string name="icon_picker_title">Symbolquelle wählen</string>
   <string name="icon_picker_system_icons_title">Systemsymbole</string>
   <string name="icon_picker_gallery_title">Galerie</string>
@@ -375,6 +376,7 @@
   <string name="performance_settings_warning_title">VORSICHT</string>
   <string name="performance_settings_warning">Diese Einstellungen sind experimentell und jede Änderung kann Instabilität, Abstürze, Datenverluste oder Hardwareausfälle verursachen.\n\nBitte sende keine Supportanfragen, wenn Änderungen an den Standardeinstellungen vorgenommen wurden.</string>
   <string name="performance_set_on_boot">Beim Booten einstellen</string>
+  <string name="performance_set_on_boot_summary">Wiederherstellen der angewandten Einstellungen beim Start.</string>
   <string name="processor_title">Prozessor</string>
   <string name="cpu_cur_freq_title">Aktuelle Taktfrequenz</string>
   <string name="cpu_governors_title">Governor</string>
@@ -392,7 +394,8 @@
   <string name="pref_use_16bpp_alpha_summary">Kann die Performance beim Scrollen verbessern, aber Grafikfehler verursachen (Neustart erforderlich)</string>
   <string name="pref_force_highend_gfx_title">Verbesserte Grafikeffekte</string>
   <string name="pref_force_highend_gfx_summary">Verbesserte Transparenz- und Animationseffekte wie z.B. Status- und Navigationsleistentransparenz verwenden (Neustart erforderlich)</string>
-  <string name="kill_app_longpress_back">App beenden</string>
+  <string name="kill_app_longpress_back">Anwendung beenden</string>
+  <string name="kill_app_longpress_back_summary">Anwendundungen durch Halten der Zurück-Taste beenden.</string>
   <string name="changelog_title">Changelog anzeigen</string>
   <string name="changelog_loading">Changelog wird geladen\u2026</string>
   <string name="changelog_error">Changelog kann nicht geladen werden</string>
@@ -421,7 +424,8 @@
   <string name="privacy_guard_manager_filter_permissions">Berechtigungsfilter</string>
   <string name="privacy_guard_advanced_settings_title">Erweitert</string>
   <string name="privacy_guard_notification_title">Zeige Benachrichtigungen</string>
-  <string name="blacklist_title">Sperrliste</string>
+  <string name="blacklist_title">Rufnummern sperren</string>
+  <string name="blacklist_summary">Eingehende Anrufe und Nachrichten von ausgewählten Rufnummern blockieren.</string>
   <string name="blacklist_edit_dialog_title">Sperrlisteneintrag bearbeiten</string>
   <string name="blacklist_prefs">Einstellungen</string>
   <string name="blacklist_button_delete">Löschen</string>
