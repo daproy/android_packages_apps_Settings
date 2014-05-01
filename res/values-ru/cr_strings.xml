@@ -14,6 +14,7 @@
     <string name="reset">Сброс</string>
     <string name="enabled">Включено</string>
     <string name="disabled">Отключено</string>
+    <string name="note">ПРИМЕЧАНИЕ</string>
 	
     <!-- Advanced settings -->
     <string name="advanced_options_settings_title">Расширенные настройки</string>
@@ -68,17 +69,6 @@
     <!-- Lock before unlock -->
     <string name="lock_before_unlock_title">Показывать слайдер для разблокировки</string>
     <string name="lock_before_unlock_summary">Показывать слайдер на экране блокировки для безопасной разблокировки устройства</string>
-
-    <!--  Recent clear all -->
-    <string name="recent_clear_all_button">Кнопка \"Очистить всё\"</string>
-    <string name="show_recent_clear_all_button_title">Показывать кнопку \"Очистить всё\"</string>
-    <string name="show_recent_clear_all_button_summary">Установите галочку, чтобы показать или снимите, чтобы скрыть отображение кнопки "Очистить всё" на экране последних приложений</string>
-    <string name="recent_clear_all_button_location_title">Расположение кнопки \"Очистить всё\"</string>
-    <string name="recent_clear_all_button_location_summary">Выберите, где будет располагаться кнопка \"Очистить всё\"</string>
-    <string name="recent_clear_all_button_location_top_left">Вверху слева</string>
-    <string name="recent_clear_all_button_location_top_right">Вверху справа</string>
-    <string name="recent_clear_all_button_location_bottom_left">Внизу слева</string>
-    <string name="recent_clear_all_button_location_bottom_right">Внизу справа</string>
     
     <!-- QuickSettings style options -->
     <string name="quick_tiles_bg_no_title">ПРИМЕЧАНИЕ</string>
@@ -94,6 +84,18 @@
     <string name="quick_tiles_text_color_title">Цвет текста плитки</string>
     <string name="quick_tiles_alpha_title">Прозрачность фона плиток</string>
     <string name="qs_style_reset_message">Сбросить все цвета по умолчанию?</string>
+
+    <!--  Recent clear all -->
+    <string name="recent_clear_all_button">Кнопка \"Очистить всё\"</string>
+    <string name="show_recent_clear_all_button_title">Показывать кнопку \"Очистить всё\"</string>
+    <string name="show_recent_clear_all_button_summary">Установите галочку, чтобы показать или снимите, чтобы скрыть отображение кнопки "Очистить всё" на экране последних приложений</string>
+    <string name="recent_clear_all_button_location_title">Расположение кнопки \"Очистить всё\"</string>
+    <string name="recent_clear_all_button_location_summary">Выберите, где будет располагаться кнопка \"Очистить всё\"</string>
+    <string name="recent_clear_all_button_location_top_left">Вверху слева</string>
+    <string name="recent_clear_all_button_location_top_right">Вверху справа</string>
+    <string name="recent_clear_all_button_location_bottom_left">Внизу слева</string>
+    <string name="recent_clear_all_button_location_bottom_right">Внизу справа</string>
+	
     <!-- Color Picker -->
     <string name="dialog_color_picker">Палитра цветов</string>
     <string name="press_color_to_apply">Нажмите на выбранный цвет для применения</string>
@@ -188,6 +190,7 @@
     <string name="clock_font_light">Тонкий</string>
     <string name="clock_font_light_italic">Тонкий курсив</string>
     <string name="clock_font_normal">Нормальный</string>
+	
     <!-- Lockscreen Notifications -->
     <string name="general">Основные</string>
     <string name="layout">Расположение</string>
@@ -219,6 +222,14 @@
     <string name="excluded_apps_title">Исключённые приложения</string>
     <string name="excluded_apps_summary">Уведомления от исключённых приложений не будут отображаться на экране блокировки</string>
     <string name="notification_color">Цвет фона уведомления</string>
+
+    <string name="notifications_on_lockscreen">Уведомления на экране блокировки</string>
+    <string name="notifications_on_lockscreen_summary">Выбор способа отображения уведомлений на экране блокировки</string>
+    <string name="notifications_on_lockscreen_warning_summary">Выбор одного из способов отображения уведомлений на экране блокировки автоматически отключит другой. Если вы хотите использовать функции одного из способов, не забудьте проверить включены они или нет.</string>
+
+    <!--Notification peek-->
+    <string name="notification_peek_title">Уведомление при поднятии</string>
+    <string name="notification_peek_summary">Показывать последние уведомление после поднятия устройства</string>
 
     <!-- Wakelock blocker -->
     <string name="wakelock_blocker">Блокировка вейклоков</string>
