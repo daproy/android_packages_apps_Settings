@@ -14,6 +14,7 @@
     <string name="reset">Zurücksetzen</string>
     <string name="enabled">Aktiviert</string>
     <string name="disabled">Deaktiviert</string>
+    <string name="note">ANMERKUNG</string>
 
     <!-- QS and navring Power menu -->
     <string name="title_tile_power">Ein/Aus-Taste</string> 
@@ -156,6 +157,10 @@
     <string name="clock_font_normal">Normal</string>
   
     <!-- Lockscreen Notifications -->
+    <string name="notifications_on_lockscreen">Benachrichtigungen auf dem Sperrbildschirm</string>
+    <string name="notifications_on_lockscreen_summary">Wähle eine Methode, ausstehende Benachrichtigungen auf dem Sperrbildschirm anzuzeigen.</string>
+    <string name="notifications_on_lockscreen_warning_summary">Es ist nur eine(!) der beiden Methoden - Benachrichtigungen auf dem Sperrbildschirm anzuzeigen - nutzbar, da bei Aktivierung einer Anzeigemethode die Andere automatisch deaktiviert wird. Nach dem Deaktivieren muss die jeweils andere Methode ggf. manuell reaktiviert werden.</string>
+    
     <string name="general">Allgemein</string>
     <string name="layout">Aussehen</string>
     <string name="privacy">Datenschutz</string>
@@ -186,7 +191,11 @@
     <string name="excluded_apps_title">Anwendungen ausschließen</string>
     <string name="excluded_apps_summary">Die gewählten Anwendungen werden vom Sperrbildschirm ignoriert.</string>
     <string name="notification_color">Hintergrundfarbe</string>
-
+    
+    <!--Notification peek-->
+    <string name="notification_peek_title">Benachrichtigungsvorschau (Peek)</string>
+    <string name="notification_peek_summary">Zeigt ausstehende Benachrichtigungen wenn das Gerät in die Hand genommen wird.</string>
+    
     <!-- Wakelock blocker -->
     <string name="wakelock_blocker">Wakelock Blocker</string>
     <string name="wakelock_blocker_title">Aktivieren</string>
@@ -318,7 +327,7 @@
 
     <!-- Notification Reminders -->
     <string name="noti_reminder_title">Erinnerungsfunktion</string>
-    <string name="noti_reminder_enable_title">Lassen Sie sich an etwas erinnern.</string>
+    <string name="noti_reminder_enable_title">Die Eieruhr der Zukunft!</string>
     <string name="noti_reminder_sound_title">Ton abspielen?</string>
     <string name="noti_reminder_sound_looping">Bis zum Verwerfen</string>
     <string name="noti_reminder_ringtone">Benachrichtigungston</string>
@@ -615,7 +624,7 @@
     <string name="notification_light_screen_on_title">LED immer aktivieren</string>
 
     <!-- Brightness Slider -->
-    <string name="notification_drawer_brightness_slider_title">Helligkeitsregler</string>
+    <string name="notification_drawer_brightness_slider_title">Helligkeitsregler anzeigen</string>
 
     <!-- Custom Recent Settings -->
     <string name="custom_recent_title">SlimROM Anwendungsverlauf</string>
