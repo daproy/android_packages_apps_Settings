@@ -14,7 +14,8 @@
     <string name="reset">Restablecer</string>
     <string name="enabled">Activar</string>
     <string name="disabled">Desactivar</string>
-
+    <string name="note">NOTA</string>
+    
     <!-- QS and navring Power menu -->
     <string name="title_tile_power">Menú de encendido</string> 
     <string name="navring_action_power_menu">Menù de encendido</string>       
@@ -40,7 +41,7 @@
 
     <!-- Low battery warning policy -->
     <string name="pref_low_battery_warning_policy_title">Advertencia de batería baja</string>
-    <string name="pref_low_battery_warning_policy_dialog_title">Indicar la advertencia de bateria baja con</string>
+    <string name="pref_low_battery_warning_policy_dialog_title">Indicar la advertencia de batería baja con</string>
     <string name="low_battery_warning_policy_popup_sound">Pop-up y sonido</string>
     <string name="low_battery_warning_policy_notif_sound">Notificación y sonido</string>
     <string name="low_battery_warning_policy_popup">Solo pop-up y notificacion</string>
@@ -104,8 +105,8 @@
     <string name="ram_bar_mode_dialog_title">Selecciona lo que deseas mostrar en el medidor</string>
     <string name="ram_bar_none">Inhabilitado</string>
     <string name="ram_bar_apps">Aplicaciones</string>
-    <string name="ram_bar_cache">Aplicaciones y cache</string>
-    <string name="ram_bar_other">Aplicaciones, cache y otros</string>
+    <string name="ram_bar_cache">Aplicaciones y caché</string>
+    <string name="ram_bar_other">Aplicaciones, caché y otros</string>
     <string name="ram_bar_style_cat">Estilo del medidor</string>
     <string name="ram_bar_color_app_mem_color">Color RAM de aplicaciones</string>
     <string name="ram_bar_color_cache_mem_color">Color RAM de caché</string>
@@ -162,7 +163,7 @@
     <string name="clock_date_style_lowercase">Minúsculas</string>
     <string name="clock_date_style_uppercase">Mayúsculas</string>
     <string name="clock_date_format_custom">Formato java personalizado</string>
-    <string name="status_bar_clock_style_reset_message">Restaruar el color de la hora?</string>
+    <string name="status_bar_clock_style_reset_message">¿Restaruar el color de la hora?</string>
     <string name="clock_font_style_title">Fuente</string>
     <string name="clock_font_bold">Audáz</string>
     <string name="clock_font_condensed">Condensada</string>
@@ -193,7 +194,7 @@
     <string name="force_expanded_view_summary">Mostrar notificaciones de forma ampliada por defecto. Usted todavía será capaz de alternar entre la vista ampliada y normal.</string>
     <string name="wake_on_notification">Despertar con notificación</string>
     <string name="wake_on_notification_summary">Despertar dispositivo cuando recibe una nueva notificación</string>
-    <string name="notifications_height">Contador de Notificaciónes</string>
+    <string name="notifications_height">Contador de Notificaciones</string>
     <string name="notifications_height_summary">Número de notificaciones que se muestran a la vez</string>
     <string name="offset_top">Desplazamiento a la parte superior de la pantalla:</string>
     <string name="privacy_mode">Modo privacidad</string>
@@ -201,7 +202,21 @@
     <string name="excluded_apps_title">Aplicaciones excluidas</string>
     <string name="excluded_apps_summary">Aplicaciones excluidas no se mostrará como notificaciones en la pantalla de bloqueo</string>
     <string name="notification_color">Color del fondo de las notificaciones</string>
-
+    
+    <string name="notifications_on_lockscreen">Notificaciones en pantalla de bloqueo</string>
+    <string name="notifications_on_lockscreen_summary">Escoger entre modo para mostrar notificaciones pendientes en la pantalla de bloqueo</string>
+    <string name="notifications_on_lockscreen_warning_summary">Cada una de las notificaciones en la pantalla de bloqueo bajo servicio (PEEK o / y pantalla de bloqueo) desactivará automaticamente el otro. Asegúrese de consultar al desactivar uno de ellos si desea utilizar una de las características de nuevo. </string>
+    
+    <!--Notification peek-->
+    <string name="notification_peek_title">Notificaciones peek</string>
+    <string name="notification_peek_summary">Mostrar última notificación después de levantar su dispositivo</string>
+    <string name="peek_pickup_timeout_title">Tiempo de espera para levantar el peek</string>
+    <string name="peek_pickup_10seconds">10 segundos (defecto)</string>
+    <string name="peek_pickup_30seconds">30 segundos</string>
+    <string name="peek_pickup_45seconds">45 segundos</string>
+    <string name="peek_pickup_60seconds">1 minuto</string>
+    <string name="peek_pickup_120seconds">2 minutos</string>
+    
     <!-- Wakelock blocker -->
     <string name="wakelock_blocker">Bloqueador wakelock</string>
     <string name="wakelock_blocker_title">Permitir</string>
