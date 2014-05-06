@@ -687,5 +687,8 @@
     <string name="quick_tiles_alpha_title">Hintergrundtransparenz</string>
     <string name="qs_style_reset_message">Alle Farben auf Standardwerte zurücksetzen?</string>
     
+    <!-- QuickSettings haptic feedback -->
+    <string name="haptic_qs_tiles_title">Haptisches Feedback</string>
+    <string name="haptic_qs_tiles_summary">Bei Berührung der Kacheln vibrieren</string>
     
 </resources>
