@@ -229,7 +229,13 @@
 
     <!--Notification peek-->
     <string name="notification_peek_title">Уведомление при поднятии</string>
-    <string name="notification_peek_summary">Показывать последние уведомление после поднятия устройства</string>
+    <string name="notification_peek_summary">Показывать последнее уведомление после поднятия устройства</string>
+    <string name="peek_pickup_timeout_title">Тайм-аут отображения уведомления</string>
+    <string name="peek_pickup_10seconds">10 секунд (по умолчанию)</string>
+    <string name="peek_pickup_30seconds">30 секунд</string>
+    <string name="peek_pickup_45seconds">45 секунд</string>
+    <string name="peek_pickup_60seconds">1 минута</string>
+    <string name="peek_pickup_120seconds">2 минуты</string>
 
     <!-- Wakelock blocker -->
     <string name="wakelock_blocker">Блокировка вейклоков</string>
@@ -831,5 +837,9 @@
     <!-- Volume pane timeout -->
     <string name="volume_panel_timeout_title">Тайм-аут панели громкости</string>
     <string name="volume_panel_timeout_summary">Задержка времени до закрытия панели громкости</string>
-  
+
+    <!-- QuickSettings haptic feedback -->
+    <string name="haptic_qs_tiles_title">Вибрация при касании</string>
+    <string name="haptic_qs_tiles_summary">Вибрация при прикосновении к плиткам</string>
+
 </resources>
