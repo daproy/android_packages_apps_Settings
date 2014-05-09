@@ -839,7 +839,7 @@
     <string name="volume_panel_timeout_summary">Задержка времени до закрытия панели громкости</string>
 
     <!-- QuickSettings haptic feedback -->
-    <string name="haptic_qs_tiles_title">Вибрация при касании</string>
+    <string name="haptic_qs_tiles_title">Виброотклик плиток</string>
     <string name="haptic_qs_tiles_summary">Вибрация при прикосновении к плиткам</string>
 
 </resources>
