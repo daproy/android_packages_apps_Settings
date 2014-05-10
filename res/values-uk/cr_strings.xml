@@ -27,7 +27,7 @@
     <string name="navbar_enable_bar">Включити рядок навігації</string>
     <string name="navbar_enable_bar_summary">Включення відображення рядка навігації</string>
     <string name="navbar_style_dimen_title">Розміри</string>
-    <string name="navbar_dimensions_reset_message">Скинути все значення розмірів за замовчуванням?</string>
+    <string name="navbar_dimensions_reset_message">Скинути всі значення розмірів за замовчуванням?</string>
     <string name="navigation_bar_height_title">Висота рядка навігації</string>
     <string name="navigation_bar_height_summary">Висота рядка навігації в портретному режимі</string>
     <string name="navigation_bar_width_title">Ширина рядка навігації</string>
@@ -164,11 +164,11 @@
     <string name="status_bar_am_pm_info">24-годинний формат включений</string>
     <string name="enable_clock_weekday">День тижня</string>
     <string name="enable_clock_weekday_summary">Скорочений день тижня для відображення</string>
-    <string name="right_clock">Годинники праворуч</string>
-    <string name="center_clock">Годинники по центру</string>
+    <string name="right_clock">Годинник праворуч</string>
+    <string name="center_clock">Годинник по центру</string>
     <string name="dont_show">Не показувати</string>
     <string name="clock_date_display">Дата</string>
-    <string name="clock_date_display_summary">Користувача настройки дати</string>
+    <string name="clock_date_display_summary">Користувацькі настройки дати</string>
     <string name="clock_date_style">Стиль дати</string>
     <string name="clock_date_format">Формат дати</string>
     <string name="clock_date_string_edittext_title">Повинно бути в форматі дати, наприклад MM/dd/yy</string>
@@ -205,9 +205,9 @@
     <string name="hide_low_priority">Приховати низький пріоритет</string>
     <string name="hide_low_priority_summary">Приховати повідомлення з низьким пріоритетом, такі як повідомлення про погоду від Google Now.</string>
     <string name="hide_non_clearable">Приховати видаляються</string>
-    <string name="hide_non_clearable_summary">Приховати все видаляються повідомлення</string>
+    <string name="hide_non_clearable_summary">Приховати усі невидаляємі повідомлення</string>
     <string name="dismiss_all">Дозволити відключення всіх повідомлень</string>
-    <string name="dismiss_all_summary">Дозволити відключення навіть не видаляються повідомлень. Вони просто ховаються на екрані блокування, а не на панелі повідомлень.</string>
+    <string name="dismiss_all_summary">Дозволити відключення навіть невидаляємих повідомлень. Вони просто ховаються на екрані блокування, а не на панелі повідомлень.</string>
     <string name="expanded_view">Розширений вигляд повідомлень</string>
     <string name="expanded_view_summary">Додати можливість перемикання між звичайним і розширеним видом по довгому натисненню на повідомлення. Розширений вигляд іноді показує більше особистої інформації, тому ви можете відключити його.</string>
     <string name="force_expanded_view">Примусовий розширений вид</string>
@@ -245,7 +245,7 @@
     <string name="wakelock_list_header">Доступні вейклоки</string>
     <string name="wakelock_blocker_reload">Перезавантажити</string>
     <string name="wakelock_blocker_warning_title">Діяти з обережністю</string>
-    <string name="wakelock_blocker_warning">Блокування вейклоков потенційно може привести до нестабільної роботи пристрою, збою або втрати даних</string>
+    <string name="wakelock_blocker_warning">Блокування вейклоків потенційно може привести до нестабільної роботи пристрою, збою або втрати даних</string>
 	
     <!-- Lock Gesture settings -->
     <!-- Security & location settings screen, setting option name -->
