@@ -102,7 +102,7 @@
     <string name="arrow_right">→</string>
     <string name="arrow_down">↓</string>
     <string name="hex">Hex:</string>
-    <string name="hex_hint"># Ff000000</string>
+    <string name="hex_hint">#ff000000</string>
     <string name="set">Застосувати</string>
     <string name="color_default">За замовчуванням</string>
 
@@ -166,8 +166,8 @@
     <string name="enable_clock_weekday_summary">Скорочений день тижня для відображення</string>
     <string name="right_clock">Годинники праворуч</string>
     <string name="center_clock">Годинники по центру</string>
-    <string name="dont_show">Чи не показувати</string>
-    <string name="clock_date_display">Д</string>
+    <string name="dont_show">Не показувати</string>
+    <string name="clock_date_display">Дата</string>
     <string name="clock_date_display_summary">Користувача настройки дати</string>
     <string name="clock_date_style">Стиль дати</string>
     <string name="clock_date_format">Формат дати</string>
@@ -238,11 +238,11 @@
     <string name="peek_pickup_120seconds">2 хвилини</string>
 
     <!-- Wakelock blocker -->
-    <string name="wakelock_blocker">Блокування вейклоков</string>
+    <string name="wakelock_blocker">Блокування вейклоків</string>
     <string name="wakelock_blocker_title">Включити</string>
-    <string name="wakelock_blocker_summary">Активувати блокування для обраних вейклоков</string>
+    <string name="wakelock_blocker_summary">Активувати блокування для обраних вейклоків</string>
     <string name="wakelock_blocker_save">Зберегти</string>
-    <string name="wakelock_list_header">Доступні вейклокі</string>
+    <string name="wakelock_list_header">Доступні вейклоки</string>
     <string name="wakelock_blocker_reload">Перезавантажити</string>
     <string name="wakelock_blocker_warning_title">Діяти з обережністю</string>
     <string name="wakelock_blocker_warning">Блокування вейклоков потенційно може привести до нестабільної роботи пристрою, збою або втрати даних</string>
@@ -288,7 +288,7 @@
    <!-- Security & location settings screen, setting check box title. This setting controls whether a visible gesture is drawn as the user moves his finger around while drawing the unlock pattern.  If checked, this line is drawn.  If unchecked, there is nothing drawn so the user does not reveal his pattern while he unlocks the phone.-->
     <string name="lockgesture_settings_enable_visible_pattern_title">Зробити жест видимим</string>
     <!-- Security & location settings screen, setting check box title. This controls whether the device locks immediately when the power button is pressed. [CHAR LIMIT=28]-->
-    <string name="lockgesture_settings_enable_power_button_instantly_locks">Миттєва блокування кнопкою живлення</string>
+    <string name="lockgesture_settings_enable_power_button_instantly_locks">Миттєве блокування кнопкою живлення</string>
     <!-- Security & location settings screen, setting option name when user has never set an unlock gesture -->
     <string name="lockgesture_settings_choose_lock_pattern">Встановити жест розблокування</string>
     <!-- Security & location settings screen, setting option name when user has previously set an unlock gesture and wants to change to a new pattern -->
@@ -320,7 +320,7 @@
     <string name="screen_recorder_video_dimensions_title">Розмір відео</string>
     <string name="screen_recorder_video_bitrate_title">Бітрейт</string>
     <string name="screen_recorder_record_audio_title">Запис звуку</string>
-    <string name="screen_recorder_record_audio_summary">Записувати звук з мікрофона</string>
+    <string name="screen_recorder_record_audio_summary">Записувати звук з мікрофону</string>
 
     <!-- frame rates -->
     <string name="screen_recorder_bitrate_title_100000">100 КБ/с</string>
@@ -337,7 +337,7 @@
     <string name="screen_recorder_bitrate_title_100000000">100 МБ/с</string>
 
     <!-- Power menu screen recorder -->
-    <string name="power_menu_screenrecord_title">Запис з екрана</string>
+    <string name="power_menu_screenrecord_title">Запис з екрану</string>
 
     <!-- MediaScanner behavior on boot -->
     <string name="media_scanner_on_boot_title">Сканування медіафайлів при завантаженні</string>
@@ -494,7 +494,7 @@
     <string name="lockscreen_lock_icon_custom">Призначена для користувача іконка</string>
     <string name="lockscreen_lock_icon_temasek">Іконка від Temasek</string>
     <string name="lockscreen_lock_icon_default">Іконка за замовчуванням</string>
-    <string name="lockscreen_colorize_handle_title">Расскрасіть вручну</string>
+    <string name="lockscreen_colorize_handle_title">Розфарбувати вручну</string>
     <string name="lockscreen_colorize_handle_summary">Колір блокування буде встановлений на основі ручного вибору</string>
     <string name="lockscreen_style_title">Стиль блокування</string>
     <string name="lockscreen_frame_color_title">Колір рамки</string>
@@ -607,7 +607,7 @@
     <!-- Label of gesture name field in Rename gesture dialog box -->
     <string name="ga_gestures_rename_label">Назва жесту</string>
     <!-- Message, displayed when the sdcard cannot be found, 1st parameter is the name of the file that stores the gestures.  CHAR LIMIT=80 -->
-    <string name="ga_gestures_error_loading">Не вдалося завантажити %s . Переконайтеся, що у вас є доступ до SD-карті</string>
+    <string name="ga_gestures_error_loading">Не вдалося завантажити %s. Переконайтеся, що у вас є доступ до SD-карті</string>
     <string name="trigger_category">Область тригера</string>
     <string name="trigger_width_title">Ширина тригера</string>
     <string name="trigger_width_summary">Регулювання ширини області тригера</string>
@@ -714,7 +714,7 @@
     <string name="shortcut_action_help_shortcut">ярлик</string>
     <string name="shortcut_action_help_button">ярлик</string>
     <string name="shortcut_action_help_icon">, А при натисканні на іконку, з\'явиться можливість налаштування</string>
-    <string name="shortcut_action_help_main">Щоб додати %1$s , натисніть значек Додати. Після того, як %1$s доданий, натисніть на рядок для зміни призначення %2$s \ n \ n Щоб видалити %1$s , проведіть по рядку горизонтально вліво або вправо. Розташування %1$s у списку по вертикалі змінюється перетягуванням іконки зліва. \ n \ n Щоб очистити або скинути значення за замовчуванням, натисніть на значек Скидання.</string>
+    <string name="shortcut_action_help_main">Щоб додати %1$s, натисніть значек Додати. Після того, як %1$s доданий, натисніть на рядок для зміни призначення %2$s \ n \ n Щоб видалити %1$s , проведіть по рядку горизонтально вліво або вправо. Розташування %1$s у списку по вертикалі змінюється перетягуванням іконки зліва. \ n \ n Щоб очистити або скинути значення за замовчуванням, натисніть на значек Скидання.</string>
     <string name="shortcut_action_help_delete_last_entry">Видалення будь-якого %1$s в списку буде відключати функцію повністю.</string>
     <string name="shortcut_action_help">Довідка</string>
 
