@@ -314,6 +314,8 @@
     <!-- Summary for "Configure lockscreen" when security gesture is enabled [CHAR LIMIT=45] -->
     <string name="unlock_set_unlock_mode_gesture">Жест</string>
 
+    <!-- Extra display settings -->
+    <string name="extra_display_settings_title">Дополнительные настройки</string>
     <!-- Screen recorder -->
     <string name="screen_recorder_title">Запись с экрана</string>
     <string name="screen_recorder_summary">Настройка параметров записи с экрана</string>
@@ -377,8 +379,8 @@
 
     <!-- Lockscreen Lid Settings -->
     <string name="smart_cover_category_title">\"Умная\" обложка</string>
-    <string name="smart_cover_wake_title">Пробуждение \"умной\" обложкой</string>
-    <string name="smart_cover_wake_summary">Пробуждение устройства при открытии \"умной\" обложки</string>
+    <string name="smart_cover_wake_title">\"Умная\" обложка</string>
+    <string name="smart_cover_wake_summary">Выводить устройство из сна при использовании \"умной\" обложки</string>
 
     <!-- Breathing Notifications -->
     <string name="breathing_notifications_title">\"Живые\" уведомления</string>
