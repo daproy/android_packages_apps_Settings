@@ -39,13 +39,12 @@
             android:title="@string/title_collapse_panel"
             android:summary="@string/summary_collapse_panel" />
 
-        <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference
-            android:key="qs_small_icons"
-            android:title="@string/title_qs_small_icons"
-            android:defaultValue="false"
-            android:summary="@string/summary_qs_small_icons" />
+        <CheckBoxPreference
+            android:key="flip_qs_tiles"
+            android:title="@string/flip_qs_tiles_title"
+            android:summary="@string/flip_qs_tiles_summary" />
 
-		<com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference
+        <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference
             android:key="qs_floating_window"
             android:title="@string/title_floating_window"
             android:summary="@string/summary_floating_window" />
@@ -90,14 +89,9 @@
             android:entries="@array/entries_screentimeout_widget"
             android:entryValues="@array/values_screentimeout_widget" />
 
-        <CheckBoxPreference
-            android:key="flip_qs_tiles"
-            android:title="@string/flip_qs_tiles_title"
-            android:summary="@string/flip_qs_tiles_summary" />
-
         </PreferenceCategory>
 
-        <PreferenceCategory
+    <PreferenceCategory
         android:key="pref_dynamic_tiles"
         android:title="@string/title_dynamic_tiles" >
 
