@@ -461,6 +461,7 @@ Mittels \"Entfernen\" kann die ausgewählte Stützstelle aus dem Helligkeitsverl
   <string name="privacy_guard_manager_show_system_apps">Integrierte Apps anzeigen</string>
   <string name="privacy_guard_manager_filter_permissions">Berechtigungsfilter</string>
   <string name="privacy_guard_advanced_settings_title">Erweitert</string>
+  <string name="privacy_guard_notification_title">Zeige Benachrichtigung</string>
   <string name="blacklist_title">Sperrliste</string>
   <string name="blacklist_edit_dialog_title">Sperrlisteneintrag bearbeiten</string>
   <string name="blacklist_prefs">Einstellungen</string>
@@ -667,6 +668,7 @@ Mittels \"Entfernen\" kann die ausgewählte Stützstelle aus dem Helligkeitsverl
   <string name="volbtn_cursor_control_off">Deaktiviert</string>
   <string name="volbtn_cursor_control_on">Lauter-/Leiser-Taste bewegt den Cursor nach links/rechts</string>
   <string name="volbtn_cursor_control_on_reverse">Lauter-/Leiser-Taste bewegt den Cursor nach rechts/links</string>
+  <string name="swap_volume_buttons_title">Im Querformat umkehren</string>
   <string name="swap_volume_buttons_summary">Belegung der Lautstärketasten umkehren, wenn das Gerät gedreht wird</string>
   <string name="button_backlight_title">Hintergrundbeleuchtung</string>
   <string name="button_backlight_enabled">Tasten beleuchten</string>
