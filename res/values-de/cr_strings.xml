@@ -3,7 +3,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- About phone screen, Temasek version -->
-    <string name="temasek_version_title">Temaseks inoffizieller CyanogenMod11</string>
+    <string name="temasek_version_title">Temaseks inoffizieller CyanogenMod 11</string>
 
     <!-- temasek spare parts -->
     <string name="temasek_settings_title">Temaseks Erweiterungen</string>
@@ -60,6 +60,21 @@
     <!-- Lock before unlock -->
     <string name="lock_before_unlock_title">Sperrbildschirm vor PIN-Abfrage</string>
     <string name="lock_before_unlock_summary">Zeigt den Sperrbildschirm vor der PIN-Abfrage.</string>
+    
+    <!-- QuickSettings style options -->
+    <string name="quick_tiles_bg_no_title">ANMERKUNG</string>
+    <string name="quick_tiles_bg_summary">Alle Farb- und Transparenzänderungen wirken sich auf die Schnelleinstellungen aus!</string>
+    <string name="quicksettings_tiles_style">Optik</string>
+    <string name="summary_quicksettings_tiles_style">Anpassen der Kacheln</string>
+    <string name="quicksettings_tiles_style_additional_options">Weitere Optionen</string>
+    <string name="tiles_per_row_title">Kacheln pro Reihe</string>
+    <string name="tiles_per_row_duplicate_landscape_title">An Querformat anpassen</string>
+    <string name="tiles_per_row_duplicate_landscape_summary">Im Querformat wird die Kachelanzahl pro Reihe verdoppelt.</string>
+    <string name="quick_tiles_bg_color_title">Hintergrundfarbe</string>
+    <string name="quick_tiles_bg_pressed_color_title">Hintergrundfarbe gedrückt</string>
+    <string name="quick_tiles_text_color_title">Textfarbe</string>
+    <string name="quick_tiles_alpha_title">Hintergrundtransparenz</string>
+    <string name="qs_style_reset_message">Alle Farben auf Standardwerte zurücksetzen?</string>
     
     <!--  Recent clear all -->
     <string name="recent_clear_all_button">Leeren durch Tastendruck</string>
@@ -201,6 +216,11 @@
     <string name="peek_pickup_45seconds">45 Sekunden</string>
     <string name="peek_pickup_60seconds">1 Minute</string>
     <string name="peek_pickup_120seconds">2 Minuten</string>
+    <string name="peek_wake_3seconds">3 Sekunden</string>
+    <string name="peek_wake_5seconds">5 Sekunden (Standard)</string>
+    <string name="peek_wake_10seconds">10 Sekunden</string>
+    <string name="peek_wake_20seconds">20 Sekunden</string>
+    <string name="peek_wake_30seconds">30 Sekunden</string>
     
     <!-- Wakelock blocker -->
     <string name="wakelock_blocker">Wakelock Blocker</string>
@@ -279,6 +299,9 @@
     <!-- Summary for "Configure lockscreen" when security gesture is enabled [CHAR LIMIT=45] -->
     <string name="unlock_set_unlock_mode_gesture">Geste</string>
 
+    <!-- Extra display settings -->
+    <string name="extra_display_settings_title">Extra Einstellungen</string>
+    
     <!-- Screen recorder -->
     <string name="screen_recorder_title">Bildschirmaufzeichnung</string>
     <string name="screen_recorder_summary">Bildschirmaufzeichnung konfigurieren</string>
@@ -286,7 +309,6 @@
     <string name="screen_recorder_video_bitrate_title">Bitrate</string>
     <string name="screen_recorder_record_audio_title">Ton aufzeichnen</string>
     <string name="screen_recorder_record_audio_summary">Zeichnet den Ton ebenfalls auf (Mikrofon).</string>
-
     <!-- video sizes -->
     <string name="screen_recorder_size_240x400">240x400</string>
     <string name="screen_recorder_size_360x640">360x640</string>
@@ -295,7 +317,6 @@
     <string name="screen_recorder_size_540x960">540x960</string>
     <string name="screen_recorder_size_600x1024">600x1024</string>
     <string name="screen_recorder_size_720x1280">720x1280</string>
-
     <!-- frame rates -->
     <string name="screen_recorder_bitrate_title_100000">100 kB/s</string>
     <string name="screen_recorder_bitrate_title_250000">250 kB/s</string>
@@ -672,23 +693,17 @@
     <string name="volume_panel_timeout_title">Regler Anzeigedauer</string>
     <string name="volume_panel_timeout_summary">Legt die Anzeigedauer des Lautstärkereglers fest.</string>
 
-    <!-- QuickSettings style options -->
-    <string name="quick_tiles_bg_no_title">ANMERKUNG</string>
-    <string name="quick_tiles_bg_summary">Alle Farb- und Transparenzänderungen wirken sich auf die Schnelleinstellungen aus!</string>
-    <string name="quicksettings_tiles_style">Optik</string>
-    <string name="summary_quicksettings_tiles_style">Anpassen der Kacheln</string>
-    <string name="quicksettings_tiles_style_additional_options">Weitere Optionen</string>
-    <string name="tiles_per_row_title">Kacheln pro Reihe</string>
-    <string name="tiles_per_row_duplicate_landscape_title">An Querformat anpassen</string>
-    <string name="tiles_per_row_duplicate_landscape_summary">Im Querformat wird die Kachelanzahl pro Reihe verdoppelt.</string>
-    <string name="quick_tiles_bg_color_title">Hintergrundfarbe</string>
-    <string name="quick_tiles_bg_pressed_color_title">Hintergrundfarbe gedrückt</string>
-    <string name="quick_tiles_text_color_title">Textfarbe</string>
-    <string name="quick_tiles_alpha_title">Hintergrundtransparenz</string>
-    <string name="qs_style_reset_message">Alle Farben auf Standardwerte zurücksetzen?</string>
-    
     <!-- QuickSettings haptic feedback -->
     <string name="haptic_qs_tiles_title">Haptisches Feedback</string>
     <string name="haptic_qs_tiles_summary">Bei Berührung der Kacheln vibrieren</string>
+    
+    <!-- TRDS and and TRDS tile -->
+    <string name="theme_settings_title">Benutzeroberfläche (UI)</string>
+    <string name="theme_auto_mode_title">Dunkles UI</string>
+    <string name="theme_auto_mode_off">Manuell</string>
+    <string name="theme_auto_mode_lightsensor">Bei Änderung der Lichtverhältnisse</string>
+    <string name="theme_auto_mode_twilight">Tageszeitabhängig</string>
+    <string name="theme_auto_switch_mode_error">Automatische UI-Änderung durch Messung der Lichtverhältnisse ist aktiviert. Manuelles Umschalten nicht möglich.</string>
+    <string name="title_tile_theme">UI wechseln</string>
     
 </resources>
