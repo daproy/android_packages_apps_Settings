@@ -25,7 +25,7 @@
 
     <!-- Navigation bar -->
     <string name="navbar_enable_bar">Увімкнути рядок навігації</string>
-    <string name="navbar_enable_bar_summary">Включення відображення рядка навігації</string>
+    <string name="navbar_enable_bar_summary">Увімкнення відображення рядка навігації</string>
     <string name="navbar_style_dimen_title">Розміри</string>
     <string name="navbar_dimensions_reset_message">Скинути всі значення розмірів за замовчуванням?</string>
     <string name="navigation_bar_height_title">Висота рядка навігації</string>
@@ -74,7 +74,7 @@
     <string name="quick_tiles_bg_no_title">ПРИМІТКА</string>
     <string name="quick_tiles_bg_summary">Всі зміни в кольорах і прозорості фону будуть відображатися безпосередньо на стрічці швидких налаштувань</string>
     <string name="quicksettings_tiles_style">Стиль швидких налаштувань</string>
-    <string name="summary_quicksettings_tiles_style">Перегляд, вибір або зміну виду панелі швидких налаштувань</string>
+    <string name="summary_quicksettings_tiles_style">Перегляд, вибір або зміна виду панелі швидких налаштувань</string>
     <string name="quicksettings_tiles_style_additional_options">Додаткові параметри</string>
     <string name="tiles_per_row_title">Плиток в ряду</string>
     <string name="tiles_per_row_duplicate_landscape_title">Масштабування плиток в ландшафті</string>
@@ -109,7 +109,7 @@
     <!-- Recent Ram Bar -->
     <string name="ram_bar">Рядок використання ОЗУ</string>
     <string name="ram_bar_note_title">Примітка</string>
-    <string name="ram_bar_note_summary">Цей рядок ОЗУ показує фактичне використання андроидом оперативної пам\'яті (ОЗУ). Будь ласка, зверніть увагу, що наявність додатків в кеші допомагає пристрою відкривати додатки набагато швидше. Для подальших пояснень того, як працює управління оперативною пам\'яттю (ОЗУ) у андроиде, натисніть кнопку Довідка.</string>
+    <string name="ram_bar_note_summary">Цей рядок ОЗУ показує фактичне використання андроїдом оперативної пам\'яті (ОЗУ). Будь ласка, зверніть увагу, що наявність додатків в кеші допомагає пристрою відкривати додатки набагато швидше. Для подальших пояснень того, як працює управління оперативною пам\'яттю (ОЗУ) у андроиде, натисніть кнопку Довідка.</string>
     <string name="ram_bar_mode_title">Режим рядка використання ОЗУ</string>
     <string name="ram_bar_mode_dialog_title">Показувати в рядку використання ОЗУ</string>
     <string name="ram_bar_none">Нічого</string>
@@ -141,15 +141,15 @@
     <string name="shortcut_image_not_valid">Вибрана програма містить неприпустиму іконку або не підтримує цифрове кадрування. Використовуйте інший додаток</string>
 
     <!-- TRDS -->
-    <string name="theme_settings_title">Темна тема</string>
+    <string name="theme_settings_title">TRDS</string>
     <string name="theme_auto_mode_title">Переключити тему</string>
     <string name="theme_auto_mode_off">Вручну</string>
     <string name="theme_auto_mode_lightsensor">При зміні освітленості</string>
     <string name="theme_auto_mode_twilight">У денний час</string>
-    <string name="theme_auto_switch_mode_error">Включений режим автоматичної зміни тем оформлення при зміні освітленості. Ручне перемикання неможливо</string>
+    <string name="theme_auto_switch_mode_error">Увімкнений режим автоматичної зміни тем оформлення при зміні освітленості. Ручне перемикання неможливо</string>
    
     <!-- TRDS tile -->
-    <string name="title_tile_theme">Перемикач тим</string>
+    <string name="title_tile_theme">Перемикач тем</string>
 
     <!-- Status bar | Clock -->
     <string name="status_bar_clock">Годинник і дата</string>
@@ -161,7 +161,7 @@
     <string name="status_bar_clock_style_reset">Скидання кольору</string>
     <string name="status_bar_show_clock_title">Показувати годинник і дату</string>
     <string name="status_bar_am_pm_title">AM/PM</string>
-    <string name="status_bar_am_pm_info">24-годинний формат включений</string>
+    <string name="status_bar_am_pm_info">24-годинний формат увімкнений</string>
     <string name="enable_clock_weekday">День тижня</string>
     <string name="enable_clock_weekday_summary">Скорочений день тижня для відображення</string>
     <string name="right_clock">Годинник праворуч</string>
@@ -199,9 +199,9 @@
     <string name="lockscreen_notifications">Повідомлення на екрані блокування</string>
     <string name="lockscreen_notifications_summary">Показувати очікують повідомлення на екрані блокування</string>
     <string name="pocket_mode">Режим \"У кишені\"</string>
-    <string name="pocket_mode_summary">Включає екран і відображає усі сповіщення, коли пристрій дістали з кишені. Відключає екран, коли пристрій кладуть назад в кишеню.</string>
+    <string name="pocket_mode_summary">Вмикає екран і відображає усі сповіщення, коли пристрій дістали з кишені. Відключає екран, коли пристрій кладуть назад в кишеню.</string>
     <string name="show_always">Показувати завжди</string>
-    <string name="show_always_summary">Завжди включати екран, коли пристрій дістається з кишені, навіть за відсутності очікують повідомлень.</string>
+    <string name="show_always_summary">Завжди вмикати екран, коли пристрій дістається з кишені, навіть за відсутності очікують повідомлень.</string>
     <string name="hide_low_priority">Приховати низький пріоритет</string>
     <string name="hide_low_priority_summary">Приховати повідомлення з низьким пріоритетом, такі як повідомлення про погоду від Google Now.</string>
     <string name="hide_non_clearable">Приховати видаляються</string>
@@ -225,17 +225,23 @@
 
     <string name="notifications_on_lockscreen">Повідомлення на екрані блокування</string>
     <string name="notifications_on_lockscreen_summary">Вибір способу відображення повідомлень на екрані блокування</string>
-    <string name="notifications_on_lockscreen_warning_summary">Вибір одного із способів відображення повідомлень на екрані блокування автоматично відключить інший. Якщо ви хочете використовувати функції одного із способів, не забудьте перевірити включені вони чи ні.</string>
+    <string name="notifications_on_lockscreen_warning_summary">Вибір одного із способів відображення повідомлень на екрані блокування автоматично відключить інший. Якщо ви хочете використовувати функції одного із способів, не забудьте перевірити увімкнені вони чи ні.</string>
 
     <!--Notification peek-->
     <string name="notification_peek_title">Повідомлення при піднятті</string>
     <string name="notification_peek_summary">Показувати останнє повідомлення після підняття пристрої</string>
+    <string name="peek_wake_timeout_title">Тайм-аут очікування виходу зі сну</string>
     <string name="peek_pickup_timeout_title">Тайм-аут відображення повідомлення</string>
     <string name="peek_pickup_10seconds">10 секунд (за замовчуванням)</string>
     <string name="peek_pickup_30seconds">30 секунд</string>
     <string name="peek_pickup_45seconds">45 секунд</string>
     <string name="peek_pickup_60seconds">1 хвилина</string>
     <string name="peek_pickup_120seconds">2 хвилини</string>
+    <string name="peek_wake_3seconds">3 секунди</string>
+    <string name="peek_wake_5seconds">5 секунд (за замовчуванням)</string>
+    <string name="peek_wake_10seconds">10 секунд</string>
+    <string name="peek_wake_20seconds">20 секунд</string>
+    <string name="peek_wake_30seconds">30 секунд</string>
 
     <!-- Wakelock blocker -->
     <string name="wakelock_blocker">Блокування вейклоків</string>
@@ -244,7 +250,7 @@
     <string name="wakelock_blocker_save">Зберегти</string>
     <string name="wakelock_list_header">Доступні вейклоки</string>
     <string name="wakelock_blocker_reload">Перезавантажити</string>
-    <string name="wakelock_blocker_warning_title">Діяти з обережністю</string>
+    <string name="wakelock_blocker_warning_title">Будьте обережні</string>
     <string name="wakelock_blocker_warning">Блокування вейклоків потенційно може привести до нестабільної роботи пристрою, збою або втрати даних</string>
 	
     <!-- Lock Gesture settings -->
@@ -314,8 +320,10 @@
     <!-- Summary for "Configure lockscreen" when security gesture is enabled [CHAR LIMIT=45] -->
     <string name="unlock_set_unlock_mode_gesture">Жест</string>
 
+    <!-- Extra display settings -->
+    <string name="extra_display_settings_title">Додаткові налаштування</string>
     <!-- Screen recorder -->
-    <string name="screen_recorder_title">Запис з екрана</string>
+    <string name="screen_recorder_title">Запис з екрану</string>
     <string name="screen_recorder_summary">Налаштування параметрів запису з екрану</string>
     <string name="screen_recorder_video_dimensions_title">Розмір відео</string>
     <string name="screen_recorder_video_bitrate_title">Бітрейт</string>
@@ -383,11 +391,11 @@
     <!-- Breathing Notifications -->
     <string name="breathing_notifications_title">\"Живі\" повідомлення</string>
     <string name="sms_breath_title">\"Живе\" СМС-повідомлення</string>
-    <string name="sms_breath_summary">Додасть \"ефект дихання\" вашому смс-повідомленням в рядку стану</string>
+    <string name="sms_breath_summary">Додасть \"ефект дихання\" вашому смс-повідомленню в рядку стану</string>
     <string name="missed_call_breath_title">\"Живий\" пропущений виклик</string>
-    <string name="missed_call_breath_summary">Додасть \"ефект дихання\" вашого повідомлення про пропущені дзвінки в рядку стану</string>
+    <string name="missed_call_breath_summary">Додасть \"ефект дихання\" вашому повідомленню про пропущені дзвінки в рядку стану</string>
     <string name="voicemail_breath_title">\"Жива\" голосова пошта</string>
-    <string name="voicemail_breath_summary">Додасть \"ефект дихання\" вашого повідомлення про голосову пошту в рядку стану</string>
+    <string name="voicemail_breath_summary">Додасть \"ефект дихання\" вашому повідомленню про голосову пошту в рядку стану</string>
 
     <!-- Volume Steps -->
     <string name="volume_steps_title">Рівні гучності</string>
@@ -437,9 +445,10 @@
     <!-- QuickSettings: Smart Pulldown -->
     <string name="smart_pulldown_title">Розумне відкриття</string>
     <string name="smart_pulldown_summary">Відкривати панель швидких налаштувань, якщо в даний час немає %1$s повідомлень</string>
-    <string name="smart_pulldown_off">Викл</string>
+    <string name="smart_pulldown_off">Вимк</string>
     <string name="smart_pulldown_dismissable">видаляємих</string>
     <string name="smart_pulldown_persistent">постійних</string>
+    <string name="smart_pulldown_all">видаляємих або постійних</string>
 
     <!-- Display : Animation options -->
     <string name="screen_and_animations_title">Екран і анімація</string>
@@ -448,7 +457,7 @@
     <!-- ListView animation -->
     <string name="bars_and_menus_category_system_title">Система</string>
     <string name="listview_animation_title">Вибрати анімацію для списків</string>
-    <string name="listview_off">Вимкнена</string>
+    <string name="listview_off">Вимкнено</string>
     <string name="listview_wave_left">Хвиля (Зліва)</string>
     <string name="listview_wave_right">Хвиля (Праворуч)</string>
     <string name="listview_alpha">Прозорість</string>
@@ -463,8 +472,8 @@
     <!-- ListView interpolator -->
     <string name="listview_interpolator_title">Вибрати інтерполятор для списків</string>
     <string name="listview_accelerate_interpolator">Прискорений</string>
-    <string name="listview_decelerate_interpolator">Уповільнений</string>
-    <string name="listview_accelerate_decelerate_interpolator">Прискорено-уповільнений</string>
+    <string name="listview_decelerate_interpolator">Сповільнений</string>
+    <string name="listview_accelerate_decelerate_interpolator">Прискорено-сповільнений</string>
     <string name="listview_anticipate_interpolator">Пророкуючий</string>
     <string name="listview_overshoot_interpolator">Помиляючийся</string>
     <string name="listview_anticipate_overshoot_interpolator">Пророкуючо-помиляючийся</string>
@@ -500,15 +509,15 @@
     <string name="lockscreen_frame_color_title">Колір рамки</string>
     <string name="lockscreen_frame_color_summary">Колір рамки і фону екрану розблокування</string>
     <string name="lockscreen_lock_color_title">Колір замку</string>
-    <string name="lockscreen_lock_color_summary">Колір іконки замку в слайдері розблокування</string>
+    <string name="lockscreen_lock_color_summary">Колір іконки замка в слайдері розблокування</string>
     <string name="lockscreen_dots_color_title">Колір точок</string>
     <string name="lockscreen_dots_color_summary">Колір світяться точок навколо слайдера розблокування</string>
 
     <!-- Ability to disable hardware keys via nav bar settings -->
     <string name="hw_keys_title">Апаратні кнопки</string>
-    <string name="key_menu_enabled">Кнопка \"Меню\" включена</string>
-    <string name="key_back_enabled">Кнопка \"Назад\" включена</string>
-    <string name="key_home_enabled">Кнопка \"Додому\" включена</string>
+    <string name="key_menu_enabled">Кнопка \"Меню\" увімкнена</string>
+    <string name="key_back_enabled">Кнопка \"Назад\" увімкнена</string>
+    <string name="key_home_enabled">Кнопка \"Додому\" увімкнена</string>
 
     <!-- Telo Radio -->
     <string name="telo_radio_settings_title">Диспетчер з\'єднань</string>
@@ -534,7 +543,7 @@
     <string name="lockscreen_background_style_title">Фон екрану блокування</string>
     <string name="background_color_fill_title">Колір фону</string>
     <string name="background_default">Шпалери за замовчуванням</string>
-    <string name="background_color_fill">Колір заливки</string>
+    <string name="background_color_fill">Колір фону</string>
     <string name="background_wallpaper">Користувальницькі шпалери</string>
     <string name="transparency">Прозорість фону</string>
     <string name="background_result_successful">Фон змінився</string>
@@ -557,7 +566,7 @@
     <string name="identicons_remove_service_running_title">Видалення аватарок</string>
     <string name="identicons_remove_service_running_summary"></string>
     <string name="identicons_remove_service_contact_summary">Обробка фото %1$d/%2$d</string>
-    <string name="identicons_remove_service_contact_summary_finishing">Усунення недоробок ...</string>
+    <string name="identicons_remove_service_contact_summary_finishing">Усунення недоліків ...</string>
     <string name="identicons_style_retro">Ретро</string>
     <string name="identicons_style_contemporary">Сучасний</string>
     <string name="identicons_style_spirograph">Спірограф</string>
@@ -591,7 +600,7 @@
     <!-- Buttons in Rename gesture dialog box -->
     <string name="ga_cancel_action">Скасувати</string>
     <!-- Message displayed when the user opens the gestures settings screen -->
-    <string name="ga_gestures_loading">Завантаження жестів ...</string>
+    <string name="ga_gestures_loading">Завантаження жестів...</string>
     <!-- Message displayed when the user has no gestures -->
     <string name="ga_gestures_empty">Немає жестів</string>
     <!-- Title of the screen used to view/manage gestures -->
@@ -612,7 +621,7 @@
     <string name="trigger_width_title">Ширина тригера</string>
     <string name="trigger_width_summary">Регулювання ширини області тригера</string>
     <string name="trigger_top_title">Положення тригера</string>
-    <string name="trigger_top_summary">Регулювання вертикальній позиції області тригера</string>
+    <string name="trigger_top_summary">Регулювання вертикальної позиції області тригера</string>
     <string name="trigger_bottom_title">Висота тригера</string>
     <string name="trigger_bottom_summary">Регулювання висоти області тригера</string>
 
@@ -627,7 +636,7 @@
     <string name="keyboard_rotation_toggle_summary">Задіяти автоповорот при відображенні клавіатури</string>
     <string name="keyboard_rotation_timeout_title">Затримка автоповороту</string>
     <string name="keyboard_rotation_timeout_summary"></string>
-    <string name="keyboard_rotation_dialog">Примітка: Ця функція тимчасово задіє автоповорот поки використовується клавіатура, і не діє, якщо автоповорот вже включений в налаштуваннях.</string>
+    <string name="keyboard_rotation_dialog">Примітка: Ця функція тимчасово задіє автоповорот поки використовується клавіатура, і не діє, якщо автоповорот вже увімкнений в налаштуваннях.</string>
     <string name="show_enter_key_title">Показувати клавішу \"Введення\"</string>
     <string name="show_enter_key_summary">Показувати клавішу \"Введення\" замість клавіші зі смайликом</string>
 
@@ -707,7 +716,7 @@
     <string name="shortcut_action_max">Досягнутий максимальний розмір запису</string>
     <string name="shortcut_action_warning">Попередження</string>
     <string name="shortcut_action_warning_message">Неможливо видалити останній запис</string>
-    <string name="shortcut_action_disable_message">Вимкнено \ nДобавьте запис, щоб включити цю функцію</string>
+    <string name="shortcut_action_disable_message">Вимкнено \ nДобавьте запис, щоб увімкнути цю функцію</string>
     <string name="shortcut_image_not_valid">Вибрана програма містить неприпустиму іконку або не підтримує цифрове кадрування. Використовуйте інший додаток</string>
     <string name="shortcut_duplicate_entry">Вибрана дія не може використовуватися двічі</string>
 
@@ -793,7 +802,7 @@
 
     <!-- Screen-On Notification Light -->
     <string name="screen_on_notification_led_title">Індикація повідомлень при увімкненому екрані</string>
-    <string name="screen_on_notification_led_summary">Увімкнути індикатор сповіщень навіть коли екран включений</string>
+    <string name="screen_on_notification_led_summary">Увімкнути індикатор сповіщень навіть коли екран увімкнений</string>
 
     <!-- Brightness Slider -->
     <string name="notification_drawer_brightness_slider_title">Повзунок яскравості</string>
@@ -841,5 +850,12 @@
     <!-- QuickSettings haptic feedback -->
     <string name="haptic_qs_tiles_title">Тактильна чутливість плиток</string>
     <string name="haptic_qs_tiles_summary">Вібрація при дотику до плиток</string>
-
+    
+    <!-- App Circle Sidebar -->
+    <string name="app_circle_bar_title">Бокова панель додатків</string>
+    <string name="app_circle_sidebar_summary_real">Швидкий запуск додатків з бокової панелі, і можливість відкрити декілька додатків на одному екрані в режимі багатозадачності</string>
+    <string name="app_circle_bar_summary">Відображати панель додатків після дотику до правої сторони екрану</string>
+    <string name="app_circle_bar_included_apps_title">Увімкнені додатки</string>
+    <string name="app_circle_bar_included_apps_summary">Додатки, які будуть відображатися на панелі додатків</string>
+    <string name="category_app_circle_bar_title">Лаунчер додатків</string>
 </resources>
