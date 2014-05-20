@@ -706,4 +706,54 @@
     <string name="theme_auto_switch_mode_error">Automatische UI-Änderung durch Messung der Lichtverhältnisse ist aktiviert. Manuelles Umschalten nicht möglich.</string>
     <string name="title_tile_theme">UI wechseln</string>
     
+    <!-- App Circle Sidebar -->
+    <string name="app_circle_bar_title">App-Kreis</string>
+    <string name="app_circle_sidebar_summary_real">Kreisförmige Seitenleiste zum schnelleren Starten von Anwendungen nutzen. Multitasking leicht gemacht!</string>
+    <string name="app_circle_bar_summary">Zeigt den App-Kreis nach dem Berühren des rechten Bildschirmrandes</string>
+    <string name="app_circle_bar_included_apps_title">Apps auswählen</string>
+    <string name="app_circle_bar_included_apps_summary">Diese Anwendungen landen im App-Kreis</string>
+    <string name="category_app_circle_bar_title">App-Kreis</string>
+
+    <!-- Quicksettings panel floating window -->
+    <string name="title_floating_window">Schwebendes Fenster</string>
+    <string name="summary_floating_window">Öffnet die Kacheln der Schnelleinstellungen in einem schwebendem Fenster</string>
+
+    <!-- QuickSettings fliptiles -->
+    <string name="flip_qs_tiles_title">Kacheldrehung</string>
+    <string name="flip_qs_tiles_summary">Kacheln bei Berührung drehen</string>
+    
+    <!-- App sidebar -->
+    <string name="app_sidebar_title">Seitenleiste</string>
+    <string name="app_sidebar_enable_title">Seitenleiste aktivieren</string>
+    <string name="app_sidebar_enable_summaryOn">Seitenleiste ist aktiviert</string>
+    <string name="app_sidebar_enable_summaryOff">Seitenleiste ist deaktiviert</string>
+    <string name="app_sidebar_setup_items_title">Inhalt der Seitenleiste festlegen</string>
+    <string name="app_sidebar_setup_items_summary">Hinzufügen, entfernen und die Position der angezeigten Apps festlegen</string>
+    <string name="app_sidebar_transparency_title">Transparenz </string>
+    <string name="app_sidebar_transparency_summary">Transparenz festlegen</string>
+    <string name="app_sidebar_position_title">Position</string>
+    <string name="app_sidebar_position_summary">Seitenleiste am linken oder rechten Bildschirmrand anzeigen</string>
+    <string name="app_sidebar_position_left">Links</string>
+    <string name="app_sidebar_position_right">Rechts</string>
+    <string name="app_sidebar_hide_labels_title">Symbolbeschriftung ausblenden</string>
+    <string name="app_sidebar_hide_labels_summary">Entfernt die Symbolbeschriftung angezeigter Anwendungen</string>
+    <string name="tab_category">Leistenkontur</string>
+    <string name="use_tab_title">Anzeigen</string>
+    <string name="use_tab_summary">Zeigt eine Leistenkontur am Bildschirmrand, auf welcher die Leiste bei Berührung eingeblendet wird.</string>
+    <string name="tab_position_title">Position</string>
+    <string name="tab_position_summary">Zeigt die Leistenkontur oben, zentriert oder unten am eingestellten Bildschirmrand.</string>
+    <string name="tab_size_title">Größe</string>
+    <string name="tab_size_summary">Ändert die Größe der sichtbaren Leistenkontur.</string>
+    <string name="trigger_category">Region des Auslösers</string>
+    <string name="trigger_width_title">Breite</string>
+    <string name="trigger_width_summary">Setzt die Breite der auf Wischgesten reagierenden Region fest</string>
+    <string name="trigger_top_title">Position</string>
+    <string name="trigger_top_summary">Setzt die vertikale Postion der reagierenden Region fest</string>
+    <string name="trigger_bottom_title">Höhe</string>
+    <string name="trigger_bottom_summary">Setzt die Höhe der reagierenden Region fest</string>
+
+    <!-- Proximity work-around -->
+    <string name="is_inaccurate_proximity_title">Ungenauer Annäherungssensor</string>
+    <string name="is_inaccurate_proximity_summary">Work-around für ungenaues Verhalten des Annäherungssensors: Das Gerät wird gezwungen den Bildschirm nach Beenden eines Anrufs aufzuwecken.</string>
+     
 </resources>
