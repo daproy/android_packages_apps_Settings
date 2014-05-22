@@ -108,6 +108,7 @@ public class InstalledAppDetails extends Fragment
     private IUsbManager mUsbManager;
     private AppWidgetManager mAppWidgetManager;
     private DevicePolicyManager mDpm;
+    private INotificationManager mNotificationManager;
     private ISms mSmsManager;
     private ApplicationsState mState;
     private ApplicationsState.Session mSession;
@@ -400,11 +401,9 @@ public class InstalledAppDetails extends Fragment
     }
 
     private void initNotificationButton() {
-        INotificationManager nm = INotificationManager.Stub.asInterface(
-                ServiceManager.getService(Context.NOTIFICATION_SERVICE));
         boolean enabled = true; // default on
         try {
-            enabled = nm.areNotificationsEnabledForPackage(mAppEntry.info.packageName,
+            enabled = mNotificationManager.areNotificationsEnabledForPackage(mAppEntry.info.packageName,
                     mAppEntry.info.uid);
         } catch (android.os.RemoteException ex) {
             // this does not bode well
@@ -443,6 +442,8 @@ public class InstalledAppDetails extends Fragment
         mAppWidgetManager = AppWidgetManager.getInstance(getActivity());
         mDpm = (DevicePolicyManager)getActivity().getSystemService(Context.DEVICE_POLICY_SERVICE);
         mSmsManager = ISms.Stub.asInterface(ServiceManager.getService("isms"));
+        mNotificationManager = INotificationManager.Stub.asInterface(
+                ServiceManager.getService(Context.NOTIFICATION_SERVICE));
 
         mCanBeOnSdCardChecker = new CanBeOnSdCardChecker();
 
@@ -1372,12 +1373,10 @@ public class InstalledAppDetails extends Fragment
     }
 
     private void setNotificationsEnabled(boolean enabled) {
-        String packageName = mAppEntry.info.packageName;
-        INotificationManager nm = INotificationManager.Stub.asInterface(
-                ServiceManager.getService(Context.NOTIFICATION_SERVICE));
         try {
             final boolean enable = mNotificationSwitch.isChecked();
-            nm.setNotificationsEnabledForPackage(packageName, mAppEntry.info.uid, enabled);
+            mNotificationManager.setNotificationsEnabledForPackage(
+                    mAppEntry.info.packageName, mAppEntry.info.uid, enabled);
         } catch (android.os.RemoteException ex) {
             mNotificationSwitch.setChecked(!enabled); // revert
         }
