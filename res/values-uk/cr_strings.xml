@@ -31,7 +31,7 @@
     <string name="navigation_bar_height_title">Висота рядка навігації</string>
     <string name="navigation_bar_height_summary">Висота рядка навігації в портретному режимі</string>
     <string name="navigation_bar_width_title">Ширина рядка навігації</string>
-    <string name="navigation_bar_width_summary">Ширина рядка навігації, якщо рядок розташована уздовж бічної сторони.</string>
+    <string name="navigation_bar_width_summary">Ширина рядка навігації, якщо рядок розташований уздовж бічної сторони.</string>
     <string name="navigation_bar_size_42_dp_default">42 dp (за замовчуванням)</string>
     <string name="navigation_bar_size_36_dp">36 dp</string>
     <string name="navigation_bar_size_30_dp">30 dp</string>
@@ -40,7 +40,7 @@
     <string name="navigation_bar_size_44_dp">44 dp</string>
     <string name="navigation_bar_size_40_dp">40 dp</string>
     <string name="navigation_bar_size_42_dp">42 dp</string>
-    <string name="navigation_bar_size_0_dp">0 dp (викл.)</string>
+    <string name="navigation_bar_size_0_dp">0 dp (вимк.)</string>
 
     <!-- Low battery warning policy -->
     <string name="pref_low_battery_warning_policy_title">Повідомлення про низький заряд батареї</string>
@@ -54,7 +54,7 @@
     <string name="battery_stats_title">Статистика</string>
 
     <!--Lockscreen See Through-->
-    <string name="see_through_title">Вид \"наскрізь\"</string>
+    <string name="see_through_title">Вигляд \"наскрізь\"</string>
     <string name="see_through_summary">Показує вміст позаду екрану блокування, ваші дані можуть бути видні для оточуючих</string>
     <string name="blur_radius_title">Радіус розмиття</string>
     <string name="blur_radius_summary">Встановіть розмір радіусу розмиття для ефекту розмиття</string>
@@ -68,7 +68,7 @@
 
     <!-- Lock before unlock -->
     <string name="lock_before_unlock_title">Показувати слайдер для розблокування</string>
-    <string name="lock_before_unlock_summary">Показувати слайдер на екрані блокування для безпечної розблокування пристрою</string>
+    <string name="lock_before_unlock_summary">Показувати слайдер на екрані блокування для безпечного розблокування пристрою</string>
     
     <!-- QuickSettings style options -->
     <string name="quick_tiles_bg_no_title">ПРИМІТКА</string>
@@ -705,7 +705,7 @@
     <string name="shortcut_action_qs">Панель швидких налаштувань</string>
     <string name="shortcut_action_none">Нічого</string>
     <string name="shortcut_action_power_menu">Меню кнопки живлення</string>
-    <string name="shortcut_action_torch">Ліхтари</string>
+    <string name="shortcut_action_torch">Ліхтарик</string>
     <string name="shortcut_action_longpress">Довге натиснення:</string>
     <string name="shortcut_action_select_action_longpress">Виберіть дію для довгого натискання:</string>
     <string name="shortcut_action_select_action">Виберіть дію:</string>
@@ -848,7 +848,7 @@
     <string name="volume_panel_timeout_summary">Затримка часу до закриття панелі гучності</string>
 
     <!-- QuickSettings haptic feedback -->
-    <string name="haptic_qs_tiles_title">Тактильна чутливість плиток</string>
+    <string name="haptic_qs_tiles_title">Вібровідгук плиток</string>
     <string name="haptic_qs_tiles_summary">Вібрація при дотику до плиток</string>
     
     <!-- App Circle Sidebar -->
