@@ -100,6 +100,7 @@ public class BootReceiver extends BroadcastReceiver {
         String maxFrequency = prefs.getString(Processor.FREQ_MAX_PREF, null);
         String availableFrequenciesLine = Utils.fileReadOneLine(Processor.FREQ_LIST_FILE);
         String availableGovernorsLine = Utils.fileReadOneLine(Processor.GOV_LIST_FILE);
+        String mcps = prefs.getString(Processor.MCPS_PREF, null);
         boolean noSettings = ((availableGovernorsLine == null) || (governor == null)) &&
                              ((availableFrequenciesLine == null) || ((minFrequency == null) && (maxFrequency == null)));
         List<String> frequencies = null;
@@ -109,10 +110,10 @@ public class BootReceiver extends BroadcastReceiver {
             Log.d(TAG, "No CPU settings saved. Nothing to restore.");
         } else {
             initFreqCapFiles(ctx);
-            if (availableGovernorsLine != null){
+            if (availableGovernorsLine != null) {
                 governors = Arrays.asList(availableGovernorsLine.split(" "));
             }
-            if (availableFrequenciesLine != null){
+            if (availableFrequenciesLine != null) {
                 frequencies = Arrays.asList(availableFrequenciesLine.split(" "));
             }
             if (maxFrequency != null && frequencies != null && frequencies.contains(maxFrequency)) {
@@ -123,6 +124,9 @@ public class BootReceiver extends BroadcastReceiver {
             }
             if (governor != null && governors != null && governors.contains(governor)) {
                 Utils.fileWriteOneLine(Processor.GOV_FILE, governor);
+            }
+            if (mcps != null) {
+                Utils.fileWriteOneLine(Processor.MCPS_FILE, mcps);
             }
             Log.d(TAG, "CPU settings restored.");
         }

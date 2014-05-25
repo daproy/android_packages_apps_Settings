@@ -871,4 +871,17 @@
         <item>**null**</item>
     </string-array>
 
+    <!-- Multicore Power Saving -->
+    <string-array name="mcps_entries">
+        <item>@string/mcps_0</item>
+        <item>@string/mcps_1</item>
+        <item>@string/mcps_2</item>
+    </string-array>
+
+    <string-array name="mcps_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
 </resources>

@@ -986,4 +986,10 @@
     <string name="app_moving_reboot_now_button">Reboot now</string>
     <string name="app_moving_reboot_later_button">Reboot later</string>
 
+    <!-- Performance -->
+    <string name="pref_mcps_title">Multicore power saving</string>
+    <string name="mcps_0">Off</string>
+    <string name="mcps_1">On</string>
+    <string name="mcps_2">Aggressive</string>
+
 </resources>
