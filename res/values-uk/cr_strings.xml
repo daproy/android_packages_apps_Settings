@@ -190,6 +190,8 @@
     <string name="clock_font_light">Тонкий</string>
     <string name="clock_font_light_italic">Тонкий курсив</string>
     <string name="clock_font_normal">Нормальний</string>
+    <string name="clock_use_second">Годинник з секундами</string>
+    <string name="clock_use_second_summary">Показувати секунди в годиннику</string>
 	
     <!-- Lockscreen Notifications -->
     <string name="general">Основні</string>
@@ -858,4 +860,47 @@
     <string name="app_circle_bar_included_apps_title">Увімкнені додатки</string>
     <string name="app_circle_bar_included_apps_summary">Додатки, які будуть відображатися на панелі додатків</string>
     <string name="category_app_circle_bar_title">Лаунчер додатків</string>
+    
+    <!-- Quicksettings panel floating window -->
+    <string name="title_floating_window">Плаваюче вікно</string>
+    <string name="summary_floating_window">Відкривати плитки швидких налаштувань в плаваючому вікні</string>
+
+    <!-- QuickSettings fliptiles -->
+    <string name="flip_qs_tiles_title">Переворот плиток</string>
+    <string name="flip_qs_tiles_summary">Переворот плиток при дотику</string>
+    
+      <!-- App sidebar -->
+    <string name="app_sidebar_title">Бар додатків</string>
+    <string name="app_sidebar_enable_title">Увімкнути бар додатків</string>
+    <string name="app_sidebar_enable_summaryOn">Бар додатків увімкнений</string>
+    <string name="app_sidebar_enable_summaryOff">Бар додатків вимкнений</string>
+    <string name="app_sidebar_setup_items_title">Налаштування вмісту бару</string>
+    <string name="app_sidebar_setup_items_summary">Додавання, видалення и розміщення елементів в барі додатків</string>
+    <string name="app_sidebar_transparency_title">Прозорість бару</string>
+    <string name="app_sidebar_transparency_summary">Регулювання рівня прозорості бару додатків</string>
+    <string name="app_sidebar_position_title">Розташування бару</string>
+    <string name="app_sidebar_position_summary">Розташування бару додатків на лівій чи правій стороні екрану</string>
+    <string name="app_sidebar_position_left">Зліва</string>
+    <string name="app_sidebar_position_right">Зправа</string>
+    <string name="app_sidebar_hide_labels_title">Сховати назви іконок</string>
+    <string name="app_sidebar_hide_labels_summary">Ховати назви іконок в барі додатків</string>
+    <string name="tab_category">Видима вкладка</string>
+    <string name="use_tab_title">Відображення вкладки</string>
+    <string name="use_tab_summary">Показувати видиму вкладку на стороні екрану, в якій буде відображатися бар додатків при дотику</string>
+    <string name="tab_position_title">Розташування вкладки</string>
+    <string name="tab_position_summary">Відображення вкладки у верхній, середній або нижній частині екрану</string>
+    <string name="tab_size_title">Розмір вкладки</string>
+    <string name="tab_size_summary">Зміна розміру видимої вкладки</string>
+    <string name="trigger_category">Область тригера</string>
+    <string name="trigger_width_title">Ширина тригера</string>
+    <string name="trigger_width_summary">Регулювання ширини області тригера</string>
+    <string name="trigger_top_title">Положення тригера</string>
+    <string name="trigger_top_summary">Регулювання вертикальнї позициї області тригера</string>
+    <string name="trigger_bottom_title">Висота тригера</string>
+    <string name="trigger_bottom_summary">Регулювання висоти області тригера</string>
+
+     <!-- Proximity work-around -->
+     <string name="is_inaccurate_proximity_title">Неточний датчик приближення</string>
+     <string name="is_inaccurate_proximity_summary">Обхід некорректної роботи датчику приближення: це заставить увімкнути екран телефону післе завершення визову</string>
+
 </resources>
