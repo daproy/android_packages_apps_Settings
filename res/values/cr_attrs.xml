@@ -26,6 +26,7 @@
 
     <declare-styleable name="ImageListPreferenceChOS">
         <attr name="entryImagez" format="reference" />
+    </declare-styleable>
 
     <declare-styleable name="DragSortListView">
         <attr name="collapsedHeight" format="dimension" />
