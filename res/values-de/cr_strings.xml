@@ -756,4 +756,218 @@
     <string name="is_inaccurate_proximity_title">Sensorkorrektur</string>
     <string name="is_inaccurate_proximity_summary">Korrektur für ungenaues Verhalten des Annäherungssensors, die das Gerät zwingt, den Bildschirm nach Beenden eines Anrufs aufzuwecken.</string>
      
+     <!-- NavBar long press actions -->
+    <string name="navbar_long_press_title">Anwendungsverlauf halten</string>
+    <string name="recents_long_press_title">Bei langem Druck</string>
+    <string name="recents_long_press_none">Nichts tun</string>
+    <string name="recents_long_press_last_app">Letzte App zeigen</string>
+    <string name="recents_long_press_screenshot">Bildschirmfoto aufnehmen</string>
+    <string name="recents_long_press_kill_app">Aktuelle App beenden</string>
+    <string name="recents_long_press_notif_panel">Benachrichtigungsleiste zeigen</string>
+    <string name="recents_long_press_qs_panel">Schnelleinstellungsleiste zeige</string>
+    <string name="recents_long_press_power_menu">Ein-/Aus-Menü öffnen</string>
+
+    <!-- Navigation ring shortcuts -->
+    <string name="navring_action_last_app">Zu letzter Anwendung wechseln</string>
+
+    <!-- Quick settings panel  -->
+    <string name="title_tile_music">Musik</string>
+    <string name="pref_music_mode_title">Musik-Modi</string>
+    <string name="music_tile_mode_none">Keinen</string>
+    <string name="music_tile_mode_background">Albumcover</string>
+    <string name="music_tile_mode_tracktitle">Liedtitel</string>
+    <string name="music_tile_mode_all">Albumcover  &amp; Liedtitel</string>
+    <string name="title_tile_quick_record">Schnellaufnahme</string>
+
+    <!-- Pie Control -->
+    <string name="pie_navigation_title">PIE-Steuerung</string>
+    <string name="pie_control_title">SlimPIE</string>
+    <string name="pie_control_summary">PIE-Steuerung aktivieren</string>
+    <string name="pie_control_size">Größe</string>
+    <string name="pie_control_trigger_positions">Auslösungsregion</string>
+    <string name="pie_control_trigger_left">Linker Bildschirmrand</string>
+    <string name="pie_control_trigger_bottom">Unterer Bildschirmrand</string>
+    <string name="pie_control_trigger_right">Rechter Bildschirmrand</string>
+    <string name="pie_control_trigger_top">Oberer Bildschirmrandr</string>
+    <string name="pie_control_trigger_top_summary">Am oberen Bildschirmrand werden die Uhrzeit sowie Statusmeldungen nicht gezeigt!</string>
+    <string name="pie_button_style">Tastenaussehen</string>
+    <string name="pie_button_color_title">Farbe</string>
+    <string name="pie_button_alpha_title">Transparenz</string>
+    <string name="pie_button_outline_color_title">Konturfarbe</string>
+    <string name="pie_button_pressed_color_title">Farbe bei Druck</string>
+    <string name="pie_button_long_pressed_color_title">Farbe bei langem Druck</string>
+    <string name="pie_button_pressed_alpha_title">Transparenz bei Druck</string>
+    <string name="pie_icon_style">Tastensymbolstil</string>
+    <string name="pie_icon_color_title">Tastensymbolfarbe</string>
+    <string name="pie_icon_color_mode_title">Tastensymbolfarbmodus</string>
+    <string name="pie_icon_color_mode_dialog_title">Einfärben</string>
+    <string name="pie_icon_color_mode_summary">Ändert die Symbolfärbung</string>
+    <string name="pie_trigger_note_title">ANMERKUNG</string>
+    <string name="pie_trigger_note_summary">Um Konflikte mit der Status- oder Navigationsleiste zu verhindern, wird das Auslösen an deren Positionen verhindert insofern diese Eingeblendet sind.</string>
+    <string name="pie_background_color_title">Hintergrundfarbe</string>
+    <string name="pie_snap_color_title">Andockpunkt-Farbe</string>
+    <string name="pie_text_color_title">Textfarbe</string>
+    <string name="pie_background_alpha_title">Hintergrundtransparenz</string>
+    <string name="pie_mirror_right_title">Rechte PIE-Steuerung spiegeln</string>
+    <string name="pie_mirror_right_summary">PIE-Tasten am rechten Bildschirmrand spiegeln</string>
+    <string name="pie_style">Optik und Größe</string>
+    <string name="pie_style_title">Aussehen</string>
+    <string name="pie_dimens_title">Skalierung</string>
+    <string name="pie_show_snap_title">Andockpunkte anzeigen</string>
+    <string name="pie_show_snap_summary">Zeigt die Andockpunkte, um den gewählten Bildschirmrand dynamisch zu wechseln</string>
+    <string name="pie_show_text_title">Status und Uhr anzeigen</string>
+    <string name="pie_show_text_summary">Zeigt den Telefonstatus, die Uhrzeit und das Datum</string>
+    <string name="pie_show_background_title">Hintergrund anzeigen</string>
+    <string name="pie_show_background_summary">Zeigt den PIE-Hintergrund an</string>
+    <string name="pie_button">Tasten</string>
+    <string name="pie_button_second_layer">Zweite PIE-Reihe</string>
+    <string name="pie_button_second_layer_summary">Tasten der 2. Reihe ändern</string>
+    <string name="pie_button_style_summary">Tastenstil ändern</string>
+    <string name="pie_style_reset_message">Stil-Konfiguration zurücksetzen?</string>
+    <string name="title_pref_menu_display">Menü-Sichtbarkeit</string>
+    <string name="summary_pref_menu_display">Wie und wann sollen die Menü-Tasten erscheinen?</string>
+    <string name="navigation_menu_default_jb_behavior">Bei Aufforderung (Standard)</string>
+    <string name="navigation_menu_never_show">Niemals zeigen</string>
+    <string name="navigation_menu_always_show">Immer zeigen</string>
+    <string name="default_string">Standard</string>
+    <string name="reset_message">Alle Konfigurationen auf Voreinstellung zurücksetzen?</string>
+    <string name="shortcut_action_help_pie_second_layer_delete_last_entry">Das Entfernen aller %1$s in der Liste deaktiviert die zweite Reihe.</string>
+
+    <!-- Button shorcut actions -->
+    <string name="shortcut_action_app">Benutzerdefinierte App</string>
+    <string name="shortcut_action_home">Home</string>
+    <string name="shortcut_action_back">Zurück</string>
+    <string name="shortcut_action_recent">Verlauf</string>
+    <string name="shortcut_action_lastapp">Letzte App</string>
+    <string name="shortcut_action_search">Suchen</string>
+    <string name="shortcut_action_screenshot">Bildschirmfoto</string>
+    <string name="shortcut_action_menu">Menü</string>
+    <string name="shortcut_action_menu_big">Menü</string>
+    <string name="shortcut_action_ime">Eingabemethode wechseln</string>
+    <string name="shortcut_action_kill">Beende App</string>
+    <string name="shortcut_action_power_menu">Ein-/Aus-Menü</string>
+    <string name="shortcut_action_power">Bildschirm aus</string>
+    <string name="shortcut_action_notifications">Benachrichtigungen</string>
+    <string name="shortcut_action_none">Nichts</string>
+    <string name="shortcut_action_qs">Schnelleinstellungsleiste</string>
+    <string name="shortcut_action_torch">Taschenlampe</string>
+    <string name="shortcut_action_longpress">Gedrückt halten:</string>
+    <string name="shortcut_action_select_action_longpress">Aktion beim gedrückt Halten:</string>
+    <string name="shortcut_action_select_action">Aktion wählen:</string>
+    <string name="shortcut_action_select_action_newbutton">Neue Taste wählen:</string>
+    <string name="shortcut_action_reset">Zurücksetzen</string>
+    <string name="shortcut_action_add">Hinzufügen</string>
+    <string name="shortcut_action_reset_message">Alle Einstellungen zurücksetzen?</string>
+    <string name="shortcut_action_max">Maximale Anzahl wurde erreicht</string>
+    <string name="shortcut_action_warning">Warnung</string>
+    <string name="shortcut_action_warning_message">Es ist nicht möglich, den letzten Eintrag zu löschen</string>
+    <string name="shortcut_action_disable_message">Deaktiviert\nZum Aktivierung etwas hinzufügen</string>
+    <string name="shortcut_image_not_valid">Die gewählte Anwendung übertrug kein gültiges Symbol oder unterstützt nicht das Zuschneiden von Bildern. Benutze eine andere Anwendung</string>
+    <string name="shortcut_duplicate_entry">Die gewählte Aktion kann nicht doppelt hinzugefügt werden</string>
+
+    <string name="shortcut_action_help_shortcut">Verknüpfung</string>
+    <string name="shortcut_action_help_button">Taste</string>
+    <string name="shortcut_action_help_icon">, während das Symbol gewählt wird, öffnen sich die Konfigurationsmöglichkeiten</string>
+    <string name="shortcut_action_help_main">Um eine %1$s hinzuzufügen, tippe auf das Hinzufügen-Symbol. Wenn eine %1$s bereits vorhanden ist, ändert man durch Wählen der Zeile ihr Ziel%2$s\n\nUm eine %1$s zu entfernen, schiebe eine Zeile nach links oder rechts.  Ordne eine %1$s neu ein, indem du die Pfeile links nach oben oder unten schiebst.\n\nZum Leeren oder Zurücksetzen auf die Voreinstellungen, wähle das Zurücksetzen-Symbol.</string>
+    <string name="shortcut_action_help_delete_last_entry">Jede %1$s aus der Liste zu entfernen, deaktiviert diese Funktion.</string>
+    <string name="shortcut_action_help">Hilfe</string>
+
+    <string name="icon_picker_type">Symboltyp wählen:</string>
+    <string name="icon_default">Standard</string>
+    <string name="icon_presets">Systemsymbole</string>
+    <string name="icon_custom">Aus Gallerie</string>
+    <string name="shortcuts_icon_picker_alarm">Wecker</string>
+    <string name="shortcuts_icon_picker_andy">Andy</string>
+    <string name="shortcuts_icon_picker_battery">Akku</string>
+    <string name="shortcuts_icon_picker_browser">Browser</string>
+    <string name="shortcuts_icon_picker_calendar">Kalender</string>
+    <string name="shortcuts_icon_picker_camera">Kamera</string>
+    <string name="shortcuts_icon_picker_cloud">Cloud</string>
+    <string name="shortcuts_icon_picker_contact">Kontakt</string>
+    <string name="shortcuts_icon_picker_directdial">Sofortwahl</string>
+    <string name="shortcuts_icon_picker_directmessage">Sofortnachricht</string>
+    <string name="shortcuts_icon_picker_drive">Fahren</string>
+    <string name="shortcuts_icon_picker_dropbox">Dropbox</string>
+    <string name="shortcuts_icon_picker_email">Email</string>
+    <string name="shortcuts_icon_picker_email2">Email (alternativ)</string>
+    <string name="shortcuts_icon_picker_evernote">Evernote</string>
+    <string name="shortcuts_icon_picker_facebook">Facebook</string>
+    <string name="shortcuts_icon_picker_favorite">Favorit</string>
+    <string name="shortcuts_icon_picker_file_browser">Datei-Explorer</string>
+    <string name="shortcuts_icon_picker_file_browser2">Datei-Explorer (alternativ)</string>
+    <string name="shortcuts_icon_picker_fitness">Fitness</string>
+    <string name="shortcuts_icon_picker_gallery">Gallerie</string>
+    <string name="shortcuts_icon_picker_gears">Gears</string>
+    <string name="shortcuts_icon_picker_google_small">Google</string>
+    <string name="shortcuts_icon_picker_gplus">Google Plus</string>
+    <string name="shortcuts_icon_picker_gtalk">Hangouts</string>
+    <string name="shortcuts_icon_picker_help">Hilfe</string>
+    <string name="shortcuts_icon_picker_joystick">Controller</string>
+    <string name="shortcuts_icon_picker_key">Schlüssel/Konten</string>
+    <string name="shortcuts_icon_picker_laptop">Notebook</string>
+    <string name="shortcuts_icon_picker_notes">Notizen</string>
+    <string name="shortcuts_icon_picker_luggage">Reisen</string>
+    <string name="shortcuts_icon_picker_maps">Karten</string>
+    <string name="shortcuts_icon_picker_market">Markt</string>
+    <string name="shortcuts_icon_picker_movie">Filme</string>
+    <string name="shortcuts_icon_picker_music">Musik</string>
+    <string name="shortcuts_icon_picker_nav">Navigation</string>
+    <string name="shortcuts_icon_picker_phone">Telefon</string>
+    <string name="shortcuts_icon_picker_package">Paket</string>
+    <string name="shortcuts_icon_picker_pinterest">Pinterest</string>
+    <string name="shortcuts_icon_picker_play">Abspielen</string>
+    <string name="shortcuts_icon_picker_pocket">Tasche</string>
+    <string name="shortcuts_icon_picker_quicksettings">Schnelleinstellungen</string>
+    <string name="shortcuts_icon_picker_rss">RSS</string>
+    <string name="shortcuts_icon_picker_sdcard">SD-Karte</string>
+    <string name="shortcuts_icon_picker_search">Suchen</string>
+    <string name="shortcuts_icon_picker_sms">Nachrichten</string>
+    <string name="shortcuts_icon_picker_tasks">Aufgaben</string>
+    <string name="shortcuts_icon_picker_terminal">Terminal</string>
+    <string name="shortcuts_icon_picker_transit">Übergang</string>
+    <string name="shortcuts_icon_picker_tv">TV</string>
+    <string name="shortcuts_icon_picker_twitter">Twitter</string>
+    <string name="shortcuts_icon_picker_unlock">Entsperren</string>
+
+    <string name="icon_color_mode_all_icons">Alle Symbole</string>
+    <string name="icon_color_mode_system_icons">Systemsymbole</string>
+    <string name="icon_color_mode_system_custom_icons">Eigene und Systemsymbole</string>
+    <string name="icon_picker_choose_icon_title">Symbol wählen</string>
+    <string name="group_applications">Anwendungen</string>
+    <string name="select_custom_app_title">Benutzerdefinierte Anwendung wählen</string>
+    <string name="shortcuts_color_title">Verknüpfungssymbolfarbe</string>
+    <string name="shortcuts_color_summary">Verknüpfungssymbole einfärben</string>
+    <string name="shortcuts_color_mode_title">Symbolfärbungsmodus</string>
+    <string name="shortcuts_color_mode_summary">Ändert die Art der Symbolfärbung</string>
+
+    <string name="icon_picker_type">Symboltyp wählen:</string>
+    <string name="icon_default">Standard</string>
+    <string name="icon_presets">Systemsymbole</string>
+    <string name="icon_custom">Gallerie</string>
+    <string name="icon_pack">Symbolpaket</string>
+    <string name="icon_picker_choose_icon_title">Symbol wählen</string>
+    <string name="icon_color_mode_all_icons">Alle Symbole</string>
+    <string name="icon_color_mode_system_icons">Systemsymbole</string>
+    <string name="icon_color_mode_system_custom_icons">Eigene und Systemsymbole</string>
+    <string name="group_applications">Anwendungen</string>
+    <string name="select_custom_app_title">Eigene Anwendung wählen</string>
+    <string name="shortcuts_text_color_title">Textfarbe</string>
+    <string name="shortcuts_color_title">Symbolfarbe</string>
+    <string name="shortcuts_color_mode_title">Symbolfärbungsmodus</string>
+    <string name="shortcuts_color_mode_summary">Ändert die Art der Symbolfärbung</string>
+
+    <!-- Power menu nav bar -->
+    <string name="power_menu_navbar_title">Navigationsleiste</string>
+    <string name="navigation_bar_warning_no_navigation_present">Keine weitere Steuerungsmethode ist derzeit aktiviert. Das Abschalten der Navigationsleiste könnte das Bedienen des Gerätes unmöglich machen. Möchtest du die PIE-Steuerung stattdessen verwenden?</string>
+    <string name="pie_warning_no_navigation_present">Keine weitere Steuerungsmethode ist derzeit aktiviert. Das Abschalten der PIE-Steuerung könnte das Bedienen des Gerätes unmöglich machene. Möchtest du die Navigationsleiste stattdessen verwenden?</string>
+    <string name="pie_trigger_warning">Mindestens einer der Auslöser (unten, links oder rechts) muss aktiviert sein.</string>
+    <string name="pie_disable_ime_triggers_title">Kleiner Auslöser bei Tastatur</string>
+    <string name="pie_disable_ime_triggers_summary">Verkleinere den linken und rechten Auslöser, wenn die Tastatur eingeblendet ist</string>
+
+
+    <!-- Lockscreen all widgets -->
+    <string name="lockscreen_allow_all_title">Alle Widgets erlauben</string>
+    <string name="lockscreen_allow_all_summary">Erlaube ältere Widgets, die das Anzeigen auf dem Sperrbildschirm eigentlich nicht untersützen</string>
+    <string name="lockscreen_allow_all_warning">Manche Widgets funktionieren auf dem Sperrbildschirm vielleicht nicht wie erwartet. Diese Widgets könnten eventuell persönliche Daten für weitere Nutzer deines Gerätes preisgeben. Bitte nimm diese Warnungen zur Kenntnis bevor du fortfährst.</string>
+     
 </resources>
