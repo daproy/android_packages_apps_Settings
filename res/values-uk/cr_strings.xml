@@ -9,12 +9,14 @@
     <string name="temasek_settings_title">Налаштування від Temasek</string>
         
     <!-- General strings -->
+    <string name="attention">Увага</string>
     <string name="default_string">За замовчуванням</string>
     <string name="recent_panel_settings_title">Панель останніх додатків</string>
     <string name="reset">Скидання</string>
     <string name="enabled">Увімкнено</string>
     <string name="disabled">Вимкнено</string>
     <string name="note">ПРИМІТКА</string>
+    <string name="additional_options_title">Додаткові параметри</string>
 	
     <!-- Advanced settings -->
     <string name="advanced_options_settings_title">Розширені налаштування</string>
@@ -148,10 +150,7 @@
     <string name="theme_auto_mode_twilight">У денний час</string>
     <string name="theme_auto_switch_mode_error">Увімкнений режим автоматичної зміни тем оформлення при зміні освітленості. Ручне перемикання неможливо</string>
    
-    <!-- TRDS tile -->
-    <string name="title_tile_theme">Перемикач тем</string>
-
-    <!-- Status bar | Clock -->
+       <!-- Status bar | Clock -->
     <string name="status_bar_clock">Годинник і дата</string>
     <string name="status_bar_clock_title">Стиль годин і дати</string>
     <string name="clock_title_enable">Розташування</string>
@@ -689,6 +688,183 @@
     
     <!-- Notifications light with screen on -->
     <string name="notification_light_screen_on_title">Показувати при увімкненому екрані</string>
+    
+    <!-- Brightness Slider -->
+    <string name="notification_drawer_brightness_slider_title">Повзунок яскравості</string>
+    
+       <!-- Brightness Slider -->
+    <string name="notification_drawer_brightness_slider_title">Повзунок яскравості</string>
+
+    <!-- Custom Recent Settings -->
+    <string name="custom_recent_title">Стиль останніх додатків</string>
+    <string name="custom_recent_summary">Встановіть \"галочку\" для вибору стилю від \"Slim\" або зніміть, для повернення в стоковий стан. Будь-яка дія У ЦЬОМУ ПОЛІ ПЕРЕЗАВАНТАЖИТЬ СИСТЕМНИЙ UI</string>
+
+    <!-- Recent panel -->
+    <string name="slim_recent_panel_category">Панель останніх додатків Slim</string>
+    <string name="recent_panel_scale_title">Розмір</string>
+    <string name="recent_panel_scale_summary">Розмір панелі останніх додатків у відсотках</string>
+    <string name="recent_panel_100">100% (за замовчуванням)</string>
+    <string name="recent_panel_85">85%</string>
+    <string name="recent_panel_70">70%</string>
+    <string name="recent_panel_expanded_mode_title">Розширений режим</string>
+    <string name="recent_panel_expanded_mode_summary">Попередній перегляд останніх завдань у розширеному вигляді</string>
+    <string name="recent_panel_expanded_mode_auto">Авто (за замовчуванням)</string>
+    <string name="recent_panel_expanded_mode_always">Завжди</string>
+    <string name="recent_panel_expanded_mode_never">Ніколи</string>
+	
+    <!-- ATTENTION: RTL languages need to replace left with right -->
+    <string name="recent_panel_lefty_mode_title">Показувати по лівому краю</string>
+    <string name="recent_panel_lefty_mode_summary">Показувати панель останніх додатків по лівому краю екрану</string>
+
+    <!-- On-The-Go -->
+    <string name="power_menu_onthego_title">Режим \"На ходу\"</string>
+    <string name="title_tile_onthego">\"На ходу\"</string>
+
+    <!-- long press back to kill configurable timeout -->
+    <string name="kill_app_longpress_timeout_title">Затримка довгого натискання</string>
+    <string name="timeout_2000">2 секунди (за замовчуванням)</string>
+    <string name="timeout_1500">1,5 секунди</string>
+    <string name="timeout_1000">1 секунда</string>
+    <string name="timeout_500">0,5 секунди</string>
+
+    <!-- Keyguard widget frame -->
+    <string name="lockscreen_widget_frame_title">Вимкнути рамки віджетів</string>
+    <string name="lockscreen_widget_frame_summary">Вимкнути фонові рамки віджетів</string>
+
+    <!-- Volume pane timeout -->
+    <string name="volume_panel_timeout_title">Тайм-аут панелі гучності</string>
+    <string name="volume_panel_timeout_summary">Затримка часу до закриття панелі гучності</string>
+
+    <!-- QuickSettings haptic feedback -->
+    <string name="haptic_qs_tiles_title">Вібровідгук плиток</string>
+    <string name="haptic_qs_tiles_summary">Вібрація при дотику до плиток</string>
+    
+    <!-- App Circle Sidebar -->
+    <string name="app_circle_bar_title">Бокова панель додатків</string>
+    <string name="app_circle_sidebar_summary_real">Швидкий запуск додатків з бокової панелі, і можливість відкрити декілька додатків на одному екрані в режимі багатозадачності</string>
+    <string name="app_circle_bar_summary">Відображати панель додатків після дотику до правої сторони екрану</string>
+    <string name="app_circle_bar_included_apps_title">Увімкнені додатки</string>
+    <string name="app_circle_bar_included_apps_summary">Додатки, які будуть відображатися на панелі додатків</string>
+    <string name="category_app_circle_bar_title">Лаунчер додатків</string>
+    
+    <!-- Quicksettings panel floating window -->
+    <string name="title_floating_window">Плаваюче вікно</string>
+    <string name="summary_floating_window">Відкривати плитки швидких налаштувань в плаваючому вікні</string>
+
+    <!-- QuickSettings fliptiles -->
+    <string name="flip_qs_tiles_title">Переворот плиток</string>
+    <string name="flip_qs_tiles_summary">Переворот плиток при дотику</string>
+    
+      <!-- App sidebar -->
+    <string name="app_sidebar_title">Бар додатків</string>
+    <string name="app_sidebar_enable_title">Увімкнути бар додатків</string>
+    <string name="app_sidebar_enable_summaryOn">Бар додатків увімкнений</string>
+    <string name="app_sidebar_enable_summaryOff">Бар додатків вимкнений</string>
+    <string name="app_sidebar_setup_items_title">Налаштування вмісту бару</string>
+    <string name="app_sidebar_setup_items_summary">Додавання, видалення и розміщення елементів в барі додатків</string>
+    <string name="app_sidebar_transparency_title">Прозорість бару</string>
+    <string name="app_sidebar_transparency_summary">Регулювання рівня прозорості бару додатків</string>
+    <string name="app_sidebar_position_title">Розташування бару</string>
+    <string name="app_sidebar_position_summary">Розташування бару додатків на лівій чи правій стороні екрану</string>
+    <string name="app_sidebar_position_left">Зліва</string>
+    <string name="app_sidebar_position_right">Зправа</string>
+    <string name="app_sidebar_hide_labels_title">Сховати назви іконок</string>
+    <string name="app_sidebar_hide_labels_summary">Ховати назви іконок в барі додатків</string>
+    <string name="tab_category">Видима вкладка</string>
+    <string name="use_tab_title">Відображення вкладки</string>
+    <string name="use_tab_summary">Показувати видиму вкладку на стороні екрану, в якій буде відображатися бар додатків при дотику</string>
+    <string name="tab_position_title">Розташування вкладки</string>
+    <string name="tab_position_summary">Відображення вкладки у верхній, середній або нижній частині екрану</string>
+    <string name="tab_size_title">Розмір вкладки</string>
+    <string name="tab_size_summary">Зміна розміру видимої вкладки</string>
+    <string name="trigger_category">Область тригера</string>
+    <string name="trigger_width_title">Ширина тригера</string>
+    <string name="trigger_width_summary">Регулювання ширини області тригера</string>
+    <string name="trigger_top_title">Положення тригера</string>
+    <string name="trigger_top_summary">Регулювання вертикальнї позиції області тригера</string>
+    <string name="trigger_bottom_title">Висота тригера</string>
+    <string name="trigger_bottom_summary">Регулювання висоти області тригера</string>
+
+     <!-- Proximity work-around -->
+     <string name="is_inaccurate_proximity_title">Неточний датчик приближення</string>
+     <string name="is_inaccurate_proximity_summary">Обхід некорректної роботи датчику приближення: це заставить увімкнути екран телефону після завершення виклику</string>
+ 
+    <!-- NavBar long press actions -->
+    <string name="navbar_long_press_title">Дія для довгого натискання</string>
+    <string name="recents_long_press_title">Довге натискання на кнопку останніх додатків</string>
+    <string name="recents_long_press_none">Нічого</string>
+    <string name="recents_long_press_last_app">Останній додаток</string>
+    <string name="recents_long_press_screenshot">Скріншот</string>
+    <string name="recents_long_press_kill_app">Закрити додаток</string>
+    <string name="recents_long_press_notif_panel">Панель сповіщень</string>
+    <string name="recents_long_press_qs_panel">Панель швидких налаштувань</string>
+    <string name="recents_long_press_power_menu">Меню кнопки живлення</string>
+    
+    <!-- Navigation ring shortcuts -->
+    <string name="navring_action_last_app">Перейти до останнього додатку</string>
+    
+    <!-- Quick settings panel  -->
+    <string name="title_tile_music">Музика</string>
+    <string name="pref_music_mode_title">Режими музики</string>
+    <string name="music_tile_mode_none">Нічого</string>
+    <string name="music_tile_mode_background">Обкладинка альбому</string>
+    <string name="music_tile_mode_tracktitle">Назва треку</string>
+    <string name="music_tile_mode_all">Обкладинка альбому &amp; Назва треку</string>
+    <string name="title_tile_quick_record">Швидкий запис</string>
+
+    <!-- Pie Control -->
+    <string name="pie_navigation_title">Панель навигації PIE</string>
+    <string name="pie_control_title">Панель PIE</string>
+    <string name="pie_control_summary">Увімкнути управління з допомогою PIE</string>
+    <string name="pie_control_size">Розмір панелі навігації</string>
+    <string name="pie_control_trigger_positions">Параметрі триггера</string>
+    <string name="pie_control_trigger_left">Триггер зліва на екрані</string>
+    <string name="pie_control_trigger_bottom">Триггер внизу екрану</string>
+    <string name="pie_control_trigger_right">Триггер зправа на екрані</string>
+    <string name="pie_control_trigger_top">Триггер зверху екрану</string>
+    <string name="pie_control_trigger_top_summary">Панель PIE, розташування зверху не відображає інформацію стану і годинник</string>
+    <string name="pie_button_style">Стиль кнопок</string>
+    <string name="pie_button_color_title">Колір кнопки</string>
+    <string name="pie_button_alpha_title">Прозорість кнопки</string>
+    <string name="pie_button_outline_color_title">Колір зовнішнього краю кнопки</string>
+    <string name="pie_button_pressed_color_title">Колір натиснутої кнопки</string>
+    <string name="pie_button_long_pressed_color_title">Колір кнопки при довгому натисканні</string>
+    <string name="pie_button_pressed_alpha_title">Прозорість натиснутої кнопки</string>
+    <string name="pie_icon_style">Стиль іконок</string>
+    <string name="pie_icon_color_title">Колір іконок</string>
+    <string name="pie_icon_color_mode_title">Колірний режим іконок</string>
+    <string name="pie_icon_color_mode_dialog_title">Розмалювати</string>
+    <string name="pie_icon_color_mode_summary">Зміна колірного режиму для іконок</string>
+    <string name="pie_trigger_note_title">Примітка</string>
+    <string name="pie_trigger_note_summary">Щоб уникнути конфліктів зі строкою стану чи панеллю навігації, триггери на цих краях автоматично відключаються, якщо доступні один чи обидва.</string>
+    <string name="pie_background_color_title">Колір фону</string>
+    <string name="pie_snap_color_title">Колір точки прикріплення</string>
+    <string name="pie_text_color_title">Колір тексту</string>
+    <string name="pie_background_alpha_title">Прозорість фону</string>
+    <string name="pie_mirror_right_title">PIE дзеркально зправа</string>
+    <string name="pie_mirror_right_summary">Панель PIE дзеркально зправа по горизонтальній осі</string>
+    <string name="pie_style">Стиль і разміри</string>
+    <string name="pie_style_title">Стиль</string>
+    <string name="pie_dimens_title">Разміри</string>
+    <string name="pie_show_snap_title">Показувати точки прикріплення</string>
+    <string name="pie_show_snap_summary">Показувати точки прикріплення для динамичної зміни розташування триггера</string>
+    <string name="pie_show_text_title">Показувати стан і годинник</string>
+    <string name="pie_show_text_summary">Показувати стан телефону, відомості про дату і час</string>
+    <string name="pie_show_background_title">Показувати фон</string>
+    <string name="pie_show_background_summary">Увімкнути відображення фону панелі PIE</string>
+    <string name="pie_button">Кнопки</string>
+    <string name="pie_button_second_layer">Кнопки другого слою</string>
+    <string name="pie_button_second_layer_summary">Зміна кнопок другого слою</string>
+    <string name="pie_button_style_summary">Зміна зовнішнього виду кнопок панелі PIE</string>
+    <string name="pie_style_reset_message">Скинути параметри стилю за замовчуванням?</string>
+    <string name="title_pref_menu_display">Видимість кнопки \"Меню\"</string>
+    <string name="summary_pref_menu_display">Виберіть, як і коли буде відображатися кнопка \"Меню\"</string>
+    <string name="navigation_menu_default_jb_behavior">Показувати за необхідністю (за замовчув.)</string>
+    <string name="navigation_menu_never_show">Не показувати</string>
+    <string name="navigation_menu_always_show">Завжди показувати</string>
+    <string name="default_string">За замовчуванням</string>
+    <string name="reset_message">Скинутм усі значення за замовчуванням?</string>
+    <string name="shortcut_action_help_pie_second_layer_delete_last_entry">Видалення усіх %1$s у списку повністю вимкне другий слой панелі PIE.</string>
 
     <!-- Button shorcut actions -->
     <string name="additional_options_title">Додаткові параметри</string>
@@ -785,7 +961,7 @@
     <string name="shortcuts_icon_picker_tv">ТВ</string>
     <string name="shortcuts_icon_picker_twitter">Twitter</string>
     <string name="shortcuts_icon_picker_unlock">Розблокувати</string>
-
+    
     <string name="icon_color_mode_all_icons">Всі іконки</string>
     <string name="icon_color_mode_system_icons">Системні</string>
     <string name="icon_color_mode_system_custom_icons">Системні і свої іконки</string>
@@ -796,8 +972,24 @@
     <string name="shortcuts_color_summary">Розфарбуйте іконки ярликів</string>
     <string name="shortcuts_color_mode_title">Колірний режим іконки</string>
     <string name="shortcuts_color_mode_summary">Зміна колірного режиму іконки</string>
+    
+    <string name="icon_pack">Набір іконок</string>
+    <string name="shortcuts_text_color_title">Колір тексту</string>
 
-    <!-- Notification drawer settings  -->
+ <!-- Power menu nav bar -->
+    <string name="power_menu_navbar_title">Строка навигації</string>
+    <string name="navigation_bar_warning_no_navigation_present">Жодна з панелей навигації зараз не увімкнена. Вимкнення панелі навигації може привести до непрацеспособності пристрою. Ви хочете увімнути управління навигації з допомогою панелі PIE?</string>
+    <string name="pie_warning_no_navigation_present">Жодна панель навигаціїї в даний час не увімкнена. Вимкнення елементів управління PIE може привести до непрацеспособності пристрою. Вы хочете увімкнути звичайну панель навигації замість панелі PIE?</string>
+    <string name="pie_trigger_warning">Як мінімум один із основних триггерів (внизу, зліва чи зправа) повинен бути увімкнений.</string>
+    <string name="pie_disable_ime_triggers_title">Зменшити розмір триггера на клавіатурі</string>
+    <string name="pie_disable_ime_triggers_summary">Зменшує розмір лівого і правого триггера, якщо клавіатура активна</string>
+
+ <!-- Lockscreen all widgets -->
+    <string name="lockscreen_allow_all_title">Дозволити усі віджети</string>
+    <string name="lockscreen_allow_all_summary">Дозволити застарілі віджети, котрі спочатку не підтримують розміщення на екрані блокування</string>
+    <string name="lockscreen_allow_all_warning">Деякі віджети можуть працювати некорректно при розміщенні на екрані блокування.  Інші віджети можуть надавати ваші персональні данні для всіх, кто отримає доступ до вашого пристрою.  Будь ласка, врахуйте це попередження, перш ніж продовжувати.</string>
+    
+ <!-- Notification drawer settings  -->
     <string name="notification_drawer_title">Панель повідомлень</string>
     <string name="notification_shortcuts_settings_title">Ярлики додатків</string>
     <string name="notification_shortcuts_settings_summary">Показувати ярлики програми в панелі повідомлень</string>
@@ -805,102 +997,5 @@
     <!-- Screen-On Notification Light -->
     <string name="screen_on_notification_led_title">Індикація повідомлень при увімкненому екрані</string>
     <string name="screen_on_notification_led_summary">Увімкнути індикатор сповіщень навіть коли екран увімкнений</string>
-
-    <!-- Brightness Slider -->
-    <string name="notification_drawer_brightness_slider_title">Повзунок яскравості</string>
-
-    <!-- Custom Recent Settings -->
-    <string name="custom_recent_title">Стиль останніх додатків</string>
-    <string name="custom_recent_summary">Встановіть \"галочку\" для вибору стилю від \"Slim\" або зніміть, для повернення в стоковий стан. Будь-яка дія У ЦЬОМУ ПОЛІ ПЕРЕЗАВАНТАЖИТЬ СИСТЕМНИЙ UI</string>
-
-    <!-- Recent panel -->
-    <string name="slim_recent_panel_category">Панель останніх додатків Slim</string>
-    <string name="recent_panel_scale_title">Розмір</string>
-    <string name="recent_panel_scale_summary">Розмір панелі останніх додатків у відсотках</string>
-    <string name="recent_panel_100">100% (за замовчуванням)</string>
-    <string name="recent_panel_85">85%</string>
-    <string name="recent_panel_70">70%</string>
-    <string name="recent_panel_expanded_mode_title">Розширений режим</string>
-    <string name="recent_panel_expanded_mode_summary">Попередній перегляд останніх завдань у розширеному вигляді</string>
-    <string name="recent_panel_expanded_mode_auto">Авто (за замовчуванням)</string>
-    <string name="recent_panel_expanded_mode_always">Завжди</string>
-    <string name="recent_panel_expanded_mode_never">Ніколи</string>
-	
-    <!-- ATTENTION: RTL languages need to replace left with right -->
-    <string name="recent_panel_lefty_mode_title">Показувати по лівому краю</string>
-    <string name="recent_panel_lefty_mode_summary">Показувати панель останніх додатків по лівому краю екрану</string>
-
-    <!-- On-The-Go -->
-    <string name="power_menu_onthego_title">Режим \"На ходу\"</string>
-    <string name="title_tile_onthego">\"На ходу\"</string>
-
-    <!-- long press back to kill configurable timeout -->
-    <string name="kill_app_longpress_timeout_title">Затримка довгого натискання</string>
-    <string name="timeout_2000">2 секунди (за замовчуванням)</string>
-    <string name="timeout_1500">1,5 секунди</string>
-    <string name="timeout_1000">1 секунда</string>
-    <string name="timeout_500">0,5 секунди</string>
-
-    <!-- Keyguard widget frame -->
-    <string name="lockscreen_widget_frame_title">Вимкнути рамки віджетів</string>
-    <string name="lockscreen_widget_frame_summary">Вимкнути фонові рамки віджетів</string>
-
-    <!-- Volume pane timeout -->
-    <string name="volume_panel_timeout_title">Тайм-аут панелі гучності</string>
-    <string name="volume_panel_timeout_summary">Затримка часу до закриття панелі гучності</string>
-
-    <!-- QuickSettings haptic feedback -->
-    <string name="haptic_qs_tiles_title">Вібровідгук плиток</string>
-    <string name="haptic_qs_tiles_summary">Вібрація при дотику до плиток</string>
-    
-    <!-- App Circle Sidebar -->
-    <string name="app_circle_bar_title">Бокова панель додатків</string>
-    <string name="app_circle_sidebar_summary_real">Швидкий запуск додатків з бокової панелі, і можливість відкрити декілька додатків на одному екрані в режимі багатозадачності</string>
-    <string name="app_circle_bar_summary">Відображати панель додатків після дотику до правої сторони екрану</string>
-    <string name="app_circle_bar_included_apps_title">Увімкнені додатки</string>
-    <string name="app_circle_bar_included_apps_summary">Додатки, які будуть відображатися на панелі додатків</string>
-    <string name="category_app_circle_bar_title">Лаунчер додатків</string>
-    
-    <!-- Quicksettings panel floating window -->
-    <string name="title_floating_window">Плаваюче вікно</string>
-    <string name="summary_floating_window">Відкривати плитки швидких налаштувань в плаваючому вікні</string>
-
-    <!-- QuickSettings fliptiles -->
-    <string name="flip_qs_tiles_title">Переворот плиток</string>
-    <string name="flip_qs_tiles_summary">Переворот плиток при дотику</string>
-    
-      <!-- App sidebar -->
-    <string name="app_sidebar_title">Бар додатків</string>
-    <string name="app_sidebar_enable_title">Увімкнути бар додатків</string>
-    <string name="app_sidebar_enable_summaryOn">Бар додатків увімкнений</string>
-    <string name="app_sidebar_enable_summaryOff">Бар додатків вимкнений</string>
-    <string name="app_sidebar_setup_items_title">Налаштування вмісту бару</string>
-    <string name="app_sidebar_setup_items_summary">Додавання, видалення и розміщення елементів в барі додатків</string>
-    <string name="app_sidebar_transparency_title">Прозорість бару</string>
-    <string name="app_sidebar_transparency_summary">Регулювання рівня прозорості бару додатків</string>
-    <string name="app_sidebar_position_title">Розташування бару</string>
-    <string name="app_sidebar_position_summary">Розташування бару додатків на лівій чи правій стороні екрану</string>
-    <string name="app_sidebar_position_left">Зліва</string>
-    <string name="app_sidebar_position_right">Зправа</string>
-    <string name="app_sidebar_hide_labels_title">Сховати назви іконок</string>
-    <string name="app_sidebar_hide_labels_summary">Ховати назви іконок в барі додатків</string>
-    <string name="tab_category">Видима вкладка</string>
-    <string name="use_tab_title">Відображення вкладки</string>
-    <string name="use_tab_summary">Показувати видиму вкладку на стороні екрану, в якій буде відображатися бар додатків при дотику</string>
-    <string name="tab_position_title">Розташування вкладки</string>
-    <string name="tab_position_summary">Відображення вкладки у верхній, середній або нижній частині екрану</string>
-    <string name="tab_size_title">Розмір вкладки</string>
-    <string name="tab_size_summary">Зміна розміру видимої вкладки</string>
-    <string name="trigger_category">Область тригера</string>
-    <string name="trigger_width_title">Ширина тригера</string>
-    <string name="trigger_width_summary">Регулювання ширини області тригера</string>
-    <string name="trigger_top_title">Положення тригера</string>
-    <string name="trigger_top_summary">Регулювання вертикальнї позициї області тригера</string>
-    <string name="trigger_bottom_title">Висота тригера</string>
-    <string name="trigger_bottom_summary">Регулювання висоти області тригера</string>
-
-     <!-- Proximity work-around -->
-     <string name="is_inaccurate_proximity_title">Неточний датчик приближення</string>
-     <string name="is_inaccurate_proximity_summary">Обхід некорректної роботи датчику приближення: це заставить увімкнути екран телефону післе завершення визову</string>
 
 </resources>
