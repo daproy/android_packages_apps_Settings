@@ -2043,4 +2043,17 @@
     <string name="user_image_take_photo" msgid="1280274310152803669">"Foto aufnehmen"</string>
     <string name="user_image_choose_photo" msgid="7940990613897477057">"Foto aus Galerie auswählen"</string>
     <string name="regulatory_info_text" msgid="5623087902354026557"></string>
+    <string name="screencolor_save">Speichern</string>
+    <string name="screencolor_cancel">Abbrechen</string>
+    <string name="previous_str">Vorheriges</string>
+    <string name="new_str">Neu</string>
+    <string name="restore_preview">Standardbild anzeigen</string>
+    <string name="selectnewfile_menu">Neues Bild aus der Gallerie ansehen</string>
+    <string name="selectfile_menu">Bild aus der Gallerie ansehen</string>
+    <string name="restore_default_str">Zurücksetzen</string>
+    <string name="hue_str">Farbton: <xliff:g id="hue_value">%1$s</xliff:g></string>
+    <string name="saturation_str">Sättigung: <xliff:g id="saturation_value">%1$s</xliff:g></string>
+    <string name="contrast_str">Kontrast: <xliff:g id="contrast_value">%1$s</xliff:g></string>
+    <string name="intensity_str">Helligkeit: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
+    
 </resources>
