@@ -970,4 +970,15 @@
     <string name="lockscreen_allow_all_summary">Erlaube ältere Widgets, die das Anzeigen auf dem Sperrbildschirm eigentlich nicht untersützen</string>
     <string name="lockscreen_allow_all_warning">Manche Widgets funktionieren auf dem Sperrbildschirm vielleicht nicht wie erwartet. Diese Widgets könnten eventuell persönliche Daten für weitere Nutzer deines Gerätes preisgeben. Bitte nimm diese Warnungen zur Kenntnis bevor du fortfährst.</string>
      
+     <!-- App moving -->
+    <string name="app_moving_enable">App-zu-SD aktivieren</string>
+    <string name="app_moving_disable">App-zu-SD deaktivieren</string>
+    <string name="app_moving_reboot_title">Jetzt neustarten?</string>
+    <string name="app_moving_reboot_enabled_desc">App-zu-SD wurde erfolgreich aktiviert.\n\nDas Gerät muss neugestartet werden, um die Funktionalität zu gewährleisten!</string>
+    <string name="app_moving_reboot_disabled_desc">App-zu-SD wurde erfolgreich deaktiviert.\n\nDas Gerät muss neugestartet werden, um diese Funktion endgültig abzuschalten!</string>
+    <string name="app_moving_reboot_now_button">Jetzt neustarten</string>
+    <string name="app_moving_reboot_later_button">Später neustarten</string>
+
+</resources>
+     
 </resources>
