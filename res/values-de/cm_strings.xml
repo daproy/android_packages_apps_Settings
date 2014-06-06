@@ -888,4 +888,47 @@ auf <xliff:g id="new" example="libart.so">%2$s</xliff:g> zu ändern?</string>
   <string name="autoperf_title">App-Profile aktivieren</string>
   <string name="autoperf_summary">Wählt für einige Apps automatisch ein passendes Leistungsprofil aus</string>
   <string name="graphics_title">Grafikoptionen</string>
+  
+  <string name="usb_eject">USB-Speicher auswerfen</string>
+  <string name="sd_eject">SD-Karte auswerfen</string>
+  <string name="usb_eject_summary">USB-Speicher auswerfen, um ihn sicher entfernen zu können</string>
+  <string name="sd_eject_summary">SD-Karte auswerfen, um sie sicher entfernen zu können</string>
+  <string name="usb_insert_summary">USB-Speicher zum Bereitstellen verbinden</string>
+  <string name="sd_insert_summary">SD-Karte zum Bereitstellen einsetzen</string>
+  <string name="usb_mount">USB-Speicher bereitstellen</string>
+  <string name="sd_mount">SD-Karte bereitstellen</string>
+  <string name="usb_mount_summary"></string>
+  <string name="sd_mount_summary"></string>
+  <string name="usb_format">USB-Speicher löschen</string>
+  <string name="sd_format">SD-Karte löschen</string>
+  <string name="usb_format_summary">Löscht alle Daten des USB-Speichers so wie Musik und Fotos</string>
+  <string name="sd_format_summary">Löscht alle Daten der SD-Karte so wie Musik und Fotos</string>
+  <string name="dlg_confirm_usb_unmount_title">USB-Speicher auswerfen?</string>
+  <string name="dlg_confirm_sd_unmount_title">SD-Karte auswerfen?</string>
+  <string name="dlg_confirm_usb_unmount_text">Wird der USB-Speicher ausgeworfen könnten manche der genutzten Apps stoppen und nicht verfügbar sein, bis der USB-Speicher erneut bereitgestellt wird.</string>
+  <string name="dlg_confirm_sd_unmount_text">Wird die SD-Karte ausgeworfen könnten manche der genutzten Apps stoppen und nicht verfügbar sein, bis die SD-Karte erneut bereitgestellt wird.</string>
+  <string name="dlg_error_usb_unmount_title"></string>
+  <string name="dlg_error_sd_unmount_title"></string>
+  <string name="dlg_error_usb_unmount_text">Konnte den USB-Speicher nicht auswerfen. Bitte versuche es später erneut.</string>
+  <string name="dlg_error_sd_unmount_text">Konnte die SD-Karte nicht auswerfen. Bitte versuche es später erneut.</string>
+  <string name="usb_unmount_inform_text">USB-Speicher wird ausgeworfen.</string>
+  <string name="sd_unmount_inform_text">SD-Karte wird ausgeworfen.</string>
+  <string name="usb_ejecting_title">Entferne USB-Speicher</string>
+  <string name="sd_ejecting_title">Entferne SD-Karte</string>
+  <string name="usb_ejecting_summary">Auswerfen des USB-Speichers in Arbeit</string>
+  <string name="sd_ejecting_summary">Auswerfen der SD-Karte in Arbeit</string>
+  <string name="media_format_title">Medienformat</string>
+  <string name="usb_media_format_title">USB-Speicher löschen</string>
+  <string name="sd_media_format_title">SD-Karte löschen</string>
+  <string name="usb_media_format_summary">Alle Daten des USB-Speichers löschen</string>
+  <string name="sd_media_format_summary">Alle Daten der SD-Karte löschen</string>
+  <string name="usb_media_format_desc">USB-Speicher komplett löschen? Du verlierst <b>alle</b> gespeicherten Daten!</string>
+  <string name="sd_media_format_desc">SD-Karte komplett löschen? Du verlierst <b>alle</b> gespeicherten Daten!</string>
+  <string name="usb_media_format_button_text">USB-Speicher löschen</string>
+  <string name="sd_media_format_button_text">SD-Karte löschen</string>
+  <string name="usb_media_format_final_desc">USB-Speicher löschen und alle gespeicherten Daten löschen? Dies lässt sich nicht rückgängig machen!</string>
+  <string name="sd_media_format_final_desc">SD-Karte löschen und alle gespeicherten Daten löschen? Dies lässt sich nicht rückgängig machen!</string>
+  <string name="usb_media_format_gesture_explanation">Zeichne dein Entsperr-Muster um den Löschvorgang des USB-Speichers zu bestätigen.</string>
+  <string name="sd_media_format_gesture_explanation">Zeichne dein Entsperr-Muster um den Löschvorgang der SD-Karte zu bestätigen.</string>
+    
 </resources>
