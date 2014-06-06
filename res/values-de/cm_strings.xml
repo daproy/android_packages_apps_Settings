@@ -235,6 +235,7 @@
   <string name="title_tile_brightness">Helligkeit</string>
   <string name="title_tile_camera">Kamera</string>
   <string name="title_tile_sleep">Standby</string>
+  <string name="title_tile_compass">Kompass</string>
   <string name="title_tile_gps">GPS</string>
   <string name="title_tile_torch">Taschenlampe</string>
   <string name="title_tile_lockscreen">Bildschirmsperre</string>
