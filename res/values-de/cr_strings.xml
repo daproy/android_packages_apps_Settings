@@ -9,12 +9,14 @@
     <string name="temasek_settings_title">Temaseks Erweiterungen</string>
 
     <!-- General strings -->
+    <string name="attention">Achtung</string>
     <string name="default_string">Voreinstellung</string>
     <string name="recent_panel_settings_title">Anwendungsverlauf</string>
     <string name="reset">Zurücksetzen</string>
     <string name="enabled">Aktiviert</string>
     <string name="disabled">Deaktiviert</string>
     <string name="note">ANMERKUNG</string>
+    <string name="additional_options_title">Weitere Optionen</string>
 
     <!-- QS and navring Power menu -->
     <string name="title_tile_power">Ein/Aus-Taste</string> 
@@ -211,6 +213,7 @@
     <string name="notification_peek_title">Benachrichtigungsvorschau (Peek)</string>
     <string name="notification_peek_summary">Zeigt ausstehende Benachrichtigungen wenn das Gerät in die Hand genommen wird.</string>
     <string name="peek_pickup_timeout_title">Zeitlimit</string>
+    <string name="peek_wake_timeout_title">Zeitlimit zum Aufwecken</string>
     <string name="peek_pickup_10seconds">10 Sekunden (Standard)</string>
     <string name="peek_pickup_30seconds">30 Sekunden</string>
     <string name="peek_pickup_45seconds">45 Sekunden</string>
@@ -772,7 +775,7 @@
 
     <!-- Quick settings panel  -->
     <string name="title_tile_music">Musik</string>
-    <string name="pref_music_mode_title">Musik-Modi</string>
+    <string name="pref_music_mode_title">Musikmodi</string>
     <string name="music_tile_mode_none">Keinen</string>
     <string name="music_tile_mode_background">Albumcover</string>
     <string name="music_tile_mode_tracktitle">Liedtitel</string>
@@ -784,26 +787,26 @@
     <string name="pie_control_title">SlimPIE</string>
     <string name="pie_control_summary">PIE-Steuerung aktivieren</string>
     <string name="pie_control_size">Größe</string>
-    <string name="pie_control_trigger_positions">Auslösungsregion</string>
+    <string name="pie_control_trigger_positions">Auslöserregion</string>
     <string name="pie_control_trigger_left">Linker Bildschirmrand</string>
     <string name="pie_control_trigger_bottom">Unterer Bildschirmrand</string>
     <string name="pie_control_trigger_right">Rechter Bildschirmrand</string>
-    <string name="pie_control_trigger_top">Oberer Bildschirmrandr</string>
-    <string name="pie_control_trigger_top_summary">Am oberen Bildschirmrand werden die Uhrzeit sowie Statusmeldungen nicht gezeigt!</string>
-    <string name="pie_button_style">Tastenaussehen</string>
+    <string name="pie_control_trigger_top">Oberer Bildschirmrand</string>
+    <string name="pie_control_trigger_top_summary">Am oberen Bildschirmrand werden die Uhrzeit sowie Statusmeldungen <b>nicht</b> gezeigt</string>
+    <string name="pie_button_style">Tastenstil</string>
     <string name="pie_button_color_title">Farbe</string>
     <string name="pie_button_alpha_title">Transparenz</string>
     <string name="pie_button_outline_color_title">Konturfarbe</string>
     <string name="pie_button_pressed_color_title">Farbe bei Druck</string>
     <string name="pie_button_long_pressed_color_title">Farbe bei langem Druck</string>
     <string name="pie_button_pressed_alpha_title">Transparenz bei Druck</string>
-    <string name="pie_icon_style">Tastensymbolstil</string>
-    <string name="pie_icon_color_title">Tastensymbolfarbe</string>
-    <string name="pie_icon_color_mode_title">Tastensymbolfarbmodus</string>
-    <string name="pie_icon_color_mode_dialog_title">Einfärben</string>
+    <string name="pie_icon_style">Symbolstil</string>
+    <string name="pie_icon_color_title">Farbe</string>
+    <string name="pie_icon_color_mode_title">Symbolgruppe</string>
+    <string name="pie_icon_color_mode_dialog_title">Welche Symbole einfärben?</string>
     <string name="pie_icon_color_mode_summary">Ändert die Symbolfärbung</string>
     <string name="pie_trigger_note_title">ANMERKUNG</string>
-    <string name="pie_trigger_note_summary">Um Konflikte mit der Status- oder Navigationsleiste zu verhindern, wird das Auslösen an deren Positionen verhindert insofern diese Eingeblendet sind.</string>
+    <string name="pie_trigger_note_summary">Um Konflikte mit der Status- oder Navigationsleiste zu verhindern, wird die Interaktion an deren Positionen blockiert.</string>
     <string name="pie_background_color_title">Hintergrundfarbe</string>
     <string name="pie_snap_color_title">Andockpunkt-Farbe</string>
     <string name="pie_text_color_title">Textfarbe</string>
@@ -822,7 +825,7 @@
     <string name="pie_button">Tasten</string>
     <string name="pie_button_second_layer">Zweite PIE-Reihe</string>
     <string name="pie_button_second_layer_summary">Tasten der 2. Reihe ändern</string>
-    <string name="pie_button_style_summary">Tastenstil ändern</string>
+    <string name="pie_button_style_summary">Aussehen ändern</string>
     <string name="pie_style_reset_message">Stil-Konfiguration zurücksetzen?</string>
     <string name="title_pref_menu_display">Menü-Sichtbarkeit</string>
     <string name="summary_pref_menu_display">Wie und wann sollen die Menü-Tasten erscheinen?</string>
@@ -868,7 +871,7 @@
     <string name="shortcut_action_help_shortcut">Verknüpfung</string>
     <string name="shortcut_action_help_button">Taste</string>
     <string name="shortcut_action_help_icon">, während das Symbol gewählt wird, öffnen sich die Konfigurationsmöglichkeiten</string>
-    <string name="shortcut_action_help_main">Um eine %1$s hinzuzufügen, tippe auf das Hinzufügen-Symbol. Wenn eine %1$s bereits vorhanden ist, ändert man durch Wählen der Zeile ihr Ziel%2$s\n\nUm eine %1$s zu entfernen, schiebe eine Zeile nach links oder rechts.  Ordne eine %1$s neu ein, indem du die Pfeile links nach oben oder unten schiebst.\n\nZum Leeren oder Zurücksetzen auf die Voreinstellungen, wähle das Zurücksetzen-Symbol.</string>
+    <string name="shortcut_action_help_main">Um eine %1$s hinzuzufügen, tippe auf <b>\"Hinzufügen\"</b>.\n\nWenn eine %1$s bereits vorhanden ist, tippe auf eine Zeile, um das gewünschte Ziel festzulegen oder zu ändern.\n\nUm eine %1$s zu entfernen, schiebe eine Zeile nach links oder rechts. Ordne eine %1$s neu ein, indem du die Pfeile (links) nach oben oder unten schiebst.\n\nZum Leeren oder Zurücksetzen auf die Voreinstellungen, wähle <b>\"Zurücksetzen\"</b>.</string>
     <string name="shortcut_action_help_delete_last_entry">Jede %1$s aus der Liste zu entfernen, deaktiviert diese Funktion.</string>
     <string name="shortcut_action_help">Hilfe</string>
 
