@@ -758,8 +758,8 @@
     <!-- Proximity work-around -->
     <string name="is_inaccurate_proximity_title">Sensorkorrektur</string>
     <string name="is_inaccurate_proximity_summary">Korrektur für ungenaues Verhalten des Annäherungssensors, die das Gerät zwingt, den Bildschirm nach Beenden eines Anrufs aufzuwecken.</string>
-     
-     <!-- NavBar long press actions -->
+
+    <!-- NavBar long press actions -->
     <string name="navbar_long_press_title">Anwendungsverlauf halten</string>
     <string name="recents_long_press_title">Bei langem Druck</string>
     <string name="recents_long_press_none">Nichts tun</string>
@@ -967,13 +967,12 @@
     <string name="pie_disable_ime_triggers_title">Kleiner Auslöser bei Tastatur</string>
     <string name="pie_disable_ime_triggers_summary">Verkleinere den linken und rechten Auslöser, wenn die Tastatur eingeblendet ist</string>
 
-
     <!-- Lockscreen all widgets -->
     <string name="lockscreen_allow_all_title">Alle Widgets erlauben</string>
     <string name="lockscreen_allow_all_summary">Erlaube ältere Widgets, die das Anzeigen auf dem Sperrbildschirm eigentlich nicht untersützen</string>
     <string name="lockscreen_allow_all_warning">Manche Widgets funktionieren auf dem Sperrbildschirm vielleicht nicht wie erwartet. Diese Widgets könnten eventuell persönliche Daten für weitere Nutzer deines Gerätes preisgeben. Bitte nimm diese Warnungen zur Kenntnis bevor du fortfährst.</string>
      
-     <!-- App moving -->
+    <!-- App moving -->
     <string name="app_moving_enable">App-zu-SD aktivieren</string>
     <string name="app_moving_disable">App-zu-SD deaktivieren</string>
     <string name="app_moving_reboot_title">Jetzt neustarten?</string>
@@ -981,7 +980,5 @@
     <string name="app_moving_reboot_disabled_desc">App-zu-SD wurde erfolgreich deaktiviert.\n\nDas Gerät muss neugestartet werden, um diese Funktion endgültig abzuschalten!</string>
     <string name="app_moving_reboot_now_button">Jetzt neustarten</string>
     <string name="app_moving_reboot_later_button">Später neustarten</string>
-
-</resources>
-     
+    
 </resources>
