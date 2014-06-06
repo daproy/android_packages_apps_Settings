@@ -128,6 +128,7 @@
         <item>@string/icon_picker_email2</item>
         <item>@string/icon_picker_facebook</item>
         <item>@string/icon_picker_gallery</item>
+        <item>@string/icon_picker_gmail</item>
         <item>@string/icon_picker_google_small</item>
         <item>@string/icon_picker_googleplus</item>
         <item>@string/icon_picker_googletalk</item>
@@ -140,6 +141,7 @@
         <item>@string/icon_picker_podcast</item>
         <item>@string/icon_picker_rss</item>
         <item>@string/icon_picker_search</item>
+        <item>@string/icon_picker_snapchat</item>
         <item>@string/icon_picker_twitter</item>
     </string-array>
 
@@ -154,6 +156,7 @@
         <item>ic_lockscreen_email2_normal</item>
         <item>ic_lockscreen_facebook_normal</item>
         <item>ic_lockscreen_gallery_normal</item>
+        <item>ic_lockscreen_gmail_normal</item>
         <item>ic_lockscreen_google_small_normal</item>
         <item>ic_lockscreen_gplus_normal</item>
         <item>ic_lockscreen_gtalk_normal</item>
@@ -166,6 +169,7 @@
         <item>ic_lockscreen_podcast_normal</item>
         <item>ic_lockscreen_rss_normal</item>
         <item>ic_lockscreen_google_normal</item>
+        <item>ic_lockscreen_snapchat_normal</item>
         <item>ic_lockscreen_twitter_normal</item>
     </string-array>
 
