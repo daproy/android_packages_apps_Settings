@@ -172,6 +172,8 @@
     <string name="clock_font_light">Schwach</string>
     <string name="clock_font_light_italic">Schwach und kursiv</string>
     <string name="clock_font_normal">Normal</string>
+    <string name="clock_use_second">Sekunden zeigen</string>
+    <string name="clock_use_second_summary">Blende Sekunden hinter der Uhr ein</string>
   
     <!-- Lockscreen Notifications -->
     <string name="notifications_on_lockscreen">Benachrichtigungen auf dem Sperrbildschirm</string>
