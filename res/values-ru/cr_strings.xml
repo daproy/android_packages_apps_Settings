@@ -988,6 +988,21 @@
     <string name="lockscreen_allow_all_summary">Разрешить устаревшие виджеты, которые изначально не поддерживают размещение на экране блокировки</string>
     <string name="lockscreen_allow_all_warning">Некоторые виджеты могут работать некорректно при размещении на экране блокировки.  Другие виджеты могут предоставлять ваши персональные данные для всех, кто получит доступ к вашему устройству.  Пожалуйста, учитывайте эти предупреждения, прежде чем продолжить.</string>
 
+    <!-- App moving -->
+    <string name="app_moving_enable">Включить перемещение приложения</string>
+    <string name="app_moving_disable">Отключить перемещение приложения</string>
+    <string name="app_moving_reboot_title">Перезагрузить сейчас?</string>
+    <string name="app_moving_reboot_enabled_desc">Перемещение приложения включено успешно.\n\nДля применения настроек устройство необходимо перезагрузить.</string>
+    <string name="app_moving_reboot_disabled_desc">Перемещение приложения отключено успешно.\n\nДля применения настроек устройство необходимо перезагрузить.</string>
+    <string name="app_moving_reboot_now_button">Перезагрузить сейчас</string>
+    <string name="app_moving_reboot_later_button">Перезагрузить позже</string>
+
+    <!-- Performance -->
+    <string name="pref_mcps_title">Режим энергсбережения для многоядерных процессоров</string>
+    <string name="mcps_0">Отк.</string>
+    <string name="mcps_1">Вкл.</string>
+    <string name="mcps_2">Агрессивный</string>
+
     <!-- Notification drawer settings  -->
     <string name="notification_drawer_title">Панель уведомлений</string>
     <string name="notification_shortcuts_settings_title">Ярлыки приложений</string>
