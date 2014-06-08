@@ -39,29 +39,25 @@ public class ScreenAndAnimations extends SettingsPreferenceFragment implements
 
         // ListView Animations
         mListViewAnimation = (ListPreference) prefSet.findPreference(KEY_LISTVIEW_ANIMATION);
-        if (mListViewAnimation != null) {
-           int listViewAnimation = Settings.System.getInt(getContentResolver(),
-                    Settings.System.LISTVIEW_ANIMATION, 1);
-           mListViewAnimation.setSummary(mListViewAnimation.getEntry());
-           mListViewAnimation.setValue(String.valueOf(listViewAnimation));
-        }
+        int listviewanimation = Settings.System.getInt(getContentResolver(),
+                Settings.System.LISTVIEW_ANIMATION, 0);
+        mListViewAnimation.setValue(String.valueOf(listviewanimation));
+        mListViewAnimation.setSummary(mListViewAnimation.getEntry());
         mListViewAnimation.setOnPreferenceChangeListener(this);
 
         mListViewInterpolator = (ListPreference) prefSet.findPreference(KEY_LISTVIEW_INTERPOLATOR);
-        if (mListViewInterpolator != null) {
-           int listViewInterpolator = Settings.System.getInt(getContentResolver(),
-                    Settings.System.LISTVIEW_INTERPOLATOR, 1);
-           mListViewInterpolator.setSummary(mListViewInterpolator.getEntry());
-           mListViewInterpolator.setValue(String.valueOf(listViewInterpolator));
-        }
+        int listviewinterpolator = Settings.System.getInt(getContentResolver(),
+                Settings.System.LISTVIEW_INTERPOLATOR, 0);
+        mListViewInterpolator.setValue(String.valueOf(listviewinterpolator));
+        mListViewInterpolator.setSummary(mListViewInterpolator.getEntry());
         mListViewInterpolator.setOnPreferenceChangeListener(this);
+        mListViewInterpolator.setEnabled(listviewanimation > 0);
 
         // Toast Animations
-        mToastAnimation = (ListPreference) findPreference(KEY_TOAST_ANIMATION);
+        mToastAnimation = (ListPreference) prefSet.findPreference(KEY_TOAST_ANIMATION);
+	int toastanimation = Settings.System.getInt(getContentResolver(), Settings.System.ACTIVITY_ANIMATION_CONTROLS[10], 0);
+	mToastAnimation.setValue(String.valueOf(toastanimation));; //set to index of default value
 	mToastAnimation.setSummary(mToastAnimation.getEntry());
-	int CurrentToastAnimation = Settings.System.getInt(getContentResolver(), Settings.System.ACTIVITY_ANIMATION_CONTROLS[10], 1);
-	mToastAnimation.setValueIndex(CurrentToastAnimation); //set to index of default value
-	mToastAnimation.setSummary(mToastAnimation.getEntries()[CurrentToastAnimation]);
 	mToastAnimation.setOnPreferenceChangeListener(this);
     }
 
@@ -70,30 +66,36 @@ public class ScreenAndAnimations extends SettingsPreferenceFragment implements
         super.onResume();
     }
 
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object objValue) {
 	final String key = preference.getKey();
 
         if (KEY_LISTVIEW_ANIMATION.equals(key)) {
-            int value = Integer.parseInt((String) newValue);
-            int index = mListViewAnimation.findIndexOfValue((String) newValue);
+            int value = Integer.parseInt((String) objValue);
+            int index = mListViewAnimation.findIndexOfValue((String) objValue);
             Settings.System.putInt(getContentResolver(),
                     Settings.System.LISTVIEW_ANIMATION,
                     value);
             mListViewAnimation.setSummary(mListViewAnimation.getEntries()[index]);
-        } else if (KEY_LISTVIEW_INTERPOLATOR.equals(key)) {
-            int value = Integer.parseInt((String) newValue);
-            int index = mListViewInterpolator.findIndexOfValue((String) newValue);
+            mListViewInterpolator.setEnabled(value > 0);
+        }
+        if (KEY_LISTVIEW_INTERPOLATOR.equals(key)) {
+            int value = Integer.parseInt((String) objValue);
+            int index = mListViewInterpolator.findIndexOfValue((String) objValue);
             Settings.System.putInt(getContentResolver(),
                     Settings.System.LISTVIEW_INTERPOLATOR,
                     value);
             mListViewInterpolator.setSummary(mListViewInterpolator.getEntries()[index]);
-        } else if (preference == mToastAnimation) {
-            int index = mToastAnimation.findIndexOfValue((String) newValue);
-            Settings.System.putString(getContentResolver(), Settings.System.ACTIVITY_ANIMATION_CONTROLS[10], (String) newValue);
-            mToastAnimation.setSummary(mToastAnimation.getEntries()[index]);
-            Toast.makeText(mContext, "Toast Test", Toast.LENGTH_SHORT).show();
-            return true;
         }
-        return false;
+        if (KEY_TOAST_ANIMATION.equals(key)) {
+            int value = Integer.parseInt((String) objValue);
+            int index = mToastAnimation.findIndexOfValue((String) objValue);
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.ACTIVITY_ANIMATION_CONTROLS[10],
+                    value);
+            mToastAnimation.setSummary(mToastAnimation.getEntries()[index]);
+        }
+
+        return true;
     }
 }
