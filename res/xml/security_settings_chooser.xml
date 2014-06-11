@@ -31,12 +31,6 @@
             android:title="@string/battery_around_lockscreen_ring"
             android:defaultValue="true" />
 
-        <PreferenceScreen
-            android:fragment="com.android.settings.OwnerInfoSettings"
-            android:key="owner_info_settings"
-            android:title="@string/owner_info_settings_title"
-            android:summary="@string/owner_info_settings_summary"/>
-
     </PreferenceCategory>
 
 </PreferenceScreen>
