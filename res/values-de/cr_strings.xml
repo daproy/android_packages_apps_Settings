@@ -989,4 +989,10 @@
     <string name="mcps_1">Aus</string>
     <string name="mcps_2">Aggressiv</string>
     
+    <!--Blacklist-->
+    <string name="blacklist_button_title">Schwarze Liste</string>
+    <string name="peek_blacklist_label">Schwarze Liste von Peek</string>
+    <string name="floating_blacklist_label">Schwarze Liste von Schwebe-Modus</string>
+    <string name="hover_blacklist_label">Schwarze Liste von Hover</string>
+    
 </resources>
