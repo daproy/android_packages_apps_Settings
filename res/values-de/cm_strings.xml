@@ -941,5 +941,9 @@ auf <xliff:g id="new" example="libart.so">%2$s</xliff:g> zu ändern?</string>
   <string name="sd_media_format_final_desc">SD-Karte löschen und alle gespeicherten Daten löschen? Dies lässt sich nicht rückgängig machen!</string>
   <string name="usb_media_format_gesture_explanation">Zeichne dein Entsperr-Muster um den Löschvorgang des USB-Speichers zu bestätigen.</string>
   <string name="sd_media_format_gesture_explanation">Zeichne dein Entsperr-Muster um den Löschvorgang der SD-Karte zu bestätigen.</string>
+  <string name="menu_hidden_apps_delete">Zurücksetzen</string>
+  <string name="menu_hidden_apps_reset_lock">Sperrmuster zurücksetzen</string>
+  <string name="protected_apps">Geschützte Apps</string>
+  <string name="saving_protected_components">Speichere Änderungen\u2026</string>
     
 </resources>
