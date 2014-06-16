@@ -1003,6 +1003,12 @@
     <string name="mcps_1">Вкл.</string>
     <string name="mcps_2">Агрессивный</string>
 
+    <!--Blacklist-->
+    <string name="blacklist_button_title">Черный список</string>
+    <string name="peek_blacklist_label">Черный список из Peek</string>
+    <string name="floating_blacklist_label">Черный список из Floating Mode</string>
+    <string name="hover_blacklist_label">Черный список из Hover</string>
+
     <!-- Notification drawer settings  -->
     <string name="notification_drawer_title">Панель уведомлений</string>
     <string name="notification_shortcuts_settings_title">Ярлыки приложений</string>
