@@ -684,7 +684,7 @@
     <string name="title_tile_onthego">On-The-Go</string>
 
     <!-- long press back to kill configurable timeout -->
-    <string name="kill_app_longpress_timeout_title">Zeit zum Beenden</string>
+    <string name="kill_app_longpress_timeout_title">Druckdauer</string>
     <string name="timeout_2000">2 Sekunden (Standard)</string>
     <string name="timeout_1500">1,5 Sekunden</string>
     <string name="timeout_1000">1 Sekunde</string>
@@ -990,9 +990,9 @@
     <string name="mcps_2">Aggressiv</string>
     
     <!--Blacklist-->
-    <string name="blacklist_button_title">Schwarze Liste</string>
-    <string name="peek_blacklist_label">Schwarze Liste von Peek</string>
-    <string name="floating_blacklist_label">Schwarze Liste von Schwebe-Modus</string>
-    <string name="hover_blacklist_label">Schwarze Liste von Hover</string>
+    <string name="blacklist_button_title">App ignorieren bei</string>
+    <string name="peek_blacklist_label">Peek</string>
+    <string name="floating_blacklist_label">Schwebe-Modus</string>
+    <string name="hover_blacklist_label">Hover</string>
     
 </resources>
