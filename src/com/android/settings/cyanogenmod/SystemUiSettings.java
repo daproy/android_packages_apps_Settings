@@ -55,6 +55,7 @@ public class SystemUiSettings extends SettingsPreferenceFragment  implements
 
     // Enable/disable nav bar	
     private static final String ENABLE_NAVIGATION_BAR = "enable_nav_bar";
+    private static final String PREF_NAVIGATION_BAR_CAN_MOVE = "navbar_can_move";
 
     private static final int DLG_NAVIGATION_WARNING = 0;
 
@@ -74,6 +75,7 @@ public class SystemUiSettings extends SettingsPreferenceFragment  implements
  
     // Enable/disable nav bar
     private CheckBoxPreference mEnableNavigationBar;
+    CheckBoxPreference mNavigationBarCanMove;
 
     private SettingsObserver mSettingsObserver = new SettingsObserver(new Handler());
     private final class SettingsObserver extends ContentObserver {
@@ -109,7 +111,7 @@ public class SystemUiSettings extends SettingsPreferenceFragment  implements
 
         // Navigation bar left
         mNavigationBarLeftPref = (CheckBoxPreference) findPreference(KEY_NAVIGATION_BAR_LEFT);
-        
+      
         Utils.updatePreferenceToSpecificActivityFromMetaDataOrRemove(getActivity(),
                 getPreferenceScreen(), KEY_SCREEN_GESTURE_SETTINGS);
 
@@ -128,6 +130,14 @@ public class SystemUiSettings extends SettingsPreferenceFragment  implements
             }
         } catch (RemoteException e) {
             Log.e(TAG, "Error getting navigation bar status");
+        }
+
+        mNavigationBarCanMove = (CheckBoxPreference) findPreference(PREF_NAVIGATION_BAR_CAN_MOVE);
+        if (!Utils.isPhone(getActivity())) {
+            mNavigationBarCanMove.setOnPreferenceChangeListener(this);
+        } else {
+            getPreferenceScreen().removePreference(mNavigationBarCanMove);
+            mNavigationBarCanMove = null;
         }
 
         // All Expanded desktop options for all devices
@@ -181,11 +191,19 @@ public class SystemUiSettings extends SettingsPreferenceFragment  implements
                 SlimActions.isNavBarDefault(getActivity()) ? 1 : 0) == 1;
         mEnableNavigationBar.setChecked(enableNavigationBar);
 
+        if (mNavigationBarCanMove != null) {
+            mNavigationBarCanMove.setChecked(Settings.System.getInt(getContentResolver(),
+                    Settings.System.NAVIGATION_BAR_CAN_MOVE, 1) == 0);
+        }
         updateNavbarPreferences(enableNavigationBar);
     }
 
     // Enable/disbale nav bar
-    private void updateNavbarPreferences(boolean show) {}
+    private void updateNavbarPreferences(boolean show) {
+    if (mNavigationBarCanMove != null) {
+            mNavigationBarCanMove.setEnabled(show);
+        }
+    }
 
     public void enableKeysPrefs() {
         mMenuKeyEnabled.setEnabled(true);
@@ -241,6 +259,12 @@ public class SystemUiSettings extends SettingsPreferenceFragment  implements
             } else {
                 resetKeys();
             }
+            return true;
+        } else if (preference == mNavigationBarCanMove) {
+            value = (Boolean) objValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.NAVIGATION_BAR_CAN_MOVE,
+                    ((Boolean) objValue) ? 0 : 1);
             return true;
         }
 

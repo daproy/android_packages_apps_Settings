@@ -48,6 +48,8 @@ public class NavbarDimenSettings extends SettingsPreferenceFragment implements
     private static final String PREF_NAVIGATION_BAR_HEIGHT = "navigation_bar_height";
     private static final String PREF_NAVIGATION_BAR_WIDTH = "navigation_bar_width";
     private static final String KEY_DIMEN_OPTIONS = "navbar_dimen";
+    private static final String PREF_NAVIGATION_BAR_HEIGHT_LANDSCAPE =
+        "navigation_bar_height_landscape";
 
     private static final int MENU_RESET = Menu.FIRST;
 
@@ -55,6 +57,7 @@ public class NavbarDimenSettings extends SettingsPreferenceFragment implements
 
     ListPreference mNavigationBarHeight;
     ListPreference mNavigationBarWidth;
+    ListPreference mNavigationBarHeightLandscape;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -68,6 +71,10 @@ public class NavbarDimenSettings extends SettingsPreferenceFragment implements
         mNavigationBarHeight =
             (ListPreference) findPreference(PREF_NAVIGATION_BAR_HEIGHT);
         mNavigationBarHeight.setOnPreferenceChangeListener(this);
+
+        mNavigationBarHeightLandscape =
+            (ListPreference) findPreference(PREF_NAVIGATION_BAR_HEIGHT_LANDSCAPE);
+        mNavigationBarHeightLandscape.setOnPreferenceChangeListener(this);
 
         mNavigationBarWidth =
             (ListPreference) findPreference(PREF_NAVIGATION_BAR_WIDTH);
@@ -92,6 +99,15 @@ public class NavbarDimenSettings extends SettingsPreferenceFragment implements
         }
         mNavigationBarHeight.setValue(String.valueOf(navigationBarHeight));
 
+        int navigationBarHeightLandscape = Settings.System.getInt(getContentResolver(),
+                            Settings.System.NAVIGATION_BAR_HEIGHT_LANDSCAPE, -2);
+        if (navigationBarHeightLandscape == -2) {
+            navigationBarHeightLandscape = (int) (getResources().getDimension(
+                    com.android.internal.R.dimen.navigation_bar_height_landscape)
+                    / getResources().getDisplayMetrics().density);
+        }
+        mNavigationBarHeightLandscape.setValue(String.valueOf(navigationBarHeightLandscape));
+
         if (mNavigationBarWidth == null) {
             return;
         }
@@ -103,6 +119,12 @@ public class NavbarDimenSettings extends SettingsPreferenceFragment implements
                     / getResources().getDisplayMetrics().density);
         }
         mNavigationBarWidth.setValue(String.valueOf(navigationBarWidth));
+
+        boolean navbarCanMove = Settings.System.getInt(getContentResolver(),
+                Settings.System.NAVIGATION_BAR_CAN_MOVE, 1) == 1;
+
+        mNavigationBarHeightLandscape.setEnabled(!navbarCanMove);
+        mNavigationBarWidth.setEnabled(navbarCanMove);
     }
 
     @Override
@@ -135,6 +157,12 @@ public class NavbarDimenSettings extends SettingsPreferenceFragment implements
             String newVal = (String) newValue;
             Settings.System.putInt(getContentResolver(),
                     Settings.System.NAVIGATION_BAR_HEIGHT,
+                    Integer.parseInt(newVal));
+            return true;
+        } else if (preference == mNavigationBarHeightLandscape) {
+            String newVal = (String) newValue;
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.NAVIGATION_BAR_HEIGHT_LANDSCAPE,
                     Integer.parseInt(newVal));
             return true;
         }
@@ -178,6 +206,8 @@ public class NavbarDimenSettings extends SettingsPreferenceFragment implements
                     .setPositiveButton(R.string.dlg_ok,
                         new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
+                            Settings.System.putInt(getActivity().getContentResolver(),
+                                    Settings.System.NAVIGATION_BAR_HEIGHT_LANDSCAPE, -2);
                             Settings.System.putInt(getActivity().getContentResolver(),
                                     Settings.System.NAVIGATION_BAR_HEIGHT, -2);
                             Settings.System.putInt(getActivity().getContentResolver(),
