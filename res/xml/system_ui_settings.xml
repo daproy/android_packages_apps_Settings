@@ -123,11 +123,6 @@
             android:defaultValue="false"
             android:dependency="enable_nav_bar" />
 
-        <CheckBoxPreference
-            android:key="navbar_can_move"
-            android:title="@string/navbar_can_move"
-            android:summary="@string/navbar_can_move_summary" />
-
     </PreferenceCategory>
 
     <PreferenceCategory
