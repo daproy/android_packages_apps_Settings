@@ -50,12 +50,6 @@
             android:title="@string/lock_numpad_random_title"
             android:dialogTitle="@string/lock_numpad_random_dialog_title" />
 
-        <PreferenceScreen
-            android:fragment="com.android.settings.OwnerInfoSettings"
-            android:key="owner_info_settings"
-            android:title="@string/owner_info_settings_title"
-            android:summary="@string/owner_info_settings_summary"/>
-
     </PreferenceCategory>
 
 </PreferenceScreen>
