@@ -995,4 +995,21 @@
     <string name="floating_blacklist_label">Schwebe-Modus</string>
     <string name="hover_blacklist_label">Hover</string>
     
+     <!-- Hover settings -->
+    <string name="hover_settings_title">Hover</string>
+    <string name="hover_require_fullscreen_mode_title">Erweiterten Desktop vorraussetzen</string>
+    <string name="hover_require_fullscreen_mode_summary">Zeige Hover nur bei ausgeblendeter Statusleiste</string>
+    <string name="hover_exclude_low_priority_title">\"Niedrige Priorität\" ausschließen</string>
+    <string name="hover_exclude_low_priority_summary">Schließe niedrig priorisierte Benachrichtigungen aus</string>
+    <string name="hover_exclude_non_clearable_title">\"Dauerhafte\" ausschließen</string>
+    <string name="hover_exclude_non_clearable_summary">Schließe nicht verwerfbare Benachrichtigungen aus</string>
+
+    <!-- Hover long fade out delay -->
+    <string name="hover_long_fadeout_title">Anzeigedauer</string>
+    <string name="hover_long_fadeout_3seconds">3 Sekunden</string>
+    <string name="hover_long_fadeout_5seconds">5 Sekunden (Standard)</string>
+    <string name="hover_long_fadeout_7seconds">7 Sekunden</string>
+    <string name="hover_long_fadeout_10seconds">10 Sekunden</string>
+    <string name="hover_long_fadeout_15seconds">15 Sekunden</string>
+    
 </resources>
