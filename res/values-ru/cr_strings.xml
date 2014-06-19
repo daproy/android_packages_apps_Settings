@@ -27,13 +27,15 @@
 
     <!-- Navigation bar -->
     <string name="navbar_enable_bar">Включить строку навигации</string>
-    <string name="navbar_enable_bar_summary">Включение отображения строки навигации</string>
+    <string name="navbar_enable_bar_summary">Включить отображение строки навигации</string>
     <string name="navbar_style_dimen_title">Размеры</string>
     <string name="navbar_dimensions_reset_message">Сбросить все значения размеров по умолчанию?</string>
-    <string name="navigation_bar_height_title">Высота строки навигации</string>
+    <string name="navigation_bar_height_title">Высота в портретном режиме</string>
     <string name="navigation_bar_height_summary">Высота строки навигации в портретном режиме</string>
     <string name="navigation_bar_width_title">Ширина строки навигации</string>
     <string name="navigation_bar_width_summary">Ширина строки навигации, если строка расположена вдоль боковой стороны.</string>
+    <string name="navigation_bar_height_landscape_title">Высота в альбомном режиме</string>
+    <string name="navigation_bar_height_landscape_summary">Высота строки навигации в альбомном режиме</string>
     <string name="navigation_bar_size_42_dp_default">42 dp (по умолчанию)</string>
     <string name="navigation_bar_size_36_dp">36 dp</string>
     <string name="navigation_bar_size_30_dp">30 dp</string>
@@ -43,7 +45,9 @@
     <string name="navigation_bar_size_40_dp">40 dp</string>
     <string name="navigation_bar_size_42_dp">42 dp</string>
     <string name="navigation_bar_size_0_dp">0 dp (выкл.)</string>
-
+    <string name="navbar_can_move">Отображать в альбомном режиме</string>
+    <string name="navbar_can_move_summary">Отображать строку навигации в альбомном режиме внизу экрана</string>
+	
     <!-- Low battery warning policy -->
     <string name="pref_low_battery_warning_policy_title">Уведомление о низком заряде батареи</string>
     <string name="pref_low_battery_warning_policy_dialog_title">Уведомление о низком заряде батареи</string>
@@ -536,7 +540,7 @@
     <string name="telo_radio_2g_15min">15 минут</string>
     <string name="telo_radio_2g_20min">20 минут</string>
     <string name="telo_radio_go_3g_unlock_title">Разблокировать режим 3G</string>
-    <string name="telo_radio_go_3g_unlock_summary">Когда устройство разблокируется, режим сети переключается снова на 3G</string>
+    <string name="telo_radio_go_3g_unlock_summary">При разблокировке устройства, режим сети снова переключается на 3G</string>
 
     <!-- Lockscreen background -->
     <string name="lockscreen_background">Фон экрана блокировки</string>
@@ -707,7 +711,9 @@
     <string name="recent_panel_expanded_mode_auto">Авто (по умолчанию)</string>
     <string name="recent_panel_expanded_mode_always">Всегда</string>
     <string name="recent_panel_expanded_mode_never">Никогда</string>
-	
+    <string name="recent_panel_show_topmost_title">Отображать самую важную задачу</string>
+    <string name="recent_panel_show_topmost_summary">Не исключать самую важную задачу из недавно просмотренных</string>
+
     <!-- ATTENTION: RTL languages need to replace left with right -->
     <string name="recent_panel_lefty_mode_title">Показывать по левому краю</string>
     <string name="recent_panel_lefty_mode_summary">Показывать панель последних приложений по левому краю экрана</string>
@@ -1008,6 +1014,27 @@
     <string name="peek_blacklist_label">Черный список из Peek</string>
     <string name="floating_blacklist_label">Черный список из Floating Mode</string>
     <string name="hover_blacklist_label">Черный список из Hover</string>
+
+    <!-- Hover settings -->
+    <string name="hover_settings_title">Режим Hover</string>
+    <string name="hover_require_fullscreen_mode_title">Полноэкранный режим</string>
+    <string name="hover_require_fullscreen_mode_summary">Отображать только когда скрыта строка состояния</string>
+    <string name="hover_exclude_low_priority_title">Исключить низкий приоритет</string>
+    <string name="hover_exclude_low_priority_summary">Исключить уведомления, помеченные как низкоприоритетные</string>
+    <string name="hover_exclude_non_clearable_title">Исключить не удаляемые</string>
+    <string name="hover_exclude_non_clearable_summary">Исключить не удаляемые уведомления</string>
+
+    <!-- Hover long fade out delay -->
+    <string name="hover_long_fadeout_title">Время отображения уведомлений Hover</string>
+    <string name="hover_long_fadeout_3seconds">3 секунды</string>
+    <string name="hover_long_fadeout_5seconds">5 секунд (по умолчанию)</string>
+    <string name="hover_long_fadeout_7seconds">7 секунд</string>
+    <string name="hover_long_fadeout_10seconds">10 секунд</string>
+    <string name="hover_long_fadeout_15seconds">15 секунд</string>
+
+    <!-- Hover exclude topmost app -->
+    <string name="hover_exclude_topmost_title">Исключить важное приложение</string>
+    <string name="hover_exclude_topmost_summary">Исключить уведомления от приложения, работающего в фоновом режиме</string>
 
     <!-- Notification drawer settings  -->
     <string name="notification_drawer_title">Панель уведомлений</string>
