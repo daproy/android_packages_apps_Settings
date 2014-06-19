@@ -132,6 +132,7 @@ public class SystemUiSettings extends SettingsPreferenceFragment  implements
             Log.e(TAG, "Error getting navigation bar status");
         }
 
+        /* Not in use for now
         mNavigationBarCanMove = (CheckBoxPreference) findPreference(PREF_NAVIGATION_BAR_CAN_MOVE);
         if (!Utils.isPhone(getActivity())) {
             mNavigationBarCanMove.setOnPreferenceChangeListener(this);
@@ -139,6 +140,7 @@ public class SystemUiSettings extends SettingsPreferenceFragment  implements
             getPreferenceScreen().removePreference(mNavigationBarCanMove);
             mNavigationBarCanMove = null;
         }
+        */
 
         // All Expanded desktop options for all devices
         mExpandedDesktopPref.setOnPreferenceChangeListener(this);
@@ -191,18 +193,22 @@ public class SystemUiSettings extends SettingsPreferenceFragment  implements
                 SlimActions.isNavBarDefault(getActivity()) ? 1 : 0) == 1;
         mEnableNavigationBar.setChecked(enableNavigationBar);
 
+        /* Not in use for now
         if (mNavigationBarCanMove != null) {
             mNavigationBarCanMove.setChecked(Settings.System.getInt(getContentResolver(),
                     Settings.System.NAVIGATION_BAR_CAN_MOVE, 1) == 0);
         }
+        */
         updateNavbarPreferences(enableNavigationBar);
     }
 
     // Enable/disbale nav bar
     private void updateNavbarPreferences(boolean show) {
+    /* Not in use for now
     if (mNavigationBarCanMove != null) {
             mNavigationBarCanMove.setEnabled(show);
         }
+    */
     }
 
     public void enableKeysPrefs() {
@@ -260,12 +266,14 @@ public class SystemUiSettings extends SettingsPreferenceFragment  implements
                 resetKeys();
             }
             return true;
+        /* Not in use for now       
         } else if (preference == mNavigationBarCanMove) {
             value = (Boolean) objValue;
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.NAVIGATION_BAR_CAN_MOVE,
                     ((Boolean) objValue) ? 0 : 1);
             return true;
+        */
         }
 
         return false;
