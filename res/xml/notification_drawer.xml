@@ -19,6 +19,30 @@
     android:title="@string/notification_drawer_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <ListPreference
+        android:key="notification_drawer_collapse_on_dismiss"
+        android:title="@string/notification_drawer_collapse_on_dismiss_title"
+        android:dialogTitle="@string/notification_drawer_collapse_on_dismiss_title"
+        android:entries="@array/notification_drawer_collapse_on_dismiss_entries"
+        android:entryValues="@array/notification_drawer_collapse_on_dismiss_values" />
+
+    <PreferenceScreen
+        android:key="quick_settings_panel"
+        android:fragment="com.android.settings.quicksettings.QuickSettings"
+        android:title="@string/quick_settings_panel_title" />
+
+    <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference
+        android:key="notification_brightness_slider"
+        android:title="@string/notification_drawer_brightness_slider_title"
+        android:defaultValue="false" />
+
+    <ListPreference
+        android:key="smart_pulldown"
+        android:title="@string/smart_pulldown_title"
+        android:entries="@array/smart_pulldown_entries"
+        android:entryValues="@array/smart_pulldown_values"
+        android:persistent="false" />
+
     <Preference
          android:fragment="com.android.settings.crdroid.NotificationDrawerStyle"
          android:key="notification_style"
@@ -30,25 +54,6 @@
          android:key="notifications_reminder"
          android:title="@string/noti_reminder_title"
          android:summary="@string/noti_reminder_summary" />
-
-    <ListPreference
-        android:key="notification_drawer_collapse_on_dismiss"
-        android:title="@string/notification_drawer_collapse_on_dismiss_title"
-        android:dialogTitle="@string/notification_drawer_collapse_on_dismiss_title"
-        android:entries="@array/notification_drawer_collapse_on_dismiss_entries"
-        android:entryValues="@array/notification_drawer_collapse_on_dismiss_values" />
-
-    <ListPreference
-        android:key="smart_pulldown"
-        android:title="@string/smart_pulldown_title"
-        android:entries="@array/smart_pulldown_entries"
-        android:entryValues="@array/smart_pulldown_values"
-        android:persistent="false" />
-
-    <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference
-         android:key="notification_brightness_slider"
-         android:title="@string/notification_drawer_brightness_slider_title"
-         android:defaultValue="false" />
 
     <PreferenceCategory
         android:title="@string/category_quick_access" >
