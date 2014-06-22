@@ -1012,4 +1012,8 @@
     <string name="hover_long_fadeout_10seconds">10 Sekunden</string>
     <string name="hover_long_fadeout_15seconds">15 Sekunden</string>
     
+    <!-- Hover exclude topmost app -->
+    <string name="hover_exclude_topmost_title">\"Vordergrund\" ausschließen</string>
+    <string name="hover_exclude_topmost_summary">Schließe die aktuell geöffnete Anwendung aus</string>
+    
 </resources>
