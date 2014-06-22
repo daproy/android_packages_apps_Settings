@@ -815,7 +815,7 @@
     <string name="pie_control_title">Панель PIE</string>
     <string name="pie_control_summary">Увімкнути управління з допомогою PIE</string>
     <string name="pie_control_size">Розмір панелі навігації</string>
-    <string name="pie_control_trigger_positions">Параметрі триггера</string>
+    <string name="pie_control_trigger_positions">Параметри триггера</string>
     <string name="pie_control_trigger_left">Триггер зліва на екрані</string>
     <string name="pie_control_trigger_bottom">Триггер внизу екрану</string>
     <string name="pie_control_trigger_right">Триггер зправа на екрані</string>
@@ -841,9 +841,9 @@
     <string name="pie_background_alpha_title">Прозорість фону</string>
     <string name="pie_mirror_right_title">PIE дзеркально зправа</string>
     <string name="pie_mirror_right_summary">Панель PIE дзеркально зправа по горизонтальній осі</string>
-    <string name="pie_style">Стиль і разміри</string>
+    <string name="pie_style">Стиль і розміри</string>
     <string name="pie_style_title">Стиль</string>
-    <string name="pie_dimens_title">Разміри</string>
+    <string name="pie_dimens_title">Розміри</string>
     <string name="pie_show_snap_title">Показувати точки прикріплення</string>
     <string name="pie_show_snap_summary">Показувати точки прикріплення для динамичної зміни розташування триггера</string>
     <string name="pie_show_text_title">Показувати стан і годинник</string>
@@ -1001,5 +1001,39 @@
     <string name="app_moving_reboot_disabled_desc">Успішно вимкнено перенесення додатків.\n\nДля застосування налаштувань необхідно перезавантажити пристрій.</string>
     <string name="app_moving_reboot_now_button">Презавантажити зараз</string>
     <string name="app_moving_reboot_later_button">Презавантажити пізніше</string>
+    
+     <!-- Performance -->
+    <string name="pref_mcps_title">Багатоядерне Енергозбереження</string>
+    <string name="mcps_0">Вимк.</string>
+    <string name="mcps_1">Увімк.</string>
+    <string name="mcps_2">Агресивний</string>
+
+    <!--Blacklist-->
+    <string name="blacklist_button_title">Чорний список</string>
+    <string name="peek_blacklist_label">Чорний список від Peek</string>
+    <string name="floating_blacklist_label">Чорний список від плаваючого режиму</string>
+    <string name="hover_blacklist_label">Чорний список від Hover</string>
+
+    <!-- Hover settings -->
+    <string name="hover_settings_title">Налаштування Hover</string>
+    <string name="hover_require_fullscreen_mode_title">Вимагати повноекраннний режим</string>
+    <string name="hover_require_fullscreen_mode_summary">Тільки коли статусбар прихований</string>
+    <string name="hover_exclude_low_priority_title">Виключити низький пріоритет</string>
+    <string name="hover_exclude_low_priority_summary">Виключити повідомлення помічені низьким пріоритетом</string>
+    <string name="hover_exclude_non_clearable_title">Виключити неавтоочищаючі</string>
+    <string name="hover_exclude_non_clearable_summary">Виключити невидаляємі повідомлення</string>
+
+    <!-- Hover long fade out delay -->
+    <string name="hover_long_fadeout_title">Час сповіщувача Hover </string>
+    <string name="hover_long_fadeout_3seconds">3 секунди</string>
+    <string name="hover_long_fadeout_5seconds">5 секунд (за замовч.)</string>
+    <string name="hover_long_fadeout_7seconds">7 секунд</string>
+    <string name="hover_long_fadeout_10seconds">10 секунд</string>
+    <string name="hover_long_fadeout_15seconds">15 секунд</string>
+
+    <!-- Hover exclude topmost app -->
+    <string name="hover_exclude_topmost_title">Виключити верхній додаток</string>
+    <string name="hover_exclude_topmost_summary">Виключити повідомлення з програми, що працює в передньому плані</string>
+
     
 </resources>
