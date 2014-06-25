@@ -31,8 +31,6 @@ import android.preference.RingtonePreference;
 
 import com.android.internal.util.crdroid.DeviceUtils;
 
-import com.android.settings.cyanogenmod.SystemSettingSwitchPreference;
-
 public class NotificationDrawer extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
     private static final String TAG = "NotificationDrawer";
@@ -41,7 +39,7 @@ public class NotificationDrawer extends SettingsPreferenceFragment implements
     private static final String PRE_SMART_PULLDOWN = "smart_pulldown";
     
     private ListPreference mCollapseOnDismiss;
-    private SystemSettingSwitchPreference mSwitchPreference;
+    private Preference mHeadsUp;
     private ListPreference mSmartPulldown;
     
     @Override
@@ -49,10 +47,8 @@ public class NotificationDrawer extends SettingsPreferenceFragment implements
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.notification_drawer);
-        PreferenceScreen prefScreen = getPreferenceScreen();
 
-        mSwitchPreference = (SystemSettingSwitchPreference)
-                findPreference(Settings.System.HEADS_UP_NOTIFICATION);
+        mHeadsUp = findPreference(Settings.System.HEADS_UP_NOTIFICATION);
 
         // Notification drawer
         int collapseBehaviour = Settings.System.getInt(getContentResolver(),
@@ -79,10 +75,11 @@ public class NotificationDrawer extends SettingsPreferenceFragment implements
     @Override
     public void onResume() {
         super.onResume();
-        boolean headsUpEnabled = Settings.System.getIntForUser(
-                getActivity().getContentResolver(),
-                Settings.System.HEADS_UP_NOTIFICATION, 0, UserHandle.USER_CURRENT) == 1;
-        mSwitchPreference.setChecked(headsUpEnabled);
+
+        boolean headsUpEnabled = Settings.System.getInt(
+                getContentResolver(), Settings.System.HEADS_UP_NOTIFICATION, 0) == 1;
+        mHeadsUp.setSummary(headsUpEnabled
+                ? R.string.summary_heads_up_enabled : R.string.summary_heads_up_disabled);
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
