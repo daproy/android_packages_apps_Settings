@@ -21,7 +21,10 @@ import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.DialogInterface;
 import android.content.ContentResolver;
+import android.content.Context;
 import android.content.res.Resources;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.database.ContentObserver;
 import android.os.Bundle;
 import android.os.RemoteException;
@@ -44,6 +47,7 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
 
+import org.cyanogenmod.hardware.KeyDisabler;
 import com.android.internal.util.slim.SlimActions;
 
 public class ButtonSettings extends SettingsPreferenceFragment implements
@@ -120,6 +124,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     private CheckBoxPreference mCameraMusicControls;
     private ListPreference mVolumeKeyCursorControl;
     private CheckBoxPreference mSwapVolumeButtons;
+    //private CheckBoxPreference mDisableNavigationKeys;
     private CheckBoxPreference mPowerEndCall;
     private CheckBoxPreference mHomeAnswerCall;
     private CheckBoxPreference mNavigationBarLeftPref;
@@ -565,6 +570,37 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         return false;
     }
 
+    /*private static void writeDisableNavkeysOption(Context context, boolean enabled) {
+        final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+        final int defaultBrightness = context.getResources().getInteger(
+                com.android.internal.R.integer.config_buttonBrightnessSettingDefault);
+
+        Settings.System.putInt(context.getContentResolver(),
+                Settings.System.DEV_FORCE_SHOW_NAVBAR, enabled ? 1 : 0);
+        KeyDisabler.setActive(enabled);
+
+        // Save/restore button timeouts to disable them in softkey mode
+        Editor editor = prefs.edit();
+
+        if (enabled) {
+            int currentBrightness = Settings.System.getInt(context.getContentResolver(),
+                    Settings.System.BUTTON_BRIGHTNESS, defaultBrightness);
+            if (!prefs.contains("pre_navbar_button_backlight")) {
+                editor.putInt("pre_navbar_button_backlight", currentBrightness);
+            }
+            Settings.System.putInt(context.getContentResolver(),
+                    Settings.System.BUTTON_BRIGHTNESS, 0);
+        } else {
+            int oldBright = prefs.getInt("pre_navbar_button_backlight", -1);
+            if (oldBright != -1) {
+                Settings.System.putInt(context.getContentResolver(),
+                        Settings.System.BUTTON_BRIGHTNESS, oldBright);
+                editor.remove("pre_navbar_button_backlight");
+            }
+        }
+        editor.commit();
+    }*/
+
     /*private void updateDisableNavkeysOption() {
         boolean enabled = Settings.System.getInt(getActivity().getContentResolver(),
                 Settings.System.DEV_FORCE_SHOW_NAVBAR, 0) != 0;
@@ -607,7 +643,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     }
 
     public static void restoreKeyDisabler(Context context) {
-        if (!KeyDisabler.isSupported()) {
+        if (!isKeyDisablerSupported()) {
             return;
         }
 
@@ -664,6 +700,15 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         }
 
         return super.onPreferenceTreeClick(preferenceScreen, preference);
+    }
+
+    private static boolean isKeyDisablerSupported() {
+        try {
+            return KeyDisabler.isSupported();
+        } catch (NoClassDefFoundError e) {
+            // Hardware abstraction framework not installed
+            return false;
+        }
     }
 
     private void handleTogglePowerButtonEndsCallPreferenceClick() {
