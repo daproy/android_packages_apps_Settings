@@ -47,6 +47,7 @@ public class NotificationDrawer extends SettingsPreferenceFragment implements
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.notification_drawer);
+        PreferenceScreen prefScreen = getPreferenceScreen();
 
         mHeadsUp = findPreference(Settings.System.HEADS_UP_NOTIFICATION);
 
