@@ -643,7 +643,7 @@ Mittels \"Entfernen\" kann die ausgewählte Stützstelle aus dem Helligkeitsverl
   <string name="button_wake_title">Aufwecken</string>
   <string name="home_wake_summary">Drücken der Home-Taste aktiviert den Bildschirm</string>
   <string name="home_answer_call_title">Anruf beantworten</string>
-  <string name="home_answer_call_summary">Annehmen eingehender Anruf durch drücken der Ein-/Aus-Taste</string>
+  <string name="home_answer_call_summary">Eingehende Anrufe durch drücken der Home-Taste annehmen</string>
   <string name="camera_wake_summary">Drücken der Kamera-Taste aktiviert den Bildschirm</string>
   <string name="camera_sleep_on_release_title">Kurzer Blick</string>
   <string name="camera_sleep_on_release_summary">Der Bildschirm wird aktiviert, solange die Kamera-Taste halb durchgedrückt gehalten wird</string>
