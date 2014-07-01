@@ -52,7 +52,6 @@ import android.os.UserManager;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceFragment;
-import android.support.v4.view.MenuItemCompat;
 import android.text.TextUtils;
 import android.telephony.MSimTelephonyManager;
 import android.util.Log;
@@ -161,7 +160,6 @@ public class Settings extends PreferenceActivity
 
     private static final String VOICE_WAKEUP_PACKAGE_NAME = "com.cyanogenmod.voicewakeup";
     private static final String GESTURE_SETTINGS_PACKAGE_NAME = "com.cyanogenmod.settings";
-    public static final String NOTIFIER_EXTRA = "notifier";
 
     static final int DIALOG_ONLY_ONE_HOME = 1;
 
@@ -251,9 +249,8 @@ public class Settings extends PreferenceActivity
         final InputMethodManager imm =
                 (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
 
-        mSearchBar = (SettingsAutoCompleteTextView) MenuItemCompat.getActionView(mSearchItem);
-
-        MenuItemCompat.setOnActionExpandListener(mSearchItem, new MenuItemCompat.OnActionExpandListener() {
+        mSearchBar = (SettingsAutoCompleteTextView) mSearchItem.getActionView();
+        mSearchItem.setOnActionExpandListener(new MenuItem.OnActionExpandListener() {
             @Override
             public boolean onMenuItemActionCollapse(MenuItem item) {
                 mSearchBar.clearFocus();
@@ -286,8 +283,7 @@ public class Settings extends PreferenceActivity
             AsyncTask<Void, Void, ArrayList<SearchInfo>> {
         @Override
         protected ArrayList<SearchInfo> doInBackground(Void... param) {
-            final ArrayList<SearchInfo> infos = SearchPopulator.getTitles(Settings.this);
-            return infos;
+            return SearchPopulator.loadSearchData(Settings.this);
         }
 
         @Override
@@ -315,9 +311,8 @@ public class Settings extends PreferenceActivity
             getWindow().setUiOptions(getIntent().getIntExtra(EXTRA_UI_OPTIONS, 0));
         }
 
-        Intent i = new Intent(this, SearchPopulator.class);
-        i.putExtra(NOTIFIER_EXTRA, new SearchNotifier(new Handler()));
-        startService(i);
+        startPopulatingSearchData();
+
         mActionBar = getActionBar();
         mActionBar.setDisplayShowCustomEnabled(true);
 
@@ -404,11 +399,9 @@ public class Settings extends PreferenceActivity
 
     @Override
     public void onBackPressed() {
-        if (mSearchBar != null) {
-            if (mSearchBar.hasFocus()) {
-                mSearchBar.clearFocus();
-                return;
-            }
+        if (mSearchBar != null && mSearchBar.hasFocus()) {
+            mSearchBar.clearFocus();
+            return;
         }
         super.onBackPressed();
     }
@@ -589,6 +582,12 @@ public class Settings extends PreferenceActivity
                 }
             }
         }
+    }
+
+    private void startPopulatingSearchData() {
+        Intent i = new Intent(this, SearchPopulator.class);
+        i.putExtra(SearchPopulator.EXTRA_NOTIFIER, new SearchNotifier(new Handler()));
+        startService(i);
     }
 
     @Override
@@ -968,8 +967,7 @@ public class Settings extends PreferenceActivity
     }
 
     @Override
-    public void onItemClick(AdapterView<?> parent,
-                            View view, int position, long l) {
+    public void onItemClick(AdapterView<?> parent, View view, int position, long l) {
         SearchInfo info = (SearchInfo) parent.getItemAtPosition(position);
         mSearchBar.setText("");
         mSearchBar.clearFocus();
