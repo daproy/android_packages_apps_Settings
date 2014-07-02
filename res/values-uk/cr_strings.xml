@@ -131,11 +131,11 @@
 
     <!-- Notification drawer background -->
     <string name="notification_style_title">Стиль панелі повідомлень</string>
-    <string name="notification_style_summary">Перегляд, вибір або зміну виду панелі повідомлень</string>
+    <string name="notification_style_summary">Перегляд, вибір або зміна виду панелі повідомлень</string>
     <string name="notification_wallpaper_title">Фон панелі</string>
     <string name="notification_wallpaper_landscape_title">Фон панелі для альбомного режиму</string>
-    <string name="notification_background_color_fill">Колір заливки</string>
-    <string name="notification_background_custom_image">Користувача зображення</string>
+    <string name="notification_background_color_fill">Колір фону</string>
+    <string name="notification_background_custom_image">Зображення користувача</string>
     <string name="notification_background_default_wallpaper">Фон за замовчуванням</string>
     <string name="notification_drawer_custom_background_dialog_title">Оберіть колір</string>
     <string name="notif_wallpaper_alpha_title">Прозорість фону панелі</string>
@@ -883,7 +883,7 @@
     <string name="shortcut_action_none">Нічого</string>
     <string name="shortcut_action_power_menu">Меню кнопки живлення</string>
     <string name="shortcut_action_torch">Ліхтарик</string>
-    <string name="shortcut_action_longpress">Довге натиснення:</string>
+    <string name="shortcut_action_longpress">Довге натискання:</string>
     <string name="shortcut_action_select_action_longpress">Виберіть дію для довгого натискання:</string>
     <string name="shortcut_action_select_action">Виберіть дію:</string>
     <string name="shortcut_action_select_action_newbutton">Виберіть нову кнопку:</string>
@@ -897,7 +897,7 @@
     <string name="shortcut_image_not_valid">Вибрана програма містить неприпустиму іконку або не підтримує цифрове кадрування. Використовуйте інший додаток</string>
     <string name="shortcut_duplicate_entry">Вибрана дія не може використовуватися двічі</string>
     <string name="shortcut_action_help_shortcut">ярлик</string>
-    <string name="shortcut_action_help_button">ярлик</string>
+    <string name="shortcut_action_help_button">кнопка</string>
     <string name="shortcut_action_help_icon">, а при натисканні на іконку, з\'явиться можливість налаштування</string>
     <string name="shortcut_action_help_main">Щоб додати %1$s, натисніть значок Додати. Після того, як %1$s доданий, натисніть на рядок для зміни призначення %2$s\n\nЩоб видалити %1$s, проведіть по рядку горизонтально вліво або вправо. Розташування %1$s у списку по вертикалі змінюється перетягуванням іконки зліва.\n\nЩоб очистити або скинути значення за замовчуванням, натисніть на значок Скидання.</string>
     <string name="shortcut_action_help_delete_last_entry">Видалення будь-якого %1$s в списку буде відключати функцію повністю.</string>
@@ -972,7 +972,7 @@
     <string name="shortcuts_text_color_title">Колір тексту</string>
 
     <!-- Power menu nav bar -->
-    <string name="power_menu_navbar_title">Строка навигації</string>
+    <string name="power_menu_navbar_title">Панель навигації</string>
     <string name="navigation_bar_warning_no_navigation_present">Жодна з панелей навигації зараз не увімкнена. Вимкнення панелі навигації може привести до непрацеспособності пристрою. Ви хочете увімнути управління навигації з допомогою панелі PIE?</string>
     <string name="pie_warning_no_navigation_present">Жодна панель навигаціїї в даний час не увімкнена. Вимкнення елементів управління PIE може привести до непрацеспособності пристрою. Вы хочете увімкнути звичайну панель навигації замість панелі PIE?</string>
     <string name="pie_trigger_warning">Як мінімум один із основних триггерів (внизу, зліва чи зправа) повинен бути увімкнений.</string>
@@ -1019,12 +1019,12 @@
     <string name="hover_require_fullscreen_mode_title">Вимагати повноекраннний режим</string>
     <string name="hover_require_fullscreen_mode_summary">Тільки коли статусбар прихований</string>
     <string name="hover_exclude_low_priority_title">Виключити низький пріоритет</string>
-    <string name="hover_exclude_low_priority_summary">Виключити повідомлення помічені низьким пріоритетом</string>
-    <string name="hover_exclude_non_clearable_title">Виключити неавтоочищаючі</string>
+    <string name="hover_exclude_low_priority_summary">Виключити повідомлення, які помічені низьким пріоритетом</string>
+    <string name="hover_exclude_non_clearable_title">Виключити невидаляємі</string>
     <string name="hover_exclude_non_clearable_summary">Виключити невидаляємі повідомлення</string>
 
     <!-- Hover long fade out delay -->
-    <string name="hover_long_fadeout_title">Час сповіщувача Hover </string>
+    <string name="hover_long_fadeout_title">Час сповіщувача Hover</string>
     <string name="hover_long_fadeout_3seconds">3 секунди</string>
     <string name="hover_long_fadeout_5seconds">5 секунд (за замовч.)</string>
     <string name="hover_long_fadeout_7seconds">7 секунд</string>
@@ -1032,8 +1032,11 @@
     <string name="hover_long_fadeout_15seconds">15 секунд</string>
 
     <!-- Hover exclude topmost app -->
-    <string name="hover_exclude_topmost_title">Виключити верхній додаток</string>
-    <string name="hover_exclude_topmost_summary">Виключити повідомлення з програми, що працює в передньому плані</string>
-
+    <string name="hover_exclude_topmost_title">Виключити важливий додаток</string>
+    <string name="hover_exclude_topmost_summary">Виключити сповіщення з програми, що працює в фоновому режимі</string>
+    
+     <!-- Hover no notif in insecure lockscreen -->
+    <string name="hover_exclude_from_insecure_lock_screen_title">Виключити незахищений екран блокування</string>
+    <string name="hover_exclude_from_insecure_lock_screen_summary">Перевірте, щоб виключити сповіщення від незахищеного екрану блокування</string>
     
 </resources>
