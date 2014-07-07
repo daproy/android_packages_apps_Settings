@@ -1031,4 +1031,8 @@
     <string name="hover_exclude_from_insecure_lock_screen_title">Exclude insecure lockscreen</string>
     <string name="hover_exclude_from_insecure_lock_screen_summary">Check to exclude hover notifications from insecure lockscreen</string>
 
+    <!--Lock screen see through-->
+    <string name="see_through_title">See through</string>
+    <string name="see_through_summary">Shows the content behind lock screen</string>
+
 </resources>
