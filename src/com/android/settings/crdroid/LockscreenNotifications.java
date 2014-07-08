@@ -198,7 +198,7 @@ public class LockscreenNotifications extends SettingsPreferenceFragment implemen
         mExcludedAppsPref.setOnPreferenceChangeListener(this);
 
         boolean hasProximitySensor = getPackageManager().hasSystemFeature(PackageManager.FEATURE_SENSOR_PROXIMITY);
-        if (!hasProximitySensor) {
+        if (hasProximitySensor) {
             PreferenceCategory general = (PreferenceCategory) prefs.findPreference(KEY_CATEGORY_GENERAL);
             general.removePreference(mPocketMode);
             general.removePreference(mShowAlways);
