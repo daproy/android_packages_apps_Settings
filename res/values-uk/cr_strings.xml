@@ -1003,7 +1003,7 @@
     <string name="app_moving_reboot_later_button">Презавантажити пізніше</string>
     
      <!-- Performance -->
-    <string name="pref_mcps_title">Багатоядерне Енергозбереження</string>
+    <string name="pref_mcps_title">Багатоядерне енергозбереження</string>
     <string name="mcps_0">Вимк.</string>
     <string name="mcps_1">Увімк.</string>
     <string name="mcps_2">Агресивний</string>
@@ -1038,5 +1038,11 @@
      <!-- Hover no notif in insecure lockscreen -->
     <string name="hover_exclude_from_insecure_lock_screen_title">Виключити незахищений екран блокування</string>
     <string name="hover_exclude_from_insecure_lock_screen_summary">Перевірте, щоб виключити сповіщення від незахищеного екрану блокування</string>
+    
+      <!--Lock screen see through-->
+    <string name="see_through_title">Розпізнавання</string>
+    <string name="see_through_summary">Розмивання і відображення вмісту на вашому екрані блокування, ваші дані можуть бути видні для оточуючих</string>
+    <string name="blur_radius_title">Інтенсивність розмиття</string>
+    <string name="blur_radius_summary">Інтенсивність ефекту розмиття</string>
     
 </resources>
