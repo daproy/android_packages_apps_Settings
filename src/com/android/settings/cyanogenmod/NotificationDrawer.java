@@ -49,8 +49,6 @@ public class NotificationDrawer extends SettingsPreferenceFragment implements
         addPreferencesFromResource(R.xml.notification_drawer);
         PreferenceScreen prefScreen = getPreferenceScreen();
 
-        mHeadsUp = findPreference(Settings.System.HEADS_UP_NOTIFICATION);
-
         // Notification drawer
         int collapseBehaviour = Settings.System.getInt(getContentResolver(),
                 Settings.System.STATUS_BAR_COLLAPSE_ON_DISMISS,
@@ -71,16 +69,6 @@ public class NotificationDrawer extends SettingsPreferenceFragment implements
             mSmartPulldown.setValue(String.valueOf(smartPulldown));
             updateSmartPulldownSummary(smartPulldown);
         }
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-
-        boolean headsUpEnabled = Settings.System.getInt(
-                getContentResolver(), Settings.System.HEADS_UP_NOTIFICATION, 0) == 1;
-        mHeadsUp.setSummary(headsUpEnabled
-                ? R.string.summary_heads_up_enabled : R.string.summary_heads_up_disabled);
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
