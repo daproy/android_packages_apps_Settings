@@ -20,6 +20,9 @@
     <string name="note">NOTE</string>
     <string name="additional_options_title">Additional options</string>
 
+    <!-- Hover & Heads Up Notifications -->
+    <string name="crdroid_notifications_title">Notification services</string>
+
     <!-- QS and navring Power menu -->
     <string name="title_tile_power">Power Menu</string> 
     <string name="navring_action_power_menu">Power menu</string>       

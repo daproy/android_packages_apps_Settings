@@ -149,19 +149,12 @@
         android:title="@string/temasek_settings_title" 
 	android:icon="@drawable/ic_settings_applications" />
 
-    <!-- Hover -->
+    <!-- Notifications (Hover and Heads up) -->
     <header
-        android:id="@+id/hover_settings"
-        android:icon="@drawable/ic_settings_hover"
-        android:fragment="com.android.settings.crdroid.HoverSettings"
-        android:title="@string/hover_settings_title" />
-
-    <!-- Heads up -->
-    <header
-        android:id="@+id/heads_up_settings"
-        android:icon="@drawable/ic_settings_heads_up"
-        android:fragment="com.android.settings.crdroid.HeadsUpSettings"
-        android:title="@string/heads_up_title" />
+        android:id="@+id/crdroid_notifications_settings"
+        android:icon="@drawable/ic_settings_crdroid_notifications"
+        android:fragment="com.android.settings.crdroid.crDroidNotifications"
+        android:title="@string/crdroid_notifications_title" />
 
     <!-- DEVICE -->
     <header android:id="@+id/device_section"
