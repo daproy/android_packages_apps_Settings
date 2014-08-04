@@ -1074,8 +1074,10 @@ public class ManageApplications extends Fragment implements
                 .setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
         menu.add(0, RESET_APP_PREFERENCES, 6, R.string.reset_app_preferences)
                 .setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
-        menu.add(0, SHOW_PROTECTED_APPS, 5, R.string.protected_apps)
-                .setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
+        if (!Utils.isRestrictedProfile(getActivity())) {
+            menu.add(0, SHOW_PROTECTED_APPS, 5, R.string.protected_apps)
+                    .setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
+        }
         updateOptionsMenu();
     }
     
@@ -1115,7 +1117,9 @@ public class ManageApplications extends Fragment implements
             mOptionsMenu.findItem(APP_MOVING_ENABLE).setVisible(false);
             mOptionsMenu.findItem(APP_MOVING_DISABLE).setVisible(false);
             mOptionsMenu.findItem(RESET_APP_PREFERENCES).setVisible(false);
-            mOptionsMenu.findItem(SHOW_PROTECTED_APPS).setVisible(true);
+            if (!Utils.isRestrictedProfile(getActivity())) {
+                mOptionsMenu.findItem(SHOW_PROTECTED_APPS).setVisible(true);
+            }
             mShowBackground = showingBackground;
         } else {
             mOptionsMenu.findItem(SORT_ORDER_ALPHA).setVisible(mSortOrder != SORT_ORDER_ALPHA);
@@ -1125,7 +1129,9 @@ public class ManageApplications extends Fragment implements
             mOptionsMenu.findItem(APP_MOVING_ENABLE).setVisible(!AppMoving.isEnabled());
             mOptionsMenu.findItem(APP_MOVING_DISABLE).setVisible(AppMoving.isEnabled());
             mOptionsMenu.findItem(RESET_APP_PREFERENCES).setVisible(true);
-            mOptionsMenu.findItem(SHOW_PROTECTED_APPS).setVisible(true);
+            if (!Utils.isRestrictedProfile(getActivity())) {
+                mOptionsMenu.findItem(SHOW_PROTECTED_APPS).setVisible(true);
+            }
         }
     }
 
