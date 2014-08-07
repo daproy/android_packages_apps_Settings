@@ -17,6 +17,9 @@
     <string name="disabled">Deaktiviert</string>
     <string name="note">ANMERKUNG</string>
     <string name="additional_options_title">Weitere Optionen</string>
+    
+    <!-- Hover & Heads Up Notifications -->
+    <string name="crdroid_notifications_title">Benachrichtigungsdienste</string>
 
     <!-- QS and navring Power menu -->
     <string name="title_tile_power">Ein/Aus-Taste</string> 
@@ -40,6 +43,8 @@
     <string name="navigation_bar_size_40_dp">40 DPI</string>
     <string name="navigation_bar_size_42_dp">42 DPI</string>
     <string name="navigation_bar_size_0_dp">0 DPI (Aus)</string>
+    <string name="navbar_can_move">Im Querformat zeigen</string>
+    <string name="navbar_can_move_summary">Zeigt die Navigationsleiste im Querformat am unteren Bildschirmrand</string>
 
     <!-- Low battery warning policy -->
     <string name="pref_low_battery_warning_policy_title">Warnung bei niedrigem Akkustand</string>
@@ -173,7 +178,7 @@
     <string name="clock_font_light_italic">Schwach und kursiv</string>
     <string name="clock_font_normal">Normal</string>
     <string name="clock_use_second">Sekunden zeigen</string>
-    <string name="clock_use_second_summary">Blende Sekunden hinter der Uhr ein</string>
+    <string name="clock_use_second_summary">Blende Sekunden ein</string>
   
     <!-- Lockscreen Notifications -->
     <string name="notifications_on_lockscreen">Benachrichtigungen auf dem Sperrbildschirm</string>
@@ -443,6 +448,7 @@
     <string name="smart_pulldown_off">Deaktiviert</string>
     <string name="smart_pulldown_dismissable">Verwerfbar</string>
     <string name="smart_pulldown_persistent">Immer</string>
+    <string name="smart_pulldown_all">Nicht verwerfbar oder permanent</string
   
     <!-- Display : Animation options -->
     <string name="screen_and_animations_title">Animationen</string>
@@ -674,6 +680,8 @@
     <string name="recent_panel_expanded_mode_auto">Automatisch (Standard)</string>
     <string name="recent_panel_expanded_mode_always">Immer</string>
     <string name="recent_panel_expanded_mode_never">Niemals</string>
+    <string name="recent_panel_show_topmost_title">Aktuelle App einbeziehen</string>
+    <string name="recent_panel_show_topmost_summary">Anwendung im Vordergrung ebenfalls im Verlauf zeigen</string>
 
     <!-- ATTENTION: RTL languages need to replace left with right -->
     <string name="recent_panel_lefty_mode_title">Am linken Rand anzeigen</string>
@@ -1012,8 +1020,53 @@
     <string name="hover_long_fadeout_10seconds">10 Sekunden</string>
     <string name="hover_long_fadeout_15seconds">15 Sekunden</string>
     
+    <!-- Hover instant fade out delay -->
+    <string name="hover_micro_fadeout_title">Bei Berührung ausblenden</string>
+    <string name="hover_micro_fadeout_stock">Normal</string>
+    <string name="hover_micro_fadeout_instant">Sofort</string
+    
     <!-- Hover exclude topmost app -->
     <string name="hover_exclude_topmost_title">\"Vordergrund\" ausschließen</string>
     <string name="hover_exclude_topmost_summary">Schließe die aktuell geöffnete Anwendung aus</string>
+    
+    <!-- Hover no notif in insecure lockscreen -->
+    <string name="hover_exclude_from_insecure_lock_screen_title">Unsicheren Sperrbildschirm ausschließen</string>
+    <string name="hover_exclude_from_insecure_lock_screen_summary">Benachrichtigungen bei unsicherem Sperrmechanismus nicht zeigen</string>
+    
+    <!--Lock screen see through-->
+    <string name="see_through_title">Durchsichtiger Hintergrund</string>
+    <string name="see_through_summary">Macht den Hintergrund verschwommen bis völlig transparent. Persönliche Daten könnten für andere sichtbar sein</string>
+    <string name="blur_radius_title">Intensität</string>
+    <string name="blur_radius_summary">Transparenz festlegen:</string>
+
+    <!-- Heads up -->
+    <string name="heads_up_title">Heads Up</string>
+    <string name="heads_up_settings_title">Heads Up</string>
+    <string name="heads_up_expanded_title">Erweitert</string>
+    <string name="heads_up_expanded_summary">Heads Up Benachrichtigungen immer erweitert zeigen</string>
+    <string name="heads_up_show_updates_title">Aktualisierungen</string>
+    <string name="heads_up_show_updates_summary">Zeige Benachrichtigungen ausstehender Hintergrundprozesse</string>
+    <string name="heads_up_gravity_title">Unterer Bildschirmrand</string>
+    <string name="heads_up_gravity_summary">Zeige Benachrichtigungen am unteren Bildschirmrand</string>
+    <string name="heads_up_snooze_title">Schlummertaste</string>
+    <string name="heads_up_snooze_summary">Drücken der Schlummertaste deaktiviert Heads Up für <xliff:g id="number">%d</xliff:g> Minuten.</string>
+    <string name="heads_up_snooze_disabled_summary">Schlummertaste ist deaktiviert</string>
+    <string name="heads_up_snooze_3min">3 Minuten</string>
+    <string name="heads_up_snooze_5min">5 Minuten</string>
+    <string name="heads_up_snooze_10min">10 Minuten</string>
+    <string name="heads_up_snooze_15min">15 Minuten</string>
+    <string name="heads_up_snooze_20min">20 Minuten</string>
+    <string name="heads_up_time_out_title">Anzeigedauer</string>
+    <string name="heads_up_time_out_summary">Heads Up wird für <xliff:g id="number">%d</xliff:g> Sekunden eingeblendet.</string>
+    <string name="heads_up_time_out_never_summary">Heads Up wird bis zur Interaktion eingeblendet.</string>
+    <string name="heads_up_time_out_4sec">4 Sekunden</string>
+    <string name="heads_up_time_out_6sec">6 Sekunden</string>
+    <string name="heads_up_time_out_8sec">8 Sekunden</string>
+    <string name="heads_up_time_out_10sec">10 Sekunden</string>
+    <string name="heads_up_time_out_never">Nicht ausblenden</string>
+    <string name="heads_up_switch_label">Heads Up aktivieren</string>
+
+    <!-- Heads-up floating window -->
+    <string name="heads_up_floating_window">Anwendungen schwebend öffnen</string>
     
 </resources>
