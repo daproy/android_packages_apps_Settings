@@ -448,7 +448,7 @@
     <string name="smart_pulldown_off">Deaktiviert</string>
     <string name="smart_pulldown_dismissable">Verwerfbar</string>
     <string name="smart_pulldown_persistent">Immer</string>
-    <string name="smart_pulldown_all">Nicht verwerfbar oder permanent</string
+    <string name="smart_pulldown_all">Nicht verwerfbar oder permanent</string>
   
     <!-- Display : Animation options -->
     <string name="screen_and_animations_title">Animationen</string>
@@ -1023,7 +1023,7 @@
     <!-- Hover instant fade out delay -->
     <string name="hover_micro_fadeout_title">Bei Berührung ausblenden</string>
     <string name="hover_micro_fadeout_stock">Normal</string>
-    <string name="hover_micro_fadeout_instant">Sofort</string
+    <string name="hover_micro_fadeout_instant">Sofort</string>
     
     <!-- Hover exclude topmost app -->
     <string name="hover_exclude_topmost_title">\"Vordergrund\" ausschließen</string>
