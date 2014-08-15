@@ -17,6 +17,9 @@
     <string name="disabled">Вимкнено</string>
     <string name="note">ПРИМІТКА</string>
     <string name="additional_options_title">Додаткові параметри</string>
+    
+    <!-- Hover & Heads Up Notifications -->
+    <string name="crdroid_notifications_title">Сервіси сповіщення</string>
 	
     <!-- Advanced settings -->
     <string name="advanced_options_settings_title">Розширені налаштування</string>
@@ -1030,6 +1033,11 @@
     <string name="hover_long_fadeout_7seconds">7 секунд</string>
     <string name="hover_long_fadeout_10seconds">10 секунд</string>
     <string name="hover_long_fadeout_15seconds">15 секунд</string>
+    
+    <!-- Hover instant fade out delay -->
+    <string name="hover_micro_fadeout_title">Приховати Hover дотиком</string>
+    <string name="hover_micro_fadeout_stock">Звичайно</string>
+    <string name="hover_micro_fadeout_instant">Моментально</string>
 
     <!-- Hover exclude topmost app -->
     <string name="hover_exclude_topmost_title">Виключити важливий додаток</string>
@@ -1040,9 +1048,42 @@
     <string name="hover_exclude_from_insecure_lock_screen_summary">Перевірте, щоб виключити сповіщення від незахищеного екрану блокування</string>
     
       <!--Lock screen see through-->
-    <string name="see_through_title">Розпізнавання</string>
+    <string name="see_through_title">Розмиття</string>
     <string name="see_through_summary">Розмивання і відображення вмісту на вашому екрані блокування, ваші дані можуть бути видні для оточуючих</string>
     <string name="blur_radius_title">Інтенсивність розмиття</string>
     <string name="blur_radius_summary">Інтенсивність ефекту розмиття</string>
+    
+     <!-- Heads up -->
+    <string name="heads_up_title">Heads up</string>
+    <string name="heads_up_settings_title">Сповіщення Heads up </string>
+    <string name="heads_up_expanded_title">Завжди розширено</string>
+    <string name="heads_up_expanded_summary">Показувати сповіщення heads up завжди розширено</string>
+    <string name="heads_up_show_updates_title">Показувати оновлення</string>
+    <string name="heads_up_show_updates_summary">Показувати оновленн з очікуючих фонових сповіщень як heads up</string>
+    <string name="heads_up_gravity_title">Показувати внизу</string>
+    <string name="heads_up_gravity_summary">Показувати сповіщення heads up внизу екрану</string>
+    <string name="heads_up_snooze_title">Таймер повтору</string>
+    <string name="heads_up_snooze_summary">Якщо кнопка повтору натиснена відключає  heads up на <xliff:g id="number">%d</xliff:g> minutes.</string>
+    <string name="heads_up_snooze_disabled_summary">Таймер повтору вимкнений.</string>
+    <string name="heads_up_snooze_3min">3 хвилини</string>
+    <string name="heads_up_snooze_5min">5 хвилин</string>
+    <string name="heads_up_snooze_10min">10 хвилин</string>
+    <string name="heads_up_snooze_15min">15 хвилин</string>
+    <string name="heads_up_snooze_20min">20 хвилин</string>
+    <string name="heads_up_time_out_title">Час вийшов</string>
+    <string name="heads_up_time_out_summary">Сповіщення Heads up будуть відображатися <xliff:g id="number">%d</xliff:g> seconds.</string>
+    <string name="heads_up_time_out_never_summary">Сповіщення Heads up відобр. до відхилення</string>
+    <string name="heads_up_time_out_4sec">4 секунди</string>
+    <string name="heads_up_time_out_6sec">6 секунд</string>
+    <string name="heads_up_time_out_8sec">8 секунд</string>
+    <string name="heads_up_time_out_10sec">10 секунд</string>
+    <string name="heads_up_time_out_never">Ніколи</string>
+    <string name="heads_up_switch_label">Увімкнути сповіщення heads up</string>
+
+    <!-- Heads-up floating window -->
+    <string name="heads_up_floating_window">Виконати у плаваючому вікні</string>
+
+    <!-- Heads-up disable on lockscreen -->
+    <string name="heads_up_exclude_from_lock_screen">Вимкнути на екрані блокування</string>
     
 </resources>
