@@ -18,7 +18,6 @@ package com.android.settings;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.storage.StorageVolume;
 import android.view.LayoutInflater;
@@ -47,9 +46,6 @@ public class MediaFormat extends Activity {
     private View mFinalView;
     private Button mFinalButton;
 
-    private StorageVolume mStorageVolume;
-    private boolean mIsUsbStorage;
-
     /**
      * The user has gone through the multiple confirmation, so now we go ahead
      * and invoke the Mount Service to format the SD card.
@@ -63,7 +59,9 @@ public class MediaFormat extends Activity {
                 Intent intent = new Intent(ExternalStorageFormatter.FORMAT_ONLY);
                 intent.setComponent(ExternalStorageFormatter.COMPONENT_NAME);
                 // Transfer the storage volume to the new intent
-                intent.putExtra(StorageVolume.EXTRA_STORAGE_VOLUME, mStorageVolume);
+                final StorageVolume storageVolume = getIntent().getParcelableExtra(
+                        StorageVolume.EXTRA_STORAGE_VOLUME);
+                intent.putExtra(StorageVolume.EXTRA_STORAGE_VOLUME, storageVolume);
                 startService(intent);
                 finish();
             }
@@ -77,8 +75,7 @@ public class MediaFormat extends Activity {
         return new ChooseLockSettingsHelper(this)
                 .launchConfirmationActivity(request,
                         getText(R.string.media_format_gesture_prompt),
-                        getText(mIsUsbStorage ? R.string.usb_media_format_gesture_explanation :
-                                R.string.sd_media_format_gesture_explanation));
+                        getText(R.string.media_format_gesture_explanation));
     }
 
     @Override
@@ -118,8 +115,7 @@ public class MediaFormat extends Activity {
      */
     private void establishFinalConfirmationState() {
         if (mFinalView == null) {
-            mFinalView = mInflater.inflate(mIsUsbStorage ? R.layout.media_format_final_usb :
-                    R.layout.media_format_final_sd, null);
+            mFinalView = mInflater.inflate(R.layout.media_format_final, null);
             mFinalButton =
                     (Button) mFinalView.findViewById(R.id.execute_media_format);
             mFinalButton.setOnClickListener(mFinalClickListener);
@@ -142,8 +138,7 @@ public class MediaFormat extends Activity {
      */
     private void establishInitialState() {
         if (mInitialView == null) {
-            mInitialView = mInflater.inflate(mIsUsbStorage ? R.layout.media_format_primary_usb :
-                    R.layout.media_format_primary_sd, null);
+            mInitialView = mInflater.inflate(R.layout.media_format_primary, null);
             mInitiateButton =
                     (Button) mInitialView.findViewById(R.id.initiate_media_format);
             mInitiateButton.setOnClickListener(mInitiateListener);
@@ -159,11 +154,6 @@ public class MediaFormat extends Activity {
         mInitialView = null;
         mFinalView = null;
         mInflater = LayoutInflater.from(this);
-
-        mStorageVolume = getIntent().getParcelableExtra(StorageVolume.EXTRA_STORAGE_VOLUME);
-        mIsUsbStorage = mStorageVolume != null && mStorageVolume.getDescriptionId() ==
-                android.R.string.storage_usb;
-        setTitle(mIsUsbStorage ? R.string.usb_media_format_title : R.string.sd_media_format_title);
 
         establishInitialState();
     }
