@@ -148,6 +148,10 @@
             android:title="@string/haptic_feedback_enable_title"
             android:defaultValue="true" />
 
+    <com.android.settings.crdroid.SeekBarPreferenceLQ
+            android:key="vibration_duration"
+            android:title="@string/minimum_vibration_duration" />
+
     <com.android.settings.hardware.VibratorIntensity
             android:key="vibration_intensity"
             android:title="@string/vibrator_intensity_title"
