@@ -969,4 +969,19 @@
         <item>10000</item>
     </string-array>
 
+    <!-- Vibration multiplier -->
+    <string-array name="vibration_multiplier_values">
+        <item>0.4</item>
+        <item>0.5</item>
+        <item>0.6</item>
+        <item>0.8</item>
+        <item>1.0</item>
+        <item>1.2</item>
+        <item>1.4</item>
+        <item>1.5</item>
+        <item>1.6</item>
+        <item>1.8</item>
+        <item>2.0</item>
+    </string-array>
+
 </resources>

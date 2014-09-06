@@ -152,6 +152,14 @@
             android:key="vibration_duration"
             android:title="@string/minimum_vibration_duration" />
 
+    <ListPreference
+            android:key="vibrator_multiplier"
+            android:persistent="false"
+            android:title="@string/vibrator_multiplier_title"
+            android:dialogTitle="@string/vibrator_multiplier_title"
+            android:entries="@array/vibration_multiplier_values"
+            android:entryValues="@array/vibration_multiplier_values" />
+
     <com.android.settings.hardware.VibratorIntensity
             android:key="vibration_intensity"
             android:title="@string/vibrator_intensity_title"
