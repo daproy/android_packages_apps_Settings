@@ -62,8 +62,6 @@ import java.util.List;
 
 import com.android.settings.crdroid.SeekBarPreferenceCHOS;
 
-import com.android.settings.crdroid.SeekBarPreferenceLQ;
-
 public class SoundSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
     private static final String TAG = "SoundSettings";
@@ -103,7 +101,6 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private static final String KEY_POWER_NOTIFICATIONS_VIBRATE = "power_notifications_vibrate";
     private static final String KEY_POWER_NOTIFICATIONS_RINGTONE = "power_notifications_ringtone";
     private static final String KEY_VOLUME_PANEL_TIMEOUT = "volume_panel_timeout";
-    private static final String KEY_VIBRATION_DURATION = "vibration_duration";
     private static final String DISABLE_BOOTAUDIO = "disable_bootaudio";
 
     private static final String RING_MODE_NORMAL = "normal";
@@ -147,12 +144,7 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private Preference mPowerSoundsRingtone;
 
     private SeekBarPreferenceCHOS mVolumePanelTimeout;
-    private SeekBarPreferenceLQ mVibrationDuration;
     private CheckBoxPreference mDisableBootAudio;
-
-    private Vibrator mVib;
-
-    private boolean mFirstVibration = false;
 
     private Handler mHandler = new Handler() {
         public void handleMessage(Message msg) {
@@ -188,7 +180,6 @@ public class SoundSettings extends SettingsPreferenceFragment implements
 
         mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
-        mVib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         addPreferencesFromResource(R.xml.sound_settings);
 
         if (TelephonyManager.PHONE_TYPE_CDMA != activePhoneType) {
@@ -222,7 +213,7 @@ public class SoundSettings extends SettingsPreferenceFragment implements
         if (getResources().getBoolean(com.android.internal.R.bool.config_useFixedVolume)) {
             // device with fixed volume policy, do not display volumes submenu
             getPreferenceScreen().removePreference(findPreference(KEY_RING_VOLUME));
-        }      
+        }
 
         mQuietHours = (PreferenceScreen) findPreference(KEY_QUIET_HOURS);
         updateQuietHoursSummary();
@@ -233,27 +224,16 @@ public class SoundSettings extends SettingsPreferenceFragment implements
             getPreferenceScreen().removePreference(findPreference(KEY_VOLUME_ADJUST_SOUNDS));
         }
 
-        int userMillis = Settings.System.getInt(resolver,
-                Settings.System.MINIMUM_VIBRATION_DURATION, 0);
-        mVibrationDuration = (SeekBarPreferenceLQ) findPreference(KEY_VIBRATION_DURATION);
-        mVibrationDuration.setInitValue(userMillis);
-        mVibrationDuration.setInterval(1);
-        mVibrationDuration.displaySameValue(true);
-        mVibrationDuration.zeroDefault(true);
-        mVibrationDuration.isMilliseconds(true);
-        mVibrationDuration.setProperty(Settings.System.MINIMUM_VIBRATION_DURATION);
-        mVibrationDuration.setOnPreferenceChangeListener(this);
-
         mRingtonePreference = findPreference(KEY_RINGTONE);
         mNotificationPreference = findPreference(KEY_NOTIFICATION_SOUND);
 
-        if (mVib == null || !mVib.hasVibrator()) {
+        Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        if (vibrator == null || !vibrator.hasVibrator()) {
             removePreference(KEY_VIBRATE);
             removePreference(KEY_HAPTIC_FEEDBACK);
             removePreference(KEY_VIBRATION_INTENSITY);
             removePreference(KEY_CONVERT_SOUND_TO_VIBRATE);
             removePreference(KEY_VIBRATE_DURING_CALLS);
-            removePreference(KEY_VIBRATION_DURATION);
         } else if (!VibratorIntensity.isSupported()) {
             removePreference(KEY_VIBRATION_INTENSITY);
         }
@@ -322,7 +302,7 @@ public class SoundSettings extends SettingsPreferenceFragment implements
         mPowerSoundsVibrate = (CheckBoxPreference) findPreference(KEY_POWER_NOTIFICATIONS_VIBRATE);
         mPowerSoundsVibrate.setChecked(Settings.Global.getInt(resolver,
                 Settings.Global.POWER_NOTIFICATIONS_VIBRATE, 0) != 0);
-        if (mVib == null || !mVib.hasVibrator()) {
+        if (vibrator == null || !vibrator.hasVibrator()) {
             removePreference(KEY_POWER_NOTIFICATIONS_VIBRATE);
         }
 
@@ -547,15 +527,8 @@ public class SoundSettings extends SettingsPreferenceFragment implements
             int volumePanelTimeout = (Integer) objValue;
             Settings.System.putInt(getContentResolver(),
                     Settings.System.VOLUME_PANEL_TIMEOUT, volumePanelTimeout * 1000);
-        } else if (preference == mVibrationDuration) {
-            int value = Integer.parseInt((String) objValue);
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.MINIMUM_VIBRATION_DURATION, value);
-            if (mFirstVibration && (value % 5 == 0) && mVib != null) {
-                mVib.vibrate(1);
-            }
-            mFirstVibration = true;
         }
+
         return true;
     }
 

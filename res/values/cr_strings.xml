@@ -1083,9 +1083,6 @@
     <!-- Heads-up disable on lockscreen -->
     <string name="heads_up_exclude_from_lock_screen">Disable on lockscreen</string>
 
-    <!-- Minimum Vibration Duration -->
-    <string name="minimum_vibration_duration">Minimum vibration duration</string>
-
     <!-- Custom Over scroll Settings -->
     <string name="ui_overscroll_title">Over scrolling effects</string>
     <string name="overscroll_glow_title">Over scroll Color</string>
