@@ -44,6 +44,12 @@
             android:fragment="com.android.settings.cyanogenmod.ProgressBar"
             android:title="@string/progressbar_title" />
 
+        <PreferenceScreen
+	    android:key="overscroll_effects"
+	    android:title="@string/ui_overscroll_title"
+	    android:summary="@string/overscroll_weight_summary"
+	    android:fragment="com.android.settings.temasek.OverscrollEffects" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
