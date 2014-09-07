@@ -104,7 +104,6 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private static final String KEY_POWER_NOTIFICATIONS_RINGTONE = "power_notifications_ringtone";
     private static final String KEY_VOLUME_PANEL_TIMEOUT = "volume_panel_timeout";
     private static final String KEY_VIBRATION_DURATION = "vibration_duration";
-    private static final String KEY_VIBRATION_MULTIPLIER = "vibrator_multiplier";
     private static final String DISABLE_BOOTAUDIO = "disable_bootaudio";
 
     private static final String RING_MODE_NORMAL = "normal";
@@ -149,7 +148,6 @@ public class SoundSettings extends SettingsPreferenceFragment implements
 
     private SeekBarPreferenceCHOS mVolumePanelTimeout;
     private SeekBarPreferenceLQ mVibrationDuration;
-    private ListPreference mVibrationMultiplier;
     private CheckBoxPreference mDisableBootAudio;
 
     private Vibrator mVib;
@@ -224,7 +222,7 @@ public class SoundSettings extends SettingsPreferenceFragment implements
         if (getResources().getBoolean(com.android.internal.R.bool.config_useFixedVolume)) {
             // device with fixed volume policy, do not display volumes submenu
             getPreferenceScreen().removePreference(findPreference(KEY_RING_VOLUME));
-        }
+        }      
 
         mQuietHours = (PreferenceScreen) findPreference(KEY_QUIET_HOURS);
         updateQuietHoursSummary();
@@ -245,13 +243,6 @@ public class SoundSettings extends SettingsPreferenceFragment implements
         mVibrationDuration.isMilliseconds(true);
         mVibrationDuration.setProperty(Settings.System.MINIMUM_VIBRATION_DURATION);
         mVibrationDuration.setOnPreferenceChangeListener(this);
-
-        mVibrationMultiplier = (ListPreference) findPreference(KEY_VIBRATION_MULTIPLIER);
-        String currentValue = Float.toString(Settings.System.getFloat(getActivity()
-                .getContentResolver(), Settings.System.VIBRATION_MULTIPLIER, 1));
-        mVibrationMultiplier.setValue(currentValue);
-        mVibrationMultiplier.setSummary(currentValue);
-        mVibrationMultiplier.setOnPreferenceChangeListener(this);
 
         mRingtonePreference = findPreference(KEY_RINGTONE);
         mNotificationPreference = findPreference(KEY_NOTIFICATION_SOUND);
@@ -564,12 +555,6 @@ public class SoundSettings extends SettingsPreferenceFragment implements
                 mVib.vibrate(1);
             }
             mFirstVibration = true;
-        } else if (preference == mVibrationMultiplier) {
-            String currentValue = (String) objValue;
-            float val = Float.parseFloat(currentValue);
-            Settings.System.putFloat(getActivity().getContentResolver(),
-                    Settings.System.VIBRATION_MULTIPLIER, val);
-            mVibrationMultiplier.setSummary(currentValue);
         }
         return true;
     }
