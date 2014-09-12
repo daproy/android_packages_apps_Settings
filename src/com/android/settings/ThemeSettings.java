@@ -17,11 +17,7 @@
 package com.android.settings;
 
 import android.os.Bundle;
-import android.content.ContentResolver;
-import android.preference.Preference;
 import android.preference.PreferenceFragment;
-import android.preference.PreferenceScreen;
-import android.provider.Settings;
 
 public class ThemeSettings extends PreferenceFragment {
 
@@ -30,19 +26,5 @@ public class ThemeSettings extends PreferenceFragment {
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.theme_settings);
-        disablePref();
-    }
-
-    private void disablePref() {
-        ContentResolver resolver = getActivity().getContentResolver();
-        boolean enabled = Settings.System.getInt(resolver,
-                Settings.System.LOCKSCREEN_SEE_THROUGH, 0) == 1;
-
-        PreferenceScreen screen = getPreferenceScreen();
-
-        if (enabled) {
-            Preference pref = getPreferenceManager().findPreference("lockscreen_wallpaper_settings");
-            screen.removePreference(pref);
-        }
     }
 }
