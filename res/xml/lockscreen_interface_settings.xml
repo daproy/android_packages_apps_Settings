@@ -66,7 +66,7 @@
             android:summary="@string/see_through_summary" />
 
         <com.android.settings.crdroid.SeekBarPreferenceCHOS
-            android:key="blur_radius"
+            android:key="lockscreen_blur_radius"
             android:title="@string/blur_radius_title"
             android:summary="@string/blur_radius_summary"
             android:max="25"
