@@ -33,6 +33,13 @@
                 android:summary="@string/auto_brightness_summary"
                 android:persistent="false" />
 
+        <EditTextPreference
+                android:key="display_density"
+                android:title="@string/display_density"
+                android:summary="@string/display_density_summary"
+                android:persistent="false"
+                android:inputType="numberSigned" />
+
         <PreferenceScreen
                 android:key="wallpaper"
                 android:title="@string/wallpaper_settings_title"
