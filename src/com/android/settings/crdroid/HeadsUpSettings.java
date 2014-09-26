@@ -120,7 +120,11 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
         final int intColor = Settings.System.getInt(getContentResolver(),
                 Settings.System.HEADS_UP_BG_COLOR, 0x00ffffff);
         String hexColor = String.format("#%08x", (0x00ffffff & intColor));
-        mHeadsUpBgColor.setSummary(hexColor);
+        if (hexColor.equals("#00ffffff")) {
+            mHeadsUpBgColor.setSummary(R.string.trds_default_color);
+        } else {
+            mHeadsUpBgColor.setSummary(hexColor);
+        }
         mHeadsUpBgColor.setNewPreviewColor(intColor);
 
         // Heads Up text color
@@ -130,7 +134,11 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
         final int intTextColor = Settings.System.getInt(getContentResolver(),
                 Settings.System.HEADS_UP_TEXT_COLOR, 0x00000000);
         String hexTextColor = String.format("#%08x", (0x00000000 & intTextColor));
-        mHeadsUpTextColor.setSummary(hexTextColor);
+        if (hexTextColor.equals("#00000000")) {
+            mHeadsUpTextColor.setSummary(R.string.trds_default_color);
+        } else {
+            mHeadsUpTextColor.setSummary(hexTextColor);
+        }
         mHeadsUpTextColor.setNewPreviewColor(intTextColor);
         setHasOptionsMenu(true);
 
@@ -185,7 +193,11 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
         } else if (preference == mHeadsUpBgColor) {
             String hex = ColorPickerPreference.convertToARGB(
                     Integer.valueOf(String.valueOf(newValue)));
-            preference.setSummary(hex);
+            if (hex.equals("#00ffffff")) {
+                preference.setSummary(R.string.trds_default_color);
+            } else {
+                preference.setSummary(hex);
+            }
             int intHex = ColorPickerPreference.convertToColorInt(hex);
             Settings.System.putInt(getContentResolver(),
                     Settings.System.HEADS_UP_BG_COLOR,
@@ -194,7 +206,11 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
         } else if (preference == mHeadsUpTextColor) {
             String hexText = ColorPickerPreference.convertToARGB(
                     Integer.valueOf(String.valueOf(newValue)));
-            preference.setSummary(hexText);
+            if (hexText.equals("#00000000")) {
+                preference.setSummary(R.string.trds_default_color);
+            } else {
+                preference.setSummary(hexText);
+            }
             int intHexText = ColorPickerPreference.convertToColorInt(hexText);
             Settings.System.putInt(getContentResolver(),
                     Settings.System.HEADS_UP_TEXT_COLOR,
@@ -257,8 +273,10 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
         Settings.System.putInt(getContentResolver(),
                 Settings.System.HEADS_UP_BG_COLOR, DEFAULT_BACKGROUND_COLOR);
         mHeadsUpBgColor.setNewPreviewColor(DEFAULT_BACKGROUND_COLOR);
+        mHeadsUpBgColor.setSummary(R.string.trds_default_color);
         Settings.System.putInt(getContentResolver(),
                 Settings.System.HEADS_UP_TEXT_COLOR, 0);
         mHeadsUpTextColor.setNewPreviewColor(DEFAULT_TEXT_COLOR);
+        mHeadsUpTextColor.setSummary(R.string.trds_default_color);
     }
 }
