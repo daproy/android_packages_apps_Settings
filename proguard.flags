@@ -21,6 +21,7 @@
 -keep class com.android.settings.temasek.**
 -keep class com.android.settings.crdroid.**
 -keep class com.android.settings.slim.**
+-keep class com.android.settings.search.SettingsAutoCompleteTextView { *; }
 
 # Keep click responders
 -keepclassmembers class com.android.settings.inputmethod.UserDictionaryAddWordActivity {
