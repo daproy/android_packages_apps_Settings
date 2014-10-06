@@ -60,6 +60,7 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
     private static final String KEY_DISABLE_FRAME = "lockscreen_disable_frame";
     private static final String KEY_SEE_THROUGH = "see_through";
     private static final String KEY_BLUR_RADIUS = "blur_radius";
+    private static final String KEY_ENABLE_POWER_MENU = "lockscreen_enable_power_menu";
 
     private static final int DLG_ALL_WIDGETS = 0;
 
@@ -74,6 +75,7 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
     private CheckBoxPreference mDisableFrame;
     private CheckBoxPreference mSeeThrough;
     private SeekBarPreferenceCHOS mBlurRadius;
+    private CheckBoxPreference mEnablePowerMenu;
 
     private ChooseLockSettingsHelper mChooseLockSettingsHelper;
     private LockPatternUtils mLockUtils;
@@ -108,6 +110,12 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
 
         // Keyguard widget frame
         mDisableFrame = (CheckBoxPreference) findPreference(KEY_DISABLE_FRAME);
+
+        // Enable/disable power menu on secure lockscreen
+        mEnablePowerMenu = (CheckBoxPreference) findPreference(KEY_ENABLE_POWER_MENU);
+        mEnablePowerMenu.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.LOCKSCREEN_ENABLE_POWER_MENU, 0) == 1);
+        mEnablePowerMenu.setOnPreferenceChangeListener(this);
 
         mBatteryStatus = (ListPreference) findPreference(KEY_BATTERY_STATUS);
         if (mBatteryStatus != null) {
@@ -300,6 +308,11 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
                 Settings.Secure.putInt(getContentResolver(),
                         Settings.Secure.ALLOW_ALL_LOCKSCREEN_WIDGETS, 0);
             }
+            return true;
+        } else if (preference == mEnablePowerMenu) {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.LOCKSCREEN_ENABLE_POWER_MENU,
+                    (Boolean) objValue ? 1 : 0);
             return true;
         }
 
