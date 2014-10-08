@@ -93,6 +93,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_SCREEN_COLOR_SETTINGS = "screencolor_settings";
     private static final String PREF_SMART_COVER_CATEGORY = "smart_cover_category";
     private static final String PREF_SMART_COVER_WAKE = "smart_cover_wake";
+    private static final String PREF_BYPASS_INSECURE_LOCKSCREEN = "bypass_insecure_lockscreen";
 
     private static final int DLG_GLOBAL_CHANGE_WARNING = 1;
 
@@ -110,6 +111,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private ListPreference mScreenAnimationStylePreference;
     private CheckBoxPreference mInaccurateProximityPref;
     private CheckBoxPreference mSmartCoverWake;
+    private CheckBoxPreference mBypassInsecureLockscreen;
 
     private PreferenceScreen mNotificationPulse;
     private PreferenceScreen mBatteryPulse;
@@ -303,6 +305,12 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                     getPreferenceScreen().findPreference(PREF_SMART_COVER_CATEGORY);
             getPreferenceScreen().removePreference(smartCoverOptions);
         }
+
+        // Bypass insecure lockscreen
+        mBypassInsecureLockscreen = (CheckBoxPreference) findPreference(PREF_BYPASS_INSECURE_LOCKSCREEN);
+        mBypassInsecureLockscreen.setChecked(Settings.System.getIntForUser(getContentResolver(),
+                Settings.System.BYPASS_INSECURE_LOCKSCREEN, 0, UserHandle.USER_CURRENT) == 1);
+        mBypassInsecureLockscreen.setOnPreferenceChangeListener(this);
 
         // In-accurate proximity
          mInaccurateProximityPref = (CheckBoxPreference) findPreference(KEY_IS_INACCURATE_PROXIMITY);
@@ -680,8 +688,11 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                     Settings.System.LOCKSCREEN_LID_WAKE, (Boolean) objValue ? 1 : 0);
             return true;
+        } else if (preference == mBypassInsecureLockscreen) {
+            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
+                    Settings.System.BYPASS_INSECURE_LOCKSCREEN, (Boolean) objValue ? 1 : 0);
+            return true;
         }
-
 
         return true;
     }
