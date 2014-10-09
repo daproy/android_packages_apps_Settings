@@ -26,6 +26,11 @@
                     android:targetClass="com.android.settings.temasek.extrainfo.MainActivity" />
         </PreferenceScreen>
 
+        <!-- Changelog -->
+        <PreferenceScreen android:key="changelog"
+                android:title="@string/changelog_temasek_title"
+                android:fragment="com.android.settings.temasek.Changelog" />
+
         <!-- Device status - launches activity -->
         <PreferenceScreen android:key="status_info"
                 android:title="@string/device_status" 

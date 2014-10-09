@@ -801,4 +801,8 @@ sword is entered</string>
     <string name="heads_up_time_out_10sec">10 seconds</string>
     <string name="heads_up_time_out_never">Never</string>
 
+    <!-- Changelog -->
+    <string name="changelog_temasek_title">Changelog</string>
+    <string name="changelog_temasek_error">Unable to load changelog</string>
+
 </resources>
