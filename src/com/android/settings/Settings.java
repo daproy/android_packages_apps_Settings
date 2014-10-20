@@ -132,6 +132,8 @@ import com.android.settings.wifi.WifiSettings;
 import com.android.settings.wifi.p2p.WifiP2pSettings;
 import com.android.settings.crdroid.themes.ThemeEnabler;
 
+import com.android.settings.crdroid.crDroidNotifications;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -490,7 +492,8 @@ public class Settings extends PreferenceActivity
         com.android.settings.quicksettings.QuickSettingsTiles.class.getName(),
         com.android.settings.cyanogenmod.QuietHours.class.getName(),
         ThemeSettings.class.getName(),
-        com.android.settings.wifi.WifiApSettings.class.getName()
+        com.android.settings.wifi.WifiApSettings.class.getName(),
+        com.android.settings.crdroid.crDroidNotifications.class.getName(),
     };
 
     @Override
@@ -1432,4 +1435,5 @@ public class Settings extends PreferenceActivity
     public static class ASSRamBarActivity extends Settings { /* empty */ }
     public static class ThemeSettingsActivity extends Settings { /* empty */ }
     public static class WifiApSettingsActivity extends Settings { /* empty */ }
+    public static class crDroidNotificationServicesActivity extends Settings { /* empty */ }
 }
