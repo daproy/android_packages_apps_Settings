@@ -108,13 +108,6 @@
         android:fragment="com.android.settings.ThemeSettings"
         android:icon="@drawable/prd_ic_themepacks" />
 
-    <!-- Dynamic system bars -->
-    <header
-        android:id="@+id/dynamic_system_bar"
-        android:icon="@drawable/ic_settings_dsb"
-        android:fragment="com.android.settings.crdroid.DSBSettings"
-        android:title="@string/dynamic_system_bars_title" />
-
     <!-- Status Bar -->
     <header
         settings:includeXmlForSearch="@xml/status_bar"
@@ -162,6 +155,13 @@
         android:icon="@drawable/ic_settings_crdroid_notifications"
         android:fragment="com.android.settings.crdroid.crDroidNotifications"
         android:title="@string/crdroid_notifications_title" />
+
+    <!-- Dynamic system bars -->
+    <header
+        android:id="@+id/dynamic_system_bar"
+        android:icon="@drawable/ic_settings_dsb"
+        android:fragment="com.android.settings.crdroid.DSBSettings"
+        android:title="@string/dynamic_system_bars_title" />
 
     <!-- DEVICE -->
     <header android:id="@+id/device_section"
