@@ -153,7 +153,7 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
                     Settings.System.LOCKSCREEN_BLUR_RADIUS, 12));
             mBlurRadius.setOnPreferenceChangeListener(this);
         }
-
+        
         // Enable or disable camera widget based on device and policy
         if (Camera.getNumberOfCameras() == 0) {
             widgetsCategory.removePreference(mEnableCameraWidget);

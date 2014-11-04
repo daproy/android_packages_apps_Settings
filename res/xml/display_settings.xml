@@ -219,15 +219,7 @@
              <CheckBoxPreference
                 android:key="smart_cover_wake"
                 android:title="@string/smart_cover_wake_title"
-                android:summary="@string/smart_cover_wake_summary"
-                android:defaultValue="false" />
-
-             <CheckBoxPreference
-                android:key="bypass_insecure_lockscreen"
-                android:title="@string/bypass_insecure_lockscreen_title"
-                android:summary="@string/bypass_insecure_lockscreen_summary"
-                android:dependency="smart_cover_wake"
-                android:defaultValue="false" />
+                android:summary="@string/smart_cover_wake_summary" />
            
              <!-- Proximity wake workaround -->
              <CheckBoxPreference

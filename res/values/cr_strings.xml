@@ -1122,10 +1122,6 @@
     <string name="notification_force_expand_title">Force expanded notification</string>
     <string name="notification_force_expand_summary">Force expanded notifications if supported</string>
 
-    <!-- Bypass insecure lockscreen with smart cover/keyboard -->
-    <string name="bypass_insecure_lockscreen_title">Bypass lockscreen</string>
-    <string name="bypass_insecure_lockscreen_summary">Bypass insecure lockscreen</string>
-
     <!-- Dynamic system bars -->
     <string name="dynamic_system_bars_title">Dynamic system bars</string>
     <string name="dynamic_status_bar_title">Dynamic status bar</string>
