@@ -123,11 +123,6 @@
             android:summary="@string/notification_vibrate_during_calls_summary"
             android:defaultValue="false" />
 
-    <CheckBoxPreference
-	    android:key="disable_bootaudio"
-	    android:title="@string/disable_bootaudio_title"
-	    android:persistent="false" />
-
     <PreferenceCategory
             android:title="@string/sound_category_system_title"/>
 

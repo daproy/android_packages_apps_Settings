@@ -50,9 +50,6 @@ import android.provider.MediaStore;
 import android.provider.Settings;
 import android.telephony.TelephonyManager;
 import android.text.format.DateFormat;
-import com.android.settings.util.CMDProcessor;
-import com.android.settings.util.Helpers;
-import java.io.File;
 import android.util.Log;
 import android.view.VolumePanel;
 
@@ -101,7 +98,6 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private static final String KEY_POWER_NOTIFICATIONS_VIBRATE = "power_notifications_vibrate";
     private static final String KEY_POWER_NOTIFICATIONS_RINGTONE = "power_notifications_ringtone";
     private static final String KEY_VOLUME_PANEL_TIMEOUT = "volume_panel_timeout";
-    private static final String DISABLE_BOOTAUDIO = "disable_bootaudio";
 
     private static final String RING_MODE_NORMAL = "normal";
     private static final String RING_MODE_VIBRATE = "vibrate";
@@ -144,7 +140,6 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private Preference mPowerSoundsRingtone;
 
     private SeekBarPreferenceCHOS mVolumePanelTimeout;
-    private CheckBoxPreference mDisableBootAudio;
 
     private Handler mHandler = new Handler() {
         public void handleMessage(Message msg) {
@@ -281,19 +276,6 @@ public class SoundSettings extends SettingsPreferenceFragment implements
                 }
             }
         };
-
-        // Boot audio
-	mDisableBootAudio = (CheckBoxPreference) findPreference("disable_bootaudio");
-
-	if(!new File("/system/media/audio.mp3").exists() &&
-	!new File("/system/media/boot_audio").exists() ) {
-	mDisableBootAudio.setEnabled(false);
-	mDisableBootAudio.setSummary(R.string.disable_bootaudio_summary_disabled);
-	} else {
-	mDisableBootAudio.setChecked(!new File("/system/media/audio.mp3").exists());
-	if (mDisableBootAudio.isChecked())
-	mDisableBootAudio.setSummary(R.string.disable_bootaudio_summary);
-	}
 
         // power state change notification sounds
         mPowerSounds = (CheckBoxPreference) findPreference(KEY_POWER_NOTIFICATIONS);
@@ -436,23 +418,10 @@ public class SoundSettings extends SettingsPreferenceFragment implements
             } else {
                 mAudioManager.unloadSoundEffects();
             }
+
         } else if (preference == mMusicFx) {
             // let the framework fire off the intent
             return false;
-        } else if (preference == mDisableBootAudio) {
-	    boolean checked = ((CheckBoxPreference) preference).isChecked();
-	    if (checked) {
-		Helpers.getMount("rw");
-		CMDProcessor.runSuCommand(
-		    "mv /system/media/audio.mp3 /system/media/boot_audio");
-		Helpers.getMount("ro");
-		preference.setSummary(R.string.disable_bootaudio_summary);
-	    } else {
-		Helpers.getMount("rw");
-		CMDProcessor.runSuCommand(
-		    "mv /system/media/boot_audio /system/media/audio.mp3");
-		Helpers.getMount("ro");
-	    }
         } else if (preference == mDockAudioSettings) {
             int dockState = mDockIntent != null
                     ? mDockIntent.getIntExtra(Intent.EXTRA_DOCK_STATE, 0)
