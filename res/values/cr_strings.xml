@@ -7,6 +7,9 @@
     <!-- Do NOT translate this -->
     <string name="temasek_version_default">PREVIEW</string>
 
+    <!-- General strings -->
+    <string name="attention">Attention</string>
+
     <!-- Display : Rotation -->
     <string name="display_rotation_title">Rotation</string>
     <string name="display_rotation_disabled">Disabled</string>
