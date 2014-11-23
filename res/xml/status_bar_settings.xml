@@ -24,4 +24,10 @@
         android:summary="@string/status_bar_toggle_brightness_summary"
         android:defaultValue="false" />
 
+    <PreferenceScreen
+        android:key="network_traffic_state"
+        android:fragment="com.android.settings.temasek.NetworkTraffic"
+	android:summary="@string/network_traffic_summary"
+	android:title="@string/network_traffic_title" />
+
 </PreferenceScreen>
