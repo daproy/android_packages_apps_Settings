@@ -99,6 +99,12 @@
                 android:entryValues="@array/toast_animation_values"
                 android:persistent="false" />
 
+        <SwitchPreference
+                android:key="disable_immersive_message"
+                android:title="@string/disable_immersive_message_title"
+                android:summary="@string/disable_immersive_message_summary"
+                android:persistent="false" />
+
         <PreferenceScreen
                 android:key="advanced_display_prefs"
                 android:title="@string/advanced_settings">
