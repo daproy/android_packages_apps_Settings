@@ -16,6 +16,17 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
         android:title="@string/development_settings_title">
+
+    <PreferenceScreen
+            android:key="development_tools"
+            android:title="@string/development_tools_title"
+            android:persistent="false" >
+        <intent
+                android:action="android.settings.development.LAUNCH_TOOLS"
+                android:targetPackage="com.android.development"
+                android:targetClass="com.android.development.Development" />
+    </PreferenceScreen>
+
     <com.android.settings.BugreportPreference
             android:key="bugreport"
             android:title="@*android:string/bugreport_title"
@@ -94,6 +105,17 @@
         <Preference android:key="clear_adb_keys"
                 android:title="@string/clear_adb_keys" />
 
+        <com.android.settings.HostnamePreference
+            android:key="device_hostname"
+            android:title="@string/device_hostname"
+            android:dialogTitle="@string/device_hostname"
+            android:positiveButtonText="@string/wifi_save"
+            android:negativeButtonText="@string/wifi_cancel"
+            android:selectAllOnFocus="true"
+            android:imeOptions="actionDone"
+            android:inputType="textNoSuggestions"
+            android:persistent="false" />
+
         <CheckBoxPreference
             android:key="enable_terminal"
             android:title="@string/enable_terminal_title"
@@ -133,17 +155,17 @@
 
         <CheckBoxPreference
             android:key="wifi_verbose_logging"
-            android:title="@string/wifi_verbose_logging" />
+            android:title="@string/wifi_verbose_logging"
             android:summary="@string/wifi_verbose_logging_summary"/>
 
         <CheckBoxPreference
             android:key="wifi_aggressive_handover"
-            android:title="@string/wifi_aggressive_handover" />
+            android:title="@string/wifi_aggressive_handover"
             android:summary="@string/wifi_aggressive_handover_summary"/>
 
-       <CheckBoxPreference
+        <CheckBoxPreference
             android:key="wifi_allow_scan_with_traffic"
-            android:title="@string/wifi_allow_scan_with_traffic" />
+            android:title="@string/wifi_allow_scan_with_traffic"
             android:summary="@string/wifi_allow_scan_with_traffic_summary"/>
 
         <ListPreference
