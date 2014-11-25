@@ -2128,11 +2128,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".cyanogenmod.PrivacySettings" />
-
-        <activity android:name=".notificationlight.NotificationLightSettings" />
-        <activity android:name=".notificationlight.BatteryLightSettings" />
-
         <!-- Temasek Extra info -->
         <activity android:name="com.android.settings.temasek.extrainfo.MainActivity"
                   android:theme="@android:style/Theme.Material.Light.Dialog.NoActionBar.MinWidth">
