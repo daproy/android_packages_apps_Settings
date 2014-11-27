@@ -57,7 +57,7 @@
     </style>
 
 
-    <style name="TextAppearance" parent="android:TextAppearance.Material">
+    <style name="TextAppearance" parent="android:TextAppearance.Material.Inverse">
     </style>
 
     <style name="TextAppearance.info_label">
