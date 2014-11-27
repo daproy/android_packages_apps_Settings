@@ -82,7 +82,7 @@
          layouts against a remote context using our local theme colors. Due to the implementation
          details of Theme, we can't reference any local resources and MUST instead use the values
          directly. So use #ff263238 instead of @color/theme_primary and so on. -->
-    <style name="Theme.SettingsBase" parent="@android:style/Theme.Material.Settings" />
+    <style name="Theme.SettingsBase" parent="@android:style/Theme.Material" />
 
     <style name="Theme.Settings" parent="Theme.SettingsBase">
         <item name="@*android:preferenceHeaderPanelStyle">@style/PreferenceHeaderPanelSinglePane</item>
