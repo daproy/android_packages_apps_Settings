@@ -30,6 +30,13 @@
         android:key="status_bar"
         android:title="@string/status_bar_settings" >
 
+        <ListPreference
+            android:key="status_bar_show_battery_percent"
+            android:title="@string/status_bar_battery_percentage_title"
+            android:dialogTitle="@string/status_bar_battery_percentage_dialog_title"
+            android:entries="@array/status_bar_battery_percentage_entries"
+            android:entryValues="@array/status_bar_battery_percentage_values" />
+
         <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
             android:key="status_bar_brightness_control"
             android:title="@string/status_bar_toggle_brightness"
@@ -103,9 +110,9 @@
         android:defaultValue="false" />
 
     <SwitchPreference
-            android:key="status_bar_ticker_enabled"
-            android:title="@string/status_bar_ticker_title"
-            android:summary="@string/status_bar_ticker_summary"
-            android:defaultValue="true" />
+        android:key="status_bar_ticker_enabled"
+        android:title="@string/status_bar_ticker_title"
+        android:summary="@string/status_bar_ticker_summary"
+        android:defaultValue="true" />
 
 </PreferenceScreen>
