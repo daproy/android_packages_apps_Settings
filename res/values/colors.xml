@@ -17,6 +17,7 @@
 <resources>
     <color name="black">#000</color>
     <color name="red">#F00</color>
+    <color name="white">#FFFFFFFF</color>
 
     <color name="material_empty_color_light">#FFCED7DB</color>
 
@@ -70,7 +71,7 @@
     <color name="theme_accent">#ff009688</color>
 
     <!-- <color name="dashboard_background_color">#ffe1e1e0</color> -->
-    <color name="dashboard_background_color">#ff7fcac3</color>
+    <color name="dashboard_background_color">#ff37474f</color>
     <color name="switchbar_background_color">#ff37474f</color>
     <color name="switch_accent_color">#ff7fcac3</color>
 

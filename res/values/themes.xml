@@ -70,7 +70,7 @@
         <item name="wifi_signal">@drawable/wifi_signal_dark</item>
     </style>
 
-    <style name="Theme.Light.WifiDialog" parent="@*android:style/Theme.Material.Light.Dialog.Alert">
+    <style name="Theme.Light.WifiDialog" parent="@*android:style/Theme.Material.Dialog.Alert">
         <item name="android:windowSoftInputMode">adjustResize</item>
         <item name="ic_menu_add">@drawable/ic_menu_add_light</item>
         <item name="ic_menu_moreoverflow">@*android:drawable/ic_menu_moreoverflow_material</item>
@@ -126,7 +126,7 @@
         <item name="switchBarTheme">@style/Theme.SwitchBar.SubSettings</item>
     </style>
 
-    <style name="Theme.ActionBar" parent="@android:style/Widget.Material.Light.ActionBar.Solid">
+    <style name="Theme.ActionBar" parent="@android:style/Widget.Material.ActionBar.Solid">
         <item name="android:contentInsetStart">@dimen/actionbar_contentInsetStart</item>
     </style>
 
@@ -144,9 +144,9 @@
         <item name="switchBarMarginEnd">@dimen/switchbar_subsettings_margin_end</item>
     </style>
 
-    <style name="Theme.DialogWhenLarge" parent="@android:style/Theme.Material.Light.DialogWhenLarge">
+    <style name="Theme.DialogWhenLarge" parent="@android:style/Theme.Material.DialogWhenLarge">
         <!-- Explicitly override the background color. -->
-        <item name="android:colorBackground">@android:color/white</item>
+        <item name="android:colorBackground">@*android:color/background_floating_material_dark</item>
 
         <!-- Used by the ActionBar -->
         <item name="android:colorPrimary">@color/theme_primary</item>
@@ -179,11 +179,11 @@
         <item name="preferenceBackgroundColor">@drawable/preference_background</item>
     </style>
 
-    <style name="Theme.AlertDialog" parent="@*android:style/Theme.Material.Light.Dialog.Alert">
+    <style name="Theme.AlertDialog" parent="@*android:style/Theme.Material.Dialog.Alert">
         <item name="android:windowSoftInputMode">adjustResize</item>
 
         <!-- Explicitly override the background color. -->
-        <item name="android:colorBackground">@android:color/white</item>
+        <item name="android:colorBackground">@*android:color/background_floating_material_dark</item>
 
         <!-- Used by the ActionBar -->
         <item name="android:colorPrimary">@color/theme_primary</item>
