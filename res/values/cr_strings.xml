@@ -276,4 +276,8 @@
     <string name="recents_show_searchbar">Show Search Bar in Recents</string>
     <string name="recents_show_searchbar_summary">Enable or disable the Google search bar in the recents menu</string>
 
+    <!-- Volume rocker music seek options -->
+    <string name="volbtn_music_controls_title">Volume rocker music controls</string>
+    <string name="volbtn_music_controls_summary">When screen off, long-pressing the volume rockers will seek music tracks</string>
+
 </resources>
