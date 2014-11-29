@@ -36,7 +36,8 @@
 
         <!-- Partition info -->
         <Preference
-            android:title="@string/partition_info_title">
+            android:title="@string/partition_info_title"
+            android:summary="@string/partition_info_summary">
         <intent
             android:action="com.android.action.MAIN"
             android:targetPackage="com.android.settings"
