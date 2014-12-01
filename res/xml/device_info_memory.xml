@@ -22,6 +22,19 @@
 <!-- Preference categories are dynamically created based on the list of available storage volumes -->
     <!-- Partition info -->
 
+    <PreferenceCategory
+            android:key="settings_options_prefs"
+            android:title="@string/options_settings_title">
+
+        <!-- Media Scanner on boot -->
+        <ListPreference
+                android:key="media_scanner_on_boot"
+                android:title="@string/media_scanner_on_boot_title"
+                android:persistent="false"
+                android:entries="@array/media_scanner_on_boot_entries"
+                android:entryValues="@array/media_scanner_on_boot_values" />
+
+        <!-- Partition info -->
         <Preference
             android:icon="@drawable/ic_tab_selected_sdcard"
             android:title="@string/partition_info_title">
@@ -31,15 +44,6 @@
             android:targetClass="com.android.settings.PartitionInfo" />
         </Preference>
 
-    <PreferenceCategory
-            android:key="settings_options_prefs"
-            android:title="@string/options_settings_title">
-        <ListPreference
-                android:key="media_scanner_on_boot"
-                android:title="@string/media_scanner_on_boot_title"
-                android:persistent="false"
-                android:entries="@array/media_scanner_on_boot_entries"
-                android:entryValues="@array/media_scanner_on_boot_values" />
     </PreferenceCategory>
 
 </PreferenceScreen>
