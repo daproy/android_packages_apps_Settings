@@ -166,4 +166,3 @@ public class CommandResult implements Parcelable {
         return result;
     }
 }
-
