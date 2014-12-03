@@ -24,10 +24,16 @@
         android:persistent="false" />
 
     <SwitchPreference
-        android:key="disable_nav_keys"
-        android:title="@string/disable_navkeys_title"
-        android:summary="@string/disable_navkeys_summary"
+        android:key="enable_nav_bar"
+        android:title="@string/navbar_enable_bar_title"
+        android:summary="@string/navbar_enable_bar_summary"
         android:defaultValue="false" />
+
+    <PreferenceScreen
+        android:key="navbar_dimensions"
+        android:fragment="com.android.settings.crdroid.NavBarDimensions"
+        android:title="@string/navbar_style_dimen_title"
+        android:dependency="enable_nav_bar" />
 
     <PreferenceCategory
         android:title="@string/wakeup_buttons_title" >
