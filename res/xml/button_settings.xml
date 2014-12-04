@@ -36,6 +36,18 @@
         android:dependency="enable_nav_bar" />
 
     <PreferenceCategory
+        android:key="hw_keys"
+        android:title="@string/hw_keys_title">
+
+        <SwitchPreference
+            android:key="enable_hw_keys"
+            android:title="@string/hw_keys_title"
+            android:summary="@string/hw_keys_summary"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:title="@string/wakeup_buttons_title" >
 
         <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
