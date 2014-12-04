@@ -49,17 +49,24 @@
             android:entryValues="@array/quick_pulldown_values"
             android:persistent="false" />
 
-        <PreferenceScreen
-            android:key="network_traffic_state"
-            android:fragment="com.android.settings.temasek.NetworkTraffic"
-	    android:summary="@string/network_traffic_summary"
-	    android:title="@string/network_traffic_title" />
+        <ListPreference
+            android:key="smart_pulldown"
+            android:title="@string/smart_pulldown_title"
+            android:entries="@array/smart_pulldown_entries"
+            android:entryValues="@array/smart_pulldown_values"
+            android:persistent="false" />
 
         <SwitchPreference
             android:key="block_on_secure_keyguard"
             android:title="@string/block_on_secure_keyguard_title"
             android:summary="@string/block_on_secure_keyguard_summary"
             android:persistent="false" />
+
+        <PreferenceScreen
+            android:key="network_traffic_state"
+            android:fragment="com.android.settings.temasek.NetworkTraffic"
+	    android:summary="@string/network_traffic_summary"
+	    android:title="@string/network_traffic_title" />
 
     </PreferenceCategory>
 
