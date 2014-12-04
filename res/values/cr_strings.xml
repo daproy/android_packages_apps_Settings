@@ -239,13 +239,10 @@
     <!-- SuperSU -->
     <string name="supersu_title">SuperSU</string>
 
-    <!-- HOME button wake / VOLUME rocker wake -->
-    <string name="wakeup_buttons_title">Wake up device</string>
+    <!-- HOME button wake -->
+    <string name="wakeup_buttons_title">Wake up</string>
     <string name="home_wake_title">Home button</string>
     <string name="home_wake_summary">Pressing the home button will wake your device</string>
-    <string name="volume_wake_title">Volume rocker</string>
-    <string name="volume_wake_summary">Pressing the volume rocker up/down will wake the device</string>
-
 
     <!-- QuickSettings: Quick Pulldown -->
     <string name="title_quick_pulldown">Quick pulldown</string>

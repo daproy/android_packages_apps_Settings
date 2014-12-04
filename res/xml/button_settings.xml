@@ -33,12 +33,6 @@
         android:title="@string/wakeup_buttons_title" >
 
         <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
-            android:key="volume_wake_screen"
-            android:title="@string/volume_wake_title"
-            android:summary="@string/volume_wake_summary"
-            android:defaultValue="false" />
-
-        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
             android:key="home_wake_screen"
             android:title="@string/home_wake_title"
             android:summary="@string/home_wake_summary"
