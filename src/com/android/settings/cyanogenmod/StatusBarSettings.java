@@ -29,7 +29,7 @@ import android.provider.Settings;
 import android.text.TextUtils;
 import android.view.View;
 
-import com.android.internal.util.slim.DeviceUtils;
+import com.android.internal.util.crdroid.DeviceUtils;
 import com.android.internal.widget.LockPatternUtils;
 
 import com.android.settings.SettingsPreferenceFragment;
