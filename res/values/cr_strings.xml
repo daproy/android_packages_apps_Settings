@@ -271,4 +271,9 @@
     <!-- Restart SystemUI -->
     <string name="restart_systemui">Restart SystemUI</string>
 
+    <!--Power menu -->
+    <string name="power_category">Power key</string>
+    <string name="lockscreen_enable_power_menu_title">Show power menu lock screen</string>
+    <string name="lockscreen_enable_power_menu_summary">This option will disable the power menu only on secure lock screens</string>
+
 </resources>
