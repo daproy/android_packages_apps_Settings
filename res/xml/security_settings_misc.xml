@@ -78,12 +78,6 @@
                 android:summaryOn="@string/install_unknown_applications"
                 android:persistent="false" />
 
-        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
-		android:key="lockscreen_enable_power_menu"
-                android:title="@string/lockscreen_enable_power_menu_title"
-                android:summary="@string/lockscreen_enable_power_menu_summary"
-                android:defaultValue="true" />
-
     </PreferenceCategory>
 
     <PreferenceCategory android:key="credentials_management"
