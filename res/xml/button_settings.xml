@@ -23,17 +23,23 @@
         android:dialogTitle="@string/button_backlight_title"
         android:persistent="false" />
 
-    <SwitchPreference
-        android:key="enable_nav_bar"
-        android:title="@string/navbar_enable_bar_title"
-        android:summary="@string/navbar_enable_bar_summary"
-        android:defaultValue="false" />
+    <PreferenceCategory
+        android:key="nav_bar"
+        android:title="@string/nav_bar_title" >
 
-    <PreferenceScreen
-        android:key="navbar_dimensions"
-        android:fragment="com.android.settings.crdroid.NavBarDimensions"
-        android:title="@string/navbar_style_dimen_title"
-        android:dependency="enable_nav_bar" />
+        <SwitchPreference
+            android:key="enable_nav_bar"
+            android:title="@string/navbar_enable_bar_title"
+            android:summary="@string/navbar_enable_bar_summary"
+            android:defaultValue="false" />
+
+        <PreferenceScreen
+            android:key="navbar_dimensions"
+            android:fragment="com.android.settings.crdroid.NavBarDimensions"
+            android:title="@string/navbar_style_dimen_title"
+            android:dependency="enable_nav_bar" />
+
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:key="hw_keys"
