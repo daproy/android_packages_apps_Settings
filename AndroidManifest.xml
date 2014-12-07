@@ -1843,6 +1843,7 @@
                        android:resource="@id/security_settings" />
         </activity-alias>
 
+        <activity android:name=".WakeLockBlocker" />
 
         <!-- Pseudo-activity used to provide an intent-filter entry point to encryption settings -->
         <activity android:name="Settings$CryptKeeperSettingsActivity"

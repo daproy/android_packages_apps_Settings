@@ -275,14 +275,6 @@
                 android:icon="@drawable/ic_action_permission"
                 />
 
-        <!-- Development -->
-        <dashboard-tile
-                android:id="@+id/development_settings"
-                android:title="@string/development_settings_title"
-                android:fragment="com.android.settings.DevelopmentSettings"
-                android:icon="@drawable/ic_settings_development"
-                />
-
         <!-- SuperSU -->
         <dashboard-tile
             android:id="@+id/supersu_settings"
@@ -293,6 +285,22 @@
                 android:targetPackage="eu.chainfire.supersu"
                 android:targetClass="eu.chainfire.supersu.MainActivity" />
         </dashboard-tile>
+
+	<!-- Wakelock blocker -->
+        <dashboard-tile
+                android:id="@+id/wakelock_blocker"
+                android:title="@string/wakelock_blocker"
+	        android:fragment="com.android.settings.WakeLockBlocker"
+                android:icon="@drawable/ic_settings_notifications"
+                />
+
+        <!-- Development -->
+        <dashboard-tile
+                android:id="@+id/development_settings"
+                android:title="@string/development_settings_title"
+                android:fragment="com.android.settings.DevelopmentSettings"
+                android:icon="@drawable/ic_settings_development"
+                />
 
         <!-- About Device -->
         <dashboard-tile
