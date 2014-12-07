@@ -225,11 +225,6 @@
     <!-- SuperSU -->
     <string name="supersu_title">SuperSU</string>
 
-    <!-- HOME button wake -->
-    <string name="wakeup_buttons_title">Wake up</string>
-    <string name="home_wake_title">Home button</string>
-    <string name="home_wake_summary">Pressing the home button will wake your device</string>
-
     <!-- QuickSettings: Quick Pulldown -->
     <string name="title_quick_pulldown">Quick pulldown</string>
     <string name="summary_quick_pulldown">%1$s edge of the status bar pulls down Quick Settings</string>

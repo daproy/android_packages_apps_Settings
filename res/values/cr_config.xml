@@ -21,8 +21,4 @@ limitations under the License.
     <!-- minimum value for the custom display density -->
     <integer name="display_density_min">240</integer>
 
-    <!-- Home button Wake Support. Some devices do not support this.
-         Setting to false will disable Home button Wake support -->
-    <bool name="config_show_homeWake">false</bool>
-
 </resources>

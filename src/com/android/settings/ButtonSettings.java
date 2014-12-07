@@ -176,10 +176,6 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         }
 
         if (hasHomeKey) {
-            if (!res.getBoolean(R.bool.config_show_homeWake)) {
-                homeCategory.removePreference(findPreference(Settings.System.HOME_WAKE_SCREEN));
-            }
-
             if (!Utils.isVoiceCapable(getActivity())) {
                 homeCategory.removePreference(mHomeAnswerCall);
                 mHomeAnswerCall = null;
