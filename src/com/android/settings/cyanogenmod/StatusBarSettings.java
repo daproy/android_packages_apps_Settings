@@ -18,6 +18,7 @@ package com.android.settings.cyanogenmod;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.content.ContentResolver;
+import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.preference.ListPreference;
 import android.preference.Preference;
@@ -26,6 +27,8 @@ import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
 import android.provider.Settings;
+import android.provider.Settings.SettingNotFoundException;
+import android.util.Log;
 import android.text.TextUtils;
 import android.view.View;
 
@@ -40,6 +43,10 @@ import java.util.Locale;
 public class StatusBarSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
+    private static final String TAG = "StatusBarSettings";
+
+    private static final String KEY_STATUS_BAR_CLOCK = "clock_style_pref";
+    private static final String KEY_STATUS_BAR_TICKER = "status_bar_ticker_enabled";
     private static final String SHOW_CLEAR_ALL_RECENTS = "show_clear_all_recents";
     private static final String RECENTS_CLEAR_ALL_LOCATION = "recents_clear_all_location";
     private static final String PREF_QUICK_PULLDOWN = "quick_pulldown";
@@ -51,6 +58,9 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
     private ListPreference mQuickPulldown;
     private ListPreference mSmartPulldown;
     private SwitchPreference mBlockOnSecureKeyguard;
+    private PreferenceScreen mClockStyle;
+    private SwitchPreference mTicker;
+
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -59,6 +69,25 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
 
         PreferenceScreen prefSet = getPreferenceScreen();
         ContentResolver resolver = getActivity().getContentResolver();
+
+        PackageManager pm = getPackageManager();
+        Resources systemUiResources;
+        try {
+            systemUiResources = pm.getResourcesForApplication("com.android.systemui");
+        } catch (Exception e) {
+            Log.e(TAG, "can't access systemui resources",e);
+            return;
+        }
+
+        mClockStyle = (PreferenceScreen) prefSet.findPreference(KEY_STATUS_BAR_CLOCK);
+        updateClockStyleDescription();
+
+        mTicker = (SwitchPreference) prefSet.findPreference(KEY_STATUS_BAR_TICKER);
+        final boolean tickerEnabled = systemUiResources.getBoolean(systemUiResources.getIdentifier(
+                    "com.android.systemui:bool/enable_ticker", null, null));
+        mTicker.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.STATUS_BAR_TICKER_ENABLED, tickerEnabled ? 1 : 0) == 1);
+        mTicker.setOnPreferenceChangeListener(this);
 
         mRecentsClearAll = (SwitchPreference) prefSet.findPreference(SHOW_CLEAR_ALL_RECENTS);
         mRecentsClearAll.setChecked(Settings.System.getIntForUser(resolver,
@@ -108,6 +137,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
     @Override
     public void onResume() {
         super.onResume();
+        updateClockStyleDescription();
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
@@ -141,7 +171,12 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
                     Settings.Secure.STATUS_BAR_LOCKED_ON_SECURE_KEYGUARD,
                     (Boolean) objValue ? 1 : 0);
             return true;
-        }
+        } else if (preference == mTicker) {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.STATUS_BAR_TICKER_ENABLED,
+                    (Boolean) objValue ? 1 : 0);
+            return true;
+         }
         return false;
     }
 
@@ -202,6 +237,18 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
                     ? (isRtl ? R.string.quick_pulldown_right : R.string.quick_pulldown_left)
                     : (isRtl ? R.string.quick_pulldown_left : R.string.quick_pulldown_right));
             mQuickPulldown.setSummary(res.getString(R.string.summary_quick_pulldown, direction));
+        }
+    }
+
+    private void updateClockStyleDescription() {
+        if (mClockStyle == null) {
+            return;
+        }
+        if (Settings.System.getInt(getContentResolver(),
+               Settings.System.STATUS_BAR_CLOCK, 1) == 1) {
+            mClockStyle.setSummary(getString(R.string.enabled));
+        } else {
+            mClockStyle.setSummary(getString(R.string.disabled));
         }
     }
 }
