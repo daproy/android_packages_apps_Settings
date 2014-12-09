@@ -10,6 +10,7 @@
     <!-- General strings -->
     <string name="attention">Attention</string>
     <string name="reset">Reset</string>
+    <string name="help">Help</string>
     <string name="default_string">Default</string>
     <string name="enabled">Enabled</string>
     <string name="disabled">Disabled</string>
