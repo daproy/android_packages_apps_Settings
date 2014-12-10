@@ -208,6 +208,7 @@
     <string name="partition_info_sdcard">/sdcard (FAT)</string>
     <string name="partition_info_sdext">/sd-ext (EXT)</string>
     <string name="partition_info_used_of">/</string>
+    <string name="partition_info_summary">Просмотр информации о разделах устройства</string>
 
     <!-- Hardware tunables - Vibrator intensity -->
     <string name="vibrator_intensity_title">Мощность вибросигнала</string>
@@ -236,5 +237,69 @@
     <!-- HOME button wake -->
     <string name="button_wake_title">Выход из режима сна</string>
     <string name="home_wake_summary">Включать экран при нажатии кнопки \"Домой\"</string>
+
+    <string name="status_bar_ticker_title">Прокрутка уведомлений</string>
+    <string name="status_bar_ticker_summary">Прокрутка текста уведомления в строке состояния</string>
+
+    <!-- QuickSettings: Quick Pulldown -->
+    <string name="title_quick_pulldown">Быстрый доступ</string>
+    <string name="summary_quick_pulldown">%1$s край строки уведомлений при опускании вниз открывает панель быстрых настроек</string>
+    <string name="quick_pulldown_off">Выключен</string>
+    <string name="quick_pulldown_left">Левый</string>
+    <string name="quick_pulldown_right">Правый</string>
+    <string name="block_on_secure_keyguard_title">Быстрые настройки</string>
+    <string name="block_on_secure_keyguard_summary">Отключить быстрые настройки на экране блокировки с паролем</string>
+
+    <!-- Navigation bar -->
+    <string name="navbar_enable_bar_title">Экранные кнопки</string>
+    <string name="navbar_enable_bar_summary">Включить панель навигации и отключить аппаратные сенсорные кнопки</string>
+    <string name="navbar_style_dimen_title">Размер панели навигации</string>
+    <string name="navbar_dimensions_reset_message">Сбросить размер панели навигации по умолчанию?</string>
+    <string name="navigation_bar_height_title">Высота панели навигации</string>
+    <string name="navigation_bar_height_summary">Высота панели навигации в портретном режиме</string>
+    <string name="navigation_bar_width_title">Ширина панели навигации</string>
+    <string name="navigation_bar_width_summary">Ширина панели навигации, когда панель вдоль края.</string>
+    <string name="navigation_bar_size_42_dp_default">42 dp (по умолчанию)</string>
+    <string name="navigation_bar_size_48_dp_default">48 dp (по умолчанию)</string>
+    <string name="navigation_bar_size_0_dp">0 dp (скрыть)</string>
+
+    <!-- QuickSettings: Smart Pulldown -->
+    <string name="smart_pulldown_title">Умный доступ</string>
+    <string name="smart_pulldown_summary">Открывать быстрые настройки, если %1$s уведомлений</string>
+    <string name="smart_pulldown_off">Выключен</string>
+    <string name="smart_pulldown_dismissable">Нет удаляемых</string>
+    <string name="smart_pulldown_persistent">Нет постоянных</string>
+    <string name="smart_pulldown_all">Нет удаляемых или постоянных</string>
+
+     <!-- Restart SystemUI -->
+    <string name="restart_systemui">Перезагрузить SystemUI</string>
+
+     <!--Power menu -->
+    <string name="power_category">Кнопка питания</string>
+    <string name="lockscreen_enable_power_menu_title">Меню перезагрузки</string>
+    <string name="lockscreen_enable_power_menu_summary">Отключить меню перезагрузки на экране блокировки</string>
+
+    <!-- Search Bar Switcher -->
+    <string name="recents_show_searchbar">Строка поиска в недав.</string>
+    <string name="recents_show_searchbar_summary">Включить или выключить строку поиска в недавних приложениях</string>
+
+    <!-- Volume rocker music seek options -->
+    <string name="volbtn_music_controls_title">Управление музыкой кнопками громкости</string>
+    <string name="volbtn_music_controls_summary">Когда экран выключен, долгое нажатие кнопок громкости переключает музыкальные треки</string>
+
+    <!-- Ability to disable hardware keys via nav bar settings -->
+    <string name="hw_keys_title">Аппаратные кнопки</string>
+    <string name="hw_keys_summary">Включить или выключить аппаратные сенсорные кнопки</string>
+
+    <!--Quick unlock -->
+    <string name="unlock_quick_unlock_control_title">Быстрая разблокировка</string>
+    <string name="unlock_quick_unlock_control_summary">Автоматическая разблокировка устройства при вводе верного PIN-кода</string>
+
+    <!-- Lockscreen pin shuffle -->
+    <string name="lock_numpad_random_title">Изменить порядок цифр на экране ввода PIN</string>
+    <string name="lock_numpad_random_dialog_title">Случайный порядок кнопок экрана PIN</string>
+    <string name="lock_numpad_random_off">Выключено</string>
+    <string name="lock_numpad_random_always">Всегда</string>
+    <string name="lock_numpad_random_on_request">По запросу</string>
 
 </resources>
