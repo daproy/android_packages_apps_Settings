@@ -77,10 +77,9 @@
                 android:summary="@string/summary_font_size"
                 android:dialogTitle="@string/dialog_title_font_size" />
 
-        <PreferenceScreen
-                android:key="display_rotation"
-                android:fragment="com.android.settings.slim.DisplayRotation"
-                android:title="@string/display_rotation_title" />
+        <com.android.settings.notification.DropDownPreference
+                android:key="auto_rotate"
+                android:title="@string/display_auto_rotate_title" />
 
         <PreferenceScreen
                 android:key="wifi_display"
