@@ -483,10 +483,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="auto_brightness_sensitivity_high">High</string>
     <string name="auto_brightness_sensitivity_veryhigh">Very high</string>
     
-    <!-- Battery text setting -->
-    <string name="status_bar_toggle_battery_text">Display battery level</string>
-    <string name="status_bar_toggle_battery_summary">Show battery level next to battery icon</string>
-
     <!-- App ops -->
     <string name="app_ops_summaries_coarse_location">coarse location</string>
     <string name="app_ops_summaries_fine_location">fine location</string>
