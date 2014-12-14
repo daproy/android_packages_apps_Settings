@@ -109,10 +109,21 @@
         android:summary="@string/status_bar_notif_count_summary"
         android:defaultValue="false" />
 
-    <SwitchPreference
-        android:key="status_bar_ticker_enabled"
-        android:title="@string/status_bar_ticker_title"
-        android:summary="@string/status_bar_ticker_summary"
-        android:defaultValue="true" />
+    <PreferenceCategory
+        android:title="@string/extras_temasek_settings" >
+
+        <!-- Gesture anywhere -->
+        <PreferenceScreen
+            android:key="gesture_anywhere"
+            android:fragment="com.android.settings.crdroid.gestureanywhere.GestureAnywhereSettings"
+            android:title="@string/gesture_anywhere_title" />
+
+        <SwitchPreference
+            android:key="status_bar_ticker_enabled"
+            android:title="@string/status_bar_ticker_title"
+            android:summary="@string/status_bar_ticker_summary"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>
