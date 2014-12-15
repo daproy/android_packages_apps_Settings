@@ -2190,6 +2190,17 @@
                 android:resource="@id/sim_settings" />
         </activity>
 
+        <activity android:name=".temasek.gesturepanel.CreateGestureActivity" />
+        <activity android:name=".temasek.gesturepanel.GestureBuilderActivity"
+                android:launchMode="singleTop"
+                android:excludeFromRecents="true" 
+                android:label="@string/gesture_panel_title" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SHORTCUT" />
+            </intent-filter>
+        </activity>
+
         <provider
             android:name=".search.SettingsSearchIndexablesProvider"
             android:authorities="com.android.settings"
