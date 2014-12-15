@@ -193,6 +193,12 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
 
     private static String DEFAULT_LOG_RING_BUFFER_SIZE_IN_BYTES = "262144"; // 256K
 
+    private static final String SCROLLINGCACHE_PREF = "pref_scrollingcache";
+
+    private static final String SCROLLINGCACHE_PERSIST_PROP = "persist.sys.scrollingcache";
+
+    private static final String SCROLLINGCACHE_DEFAULT = "1";
+
     private IWindowManager mWindowManager;
     private IBackupManager mBackupManager;
     private DevicePolicyManager mDpm;
@@ -272,6 +278,8 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private SwitchPreference mAdvancedReboot;
 
     private SwitchPreference mDevelopmentShortcut;
+
+    private ListPreference mScrollingCachePref;
 
     private final ArrayList<Preference> mAllPrefs = new ArrayList<Preference>();
 
@@ -392,6 +400,11 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         mWifiAggressiveHandover = findAndInitSwitchPref(WIFI_AGGRESSIVE_HANDOVER_KEY);
         mWifiAllowScansWithTraffic = findAndInitSwitchPref(WIFI_ALLOW_SCAN_WITH_TRAFFIC_KEY);
         mLogdSize = addListPreference(SELECT_LOGD_SIZE_KEY);
+
+        mScrollingCachePref = (ListPreference) findPreference(SCROLLINGCACHE_PREF);
+        mScrollingCachePref.setValue(SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP,
+                SystemProperties.get(SCROLLINGCACHE_PERSIST_PROP, SCROLLINGCACHE_DEFAULT)));
+        mScrollingCachePref.setOnPreferenceChangeListener(this);
 
         mWindowAnimationScale = addListPreference(WINDOW_ANIMATION_SCALE_KEY);
         mTransitionAnimationScale = addListPreference(TRANSITION_ANIMATION_SCALE_KEY);
@@ -1766,6 +1779,11 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
             return true;
         } else if (preference == mKillAppLongpressTimeout) {
             writeKillAppLongpressTimeoutOptions(newValue);
+            return true;
+        } else if (preference == mScrollingCachePref) {
+            if (newValue != null) {
+                SystemProperties.set(SCROLLINGCACHE_PERSIST_PROP, (String) newValue);
+            }
             return true;
         } else if (preference == mRootAccess) {
             if ("0".equals(SystemProperties.get(ROOT_ACCESS_PROPERTY, "1"))
