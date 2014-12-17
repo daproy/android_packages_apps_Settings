@@ -12,6 +12,7 @@
     <string name="enabled">Включено</string>
     <string name="disabled">Выключено</string>
     <string name="reset_message">Сбросить все значения по умолчанию?</string>
+    <string name="extras_temasek_settings">Дополнения temasek</string>
 
     <!-- Display : Rotation -->
     <string name="display_rotation_title">Поворот</string>
@@ -444,4 +445,88 @@
     <string name="heads_up_time_out_8sec">8 секунд</string>
     <string name="heads_up_time_out_10sec">10 секунд</string>
     <string name="heads_up_time_out_never">Никогда</string>
+
+     <!-- Option to enable/disable scrolling cache -->
+    <string name="pref_scrollingcache_title">Кэш прокрутки</string>
+    <string name="pref_scrollingcache_summary">Кэш прокрутки может улучшить производительность за счет памяти</string>
+    <string name="pref_scrollingcache_force_enable">Включить принудительно</string>
+    <string name="pref_scrollingcache_default_enable">Включить по умолчанию</string>
+    <string name="pref_scrollingcache_default_disable">Выключить по умолчанию</string>
+    <string name="pref_scrollingcache_force_disable">Выключить принудительно</string>
+
+    <!-- Battery saver -->
+    <string name="battery_saver_title">Цвет энергосбережения</string>
+    <string name="battery_saver_style_reset_message">Сбросить цвет в режиме энергосбережения по умолчанию?</string>
+
+    <!-- Lock Gesture settings -->
+    <string name="lockgesture_change_lock_pattern_label">Изменить жест разблокировки</string>
+    <string name="lockgesture_change_lock_pin_label">Изменить пароль разблокировки</string>
+    <string name="lockgesture_need_to_unlock">Подтвердить сохраненный жест</string>
+    <string name="lockgesture_need_to_unlock_wrong">Повторить:</string>
+    <string name="lockgesture_recording_intro_header">Записать жест разблокировки:</string>
+    <string name="lockgesture_recording_intro_footer">Для справки нажмите \"Меню\".</string>
+    <string name="lockgesture_recording_inprogress">По завершении отпустите палец.</string>
+    <string name="lockgesture_pattern_entered_header">Жест записан.</string>
+    <string name="lockgesture_need_to_confirm">Воспроизведите жест снова для подтверждения:</string>
+    <string name="lockgesture_pattern_confirmed_header">Ваш новый жест разблокировки:</string>
+    <string name="lockgesture_confirm_button_text">Подтвердить</string>
+    <string name="lockgesture_restart_button_text">Воспроизвести повторно</string>
+    <string name="lockgesture_retry_button_text">Повторить</string>
+    <string name="lockgesture_continue_button_text">Продолжить</string>
+    <string name="lockgesture_settings_title">Жест разблокировки</string>
+    <string name="lockgesture_settings_enable_title">Требуется жест</string>
+    <string name="lockgesture_settings_enable_summary">Необходимо записать жест для разблокировки экрана</string>
+    <string name="lockgesture_settings_enable_visible_pattern_title">Сделать жест видимым</string>
+    <string name="lockgesture_settings_enable_power_button_instantly_locks">Быстрая блокировка кнопкой питания</string>
+    <string name="lockgesture_settings_choose_lock_pattern">Установить жест разблокировки</string>
+    <string name="lockgesture_settings_change_lock_pattern">Изменить жест разблокировки</string>
+    <string name="lockgesture_settings_help_how_to_record">Как записать жест разблокировки</string>
+    <string name="lockgesture_too_many_failed_confirmation_attempts_header">Слишком много неудачных попыток!</string>
+    <string name="lockgesture_too_many_failed_confirmation_attempts_footer">Повторите попытку через <xliff:g id="NUMBER">%d</xliff:g> с.</string>
+    <string name="lockpassword_gesture_set_toast">Жест установлен</string>
+    <string name="lockpassword_confirm_your_gesture_header">Подтвердите ваш жест</string>
+    <string name="lockpassword_choose_your_gesture_header">Запишите ваш жест</string>
+    <string name="unlock_set_unlock_gesture_title">Жест</string>
+    <string name="unlock_set_unlock_gesture_summary">Низкий уровень защиты (экспериментальная функция)</string>
+    <string name="unlock_set_unlock_mode_gesture">Жест</string>
+
+     <!-- Gesture Anywhere -->
+    <string name="gesture_anywhere_title">Жест в любом месте</string>
+    <string name="gesture_anywhere_summary">Пользовательский экран жестов для выполнения действий</string>
+    <string name="gesture_anywhere_enabled_title">Жест в любом месте</string>
+    <string name="gesture_anywhere_enabled_summary">Активирует жест в любом месте</string>
+    <string name="gesture_anywhere_position_title">Местонахождение</string>
+    <string name="gesture_anywhere_position_left">Левый край</string>
+    <string name="gesture_anywhere_position_right">Правый край</string>
+    <string name="gesture_anywhere_gestures_title">Жесты</string>
+    <string name="gesture_anywhere_gestures_summary">Добавить, удалить и редактировать жесты</string>
+    <string name="ga_button_add">Добавить жест</string>
+    <string name="ga_button_reload">Перезагрузить</string>
+    <string name="ga_button_discard">Сброс</string>
+    <string name="ga_button_done">Выполнено</string>
+    <string name="ga_prompt_gesture_name">Имя</string>
+    <string name="ga_error_missing_name">Вы должны ввести имя</string>
+    <string name="ga_save_success">Жест сохранён в %s</string>
+    <string name="ga_rename_action">OK</string>
+    <string name="ga_cancel_action">Отмена</string>
+    <string name="ga_gestures_loading">Загрузка жестов...</string>
+    <string name="ga_gestures_empty">Нет жестов</string>
+    <string name="ga_gestures_activity">Жесты</string>
+    <string name="ga_gestures_edit">Изменить</string>
+    <string name="ga_gestures_delete">Удалить</string>
+    <string name="ga_gestures_delete_success">Жест удален</string>
+    <string name="ga_gestures_rename_title">Переименовать жест</string>
+    <string name="ga_gestures_rename_label">Имя жеста</string>
+    <string name="ga_gestures_error_loading">Не удалось загрузить %s. Убедитесь, что память доступна.</string>
+    <string name="trigger_category">Область триггера</string>
+    <string name="trigger_width_title">Ширина триггера</string>
+    <string name="trigger_width_summary">Отрегулируйте ширину области триггера</string>
+    <string name="trigger_top_title">Положение триггера</string>
+    <string name="trigger_top_summary">Отрегулируйте вертикальную позицию площади триггера</string>
+    <string name="trigger_bottom_title">Высота триггера</string>
+    <string name="trigger_bottom_summary">Отрегулируйте высоту области триггера</string>
+    <string name="picker_activities">Действия</string>
+    <string name="select_custom_app_title">Выберите пользовательское приложение</string>
+    <string name="select_custom_activity_title">Выбирать пользовательское действие</string>
+    <string name="profile_applist_title">Приложения</string>
 </resources>
