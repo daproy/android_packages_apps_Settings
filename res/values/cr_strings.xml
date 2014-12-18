@@ -15,7 +15,7 @@
     <string name="enabled">Enabled</string>
     <string name="disabled">Disabled</string>
     <string name="reset_message">Reset all entries to default?</string>
-    <string name="extras_temasek_settings">temasek extras</string>
+    <string name="extras_temasek_settings">Temasek Extras</string>
 
     <!-- Sound settings -->
     <string name="advanced_sound_title">Advanced options</string>
