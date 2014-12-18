@@ -73,6 +73,8 @@ import android.view.WindowManager;
 import android.widget.ListView;
 import android.widget.TabWidget;
 
+import com.android.settings.cyanogenmod.ButtonSettings;
+
 import com.android.internal.util.ImageUtils;
 import com.android.internal.util.UserIcons;
 import com.android.settings.UserSpinnerAdapter.UserDetails;
@@ -629,7 +631,9 @@ public final class Utils {
 
     /* returns whether the device has volume rocker or not. */
     public static boolean hasVolumeRocker(Context context) {
-        return context.getResources().getBoolean(R.bool.has_volume_rocker);
+        final int deviceKeys = context.getResources().getInteger(
+                com.android.internal.R.integer.config_deviceHardwareKeys);
+        return (deviceKeys & ButtonSettings.KEY_MASK_VOLUME) != 0;
     }
 
     /**
