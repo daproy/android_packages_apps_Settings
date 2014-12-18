@@ -406,8 +406,7 @@ sword is entered</string>
     <string name="show_unac_and_overcounted_stats_summary">Show in battery statistics unaccounted and over-counted usage.</string>
 
     <!-- Wakelock blocker -->
-    <string name="wakelock_blocker">Wakelock blocker</string>
-    <string name="wakelock_blocker_title">Enable</string>
+    <string name="wakelock_blocker_title">Wakelock blocker</string>
     <string name="wakelock_blocker_summary">Block system wakelocks</string>
     <string name="wakelock_blocker_save">Save</string>
     <string name="wakelock_list_header">Available wakelocks</string>

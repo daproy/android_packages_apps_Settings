@@ -286,14 +286,6 @@
                 android:targetClass="eu.chainfire.supersu.MainActivity" />
         </dashboard-tile>
 
-	<!-- Wakelock blocker -->
-        <dashboard-tile
-                android:id="@+id/wakelock_blocker"
-                android:title="@string/wakelock_blocker"
-	        android:fragment="com.android.settings.WakeLockBlocker"
-                android:icon="@drawable/ic_settings_notifications"
-                />
-
         <!-- Development -->
         <dashboard-tile
                 android:id="@+id/development_settings"
