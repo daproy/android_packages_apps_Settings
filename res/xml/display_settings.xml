@@ -128,6 +128,18 @@
                     android:defaultValue="false" />
 
                 <SwitchPreference
+                    android:key="adaptive_backlight"
+                    android:title="@string/adaptive_backlight_title"
+                    android:summary="@string/adaptive_backlight_summary"
+                    android:defaultValue="true" />
+
+                <SwitchPreference
+                    android:key="sunlight_enhancement"
+                    android:title="@string/sunlight_enhancement_title"
+                    android:summary="@string/sunlight_enhancement_summary"
+                    android:defaultValue="true" />
+
+                <SwitchPreference
                     android:key="color_enhancement"
                     android:title="@string/color_enhancement_title"
                     android:summary="@string/color_enhancement_summary"
