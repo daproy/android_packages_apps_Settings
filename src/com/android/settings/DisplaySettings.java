@@ -362,9 +362,13 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         ArrayList<CharSequence> revisedValues = new ArrayList<CharSequence>();
         for (int i = 0; i < values.length; i++) {
             long timeout = Long.parseLong(values[i].toString());
-            if (timeout <= maxTimeout) {
-                revisedEntries.add(entries[i]);
-                revisedValues.add(values[i]);
+            try {
+                if (timeout < maxTimeout) {
+                    revisedEntries.add(entries[i]);
+                    revisedValues.add(values[i]);
+                }
+            } catch (Exception e) {
+              // Do nothing
             }
         }
         if (revisedEntries.size() != entries.length || revisedValues.size() != values.length) {
