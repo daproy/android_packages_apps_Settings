@@ -12,7 +12,7 @@
     <string name="enabled">Включено</string>
     <string name="disabled">Выключено</string>
     <string name="reset_message">Сбросить все значения по умолчанию?</string>
-    <string name="extras_temasek_settings">Дополнения temasek</string>
+    <string name="extras_temasek_settings">Дополнения от Temasek</string>
 
     <!-- Display : Rotation -->
     <string name="display_rotation_title">Поворот</string>
@@ -203,6 +203,12 @@
     <string name="status_bar_clock_style_reset_message">Сбросить цвет часов?</string>
     <string name="status_bar_ticker_title">Прокрутка уведомлений</string>
     <string name="status_bar_ticker_summary">Прокрутка текста уведомления в строке состояния</string>
+    <string name="clock_font_style_title">Шрифт</string>
+    <string name="clock_font_bold">Жирный</string>
+    <string name="clock_font_condensed">Плотный</string>
+    <string name="clock_font_light">Тонкий</string>
+    <string name="clock_font_light_italic">Тонкий курсив</string>
+    <string name="clock_font_normal">Обычный</string>
 
     <!-- Partition Info -->
     <string name="partition_info_title">Информация о разделах</string>
@@ -412,14 +418,13 @@
     <string name="show_unac_and_overcounted_stats_summary">Показывать в статистике батареи переучтенную статистику.</string>
 
     <!-- Wakelock blocker -->
-    <string name="wakelock_blocker">Блокировка wakelock-ов</string>
-    <string name="wakelock_blocker_title">Включить</string>
-    <string name="wakelock_blocker_summary">Активировать блокировку для выбранных wakelock-ов</string>
+    <string name="wakelock_blocker_title">Блокировка вейклоков</string>
+    <string name="wakelock_blocker_summary">Активировать блокировку для выбранных вейклоков</string>
     <string name="wakelock_blocker_save">Сохранить</string>
-    <string name="wakelock_list_header">Доступные wakelock-и</string>
+    <string name="wakelock_list_header">Доступные вейклоки</string>
     <string name="wakelock_blocker_reload">Перезагрузить</string>
     <string name="wakelock_blocker_warning_title">Действовать с осторожностью</string>
-    <string name="wakelock_blocker_warning">Блокирование wakelock-ов потенциально может привести к нестабильной работе устройства, сбою или потере данных</string>
+    <string name="wakelock_blocker_warning">Блокирование вейклоков может привести к нестабильной работе устройства, сбою или потере данных</string>
 
      <!-- About device screen, CPU and RAM info. -->
     <string name="cpu_info">ЦПУ</string>
@@ -527,6 +532,23 @@
     <string name="trigger_bottom_summary">Отрегулируйте высоту области триггера</string>
     <string name="picker_activities">Действия</string>
     <string name="select_custom_app_title">Выберите пользовательское приложение</string>
-    <string name="select_custom_activity_title">Выбирать пользовательское действие</string>
+    <string name="select_custom_activity_title">Выберите пользовательское действие</string>
     <string name="profile_applist_title">Приложения</string>
+
+    <!-- Bluetooth additions -->
+    <!-- Bluetooth accept all Filestypes -->
+    <string name="bluetooth_accept_all_files">Принимать любые файлы</string>
+
+    <!-- App Circle sidebar -->
+    <string name="category_app_circle_bar_title">Круговой лаунчер приложений</string>
+    <string name="app_circle_bar_title">Круг приложений</string>
+    <string name="app_circle_bar_summary">Показать круговой лаунчер после прикосновения к правому краю экрана</string>
+    <string name="app_circle_bar_included_apps_title">Добавленные приложения</string>
+    <string name="app_circle_bar_included_apps_summary">Приложения, отображаемые в круге</string>
+    <string name="trigger_width_title">Ширина области вызова</string>
+    <string name="trigger_width_summary">Отрегулируйте ширину области вызова</string>
+    <string name="trigger_top_title">Позиция области вызова</string>
+    <string name="trigger_top_summary">Отрегулируйте вертикальную позицию области вызова</string>
+    <string name="trigger_bottom_title">Высота области</string>
+    <string name="trigger_bottom_summary">Отрегулируйте высоту области вызова</string>
 </resources>
