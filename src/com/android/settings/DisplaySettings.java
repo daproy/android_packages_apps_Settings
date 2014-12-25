@@ -337,8 +337,12 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                 int best = 0;
                 for (int i = 0; i < values.length; i++) {
                     long timeout = Long.parseLong(values[i].toString());
-                    if (currentTimeout >= timeout) {
-                        best = i;
+                    try {
+                        if (currentTimeout > timeout) {
+                           best = i;
+                        }
+                    } catch (Exception e) {
+                      // Do nothing
                     }
                 }
                 summary = preference.getContext().getString(R.string.screen_timeout_summary,
