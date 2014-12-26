@@ -113,6 +113,8 @@
     <string name="toast_GrowFadeCenter_animation">Grow fade center</string>
     <string name="toast_GrowFadeBottom_animation">Grow fade bottom</string>
     <string name="toast_Translucent_animation">Translucent animation</string>
+    <string name="toast_SlideLeftRight_animation">Slide left to right</string>
+    <string name="toast_SlideRightLeft_animation">Slide right to left</string>
 
     <!-- Text for disabling immersive mode messages -->
     <string name="disable_immersive_message_title">Disable Immersive Mode Messages</string>
