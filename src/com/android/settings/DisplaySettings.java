@@ -61,7 +61,6 @@ import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -95,7 +94,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_SUNLIGHT_ENHANCEMENT = "sunlight_enhancement";
     private static final String KEY_COLOR_ENHANCEMENT = "color_enhancement";
     private static final String KEY_TAP_TO_WAKE = "double_tap_wake_gesture";
-    private static final String KEY_TOAST_ANIMATION = "toast_animation";
     private static final String DISABLE_IMMERSIVE_MESSAGE = "disable_immersive_message";
     private static final String KEY_DISPLAY_DENSITY = "display_density";
     private static final String KEY_PROXIMITY_WAKE = "proximity_on_wake";
@@ -119,7 +117,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private SwitchPreference mDozePreference;
     private SwitchPreference mAutoBrightnessPreference;
     private SwitchPreference mTapToWake;
-    private ListPreference mToastAnimation;
     private SwitchPreference mDisableIM;
     private EditTextPreference mDisplayDensity;
     private SwitchPreference mWakeWhenPluggedOrUnplugged;
@@ -170,13 +167,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         disableUnusableTimeouts(mScreenTimeoutPreference);
         updateTimeoutPreferenceDescription(currentTimeout);
         updateDisplayRotationPreferenceDescription();
-
-        mToastAnimation = (ListPreference) findPreference(KEY_TOAST_ANIMATION);
-        mToastAnimation.setSummary(mToastAnimation.getEntry());
-        int CurrentToastAnimation = Settings.System.getInt(
-                getContentResolver(),Settings.System.TOAST_ANIMATION, 1);
-        mToastAnimation.setValueIndex(CurrentToastAnimation);
-        mToastAnimation.setOnPreferenceChangeListener(this);
 
         mFontSizePref = (FontDialogPreference) findPreference(KEY_FONT_SIZE);
         mFontSizePref.setOnPreferenceChangeListener(this);
@@ -623,14 +613,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             if (mDozeTimeout != null) {
                 mDozeTimeout.setEnabled(value);
             }
-        }
-        if (KEY_TOAST_ANIMATION.equals(key)) {
-            int index = mToastAnimation.findIndexOfValue((String) objValue);
-            Settings.System.putString(getContentResolver(),
-                    Settings.System.TOAST_ANIMATION, (String) objValue);
-            mToastAnimation.setSummary(mToastAnimation.getEntries()[index]);
-            Toast.makeText(getActivity(), "Toast animation test!!!",
-                    Toast.LENGTH_SHORT).show();
         }
         if (preference == mDozeTimeout) {
             int dozeTimeout = Integer.valueOf((String) objValue);

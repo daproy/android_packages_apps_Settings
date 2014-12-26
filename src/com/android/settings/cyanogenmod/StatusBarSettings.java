@@ -33,6 +33,7 @@ import android.provider.Settings.SettingNotFoundException;
 import android.util.Log;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.Toast;
 
 import com.android.internal.widget.LockPatternUtils;
 
@@ -53,6 +54,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
     private static final String PREF_QUICK_PULLDOWN = "quick_pulldown";
     private static final String PREF_BLOCK_ON_SECURE_KEYGUARD = "block_on_secure_keyguard";
     private static final String PREF_SMART_PULLDOWN = "smart_pulldown";
+    private static final String KEY_TOAST_ANIMATION = "toast_animation";
 
     private static final String STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
     private static final String STATUS_BAR_SHOW_BATTERY_PERCENT = "status_bar_show_battery_percent";
@@ -67,6 +69,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
     private SwitchPreference mBlockOnSecureKeyguard;
     private PreferenceScreen mClockStyle;
     private SwitchPreference mTicker;
+    private ListPreference mToastAnimation;
 
     private ListPreference mStatusBarBattery;
     private ListPreference mStatusBarBatteryShowPercent;
@@ -126,6 +129,13 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
                 Settings.System.QS_SMART_PULLDOWN, 0);
         mSmartPulldown.setValue(String.valueOf(smartPulldown));
         updateSmartPulldownSummary(smartPulldown);
+
+        mToastAnimation = (ListPreference) findPreference(KEY_TOAST_ANIMATION);
+        mToastAnimation.setSummary(mToastAnimation.getEntry());
+        int CurrentToastAnimation = Settings.System.getInt(
+                getContentResolver(),Settings.System.TOAST_ANIMATION, 1);
+        mToastAnimation.setValueIndex(CurrentToastAnimation);
+        mToastAnimation.setOnPreferenceChangeListener(this);
 
         final LockPatternUtils lockPatternUtils = new LockPatternUtils(getActivity());
         mBlockOnSecureKeyguard = (SwitchPreference) findPreference(PREF_BLOCK_ON_SECURE_KEYGUARD);
@@ -213,7 +223,15 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
             mStatusBarBatteryShowPercent.setSummary(
                     mStatusBarBatteryShowPercent.getEntries()[index]);
             return true;
-         }
+         } else if (preference == mToastAnimation) {
+            int index = mToastAnimation.findIndexOfValue((String) objValue);
+            Settings.System.putString(getContentResolver(),
+                    Settings.System.TOAST_ANIMATION, (String) objValue);
+            mToastAnimation.setSummary(mToastAnimation.getEntries()[index]);
+            Toast.makeText(getActivity(), "Toast animation test!!!",
+                    Toast.LENGTH_SHORT).show();
+            return true;
+        }
         return false;
     }
 
