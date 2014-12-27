@@ -149,7 +149,7 @@
     <string name="color_default">Default</string>
 
     <!-- Status bar -->
-    <string name="status_bar_title">Status bar</string>
+    <string name="status_bar_title">Status bar &amp; extras</string>
     <string name="status_bar_style_title">Style</string>
     <string name="status_bar_settings">Status bar settings</string>
 
