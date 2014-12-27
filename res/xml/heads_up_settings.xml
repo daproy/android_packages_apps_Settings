@@ -13,8 +13,14 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/category_heads_up">
 
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+        android:key="heads_up_show_status_button"
+        android:title="@string/show_headsup_button_title"
+        android:summary="@string/show_headsup_button_summary"
+        android:defaultValue="false" />
 
     <SwitchPreference
           android:key="heads_up_swipe_action"
