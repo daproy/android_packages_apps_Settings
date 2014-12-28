@@ -137,6 +137,23 @@
             android:fragment="com.android.settings.crdroid.gestureanywhere.GestureAnywhereSettings"
             android:title="@string/gesture_anywhere_title" />
 
+        <!-- List view animation -->
+        <ListPreference
+           android:key="listview_animation"
+           android:dialogTitle="@string/listview_animation_title"
+           android:title="@string/listview_animation_title"
+           android:entries="@array/listview_animation_entries"
+           android:entryValues="@array/listview_animation_values"
+           android:defaultValue="0" />
+
+        <ListPreference
+           android:key="listview_interpolator"
+           android:dialogTitle="@string/listview_interpolator_title"
+           android:title="@string/listview_interpolator_title"
+           android:entries="@array/listview_interpolator_entries"
+           android:entryValues="@array/listview_interpolator_values"
+           android:defaultValue="0" />
+
        <!-- Toast Animation -->
         <ListPreference
             android:key="toast_animation"
