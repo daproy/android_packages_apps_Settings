@@ -205,6 +205,8 @@ public class SettingsActivity extends Activity
 
     private static final String EMPTY_QUERY = "";
 
+    private static final String VOICE_WAKEUP_PACKAGE_NAME = "com.cyanogenmod.voicewakeup";
+
     private static boolean sShowNoHomeNotice = false;
 
     private String mFragmentClass;
@@ -1231,6 +1233,10 @@ public class SettingsActivity extends Activity
  
                     }
                     if (!supported) {
+                        removeTile = true;
+                    }
+                } else if (id == R.id.voice_wakeup_settings) {
+                    if (!Utils.isPackageInstalled(this, VOICE_WAKEUP_PACKAGE_NAME)) {
                         removeTile = true;
                     }
                 } else if (id == R.id.performance_settings) {
