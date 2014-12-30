@@ -2198,8 +2198,8 @@
                 android:resource="@id/sim_settings" />
         </activity>
 
-        <activity android:name=".crdroid.gestureanywhere.GestureAnywhereBuilderActivity" />
-        <activity android:name=".crdroid.gestureanywhere.GestureAnywhereCreateGestureActivity" />
+        <activity android:name=".temasek.gestureanywhere.GestureAnywhereBuilderActivity" />
+        <activity android:name=".temasek.gestureanywhere.GestureAnywhereCreateGestureActivity" />
 
         <provider
             android:name=".search.SettingsSearchIndexablesProvider"
