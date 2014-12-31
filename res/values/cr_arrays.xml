@@ -676,4 +676,17 @@
         <item>@string/screen_recorder_bitrate_20000000</item>
     </string-array>
 
+    <!-- Overflow button -->
+    <string-array name="overflow_button_entries" translatable="false">
+        <item>@string/overflow_auto_detect</item>
+        <item>@string/overflow_hide</item>
+        <item>@string/overflow_show</item>
+    </string-array>
+
+    <string-array name="overflow_button_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
 </resources>

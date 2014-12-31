@@ -45,6 +45,12 @@
             android:title="@string/navbar_style_dimen_title"
             android:dependency="enable_nav_bar" />
 
+       <ListPreference
+            android:key="keys_overflow_button"
+            android:title="@string/keys_overflow_title"
+            android:entries="@array/overflow_button_entries"
+            android:entryValues="@array/overflow_button_values" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
