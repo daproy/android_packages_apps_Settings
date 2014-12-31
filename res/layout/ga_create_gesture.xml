@@ -44,7 +44,7 @@
 
     </LinearLayout>
 
-    <com.android.settings.crdroid.gestureanywhere.GestureAnywhereGestureOverlayView
+    <com.android.settings.temasek.gestureanywhere.GestureAnywhereGestureOverlayView
         android:id="@+id/gestures_overlay"
         android:layout_width="match_parent"
         android:layout_height="0dip"
