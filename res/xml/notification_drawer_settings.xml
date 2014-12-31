@@ -66,6 +66,12 @@
             android:persistent="false" />
 
         <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="quick_settings_collapse_panel"
+            android:title="@string/quick_settings_collapse_title"
+            android:summary="@string/quick_settings_collapse_summary"
+            android:defaultValue="false"/>
+
+        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
             android:key="block_on_secure_keyguard"
             android:title="@string/block_on_secure_keyguard_title"
             android:summary="@string/block_on_secure_keyguard_summary"
