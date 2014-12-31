@@ -139,6 +139,7 @@
     <string name="hardware_keys_home_key_title">Domů</string>
     <string name="hardware_keys_back_key_title">Zpět</string>
     <string name="hardware_keys_menu_key_title">Menu</string>
+    <string name="hardware_keys_assist_key_title">Tlačítko Vyhledávání</string>
     <string name="hardware_keys_appswitch_key_title">Přehled aplikací</string>
     <string name="hardware_keys_volume_keys_title">Tlačítka hlasitosti</string>
     <string name="hardware_keys_short_press_title">Krátký stisk</string>
@@ -696,4 +697,6 @@
     <string name="autoperf_title">Povolit profily na aplikaci</string>
     <string name="autoperf_summary">Automaticky vybrat odpovídající výkonnostní profil pro různé aplikace</string>
     <string name="graphics_title">Grafika a vykreslování</string>
+    <string name="edge_gesture_service_title">Blokovat události dotyků gest</string>
+    <string name="edge_gesture_service_summary">Nepropuštět dotyky pro stavovou nebo navigační lištu do aplikací</string>
 </resources>
