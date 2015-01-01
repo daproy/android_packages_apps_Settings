@@ -528,6 +528,22 @@
     <string name="volume_steps_ring_title">Vyzvánění</string>
     <string name="volume_steps_system_title">Systém</string>
     <string name="volume_steps_voice_call_title">Hlasový hovor</string>
+    <!-- AOKP custom system animations -->  
+    <string name="aokp_animation_title">Systémové animace</string>
+    <string name="aokp_animation_summary">AOKP vlastní animace</string>
+    <string name="activity_open_title">Animace otevření aktivity</string>
+    <string name="activity_close_title">Animace zavření aktivity</string>
+    <string name="task_open_title">Animace otevření úlohy</string>
+    <string name="task_close_title">Animace zavření úlohy</string>
+    <string name="task_move_to_front_title">Animace přesunu do popředí</string>
+    <string name="task_move_to_back_title">Animace přesunu do pozadí</string>
+    <string name="wallpaper_open_title">Animace otevření tapety</string>
+    <string name="wallpaper_close_title">Animace zavření tapety</string>
+    <string name="wallpaper_intra_open_title">Animace otevření nové tapety</string>
+    <string name="wallpaper_intra_close_title">Animace zavření nové tapety</string>
+    <string name="task_open_behind_title">Otevřít úlohu za animací</string>
+    <string name="animation_duration_title">Délka animace</string>
+    <string name="animation_duration_default">Výchozí</string>
     <!-- Screen recorder -->
     <string name="screen_recorder_title">Nahrávání obrazovky</string>
     <string name="screen_recorder_summary">Upravit předvolby nahrávání obrazovky</string>
@@ -537,4 +553,13 @@
     <string name="screen_recorder_record_audio_title">Externí zvuk</string>
     <string name="screen_recorder_record_audio_summary">Nahrávat zvuk z mikrofónu</string>
     <string name="screen_recorder_power_menu_summary">Přidat nahrávání obrazu do nabídky tlačítka napájení</string>
+    <!-- Lock clock -->
+    <string name="lock_clock_title">cLock widget</string>
+    <string name="lock_clock_summary">Nastavit chování \'cLock\' widgetu</string>
+    <string name="lock_clock_clock_section_title">Hodiny a budík</string>
+    <string name="lock_clock_clock_section_summary">Nastavit chování hodin \'cLock\' widgetu</string>
+    <string name="lock_clock_weather_section_title">Panel počasí</string>
+    <string name="lock_clock_weather_section_summary">Nastavit chování počasí \'cLock\' widgetu</string>
+    <string name="lock_clock_calendar_section_title">Události kalendáře</string>
+    <string name="lock_clock_calendar_section_summary">Nastavit chování kalendáře \'cLock\' widgetu</string>
 </resources>
