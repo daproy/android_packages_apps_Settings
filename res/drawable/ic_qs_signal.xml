@@ -18,8 +18,8 @@
     android:autoMirrored="true"
     android:width="64dp"
     android:height="64dp"
-    android:viewportWidth="48.0"
-    android:viewportHeight="48.0">
+    android:viewportWidth="24.0"
+    android:viewportHeight="24.0">
 
     <path
         android:fillColor="#FF009587"
