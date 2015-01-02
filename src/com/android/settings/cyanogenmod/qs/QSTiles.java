@@ -37,7 +37,8 @@ import java.util.List;
 public class QSTiles extends Fragment {
 
     private static final String[] AVAILABLE_TILES = {
-        "wifi" ,"bt", "cell", "airplane", "rotation", "flashlight", "location", "cast"
+        "wifi" ,"bt", "cell", "airplane", "rotation", "flashlight", "location", "cast",
+            "inversion", "hotspot"
     };
 
     private static final String QS_DEFAULT_ORDER =
