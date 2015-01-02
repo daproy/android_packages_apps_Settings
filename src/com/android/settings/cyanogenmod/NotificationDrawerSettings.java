@@ -27,6 +27,7 @@ import android.preference.SwitchPreference;
 import android.provider.Settings;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.cyanogenmod.qs.QSTiles;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Toast;
@@ -40,12 +41,12 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment imple
 
     private static final String TAG = "NotificationDrawer";
 
-    private static final String TOGGLE_MAIN_TILES = "qs_main_tiles";
+    private Preference mQSTiles;
+
     private static final String PREF_QUICK_PULLDOWN = "quick_pulldown";
     private static final String PREF_BLOCK_ON_SECURE_KEYGUARD = "block_on_secure_keyguard";
     private static final String PREF_SMART_PULLDOWN = "smart_pulldown";
 
-    SwitchPreference mToggleMainTiles;
 
     private ListPreference mQuickPulldown;
     private ListPreference mSmartPulldown;
@@ -56,17 +57,10 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment imple
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.notification_drawer_settings);
 
+        mQSTiles = findPreference("qs_order");
+
         PreferenceScreen prefSet = getPreferenceScreen();
         ContentResolver resolver = getActivity().getContentResolver();
-
-        mToggleMainTiles = (SwitchPreference) findPreference(TOGGLE_MAIN_TILES);
-        mToggleMainTiles.setOnPreferenceChangeListener(this);
-
-        boolean useMainTiles = Settings.Secure.getIntForUser(
-                getActivity().getContentResolver(), Settings.Secure.QS_USE_MAIN_TILES,
-                1, UserHandle.myUserId()) == 1;
-
-        mToggleMainTiles.setChecked(useMainTiles);
 
         mQuickPulldown = (ListPreference) findPreference(PREF_QUICK_PULLDOWN);
         mSmartPulldown = (ListPreference) findPreference(PREF_SMART_PULLDOWN);
@@ -98,12 +92,7 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment imple
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if(preference == mToggleMainTiles) {
-            Settings.Secure.putIntForUser(
-                    getActivity().getContentResolver(), Settings.Secure.QS_USE_MAIN_TILES,
-                    ((Boolean) newValue) ? 1 : 0, UserHandle.myUserId());
-            return true;
-        } else if (preference == mQuickPulldown) {
+        if (preference == mQuickPulldown) {
             int statusQuickPulldown = Integer.valueOf((String) newValue);
             Settings.System.putInt(getContentResolver(),
                     Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN,
@@ -167,4 +156,12 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment imple
         }
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        int qsTileCount = QSTiles.determineTileCount(getActivity());
+        mQSTiles.setSummary(getResources().getQuantityString(R.plurals.qs_tiles_summary,
+                    qsTileCount, qsTileCount));
+    }
 }
