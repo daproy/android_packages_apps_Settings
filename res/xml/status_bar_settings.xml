@@ -30,6 +30,13 @@
         android:key="status_bar"
         android:title="@string/status_bar_settings" >
 
+        <PreferenceScreen
+            android:key="qs_settings"
+            android:title="@string/qs_settings_title"
+            android:summary="@string/qs_settings_summary"
+            android:fragment="com.android.settings.cyanogenmod.qs.QSSettings"
+            />
+
         <ListPreference
             android:key="status_bar_battery_style"
             android:title="@string/status_bar_battery_style_title"
