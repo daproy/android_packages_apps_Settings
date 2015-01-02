@@ -83,16 +83,18 @@ public class DraggableGridView extends ViewGroup implements
     protected Runnable updateTask = new Runnable() {
         public void run() {
             if (dragged != -1) {
-                if (lastY < padding * 3 && scroll > 0)
+                if (lastY < padding * 3 && scroll > 0) {
                     scroll -= 20;
-                else if (lastY > getBottom() - getTop() - (padding * 3)
-                        && scroll < getMaxScroll())
+                } else if (lastY > getBottom() - getTop() - (padding * 3)
+                        && scroll < getMaxScroll()) {
                     scroll += 20;
+                }
             } else if (lastDelta != 0 && !touching) {
                 scroll += lastDelta;
                 lastDelta *= .9;
-                if (Math.abs(lastDelta) < .25)
+                if (Math.abs(lastDelta) < .25) {
                     lastDelta = 0;
+                }
             }
             clampScroll();
             onLayout(true, getLeft(), getTop(), getRight(), getBottom());
@@ -204,20 +206,23 @@ public class DraggableGridView extends ViewGroup implements
 
     @Override
     protected int getChildDrawingOrder(int childCount, int i) {
-        if (dragged == -1)
+        if (dragged == -1) {
             return i;
-        else if (i == childCount - 1)
+        } else if (i == childCount - 1) {
             return dragged;
-        else if (i >= dragged)
+        } else if (i >= dragged) {
             return i + 1;
+        }
         return i;
     }
 
     public int getIndexFromCoor(int x, int y) {
         int row = getRowFromCoor(y + scroll);
         int col = getColFromCoor(row, x);
-        if (col == -1 || row == -1) // touch is between columns or rows
+        // touch is between columns or rows
+        if (col == -1 || row == -1) {
             return -1;
+        }
         int index = 0;
 
         index = row * colCount + col;
@@ -235,8 +240,9 @@ public class DraggableGridView extends ViewGroup implements
             }
         }
 
-        if (index > getChildCount())
+        if (index > getChildCount()) {
             return -1;
+        }
         return index;
     }
 
@@ -247,8 +253,9 @@ public class DraggableGridView extends ViewGroup implements
             coor -= childSize/2;
         }
         for (int i = 0; coor > 0; i++) {
-            if (coor < childSize)
+            if (coor < childSize) {
                 return i;
+            }
             coor -= (childSize + padding);
         }
         return -1;
@@ -257,8 +264,9 @@ public class DraggableGridView extends ViewGroup implements
     protected int getRowFromCoor(int coor) {
         coor -= padding;
         for (int i = 0; coor > 0; i++) {
-            if (coor < childSize)
+            if (coor < childSize) {
                 return i;
+            }
             coor -= (childSize + padding);
         }
         return -1;
@@ -278,12 +286,14 @@ public class DraggableGridView extends ViewGroup implements
             return -1;
 
         int target = -1;
-        if (rightPos > -1)
+        if (rightPos > -1) {
             target = rightPos;
-        else if (leftPos > -1)
+        } else if (leftPos > -1) {
             target = leftPos + 1;
-        if (dragged < target)
+        }
+        if (dragged < target) {
             return target - 1;
+        }
 
         return target;
     }
@@ -314,21 +324,25 @@ public class DraggableGridView extends ViewGroup implements
     }
 
     public int getIndexOf(View child) {
-        for (int i = 0; i < getChildCount(); i++)
-            if (getChildAt(i) == child)
+        for (int i = 0; i < getChildCount(); i++) {
+            if (getChildAt(i) == child) {
                 return i;
+            }
+        }
         return -1;
     }
 
     // EVENT HANDLERS
     public void onClick(View view) {
         if (enabled) {
-            if (secondaryOnClickListener != null)
+            if (secondaryOnClickListener != null) {
                 secondaryOnClickListener.onClick(view);
-            if (onItemClickListener != null)
+            }
+            if (onItemClickListener != null) {
                 onItemClickListener.onItemClick(null,
                         getChildAt(getLastIndex()), getLastIndex(),
                         getLastIndex() / colCount);
+            }
         }
     }
 
@@ -348,8 +362,9 @@ public class DraggableGridView extends ViewGroup implements
     }
 
     public boolean onLongClick(View view) {
-        if (!enabled)
+        if (!enabled) {
             return false;
+        }
         int index = getLastIndex();
         if (index != -1 && index != getChildCount() - 1) {
             toggleAddDelete(true);
@@ -398,8 +413,9 @@ public class DraggableGridView extends ViewGroup implements
                 } else {
                     scroll += delta;
                     clampScroll();
-                    if (Math.abs(delta) > 2)
+                    if (Math.abs(delta) > 2) {
                         enabled = false;
+                    }
                     onLayout(true, getLeft(), getTop(), getRight(), getBottom());
                 }
                 lastX = (int) event.getX();
@@ -410,9 +426,9 @@ public class DraggableGridView extends ViewGroup implements
                 if (dragged != -1) {
                     toggleAddDelete(false);
                     View v = getChildAt(dragged);
-                    if (lastTarget != -1 && !isDelete)
+                    if (lastTarget != -1 && !isDelete) {
                         reorderChildren(true);
-                    else {
+                    } else {
                         Point xy = getCoorFromIndex(dragged);
                         if (mUseMainTiles && dragged < 2) {
                             xy.x += childSize/2;
@@ -420,8 +436,9 @@ public class DraggableGridView extends ViewGroup implements
                         v.layout(xy.x, xy.y, xy.x + childSize, xy.y + childSize);
                     }
                     v.clearAnimation();
-                    if (v instanceof ImageView)
+                    if (v instanceof ImageView) {
                         ((ImageView) v).setAlpha(255);
+                    }
                     if (isDelete) {
                         lastTarget = dragged;
                         removeViewAt(dragged);
@@ -435,8 +452,9 @@ public class DraggableGridView extends ViewGroup implements
                 isDelete = false;
                 break;
         }
-        if (dragged != -1)
+        if (dragged != -1) {
             return true;
+        }
         return false;
     }
 
@@ -469,20 +487,24 @@ public class DraggableGridView extends ViewGroup implements
     protected void animateGap(int target) {
         for (int i = 0; i < getChildCount(); i++) {
             View v = getChildAt(i);
-            if (i == dragged)
+            if (i == dragged) {
                 continue;
+            }
             int newPos = i;
-            if (dragged < target && i >= dragged + 1 && i <= target)
+            if (dragged < target && i >= dragged + 1 && i <= target) {
                 newPos--;
-            else if (target < dragged && i >= target && i < dragged)
+            } else if (target < dragged && i >= target && i < dragged) {
                 newPos++;
+            }
 
             // animate
             int oldPos = i;
-            if (newPositions.get(i) != -1)
+            if (newPositions.get(i) != -1) {
                 oldPos = newPositions.get(i);
-            if (oldPos == newPos)
+            }
+            if (oldPos == newPos) {
                 continue;
+            }
 
             Point oldXY = getCoorFromIndex(oldPos);
             Point newXY = getCoorFromIndex(newPos);
@@ -522,7 +544,7 @@ public class DraggableGridView extends ViewGroup implements
             children.add(getChildAt(i));
         }
         removeAllViews();
-        while (dragged != lastTarget)
+        while (dragged != lastTarget) {
             if (lastTarget == children.size()) // dragged and dropped to the
             // right of the last element
             {
@@ -537,14 +559,16 @@ public class DraggableGridView extends ViewGroup implements
                 Collections.swap(children, dragged, dragged - 1);
                 dragged--;
             }
+        }
         for (int i = 0; i < children.size(); i++) {
             newPositions.set(i, -1);
             addView(children.get(i));
         }
         onLayout(true, getLeft(), getTop(), getRight(), getBottom());
 
-        if (onRearrangeListener != null && notify)
+        if (onRearrangeListener != null && notify) {
             onRearrangeListener.onChange();
+        }
     }
 
     public void scrollToTop() {
@@ -568,15 +592,17 @@ public class DraggableGridView extends ViewGroup implements
             scroll = max + overreach;
             lastDelta = 0;
         } else if (scroll < 0) {
-            if (scroll >= -stretch)
+            if (scroll >= -stretch) {
                 scroll = 0;
-            else if (!touching)
+            } else if (!touching) {
                 scroll -= scroll / stretch;
+            }
         } else if (scroll > max) {
-            if (scroll <= max + stretch)
+            if (scroll <= max + stretch) {
                 scroll = max;
-            else if (!touching)
+            } else if (!touching) {
                 scroll += (max - scroll) / stretch;
+            }
         }
     }
 
