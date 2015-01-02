@@ -46,7 +46,7 @@
     <PreferenceScreen
          android:key="screen_and_animations"
          android:fragment="com.android.settings.temasek.ScreenAndAnimations"
-         android:title="@string/display_category_animation_options_title"/>
+         android:title="@string/screen_and_animations_title"/>
 
     <!-- Wakelock blocker -->
     <PreferenceScreen

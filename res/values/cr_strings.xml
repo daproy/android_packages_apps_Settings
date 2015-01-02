@@ -15,7 +15,6 @@
     <string name="recents_panel_title">Recents panel</string>
     <string name="recents_panel_settings">Recents panel settings</string>
     <string name="screen_and_animations_title">Screen and animations</string>
-    <string name="display_category_animation_options_title">Screen and animation options</string>
 
     <!-- General strings -->
     <string name="attention">Attention</string>

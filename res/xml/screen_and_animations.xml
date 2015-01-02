@@ -7,7 +7,7 @@
 
     <PreferenceCategory
         android:key="screen_and_animations"
-        android:title="@string/display_category_animation_options_title" >
+        android:title="@string/screen_and_animations_title" >
 
         <!-- Toast Animation -->
         <ListPreference
