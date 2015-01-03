@@ -18,23 +18,29 @@
     android:title="@string/temasek_settings_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <!-- Recent panel settings -->
-    <PreferenceScreen
-         android:key="recents_panel"
-         android:fragment="com.android.settings.temasek.RecentsPanelSettings"
-         android:title="@string/recents_panel_title"/>
-
-    <!-- Circle app bar -->
+    <!-- App circle bar -->
     <PreferenceScreen
          android:key="app_circle_bar"
          android:fragment="com.android.settings.temasek.AppCircleBar"
          android:title="@string/app_circle_bar_title"/>
+
+    <!-- Clock widget -->
+    <PreferenceScreen
+         android:key="lock_clock"
+         android:fragment="com.android.settings.temasek.LockClock"
+         android:title="@string/lock_clock_title" />
 
     <!-- Gesture anywhere -->
     <PreferenceScreen
          android:key="gesture_anywhere"
          android:fragment="com.android.settings.temasek.gestureanywhere.GestureAnywhereSettings"
          android:title="@string/gesture_anywhere_title" />
+
+    <!-- Recent panel settings -->
+    <PreferenceScreen
+         android:key="recents_panel"
+         android:fragment="com.android.settings.temasek.RecentsPanelSettings"
+         android:title="@string/recents_panel_title"/>
 
     <!-- Screen and animations -->
     <PreferenceScreen
@@ -47,11 +53,5 @@
          android:key="wakelock_blocker"
          android:fragment="com.android.settings.temasek.WakeLockBlocker"
          android:title="@string/wakelock_blocker_title" />
-
-    <!-- LockClock -->
-    <PreferenceScreen
-         android:key="lock_clock"
-         android:fragment="com.android.settings.temasek.LockClock"
-         android:title="@string/lock_clock_title" />
 
 </PreferenceScreen>
