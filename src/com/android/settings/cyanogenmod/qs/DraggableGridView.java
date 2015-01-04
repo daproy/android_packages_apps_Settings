@@ -1,8 +1,6 @@
-package com.android.settings.cyanogenmod.qs;
-
 /*
  * Copyright (c) 2011, Animoto Inc.
- * Copyright (C) 2012 The CyanogenMod Project
+ * Copyright (C) 2012-2015 The CyanogenMod Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,6 +14,7 @@ package com.android.settings.cyanogenmod.qs;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package com.android.settings.cyanogenmod.qs;
 
 import android.app.Activity;
 import android.content.Context;
@@ -316,8 +315,10 @@ public class DraggableGridView extends ViewGroup implements
             resid = R.drawable.ic_menu_delete;
             stringid = R.string.dialog_delete_title;
         }
-        TextView addDeleteTile = ((TextView) getChildAt(getChildCount() - 1).findViewById(android.R.id.title));
-        ImageView icon = ((ImageView) getChildAt(getChildCount() - 1).findViewById(android.R.id.icon));
+        TextView addDeleteTile = ((TextView) getChildAt(getChildCount() - 1).findViewById(
+                android.R.id.title));
+        ImageView icon = ((ImageView) getChildAt(getChildCount() - 1).findViewById(
+                android.R.id.icon));
         icon.setImageResource(resid);
         addDeleteTile.setText(stringid);
     }

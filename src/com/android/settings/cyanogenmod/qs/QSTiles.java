@@ -1,3 +1,18 @@
+/*
+ * Copyright (C) 2015 The CyanogenMod Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.android.settings.cyanogenmod.qs;
 
 import android.app.AlertDialog;
@@ -19,21 +34,22 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * Created by Arasthel on 01/01/15.
- */
 public class QSTiles extends Fragment {
 
-    private static final String[] AVAILABLE_TILES = {"wifi" ,"bt", "cell", "airplane", "rotation", "flashlight", "location", "cast"};
+    private static final String[] AVAILABLE_TILES = {
+        "wifi" ,"bt", "cell", "airplane", "rotation", "flashlight", "location", "cast"
+    };
 
-    private static final String QS_DEFAULT_ORDER = "wifi,bt,inversion,cell,airplane,rotation,flashlight,location,cast,hotspot";
+    private static final String QS_DEFAULT_ORDER =
+            "wifi,bt,inversion,cell,airplane,rotation,flashlight,location,cast,hotspot";
 
     DraggableGridView draggableGridView;
 
     private static final String TILES_SETTING = "sysui_qs_tiles";
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+            Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.settings_qs_tiles, container, false);
         draggableGridView = (DraggableGridView) v.findViewById(R.id.qs_gridview);
         return v;
@@ -46,17 +62,13 @@ public class QSTiles extends Fragment {
         ContentResolver resolver = getActivity().getContentResolver();
         String order = Settings.Secure.getStringForUser(resolver, TILES_SETTING,
                 UserHandle.myUserId());
-        if(TextUtils.isEmpty(order)) {
+        if (TextUtils.isEmpty(order)) {
             order = QS_DEFAULT_ORDER;
             Settings.Secure.putStringForUser(resolver, TILES_SETTING, order, UserHandle.myUserId());
         }
 
         String[] tiles = order.split(",");
-        for(String tileType: tiles) {
-            // "Inversion" and "Hotspot" are contextual tiles, so it makes no sense to include them on the grid
-            if(tileType.equals("inversion") || tileType.equals("hotspot")) {
-                continue;
-            }
+        for (String tileType: tiles) {
             draggableGridView.addView(QSUtils.parseQSTile(getActivity(), tileType));
         }
         // Add a false tile for the "Add / Delete" tile
@@ -74,7 +86,7 @@ public class QSTiles extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 // Add / delete button clicked
-                if(i == draggableGridView.getChildCount()-1) {
+                if (i == draggableGridView.getChildCount()-1) {
                     addTile();
                 }
             }
@@ -94,11 +106,11 @@ public class QSTiles extends Fragment {
         List<String> savedTiles = Arrays.asList(order.split(","));
 
         List<QSTileHolder> tilesList = new ArrayList<QSTileHolder>();
-        for(String tile : AVAILABLE_TILES) {
+        for (String tile : AVAILABLE_TILES) {
             // Don't count the already added tiles
-            if(savedTiles.contains(tile)) continue;
+            if (savedTiles.contains(tile)) continue;
             // Don't count the false tile
-            if(tile.equals("")) continue;
+            if (tile.equals("")) continue;
             tilesList.add(QSUtils.getAdapterItem(getActivity(), tile));
         }
 
@@ -115,7 +127,8 @@ public class QSTiles extends Fragment {
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                    // Close dialog and add the new tile to the last available position - before "Add / Delete" tile
+                    // Close dialog and add the new tile to the last available position
+                    // before "Add / Delete" tile
                     int newPosition = draggableGridView.getChildCount()-1;
                     if(newPosition < 0) newPosition = 0;
                     addTileDialog.dismiss();
@@ -126,10 +139,9 @@ public class QSTiles extends Fragment {
             });
         } else {
             // If there aren't any tiles to add, just show an error toast
-            Toast.makeText(getActivity(), getString(R.string.qs_already_added_all), Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), getString(R.string.qs_already_added_all),
+                    Toast.LENGTH_SHORT).show();
         }
-
-
     }
 
     public void updateSettings() {
@@ -144,8 +156,6 @@ public class QSTiles extends Fragment {
             order += draggableGridView.getChildAt(i).getTag();
         }
 
-        // Add back "Inversion" and "Hotspot" contextual tiles
-        order += ",inversion,hotspot";
         Settings.Secure.putStringForUser(resolver, TILES_SETTING, order, UserHandle.myUserId());
     }
 }
