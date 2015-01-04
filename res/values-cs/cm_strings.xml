@@ -128,8 +128,8 @@
     <string name="toggleWifiAp">Přenosný Wi-Fi hotspot</string>
     <string name="toggleBluetooth">Bluetooth</string>
     <string name="toggleGPS">GPS</string>
-    <string name="toggleData">Mobile Data</string>
-    <string name="toggleSync">Data Sync</string>
+    <string name="toggleData">Mobilní data</string>
+    <string name="toggleSync">Aut. sync. dat</string>
     <string name="toggle2g3g">2G/3G</string>
     <string name="toggleWimax">WiMAX</string>
     <string name="toggleNfc">NFC</string>
@@ -161,6 +161,17 @@
     <string name="button_wake_title">Probudit zařízení</string>
     <string name="home_answer_call_title">Odpovědět na volání</string>
     <string name="home_answer_call_summary">Stiskunít tlačítka domů zvedne aktuální příchoizí hovor</string>
+    <!-- Hardware tunables - Key backlight -->
+    <string name="button_backlight_title">Podsvícení</string>
+    <string name="button_backlight_enabled">Podsvícení tlačítek</string>
+    <string name="keyboard_backlight_enabled">Podsvícení klávesnice</string>
+    <string name="button_backlight_seekbar_title">Intenzita podsvícení tlačítek</string>
+    <string name="keyboard_backlight_seekbar_title">Intenzita podsvícení klávesnice</string>
+    <string name="backlight_timeout_title">Vypnutí podsvícení</string>
+    <string name="backlight_timeout_unlimited">Nevypínat</string>
+    <string name="backlight_summary_disabled">Vypnuto</string>
+    <string name="backlight_summary_enabled_with_timeout">Zapnout na <xliff:g id="timeout">%s</xliff:g></string>
+    <string name="backlight_summary_enabled">Zapnuto</string>
     <!-- Backlight brightness settings screen -->
     <string name="adaptive_backlight_title">Přizpůsobivé podsvícení</string>
     <string name="adaptive_backlight_summary">Dynamicky přizpůsovovat jas displeje pro maximální úsporu baterie a zachování dobré čitelnosti</string>
@@ -242,6 +253,7 @@
     <!--- Advanced Settings -->
     <string name="advanced_settings">Pokročilá nastavení</string>
     <string name="advanced_settings_summary">Zapnout více možností nastavení</string>
+    <string name="contributor_cloud_title">Autoři</string>
     <string name="double_tap_to_wake_title">Probuzení dvojím dotykem</string>
     <string name="proximity_wake_title">Zabránit nechtěnému probuzení</string>
     <string name="proximity_wake_summary">Kontrolovat senzor přiblížení pro zabránění nechtěného probuzení</string>
@@ -351,22 +363,6 @@
     <string name="notification_light_missed_call_title">Zmeškané hovory</string>
     <string name="notification_light_voicemail_title">Hlasová schránka</string>
     <string name="notification_ringtone_title_cm">Tón upozornění</string>
-    <!-- Hardware tunables - Key backlight -->
-    <string name="button_backlight_title">Podsvícení</string>
-    <string name="button_backlight_enabled">Podsvícení tlačítek</string>
-    <string name="keyboard_backlight_enabled">Podsvícení klávesnice</string>
-    <string name="button_backlight_seekbar_title">Intenzita podsvícení tlačítek</string>
-    <string name="keyboard_backlight_seekbar_title">Intenzita podsvícení klávesnice</string>
-    <string name="backlight_timeout_title">Vypnutí podsvícení</string>
-    <string name="backlight_timeout_unlimited">Nevypínat</string>
-    <plurals name="backlight_timeout_time">
-        <item quantity="one"><xliff:g id="seconds">%d</xliff:g> sekunda</item>
-        <item quantity="few"><xliff:g id="seconds">%d</xliff:g> sekundy</item>
-        <item quantity="other"><xliff:g id="seconds">%d</xliff:g> sekund</item>
-    </plurals>
-    <string name="backlight_summary_disabled">Vypnuto</string>
-    <string name="backlight_summary_enabled_with_timeout">Zapnout na <xliff:g id="timeout">%s</xliff:g></string>
-    <string name="backlight_summary_enabled">Zapnuto</string>
     <!-- App ops -->    
     <string name="app_ops_summaries_coarse_location">přibližná poloha</string>
     <string name="app_ops_summaries_fine_location">přesná poloha</string>
@@ -466,6 +462,7 @@
     <string name="app_ops_categories_media">Média</string>
     <string name="app_ops_categories_device">Zařízení</string>
     <string name="app_ops_categories_bootup">Při startu</string>
+    <string name="app_ops_categories_su">Superuser</string>
     <string name="app_ops_summaries_get_usage_stats">získat statistiky užívání aplikace</string>
     <string name="app_ops_summaries_mute_unmute_microphone">ztišit/zrušit ztišení mikrofónu</string>
     <string name="app_ops_summaries_toast_window">zobrazit toast oznámení</string>
@@ -477,6 +474,7 @@
     <string name="app_ops_summaries_delete_contacts">smazat kontakty</string>
     <string name="app_ops_summaries_delete_call_log">smazat záznamy o hovorech</string>
     <string name="app_ops_summaries_wake_up">probudit</string>
+    <string name="app_ops_summaries_su">Superuser</string>
     <string name="app_ops_labels_get_usage_stats">Získat statistiky užívání aplikace</string>
     <string name="app_ops_labels_mute_unmute_microphone">Ztišit/zrušit ztišení mikrofónu</string>
     <string name="app_ops_labels_toast_window">Zobrazit toast oznámení</string>
@@ -488,6 +486,7 @@
     <string name="app_ops_labels_delete_contacts">Smazat kontakty</string>
     <string name="app_ops_labels_delete_call_log">Smazat záznamy o hovorech</string>
     <string name="app_ops_labels_wake_up">Probudit</string>
+    <string name="app_ops_labels_su">Root přístup</string>
     <!-- App ops permissions -->
     <string name="app_ops_permissions_allowed">Povoleno</string>
     <string name="app_ops_permissions_ignored">Ignorováno</string>
@@ -699,4 +698,12 @@
     <string name="graphics_title">Grafika a vykreslování</string>
     <string name="edge_gesture_service_title">Blokovat události dotyků gest</string>
     <string name="edge_gesture_service_summary">Nepropuštět dotyky pro stavovou nebo navigační lištu do aplikací</string>
+    <string name="cast_screen">Projekce obrazu</string>
+    <string name="hotspot">Hotspot</string>
+    <string name="qs_settings_title">Rychlé nastavení</string>
+    <string name="qs_settings_summary">Přizpůsobit panel rychlého nastavení</string>
+    <string name="qs_order">Změnit dlaždice a pořadí</string>
+    <string name="qs_order_summary">Přidat nové dlaždice, nebo změnit jejich pořadí</string>
+    <string name="add_qs">Přidat novou dlaždici</string>
+    <string name="qs_already_added_all">Nejsou k dispozici žádné další dlaždice k přidání.</string>
 </resources>
