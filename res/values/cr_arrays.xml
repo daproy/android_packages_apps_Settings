@@ -158,6 +158,7 @@
     <string-array name="recents_clear_all_location_entries">
         <item>@string/recents_clear_all_location_top_right</item>
         <item>@string/recents_clear_all_location_top_left</item>
+        <item>@string/recents_clear_all_location_top_center</item>
         <item>@string/recents_clear_all_location_bottom_right</item>
         <item>@string/recents_clear_all_location_bottom_left</item>
         <item>@string/recents_clear_all_location_bottom_center</item>
@@ -169,6 +170,7 @@
         <item>2</item>
         <item>3</item>
         <item>4</item>
+        <item>5</item>
     </string-array>
 
     <!-- Status bar | Clock -->
