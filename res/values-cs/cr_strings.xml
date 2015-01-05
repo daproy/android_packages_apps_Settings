@@ -126,9 +126,10 @@
     <string name="recents_clear_all_location_title">Umístění tlačítka ukončení všech aplikací</string>
     <string name="recents_clear_all_location_top_right">Nahoře vravo</string>
     <string name="recents_clear_all_location_top_left">Nahoře vlevo</string>
+    <string name="recents_clear_all_location_top_center">Nahoře uprostřed</string>
     <string name="recents_clear_all_location_bottom_right">Dole vpravo</string>
     <string name="recents_clear_all_location_bottom_left">Dole vlevo</string>
-    <string name="recents_clear_all_location_bottom_center">Dole na středu</string>
+    <string name="recents_clear_all_location_bottom_center">Dole uprostřed</string>
     <!-- Color Picker -->
     <string name="dialog_color_picker">Výběr barvy</string>
     <string name="press_color_to_apply">Barva se aplikuje stiskem</string>
@@ -622,4 +623,7 @@
     <!-- QuickSettings haptic feedback -->
     <string name="quick_settings_vibrate_title">Vibrace při dotyku</string>
     <string name="quick_settings_vibrate_summary">Vibrovat při stisku dlaždic</string>
+    <!-- Superuser indicator on status bar -->
+    <string name="su_indicator">Upozornění na Superusera</string>
+    <string name="su_indicator_summary">Zobrazit upozornění na superusera ve stavové liště, pokud má aktivní přístup</string>
 </resources>
