@@ -65,6 +65,8 @@
     <color name="running_processes_apps_ram">#ff009587</color>
     <color name="running_processes_free_ram">#ffced7db</color>
 
+    <color name="dialog_color_picker_hex_title">#ffffffff</color>
+
     <!-- Palette colors referenced by top-level themes. -->
     <color name="theme_primary">#ff263238</color>
     <color name="theme_primary_dark">#ff21272b</color>
