@@ -16,9 +16,4 @@ limitations under the License.
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- maximum value for the custom display density -->
-    <integer name="display_density_max">480</integer>
-    <!-- minimum value for the custom display density -->
-    <integer name="display_density_min">240</integer>
-
 </resources>
