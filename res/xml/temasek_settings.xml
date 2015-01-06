@@ -48,10 +48,4 @@
          android:fragment="com.android.settings.temasek.ScreenAndAnimations"
          android:title="@string/screen_and_animations_title"/>
 
-    <!-- Wakelock blocker -->
-    <PreferenceScreen
-         android:key="wakelock_blocker"
-         android:fragment="com.android.settings.temasek.WakeLockBlocker"
-         android:title="@string/wakelock_blocker_title" />
-
 </PreferenceScreen>
