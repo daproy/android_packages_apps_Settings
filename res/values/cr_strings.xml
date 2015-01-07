@@ -725,5 +725,11 @@ sword is entered</string>
     <string name="battery_bar_thickness_title">Battery bar thickness</string>
     <string name="battery_bar_animate_title">Charging animation</string>
     <string name="battery_bar_animate_summary">The charging animation may result in a poor user experience. Enable at your own discretion.</string>
+    <string name="battery_bar_hide">Hide</string>
+    <string name="battery_bar_statusbar">Statusbar</string>
+    <string name="battery_bar_topnavbar">Top of navbar</string>
+    <string name="battery_bar_bottomnavbar">Bottom of navbar</string>
+    <string name="battery_bar_regular">Regular</string>
+    <string name="battery_bar_center_mirrored">Center mirrored</string>
 
 </resources>
