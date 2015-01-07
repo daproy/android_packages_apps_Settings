@@ -61,12 +61,6 @@
             android:summary="@string/status_bar_ticker_summary"
             android:defaultValue="true" />
 
-        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
-            android:key="block_on_secure_keyguard"
-            android:title="@string/block_on_secure_keyguard_title"
-            android:summary="@string/block_on_secure_keyguard_summary"
-            android:persistent="false" />
-
         <PreferenceScreen
             android:key="network_traffic_state"
             android:fragment="com.android.settings.temasek.NetworkTraffic"
@@ -90,33 +84,6 @@
             android:title="@string/su_indicator"
             android:summary="@string/su_indicator_summary"
             android:defaultValue="true" />
-
-        <PreferenceScreen
-            android:key="qs_settings"
-            android:title="@string/qs_settings_title"
-            android:summary="@string/qs_settings_summary"
-            android:fragment="com.android.settings.cyanogenmod.qs.QSSettings"
-            />
-
-        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
-            android:key="quick_settings_vibrate"
-            android:title="@string/quick_settings_vibrate_title"
-            android:summary="@string/quick_settings_vibrate_summary"
-            android:defaultValue="false"/>
-
-        <com.android.settings.cyanogenmod.SystemSettingListPreference
-            android:key="quick_pulldown"
-            android:title="@string/title_quick_pulldown"
-            android:entries="@array/quick_pulldown_entries"
-            android:entryValues="@array/quick_pulldown_values"
-            android:persistent="false" />
-
-        <com.android.settings.cyanogenmod.SystemSettingListPreference
-            android:key="smart_pulldown"
-            android:title="@string/smart_pulldown_title"
-            android:entries="@array/smart_pulldown_entries"
-            android:entryValues="@array/smart_pulldown_values"
-            android:persistent="false" />
 
     </PreferenceCategory>
 

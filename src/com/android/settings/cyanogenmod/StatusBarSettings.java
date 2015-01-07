@@ -35,8 +35,6 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Toast;
 
-import com.android.internal.widget.LockPatternUtils;
-
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.R;
 
@@ -49,9 +47,6 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
 
     private static final String KEY_STATUS_BAR_CLOCK = "clock_style_pref";
     private static final String KEY_STATUS_BAR_TICKER = "status_bar_ticker_enabled";
-    private static final String PREF_QUICK_PULLDOWN = "quick_pulldown";
-    private static final String PREF_BLOCK_ON_SECURE_KEYGUARD = "block_on_secure_keyguard";
-    private static final String PREF_SMART_PULLDOWN = "smart_pulldown";
 
     private static final String STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
     private static final String STATUS_BAR_SHOW_BATTERY_PERCENT = "status_bar_show_battery_percent";
@@ -59,9 +54,6 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
     private static final int STATUS_BAR_BATTERY_STYLE_HIDDEN = 4;
     private static final int STATUS_BAR_BATTERY_STYLE_TEXT = 6;
 
-    private ListPreference mQuickPulldown;
-    private ListPreference mSmartPulldown;
-    private SwitchPreference mBlockOnSecureKeyguard;
     private PreferenceScreen mClockStyle;
     private SwitchPreference mTicker;
 
@@ -95,33 +87,6 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
                 Settings.System.STATUS_BAR_TICKER_ENABLED, tickerEnabled ? 1 : 0) == 1);
         mTicker.setOnPreferenceChangeListener(this);
 
-        mQuickPulldown = (ListPreference) findPreference(PREF_QUICK_PULLDOWN);
-        mSmartPulldown = (ListPreference) findPreference(PREF_SMART_PULLDOWN);
-
-        // Quick Pulldown
-        mQuickPulldown.setOnPreferenceChangeListener(this);
-        int statusQuickPulldown = Settings.System.getInt(getContentResolver(),
-                Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN, 1);
-        mQuickPulldown.setValue(String.valueOf(statusQuickPulldown));
-        updateQuickPulldownSummary(statusQuickPulldown);
-
-        // Smart Pulldown
-        mSmartPulldown.setOnPreferenceChangeListener(this);
-        int smartPulldown = Settings.System.getInt(getContentResolver(),
-                Settings.System.QS_SMART_PULLDOWN, 0);
-        mSmartPulldown.setValue(String.valueOf(smartPulldown));
-        updateSmartPulldownSummary(smartPulldown);
-
-        final LockPatternUtils lockPatternUtils = new LockPatternUtils(getActivity());
-        mBlockOnSecureKeyguard = (SwitchPreference) findPreference(PREF_BLOCK_ON_SECURE_KEYGUARD);
-        if (lockPatternUtils.isSecure()) {
-            mBlockOnSecureKeyguard.setChecked(Settings.Secure.getInt(getContentResolver(),
-                    Settings.Secure.STATUS_BAR_LOCKED_ON_SECURE_KEYGUARD, 1) == 1);
-            mBlockOnSecureKeyguard.setOnPreferenceChangeListener(this);
-        } else {
-            prefSet.removePreference(mBlockOnSecureKeyguard);
-        }
-
         mStatusBarBattery = (ListPreference) findPreference(STATUS_BAR_BATTERY_STYLE);
         mStatusBarBatteryShowPercent =
                 (ListPreference) findPreference(STATUS_BAR_SHOW_BATTERY_PERCENT);
@@ -147,26 +112,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
-        if (preference == mQuickPulldown) {
-            int statusQuickPulldown = Integer.valueOf((String) objValue);
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN,
-                    statusQuickPulldown);
-            updateQuickPulldownSummary(statusQuickPulldown);
-            return true;
-        } else if (preference == mSmartPulldown) {
-            int smartPulldown = Integer.valueOf((String) objValue);
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.QS_SMART_PULLDOWN,
-                    smartPulldown);
-            updateSmartPulldownSummary(smartPulldown);
-            return true;
-        } else if (preference == mBlockOnSecureKeyguard) {
-            Settings.Secure.putInt(getContentResolver(),
-                    Settings.Secure.STATUS_BAR_LOCKED_ON_SECURE_KEYGUARD,
-                    (Boolean) objValue ? 1 : 0);
-            return true;
-        } else if (preference == mTicker) {
+        if (preference == mTicker) {
             Settings.System.putInt(getContentResolver(),
                     Settings.System.STATUS_BAR_TICKER_ENABLED,
                     (Boolean) objValue ? 1 : 0);
@@ -190,47 +136,6 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
             return true;
         }
         return false;
-    }
-
-    private void updateSmartPulldownSummary(int value) {
-        Resources res = getResources();
-
-        if (value == 0) {
-            // Smart pulldown deactivated
-            mSmartPulldown.setSummary(res.getString(R.string.smart_pulldown_off));
-        } else {
-            String type = null;
-            switch (value) {
-                case 1:
-                    type = res.getString(R.string.smart_pulldown_dismissable);
-                    break;
-                case 2:
-                    type = res.getString(R.string.smart_pulldown_persistent);
-                    break;
-                default:
-                    type = res.getString(R.string.smart_pulldown_all);
-                    break;
-            }
-            // Remove title capitalized formatting
-            type = type.toLowerCase();
-            mSmartPulldown.setSummary(res.getString(R.string.smart_pulldown_summary, type));
-        }
-    }
-
-    private void updateQuickPulldownSummary(int value) {
-        Resources res = getResources();
-
-        if (value == 0) {
-            // quick pulldown deactivated
-            mQuickPulldown.setSummary(res.getString(R.string.quick_pulldown_off));
-        } else {
-            Locale l = Locale.getDefault();
-            boolean isRtl = TextUtils.getLayoutDirectionFromLocale(l) == View.LAYOUT_DIRECTION_RTL;
-            String direction = res.getString(value == 2
-                    ? (isRtl ? R.string.quick_pulldown_right : R.string.quick_pulldown_left)
-                    : (isRtl ? R.string.quick_pulldown_left : R.string.quick_pulldown_right));
-            mQuickPulldown.setSummary(res.getString(R.string.summary_quick_pulldown, direction));
-        }
     }
 
     private void updateClockStyleDescription() {
