@@ -130,6 +130,8 @@
     <string name="recents_clear_all_location_bottom_right">Dole vpravo</string>
     <string name="recents_clear_all_location_bottom_left">Dole vlevo</string>
     <string name="recents_clear_all_location_bottom_center">Dole uprostřed</string>
+    <string name="recents_clear_all_dismiss_all_title">Ukončit všechny aplikace</string>
+    <string name="recents_clear_all_dismiss_all_summary">Ukončí všechny aplikace včetně aktuálně vybrané (běžící na popředí)</string>
     <!-- Color Picker -->
     <string name="dialog_color_picker">Výběr barvy</string>
     <string name="press_color_to_apply">Barva se aplikuje stiskem</string>
@@ -631,9 +633,15 @@
     <string name="battery_bar_title">Pruh baterie</string>
     <string name="battery_bar">Pozice pruhu baterie</string>
     <string name="battery_bar_color">Barva pruhu baterie</string>
-    <string name="battery_bar_cat">Style pruhu baterie</string>
+    <string name="battery_bar_cat">Styl pruhu baterie</string>
     <string name="battery_bar_style_title">Zarovnání pruhu baterie</string>
     <string name="battery_bar_thickness_title">Tloušťka pruhu baterie</string>
     <string name="battery_bar_animate_title">Animace nabíjení</string>
     <string name="battery_bar_animate_summary">Povolení animace způsobuje horší odezvy systému. Zapínat pouze na vlastní nebezpečí.</string>
+    <string name="battery_bar_hide">Skrytý</string>
+    <string name="battery_bar_statusbar">Stavová lišta</string>
+    <string name="battery_bar_topnavbar">Navrchu navigační lišty</string>
+    <string name="battery_bar_bottomnavbar">Vespod navigační lišty</string>
+    <string name="battery_bar_regular">Klasický</string>
+    <string name="battery_bar_center_mirrored">Na střed se zrcadlením</string>
 </resources>
