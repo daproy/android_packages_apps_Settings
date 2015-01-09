@@ -116,9 +116,7 @@ public class VolumeSeekBarPreference extends SeekBarPreference
     public void onProgressChanged(SeekBar seekBar, int progress,
             boolean fromTouch) {
         super.onProgressChanged(seekBar, progress, fromTouch);
-        if (mCallback != null) {
-            mCallback.onStreamValueChanged(mStream, progress);
-        }
+        mCallback.onStreamValueChanged(mStream, progress);
     }
 
     public void showIcon(int resId) {
