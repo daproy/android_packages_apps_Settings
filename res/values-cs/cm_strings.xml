@@ -54,6 +54,9 @@
     <string name="profile_unknown_nfc_tag">Neznámý profil</string>
     <string name="profile_add_nfc_text">NFC tag ukazuje na neznámý profil. Připojení tohoto NFC tagu k existujícímu profilu umožní vybrat ho příště.</string>
     <string name="profile_select">Vybrat profil</string>
+    <string name="profile_remove_dialog_message">Smazat profil %1$s?</string>
+    <string name="profile_populate_profile_from_state">Nastvit profil s použitím aktuální konfigurace zařízení?</string>
+    <string name="profile_menu_fill_from_state">Importovat aktuální konfiguraci zařízení</string>
     <!-- Add Profile -->
     <string name="add_profile_dialog_title">Vytvořit nový profil</string>
     <string name="profile_name_title">Název</string>
@@ -523,12 +526,15 @@
     <string name="profile_tabs_wifi">Wi\u2011Fi</string>
     <string name="profile_tabs_bluetooth">Bluetooth</string>
     <string name="profile_tabs_nfc">NFC</string>
+    <string name="profile_triggers_header">Triggery, které aktivují profil</string>
     <string name="profile_setup_setup_triggers_title">Krok 1: přidat triggery</string>
     <string name="profile_setup_setup_triggers_title_config">Úprava triggerů: <xliff:g id="profile_name">%1$s</xliff:g></string>
     <string name="profile_setup_actions_title">Krok 2: nastavit akce</string>
     <string name="profile_setup_actions_title_config">Přenastavit akce</string>
-    <string name="no_bluetooth_triggers">Pro Bluetooth nejsou dostupné žádné triggery</string>
-    <string name="no_wifi_triggers">Nejsou k dispozici žádné Wi\u2011Fi triggery</string>
+    <string name="no_bluetooth_triggers">Nejsou spárována žádná bluetooth zařízení.\nStiskem je možné spárovat bluetooth zařízení pro nastavení triggerů.</string>
+    <string name="no_wifi_triggers">Nejsou nastavena žádná Wi-Fi připojení.\nStiskem je možné se připojit k Wi-Fi síti pro nastavení triggerů.</string>
+    <string name="no_triggers_configured">Žádné triggery nejsou nastaveny. Stiskem je možné nějaký přidat.</string>
+     <string name="no_triggers_configured_nfc">Stiskem je možné nastavit nový NFC trigger.</string>
     <string name="profile_setup_setup_triggers_description">Vyberat triggery, které aktivují tento profil</string>
     <string name="profile_setup_actions_description">Nyní je třeba nastvit to, co se stane při aktivování profilu</string>
     <!-- App ops detail -->
@@ -727,4 +733,6 @@
     <string name="qs_main_tiles_title">Zapnout hlavní rychlá nastavení</string>
     <string name="qs_main_tiles_summary_on">Dvě hlavní dlaždice na prvním řádku</string>
     <string name="qs_main_tiles_summary_off">Tři dlaždice na každém řádku</string>
+    <string name="link_volume_option_title">Spojit hlasitosti vyzvánění a oznámení</string>
+    <string name="notification_volume_option_title">Hlasitost oznámení</string>
 </resources>
