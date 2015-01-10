@@ -36,7 +36,6 @@
             android:layout_height="wrap_content"
             android:text="@string/hex"
             android:textSize="20sp"
-            android:textColor="@color/dialog_color_picker_hex_title"
             android:layout_marginRight="10dp" />
 
         <EditText
@@ -47,8 +46,8 @@
 
         <ImageButton
             android:id="@+id/enter"
-            style="?android:attr/borderlessButtonStyle"
             android:src="@drawable/ic_action_set"
+            android:background="@android:color/transparent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
