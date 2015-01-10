@@ -41,13 +41,13 @@
             android:key="power_button_instantly_locks"
             android:title="@string/lockpattern_settings_enable_power_button_instantly_locks"/>
 
-        <SwitchPreference
+        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
             android:key="quick_unlock_control"
             android:title="@string/unlock_quick_unlock_control_title"
             android:summary="@string/unlock_quick_unlock_control_summary"
             android:persistent="false"/>
 
-        <ListPreference
+        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
             android:key="lock_numpad_random"
             android:entries="@array/lock_numpad_random_entries"
             android:entryValues="@array/lock_numpad_random_values"
