@@ -624,6 +624,8 @@
     <string name="uicc_mount" product="default">Přimontovat UICC úložiště</string>
     <string name="uicc_mount_summary" product="default"></string>
     <string name="uicc_insert_summary" product="default">Vložit UICC úložiště pro přimontování</string>
+    <string name="usb_settings_enable_ums_title">Zapnout úložiště USB?</string>
+    <string name="usb_settings_enable_ums_message">Systémové komponenty a aplikace závisí na primárním úložišti, a proto musí být vždy k dispozici. Tato vlastnost narušuje tuto funkčnost. Doporučeno je tedy používat MTP. Opravdu se má zapnout úložiště USB?</string>
     <string name="dlg_confirm_usb_unmount_title" product="default">Odmontovat USB úložiště?</string>
     <string name="dlg_confirm_uicc_unmount_title" product="default">Odmontovat UICC úložiště?</string>
     <string name="dlg_confirm_usb_unmount_text" product="default">If you unmount the USB storage, some apps you are using will stop and may be unavailable until you remount the USB storage.</string>
