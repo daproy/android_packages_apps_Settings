@@ -31,6 +31,12 @@
         android:defaultValue="true" />
 
     <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+        android:key="qs_show_brightness_slider"
+        android:title="@string/qs_brightness_slider_title"
+        android:summary="@string/qs_brightness_slider_summary"
+        android:defaultValue="true"/>
+
+    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
         android:key="quick_settings_vibrate"
         android:title="@string/quick_settings_vibrate_title"
         android:summary="@string/quick_settings_vibrate_summary"
