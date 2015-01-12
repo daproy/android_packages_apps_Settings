@@ -106,6 +106,14 @@
                 android:summary="@string/screenshot_sound_summary"
                 android:defaultValue="true" />
 
+        <!-- Default alarm ringtone -->
+        <com.android.settings.DefaultRingtonePreference
+                android:key="alarm_ringtone"
+                android:title="@string/alarm_ringtone_title"
+                android:dialogTitle="@string/alarm_ringtone_title"
+                android:persistent="false"
+                android:ringtoneType="alarm" />
+
         <!-- Other sounds -->
         <Preference
                 android:key="other_sounds"
