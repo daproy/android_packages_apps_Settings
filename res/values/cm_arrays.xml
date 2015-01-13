@@ -450,6 +450,5 @@
         <item>profile</item>
         <item>airplane</item>
         <item>users</item>
-        <item>bugreport</item>
     </string-array>
 </resources>

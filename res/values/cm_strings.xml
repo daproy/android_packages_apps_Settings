@@ -214,9 +214,7 @@
     <string name="power_menu_users_title">User switcher</string>
     <string name="power_menu_settings_title">Settings shortcut</string>
     <string name="power_menu_lockdown_title">Device lockdown</string>
-    <string name="power_menu_bug_report_title">Bug report</string>
     <string name="power_menu_sound_title">Sound panel</string>
-    <string name="power_menu_bug_report_disabled">Bug reporting is disabled in development settings</string>
     <string name="power_menu_profiles_disabled">System profiles are disabled</string>
 
     <!-- Backlight brightness settings screen -->
