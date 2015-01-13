@@ -647,6 +647,11 @@
     <string name="battery_bar_regular">Klasický</string>
     <string name="battery_bar_center_mirrored">Na střed se zrcadlením</string>
     <!-- OmniSwitch -->
-    <string name="omniswitch_settings_title">Nastavení OmniSwitch</string>
-    <string name="omniswitch_settings_summary">Zapnout a konfigurovat přepínač aplikací OmniSwitch</string>
+    <string name="omniswitch_settings_title">OmniSwitch</string>
+    <string name="recents_use_omniswitch_title">Použít jako přepínač aplikací</string>
+    <string name="recents_use_omniswitch_summary">Použít OmniSwitch místo výchozího vzhledu přepínače aplikací</string>
+    <string name="omniswitch_start_settings_title">Nastavení</string>
+    <string name="omniswitch_start_settings_summary">Otevřít nastavení OmniSwitch</string>
+    <string name="omniswitch_first_time_title">Informace</string>
+    <string name="omniswitch_first_time_message">OmniSwitch musí být zapnutý. Je to možné provést pomocí \"Nastavení\" dále</string>
 </resources>
