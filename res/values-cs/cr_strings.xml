@@ -194,6 +194,8 @@
     <!-- Display density -->
     <string name="display_density">Hustota displeje</string>
     <string name="display_density_summary">Přenastaví výchozí nastavení hustoty displeje (0 pro vypnutí, vyžaduje restart)</string>
+    <string name="display_density_override">Hlášená hustota</string>
+    <string name="display_density_override_summary">Přepíše hustotu hlášenou aplikacím (0 pro vypnutí, vyžaduje restart)</string>
     <string name="show_cpu_info">Zobrazit info o CPU</string>
     <string name="show_cpu_info_summary">Zobrazí aktuální info o CPU jako překrytí obrazovky</string>
     <!-- Camera sound switch -->
@@ -644,4 +646,7 @@
     <string name="battery_bar_bottomnavbar">Vespod navigační lišty</string>
     <string name="battery_bar_regular">Klasický</string>
     <string name="battery_bar_center_mirrored">Na střed se zrcadlením</string>
+    <!-- OmniSwitch -->
+    <string name="omniswitch_settings_title">Nastavení OmniSwitch</string>
+    <string name="omniswitch_settings_summary">Zapnout a konfigurovat přepínač aplikací OmniSwitch</string>
 </resources>

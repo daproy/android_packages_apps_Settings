@@ -24,7 +24,7 @@
     <string name="root_access">Root přístup</string>
     <string name="root_access_warning_title">Povolit root přístup?</string>
     <string name="root_access_warning_message">Umožnit aplikacím požádat o root přítup je velmi nebezpečné a může prolomit bezpečnost systému!</string>
-    <string name="root_access_none">Vyonuto</string>
+    <string name="root_access_none">Vypnuto</string>
     <string name="root_access_apps">Jen aplikace</string>
     <string name="root_access_adb">Jen ADB</string>
     <string name="root_access_all">Aplikace a ADB</string>
@@ -344,6 +344,9 @@
     <string name="status_bar_battery_percentage_default">Skryté (výchozí)</string>
     <string name="status_bar_battery_percentage_text_inside">Uvnitř ikony</string>
     <string name="status_bar_battery_percentage_text_next">Vedle ikony</string>
+    <!-- QuickSettings brightness slider -->
+    <string name="qs_brightness_slider_title">Zobrazit posuvník jasu</string>
+    <string name="qs_brightness_slider_summary">Zobrazit ovládání jasu v panelu rychlého nastavení</string>
     <!-- Notification light dialogs -->
     <string name="edit_light_settings">Upravit nastavení LED</string>
     <string name="pulse_speed_title">Délka impulsu a rychlost</string>
