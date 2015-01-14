@@ -28,6 +28,7 @@ import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
+import com.android.settings.Utils;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -38,9 +39,11 @@ public class LockMisc extends SettingsPreferenceFragment
     private static final String TAG = "LockMisc";
 
     private static final String KEY_LOCKSCREEN_CAMERA_WIDGET_HIDE = "camera_widget_hide";
+    private static final String KEY_LOCKSCREEN_DIALER_WIDGET_HIDE = "dialer_widget_hide";
 
     private PreferenceScreen mLockScreen;
     private SwitchPreference mCameraWidgetHide;
+    private SwitchPreference mDialerWidgetHide;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -64,6 +67,12 @@ public class LockMisc extends SettingsPreferenceFragment
         }
         if (mCameraDisabled){
             mLockScreen.removePreference(mCameraWidgetHide);
+        }
+
+        // Dialer widget hide
+        mDialerWidgetHide = (SwitchPreference) findPreference("dialer_widget_hide");
+        if (!Utils.isVoiceCapable(getActivity())){
+            mLockScreen.removePreference(mDialerWidgetHide);
         }
     }
 
