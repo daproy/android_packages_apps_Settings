@@ -36,6 +36,12 @@
          android:fragment="com.android.settings.temasek.gestureanywhere.GestureAnywhereSettings"
          android:title="@string/gesture_anywhere_title" />
 
+    <!-- Lockscreen misc -->
+    <PreferenceScreen
+         android:key="lock_temasek"
+         android:title="@string/temasek_lock_title"
+         android:fragment="com.android.settings.temasek.LockMisc" />
+
     <!-- Recent panel settings -->
     <PreferenceScreen
          android:key="recents_panel"
