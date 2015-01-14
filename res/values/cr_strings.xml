@@ -15,6 +15,8 @@
     <string name="recents_panel_title">Recents panel</string>
     <string name="recents_panel_settings">Recents panel settings</string>
     <string name="screen_and_animations_title">Screen and animations</string>
+    <string name="display_settings">Display</string>
+    <string name="display_settings_title">Display settings</string>
 
     <!-- General strings -->
     <string name="attention">Attention</string>
@@ -753,5 +755,12 @@ sword is entered</string>
 
     <!-- Default alarm ringtone -->
     <string name="alarm_ringtone_title">Default alarm ringtone</string>
+
+    <!-- [CHAR LIMIT=40] Sound & display settings screen, title of dialog for picking LCD density -->
+    <!-- Display settings screen, setting option name to change LCD density -->
+    <string name="lcd_density">LCD density</string>
+    <string name="dialog_title_lcd_density">LCD density</string>
+    <!-- Sound & display settings screen, setting option summary to change LCD density -->
+    <string name="lcd_density_summary">xxx DPI</string>
 
 </resources>

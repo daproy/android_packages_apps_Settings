@@ -30,6 +30,12 @@
          android:fragment="com.android.settings.temasek.LockClock"
          android:title="@string/lock_clock_title" />
 
+    <!-- Display -->
+    <PreferenceScreen
+         android:key="display_settings"
+         android:fragment="com.android.settings.temasek.DisplaySettings"
+         android:title="@string/display_settings_title" />
+
     <!-- Gesture anywhere -->
     <PreferenceScreen
          android:key="gesture_anywhere"
