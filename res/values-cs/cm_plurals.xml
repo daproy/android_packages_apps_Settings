@@ -22,4 +22,9 @@
         <item quantity="few">%d x</item>
         <item quantity="other">%d x</item>
     </plurals>
+    <plurals name="qs_tiles_summary">
+        <item quantity="one">Nastavena 1 dlaždice</item>
+        <item quantity="few">Nastaveny %d dlaždice</item>
+        <item quantity="other">Nastaveno %d dlaždic</item>
+    </plurals>
 </resources>

@@ -654,4 +654,15 @@
     <string name="omniswitch_start_settings_summary">Otevřít nastavení OmniSwitch</string>
     <string name="omniswitch_first_time_title">Informace</string>
     <string name="omniswitch_first_time_message">OmniSwitch musí být zapnutý. Je to možné provést pomocí \"Nastavení\" dále</string>
+    <!-- temasek lockscreen -->
+    <string name="temasek_lock_title">Zamčená obrazovka - ostatní</string>
+    <string name="lockscreen_category">Nastavení zamčené obrazovky</string>
+    <!-- Camera lockscreen swipe -->
+    <string name="camera_widget_hide">Vypnout fotoaparát na zamčené obrazovce</string>
+    <string name="camera_widget_hide_summary">Umožňuje vypnout gesto pro spuštění fotoaparátu</string>
+    <!-- Dialer lockscreen swipe -->
+    <string name="dialer_widget_hide">Vypnout vytáčení na zamčené obrazovce</string>
+    <string name="dialer_widget_hide_summary">Umožňuje vypnout gesto pro spuštění vytáčení.\nVyžaduje restart SystemUI.</string>
+    <!-- Default alarm ringtone -->
+    <string name="alarm_ringtone_title">Výchozí tón budíku</string>
 </resources>
