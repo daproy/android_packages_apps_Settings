@@ -29,7 +29,7 @@
             android:summary="@string/camera_widget_hide_summary" />
 
         <!-- Disable dialer swipe -->
-        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+        <SwitchPreference
             android:key="dialer_widget_hide"
             android:title="@string/dialer_widget_hide"
             android:summary="@string/dialer_widget_hide_summary" />

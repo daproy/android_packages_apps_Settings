@@ -25,16 +25,21 @@ import android.content.res.Resources;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.os.Bundle;
+import android.os.UserHandle;
 import android.preference.Preference;
+import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
+import com.android.settings.util.Helpers;
 import com.android.settings.Utils;
+import android.provider.Settings;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
 public class LockMisc extends SettingsPreferenceFragment
-        implements OnSharedPreferenceChangeListener {
+        implements OnSharedPreferenceChangeListener,
+        Preference.OnPreferenceChangeListener {
 
     private static final String TAG = "LockMisc";
 
@@ -52,6 +57,7 @@ public class LockMisc extends SettingsPreferenceFragment
         addPreferencesFromResource(R.xml.temasek_lockscreen);
 
         PreferenceScreen prefSet = getPreferenceScreen();
+        ContentResolver resolver = getActivity().getContentResolver();
         PackageManager pm = getPackageManager();
         Resources res = getResources();
 
@@ -70,6 +76,11 @@ public class LockMisc extends SettingsPreferenceFragment
         }
 
         // Dialer widget hide
+        mDialerWidgetHide = (SwitchPreference) prefSet.findPreference(KEY_LOCKSCREEN_DIALER_WIDGET_HIDE);
+        mDialerWidgetHide.setChecked(Settings.System.getIntForUser(resolver,
+            Settings.System.DIALER_WIDGET_HIDE, 0, UserHandle.USER_CURRENT) == 1);
+        mDialerWidgetHide.setOnPreferenceChangeListener(this);
+
         mDialerWidgetHide = (SwitchPreference) findPreference("dialer_widget_hide");
         if (!Utils.isVoiceCapable(getActivity())){
             mLockScreen.removePreference(mDialerWidgetHide);
@@ -93,5 +104,16 @@ public class LockMisc extends SettingsPreferenceFragment
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         return super.onPreferenceTreeClick(preferenceScreen, preference);
+    }
+
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object objValue) {
+        if (preference == mDialerWidgetHide) {
+            boolean value = (Boolean) objValue;
+            Settings.System.putIntForUser(getActivity().getContentResolver(),
+                    Settings.System.DIALER_WIDGET_HIDE, value ? 1 : 0, UserHandle.USER_CURRENT);
+            Helpers.restartSystemUI();
+        }
+        return false;
     }
 }
