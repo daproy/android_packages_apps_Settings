@@ -112,7 +112,8 @@ public class LockMisc extends SettingsPreferenceFragment
             boolean value = (Boolean) objValue;
             Settings.System.putIntForUser(getActivity().getContentResolver(),
                     Settings.System.DIALER_WIDGET_HIDE, value ? 1 : 0, UserHandle.USER_CURRENT);
-            Helpers.restartSystemUI();
+            Helpers.restartSystem();
+            return true;
         }
         return false;
     }
