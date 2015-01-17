@@ -64,12 +64,18 @@
             android:summary="@string/block_on_secure_keyguard_summary"
             android:persistent="false" />
 
-    </PreferenceCategory>
+        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="qs_location_advanced"
+            android:title="@string/qs_advanced_location_title"
+            android:summary="@string/qs_advanced_location_summary"
+            android:defaultValue="false" />
 
-    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
-        android:key="qs_location_advanced"
-        android:title="@string/qs_advanced_location_title"
-        android:summary="@string/qs_advanced_location_summary"
-        android:defaultValue="false" />
+        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="status_bar_show_weather"
+            android:title="@string/status_bar_show_weather_title"
+            android:summary="@string/status_bar_show_weather_summary"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>
