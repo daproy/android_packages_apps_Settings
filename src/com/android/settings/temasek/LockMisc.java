@@ -50,6 +50,8 @@ public class LockMisc extends SettingsPreferenceFragment
     private SwitchPreference mCameraWidgetHide;
     private SwitchPreference mDialerWidgetHide;
 
+    private Context mContext;
+
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
@@ -60,6 +62,7 @@ public class LockMisc extends SettingsPreferenceFragment
         ContentResolver resolver = getActivity().getContentResolver();
         PackageManager pm = getPackageManager();
         Resources res = getResources();
+        mContext = getActivity();
 
         mLockScreen = (PreferenceScreen) findPreference("lock_screen");
 
@@ -82,7 +85,7 @@ public class LockMisc extends SettingsPreferenceFragment
         mDialerWidgetHide.setOnPreferenceChangeListener(this);
 
         mDialerWidgetHide = (SwitchPreference) findPreference("dialer_widget_hide");
-        if (!Utils.isVoiceCapable(getActivity())){
+        if ((!Utils.isVoiceCapable(mContext) || Utils.isWifiOnly(mContext))) {
             mLockScreen.removePreference(mDialerWidgetHide);
         }
     }
