@@ -19,6 +19,13 @@
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
         android:title="@string/temasek_lockscreen_title">
 
+    <!-- Lockscreen weather -->
+    <SwitchPreference
+        android:key="lockscreen_weather"
+        android:title="@string/lockscreen_weather_title"
+        android:summary="@string/lockscreen_weather_summary"
+        android:defaultValue="false" />
+
     <PreferenceCategory
         android:key="lockscreen_shortcuts_category"
         android:title="@string/temasek_lockscreen_shortcuts_category" >
