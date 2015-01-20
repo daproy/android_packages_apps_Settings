@@ -34,6 +34,13 @@
             android:title="@string/dialer_widget_hide"
             android:summary="@string/dialer_widget_hide_summary" />
 
+        <!-- Lockscreen weather -->
+        <SwitchPreference
+            android:key="lockscreen_weather"
+            android:title="@string/lockscreen_weather_title"
+            android:summary="@string/lockscreen_weather_summary"
+            android:defaultValue="true" />
+
    </PreferenceCategory>
 
 </PreferenceScreen>

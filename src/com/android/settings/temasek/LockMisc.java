@@ -45,10 +45,12 @@ public class LockMisc extends SettingsPreferenceFragment
 
     private static final String KEY_LOCKSCREEN_CAMERA_WIDGET_HIDE = "camera_widget_hide";
     private static final String KEY_LOCKSCREEN_DIALER_WIDGET_HIDE = "dialer_widget_hide";
+    private static final String KEY_LOCKSCREEN_WEATHER = "lockscreen_weather";
 
     private PreferenceScreen mLockScreen;
     private SwitchPreference mCameraWidgetHide;
     private SwitchPreference mDialerWidgetHide;
+    private SwitchPreference mLockscreenWeather;
 
     private Context mContext;
 
@@ -88,6 +90,12 @@ public class LockMisc extends SettingsPreferenceFragment
         if ((!Utils.isVoiceCapable(mContext) || Utils.isWifiOnly(mContext))) {
             mLockScreen.removePreference(mDialerWidgetHide);
         }
+
+        // Lockscreen weather
+        mLockscreenWeather = (SwitchPreference) findPreference(KEY_LOCKSCREEN_WEATHER);
+        mLockscreenWeather.setChecked(Settings.System.getIntForUser(resolver,
+            Settings.System.LOCKSCREEN_WEATHER, 1, UserHandle.USER_CURRENT) == 1);
+        mLockscreenWeather.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -115,6 +123,12 @@ public class LockMisc extends SettingsPreferenceFragment
             boolean value = (Boolean) objValue;
             Settings.System.putIntForUser(getActivity().getContentResolver(),
                     Settings.System.DIALER_WIDGET_HIDE, value ? 1 : 0, UserHandle.USER_CURRENT);
+            Helpers.restartSystemUI();
+            return true;
+        } else if (preference == mLockscreenWeather) {
+            boolean value = (Boolean) objValue;
+            Settings.System.putIntForUser(getActivity().getContentResolver(),
+                    Settings.System.LOCKSCREEN_WEATHER, value ? 1 : 0, UserHandle.USER_CURRENT);
             Helpers.restartSystemUI();
         }
         return false;
