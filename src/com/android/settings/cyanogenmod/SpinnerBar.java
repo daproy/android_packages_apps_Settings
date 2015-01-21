@@ -113,6 +113,13 @@ public class SpinnerBar extends LinearLayout implements OnItemSelectedListener {
             }
         });
 
+        mTextView.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mSpinner.performClick();
+            }
+        });
+
         // Default is hide
         setVisibility(View.GONE);
     }
