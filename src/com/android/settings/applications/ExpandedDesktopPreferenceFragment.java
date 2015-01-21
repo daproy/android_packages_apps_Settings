@@ -15,7 +15,6 @@
  */
 package com.android.settings.applications;
 
-import android.animation.LayoutTransition;
 import android.annotation.Nullable;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -23,8 +22,6 @@ import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
-import android.graphics.PorterDuff;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.RemoteException;
 import android.provider.Settings;
@@ -32,63 +29,53 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewTreeObserver;
 import android.view.WindowManagerGlobal;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.view.animation.Interpolator;
-import android.view.animation.LayoutAnimationController;
-import android.view.animation.TranslateAnimation;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.SectionIndexer;
 import android.widget.Spinner;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.view.WindowManagerPolicyControl;
 import com.android.settings.R;
 import com.android.settings.SettingsActivity;
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.settings.cyanogenmod.SpinnerBar;
+import com.android.settings.widget.SwitchBar;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class ExpandedDesktopPreferenceFragment extends SettingsPreferenceFragment
         implements AdapterView.OnItemClickListener, ApplicationsState.Callbacks,
-        SpinnerBar.OnSpinnerItemSelectedListener {
+        SwitchBar.OnSwitchChangeListener {
 
     private static final int STATE_DISABLED = 0;
     private static final int STATE_STATUS_HIDDEN = 1;
     private static final int STATE_NAVIGATION_HIDDEN = 2;
     private static final int STATE_BOTH_HIDDEN = 3;
 
-    private static final int STATE_DISABLE_FOR_ALL = 0;
     private static final int STATE_ENABLE_FOR_ALL = 1;
     private static final int STATE_USER_CONFIGURABLE = 2;
-
-    private static final String USER_APPS = "user_apps";
 
     private AllPackagesAdapter mAllPackagesAdapter;
     private ApplicationsState mApplicationsState;
     private View mEmptyView;
+    private View mProgressBar;
     private ListView mUserListView;
     private ApplicationsState.Session mSession;
     private ActivityFilter mActivityFilter;
     private Map<String, ApplicationsState.AppEntry> mEntryMap =
             new HashMap<String, ApplicationsState.AppEntry>();
-    private Interpolator mInterpolator;
     private int mExpandedDesktopState;
-    private SpinnerBar mSpinnerBar;
+    private SwitchBar mSwitchBar;
 
     private int getExpandedDesktopState(ContentResolver cr) {
         String value = Settings.Global.getString(cr, Settings.Global.POLICY_CONTROL);
-        if (TextUtils.isEmpty(value)) {
-            return STATE_DISABLE_FOR_ALL;
-        }
         if ("immersive.full=*".equals(value)) {
             return STATE_ENABLE_FOR_ALL;
         }
@@ -98,28 +85,16 @@ public class ExpandedDesktopPreferenceFragment extends SettingsPreferenceFragmen
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         mApplicationsState = ApplicationsState.getInstance(getActivity().getApplication());
         mSession = mApplicationsState.newSession(this);
         mSession.resume();
         mActivityFilter = new ActivityFilter(getActivity().getPackageManager());
 
-        mAllPackagesAdapter = new AllPackagesAdapter(getActivity());
         WindowManagerPolicyControl.reloadFromSetting(getActivity(),
                 Settings.Global.POLICY_CONTROL_SELECTED);
+        mAllPackagesAdapter = new AllPackagesAdapter(getActivity());
 
-        if (savedInstanceState == null || !savedInstanceState.containsKey(USER_APPS)) {
-            ArrayList<String> whitelistEntries =
-                    new ArrayList<String>(WindowManagerPolicyControl.getWhiteLists());
-            mAllPackagesAdapter.setEntriesEnabled(whitelistEntries);
-        } else {
-            mAllPackagesAdapter.setEntriesEnabled(
-                    savedInstanceState.getStringArrayList(USER_APPS));
-        }
         mAllPackagesAdapter.notifyDataSetChanged();
-
-        mInterpolator = AnimationUtils.loadInterpolator(getActivity(),
-                android.R.interpolator.fast_out_slow_in);
 
         mExpandedDesktopState = getExpandedDesktopState(getActivity().getContentResolver());
 
@@ -148,8 +123,8 @@ public class ExpandedDesktopPreferenceFragment extends SettingsPreferenceFragmen
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        if (mSpinnerBar != null) {
-            mSpinnerBar.removeOnItemSelectedListener(this);
+        if (mSwitchBar != null) {
+            mSwitchBar.removeOnSwitchChangeListener(this);
         }
     }
 
@@ -159,24 +134,24 @@ public class ExpandedDesktopPreferenceFragment extends SettingsPreferenceFragmen
 
         mUserListView = (ListView) view.findViewById(R.id.user_list_view);
         mUserListView.setAdapter(mAllPackagesAdapter);
+        mUserListView.setFastScrollEnabled(true);
         mUserListView.setOnItemClickListener(this);
 
-        mSpinnerBar = ((SettingsActivity) getActivity()).getSpinnerBar();
-        mSpinnerBar.show();
-        ArrayAdapter<CharSequence> arrayAdapter = ArrayAdapter.createFromResource(getActivity(),
-                R.array.expanded_desktop_states,
-                R.layout.spinner_simple_item);
-        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        mSpinnerBar.setAdapter(arrayAdapter);
-        mSpinnerBar.addOnItemSelectedListener(this);
-        mSpinnerBar.setTextViewLabel(getString(R.string.expanded_desktop_state));
-        mSpinnerBar.setSpinnerPosition(mExpandedDesktopState);
+        mSwitchBar = ((SettingsActivity) getActivity()).getSwitchBar();
+        mSwitchBar.addOnSwitchChangeListener(this);
+        mSwitchBar.setOnStateOffLabel(R.string.expanded_enabled_for_all);
+        mSwitchBar.setOnStateOnLabel(R.string.expanded_enabled_for_all);
+        mSwitchBar.show();
 
         mEmptyView = view.findViewById(R.id.nothing_to_show);
+        mProgressBar = view.findViewById(R.id.progress_bar);
 
         if (mExpandedDesktopState == STATE_USER_CONFIGURABLE) {
+            mSwitchBar.setChecked(false);
             showListView();
         } else {
+            mSwitchBar.setChecked(true);
+            mProgressBar.setVisibility(View.GONE);
             hideListView();
         }
     }
@@ -194,17 +169,9 @@ public class ExpandedDesktopPreferenceFragment extends SettingsPreferenceFragmen
         hideListView();
     }
 
-    private void disableForAll() {
-        mExpandedDesktopState = STATE_DISABLE_FOR_ALL;
-        mAllPackagesAdapter.notifyDataSetInvalidated();
-        writeValue("");
-        hideListView();
-    }
-
     private void userConfigurableSettings() {
         mExpandedDesktopState = STATE_USER_CONFIGURABLE;
         mAllPackagesAdapter.notifyDataSetInvalidated();
-        WindowManagerPolicyControl.saveToSettings(getActivity());
         showListView();
     }
 
@@ -235,6 +202,7 @@ public class ExpandedDesktopPreferenceFragment extends SettingsPreferenceFragmen
                 state = STATE_BOTH_HIDDEN;
             }
         }
+
         return state;
     }
 
@@ -265,34 +233,46 @@ public class ExpandedDesktopPreferenceFragment extends SettingsPreferenceFragmen
     public void onAllSizesComputed() {
     }
 
-    @Override
-    public void onSpinnerItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        switch (position) {
-            case STATE_DISABLE_FOR_ALL:
-                disableForAll();
-                break;
-            case STATE_ENABLE_FOR_ALL:
-                enableForAll();
-                break;
-            case STATE_USER_CONFIGURABLE:
-                userConfigurableSettings();
-                break;
-        }
-    }
-
-    @Override
-    public void onSpinnerNothingSelected(AdapterView<?> parent) {
-        // Ignore
-    }
-
     private void handleAppEntries(List<ApplicationsState.AppEntry> entries) {
-        mAllPackagesAdapter.setEntries(entries);
+        String lastSectionIndex = null;
+        ArrayList<String> sections = new ArrayList<String>();
+        ArrayList<Integer> positions = new ArrayList<Integer>();
+        PackageManager pm = getPackageManager();
+        int count = entries.size(), offset = 0;
+
+        for (int i = 0; i < count; i++) {
+            ApplicationInfo info = entries.get(i).info;
+            String label = (String) info.loadLabel(pm);
+            String sectionIndex;
+
+            if (!info.enabled) {
+                sectionIndex = "--"; //XXX
+            } else if (TextUtils.isEmpty(label)) {
+                sectionIndex = "";
+            } else {
+                sectionIndex = label.substring(0, 1).toUpperCase();
+            }
+            if (lastSectionIndex == null) {
+                lastSectionIndex = sectionIndex;
+            }
+
+            if (!TextUtils.equals(sectionIndex, lastSectionIndex)) {
+                sections.add(sectionIndex);
+                positions.add(offset);
+                lastSectionIndex = sectionIndex;
+            }
+            offset++;
+        }
+
+        mAllPackagesAdapter.setEntries(entries, sections, positions);
         mEntryMap.clear();
         for (ApplicationsState.AppEntry e : entries) {
             mEntryMap.put(e.info.packageName, e);
         }
 
-        mAllPackagesAdapter.notifyDataSetInvalidated();
+        if (mProgressBar != null) {
+            mProgressBar.setVisibility(View.GONE);
+        }
 
         if (mExpandedDesktopState != STATE_USER_CONFIGURABLE) {
             hideListView();
@@ -321,17 +301,26 @@ public class ExpandedDesktopPreferenceFragment extends SettingsPreferenceFragmen
         }
     }
 
+    @Override
+    public void onSwitchChanged(Switch switchView, boolean isChecked) {
+        if (isChecked) {
+            enableForAll();
+        } else {
+            userConfigurableSettings();
+        }
+    }
+
     private class AllPackagesAdapter extends BaseAdapter
-            implements AdapterView.OnItemSelectedListener {
+            implements AdapterView.OnItemSelectedListener, SectionIndexer {
 
         private final LayoutInflater inflater;
         private List<ApplicationsState.AppEntry> entries = new ArrayList<>();
-        private final PackageManager mPackageManager;
         private final ModeAdapter mModesAdapter;
+        private String[] mSections;
+        private int[] mPositions;
 
         public AllPackagesAdapter(Context context) {
             this.inflater = LayoutInflater.from(context);
-            mPackageManager = context.getPackageManager();
             mModesAdapter = new ModeAdapter(context);
             mActivityFilter = new ActivityFilter(context.getPackageManager());
         }
@@ -383,45 +372,21 @@ public class ExpandedDesktopPreferenceFragment extends SettingsPreferenceFragmen
             return holder.rootView;
         }
 
-        private void setEntries(List<ApplicationsState.AppEntry> entries) {
+        private void setEntries(List<ApplicationsState.AppEntry> entries,
+                List<String> sections, List<Integer> positions) {
             this.entries = entries;
             if (mUserListView != null && mUserListView.getEmptyView() != mEmptyView) {
                 mUserListView.setEmptyView(mEmptyView);
             }
-            notifyDataSetChanged();
-        }
 
-        private void setEntriesEnabled(ArrayList<String> newEntries) {
-            for (int i = 0; i < newEntries.size(); i++) {
-                String packageName = newEntries.get(i);
-                ApplicationsState.AppEntry entry = mEntryMap.get(packageName);
-                if (entry == null) {
-                    try {
-                        ApplicationInfo info = mPackageManager.getApplicationInfo(packageName, 0);
-                        if (info != null) {
-                            entry = new ApplicationsState.AppEntry(getActivity(), info, i);
-                        }
-                    } catch (PackageManager.NameNotFoundException e) {
-                        // Do nothing
-                    }
-
-                    if (this.entries.contains(entry)) {
-                        // update
-                        WindowManagerPolicyControl.removeFromWhiteLists(entry.info.packageName);
-                        WindowManagerPolicyControl.addToStatusWhiteList(entry.info.packageName);
-                    }
-                }
+            mSections = sections.toArray(new String[sections.size()]);
+            mPositions = new int[positions.size()];
+            for (int i = 0; i < positions.size(); i++) {
+                mPositions[i] = positions.get(i);
             }
             notifyDataSetChanged();
         }
 
-        public ArrayList<String> getEntriesAsStringList() {
-            ArrayList<String> stringEntries = new ArrayList<String>();
-            for (ApplicationsState.AppEntry entry : entries) {
-                stringEntries.add(entry.getNormalizedLabel());
-            }
-            return stringEntries;
-        }
 
         @Override
         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -448,6 +413,39 @@ public class ExpandedDesktopPreferenceFragment extends SettingsPreferenceFragmen
 
         @Override
         public void onNothingSelected(AdapterView<?> parent) {
+        }
+
+        @Override
+        public int getPositionForSection(int section) {
+            if (section < 0 || section >= mSections.length) {
+                return -1;
+            }
+
+            return mPositions[section];
+        }
+
+        @Override
+        public int getSectionForPosition(int position) {
+            if (position < 0 || position >= getCount()) {
+                return -1;
+            }
+
+            int index = Arrays.binarySearch(mPositions, position);
+
+        /*
+         * Consider this example: section positions are 0, 3, 5; the supplied
+         * position is 4. The section corresponding to position 4 starts at
+         * position 3, so the expected return value is 1. Binary search will not
+         * find 4 in the array and thus will return -insertPosition-1, i.e. -3.
+         * To get from that number to the expected value of 1 we need to negate
+         * and subtract 2.
+         */
+            return index >= 0 ? index : -index - 2;
+        }
+
+        @Override
+        public Object[] getSections() {
+            return mSections;
         }
     }
 
@@ -507,7 +505,8 @@ public class ExpandedDesktopPreferenceFragment extends SettingsPreferenceFragmen
             if (convertView != null) {
                 view = (TextView) convertView;
             } else {
-                view = (TextView) inflater.inflate(android.R.layout.simple_spinner_dropdown_item, parent, false);
+                view = (TextView) inflater.inflate(android.R.layout.simple_spinner_dropdown_item,
+                        parent, false);
             }
 
             view.setText(items[position]);
