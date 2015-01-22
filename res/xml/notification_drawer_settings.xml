@@ -64,7 +64,7 @@
             android:summary="@string/qs_brightness_slider_summary"
             android:defaultValue="true"/>
 
-        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+        <com.android.settings.cyanogenmod.SecureSettingSwitchPreference
             android:key="qs_location_advanced"
             android:title="@string/qs_advanced_location_title"
             android:summary="@string/qs_advanced_location_summary"
