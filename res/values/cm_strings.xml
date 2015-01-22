@@ -915,6 +915,13 @@
     <string name="wifi_channel">Channel</string>
     <string name="wifi_mhz">MHz</string>
 
+    <!-- About phone settings screen, setting option dialog title to show regulatory information [CHAR LIMIT=25] -->
+    <string name="regulatory_information_dialog_title" translatable="false">@string/regulatory_information</string>
+
+    <!-- SAR information -->
+    <string name="maximum_head_level">Head: %1$s W/kg</string>
+    <string name="maximum_body_level">Body: %1$s W/kg</string>
+
     <string name="power_menu_expanded_desktop">Expanded desktop</string>
     <string name="expanded_hide_nothing">Hide nothing</string>
     <string name="expanded_hide_status">Hide status bar</string>
@@ -924,12 +931,4 @@
     <string name="expanded_desktop_state">Expanded state</string>
     <string name="expanded_enabled_for_all">Enabled for all</string>
     <string name="expanded_user_configurable">User configurable</string>
-
-    <!-- About phone settings screen, setting option dialog title to show regulatory information [CHAR LIMIT=25] -->
-    <string name="regulatory_information_dialog_title" translatable="false">@string/regulatory_information</string>
-
-    <!-- SAR information -->
-    <string name="maximum_head_level">Head: %1$s W/kg</string>
-    <string name="maximum_body_level">Body: %1$s W/kg</string>
-
 </resources>

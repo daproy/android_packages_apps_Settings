@@ -91,7 +91,7 @@ public class ExpandedDesktopPreferenceFragment extends SettingsPreferenceFragmen
         mActivityFilter = new ActivityFilter(getActivity().getPackageManager());
 
         WindowManagerPolicyControl.reloadFromSetting(getActivity(),
-                Settings.Global.POLICY_CONTROL_SELECTED);
+                Settings.Global.POLICY_CONTROL);
         mAllPackagesAdapter = new AllPackagesAdapter(getActivity());
 
         mAllPackagesAdapter.notifyDataSetChanged();
@@ -116,6 +116,7 @@ public class ExpandedDesktopPreferenceFragment extends SettingsPreferenceFragmen
     @Override
     public void onDestroy() {
         super.onDestroy();
+        save();
         mSession.pause();
         mSession.release();
     }
@@ -164,15 +165,19 @@ public class ExpandedDesktopPreferenceFragment extends SettingsPreferenceFragmen
 
     private void enableForAll() {
         mExpandedDesktopState = STATE_ENABLE_FOR_ALL;
-        mAllPackagesAdapter.notifyDataSetInvalidated();
         writeValue("immersive.full=*");
+        WindowManagerPolicyControl.reloadFromSetting(getActivity());
+        mAllPackagesAdapter.notifyDataSetInvalidated();
         hideListView();
     }
 
     private void userConfigurableSettings() {
         mExpandedDesktopState = STATE_USER_CONFIGURABLE;
+        writeValue("");
+        WindowManagerPolicyControl.reloadFromSetting(getActivity());
         mAllPackagesAdapter.notifyDataSetInvalidated();
         showListView();
+
     }
 
     private void hideListView() {
@@ -287,7 +292,11 @@ public class ExpandedDesktopPreferenceFragment extends SettingsPreferenceFragmen
         }
     }
 
-    public int getStateDrawable(int state) {
+    private void save() {
+        WindowManagerPolicyControl.saveToSettings(getActivity(), Settings.Global.POLICY_CONTROL);
+    }
+
+    int getStateDrawable(int state) {
         switch (state) {
             case STATE_STATUS_HIDDEN:
                 return R.drawable.ic_settings_extdesk_hidestatusbar;
@@ -405,9 +414,7 @@ public class ExpandedDesktopPreferenceFragment extends SettingsPreferenceFragmen
                     WindowManagerPolicyControl.addToNavigationWhiteList(entry.info.packageName);
                     break;
             }
-            String key = mExpandedDesktopState == STATE_USER_CONFIGURABLE ?
-                    Settings.Global.POLICY_CONTROL : Settings.Global.POLICY_CONTROL_SELECTED;
-            WindowManagerPolicyControl.saveToSettings(parent.getContext(), key);
+            save();
             notifyDataSetChanged();
         }
 
