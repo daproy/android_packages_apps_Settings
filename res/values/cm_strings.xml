@@ -915,9 +915,6 @@
     <string name="wifi_channel">Channel</string>
     <string name="wifi_mhz">MHz</string>
 
-    <!-- SpinnerBar -->
-    <string name="spinner_inflated_text"></string>
-
     <string name="power_menu_expanded_desktop">Expanded desktop</string>
     <string name="expanded_hide_nothing">Hide nothing</string>
     <string name="expanded_hide_status">Hide status bar</string>
