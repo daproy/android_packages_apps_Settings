@@ -750,22 +750,6 @@ sword is entered</string>
     <string name="omniswitch_first_time_title">Information</string>
     <string name="omniswitch_first_time_message">Make sure you have enabled OmniSwitch. You can do this by using \"Settings\" below</string>
 
-    <!-- temasek lockscreen -->
-    <string name="temasek_lock_title">Lockscreen misc</string>
-    <string name="lockscreen_category">Lockscreen settings</string>
-
-    <!-- Camera lockscreen swipe -->
-    <string name="camera_widget_hide">Disable lockscreen camera</string>
-    <string name="camera_widget_hide_summary">Allows you to disable swipe to open camera in lockscreen</string>
-
-    <!-- Dialer lockscreen swipe -->
-    <string name="dialer_widget_hide">Disable lockscreen dialer</string>
-    <string name="dialer_widget_hide_summary">Allows you to disable swipe to open dialer in lockscreen.\nSystemUI will restart.</string>
-
-    <!-- Lockscreen weather -->
-    <string name="lockscreen_weather_title">Lockscreen weather</string>
-    <string name="lockscreen_weather_summary">SystemUI will be restarted!</string>
-
     <!-- Default alarm ringtone -->
     <string name="alarm_ringtone_title">Default alarm ringtone</string>
 
