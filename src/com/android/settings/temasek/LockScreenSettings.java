@@ -34,7 +34,7 @@ public class LockScreenSettings extends SettingsPreferenceFragment
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        addPreferencesFromResource(R.xml.tema_lockscreen);
+        addPreferencesFromResource(R.xml.temasek_lockscreen);
     }
 
     @Override

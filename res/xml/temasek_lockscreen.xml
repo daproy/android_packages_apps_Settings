@@ -17,11 +17,11 @@
 <PreferenceScreen 
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-        android:title="@string/tema_lockscreen_title">
+        android:title="@string/temasek_lockscreen_title">
 
     <PreferenceCategory
         android:key="lockscreen_shortcuts_category"
-        android:title="@string/tema_lockscreen_shortcuts_category" >
+        android:title="@string/temasek_lockscreen_shortcuts_category" >
 
         <PreferenceScreen
                  android:key="slim_lockscreen_shortcuts"

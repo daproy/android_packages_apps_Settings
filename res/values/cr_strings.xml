@@ -409,10 +409,10 @@ sword is entered</string>
     <string name="shortcuts_icon_picker_twitter">Twitter</string>
     <string name="shortcuts_icon_picker_unlock">Unlock</string>
 
-    <!-- tema lockscreen -->
-    <string name="tema_lockscreen_title">Lockscreen</string>
-    <string name="tema_lockscreen_category">Lockscreen settings</string>
-    <string name="tema_lockscreen_shortcuts_category">Shortcuts</string>
+    <!-- Temasek lockscreen -->
+    <string name="temasek_lockscreen_title">Lockscreen</string>
+    <string name="temasek_lockscreen_category">Lockscreen settings</string>
+    <string name="temasek_lockscreen_shortcuts_category">Shortcuts</string>
     <!-- CM lockscreen shortcuts -->
     <string name="cm_lockscreen_shortcuts_title">Bottom corners shortcuts</string>
     <string name="cm_lockscreen_shortcuts_summary">View or change custom bottom corners lockscreen shortcuts</string>
