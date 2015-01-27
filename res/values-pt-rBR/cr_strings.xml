@@ -4,7 +4,9 @@
 
   <!-- About phone screen, Temasek version -->
   <string name="temasek_version_title">Versão oficial de Temasek</string>
-  
+  <!-- Do NOT translate this -->
+   <string name="temasek_version_default">Build V6.3</string>
+	
   <!-- temasek spare parts -->
   <string name="temasek_settings_title">Temasek spare parts</string>
   <string name="status_bar_title">Barra de status</string>
@@ -13,7 +15,7 @@
   <string name="recents_panel_title">Painel recentes</string>
   <string name="recents_panel_settings">Configurações do painel de Recentes</string>
   <string name="screen_and_animations_title">Tela e animações</string>
-  <string name="display_settings">Exposição</string>
+  <string name="display_settings">Display</string>
   <string name="display_settings_title">Configurações de exibição</string>
   
   <!-- General strings -->
@@ -105,7 +107,7 @@
   
   <!-- Screenshot sound -->
   <string name="screenshot_sound_title">Som de screenshot</string>
-  <string name="screenshot_sound_summary">Jogadas de efeito de som, quando a imagem é tomada</string>
+  <string name="screenshot_sound_summary">Efeito de son ao tirar uma Screenshot</string>
   
   <!-- Toast animations -->
   <string name="toast_animation_title">Animações de brinde</string>
@@ -144,7 +146,7 @@
   <!-- Recents panel settings -->
   <string name="recents_panel_settings">Configurações do painel de Recentes</string>
   <string name="show_clear_all_recents_button_title">Limpar todos os botão recentes</string>
-  <string name="show_clear_all_recents_button_summary">Mostrar clara todos os botões no painel recentes</string>
+  <string name="show_clear_all_recents_button_summary">Mostrar claro todos os botões no painel recentes</string>
   <string name="recents_clear_all_location_title">Limpar todos os localização de recentes</string>
   <string name="recents_clear_all_location_top_right">Superior direito</string>
   <string name="recents_clear_all_location_top_left">Superior esquerdo</string>
@@ -209,10 +211,10 @@
   <!-- Partition Info -->
   <string name="partition_info_title">Exibir informações de partição</string>
   <string name="partition_info_summary">Mostra-lhe as informações de partição para o dispositivo</string>
-  <string name="partition_info_system">/sistema</string>
+  <string name="partition_info_system">/Sistema</string>
   <string name="partition_info_data">/Data</string>
-  <string name="partition_info_cache">/cache</string>
-  <string name="partition_info_sdcard">/sdcard (gordura)</string>
+  <string name="partition_info_cache">/Cache</string>
+  <string name="partition_info_sdcard">/Sdcard (gordura)</string>
   <string name="partition_info_sdext">/SD-ext (EXT)</string>
   <string name="partition_info_used_of">/</string>
   
@@ -224,7 +226,7 @@
   <!-- Camera sound switch -->
   <string name="camera_sounds_title">Som do obturador da câmera</string>
   <string name="camera_sounds_summary">Habilitar o som do obturador da câmera do sistema</string>
-  <string name="camera_sound_warning_dialog_text">Desabilitar o som do obturador da câmera é ilegal em algumas áreas! Por favor, verifique a lei aplicável no seu país</string>
+  <string name="camera_sound_warning_dialog_text">Desabilitar o som do obturador da câmera, é ilegal em algumas áreas! Por favor, verifique a lei aplicável no seu país</string>
   
   <!-- MediaScanner behavior on boot -->
   <string name="options_settings_title">Opções</string>
@@ -279,7 +281,7 @@
   <!--Power menu -->
   <string name="power_category">Tecla de alimentação</string>
   <string name="lockscreen_enable_power_menu_title">Mostrar a tela de bloqueio do menu de energia</string>
-  <string name="lockscreen_enable_power_menu_summary">Esta opção irá desativar o menu de poder apenas em telas de bloqueio seguro</string>
+  <string name="lockscreen_enable_power_menu_summary">Esta opção irá desativar o menu de energia apenas em telas de bloqueio seguro</string>
   
   <!-- Search Bar Switcher -->
   <string name="recents_show_searchbar">Mostrar barra de busca em Recentes</string>
@@ -407,12 +409,19 @@
   <string name="shortcuts_icon_picker_twitter">Twitter</string>
   <string name="shortcuts_icon_picker_unlock">Desbloquear</string>
   
-  <!-- Lockscreen Shortcuts -->
-  <string name="lockscreen_shortcuts_title">Atalhos</string>
-  <string name="lockscreen_shortcuts_summary">Exibir ou alterar os atalhos da tela de bloqueio personalizado</string>
-  <string name="lockscreen_shorcuts_longpress_title">Longpress atalhos</string>
-  <string name="lockscreen_shorcuts_longpress_summary">Atalhos de tela fechamento personalizado aberto em longpress</string>
-  
+  <!-- Temasek lockscreen -->
+  <string name="temasek_lockscreen_title">Lockscreen</string>
+    <string name="temasek_lockscreen_category">Configurações lockscreen</string>
+    <string name="temasek_lockscreen_shortcuts_category">Atalhos</string>
+  <!-- CM lockscreen shortcuts -->
+    <string name="cm_lockscreen_shortcuts_title">Atalhos cantos inferiores</string>
+    <string name="cm_lockscreen_shortcuts_summary">Ver ou alterar atalhos personalizados nos cantos inferiores no lockscreen</string>
+    <!-- Slim lockscreen shortcuts -->
+    <string name="lockscreen_shortcuts_title">Middle screen shortcuts</string>
+    <string name="lockscreen_shortcuts_summary">Ver ou alterar atalhos personalizados na tela do meio do lockscreen</string>
+    <string name="lockscreen_shorcuts_longpress_title">Atalhos longpress</string>
+    <string name="lockscreen_shorcuts_longpress_summary">Abra atalhos personalizados do lockscreen sobre longpress</string>
+	
   <!-- Unaccounted and overcounted battery stats -->
   <string name="show_unac_and_overcounted_stats_title">Mostrar estatísticas desaparecidos/overcounted</string>
   <string name="show_unac_and_overcounted_stats_summary">Show em estatísticas de bateria desaparecidos e contados over uso.</string>
@@ -718,10 +727,10 @@
   <!-- Battery Bar -->
   <string name="status_bar_battery_cat_title">Bateria</string>
   <string name="battery_bar_title">Barra de bateria</string>
-  <string name="battery_bar">Localização de barra de bateria</string>
-  <string name="battery_bar_color">Cor de barra de bateria</string>
-  <string name="battery_bar_cat">Estilo de barra de bateria</string>
-  <string name="battery_bar_style_title">Alinhamento de bar de bateria</string>
+  <string name="battery_bar">Localização da barra de bateria</string>
+  <string name="battery_bar_color">Cor da barra de bateria</string>
+  <string name="battery_bar_cat">Estilo da barra de bateria</string>
+  <string name="battery_bar_style_title">Alinhamento da barra de bateria</string>
   <string name="battery_bar_thickness_title">Espessura da barra de bateria</string>
   <string name="battery_bar_animate_title">Animação de carregamento</string>
   <string name="battery_bar_animate_summary">A animação do carregamento pode resultar em uma experiência de usuário ruim. Habilite a seu próprio critério.</string>
@@ -740,22 +749,6 @@
   <string name="omniswitch_start_settings_summary">Abra as configurações OmniSwitch</string>
   <string name="omniswitch_first_time_title">Informações</string>
   <string name="omniswitch_first_time_message">Certifique-se de que ter habilitado OmniSwitch. Você pode fazer isso usando o \"Configurações\" abaixo</string>
-  
-  <!-- temasek lockscreen -->
-  <string name="temasek_lock_title">Misc lockscreen</string>
-  <string name="lockscreen_category">Configurações de lockscreen</string>
-  
-  <!-- Camera lockscreen swipe -->
-  <string name="camera_widget_hide">Desativar a câmera no lockscreen</string>
-  <string name="camera_widget_hide_summary">Permite que você desative o furto para abrir a câmera no lockscreen</string>
-  
-  <!-- Dialer lockscreen swipe -->
-  <string name="dialer_widget_hide">Desativar o discador no lockscreen</string>
-  <string name="dialer_widget_hide_summary">\"Permite que você desabilite o furto para abrir o discador no lockscreen. SystemUI irá reiniciar.\".</string>
-  
-  <!-- Lockscreen weather -->
-  <string name="lockscreen_weather_title">Tempo de lockscreen</string>
-  <string name="lockscreen_weather_summary">SystemUI será reiniciado!</string>
   
   <!-- Default alarm ringtone -->
   <string name="alarm_ringtone_title">Ringtone de alarme padrão</string>
@@ -776,4 +769,12 @@
   <string name="custom_density_dialog_summary">Mudar sua densidade de LCD padrão pode às vezes causar certos aplicativos não funcionem corretamente e/ou a playstore mostrar apps sendo incompatível com o seu dispositivo\"</string>
   <string name="dpi">DPI</string>
   <string name="custom_density_warning">Reinicie o sistema e aplicar densidade selecionada?</string>
+  
+  <!-- Privacy guard notification -->
+    <string name="privacy_guard_notification_title">Notificação</string>
+    <string name="privacy_guard_notifiation_summary">Mostrar uma notificação se guarda a privacidade é ativa</string>
+	
+	<!-- Text for forcing expanded notifications -->
+    <string name="disable_fc_notifications_title">Desativar FC notificações</string>
+    <string name="disable_fc_notifications_summary">Isto irá força a esconder todas as notificações próximas</string>
 </resources>
