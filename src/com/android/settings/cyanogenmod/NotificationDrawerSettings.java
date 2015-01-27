@@ -91,7 +91,7 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment imple
         }
 
 	// Screen timeout mode
-        mScreenTimeoutMode = (ListPreference) prefs.findPreference(PREF_QS_SCREENTIMEOUT_MODE);
+        mScreenTimeoutMode = (ListPreference) prefSet.findPreference(PREF_QS_SCREENTIMEOUT_MODE);
         mScreenTimeoutMode.setSummary(mScreenTimeoutMode.getEntry());
         mScreenTimeoutMode.setOnPreferenceChangeListener(this);
     }
