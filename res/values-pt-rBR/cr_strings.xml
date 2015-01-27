@@ -4,8 +4,6 @@
 
   <!-- About phone screen, Temasek version -->
   <string name="temasek_version_title">Versão oficial de Temasek</string>
-  <!-- Do NOT translate this -->
-   <string name="temasek_version_default">Build V6.3</string>
 	
   <!-- temasek spare parts -->
   <string name="temasek_settings_title">Temasek spare parts</string>
@@ -771,10 +769,10 @@
   <string name="custom_density_warning">Reinicie o sistema e aplicar densidade selecionada?</string>
   
   <!-- Privacy guard notification -->
-    <string name="privacy_guard_notification_title">Notificação</string>
-    <string name="privacy_guard_notifiation_summary">Mostrar uma notificação se guarda a privacidade é ativa</string>
+  <string name="privacy_guard_notification_title">Notificação</string>
+  <string name="privacy_guard_notifiation_summary">Mostrar uma notificação se guarda a privacidade é ativa</string>
 	
-	<!-- Text for forcing expanded notifications -->
-    <string name="disable_fc_notifications_title">Desativar FC notificações</string>
-    <string name="disable_fc_notifications_summary">Isto irá força a esconder todas as notificações próximas</string>
+  <!-- Text for forcing expanded notifications -->
+  <string name="disable_fc_notifications_title">Desativar FC notificações</string>
+  <string name="disable_fc_notifications_summary">Isto irá força a esconder todas as notificações próximas</string>
 </resources>
