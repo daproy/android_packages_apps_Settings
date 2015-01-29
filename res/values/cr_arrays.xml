@@ -352,6 +352,7 @@
         <item>@string/shortcuts_icon_picker_calendar</item>
         <item>@string/shortcuts_icon_picker_camera</item>
         <item>@string/shortcuts_icon_picker_chrome</item>
+	<item>@string/shortcuts_icon_picker_snapchat</item>
         <item>@string/shortcuts_icon_picker_cloud</item>
         <item>@string/shortcuts_icon_picker_contact</item>
         <item>@string/shortcuts_icon_picker_directdial</item>
@@ -415,6 +416,7 @@
         <item>@*android:drawable/ic_shortcut_calendar</item>
         <item>@*android:drawable/ic_shortcut_camera</item>
         <item>@*android:drawable/ic_shortcut_chrome</item>
+	<item>@*android:drawable/ic_shortcut_snapchat</item>
         <item>@*android:drawable/ic_shortcut_cloud</item>
         <item>@*android:drawable/ic_shortcut_contact</item>
         <item>@*android:drawable/ic_shortcut_directdial</item>
