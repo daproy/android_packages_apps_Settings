@@ -46,12 +46,11 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment imple
     private static final String PREF_QUICK_PULLDOWN = "quick_pulldown";
     private static final String PREF_BLOCK_ON_SECURE_KEYGUARD = "block_on_secure_keyguard";
     private static final String PREF_SMART_PULLDOWN = "smart_pulldown";
-    private static final String PREF_QS_SCREENTIMEOUT_MODE = "qs_expanded_screentimeout_mode";
+
 
     private ListPreference mQuickPulldown;
     private ListPreference mSmartPulldown;
     private SwitchPreference mBlockOnSecureKeyguard;
-    private ListPreference mScreenTimeoutMode;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -89,11 +88,6 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment imple
         } else {
             prefSet.removePreference(mBlockOnSecureKeyguard);
         }
-
-	// Screen timeout mode
-        mScreenTimeoutMode = (ListPreference) prefSet.findPreference(PREF_QS_SCREENTIMEOUT_MODE);
-        mScreenTimeoutMode.setSummary(mScreenTimeoutMode.getEntry());
-        mScreenTimeoutMode.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -116,13 +110,6 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment imple
             Settings.Secure.putInt(getContentResolver(),
                     Settings.Secure.STATUS_BAR_LOCKED_ON_SECURE_KEYGUARD,
                     (Boolean) newValue ? 1 : 0);
-            return true;
-        } else if (preference == mScreenTimeoutMode) {
-            int value = Integer.valueOf((String) newValue);
-            int index = mScreenTimeoutMode.findIndexOfValue((String) newValue);
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.QS_EXPANDED_SCREENTIMEOUT_MODE, value);
-            mScreenTimeoutMode.setSummary(mScreenTimeoutMode.getEntries()[index]);
             return true;
         }
         return false;
