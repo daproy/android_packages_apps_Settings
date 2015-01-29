@@ -4,6 +4,8 @@
 
   <!-- About phone screen, Temasek version -->
   <string name="temasek_version_title">Versão oficial de Temasek</string>
+  <!-- Do NOT translate this -->
+   <string name="temasek_version_default" translatable="false">Build V6.5</string>
 	
   <!-- temasek spare parts -->
   <string name="temasek_settings_title">Temasek spare parts</string>
@@ -13,7 +15,7 @@
   <string name="recents_panel_title">Painel recentes</string>
   <string name="recents_panel_settings">Configurações do painel de Recentes</string>
   <string name="screen_and_animations_title">Tela e animações</string>
-  <string name="display_settings">Display</string>
+  <string name="display_settings">Tela</string>
   <string name="display_settings_title">Configurações de exibição</string>
   
   <!-- General strings -->
@@ -239,7 +241,7 @@
   <!-- QuickSettings: Quick Pulldown -->
   <string name="title_quick_pulldown">Pulldown rápida</string>
   <string name="summary_quick_pulldown">%1$s borda da barra de status vai baixando configurações rápidas</string>
-  <string name="quick_pulldown_off">Off</string>
+  <string name="quick_pulldown_off">Desligado</string>
   <string name="quick_pulldown_left">Esquerda</string>
   <string name="quick_pulldown_right">Direita</string>
   <string name="block_on_secure_keyguard_title">Desativar no lockscreen</string>
@@ -263,12 +265,12 @@
   <string name="navigation_bar_size_44_dp">44 dp</string>
   <string name="navigation_bar_size_40_dp">40 dp</string>
   <string name="navigation_bar_size_42_dp">42 dp</string>
-  <string name="navigation_bar_size_0_dp">0 dp (off)</string>
+  <string name="navigation_bar_size_0_dp">0 dp (Desligado)</string>
   
   <!-- QuickSettings: Smart Pulldown -->
   <string name="smart_pulldown_title">Pulldown inteligente</string>
   <string name="smart_pulldown_summary">Abra configurações rápida quando há notificações de %1$s presentes</string>
-  <string name="smart_pulldown_off">Off</string>
+  <string name="smart_pulldown_off">Desligado</string>
   <string name="smart_pulldown_dismissable">Não descartáveis</string>
   <string name="smart_pulldown_persistent">Não persistente</string>
   <string name="smart_pulldown_all">Não descartáveis ou persistente</string>
@@ -297,15 +299,15 @@
   <string name="unlock_quick_unlock_control_title">Desbloqueio rápido</string>
   <string name="unlock_quick_unlock_control_summary">Desbloquear automaticamente quando a espada PIN/pas 
   correta é inserida</string>
-  <string name="lock_numpad_random_title">Alterar a ordem dos números PIN pad</string>
   
   <!-- Lockscreen pin shuffle -->
+  <string name="lock_numpad_random_title">Alterar a ordem dos números PIN pad</string>
   <string name="lock_numpad_random_dialog_title">Ordem aleatória de PIN pad</string>
-  <string name="lock_numpad_random_off">Desativado</string>
+  <string name="lock_numpad_random_off">Desligado</string>
   <string name="lock_numpad_random_always">Sempre</string>
   <string name="lock_numpad_random_on_request">A pedido</string>
-  <string name="shortcut_action_none">Nenhum</string>
   
+  <string name="shortcut_action_none">Nenhum</string>
   <string name="shortcut_action_app">App personalizado</string>
   <string name="shortcut_action_home">Home</string>
   <string name="shortcut_action_back">Voltar</string>
@@ -360,6 +362,8 @@
   <string name="shortcuts_icon_picker_browser">Navegador</string>
   <string name="shortcuts_icon_picker_calendar">Calendário</string>
   <string name="shortcuts_icon_picker_camera">Câmera</string>
+  <string name="shortcuts_icon_picker_chrome">Google Chrome</string>
+  <string name="shortcuts_icon_picker_snapchat">Snapchat</string>
   <string name="shortcuts_icon_picker_cloud">Nuvem</string>
   <string name="shortcuts_icon_picker_contact">Contato</string>
   <string name="shortcuts_icon_picker_directdial">Ligação directa</string>
@@ -376,6 +380,7 @@
   <string name="shortcuts_icon_picker_fitness">Fitness</string>
   <string name="shortcuts_icon_picker_gallery">Galeria</string>
   <string name="shortcuts_icon_picker_gears">Engrenagens</string>
+  <string name="shortcuts_icon_picker_github">Github</string>
   <string name="shortcuts_icon_picker_google_small">Google</string>
   <string name="shortcuts_icon_picker_gplus">Google Plus</string>
   <string name="shortcuts_icon_picker_gtalk">Hangouts</string>
@@ -384,14 +389,17 @@
   <string name="shortcuts_icon_picker_key">Chaves/contas</string>
   <string name="shortcuts_icon_picker_laptop">Laptop</string>
   <string name="shortcuts_icon_picker_notes">Notas</string>
+  <string name="shortcuts_icon_picker_office">Office Suite</string>
   <string name="shortcuts_icon_picker_luggage">Viagens</string>
   <string name="shortcuts_icon_picker_maps">Mapas</string>
   <string name="shortcuts_icon_picker_market">Mercado</string>
+  <string name="shortcuts_icon_picker_messenger">Messagem</string>
   <string name="shortcuts_icon_picker_movie">Filmes</string>
   <string name="shortcuts_icon_picker_music">Música</string>
   <string name="shortcuts_icon_picker_nav">Navegação</string>
   <string name="shortcuts_icon_picker_phone">Telefone</string>
   <string name="shortcuts_icon_picker_package">Package</string>
+  <string name="shortcuts_icon_picker_paypal">Paypal</string>
   <string name="shortcuts_icon_picker_pinterest">Pinterest</string>
   <string name="shortcuts_icon_picker_play">Play</string>
   <string name="shortcuts_icon_picker_pocket">Pocket</string>
@@ -400,25 +408,28 @@
   <string name="shortcuts_icon_picker_sdcard">SDCard</string>
   <string name="shortcuts_icon_picker_search">Pesquisa</string>
   <string name="shortcuts_icon_picker_sms">Mensagens</string>
+  <string name="shortcuts_icon_picker_tapatalk">Tapatalk</string>
   <string name="shortcuts_icon_picker_tasks">Tarefas</string>
   <string name="shortcuts_icon_picker_terminal">Terminal</string>
   <string name="shortcuts_icon_picker_transit">Trânsito</string>
   <string name="shortcuts_icon_picker_tv">TV</string>
   <string name="shortcuts_icon_picker_twitter">Twitter</string>
   <string name="shortcuts_icon_picker_unlock">Desbloquear</string>
+  <string name="shortcuts_icon_picker_whatsapp">Whatsapp</string>
+  <string name="shortcuts_icon_picker_youtube">Youtube</string>
   
   <!-- Temasek lockscreen -->
   <string name="temasek_lockscreen_title">Lockscreen</string>
-    <string name="temasek_lockscreen_category">Configurações lockscreen</string>
-    <string name="temasek_lockscreen_shortcuts_category">Atalhos</string>
+  <string name="temasek_lockscreen_category">Configurações lockscreen</string>
+  <string name="temasek_lockscreen_shortcuts_category">Atalhos</string>
   <!-- CM lockscreen shortcuts -->
-    <string name="cm_lockscreen_shortcuts_title">Atalhos cantos inferiores</string>
-    <string name="cm_lockscreen_shortcuts_summary">Ver ou alterar atalhos personalizados nos cantos inferiores no lockscreen</string>
-    <!-- Slim lockscreen shortcuts -->
-    <string name="lockscreen_shortcuts_title">Middle screen shortcuts</string>
-    <string name="lockscreen_shortcuts_summary">Ver ou alterar atalhos personalizados na tela do meio do lockscreen</string>
-    <string name="lockscreen_shorcuts_longpress_title">Atalhos longpress</string>
-    <string name="lockscreen_shorcuts_longpress_summary">Abra atalhos personalizados do lockscreen sobre longpress</string>
+  <string name="cm_lockscreen_shortcuts_title">Atalhos cantos inferiores</string>
+  <string name="cm_lockscreen_shortcuts_summary">Ver ou alterar atalhos personalizados nos cantos inferiores no lockscreen</string>
+  <!-- Slim lockscreen shortcuts -->
+  <string name="lockscreen_shortcuts_title">Middle screen shortcuts</string>
+  <string name="lockscreen_shortcuts_summary">Ver ou alterar atalhos personalizados na tela do meio do lockscreen</string>
+  <string name="lockscreen_shorcuts_longpress_title">Atalhos longpress</string>
+  <string name="lockscreen_shorcuts_longpress_summary">Abra atalhos personalizados do lockscreen sobre longpress</string>
 	
   <!-- Unaccounted and overcounted battery stats -->
   <string name="show_unac_and_overcounted_stats_title">Mostrar estatísticas desaparecidos/overcounted</string>
@@ -471,7 +482,7 @@
   <!-- Do not translate. -->
   <string name="lockgesture_need_to_unlock_footer" />
   <!-- Security & location settings screen, change unlock gesture screen instruction if user draws incorrect pattern -->
-  <string name="lockgesture_need_to_unlock_wrong">Try again:</string>
+  <string name="lockgesture_need_to_unlock_wrong">Tente novamente:</string>
   <!-- Do not translate. -->
   <string name="lockgesture_need_to_unlock_wrong_footer" />
   <!-- Security & location settings screen, change unlock gesture screen instruction on top of screen.  This si when they are supposed to draw a new unlock pattern (for example, if they are changing their unlock patterns)..-->
@@ -769,10 +780,15 @@
   <string name="custom_density_warning">Reinicie o sistema e aplicar densidade selecionada?</string>
   
   <!-- Privacy guard notification -->
-  <string name="privacy_guard_notification_title">Notificação</string>
-  <string name="privacy_guard_notifiation_summary">Mostrar uma notificação se guarda a privacidade é ativa</string>
-	
-  <!-- Text for forcing expanded notifications -->
-  <string name="disable_fc_notifications_title">Desativar FC notificações</string>
-  <string name="disable_fc_notifications_summary">Isto irá força a esconder todas as notificações próximas</string>
+    <string name="privacy_guard_notification_title">Notificação</string>
+    <string name="privacy_guard_notifiation_summary">Mostrar uma notificação se guarda a privacidade é ativa</string>
+
+    <!-- Text for forcing expanded notifications -->
+    <string name="disable_fc_notifications_title">Desativar FC Notificações</string>
+    <string name="disable_fc_notifications_summary">Isto irá forçar a esconder todos as notificaitons próximas </string>
+
+    <!-- QuickSettings collapse panel -->
+    <string name="quick_settings_collapse_title">Auto fechar painel</string>
+    <string name="quick_settings_collapse_summary">Feche o painel sobre ativar o Quick Settings</string>
+   
 </resources>
