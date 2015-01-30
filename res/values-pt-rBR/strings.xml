@@ -878,7 +878,7 @@ Nós pedimos que você não envie relatórios de erros, se qualquer uma dessas c
   <string name="supersu_title">SuperSU</string>
   <string name="title_quick_pulldown">Pulldown rápida</string>
   <string name="summary_quick_pulldown">%1$s borda da barra de status vai baixando configurações rápidas</string>
-  <string name="quick_pulldown_off">Off</string>
+  <string name="quick_pulldown_off">Desativado</string>
   <string name="quick_pulldown_left">Esquerda</string>
   <string name="quick_pulldown_right">Direita</string>
   <string name="block_on_secure_keyguard_title">Desativar no lockscreen</string>
@@ -900,10 +900,10 @@ Nós pedimos que você não envie relatórios de erros, se qualquer uma dessas c
   <string name="navigation_bar_size_44_dp">44 dp</string>
   <string name="navigation_bar_size_40_dp">40 dp</string>
   <string name="navigation_bar_size_42_dp">42 dp</string>
-  <string name="navigation_bar_size_0_dp">0 dp (off)</string>
+  <string name="navigation_bar_size_0_dp">0 dp (Desativado)</string>
   <string name="smart_pulldown_title">Pulldown inteligente</string>
   <string name="smart_pulldown_summary">Abra configurações rápida quando há notificações de %1$s presentes</string>
-  <string name="smart_pulldown_off">Off</string>
+  <string name="smart_pulldown_off">Desativado</string>
   <string name="smart_pulldown_dismissable">Não descartáveis</string>
   <string name="smart_pulldown_persistent">Não persistente</string>
   <string name="smart_pulldown_all">Não descartáveis ou persistente</string>
@@ -1409,7 +1409,7 @@ Nós pedimos que você não envie relatórios de erros, se qualquer uma dessas c
   <string name="bluetooth_pb_remember_choice">"Não pergunte de novo"</string>
   <string name="bluetooth_map_request">Solicitação de acesso de mensagem</string>
   <string name="bluetooth_map_acceptance_dialog_text">%1$s quer acessar suas mensagens. Dar acesso a %2$s?</string>
-  <string name="date_and_time">Data &amp; hora</string>
+  <string name="date_and_time">Data e hora</string>
   <string name="choose_timezone">Escolher o fuso horário</string>
   <string name="default_date_format">MM/dd/yyyy</string>
   <string name="normal_date_format">Regional (%s)</string>
@@ -1559,14 +1559,14 @@ Nós pedimos que você não envie relatórios de erros, se qualquer uma dessas c
   <string name="lock_after_timeout">Bloquear automaticamente</string>
   <string name="lock_after_timeout_summary">%1$s depois de sono</string>
   <string name="lock_after_timeout_summary_with_exception">%1$s depois de sono, exceto quando manteve desbloqueado por %2$s</string>
-  <string name="show_owner_info_on_lockscreen_label">Mostrar informações do proprietário na tela do fechamento</string>
+  <string name="show_owner_info_on_lockscreen_label">Mostrar informações do proprietário na tela de Desbloqueio</string>
   <string name="owner_info_settings_title">Informação do proprietário</string>
   <string name="security_enable_widgets_title">Ativar widgets</string>
   <string name="security_enable_widgets_disabled_summary">Desativado pelo administrador</string>
-  <string name="owner_info_settings_edit_text_hint">Digite o texto para exibir na tela do fechamento</string>
-  <string name="show_user_info_on_lockscreen_label">Mostrar informações do usuário na tela do fechamento</string>
+  <string name="owner_info_settings_edit_text_hint">Digite o texto para exibir na tela do Desbloqueio</string>
+  <string name="show_user_info_on_lockscreen_label">Mostrar informações do usuário na tela de Desbloqueio</string>
   <string name="user_info_settings_title">Informação de usuário</string>
-  <string name="show_profile_info_on_lockscreen_label">Mostrar informações do seu perfil na tela do fechamento</string>
+  <string name="show_profile_info_on_lockscreen_label">Mostrar informações do seu perfil na tela de Desbloqueio</string>
   <string name="profile_info_settings_title">Informação de perfil</string>
   <string name="Accounts_settings_title">Contas</string>
   <string name="location_settings_title">Localização</string>
@@ -1582,7 +1582,7 @@ Nós pedimos que você não envie relatórios de erros, se qualquer uma dessas c
   <string name="crypt_keeper_button_text">Criptografar o telefone</string>
   <string name="crypt_keeper_low_charge_text">Carregar sua bateria e tente novamente.</string>
   <string name="crypt_keeper_unplugged_text">Ligue o carregador e tente novamente.</string>
-  <string name="crypt_keeper_dialog_need_password_title">Nenhuma tela do fechamento PIN ou senha</string>
+  <string name="crypt_keeper_dialog_need_password_title">Nenhuma tela de Desbloqueio, PIN ou senha</string>
   <string name="crypt_keeper_dialog_need_password_message">Você precisa definir um bloqueio PIN ou senha de tela antes de começar a criptografia.</string>
   <string name="crypt_keeper_confirm_encrypt">Você precisa desenhar seu padrão de desbloqueio para confirmar criptografando seu dispositivo.</string>
   <string name="crypt_keeper_confirm_title">Criptografar?</string>
@@ -1606,7 +1606,7 @@ Nós pedimos que você não envie relatórios de erros, se qualquer uma dessas c
   <string name="unlock_set_unlock_launch_picker_enable_summary">Escolha um método para travar a tela</string>
   <string name="unlock_backup_info_summary">"Quando o cara desbloquear não pode vê-lo, como você quer desbloquear?"</string>
   <string name="unlock_set_unlock_off_title">Nenhum</string>
-  <string name="unlock_set_unlock_none_title">Furto</string>
+  <string name="unlock_set_unlock_none_title">Deslizar</string>
   <string name="unlock_set_unlock_none_summary">Sem segurança</string>
   <string name="unlock_set_unlock_biometric_weak_title">Face Unlock</string>
   <string name="unlock_set_unlock_biometric_weak_summary">Baixa segurança, experimental</string>
@@ -1618,7 +1618,7 @@ Nós pedimos que você não envie relatórios de erros, se qualquer uma dessas c
   <string name="unlock_set_unlock_password_summary">Alta segurança</string>
   <string name="unlock_set_unlock_disabled_summary">Desativado pelo administrador, diretiva de criptografia ou armazenamento de credencial</string>
   <string name="unlock_set_unlock_mode_off">Nenhum</string>
-  <string name="unlock_set_unlock_mode_none">Furto</string>
+  <string name="unlock_set_unlock_mode_none">Deslizar</string>
   <string name="unlock_set_unlock_mode_biometric_weak">Face Unlock</string>
   <string name="unlock_set_unlock_mode_pattern">Padrão</string>
   <string name="unlock_set_unlock_mode_pin">PIN</string>
@@ -1779,7 +1779,7 @@ Nós pedimos que você não envie relatórios de erros, se qualquer uma dessas c
   <string name="nfc_quick_toggle_summary">Permitir a troca de dados quando o telefone toca outro dispositivo</string>
   <string name="android_beam_settings_title">Feixe Android</string>
   <string name="android_beam_on_summary">Pronto para transmitir conteúdo de aplicativo via NFC</string>
-  <string name="android_beam_off_summary">Off</string>
+  <string name="android_beam_off_summary">Desativado</string>
   <string name="android_beam_disabled_summary">Não está disponível porque o NFC está desligado</string>
   <string name="android_beam_label">Feixe Android</string>
   <string name="android_beam_explained">\"Quando esse recurso estiver ativado, você pode transportar conteúdo do aplicativo para outro dispositivo compatível com NFC mantendo os dispositivos próximos um do outro. Por exemplo, você pode transportar a páginas do navegador, vídeos do YouTube, contactos pessoais e muito mais.  Apenas reunir os dispositivos (normalmente voltar para trás) e toque em sua tela. O aplicativo determina o que obtém com vigas.\"</string>
@@ -2057,7 +2057,7 @@ Nós pedimos que você não envie relatórios de erros, se qualquer uma dessas c
   <string name="screensaver_settings_summary_either_short">De qualquer</string>
   <string name="screensaver_settings_summary_sleep">Durante o carregamento</string>
   <string name="screensaver_settings_summary_dock">Enquanto encaixado</string>
-  <string name="screensaver_settings_summary_off">Off</string>
+  <string name="screensaver_settings_summary_off">Desativado</string>
   <string name="screensaver_settings_disabled_prompt">Para controlar o que acontece quando o telefone está encaixado e/ou dormindo, ligue Daydream.</string>
   <string name="screensaver_settings_when_to_dream">Quando sonhava</string>
   <string name="screensaver_settings_dream_start">Comece agora</string>
@@ -2512,16 +2512,16 @@ Nós pedimos que você não envie relatórios de erros, se qualquer uma dessas c
   <string name="process_provider_in_use_description">%1$s provedor está em uso.</string>
   <string name="runningservicedetails_stop_dlg_title">Pare o serviço do sistema?</string>
   <string name="runningservicedetails_stop_dlg_text">Se você parar este serviço, algumas características do seu telefone poderá deixar de funcionar corretamente até que você ligá-lo e ative novamente.</string>
-  <string name="language_settings">Entrada &amp; linguagem</string>
-  <string name="language_keyboard_settings_title">Entrada &amp; linguagem</string>
+  <string name="language_settings">Entrada e Idioma</string>
+  <string name="language_keyboard_settings_title">Entrada e Idioma</string>
   <string name="language_settings_category">Configurações de idioma</string>
   <string name="keyboard_settings_category">Métodos de entrada &amp; teclado</string>
-  <string name="phone_language">Língua</string>
+  <string name="phone_language">Idioma</string>
   <string name="auto_replace">Auto-substituir</string>
   <string name="auto_replace_summary">Palavras corretas digitado incorretamente</string>
   <string name="auto_caps">Auto-capitalização</string>
   <string name="auto_caps_summary">Capitalizar a primeira letra em frases</string>
-  <string name="auto_punctuate">Auto-pontuam</string>
+  <string name="auto_punctuate">Pontuaçao automática</string>
   <string name="hardkeyboard_category">Configurações de teclado físico</string>
   <string name="auto_punctuate_summary">Prima a tecla de espaço duas vezes para inserir \".\"</string>
   <string name="show_password">Tornar visível a senhas</string>
@@ -2660,8 +2660,8 @@ Nós pedimos que você não envie relatórios de erros, se qualquer uma dessas c
   <string name="accessibility_screen_magnification_title">Gestos de ampliação</string>
   <string name="accessibility_screen_magnification_summary">\"Quando esse recurso estiver ativado, você pode zoom in e out, triple-tocando a tela.  Enquanto o zoom, você pode: \"<li><ul>" Pan: arraste dois ou mais dedos na tela. "<li>Ajustar nível de zoom: belisque a dois ou mais dedos juntos ou espalhá-los separados.</li></ul></li> \"  Você pode temporariamente também ampliar o que está sob seu dedo triplo-batida e mantendo. Neste estado ampliada, você pode arrastar seu dedo para explorar diferentes partes da tela. Levanta o dedo para retornar ao seu estado anterior.  Nota: Triple-tap para ampliação funciona em todos os lugares, exceto a barra de navegação e teclado. \"</string>
   <string name="accessibility_global_gesture_preference_title">Atalho de acessibilidade</string>
-  <string name="accessibility_global_gesture_preference_summary_on">On</string>
-  <string name="accessibility_global_gesture_preference_summary_off">Off</string>
+  <string name="accessibility_global_gesture_preference_summary_on">Ativado</string>
+  <string name="accessibility_global_gesture_preference_summary_off">Desativado</string>
   <string name="accessibility_global_gesture_preference_description">\"Quando esse recurso estiver ativado, você pode rapidamente ativar recursos de acessibilidade em duas etapas: etapa 1: prima e mantenha premido o botão até ouvir um som ou sentir uma vibração.  Passo 2: Toque e segure dois dedos até ouvir áudio confirmação.  Se o dispositivo tiver vários usuários, usar este atalho na tela do fechamento temporariamente permite acessibilidade até que o aparelho é desbloqueado.\"</string>
   <string name="accessibility_toggle_large_text_preference_title">Texto grande</string>
   <string name="accessibility_toggle_high_text_contrast_preference_title">Texto de alto contraste</string>
@@ -2684,8 +2684,8 @@ Nós pedimos que você não envie relatórios de erros, se qualquer uma dessas c
   <string name="daltonizer_mode_protanomaly">Protanomalia (vermelho-verde)</string>
   <string name="daltonizer_mode_tritanomaly">Tritanomalia (azul-amarelo)</string>
   <string name="accessibility_menu_item_settings">Configurações</string>
-  <string name="accessibility_feature_state_on">On</string>
-  <string name="accessibility_feature_state_off">Off</string>
+  <string name="accessibility_feature_state_on">Ativado</string>
+  <string name="accessibility_feature_state_off">Desativado</string>
   <string name="accessibility_feature_or_input_method_not_allowed">Não é permitido por sua organização</string>
   <string name="captioning_preview_title">Visualizar</string>
   <string name="captioning_standard_options_title">Opções padrão</string>
@@ -2739,8 +2739,8 @@ Nós pedimos que você não envie relatórios de erros, se qualquer uma dessas c
   <string name="print_no_printers_found">Nenhuma impressora encontrada</string>
   <string name="print_menu_item_settings">Configurações</string>
   <string name="print_menu_item_add_printers">Adicionar impressoras</string>
-  <string name="print_feature_state_on">On</string>
-  <string name="print_feature_state_off">Off</string>
+  <string name="print_feature_state_on">Ativado</string>
+  <string name="print_feature_state_off">Desativado</string>
   <string name="print_menu_item_add_service">Adicionar serviço</string>
   <string name="print_menu_item_add_printer">Adicionar impressora</string>
   <string name="print_menu_item_search">Pesquisa</string>
@@ -2850,7 +2850,7 @@ Nós pedimos que você não envie relatórios de erros, se qualquer uma dessas c
   <string name="menu_stats_refresh">Atualização</string>
   <string name="process_kernel_label">Sistema operacional Android</string>
   <string name="process_mediaserver_label">MediaServer</string>
-  <string name="battery_saver">Protetor de bateria</string>
+  <string name="battery_saver">Poupança de bateria</string>
   <string name="battery_saver_turn_on_automatically_title">Liga-se automaticamente</string>
   <string name="battery_saver_turn_on_automatically_never">Nunca</string>
   <string name="battery_saver_turn_on_automatically_pct">A bateria de %1$d%%</string>
@@ -2949,11 +2949,11 @@ Nós pedimos que você não envie relatórios de erros, se qualquer uma dessas c
   <string name="gadget_toggle_wifi">Atualizando a configuração de WI-FI</string>
   <string name="gadget_toggle_bluetooth">Atualizando a configuração de Bluetooth</string>
   <string name="gadget_state_template">%1$s %2$s</string>
-  <string name="gadget_state_on">on</string>
-  <string name="gadget_state_off">off</string>
+  <string name="gadget_state_on">Ativado</string>
+  <string name="gadget_state_off">Desativado</string>
   <string name="gadget_state_turning_on">turning on</string>
   <string name="gadget_state_turning_off">turning off</string>
-  <string name="gadget_wifi">Wi‑Fi</string>
+  <string name="gadget_wifi">Wi-Fi</string>
   <string name="gadget_bluetooth">Bluetooth</string>
   <string name="gadget_location">Localização</string>
   <string name="gadget_sync">Sincronização</string>
@@ -2993,12 +2993,12 @@ Nós pedimos que você não envie relatórios de erros, se qualquer uma dessas c
   <string name="allow_usage_access_message">Se você permitir o acesso, este aplicativo pode exibir informações gerais sobre as apps em seu dispositivo, tais como quantas vezes você usá-los.</string>
   <string name="emergency_tone_title">Tom de emergência</string>
   <string name="emergency_tone_summary">Definir comportamento quando uma chamada de emergência é colocada</string>
-  <string name="privacy_settings">Backup &amp; restauração</string>
-  <string name="privacy_settings_title">Backup &amp; restauração</string>
-  <string name="backup_section_title">Backup &amp; restore</string>
+  <string name="privacy_settings">Backup e restauração</string>
+  <string name="privacy_settings_title">Backup e restauração</string>
+  <string name="backup_section_title">Backup e restaurar</string>
   <string name="personal_data_section_title">Dados pessoais</string>
   <string name="backup_data_title">Fazer backup de meus dados</string>
-  <string name="backup_data_summary">Backup de dados do app, Fi senhas e outras configurações para servidores do Google</string>
+  <string name="backup_data_summary">Backup de dados do app, WI-Fi senhas e outras configurações para servidores do Google</string>
   <string name="backup_configure_account_title">Conta de backup</string>
   <string name="backup_configure_account_default_summary">Nenhuma conta atualmente está armazenando dados com backup</string>
   <string name="include_app_data_title">Incluir dados de app</string>
@@ -3040,7 +3040,7 @@ Nós pedimos que você não envie relatórios de erros, se qualquer uma dessas c
   <string name="wifi_setup_not_connected">Não conectado</string>
   <string name="wifi_setup_add_network">Adicionar rede</string>
   <string name="wifi_setup_refresh_list">Atualizar lista</string>
-  <string name="wifi_setup_skip">Skip</string>
+  <string name="wifi_setup_skip">Pular</string>
   <string name="wifi_setup_next">Próxima</string>
   <string name="wifi_setup_back">Voltar</string>
   <string name="wifi_setup_detail">Detalhes da rede</string>
@@ -3090,7 +3090,8 @@ Nós pedimos que você não envie relatórios de erros, se qualquer uma dessas c
   <string name="sync_gmail">Gmail</string>
   <string name="sync_calendar">Calendário</string>
   <string name="sync_contacts">Contatos</string>
-  <string name="sync_plug"><font fgcolor="#ffffffff"> Bem-vindo ao Google sync!</font> \"  Uma abordagem do Google para sincronizar dados para permitir o acesso aos seus contatos, compromissos e muito mais de onde você estiver. \"</string>
+  <string name="sync_plug"><font fgcolor="#ffffffff"> Bem-vindo ao Google sync!</font>
+  \nUma abordagem do Google para sincronizar dados para permitir o acesso aos seus contatos, compromissos e muito mais de onde você estiver. \"</string>
   <string name="header_application_sync_settings">Configurações de sincronização de App</string>
   <string name="header_data_and_synchronization">Dados &amp; sincronização</string>
   <string name="preference_change_password_title">Alterar senha</string>
@@ -3209,7 +3210,7 @@ Nós pedimos que você não envie relatórios de erros, se qualquer uma dessas c
   <string name="data_usage_disable_4g_limit">Definir limite de dados 4G</string>
   <string name="data_usage_disable_3g_limit">Definir limite de dados 2G-3G</string>
   <string name="data_usage_disable_wifi_limit">Definir limite de dados WI-FI</string>
-  <string name="data_usage_tab_wifi">Wi‑Fi</string>
+  <string name="data_usage_tab_wifi">Wi-Fi</string>
   <string name="data_usage_tab_ethernet">Ethernet</string>
   <string name="data_usage_tab_mobile">SIM</string>
   <string name="data_usage_tab_4g">4G</string>
@@ -3243,9 +3244,9 @@ Nós pedimos que você não envie relatórios de erros, se qualquer uma dessas c
   <string name="data_usage_restrict_background">"Se você restringir os dados móveis de fundo, alguns aplicativos e serviços não funcionará a menos que você está conectado à Fi."</string>
   <string name="data_usage_restrict_background_multiuser">\"Se você restringir os dados móveis de fundo, alguns aplicativos e serviços não funcionará a menos que você está conectado à WI-Fi.  Esta configuração afeta todos os usuários neste telefone\".</string>
   <string name="data_usage_sweep_warning"><font size="21">^1</font> <font size="9">^2</font>\"
-\"<font size="12">warning</font></string>
+\"<font size="12">Aviso</font></string>
   <string name="data_usage_sweep_limit"><font size="21">^1</font> <font size="9">^2</font>\"
-\"<font size="12">limit</font></string>
+\"<font size="12">limite</font></string>
   <string name="data_usage_uninstalled_apps">Apps removidos</string>
   <string name="data_usage_uninstalled_apps_users">Os usuários e aplicativos removidos</string>
   <string name="data_usage_received_sent">%1$s recebido, %2$s enviada</string>
@@ -3396,7 +3397,7 @@ Nós pedimos que você não envie relatórios de erros, se qualquer uma dessas c
   <string name="restriction_menu_reset">Remover restrições</string>
   <string name="restriction_menu_change_pin">Alterar PIN</string>
   <string name="app_notifications_switch_label">Visualizar notificação</string>
-  <string name="help_label">Ajuda &amp; feedback</string>
+  <string name="help_label">Ajuda e feedback</string>
   <string name="help_url_nfc_payment">https://support.google.com/mobile/?p=settings_nfcpayment</string>
   <string name="user_account_title">Conta para o conteúdo</string>
   <string name="user_picture_title">ID da foto</string>
@@ -3514,7 +3515,7 @@ Nós pedimos que você não envie relatórios de erros, se qualquer uma dessas c
   <string name="status_failed_to_write">Não é possível gravar dados tag NFC. Se o problema persistir, tente outra marca de formatação</string>
   <string name="status_tag_not_writable">Tag NFC não é gravável. Por favor, utilize outra marca.</string>
   <string name="default_sound">Som padrão</string>
-  <string name="notification_settings">Som &amp; notificação</string>
+  <string name="notification_settings">Som e notificações</string>
   <string name="media_volume_option_title">Volume de mídia</string>
   <string name="alarm_volume_option_title">Volume do alarme</string>
   <string name="ring_volume_option_title">Volume do toque</string>
@@ -3596,20 +3597,10 @@ Nós pedimos que você não envie relatórios de erros, se qualquer uma dessas c
   <string name="notification_app_settings_button">Configurações de notificação</string>
   <string name="device_feedback">Enviar feedback sobre este dispositivo</string>
   <string name="restr_pin_enter_admin_pin">Digite administrador PIN</string>
-  <string name="switch_on_text">On</string>
-  <string name="switch_off_text">Off</string>
+  <string name="switch_on_text">Ativado</string>
+  <string name="switch_off_text">Desativado</string>
   <string name="screen_pinning_title">Fixação de tela</string>
-  <string name="screen_pinning_description">\"Quando ativado, você pode usar a tela fixar a manter a tela atual em vista até os tirar.
-
-Para usar a pinagem do ecrã:
-
-1. Certifique-se de pinagem do ecrã está ligado.
-
-2. Abra a tela que você deseja marcar.
-
-3. Toque Overview.
-
-4. Toque no ícone pin \".</string>
+  <string name="screen_pinning_description">Quando ativado, você pode usar a tela fixar a manter a tela atual em vista até os tirar\n\nPara usar pinagem tela:.\n\n1. Certifique-se de fixação de tela esteja ligada.\n\n2. Abra a tela que você deseja marcar.\n\n3. Ir para app recentes.\n\n4. Toque no ícone de fixar..</string>
   <string name="managed_user_title">Perfil de trabalho</string>
   <string name="experimental_preference">(Experimental)</string>
   <string name="display_auto_rotate_title">Quando o dispositivo é girado</string>
