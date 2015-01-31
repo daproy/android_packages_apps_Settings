@@ -46,13 +46,8 @@
             android:key="navigation_bar_left"
             android:title="@string/navigation_bar_left_title"
             android:summary="@string/navigation_bar_left_summary"
-            android:defaultValue="false" />
-
-        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
-                android:key="navigation_bar_menu_arrow_keys"
-                android:title="@string/navigation_bar_arrow_keys_title"
-                android:summary="@string/navigation_bar_arrow_keys_summary"
-                android:defaultValue="false" />
+            android:defaultValue="false"
+            android:dependency="enable_nav_bar" />
 
         <PreferenceScreen
             android:key="navbar_dimensions"
@@ -63,7 +58,15 @@
         <PreferenceScreen
             android:key="navigation_bar"
             android:fragment="com.android.settings.cyanogenmod.NavBar"
-            android:title="@string/navigation_bar_title" />
+            android:title="@string/navigation_bar_title"
+            android:dependency="enable_nav_bar" />
+
+        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="navigation_bar_menu_arrow_keys"
+            android:title="@string/navigation_bar_arrow_keys_title"
+            android:summary="@string/navigation_bar_arrow_keys_summary"
+            android:defaultValue="false"
+            android:dependency="enable_nav_bar" />
 
     </PreferenceCategory>
 
