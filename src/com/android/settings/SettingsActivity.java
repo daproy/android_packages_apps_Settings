@@ -50,6 +50,7 @@ import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
+import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.transition.TransitionManager;
 import android.util.AttributeSet;
@@ -88,7 +89,9 @@ import com.android.settings.fuelgauge.BatterySaverSettings;
 import com.android.settings.fuelgauge.PowerUsageSummary;
 import com.android.settings.cyanogenmod.DisplayRotation;
 import com.android.settings.cyanogenmod.qs.QSTiles;
+import com.android.settings.lockscreen.LockScreenSettings;
 import com.android.settings.notification.NotificationAppList;
+import com.android.settings.notification.NotificationManagerSettings;
 import com.android.settings.notification.OtherSoundSettings;
 import com.android.settings.profiles.NFCProfileTagCallback;
 import com.android.settings.profiles.ProfilesSettings;
@@ -105,12 +108,10 @@ import com.android.settings.nfc.PaymentSettings;
 import com.android.settings.notification.AppNotificationSettings;
 import com.android.settings.notification.ConditionProviderSettings;
 import com.android.settings.notification.NotificationAccessSettings;
-import com.android.settings.notification.NotificationSettings;
 import com.android.settings.notification.NotificationStation;
 import com.android.settings.notification.ZenModeSettings;
 import com.android.settings.print.PrintJobSettingsFragment;
 import com.android.settings.print.PrintSettingsFragment;
-import com.android.settings.privacyguard.PrivacyGuardPrefs;
 import com.android.settings.sim.SimSettings;
 import com.android.settings.tts.TextToSpeechSettings;
 import com.android.settings.users.UserSettings;
@@ -209,8 +210,6 @@ public class SettingsActivity extends Activity
 
     private static final String EMPTY_QUERY = "";
 
-    private static final String VOICE_WAKEUP_PACKAGE_NAME = "com.cyanogenmod.voicewakeup";
-
     private static boolean sShowNoHomeNotice = false;
 
     private String mFragmentClass;
@@ -229,8 +228,10 @@ public class SettingsActivity extends Activity
             R.id.sim_settings,
             R.id.wireless_settings,
             R.id.device_section,
-            R.id.notification_settings,
-            R.id.display_settings,
+            R.id.sound_settings,
+            R.id.display_and_lights_settings,
+            R.id.lockscreen_settings,
+            R.id.notification_manager,
             R.id.storage_settings,
             R.id.application_settings,
             R.id.battery_settings,
@@ -303,7 +304,7 @@ public class SettingsActivity extends Activity
             PaymentSettings.class.getName(),
             KeyboardLayoutPickerFragment.class.getName(),
             ZenModeSettings.class.getName(),
-            NotificationSettings.class.getName(),
+            SoundSettings.class.getName(),
             ChooseLockPassword.ChooseLockPasswordFragment.class.getName(),
             ChooseLockPattern.ChooseLockPatternFragment.class.getName(),
             InstalledAppDetails.class.getName(),
@@ -318,7 +319,9 @@ public class SettingsActivity extends Activity
             com.android.settings.cyanogenmod.PrivacySettings.class.getName(),
             QSTiles.class.getName(),
             DisplayRotation.class.getName(),
-            ExpandedDesktopPreferenceFragment.class.getName()
+            ExpandedDesktopPreferenceFragment.class.getName(),
+            NotificationManagerSettings.class.getName(),
+            LockScreenSettings.class.getName()
     };
 
 
@@ -987,6 +990,8 @@ public class SettingsActivity extends Activity
      * @param target The list in which the parsed categories and tiles should be placed.
      */
     private void loadCategoriesFromResource(int resid, List<DashboardCategory> target) {
+        final boolean showAdvancedPreferences = showAdvancedPreferences(this);
+
         XmlResourceParser parser = null;
         try {
             parser = getResources().getXml(resid);
@@ -1045,6 +1050,18 @@ public class SettingsActivity extends Activity
                         String innerNodeName = parser.getName();
                         if (innerNodeName.equals("dashboard-tile")) {
                             DashboardTile tile = new DashboardTile();
+
+                            sa = obtainStyledAttributes(attrs, R.styleable.Preference);
+                            tv = sa.peekValue(R.styleable.Preference_advanced);
+                            if (tv != null && tv.type == TypedValue.TYPE_INT_BOOLEAN) {
+                                final boolean value = tv.data != 0;
+
+                                final boolean skipAdvanced = (!showAdvancedPreferences && value)
+                                        || (showAdvancedPreferences && !value);
+                                if (skipAdvanced) {
+                                    continue;
+                                }
+                            }
 
                             sa = obtainStyledAttributes(
                                     attrs, com.android.internal.R.styleable.PreferenceHeader);
@@ -1151,7 +1168,8 @@ public class SettingsActivity extends Activity
                 boolean removeTile = false;
                 id = (int) tile.id;
                 if (id == R.id.operator_settings || id == R.id.manufacturer_settings
-                        || id == R.id.device_specific_gesture_settings) {
+                        || id == R.id.device_specific_gesture_settings
+                        || id == R.id.oclick) {
                     if (!Utils.updateTileToSpecificActivityFromMetaDataOrRemove(this, tile)) {
                         removeTile = true;
                     }
@@ -1163,6 +1181,14 @@ public class SettingsActivity extends Activity
                 } else if (id == R.id.bluetooth_settings) {
                     // Remove Bluetooth Settings if Bluetooth service is not available.
                     if (!getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH)) {
+                        removeTile = true;
+                    }
+                } else if (id == R.id.mobile_networks) {
+                    if (TelephonyManager.getDefault().getPhoneCount() > 1) {
+                        removeTile = true;
+                    }
+                } else if (id == R.id.msim_mobile_networks) {
+                    if (TelephonyManager.getDefault().getPhoneCount() <= 1) {
                         removeTile = true;
                     }
                 } else if (id == R.id.data_usage_settings) {
@@ -1238,10 +1264,6 @@ public class SettingsActivity extends Activity
  
                     }
                     if (!supported) {
-                        removeTile = true;
-                    }
-                } else if (id == R.id.voice_wakeup_settings) {
-                    if (!Utils.isPackageInstalled(this, VOICE_WAKEUP_PACKAGE_NAME, false)) {
                         removeTile = true;
                     }
                 } else if (id == R.id.performance_settings) {
@@ -1423,5 +1445,14 @@ public class SettingsActivity extends Activity
         }
         super.onNewIntent(intent);
     }
+
+    public static boolean showAdvancedPreferences(Context context) {
+        boolean defValue = context.getResources().getBoolean(
+                R.bool.config_default_advanced_mode_enabled) || !Build.TYPE.equals("user");
+
+        return context.getSharedPreferences(DeviceInfoSettings.PREFS_FILE, 0)
+                .getBoolean(DeviceInfoSettings.KEY_ADVANCED_MODE, defValue);
+    }
+
 
 }
