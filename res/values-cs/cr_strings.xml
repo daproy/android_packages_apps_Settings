@@ -10,14 +10,19 @@
     <string name="recents_panel_title">Panel spuštěných aplikací</string>
     <string name="recents_panel_settings">Nastavení panelu spuštěných aplikací</string>
     <string name="screen_and_animations_title">Obraz a animace</string>
+    <string name="display_settings">Zobrazení</string>
+    <string name="display_settings_title">Nastavení zobrazení</string>
     <!-- General strings -->
-    <string name="attention">Attention</string>
+    <string name="attention">Pozor</string>
     <string name="reset">Obnovit</string>
     <string name="help">Nápověda</string>
     <string name="default_string">Výchozí</string>
     <string name="enabled">Zapnuto</string>
     <string name="disabled">Vypnuto</string>
     <string name="reset_message">Obnovit všechny položky do výchozího stavu?</string>
+    <string name="ok">OK</string>
+    <string name="dialog_restart">Restart</string>
+    <string name="dialog_cancel">Zrušit</string>
     <!-- Sound settings -->
     <string name="advanced_sound_title">Pokročilá nastavení</string>
     <string name="sound_title">Zvuk</string>
@@ -191,11 +196,6 @@
     <string name="partition_info_sdcard">/sdcard (FAT)</string>
     <string name="partition_info_sdext">/sd-ext (EXT)</string>
     <string name="partition_info_used_of">/</string>
-    <!-- Display density -->
-    <string name="display_density">Hustota displeje</string>
-    <string name="display_density_summary">Přenastaví výchozí nastavení hustoty displeje (0 pro vypnutí, vyžaduje restart)</string>
-    <string name="display_density_override">Hlášená hustota</string>
-    <string name="display_density_override_summary">Přepíše hustotu hlášenou aplikacím (0 pro vypnutí, vyžaduje restart)</string>
     <string name="show_cpu_info">Zobrazit info o CPU</string>
     <string name="show_cpu_info_summary">Zobrazí aktuální info o CPU jako překrytí obrazovky</string>
     <!-- Camera sound switch -->
@@ -367,9 +367,16 @@
     <string name="shortcuts_icon_picker_tv">TV</string>
     <string name="shortcuts_icon_picker_twitter">Twitter</string>
     <string name="shortcuts_icon_picker_unlock">Odemknout</string>
-    <!-- Lockscreen Shortcuts -->
-    <string name="lockscreen_shortcuts_title">Odkazy</string>
-    <string name="lockscreen_shortcuts_summary">Zobrazit nebo změnit odkazy na zamčené obrazovce</string>
+    <!-- Temasek lockscreen -->
+    <string name="temasek_lockscreen_title">Zamčená obrazovka</string>
+    <string name="temasek_lockscreen_category">Nastavení zamčené obrazovky</string>
+    <string name="temasek_lockscreen_shortcuts_category">Odkazy</string>
+    <!-- CM lockscreen shortcuts -->
+    <string name="cm_lockscreen_shortcuts_title">Odkazy ve spodních rozích</string>
+    <string name="cm_lockscreen_shortcuts_summary">Zobrazit nebo změnit vlastní odkazy ve spodních rozích obrazovky</string>
+    <!-- Slim lockscreen shortcuts -->
+    <string name="lockscreen_shortcuts_title">Odkazy ve středu</string>
+    <string name="lockscreen_shortcuts_summary">Zobrazit nebo změnit vlastní odkazy ve středu obrazovky</string>
     <string name="lockscreen_shorcuts_longpress_title">Dlouhý stisk odkazu</string>
     <string name="lockscreen_shorcuts_longpress_summary">Otevřít odkaz na zamčené obrazovce dlouhým stiskem</string>
     <!-- Unaccounted and overcounted battery stats -->
@@ -654,15 +661,28 @@
     <string name="omniswitch_start_settings_summary">Otevřít nastavení OmniSwitch</string>
     <string name="omniswitch_first_time_title">Informace</string>
     <string name="omniswitch_first_time_message">OmniSwitch musí být zapnutý. Je to možné provést pomocí \"Nastavení\" dále</string>
-    <!-- temasek lockscreen -->
-    <string name="temasek_lock_title">Zamčená obrazovka - ostatní</string>
-    <string name="lockscreen_category">Nastavení zamčené obrazovky</string>
-    <!-- Camera lockscreen swipe -->
-    <string name="camera_widget_hide">Vypnout fotoaparát na zamčené obrazovce</string>
-    <string name="camera_widget_hide_summary">Umožňuje vypnout gesto pro spuštění fotoaparátu</string>
-    <!-- Dialer lockscreen swipe -->
-    <string name="dialer_widget_hide">Vypnout vytáčení na zamčené obrazovce</string>
-    <string name="dialer_widget_hide_summary">Umožňuje vypnout gesto pro spuštění vytáčení.\nVyžaduje restart SystemUI.</string>
     <!-- Default alarm ringtone -->
     <string name="alarm_ringtone_title">Výchozí tón budíku</string>
+    <string name="lcd_density">LCD densita</string>
+    <string name="dialog_title_lcd_density">LCD densita</string>
+    <string name="lcd_density_summary">xxx DPI</string>
+    <string name="custom_density_title">Možno změnit na jakoukoliv hodnotu</string>
+    <string name="custom_density_summary">Při problémech s kompatibilout v Obhcodě Play je třeba zkontrolovat, zda je nainstalován Obchod Play s podporou změny density</string>
+    <string name="custom_density_summary_invalid">"VADNÁ DENSITA!"</string>
+    <string name="custom_density">Vlastní</string>
+    <string name="set_custom_density_title">Nastavit vlastní densitu</string>
+    <string name="set_custom_density_set">Nastavit</string>
+    <string name="custom_density_dialog_title">VAROVÁNÍ!</string>
+    <string name="custom_density_dialog_summary">Změna LCD density může občas způsobit problémy různých aplikací, případně nekompatibilitu v Obchodu Play.</string>
+    <string name="dpi">DPI</string>
+    <string name="custom_density_warning">Restartovat systém pro použití zvolené density?</string>
+    <!-- Privacy guard notification -->
+    <string name="privacy_guard_notification_title">Upozornění</string>
+    <string name="privacy_guard_notifiation_summary">Zobrazit upozornění pokud je Správce soukromí aktivní</string>
+    <!-- Text for forcing expanded notifications -->
+    <string name="disable_fc_notifications_title">Vypnout upozornění na FC</string>
+    <string name="disable_fc_notifications_summary">Kompletně skryje všechna upozornění na FC</string>
+    <!-- QuickSettings collapse panel -->
+    <string name="quick_settings_collapse_title">Automaticky zavřít</string>
+    <string name="quick_settings_collapse_summary">Zavřít panel rychlého nastavení po stisku dlaždice</string>
 </resources>
