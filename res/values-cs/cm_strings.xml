@@ -68,7 +68,8 @@
     <string name="rename_dialog_title">Přejmenovat</string>
     <string name="rename_dialog_message">Vložit nový název</string>
     <string name="duplicate_profile_name">Duplicitní název profilu!</string>
-    <string name="duplicate_appgroup_name">Duplictní náze skupiny!</string>
+    <string name="duplicate_appgroup_name">Duplictní název skupiny!</string>
+    <string name="rename_dialog_hint">Vložit název profilu</string>
     <!-- Reset Profiles -->
     <string name="profile_reset_title">Obnovit</string>
     <string name="profile_reset_message">Smazat všechny uživatelsky vytvořené profily, skupiny a obnovit výchozí nastavení?</string>
@@ -322,6 +323,14 @@
     <string name="navigation_bar_category">Navigační lišta</string>
     <string name="navigation_bar_left_title">Režim pro leváky</string>
     <string name="navigation_bar_left_summary">Umístit navigační lištu na levou stranu displeje v režimu na šířku</string>
+    <string name="navigation_bar_title">Tlačítka a rozmístění</string>
+    <string name="navigation_bar_help_text">1 - upravovat je možné začít stisknutím ikony zámku\n\n2 - přiřadit nebo změnit funkci je možné stiskem jakéhokoliv tlačítka\n\n3 - dlouhým stiskem libovolného tlačítka je možné změnit jeho pořadí\n\n4 - stav bude uložen po stisku ikony zámku\n\n5 - výchozí nastavení lze obnovit stiskem ikony resetu\n\n</string>
+    <string name="navigation_restore_button_text">Obnovit\nvýchozí</string>
+    <string name="navigation_edit_button_text">Upravit</string>
+    <string name="navigation_save_button_text">Uložit</string>
+    <string name="navigation_bar_reset_message">Smazat aktuální nastavení a obnovit výchozí rozmístění?</string>
+    <string name="navigation_bar_arrow_keys_title">Klávesy šipek při psaní</string>
+    <string name="navigation_bar_arrow_keys_summary">Zobrazit tlačítka pro kurzor vlevo a vpravo při psaní</string>
     <string name="header_category_personalization">Přizpůsobení</string>
     <!-- Status bar -->
     <string name="status_bar_title">Stavová lišta</string>
@@ -342,9 +351,8 @@
     <string name="status_bar_battery_percentage_text_inside">Uvnitř ikony</string>
     <string name="status_bar_battery_percentage_text_next">Vedle ikony</string>
     <!-- QuickSettings brightness slider -->
-    <string name="qs_brightness_slider_title">Ovládání jasu</string>
-    <string name="qs_brightness_slider_enabled">Zapnuto</string>
-    <string name="qs_brightness_slider_disabled">Vypnuto</string>
+    <string name="qs_brightness_slider_title">Zobrazit ovládání jasu</string>
+    <string name="qs_brightness_slider_summary">Zobrazit posuvník pro ovládání jasu v panelu rychlého nastavení</string>
     <!-- Notification light dialogs -->
     <string name="edit_light_settings">Upravit nastavení LED</string>
     <string name="pulse_speed_title">Délka impulsu a rychlost</string>
@@ -736,20 +744,39 @@
     <string name="status_bar_quick_qs_pulldown_summary">Tažením dolů z pravé strany stavového řádku bude vysunuta rychlá nabídka nastavení</string>
     <!-- Weather in status bar header -->
     <string name="status_bar_show_weather_title">Počasí</string>
-    <string name="status_bar_show_weather_summary">Zobrazit počasí v rozbalené stavové liště</string>
+    <string name="status_bar_show_weather_summary">Zobrazit počasí nad panelem rychlého nastavení</string>
     <string name="qs_category_title">Panel rychlého nastavení</string>
     <string name="qs_order_title">Přidat nové dlaždice, nebo změnit jejich pořadí</string>
     <string name="add_qs">Přidat novou dlaždici</string>
-    <string name="cast_screen">Odesílání obrazovky</string>
-    <string name="hotspot">Hotspot</string>
     <string name="qs_action_delete">Smazat</string>
     <string name="qs_action_add">Přidat</string>
     <string name="qs_action_no_more_tiles">Nejsou k dispozici žádné další dlaždie</string>
+    <string name="qs_tile_wifi">Wi\u2011Fi</string>
+    <string name="qs_tile_bluetooth">Bluetooth</string>
+    <string name="qs_tile_display_inversion">Inverze barev</string>
+    <string name="qs_tile_cellular_data">Datové spojení</string>
+    <string name="qs_tile_airplane_mode">Režim v letadle</string>
+    <string name="qs_tile_display_rotation">Rotace</string>
+    <string name="qs_tile_flashlight">Svítilna</string>
+    <string name="qs_tile_location">Poloha</string>
+    <string name="qs_tile_cast_screen">Odesílání obrazovky</string>
+    <string name="qs_tile_hotspot">Hotspot</string>
+    <string name="qs_tile_adb_over_network">ADB po síti</string>
+    <string name="qs_tile_profiles">Systémové profily</string>
+    <string name="qs_tile_performance">Výkon</string>
+    <string name="qs_tile_nfc">NFC</string>
+    <string name="qs_tile_compass">Kompas</string>
+    <string name="qs_tile_lockscreen">Zamknout obrazovku</string>
+    <string name="qs_tile_lte">LTE</string>
+    <string name="qs_screentimeout_tile">Prodleva vypnutí obrazovky</string>
     <string name="qs_main_tiles_title">Zvětšit první řádek</string>
     <string name="qs_main_tiles_summary_on">Dvě hlavní dlaždice na prvním řádku</string>
     <string name="qs_main_tiles_summary_off">Tři dlaždice na každém řádku</string>
+    <string name="qs_wifi_detail_title">Detailní zobrazení Wi\u2011Fi</string>
+    <string name="qs_wifi_detail_summary">Zapnout detailní zobrazení pro Wi\u2011Fi v rychlém nastavení</string>
     <string name="qs_advanced_location_title">Pokročilé nastavení polohy</string>
     <string name="qs_advanced_location_summary">Zapnout pokročilé nastavení pro dlaždici polohy</string>
+    <string name="gesture_settings_title">Gesta</string>
     <string name="themes_settings_title">Témata vzhledu</string>
     <!-- WiFi Ad-Hoc mode -->
     <string name="wifi_mode">Režim</string>
@@ -758,15 +785,26 @@
     <string name="wifi_ibss_freq_title">Kanál / frekvence</string>
     <string name="wifi_channel">Kanál</string>
     <string name="wifi_mhz">MHz</string>
+    <!-- SAR information -->
+    <string name="maximum_head_level">Hlava: %1$s W/kg</string>
+    <string name="maximum_body_level">Tělo: %1$s W/kg</string>
     <string name="power_menu_expanded_desktop">Rozšířená plocha</string>
     <string name="expanded_hide_nothing">Nic neschovávat</string>
     <string name="expanded_hide_status">Skrýt stavovou lištu</string>
     <string name="expanded_hide_navigation">Skrýt navigační lištu</string>
     <string name="expanded_hide_both">Skrýt obě lišty</string>
-    <string name="expanded_nothing_to_show">Pro přidání vlastní konfigurace pro jednotlivé aplikace je třeba přenout stav na "Uživatelská konfigurace"</string>
-    <string name="expanded_close">X</string>
+    <string name="expanded_nothing_to_show">Pro přidání vlastní konfigurace pro jednotlivé aplikace je třeba přepnout stav na "Uživatelská konfigurace"</string>
     <string name="expanded_desktop_state">Stav rozšířené plochy</string>
-    <string name="expanded_disabled_for_all">Celkově vypnuto</string>
     <string name="expanded_enabled_for_all">Celkově zapnuto</string>
     <string name="expanded_user_configurable">Uživatelská konfigurace</string>
+    <string name="lockscreen_settings_title">Zamčená obrazovka</string>
+    <string name="lockscreen_targets_message">Zástupci na zamčené obrazovce</string>
+    <string name="lockscreen_default_target">Výchozí</string>
+    <string name="lockscreen_message">Dotykem na ikonu vpravo nebo vlevo je možné přenastavit její chování.</string>
+    <string name="lockscreen_choose_action_title">Vybrat akci</string>
+    <string name="whisperpush_title">WhisperPush</string>
+    <string name="whisperpush_summary">Spravovat nastavení zabezpečených SMS</string>
+    <string name="whisperpush_registration_title">Registrovat</string>
+    <string name="whisperpush_registration_summary">Registrovat u WhisperPush pro zapnutí zabezpečených SMS.</string>
+    <string name="whisperpush_identitykey_title">Prohlédnout klíče identit</string>
 </resources>
