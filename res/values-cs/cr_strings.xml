@@ -393,26 +393,6 @@
     <!-- About device screen, CPU and RAM info. -->
     <string name="cpu_info">CPU</string>
     <string name="mem_info">RAM</string>
-    <!-- Heads up -->
-    <string name="heads_up_title">Vyskakující upozornění</string>
-    <string name="app_notification_enable_heads_up_title">Zobrazovat vyskakující upozornění</string>
-    <string name="app_notification_enable_heads_up_summary">Zobrazit upozornění z této aplikace jako vyskakující</string>
-    <string name="heads_up_snooze_title">Časovač prodlevy</string>
-    <string name="heads_up_snooze_summary">Pokud je tlačítko prodlevy zmáčknuto, vyskakující upozornění jsou vypnuta na <xliff:g id="number">%d</xliff:g> minut</string>
-    <string name="heads_up_snooze_disabled_summary">Časovač prodelvy je vypnut</string>
-    <string name="heads_up_snooze_3min">3 minuty</string>
-    <string name="heads_up_snooze_5min">5 minut</string>
-    <string name="heads_up_snooze_10min">10 minut</string>
-    <string name="heads_up_snooze_15min">15 minut</string>
-    <string name="heads_up_snooze_20min">20 minut</string>
-    <string name="heads_up_time_out_title">Dobra zobrazení</string>
-    <string name="heads_up_time_out_summary">Vyskakují upozornění budou zobrazena <xliff:g id="number">%d</xliff:g> sekund</string>
-    <string name="heads_up_time_out_never_summary">Vyskakující upozornění se skryjí až po ručním potvrzení</string>
-    <string name="heads_up_time_out_4sec">4 sekundy</string>
-    <string name="heads_up_time_out_6sec">6 sekund</string>
-    <string name="heads_up_time_out_8sec">8 sekund</string>
-    <string name="heads_up_time_out_10sec">10 sekund</string>
-    <string name="heads_up_time_out_never">Pořád</string>
     <!-- Option to enable/disable scrolling cache -->
     <string name="pref_scrollingcache_title">Cache skrolování</string>
     <string name="pref_scrollingcache_summary">Cache skrolování může vylepšit jeho výkon na úkor paměti</string>
@@ -661,6 +641,9 @@
     <string name="omniswitch_start_settings_summary">Otevřít nastavení OmniSwitch</string>
     <string name="omniswitch_first_time_title">Informace</string>
     <string name="omniswitch_first_time_message">OmniSwitch musí být zapnutý. Je to možné provést pomocí \"Nastavení\" dále</string>
+    <!-- Lockscreen weather -->
+    <string name="lockscreen_weather_title">Počasí na zamčené obrazovce</string>
+    <string name="lockscreen_weather_summary">SystemUI bude restartováno!</string>
     <!-- Default alarm ringtone -->
     <string name="alarm_ringtone_title">Výchozí tón budíku</string>
     <string name="lcd_density">LCD densita</string>
@@ -685,4 +668,29 @@
     <!-- QuickSettings collapse panel -->
     <string name="quick_settings_collapse_title">Automaticky zavřít</string>
     <string name="quick_settings_collapse_summary">Zavřít panel rychlého nastavení po stisku dlaždice</string>
+    <!-- QuickSettings 4 columns -->
+    <string name="qs_four_columns_title">Zobrazit 4 dlaždice na řádek</string>
+    <!-- Heads Up -->
+    <string name="category_heads_up">Vyskakující upozornění</string>
+    <string name="summary_heads_up_enabled">Vyskakující upozornění jsou zapnuty</string>
+    <string name="summary_heads_up_disabled">Vyskakující upozornění jsou vypnuty</string>
+    <string name="show_headsup_button_title">Zobrazit tlačítko rychlého přístupu</string>
+    <string name="show_headsup_button_summary">Zobrazit tlačítko rychlého přístupu v hlavičce stavové lišty</string>
+    <string name="add_heads_up_package">Přidat aplikaci</string>
+    <string name="add_heads_up_dnd_summary">Nezobrazovat vyskakující upozornění v těchto aplikacích</string>
+    <string name="add_heads_up_blacklist_summary">Nezobrazovat vyskakující upozornění pro tyto aplikace</string>
+    <string name="heads_up_dnd_title">Nerušit</string>
+    <string name="heads_up_blacklist_title">Černá listina</string>
+    <string name="heads_up_disabled_notice">Zapnutím vyskakujích upozornění budou všechna upozornění aplikací zobrazena v interaktivních oknech.</string>
+    <string name="heads_up_swipe_summary">Skrýt posunutím</string>
+    <string name="heads_up_swipe_title">Pokud je zapnuto, posunutím vyskakujícího upozornění dojde k jeho skrytí místo zrušení.</string>
+    <!-- Heads up timeout -->
+    <string name="heads_up_time_out_title">Doba zobrazení</string>
+    <string name="heads_up_time_out_summary">Vyskakují upozornění budou zobrazena <xliff:g id="number">%d</xliff:g> sekund</string>
+    <string name="heads_up_time_out_never_summary">Vyskakující upozornění se skryjí až po ručním potvrzení</string>
+    <string name="heads_up_time_out_4sec">4 sekundy</string>
+    <string name="heads_up_time_out_6sec">6 sekund</string>
+    <string name="heads_up_time_out_8sec">8 sekund</string>
+    <string name="heads_up_time_out_10sec">10 sekund</string>
+    <string name="heads_up_time_out_never">Pořád</string>
 </resources>
