@@ -24,6 +24,12 @@
          android:fragment="com.android.settings.temasek.AppCircleBar"
          android:title="@string/app_circle_bar_title"/>
 
+    <!-- Heads up notifications -->
+    <Preference
+         android:key="heads_up_enabled"
+         android:fragment="com.android.settings.temasek.HeadsUpSettings"
+         android:title="@string/category_heads_up" />
+
     <!-- Clock widget -->
     <PreferenceScreen
          android:key="lock_clock"
