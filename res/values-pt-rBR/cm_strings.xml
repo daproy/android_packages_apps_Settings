@@ -667,6 +667,9 @@
   <!-- Message when bluetooth dialog for pin entry is showing  when HIGH security enabled-->
   <string name="bluetooth_enter_pin_msg_hs">Para emparelhar com: <xliff:g id="bold"> &lt; br &gt;&lt; b &gt; </xliff:g> <xliff:g id="device_name">%1$s </xliff:g> <xliff:g id="end_bold"> &lt;/b &gt;&lt; br &gt;&lt; br &gt; </xliff:g> tipo o dispositivo exigido PIN (16 dígitos ou mais):</string>
   
+  <!-- Bluetooth settings.  Message when connected to a device, except for pbap. [CHAR LIMIT=40] -->
+  <string name="bluetooth_connected_no_pbap">Conectado (sem acesso à lista telefónica)</string>
+  
   <!-- Bluetooth settings.  The user-visible string that is used whenever referring to the DUN profile. -->
   <string name="bluetooth_profile_dun">Ligação de acesso telefónico à rede</string>
   <!-- Bluetooth settings.  The user-visible string that is used whenever referring to the SAP profile. -->
@@ -674,11 +677,15 @@
   
   <!-- Bluetooth settings.  Connection options screen.  The summary for the DUN checkbox preference when DUN is connected. -->
   <string name="bluetooth_dun_profile_summary_connected">Conectado ao servidor DUN</string>
+  <!-- Bluetooth settings.  Connection options screen.  The summary for the pbap checkbox preference when pbap is connected. -->
+  <string name="bluetooth_pbap_profile_summary_connected">Conectado ao servidor PBAP</string>
   <!-- Bluetooth settings.  Connection options screen.  The summary for the SAP checkbox preference when SAP is connected. -->
   <string name="bluetooth_sap_profile_summary_connected">Conectado ao servidor de acesso SIM</string>
   
   <!-- Bluetooth settings.  Connection options screen.  The summary for the DUN checkbox preference that describes how checking it will set the DUN profile as preferred. -->
   <string name="bluetooth_dun_profile_summary_use_for">Uso para acesso à rede Dial-up</string>
+  <!-- Bluetooth settings.  Connection options screen.  The summary for the pbap checkbox preference that describes how checking it will set the pbap profile as preferred. -->
+  <string name="bluetooth_pbap_profile_summary_use_for">Use para o compartilhamento de contatos</string>
   <!-- Bluetooth settings.  Connection options screen.  The summary for the SAP checkbox preference that describes how checking it will set the SAP profile as preferred. -->
   <string name="bluetooth_sap_profile_summary_use_for">Uso para acesso ao SIM</string>
   
@@ -928,6 +935,8 @@
   <string name="qs_wifi_detail_summary">Ativar visualização detalhada para Wi\u2011Fi em Definições Rápidas</string>
   <string name="qs_advanced_location_title">Configurações de localização avançada</string>
   <string name="qs_advanced_location_summary">Ativar as configurações avançadas para localização em configurações rápidas</string>
+  <string name="qs_screenshot_tile">Screenshot</string>
+  <string name="qs_sync_tile">Sincronização</string>
   
   <!-- Gesture Settings -->
   <!-- Settings main menu entry -->
