@@ -790,5 +790,8 @@
     <!-- QuickSettings collapse panel -->
     <string name="quick_settings_collapse_title">Auto fechar painel</string>
     <string name="quick_settings_collapse_summary">Feche o painel sobre ativar o Quick Settings</string>
+	
+	<!-- QuickSettings 4 columns -->
+    <string name="qs_four_columns_title">Mostrar quatro peças por linha</string>
    
 </resources>
