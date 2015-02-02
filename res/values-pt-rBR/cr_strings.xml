@@ -439,27 +439,6 @@
   <string name="cpu_info">CPU</string>
   <string name="mem_info">RAM</string>
   
-  <!-- Heads up -->
-  <string name="heads_up_title">Heads up notification</string>
-  <string name="app_notification_enable_heads_up_title">Show heads up</string>
-  <string name="app_notification_enable_heads_up_summary">Mostrar notificações deste app como heads-up</string>
-  <string name="heads_up_snooze_title">Timer snooze</string>
-  <string name="heads_up_snooze_summary">Se for pressionado o botão snooze, desabilitar cabeças por <xliff:g id="number">%d </xliff:g> minutos</string>
-  <string name="heads_up_snooze_disabled_summary">Timer snooze é desativado</string>
-  <string name="heads_up_snooze_3min">3 minutos</string>
-  <string name="heads_up_snooze_5min">5 minutos</string>
-  <string name="heads_up_snooze_10min">10 minutos</string>
-  <string name="heads_up_snooze_15min">15 minutos</string>
-  <string name="heads_up_snooze_20min">20 minutes</string>
-  <string name="heads_up_time_out_title">Tempo esgotado</string>
-  <string name="heads_up_time_out_summary">Heads-up notificação aparecerão para <xliff:g id="number">%d </xliff:g> segundos</string>
-  <string name="heads_up_time_out_never_summary">Heads up notificação vai mostrar até que seja julgada improcedente</string>
-  <string name="heads_up_time_out_4sec">4 segundos</string>
-  <string name="heads_up_time_out_6sec">6 segundos</string>
-  <string name="heads_up_time_out_8sec">8 segundos</string>
-  <string name="heads_up_time_out_10sec">10 secondos</string>
-  <string name="heads_up_time_out_never">Nunca</string>
-  
   <!-- Option to enable/disable scrolling cache -->
   <string name="pref_scrollingcache_title">Cache de rolagem</string>
   <string name="pref_scrollingcache_summary">Rolagem cache pode melhorar o desempenho de rolagem ao custo de memória</string>
@@ -759,6 +738,10 @@
   <string name="omniswitch_first_time_title">Informações</string>
   <string name="omniswitch_first_time_message">Certifique-se de que ter habilitado OmniSwitch. Você pode fazer isso usando o \"Configurações\" abaixo</string>
   
+  <!-- Lockscreen weather -->
+  <string name="lockscreen_weather_title">Tempo no lockscreen</string>
+  <string name="lockscreen_weather_summary">SystemUI será reiniciado!</string>
+  
   <!-- Default alarm ringtone -->
   <string name="alarm_ringtone_title">Ringtone de alarme padrão</string>
   
@@ -794,4 +777,30 @@
 	<!-- QuickSettings 4 columns -->
     <string name="qs_four_columns_title">Mostrar quatro peças por linha</string>
    
+   <!-- Heads Up -->
+    <string name="category_heads_up">Heads up notificações</string>
+    <string name="summary_heads_up_enabled">Notificações pop-up estão habilitados</string>
+    <string name="summary_heads_up_disabled">Notificações pop-up estão desativados</string>
+    <string name="show_headsup_button_title">Mostrar botão de acesso rápido</string>
+    <string name="show_headsup_button_summary">Mostrar um botão de acesso rápido no topo da barra de status</string>
+    <string name="add_heads_up_package">Adicionar aplicações</string>
+    <string name="add_heads_up_dnd_summary">Don\'t Mostrar heads up nestas aplicações</string>
+    <string name="add_heads_up_blacklist_summary">Don\'t Mostrar heads-up a partir desses aplicativos</string>
+    <string name="heads_up_dnd_title">Não perturbe</string>
+    <string name="heads_up_blacklist_title">Lista negra</string>
+    <string name="heads_up_disabled_notice">Para permitir que os aplicativos possa exibir notificações interativos em uma janela pop-up na tela, habilitar Heads up.</string>
+    <string name="heads_up_swipe_summary">Descartar em swipe</string>
+    <string name="heads_up_swipe_title">Se ativado, esconder notificação quando passando longe da janela pop-up, em vez de removê-lo</string>
+
+    <!-- Heads up timeout -->
+    <string name="heads_up_time_out_title">Tempo esgotado</string>
+    <string name="heads_up_time_out_summary">Notificação vai mostrar para <xliff:g id="number">%d</xliff:g> segundos</string>
+    <string name="heads_up_time_out_never_summary">Notificação vai mostrar até que seja julgada improcedente</string>
+    <string name="heads_up_time_out_2sec">2 segundos</string>
+    <string name="heads_up_time_out_4sec">4 segundos</string>
+    <string name="heads_up_time_out_6sec">6 segundos</string>
+    <string name="heads_up_time_out_8sec">8 segundos</string>
+    <string name="heads_up_time_out_10sec">10 segundos</string>
+    <string name="heads_up_time_out_never">Nunca</string>
+	
 </resources>
