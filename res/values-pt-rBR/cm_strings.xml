@@ -260,7 +260,6 @@
   <string name="app_security_title">Segurança de aplicativo</string>
   <string name="sms_security_check_limit_title">Limite de mensagens SMS</string>
   <string name="sms_security_check_limit_summary">Apps podem enviar mensagens de %d em 30 minutos antes de exigir confirmação</string>
-  <string name="sms_security_check_limit_default">30 (padrão)</string>
   
   <string name="spam_added_title">Adicionado%1$s</string>
   <string name="spam_last_blocked_title">Última bloqueado %1$s</string>
@@ -275,7 +274,7 @@
   
   <!-- About phone screen, build date -->
   <string name="build_date">Construir Data</string>
-  <string name="build_date_default">2014-01-01-0000</string>
+  <string name="build_date_default"translatable="false">2014-01-01-0000</string>
   
   <!--- Advanced Settings -->
   <string name="advanced_settings">Configurações avançadas</string>
@@ -353,6 +352,14 @@
   <string name="navigation_bar_category">Barra de navegação</string>
   <string name="navigation_bar_left_title">Modo canhoto</string>
   <string name="navigation_bar_left_summary">Coloque a barra de navegação no lado esquerdo da tela em modo paisagem</string>
+  <string name="navigation_bar_title">Botões e layout</string>   
+  <string name="navigation_bar_help_text">Para começar a tocar no ícone de edição para desbloquear a barra de navegação para edição.\n\nVocê pode tocar em um ícone para alterar o seu atalho, ou pressione e segure um ícone para re-organizar o layout.\n\nToque em Salvar para confirmar as alterações, ou restaurar para redefinir o layout para as configurações padrão.</string>
+  <string name="navigation_restore_button_text">Restaurar\nPadrões</string>
+  <string name="navigation_edit_button_text">Editar</string>
+  <string name="navigation_save_button_text">Salvar</string>
+  <string name="navigation_bar_reset_message">Excluir configurações atuais e restaurar o layout padrão?</string>
+  <string name="navigation_bar_arrow_keys_title">Mostrar teclas de seta durante a digitação</string>
+  <string name="navigation_bar_arrow_keys_summary">Mostrar botões de cursor esquerda e direita durante a digitação. Substitui IME switcher.</string>
   
   <string name="header_category_personalization">Personalização</string>
   
@@ -373,7 +380,7 @@
   
   <!-- Status bar - Battery percentage -->
   <string name="status_bar_battery_percentage_title">Porcentagem da bateria</string>
-  <string name="status_bar_battery_percentage_default">Oculto (padrão)</string>
+  <string name="status_bar_battery_percentage_default">Oculto</string>
   <string name="status_bar_battery_percentage_text_inside">Dentro do ícone</string>
   <string name="status_bar_battery_percentage_text_next">Ao lado do ícone</string>
   
@@ -771,8 +778,8 @@
   <string name="sim_enabler_in_call">Não é possível executar a operação enquanto na chamada.</string>
   <string name="sim_enabler_both_inactive">Não é possível desabilitar todos os cartões SIM</string>
   <string name="sim_enabler_sim">SIM</string>
-  <string name="sim_enabler_enabling">Activating\2026</string>
-  <string name="sim_enabler_disabling">Deactivating\2026</string>
+  <string name="sim_enabler_enabling">Activating\u2026</string>
+  <string name="sim_enabler_disabling">Deactivating\u2026</string>
   <string name="sub_activate_success">SIM ativado.</string>
   <string name="sub_deactivate_success">SIM desativado.</string>
   
@@ -909,14 +916,16 @@
   <string name="qs_tile_performance">Performance</string>
   <string name="qs_tile_nfc">NFC</string>
   <string name="qs_tile_compass">Bússola</string>
-  <string name="qs_tile_lockscreen">Lockscreen</string>
+  <string name="qs_tile_lockscreen">Lock screen</string>
   <string name="qs_tile_lte">LTE</string>
-  <string name="qs_tile_visualizer">AudioFX</string>
+  <string name="qs_tile_visualizer" translatable="false">AudioFX</string>
   
   <string name="qs_main_tiles_title">Ampliar primeira linha</string>
   <string name="qs_main_tiles_summary_on">Dois atalhos principais na primeira linha</string>
   <string name="qs_main_tiles_summary_off">Três atalhos em cada linha</string>
   
+  <string name="qs_wifi_detail_title">Detalhado Wi\u2011Fi view</string>
+  <string name="qs_wifi_detail_summary">Ativar visualização detalhada para Wi\u2011Fi em Definições Rápidas</string>
   <string name="qs_advanced_location_title">Configurações de localização avançada</string>
   <string name="qs_advanced_location_summary">Ativar as configurações avançadas para localização em configurações rápidas</string>
   
@@ -949,7 +958,7 @@
   <string name="expanded_hide_status">Ocultar barra de status</string>
   <string name="expanded_hide_navigation">Ocultar a barra de navegação</string>
   <string name="expanded_hide_both">Esconder ambos</string>
-  <string name="expanded_nothing_to_show">Para adicionar uma configuração de aplicativo personalizado para estado expandido, defina \"Enabled para todos\" para a posição fechada</string>
+  <string name="expanded_nothing_to_show">Para adicionar uma configuração de aplicativo personalizado para estado expandido, defina \"Ativar para todos\" para a posição fechada</string>
   <string name="expanded_desktop_state">Estado expandido</string>
   <string name="expanded_enabled_for_all">Habilitado para todos</string>
   <string name="expanded_user_configurable">Usuário configurável</string>
