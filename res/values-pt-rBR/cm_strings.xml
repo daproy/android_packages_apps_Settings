@@ -274,7 +274,7 @@
   
   <!-- About phone screen, build date -->
   <string name="build_date">Construir Data</string>
-  <string name="build_date_default"translatable="false">2014-01-01-0000</string>
+  <string name="build_date_default" translatable="false">2014-01-01-0000</string>
   
   <!--- Advanced Settings -->
   <string name="advanced_settings">Configurações avançadas</string>
