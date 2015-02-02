@@ -592,11 +592,14 @@
     <string name="intensity_str">Intenzita: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
     <string name="settings_reset_button">Obnovit</string>
     <string name="bluetooth_enter_pin_msg_hs">Zařízení vyžaduje 16 znakový passkey</string>
+    <string name="bluetooth_connected_no_pbap">Připojeno (bez přístupu k výpisu hovorů)</string>
     <string name="bluetooth_profile_dun">Přístup k vytáčené síti</string>
     <string name="bluetooth_profile_sap">Přístup k SIM</string>
     <string name="bluetooth_dun_profile_summary_connected">Připojeno k serveru DUN</string>
+    <string name="bluetooth_pbap_profile_summary_connected">Připojeno k serveru pbap</string>
     <string name="bluetooth_sap_profile_summary_connected">Připojeno k serveru přístupu SIM</string>
     <string name="bluetooth_dun_profile_summary_use_for">Použít pro přístup k vytáčenému spojení</string>
+    <string name="bluetooth_pbap_profile_summary_use_for">Použít pro sdílení kontaktů</string>
     <string name="bluetooth_sap_profile_summary_use_for">Použít pro přístup k SIM</string>
     <string name="wifi_rssi_threshold_check">Zapnout prahovou hodnotu RSSI</string>
     <string name="wifi_rssi_threshold_check_summary">Nepřipojovat k přístupovému bodu, pokud je RSSI velmi špatné</string>
@@ -772,6 +775,8 @@
     <string name="qs_wifi_detail_summary">Zapnout detailní zobrazení pro Wi\u2011Fi v rychlém nastavení</string>
     <string name="qs_advanced_location_title">Pokročilé nastavení polohy</string>
     <string name="qs_advanced_location_summary">Zapnout pokročilé nastavení pro dlaždici polohy</string>
+    <string name="qs_screenshot_tile">Snímek obrazovky</string>
+    <string name="qs_sync_tile">Synchronizace</string>
     <string name="gesture_settings_title">Gesta</string>
     <string name="themes_settings_title">Témata vzhledu</string>
     <!-- WiFi Ad-Hoc mode -->
