@@ -978,4 +978,13 @@
   <string name="lockscreen_message">Toque em um ícone da esquerda ou direita para reatribuir um atalho de tela de bloqueio.</string>
   <string name="lockscreen_choose_action_title">Escolha a ação</string>
   
+  <!-- WhisperPush -->
+  <string name="whisperpush_title">WhisperPush</string>
+  <string name="whisperpush_summary">Gerenciar configurações SMS seguras</string>
+  <string name="whisperpush_registration_title">Registrar</string>
+  <string name="whisperpush_registration_summary">Registre-se em WhisperPush para permitir SMS criptografado.</string>
+  <string name="whisperpush_identitykey_title">Teclas de revisão de identidade</string>
+
+  <string name="navigation_ring_title">Metas anel de navegação</string>
+  <string name="navigation_ring_message">Toque no ícone de edição para abrir o anel de navegação para edição.\n\nSelecione um destino para configurar o seu comportamento.\n\nToque no ícone de seleção para salvar as alterações, ou restaurar para redefinir as configurações para os padrões.</string>
 </resources>
