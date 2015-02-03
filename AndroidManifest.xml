@@ -1759,6 +1759,8 @@
 
         <!-- CyanogenMod activities Start -->
 
+        <activity android:name=".headsup.HeadsUpSettings" />
+
         <activity android:name="Settings$VoiceWakeupSettingsActivity"
                 android:label="@string/voice_wakeup_settings_title"
                 android:taskAffinity=""
@@ -1886,33 +1888,6 @@
             <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
                 android:resource="@id/security_settings" />
         </activity>
-
-        <!-- "Heads up settings activity. -->
-        <activity android:name="Settings$HeadsUpSettingsActivity"
-                android:uiOptions="splitActionBarWhenNarrow"
-                android:label="@string/category_heads_up"
-                android:excludeFromRecents="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
-                android:value="com.android.settings.temasek.HeadsUpSettings" />
-            <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
-                android:resource="@id/security_settings" />
-        </activity>
-
-        <activity-alias android:name=".temasek.HeadsUpSettings"
-                android:taskAffinity="com.android.settings"
-                android:label="@string/category_heads_up"
-                android:targetActivity="Settings$HeadsUpSettingsActivity"
-                android:configChanges="orientation|keyboardHidden|screenSize"
-                android:exported="true">
-            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
-                       android:value="com.android.settings.temasek.HeadsUpSettings" />
-            <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
-                       android:resource="@id/security_settings" />
-        </activity-alias>
 
         <activity android:name="Settings$DataUsageSummaryActivity"
                 android:label="@string/data_usage_summary_title"
