@@ -781,8 +781,6 @@
     <string name="category_heads_up">Heads up notificações</string>
     <string name="summary_heads_up_enabled">Notificações pop-up estão habilitados</string>
     <string name="summary_heads_up_disabled">Notificações pop-up estão desativados</string>
-    <string name="show_headsup_button_title">Mostrar botão de acesso rápido</string>
-    <string name="show_headsup_button_summary">Mostrar um botão de acesso rápido no topo da barra de status</string>
     <string name="add_heads_up_package">Adicionar aplicações</string>
     <string name="add_heads_up_dnd_summary">Don\'t Mostrar heads up nestas aplicações</string>
     <string name="add_heads_up_blacklist_summary">Don\'t Mostrar heads-up a partir desses aplicativos</string>
