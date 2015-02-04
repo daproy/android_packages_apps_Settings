@@ -86,9 +86,10 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_FONT_SIZE = "font_size";
     private static final String KEY_SCREEN_SAVER = "screensaver";
     private static final String KEY_LIFT_TO_WAKE = "lift_to_wake";
+    private static final String KEY_DOZE_CATEGORY = "category_doze_options";
     private static final String KEY_DOZE = "doze";
     private static final String KEY_DOZE_TIMEOUT = "doze_timeout";
-    private static final String KEY_DOZE_CATEGORY = "category_doze_options";
+    private static final String KEY_DOZE_TRIGGER_MOTION = "doze_trigger_motion";
     private static final String KEY_AUTO_BRIGHTNESS = "auto_brightness";
     private static final String KEY_ADAPTIVE_BACKLIGHT = "adaptive_backlight";
     private static final String KEY_SUNLIGHT_ENHANCEMENT = "sunlight_enhancement";
@@ -115,9 +116,10 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private ListPreference mScreenTimeoutPreference;
     private Preference mScreenSaverPreference;
     private SwitchPreference mLiftToWakePreference;
+    private PreferenceCategory mDozeCategory;
     private SwitchPreference mDozePreference;
     private SlimSeekBarPreference mDozeTimeout;
-    private PreferenceCategory mDozeCategory;
+    private SwitchPreference mDozeTriggerMotion;
     private SwitchPreference mAutoBrightnessPreference;
     private SwitchPreference mTapToWake;
     private SwitchPreference mDisableIM;
@@ -224,6 +226,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             // Doze master switch
             mDozePreference = (SwitchPreference) findPreference(KEY_DOZE);
             mDozePreference.setOnPreferenceChangeListener(this);
+
             // Doze timeout seekbar
             mDozeTimeout = (SlimSeekBarPreference) findPreference(KEY_DOZE_TIMEOUT);
             mDozeTimeout.setDefault(3000);
@@ -232,6 +235,14 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             mDozeTimeout.minimumValue(100);
             mDozeTimeout.multiplyValue(100);
             mDozeTimeout.setOnPreferenceChangeListener(this);
+
+            // Doze triggers
+            if (areMotionSensorsAvailable(activity)) {
+                mDozeTriggerMotion = (SwitchPreference) findPreference(KEY_DOZE_TRIGGER_MOTION);
+                mDozeTriggerMotion.setOnPreferenceChangeListener(this);
+            } else {
+                removePreference(KEY_DOZE_TRIGGER_MOTION);
+            }
         } else {
             prefSet.removePreference(mDozeCategory);
         }
@@ -266,6 +277,13 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static boolean isLiftToWakeAvailable(Context context) {
         SensorManager sensors = (SensorManager) context.getSystemService(Context.SENSOR_SERVICE);
         return sensors != null && sensors.getDefaultSensor(Sensor.TYPE_WAKE_GESTURE) != null;
+    }
+
+    private static boolean areMotionSensorsAvailable(Context context) {
+        SensorManager sensors = (SensorManager) context.getSystemService(Context.SENSOR_SERVICE);
+        return sensors != null &&
+                (sensors.getDefaultSensor(Sensor.TYPE_SIGNIFICANT_MOTION) != null
+                || sensors.getDefaultSensor(Sensor.TYPE_PICK_UP_GESTURE) != null);
     }
 
     private static boolean isDozeAvailable(Context context) {
@@ -507,6 +525,13 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             // minimum 100 is 1 interval of the 100 multiplier
             mDozeTimeout.setInitValue((statusDozeTimeout / 100) - 1);
         }
+
+        // Update doze triggers
+        if (mDozeTriggerMotion != null) {
+            int value = Settings.System.getInt(getContentResolver(),
+                    Settings.System.DOZE_TRIGGER_MOTION, 1);
+            mDozeTriggerMotion.setChecked(value != 0);
+        }
     }
 
     private void updateScreenSaverSummary() {
@@ -612,6 +637,11 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             int dozeTimeout = Integer.valueOf((String) objValue);
             Settings.System.putInt(getContentResolver(),
                     Settings.System.DOZE_TIMEOUT, dozeTimeout);
+        }
+        if (preference == mDozeTriggerMotion) {
+            boolean value = (Boolean) objValue;
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.DOZE_TRIGGER_MOTION, value ? 1 : 0);
         }
         return true;
     }
@@ -753,6 +783,9 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                     if (!isDozeAvailable(context)) {
                         result.add(KEY_DOZE);
                         result.add(KEY_DOZE_TIMEOUT);
+                        if (!areMotionSensorsAvailable(context)) {
+                            result.add(KEY_DOZE_TRIGGER_MOTION);
+                        }
                     }
                     return result;
                 }
