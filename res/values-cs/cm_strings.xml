@@ -264,6 +264,12 @@
     <string name="block_notifications_title">Filtrovat oznámení</string>
     <string name="block_notifications_summary">Spravovat ignorovaná upozornění a filtry</string>
     <string name="no_filters_title">Nenastaven žádný filtr</string>
+    <!-- Settings switch for updating Cyanogen recovery -->
+    <string name="update_recovery_title">Aktualizovat Cyanogen recovery</string>
+    <string name="update_recovery_summary">Aktualizovat recovery se systémem</string>
+    <string name="update_recovery_on_warning">UPOZORNĚNÍ: Pokud je tato funkce zapnutá, existující recovery bude nahrazena tou, která je přiložena k ROM.\n\nRecovery bude aktualizována společně se systémem pro zachování kompatibility.\n\nOpravdu se má tato funkčnost zapnout?</string>
+    <string name="update_recovery_off_warning">POZOR: Pokud je tato funkce zapnutá, existující recovery bude nahrazena tou, která je přiložena k ROM.\n\nRecovery bude aktualizována společně se systémem pro zachování kompatibility.\n\nOpravdu se má tato funkčnost vypnout?</string>
+
     <!-- About phone screen, CyanogenMod version -->
     <string name="mod_version">CyanogenMod verze</string>
     <string name="mod_version_default">Neznámá</string>
