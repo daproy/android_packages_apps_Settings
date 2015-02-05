@@ -692,7 +692,6 @@ Nós pedimos que você não envie relatórios de erros, se qualquer uma dessas c
   <string name="max_cpu_freq_file">/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq</string>
   <string name="min_cpu_freq_file">/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq</string>
   <string name="temasek_version_title">Versão oficial de Temasek</string>
-  <string name="temasek_version_default">Build V5.5</string>
   <string name="temasek_settings_title">Temasek spare parts</string>
   <string name="status_bar_style_title">Estilo</string>
   <string name="status_bar_settings">Configurações da barra de status</string>
