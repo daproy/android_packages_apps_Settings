@@ -257,6 +257,12 @@
   <string name="block_notifications_summary">Gerenciar notificações ignoradas e filtros</string>
   <string name="no_filters_title">Nenhum conjunto de filtros</string>
   
+  <!-- Settings switch for updating Cyanogen recovery -->
+ <string name="update_recovery_title">Atualização de recovery Cyanogen</string>
+ <string name="update_recovery_summary">Atualização de recovery com as atualizações do sistema</string>
+ <string name="update_recovery_on_warning">AVISO: Quando esta função estiver ativada, a sua recovery instalado será substituído por um incluído com a versão atual do sistema operacional em execução.\n\nSua recovery será atualizado junto com atualizações para o seu sistema, ajudando a garantir a compatibilidade com versões futuras.\n\nGostaria de ativar esse recurso?</string>
+ <string name="update_recovery_off_warning">AVISO: Quando este recurso estiver desativado, a sua recovery instalado não será atualizado com as atualizações do sistema operacional.\n\nFuturas atualizações do sistema operacional podem não ser instalado com versões de recuperação desatualizados ou personalizados.\n\nVocê realmente quer para desativar esse recurso?</string>
+  
   <!-- About phone screen, CyanogenMod version -->
   <string name="mod_version">Versão CyanogenMod</string>
   <string name="mod_version_default">Desconhecido</string>
