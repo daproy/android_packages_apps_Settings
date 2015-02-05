@@ -675,8 +675,9 @@
     <string name="sim_enabler_airplane_on">CHYBA, je zapnut režim v letadle!</string>
     <string name="sim_enabler_in_call">CHYBA, probíhá hovor!</string>
     <string name="sim_enabler_both_inactive">"Není možné vypnout všechny SIM"</string>
-    <string name="sim_enabler_enabling">Aktivování\u2026</string>
-    <string name="sim_enabler_disabling">Deaktivování\u2026</string>
+    <string name="sim_enabler_enabling">Aktivace<xliff:g id="name">%s</xliff:g>\u2026</string>
+    <string name="sim_enabler_disabling">Deaktivace<xliff:g id="name">%s</xliff:g>\u2026</string>
+    <string name="sim_enabler_deactivate">Deaktivovat</string>
     <string name="sub_activate_success">Úspěšně aktivováno.</string>
     <string name="sub_activate_failed">Aktivace selhala.</string>
     <string name="sub_deactivate_success">Úspěšně deaktivováno.</string>
@@ -801,6 +802,7 @@
     <string name="lockscreen_settings_title">Zamčená obrazovka</string>
     <string name="lockscreen_targets_message">Zástupci na zamčené obrazovce</string>
     <string name="lockscreen_default_target">Výchozí</string>
+    <string name="lockscreen_none_target">Nic</string>
     <string name="lockscreen_message">Dotykem na ikonu vpravo nebo vlevo je možné přenastavit její chování.</string>
     <string name="lockscreen_choose_action_title">Vybrat akci</string>
     <string name="whisperpush_title">WhisperPush</string>
@@ -808,4 +810,31 @@
     <string name="whisperpush_registration_title">Registrovat</string>
     <string name="whisperpush_registration_summary">Registrovat u WhisperPush pro zapnutí zabezpečených SMS.</string>
     <string name="whisperpush_identitykey_title">Prohlédnout klíče identit</string>
+    <string name="navigation_ring_title">Zkratky navigačního kruhu</string>
+    <string name="navigation_ring_message">Stisknutím ikony editace dojde k otevření navigačního kruhu pro úpravy.\n\nVybráním cíle, je možné ho konfigurovat.\n\nStisknutím potvrzovací ikony dojde k uložení změn. Ikonou obnovení je možné obnovit výchozí nastavení.</string>
+    <!-- Stylus Icon -->
+    <string name="stylus_icon_enabled_title">Při používání stylusu zobrazovat ikonu</string>
+    <string name="stylus_icon_enabled_summary">Zobrazit ikonu ukazatele při používání stylusu</string>
+    <!-- Stylus Gestures -->
+    <string name="gestures_settings_title">Gesta stylusu</string>
+    <string name="category_spen_title">Gesta stylusu</string>
+    <string name="enable_subcat_title">Stylus</string>
+    <string name="enable_spen_title_head">Zapnout gesta</string>
+    <string name="enable_spen_summary_head">Použít šoupací gesta přidržením tlačítka stylusu</string>
+    <string name="gestures_subcat_title">Gesta</string>
+    <string name="gestures_left_spen_title_head">Posunutí vlevo</string>
+    <string name="gestures_right_spen_title_head">Posunutí vpravo</string>
+    <string name="gestures_up_spen_title_head">Posunutí nahoru</string>
+    <string name="gestures_down_spen_title_head">Posunutí dolů</string>
+    <string name="gestures_long_spen_title_head">Dlouhý stisk</string>
+    <string name="gestures_double_spen_title_head">Dvojitý stisk</string>
+    <!-- Gestures Options -->
+    <string name="gestures_action_empty">Žádná akce</string>
+    <string name="gestures_action_home">Domů</string>
+    <string name="gestures_action_back">Zpět</string>
+    <string name="gestures_action_menu">Menu</string>
+    <string name="gestures_action_search">Vyvolat hledání</string>
+    <string name="gestures_action_recent">Přepínač aplikací</string>
+    <!-- Stylus gestures -->
+    <string name="stylus_app_not_installed">%s není nainstalováno</string>
 </resources>

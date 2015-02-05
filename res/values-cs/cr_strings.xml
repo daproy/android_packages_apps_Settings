@@ -241,9 +241,9 @@
     <string name="smart_pulldown_title">Chytré vysunutí</string>
     <string name="smart_pulldown_summary">Otevřít rychlé nastavení pokud nejsou přítomna žádná %1$s upozornění</string>
     <string name="smart_pulldown_off">Vypnuto</string>
-    <string name="smart_pulldown_dismissable">neostranitelná</string>
+    <string name="smart_pulldown_dismissable">neodstranitelná</string>
     <string name="smart_pulldown_persistent">perzistentní</string>
-    <string name="smart_pulldown_all">neostranitelná nebo perzistentní</string>
+    <string name="smart_pulldown_all">neodstranitelná nebo perzistentní</string>
     <!-- Restart SystemUI -->
     <string name="restart_systemui">Restartovat SystemUI</string>
     <!--Power menu -->
@@ -693,4 +693,7 @@
     <string name="heads_up_time_out_8sec">8 sekund</string>
     <string name="heads_up_time_out_10sec">10 sekund</string>
     <string name="heads_up_time_out_never">Pořád</string>
+    <!-- Changelog -->
+    <string name="changelog_temasek_title">Seznam změn</string>
+    <string name="changelog_temasek_error">Seznam nebylo možné načíst</string>
 </resources>
