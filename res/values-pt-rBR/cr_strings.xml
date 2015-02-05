@@ -199,8 +199,6 @@
   <string name="clock_date_style_uppercase">Letras maiúsculas</string>
   <string name="clock_date_format_custom">Formato personalizado java</string>
   <string name="status_bar_clock_style_reset_message">Restauração relógio cor?</string>
-  <string name="status_bar_ticker_title">Ticker de notificação</string>
-  <string name="status_bar_ticker_summary">Animação de texto de notificação na statusbar</string>
   <string name="clock_font_style_title">Fonte</string>
   <string name="clock_font_bold">Bold (realce)</string>
   <string name="clock_font_condensed">Condensado</string>
