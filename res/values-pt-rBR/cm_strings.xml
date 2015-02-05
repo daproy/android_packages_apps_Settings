@@ -98,16 +98,6 @@
   <string name="profile_trigger_disconnect">Em desconectar</string>
   <string name="profile_trigger_notrigger">Sem gatilho</string>
   
-  <!-- Profile Settings sound modes labels -->
-  <string name="sound_mode">Modo de notificação</string>
-  <string name="ringer_mode">Modo de anel</string>
-  <string name="lights_mode">Modo de luzes</string>
-  <string name="vibrate_mode">Modo de vibrar</string>
-  
-  <!-- Sound settings screen, setting option name to pick ringtone (a list dialog comes up)-->
-  <string name="soundtone_title">Tom de notificação</string>
-  <string name="soundtone_summary" translatable="false">""</string>
-  
   <!-- Title for application group setting screen -->
   <string name="profile_applist_title">Apps</string>
   
@@ -273,14 +263,10 @@
   <string name="model_name">Nome do modelo</string>
   
   <!-- About phone screen, build date -->
-  <string name="build_date">Construir Data</string>
+  <string name="build_date">Data da Construção </string>
   <string name="build_date_default" translatable="false">2014-01-01-0000</string>
   
-  <!--- Advanced Settings -->
-  <string name="advanced_settings">Configurações avançadas</string>
-  <string name="advanced_settings_summary">Permitir mais opções de configurações</string>
-  
-  <string name="contributor_cloud_title">Contribuintes</string>
+  <string name="contributor_cloud_title">Contribuidores</string>
   
   <!--- Tap To Wake -->
   <string name="double_tap_to_wake_title">Dê um duplo toque para acordar</string>
@@ -667,9 +653,6 @@
   <!-- Message when bluetooth dialog for pin entry is showing  when HIGH security enabled-->
   <string name="bluetooth_enter_pin_msg_hs">Para emparelhar com: <xliff:g id="bold"> &lt; br &gt;&lt; b &gt; </xliff:g> <xliff:g id="device_name">%1$s </xliff:g> <xliff:g id="end_bold"> &lt;/b &gt;&lt; br &gt;&lt; br &gt; </xliff:g> tipo o dispositivo exigido PIN (16 dígitos ou mais):</string>
   
-  <!-- Bluetooth settings.  Message when connected to a device, except for pbap. [CHAR LIMIT=40] -->
-  <string name="bluetooth_connected_no_pbap">Conectado (sem acesso à lista telefónica)</string>
-  
   <!-- Bluetooth settings.  The user-visible string that is used whenever referring to the DUN profile. -->
   <string name="bluetooth_profile_dun">Ligação de acesso telefónico à rede</string>
   <!-- Bluetooth settings.  The user-visible string that is used whenever referring to the SAP profile. -->
@@ -745,10 +728,6 @@
   <string name="usb_unmount_inform_text" product="default">Armazenamento USB será desmontado.</string>
   <string name="uicc_unmount_inform_text" product="default">Armazenamento UICC será desmontado.</string>
   
-  <string name="usb_media_format_title" product="default">Apagar armazenamento USB</string>
-  <string name="uicc_media_format_title" product="default">Apagar armazenamento UICC</string>
-  <string name="usb_media_format_summary" product="default">Apaga todos os dados do armazenamento USB</string>
-  <string name="uicc_media_format_summary" product="default">Apaga todos os dados do armazenamento de UICC</string>
   <string name="usb_media_format_desc" product="default">Apagar o armazenamento USB? Você vai perder <b>todos os</b> dados do armazenamento!</string>
   <string name="uicc_media_format_desc" product="default">Apagar o armazenamento UICC? Você vai perder <b>todos os</b> dados do armazenamento!</string>
   <string name="usb_media_format_button_text" product="default">Apagar armazenamento USB</string>
@@ -785,41 +764,40 @@
   <string name="sim_enabler_in_call">Não é possível executar a operação enquanto na chamada.</string>
   <string name="sim_enabler_both_inactive">Não é possível desabilitar todos os cartões SIM</string>
   <string name="sim_enabler_sim">SIM</string>
-  <string name="sim_enabler_enabling">Activating\u2026</string>
-  <string name="sim_enabler_disabling">Deactivating\u2026</string>
-  <string name="sub_activate_success">SIM ativado.</string>
-  <string name="sub_deactivate_success">SIM desativado.</string>
+  <string name="sim_enabler_enabling">Ativando\u2026</string>
+  <string name="sim_enabler_disabling">Desativando\u2026</string>
+  <string name="sim_enabler_deactivate">Desativado</string>
   
   <string name="primary_sub_select_title">Assinatura de 3G/LTE padrão</string>
   
   <string name="usb_charging_title">Cobrar apenas</string>
   <string name="usb_charging_summary">Desativa todas as transferências de dados com o computador e o dispositivo de acusações através da porta USB</string>
   
+  <string name="usb_sdcard_title">Armazenamento em massa (UMS)</string>
   <string name="usb_sdcard_summary">Permite transferir arquivos entre seu computador e o cartão SD por montá-lo como um dispositivo flash</string>
-  <string name="external_storage_turn_on">Armazenamento externo foi ligado</string>
   
+  <string name="external_storage_turn_on">Armazenamento externo foi ligado</string>
   <string name="external_storage_turn_off">Armazenamento externo foi desligado</string>
-  <string name="menu_hidden_apps_delete">Redefinir</string>
   
   <!-- Protected Apps -->
+  <string name="menu_hidden_apps_delete">Redefinir</string>
   <string name="menu_hidden_apps_reset_lock">Redefinir o bloqueio padrão</string>
   <string name="protected_apps">Protegidas apps</string>
   <string name="saving_protected_components">Salvando o componente state\u2026</string>
-  <string name="power_notifications_category_title">Carregamento de sons</string>
   
   <!-- Category title for Charging sounds (Power state change) specific Settings.
        [CHAR LIMIT=40] -->
-  <string name="power_notifications_enable_title">Ativar</string>
+  <string name="power_notifications_category_title">Carregamento de sons</string>   
   
   <!-- Sound settings, Charging sounds enable/disable, setting check box label -->
+  <string name="power_notifications_enable_title">Ativado</string>
   <string name="power_notifications_enable_summary">Tocar um som quando conectar ou desconectar uma fonte de energia</string>
-  <string name="power_notifications_vibrate_title">Vibrar</string>
   <!-- Sound settings, Charging sounds vibrate enable/disable, setting check box label -->
-  <string name="power_notifications_ringtone_title">Som de notificação</string>
+  <string name="power_notifications_vibrate_title">Vibrate</string>
   <!-- Sound settings, Charging sounds ringtone selection, preference label -->
-  <string name="power_notifications_ringtone_silent">Em silêncio</string>
+  <string name="power_notifications_ringtone_title">Som de notificação</string>
   <!-- Sound settings, charging sounds label for ringtone == none -->
-  <string name="voice_wakeup_settings_title">Ativação de voz</string>
+  <string name="power_notifications_ringtone_silent">Em silêncio</string>
   
   <!-- Voice Wakeup -->
   <string name="voice_wakeup_settings_title">Despertar voz</string>
@@ -926,6 +904,7 @@
   <string name="qs_tile_lockscreen">Lock screen</string>
   <string name="qs_tile_lte">LTE</string>
   <string name="qs_tile_visualizer" translatable="false">AudioFX</string>
+  <string name="qs_tile_screen_timeout">Tempo limite da tela</string>
   
   <string name="qs_main_tiles_title">Ampliar primeira linha</string>
   <string name="qs_main_tiles_summary_on">Dois atalhos principais na primeira linha</string>
@@ -968,23 +947,47 @@
   <string name="expanded_hide_navigation">Ocultar a barra de navegação</string>
   <string name="expanded_hide_both">Esconder ambos</string>
   <string name="expanded_nothing_to_show">Para adicionar uma configuração de aplicativo personalizado para estado expandido, defina \"Ativar para todos\" para a posição fechada</string>
-  <string name="expanded_desktop_state">Estado expandido</string>
   <string name="expanded_enabled_for_all">Habilitado para todos</string>
-  <string name="expanded_user_configurable">Usuário configurável</string>
   
-  <string name="lockscreen_settings_title">Lock screen</string>
   <string name="lockscreen_targets_message">Atalhos de lockscreen</string>
   <string name="lockscreen_default_target">Padrão</string>
+  <string name="lockscreen_none_target">Nenhum</string>
   <string name="lockscreen_message">Toque em um ícone da esquerda ou direita para reatribuir um atalho de tela de bloqueio.</string>
   <string name="lockscreen_choose_action_title">Escolha a ação</string>
   
   <!-- WhisperPush -->
   <string name="whisperpush_title">WhisperPush</string>
   <string name="whisperpush_summary">Gerenciar configurações SMS seguras</string>
-  <string name="whisperpush_registration_title">Registrar</string>
-  <string name="whisperpush_registration_summary">Registre-se em WhisperPush para permitir SMS criptografado.</string>
-  <string name="whisperpush_identitykey_title">Teclas de revisão de identidade</string>
-
+  
   <string name="navigation_ring_title">Metas anel de navegação</string>
   <string name="navigation_ring_message">Toque no ícone de edição para abrir o anel de navegação para edição.\n\nSelecione um destino para configurar o seu comportamento.\n\nToque no ícone de seleção para salvar as alterações, ou restaurar para redefinir as configurações para os padrões.</string>
+  
+  <!-- Stylus Icon -->
+  <string name="stylus_icon_enabled_title">Mostrar ícone ao usar estilo</string>
+  <string name="stylus_icon_enabled_summary">Mostrar o ícone do ponteiro quando pairando ou desenho estilo</string>
+  
+  <!-- Stylus Gestures -->
+ <string name="gestures_settings_title">Estilo do gesto</string>
+ <string name="category_spen_title">Estilo do gesto</string>
+ <string name="enable_subcat_title">Estilo</string>
+ <string name="enable_spen_title_head">Ativar gestos</string>
+ <string name="enable_spen_summary_head">Use gestos de deslizar, mantendo pressionado o botão de estilo</string>
+ <string name="gestures_subcat_title">Gestos</string>
+ <string name="gestures_left_spen_title_head">Deslize para a esquerda</string>
+ <string name="gestures_right_spen_title_head">Deslize para a direita</string>
+ <string name="gestures_up_spen_title_head">Deslizar para cima</string>
+ <string name="gestures_down_spen_title_head">Deslizar para baixo</string>
+ <string name="gestures_long_spen_title_head">Pressão longa</string>
+ <string name="gestures_double_spen_title_head">Toque duplo</string>
+
+ <!-- Gestures Options -->
+ <string name="gestures_action_empty">Nenhuma ação</string>
+ <string name="gestures_action_home">Home</string>
+ <string name="gestures_action_back">Voltar</string>
+ <string name="gestures_action_menu">Menu</string>
+ <string name="gestures_action_search">Invoque pesquisa</string>
+ <string name="gestures_action_recent">Aplicativos recentes</string>
+
+ <!-- Stylus gestures -->
+ <string name="stylus_app_not_installed">%s não está instalado</string>
 </resources>
