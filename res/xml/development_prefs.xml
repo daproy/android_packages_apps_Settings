@@ -190,6 +190,11 @@
             android:title="@string/wifi_allow_scan_with_traffic"
             android:summary="@string/wifi_allow_scan_with_traffic_summary"/>
 
+        <com.android.settings.temasek.GlobalSettingSwitchPreference
+            android:key="captive_portal_detection_enabled "
+            android:title="@string/captive_portal_detection"
+            android:summary="@string/captive_portal_detection_summary" />
+
         <ListPreference
             android:key="select_logd_size"
             android:title="@string/select_logd_size_title"

@@ -804,4 +804,8 @@ sword is entered</string>
     <string name="changelog_temasek_title">Changelog</string>
     <string name="changelog_temasek_error">Unable to load changelog</string>
 
+    <!-- Captive Portal -->
+    <string name="captive_portal_detection">Captive portal detection</string>
+    <string name="captive_portal_detection_summary">If disabled, a connection to google servers is not required in order to detect data connection.</string>
+
 </resources>
