@@ -1538,7 +1538,7 @@
   <string name="power_usage_level_and_status">%1$s - %2$s</string>
   <string name="power_discharge_remaining">%1$s restantes</string>
   <string name="power_charge_remaining">%1$s para carregar</string>
-  <string name="power_discharging_duration">%1$d%% - %2$s aprox deixada</string>
+  <string name="power_discharging_duration">%1$d%% - %2$s aproximadamente</string>
   <string name="power_charging">%1$d%% - %2$s</string>
   <string name="power_charging_duration">%1$d%% - %2$s até completamente</string>
   <string name="power_charging_duration_ac">%1$d%% - %2$s até completo em C.A.</string>
@@ -1560,7 +1560,7 @@
   <string name="wifi_on_time">WI-Fi na hora</string>
   <string name="bluetooth_on_time">WI-Fi na hora</string>
   <string name="usage_name_percent">"%1$s - %2$s%%"</string>
-  <string name="history_details_title">Detalhes da história</string>
+  <string name="history_details_title">Detalhes da bateria</string>
   <string name="details_title">Detalhes de uso</string>
   <string name="details_subtitle">Detalhes de uso</string>
   <string name="controls_subtitle">Ajustar o uso de energia</string>
@@ -1625,7 +1625,7 @@
   <string name="menu_stats_refresh">Atualização</string>
   <string name="process_kernel_label">Sistema operacional Android</string>
   <string name="process_mediaserver_label">MediaServer</string>
-  <string name="battery_saver">Poupança de bateria</string>
+  <string name="battery_saver">economia de bateria</string>
   <string name="battery_saver_turn_on_automatically_title">Liga-se automaticamente</string>
   <string name="battery_saver_turn_on_automatically_never">Nunca</string>
   <string name="battery_saver_turn_on_automatically_pct">A bateria de %1$d%%</string>
