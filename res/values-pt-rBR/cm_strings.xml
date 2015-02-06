@@ -345,7 +345,7 @@
   <string name="navigation_bar_left_title">Modo canhoto</string>
   <string name="navigation_bar_left_summary">Coloque a barra de navegação no lado esquerdo da tela em modo paisagem</string>
   <string name="navigation_bar_title">Botões e layout</string>   
-  <string name="navigation_bar_help_text">Para começar a tocar no ícone de edição para desbloquear a barra de navegação para edição.\n\nVocê pode tocar em um ícone para alterar o seu atalho, ou pressione e segure um ícone para re-organizar o layout.\n\nToque em Salvar para confirmar as alterações, ou restaurar para redefinir o layout para as configurações padrão.</string>
+  <string name="navigation_bar_help_text">Para começar a tocar no ícone de edição para desbloquear a barra de navegação para edição.\n\nVocê pode tocar em um ícone para alterar o seu atalho, ou pressione e segure um ícone para re-organizar o layout.\n\nToque em \'Salvar\' para confirmar as alterações, ou \'restaurar\' para redefinir o layout para as configurações padrão.</string>
   <string name="navigation_restore_button_text">Restaurar\nPadrões</string>
   <string name="navigation_edit_button_text">Editar</string>
   <string name="navigation_save_button_text">Salvar</string>
@@ -965,8 +965,8 @@
   <string name="whisperpush_title">WhisperPush</string>
   <string name="whisperpush_summary">Gerenciar configurações SMS seguras</string>
   
-  <string name="navigation_ring_title">Metas anel de navegação</string>
-  <string name="navigation_ring_message">Toque no ícone de edição para abrir o anel de navegação para edição.\n\nSelecione um destino para configurar o seu comportamento.\n\nToque no ícone de seleção para salvar as alterações, ou restaurar para redefinir as configurações para os padrões.</string>
+  <string name="navigation_ring_title">Atalhos de navegação</string>
+  <string name="navigation_ring_message">Toque no ícone de edição para abrir o anel de navegação para edição.\n\nSelecione um destino para configurar o seu comportamento.\n\nToque \'\u2713\' no ícone de seleção para salvar as alterações, ou \'restaurar\' para redefinir as configurações para os padrões.</string>
   
   <!-- Stylus Icon -->
   <string name="stylus_icon_enabled_title">Mostrar ícone ao usar estilo</string>
