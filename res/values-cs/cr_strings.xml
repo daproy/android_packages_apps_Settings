@@ -237,6 +237,8 @@
     <string name="navigation_bar_size_40_dp">40 dp</string>
     <string name="navigation_bar_size_42_dp">42 dp</string>
     <string name="navigation_bar_size_0_dp">0 dp (vypnuto)</string>
+    <!-- Navigation bar button color -->
+    <string name="navbar_button_tint_title">Barevný nádech navigačních tlačítek</string>
      <!-- QuickSettings: Smart Pulldown -->
     <string name="smart_pulldown_title">Chytré vysunutí</string>
     <string name="smart_pulldown_summary">Otevřít rychlé nastavení pokud nejsou přítomna žádná %1$s upozornění</string>
@@ -682,8 +684,9 @@
     <string name="heads_up_dnd_title">Nerušit</string>
     <string name="heads_up_blacklist_title">Černá listina</string>
     <string name="heads_up_disabled_notice">Zapnutím vyskakujích upozornění budou všechna upozornění aplikací zobrazena v interaktivních oknech.</string>
-    <string name="heads_up_swipe_summary">Skrýt posunutím</string>
-    <string name="heads_up_swipe_title">Pokud je zapnuto, posunutím vyskakujícího upozornění dojde k jeho skrytí místo zrušení.</string>
+    <string name="heads_up_dismiss_on_remove_title">Chování vyšoupnutí</string>
+    <string name="heads_up_dismiss_on_remove_summary_enabled">Skrýt upozornění místo odstranění</string>
+    <string name="heads_up_dismiss_on_remove_summary_disabled">Skrýt a odstranit upozornění</string>
     <!-- Heads up timeout -->
     <string name="heads_up_time_out_title">Doba zobrazení</string>
     <string name="heads_up_time_out_summary">Vyskakují upozornění budou zobrazena <xliff:g id="number">%d</xliff:g> sekund</string>
@@ -696,4 +699,7 @@
     <!-- Changelog -->
     <string name="changelog_temasek_title">Seznam změn</string>
     <string name="changelog_temasek_error">Seznam nebylo možné načíst</string>
+    <!-- Captive Portal -->
+    <string name="captive_portal_detection">Svobodné připojení</string>
+    <string name="captive_portal_detection_summary">Pokud je vypnuto, připojení na google servery není vyžadováno pro kontrolu datového spojení.</string>
 </resources>
