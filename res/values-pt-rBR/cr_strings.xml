@@ -265,6 +265,9 @@
   <string name="navigation_bar_size_42_dp">42 dp</string>
   <string name="navigation_bar_size_0_dp">0 dp (Desligado)</string>
   
+  <!-- Navigation bar button color -->
+  <string name="navbar_button_tint_title">Cor do botão de Navegaçao</string>
+  
   <!-- QuickSettings: Smart Pulldown -->
   <string name="smart_pulldown_title">Pulldown inteligente</string>
   <string name="smart_pulldown_summary">Abra configurações rápida quando há notificações de %1$s presentes</string>
@@ -447,7 +450,7 @@
   
   <!-- Battery saver -->
   <string name="battery_saver_title">Cor de aviso</string>
-  <string name="battery_saver_style_reset_message">Redefinir cor de aviso de poupança de bateria?</string>
+  <string name="battery_saver_style_reset_message">Redefinir cor do aviso de economia de bateria?</string>
   
   <!-- Lock Gesture settings -->
   <!-- Security & location settings screen, setting option name -->
@@ -780,13 +783,14 @@
   <string name="summary_heads_up_enabled">Notificações pop-up estão habilitados</string>
   <string name="summary_heads_up_disabled">Notificações pop-up estão desativados</string>
   <string name="add_heads_up_package">Adicionar aplicações</string>
-  <string name="add_heads_up_dnd_summary">Don\'t Mostrar heads up nestas aplicações</string>
-  <string name="add_heads_up_blacklist_summary">Don\'t Mostrar heads-up a partir desses aplicativos</string>
+  <string name="add_heads_up_dnd_summary">Mostrar heads up nestas aplicações</string>
+  <string name="add_heads_up_blacklist_summary">Mostrar heads-up a partir desses aplicativos</string>
   <string name="heads_up_dnd_title">Não perturbe</string>
   <string name="heads_up_blacklist_title">Lista negra</string>
   <string name="heads_up_disabled_notice">Para permitir que os aplicativos possa exibir notificações interativos em uma janela pop-up na tela, habilitar Heads up.</string>
-  <string name="heads_up_swipe_summary">Descartar em swipe</string>
-  <string name="heads_up_swipe_title">Se ativado, esconder notificação quando passando longe da janela pop-up, em vez de removê-lo</string>
+  <string name="heads_up_dismiss_on_remove_title">Comportamento swipe</string>
+  <string name="heads_up_dismiss_on_remove_summary_enabled">Ocultar notificação, em vez de demitir</string>
+  <string name="heads_up_dismiss_on_remove_summary_disabled">Esconder e demitir notificação</string>
 
   <!-- Heads up timeout -->
   <string name="heads_up_time_out_title">Tempo esgotado</string>
@@ -802,4 +806,17 @@
   <!-- Changelog -->
   <string name="changelog_temasek_title">Changelog</string>
   <string name="changelog_temasek_error">Não foi possível carregar changelog</string>
+  
+  <!-- Captive Portal -->
+  <string name="captive_portal_detection">Detecção portal cativo</string>
+  <string name="captive_portal_detection_summary">Se desativado, uma ligação ao google servidores não é necessária a fim de detectar a ligação de dados.</string>
+  
+  <!-- Navring targets (enable/disable) -->
+  <string name="navigation_ring_enable_title">Ativar anéis de navegação</string>
+  
+  <!-- Heads up touch outside -->
+  <string name="heads_up_touch_outside_title">Toque fora comportamento </string>
+  <string name="heads_up_touch_outside_summary_enabled">Esconder notificação em contato exterior e no botão home pressionado</string>
+  <string name="heads_up_touch_outside_summary_disabled">Não esconda notificação após o toque no exterior ou no botão home pressionado</string>
+  
 </resources>
