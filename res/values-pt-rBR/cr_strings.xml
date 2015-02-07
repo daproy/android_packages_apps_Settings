@@ -696,18 +696,18 @@
   <string name="screen_recorder_power_menu_summary">Adicionar uma entrada de registro de tela no power menu</string>
   
   <!-- Lock clock -->
-  <string name="lock_clock_title">Widget de relógio</string>
-  <string name="lock_clock_summary">Exibir ou alterar como o \'cLock\' widget Home será exibida</string>
+  <string name="lock_clock_title">Widget do Relógio</string>
+  <string name="lock_clock_summary">Exibir ou alterar como o \'Relógio\' widget Home será exibida</string>
   <string name="lock_clock_clock_section_title">Relógio e alarme</string>
-  <string name="lock_clock_clock_section_summary">Exibir ou alterar como o relógio do widget Home \'relógio\' será exibida</string>
+  <string name="lock_clock_clock_section_summary">Exibir ou alterar como o relógio do widget Home \'Relógio\' será exibida</string>
   <string name="lock_clock_weather_section_title">Painel do tempo</string>
-  <string name="lock_clock_weather_section_summary">Exibir ou alterar como o tempo do relógio\' \' widget Home será exibida</string>
+  <string name="lock_clock_weather_section_summary">Exibir ou alterar como o tempo do widget Home \'Relógio\' será exibida</string>
   <string name="lock_clock_calendar_section_title">Calendário de eventos</string>
-  <string name="lock_clock_calendar_section_summary">Exibir ou alterar como o calendário do widget Home \'relógio\' será exibida</string>
+  <string name="lock_clock_calendar_section_summary">Exibir ou alterar como o calendário do widget Home \'Relógio\' será exibida</string>
   
   <!-- QuickSettings haptic feedback -->
-  <string name="quick_settings_vibrate_title">Vibrar no touch</string>
-  <string name="quick_settings_vibrate_summary">Vibrar ao tocar em tiles</string>
+  <string name="quick_settings_vibrate_title">Vibrar no toque</string>
+  <string name="quick_settings_vibrate_summary">Vibrar ao tocar as telhas</string>
   
   <!-- Superuser indicator on status bar -->
   <string name="su_indicator">Indicador de superusuário</string>
@@ -761,7 +761,7 @@
   <string name="custom_density_dialog_title">AVISO!</string>
   <string name="custom_density_dialog_summary">Mudar sua densidade de LCD padrão pode às vezes causar certos aplicativos não funcionem corretamente e/ou a playstore mostrar apps sendo incompatível com o seu dispositivo\"</string>
   <string name="dpi">DPI</string>
-  <string name="custom_density_warning">Reinicie o sistema e aplicar densidade selecionada?</string>
+  <string name="custom_density_warning">Reiniciar o dispositivo e aplicar densidade selecionada?</string>
   
   <!-- Privacy guard notification -->
   <string name="privacy_guard_notification_title">Notificação</string>
@@ -772,11 +772,11 @@
   <string name="disable_fc_notifications_summary">Isto irá forçar a esconder todos as notificaitons próximas </string>
 
   <!-- QuickSettings collapse panel -->
-  <string name="quick_settings_collapse_title">Auto fechar painel</string>
-  <string name="quick_settings_collapse_summary">Feche o painel sobre ativar o Quick Settings</string>
+  <string name="quick_settings_collapse_title">Fechar automaticamente painel</string>
+  <string name="quick_settings_collapse_summary">Fechar o painel quando ativar o Quick Settings</string>
 	
   <!-- QuickSettings 4 columns -->
-  <string name="qs_four_columns_title">Mostrar quatro peças por linha</string>
+  <string name="qs_four_columns_title">Mostrar quatro telhas por linha</string>
    
   <!-- Heads Up -->
   <string name="category_heads_up">Heads up notificações</string>
@@ -818,5 +818,12 @@
   <string name="heads_up_touch_outside_title">Toque fora comportamento </string>
   <string name="heads_up_touch_outside_summary_enabled">Esconder notificação em contato exterior e no botão home pressionado</string>
   <string name="heads_up_touch_outside_summary_disabled">Não esconda notificação após o toque no exterior ou no botão home pressionado</string>
+  
+  <!-- Doze pulse (ambient display) notification timeout -->
+  <string name="doze_timeout_title">Ambiente Tela tempo limite</string>
+  <string name="doze_timeout_summary">Tempo que a tela permanece ligada por pulso de notificação</string>
+
+  <!-- Doze (ambient display) preference category -->
+  <string name="display_category_doze_options_title">Opções de ambienete de tela</string>
   
 </resources>
