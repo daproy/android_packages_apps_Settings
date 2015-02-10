@@ -22,13 +22,8 @@
     <item quantity="other"><xliff:g id="seconds">%d</xliff:g> sekund</item>
   </plurals>
   <plurals name="app_ops_count">
-    <item quantity="one">jednou</item>
-    <item quantity="few">%d krát</item>
-    <item quantity="other">%d krát</item>
-  </plurals>
-  <plurals name="qs_tiles_summary">
-    <item quantity="one">1 dlaždice nastavena</item>
-    <item quantity="few">%d dlaždice nastaveny</item>
-    <item quantity="other">%d dlaždic nastaveno</item>
+    <item quantity="one">raz</item>
+    <item quantity="few">%d razy</item>
+    <item quantity="other">%d razy</item>
   </plurals>
 </resources>
