@@ -238,8 +238,8 @@
   <!-- Display : Rotation  -->
   <string name="display_rotation_title">Rotação</string>
   <string name="display_rotation_disabled">Desativado</string>
-  <string name="display_rotation_unit">graus</string>
-  <string name="display_lockscreen_rotation_title">Girar a tela do fechamento</string>
+  <string name="display_rotation_unit">Graus</string>
+  <string name="display_lockscreen_rotation_title">Girar na tela do desbloqueio</string>
   <string name="display_rotation_category_title">Modos de rotação</string>
   <string name="display_rotation_0_title">0 graus</string>
   <string name="display_rotation_90_title">90 graus</string>
@@ -799,7 +799,7 @@
   <string name="power_notifications_enable_title">Ativado</string>
   <string name="power_notifications_enable_summary">Tocar um som quando conectar ou desconectar uma fonte de energia</string>
   <!-- Sound settings, Charging sounds vibrate enable/disable, setting check box label -->
-  <string name="power_notifications_vibrate_title">Vibrate</string>
+  <string name="power_notifications_vibrate_title">Vibrar</string>
   <!-- Sound settings, Charging sounds ringtone selection, preference label -->
   <string name="power_notifications_ringtone_title">Som de notificação</string>
   <!-- Sound settings, charging sounds label for ringtone == none -->
@@ -885,12 +885,13 @@
   
   <string name="qs_category_title">Painel de configurações rápido</string>
   
+  <!-- Quick Settings -->
   <string name="qs_order_title">Selecione e ordene as Telhas</string>
-  <string name="add_qs">Adicionar novo azulejo</string>
+  <string name="add_qs">Adicionar nova telha</string>
   
   <string name="qs_action_delete">Excluir</string>
   <string name="qs_action_add">Adicionar</string>
-  <string name="qs_action_no_more_tiles">Telhas não mais disponíveis</string>
+  <string name="qs_action_no_more_tiles">Telhas não disponíveis</string>
   
   <string name="qs_tile_wifi">Wi\u2011Fi</string>
   <string name="qs_tile_bluetooth">Bluetooth</string>
@@ -906,7 +907,7 @@
   <string name="qs_tile_profiles">Perfis de sistema</string>
   <string name="qs_tile_performance">Performance</string>
   <string name="qs_tile_nfc">NFC</string>
-  <string name="qs_tile_compass">Bússola</string>
+  <string name="qs_tile_compass">Bússula</string>
   <string name="qs_tile_lockscreen">Lock screen</string>
   <string name="qs_tile_lte">LTE</string>
   <string name="qs_tile_visualizer" translatable="false">AudioFX</string>
@@ -922,6 +923,12 @@
   <string name="qs_advanced_location_summary">Ativar as configurações avançadas para localização em configurações rápidas</string>
   <string name="qs_screenshot_tile">Screenshot</string>
   <string name="qs_sync_tile">Sincronização</string>
+  <string name="qs_tile_powermenu">Power Menu</string>
+  <string name="qs_battery_saver_tile">Economia de bateria</string>
+  <string name="qs_brightness_tile">Brilho</string>
+  <string name="qs_expanded_desktop_tile">Àrea de trabalho expandida</string>
+  <string name="qs_notifications_tile">Notificações</string>
+  <string name="qs_screen_off_tile">Screen off</string>
   
   <!-- Gesture Settings -->
   <!-- Settings main menu entry -->
@@ -991,7 +998,7 @@
  <string name="gestures_action_home">Home</string>
  <string name="gestures_action_back">Voltar</string>
  <string name="gestures_action_menu">Menu</string>
- <string name="gestures_action_search">Invoque pesquisa</string>
+ <string name="gestures_action_search">Pesquisa</string>
  <string name="gestures_action_recent">Aplicativos recentes</string>
 
  <!-- Stylus gestures -->
