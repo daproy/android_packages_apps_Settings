@@ -138,10 +138,10 @@
   <string name="temaextrainfo_summary">Exibir informação extra para cpu, monitor, etc</string>
   
   <!-- Per app controls for LP keyguard notifications -->
-  <string name="app_notification_show_on_keyguard_title">Mostrar no lockscreen</string>
-  <string name="app_notification_show_on_keyguard_summary">Mostrar notificações deste app no lockscreen</string>
-  <string name="app_notification_no_ongoing_on_keyguard_title">Disable em curso no lockscreen</string>
-  <string name="app_notification_no_ongoing_on_keyguard_summary">Nunca mostrar notificações em curso deste app no lockscreen</string>
+  <string name="app_notification_show_on_keyguard_title">Mostrar na tela de desbloqueio</string>
+  <string name="app_notification_show_on_keyguard_summary">Mostrar notificações desta aplicação na tela de desbloqueio</string>
+  <string name="app_notification_no_ongoing_on_keyguard_title">Desativar em curso na tela de desbloqueio</string>
+  <string name="app_notification_no_ongoing_on_keyguard_summary">Nunca mostrar notificações em curso desta aplicação na tela de desbloqueio</string>
   
   <!-- Recents panel settings -->
   <string name="recents_panel_settings">Configurações do painel de Recentes</string>
