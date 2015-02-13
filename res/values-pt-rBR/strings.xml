@@ -66,7 +66,7 @@
   <string name="radioInfo_display_asu">ASU</string>
   <string name="radioInfo_lac">LAC</string>
   <string name="radioInfo_cid">CID</string>
-   <string name="sdcard_unmount">Desmontar rmazenamento USB</string>
+   <string name="sdcard_unmount">Desmontar armazenamento USB</string>
   <string name="sdcard_unmount">Desmontar o cartão SD</string>
   <string name="sdcard_format">Apagar armazenamento USB</string>
   <string name="sdcard_format">Apagar o cartão SD</string>
@@ -436,7 +436,7 @@
   <string name="bluetooth_quick_toggle_summary">Ativar Bluetooth</string>
   <string name="bluetooth_settings">Bluetooth</string>
   <string name="bluetooth_settings_title">Bluetooth</string>
-  <string name="bluetooth_settings_summary">Gerenciar conexões, nome do dispositivo conjunto &amp; descoberta</string>
+  <string name="bluetooth_settings_summary">Gerenciar conexões, nome do dispositivo conjunto e descoberta</string>
   <string name="bluetooth_pairing_request">Pedido de emparelhamento Bluetooth</string>
   <string name="bluetooth_enter_pin_msg">Dispositivo</string>
   <string name="bluetooth_pairing_key_msg">Código de emparelhamento</string>
@@ -578,12 +578,12 @@
   <string name="wifi_notify_open_networks">Notificação da rede</string>
   <string name="wifi_notify_open_networks_summary">Notificar quando uma rede pública está disponível</string>
   <string name="wifi_poor_network_detection">Evitar conexões pobres</string>
-  <string name="wifi_poor_network_detection_summary">"Não usar uma rede de fi a menos que tenha uma boa conexão de Internet"</string>
+  <string name="wifi_poor_network_detection_summary">"Não usar uma rede de wi-fi a menos que tenha uma boa conexão de Internet"</string>
   <string name="wifi_avoid_poor_network_detection_summary">Utilize apenas as redes que possuem uma boa conexão de Internet</string>
   <string name="wifi_scan_always_available">Digitalização sempre disponível</string>
   <string name="wifi_scan_always_available_title">Sempre permitir a digitalização</string>
-  <string name="wifi_scan_always_available_summary">"Serviço de localização do Google deixe e outro apps procurar redes, mesmo quando é Fi largo"</string>
-  <string name="wifi_automatically_manage_title">Gerenciar automaticamente Fi</string>
+  <string name="wifi_scan_always_available_summary">"Serviço de localização do Google deixe e outro apps procurar redes, mesmo quando é wi-Fi largo"</string>
+  <string name="wifi_automatically_manage_title">Gerenciar automaticamente wi-Fi</string>
   <string name="wifi_automatically_manage_summary">Deixe %1$s gerenciar sua conexão WI-FI</string>
   <string name="wifi_install_credentials">Instalar certificados</string>
   <string name="wifi_scan_notify_text_location_on">"Para melhorar a precisão de localização e para outros fins, Google e outros apps podem procurar redes nas proximidades, mesmo quando o Wi-Fi está fora. Se você não quer que isso aconteça, vá para Advanced &gt; digitalização sempre disponível."</string>
@@ -614,9 +614,9 @@
   <string name="wifi_other_network">Adicionar outra rede</string>
   <string name="wifi_more">Mais</string>
   <string name="wifi_setup_wps">Instalação automática (WPS)</string>
-  <string name="wifi_required_info_text">Para concluir a instalação, seu tablet precisa acessar para Fi. Após a instalação, você pode alternar entre dados móveis e WI-Fi.</string>
+  <string name="wifi_required_info_text">Para concluir a instalação, seu tablet precisa acessar o WI_Fi. Após a instalação, você pode alternar entre dados móveis e WI-Fi.</string>
   <string name="wifi_show_advanced">Opções avançadas</string>
-  <string name="wifi_wps_setup_title">Wi‑Fi Protected Setup</string>
+  <string name="wifi_wps_setup_title">Wi-Fi Protected Setup</string>
   <string name="wifi_wps_setup_msg">Começando WPS...</string>
   <string name="wifi_wps_onstart_pbc">Pressione o botão WI-Fi Protected Setup no roteador. Isso pode ser chamado de \"WPS\" ou conter este símbolo:</string>
   <string name="wifi_wps_onstart_pin">Digite o pin %1$s no WI-FI roteador. A instalação pode levar até dois minutos para completar.</string>
@@ -816,7 +816,7 @@
   <string name="search_settings">Pesquisa</string>
   <string name="search_settings_summary">Gerenciar definições de pesquisa e história</string>
   <string name="display_settings">Tela</string>
-  <string name="accelerometer_title">Auto-girar tela</string>
+  <string name="accelerometer_title">Auto girar a tela</string>
   <string name="accelerometer_summary_on">Alternar a orientação automaticamente ao girar o telefone</string>
   <string name="accelerometer_summary_off">Alternar a orientação automaticamente ao girar o telefone</string>
   <string name="brightness">Nível de brilho</string>
@@ -830,7 +830,7 @@
   <string name="wallpaper_settings_title">Papel de parede</string>
   <string name="wallpaper_settings_fragment_title">Escolha do papel de parede</string>
   <string name="screensaver_settings_title">Daydream</string>
-  <string name="screensaver_settings_summary_either_long">Quando ancorado ou em suspensão e a carregar</string>
+  <string name="screensaver_settings_summary_either_long">Quando ancorado ou em suspensão e carregando</string>
   <string name="screensaver_settings_summary_either_short">De qualquer</string>
   <string name="screensaver_settings_summary_sleep">Durante o carregamento</string>
   <string name="screensaver_settings_summary_dock">Enquanto encaixado</string>
@@ -906,7 +906,7 @@
   <string name="status_bt_address">Endereço de Bluetooth</string>
   <string name="status_serial_number">Número de série</string>
   <string name="status_unavailable">Não disponível</string>
-  <string name="status_up_time">O tempo</string>
+  <string name="status_up_time">Tempo</string>
   <string name="status_awake_time">Tempo acordado</string>
   <string name="internal_memory">Armazenamento interno</string>
   <string name="sd_memory">Cartão SD</string>
@@ -1293,9 +1293,9 @@
   <string name="language_settings_category">Configurações de idioma</string>
   <string name="keyboard_settings_category">Métodos de entrada e teclado</string>
   <string name="phone_language">Idioma</string>
-  <string name="auto_replace">Auto-substituir</string>
+  <string name="auto_replace">Auto substituir</string>
   <string name="auto_replace_summary">Palavras corretas digitado incorretamente</string>
-  <string name="auto_caps">Auto-capitalização</string>
+  <string name="auto_caps">Auto capitalização</string>
   <string name="auto_caps_summary">Capitalizar a primeira letra em frases</string>
   <string name="auto_punctuate">Pontuaçao automática</string>
   <string name="hardkeyboard_category">Configurações de teclado físico</string>
@@ -1346,7 +1346,7 @@
   <string name="quick_launch_clear_dialog_message">Seu atalho para %1$s (%2$s) será apagado.</string>
   <string name="quick_launch_clear_ok_button">OK</string>
   <string name="quick_launch_clear_cancel_button">Cancelar</string>
-  <string name="quick_launch_display_mode_applications">Apps</string>
+  <string name="quick_launch_display_mode_applications">Aplicações</string>
   <string name="quick_launch_display_mode_shortcuts">Atalhos</string>
   <string name="input_methods_settings_title">Entrada de texto</string>
   <string name="input_method">Método de entrada</string>
@@ -1359,7 +1359,7 @@
   <string name="input_method_settings">Configurações</string>
   <string name="input_method_settings_button">Configurações</string>
   <string name="active_input_method_subtypes">Métodos de entrada ativos</string>
-  <string name="use_system_language_to_select_input_method_subtypes">Usar a linguagem do sistema</string>
+  <string name="use_system_language_to_select_input_method_subtypes">Usar idioma do sistema</string>
   <string name="input_methods_settings_label_format">configurações %1$s</string>
   <string name="input_methods_and_subtype_enabler_title">Escolha de métodos de entrada ativos</string>
   <string name="onscreen_keyboard_settings_summary">Configurações de teclado na tela</string>
@@ -1464,7 +1464,7 @@
   <string name="accessibility_feature_or_input_method_not_allowed">Não é permitido por sua organização</string>
   <string name="captioning_preview_title">Visualizar</string>
   <string name="captioning_standard_options_title">Opções padrão</string>
-  <string name="captioning_locale">Idiom</string>
+  <string name="captioning_locale">Idioma</string>
   <string name="captioning_text_size">Tamanho do texto</string>
   <string name="captioning_preset">Estilo da legenda</string>
   <string name="captioning_custom_options_title">Opções personalizadas</string>
@@ -1655,13 +1655,13 @@
   <string name="menu_duration_6h">6 horas</string>
   <string name="menu_duration_12h">12 horas</string>
   <string name="menu_duration_1d">1 dia</string>
-  <string name="menu_show_system">Sistema da mostra</string>
+  <string name="menu_show_system">Mostrar sistema</string>
   <string name="menu_use_uss">Use o Uss</string>
   <string name="menu_proc_stats_type">Tipo de estatísticas</string>
   <string name="menu_proc_stats_type_background">Plano de fundo</string>
   <string name="menu_proc_stats_type_foreground">Primeiro plano</string>
   <string name="menu_proc_stats_type_cached">Em cache</string>
-  <string name="voice_input_output_settings">Voz de entrada &amp; saída</string>
+  <string name="voice_input_output_settings">Voz de entrada e saída</string>
   <string name="voice_input_output_settings_title">Configurações de entrada e saídas de voz</string>
   <string name="voice_search_settings_title">Pesquisa de voz</string>
   <string name="keyboard_settings_title">Teclado Android</string>
@@ -1684,7 +1684,7 @@
   <string name="tts_default_pitch_title">Pitch</string>
   <string name="tts_default_pitch_summary">Afeta o Tom do texto falado</string>
   <string name="tts_default_lang_title">Língua</string>
-  <string name="tts_lang_use_system">Usar a linguagem do sistema</string>
+  <string name="tts_lang_use_system">Usar idioma do sistema</string>
   <string name="tts_lang_not_selected">Idioma não selecionado</string>
   <string name="tts_default_lang_summary">Define a voz de específicos do idioma para o texto falado</string>
   <string name="tts_play_example_title">Ouça um exemplo</string>
@@ -1726,8 +1726,8 @@
   <string name="gadget_state_template">%1$s %2$s</string>
   <string name="gadget_state_on">Ativado</string>
   <string name="gadget_state_off">Desativado</string>
-  <string name="gadget_state_turning_on">turning on</string>
-  <string name="gadget_state_turning_off">turning off</string>
+  <string name="gadget_state_turning_on">turning Ativado</string>
+  <string name="gadget_state_turning_off">turning Desativado</string>
   <string name="gadget_wifi">Wi-Fi</string>
   <string name="gadget_bluetooth">Bluetooth</string>
   <string name="gadget_location">Localização</string>
@@ -1736,7 +1736,7 @@
   <string name="gadget_brightness_state_auto">Automático</string>
   <string name="gadget_brightness_state_full">completo</string>
   <string name="gadget_brightness_state_half">Metade</string>
-  <string name="gadget_brightness_state_off">off</string>
+  <string name="gadget_brightness_state_off">Desativado</string>
   <string name="vpn_settings_title">VPN</string>
   <string name="credentials_title">Armazenamento de credencial</string>
   <string name="credentials_install">Instalar a partir de cartão SD</string>
@@ -1785,7 +1785,7 @@
   <string name="local_backup_password_toast_success">Novo conjunto de backup de senha</string>
   <string name="local_backup_password_toast_confirmation_mismatch">"Confirmação e a nova senha não correspondem."</string>
   <string name="local_backup_password_toast_validation_failure">Senha de backup de configuração falha</string>
-  <string name="backup_erase_dialog_message">Pare de backup de suas senhas de fi, marcadores, outras configurações e dados de aplicativo, além de apagar todas as cópias em servidores do Google?</string>
+  <string name="backup_erase_dialog_message">Pare de backup de suas senhas de wi-fi, marcadores, outras configurações e dados de aplicativo, além de apagar todas as cópias em servidores do Google?</string>
   <string name="device_admin_settings_title">Configurações de administração de dispositivo</string>
   <string name="active_device_admin_msg">Administradores do dispositivo</string>
   <string name="remove_device_admin">Desativar</string>
@@ -1805,7 +1805,7 @@
   <string name="untitled_apn">Sem título</string>
   <string name="sound_category_sound_title">Geral</string>
   <string name="notification_log_title">Log de notificação</string>
-  <string name="sound_category_call_ringtone_vibrate_title">Chamar ringtone &amp; vibrar</string>
+  <string name="sound_category_call_ringtone_vibrate_title">Chamar toque e vibrar</string>
   <string name="sound_category_system_title">Sistema</string>
   <string name="wifi_setup_title">Instalação de WI-FI</string>
   <string name="wifi_setup_title_editing_network">Conectar-se à rede Wi-Fi %s</string>
@@ -1852,8 +1852,8 @@
   <string name="background_data_dialog_title">Desativar os dados de fundo?</string>
   <string name="background_data_dialog_message">Desabilitar os dados de fundo estende a vida útil da bateria e reduz o uso de dados. Alguns aplicativos ainda podem usar a conexão de dados de fundo.</string>
   <string name="sync_automatically">Dados de app auto-sincronização</string>
-  <string name="sync_enabled">Sincronização é ON</string>
-  <string name="sync_disabled">Sincronização é OFF</string>
+  <string name="sync_enabled">Sincronização é Ativada</string>
+  <string name="sync_disabled">Sincronização é Desativada</string>
   <string name="sync_error">Erro de sincronização</string>
   <string name="last_synced">Última %1$s sincronizada</string>
   <string name="sync_in_progress">Como sincronizar agora...</string>
@@ -1868,7 +1868,7 @@
   <string name="sync_plug"><font fgcolor="#ffffffff"> Bem-vindo ao Google sync!</font>
   \nUma abordagem do Google para sincronizar dados para permitir o acesso aos seus contatos, compromissos e muito mais de onde você estiver. \"</string>
   <string name="header_application_sync_settings">Configurações de sincronização de App</string>
-  <string name="header_data_and_synchronization">Dados &amp; sincronização</string>
+  <string name="header_data_and_synchronization">Dados e sincronização</string>
   <string name="preference_change_password_title">Alterar senha</string>
   <string name="header_account_settings">Configurações de conta</string>
   <string name="remove_account_label">Remover conta</string>
@@ -2321,7 +2321,7 @@
   <string name="dock_audio_media_title">Peças de alto-falante de doca</string>
   <string name="dock_audio_media_disabled">Todos os áudios</string>
   <string name="dock_audio_media_enabled">Apenas o áudio de mídia</string>
-  <string name="emergency_tone_silent">silêncioso</string>
+  <string name="emergency_tone_silent">Silêncioso</string>
   <string name="emergency_tone_alert">Alerta</string>
   <string name="emergency_tone_vibrate">Vibrar</string>
   <string name="manage_notification_access_title">Acesso a notificações</string>
@@ -2343,17 +2343,17 @@
   <string name="condition_provider_security_warning_title">Habilitar <xliff:g id="service" example="ConditionProvider">%1$s</xliff:g>?</string>
   <string name="condition_provider_security_warning_summary"><xliff:g id="condition_provider_name">%1$s</xliff:g>será capaz de adicionar condições de saída de modo não perturbe.</string>
   <string name="loading_notification_apps">Carregar aplicativos...</string>
-  <string name="app_notification_block_title">Bloco</string>
+  <string name="app_notification_block_title">Bloquear</string>
   <string name="app_notification_block_summary">Nunca mostrar notificações desta aplicação</string>
   <string name="app_notification_priority_title">Prioridade</string>
-  <string name="app_notification_priority_summary">Mostrar notificações no topo da lista e mantê-los próximos, quando o dispositivo é definido como interrupções de prioridade somente</string>
+  <string name="app_notification_priority_summary">Mostrar notificações no topo da lista e mantê-los próximos, quando o dispositivo é definido como interrupções de somente prioridade </string>
   <string name="app_notification_sensitive_title">Sensível</string>
-  <string name="app_notification_sensitive_summary">"Quando o dispositivo estiver bloqueado, esconder qualquer conteúdo sensível de notificações deste app"</string>
+  <string name="app_notification_sensitive_summary">"Quando o dispositivo estiver bloqueado, esconder qualquer conteúdo sensível de notificações desta aplicação"</string>
   <string name="app_notification_row_banned">Bloqueado</string>
   <string name="app_notification_row_priority">Prioridade</string>
   <string name="app_notification_row_sensitive">Sensível</string>
   <string name="app_notifications_dialog_done">Feito</string>
-  <string name="zen_mode_default_option">Até que você desativar isso</string>
+  <string name="zen_mode_default_option">Até que você desative isso</string>
   <string name="zen_mode_important_category">Interrupções de prioridade</string>
   <string name="zen_mode_downtime_category">Tempo de inatividade (somente interrupções de prioridade)</string>
   <string name="zen_mode_downtime_days">Dias</string>

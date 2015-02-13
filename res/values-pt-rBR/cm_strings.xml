@@ -266,6 +266,8 @@
   <!-- About phone screen, CyanogenMod version -->
   <string name="mod_version">Versão CyanogenMod</string>
   <string name="mod_version_default">Desconhecido</string>
+  
+  <!-- About phone screen, model name -->
   <string name="model_name">Nome do modelo</string>
   
   <!-- About phone screen, build date -->
@@ -273,6 +275,9 @@
   <string name="build_date_default" translatable="false">2014-01-01-0000</string>
   
   <string name="contributor_cloud_title">Contribuidores</string>
+  
+  <!-- About phone screen, service state -->
+  <string name="phone_service_state">Voz: <xliff:g id="voice_state">%1$s</xliff:g>, data: <xliff:g id="data_state">%2$s</xliff:g></string>
   
   <!--- Tap To Wake -->
   <string name="double_tap_to_wake_title">Dê um duplo toque para acordar</string>
@@ -870,7 +875,7 @@
   <string name="settings_cmlicense_activity_title">CyanogenMod Legal</string>
   <string name="settings_cmlicense_activity_unreachable">Você não tem uma conexão de dados. Para exibir essas informações agora, vá para %s de qualquer computador conectado à Internet.</string>
   
-  <string name="link_volume_option_title">Link ringtone &amp; notificação volumes</string>
+  <string name="link_volume_option_title">Link ringtone e notificação volumes</string>
   <string name="notification_volume_option_title">Volume de notificação</string>
   
   <!-- Notification drawer -->
