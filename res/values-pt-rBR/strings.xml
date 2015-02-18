@@ -281,7 +281,7 @@
   <string name="okay">OK</string>
   <string name="yes_all_caps">SIM</string>
   <string name="no_all_caps">NÃO</string>
-  <string name="forget">ESQUEÇA</string>
+  <string name="forget">ESQUECER</string>
   <string name="settings_label">Configurações</string>
   <string name="settings_label_launcher">Configurações</string>
   <string name="settings_shortcut">Atalho de configurações</string>
@@ -483,7 +483,7 @@
   <string name="bluetooth_advanced_titlebar">Bluetooth avançado</string>
   <string name="bluetooth_empty_list_bluetooth_off">Quando o Bluetooth está ativada, o dispositivo pode se comunicar com outros dispositivos Bluetooth nas proximidades.</string>
   <string name="bluetooth_connect_specific_profiles_title">Ligue para...</string>
-  <string name="bluetooth_profile_a2dp">Meios audio</string>
+  <string name="bluetooth_profile_a2dp">Áudio de multimédia</string>
   <string name="bluetooth_profile_headset">Áudio de telefone</string>
   <string name="bluetooth_profile_opp">Transferência de arquivos</string>
   <string name="bluetooth_profile_hid">Dispositivo de entrada</string>
@@ -538,7 +538,7 @@
   <string name="wifi_display_status_not_available">Não disponível</string>
   <string name="wifi_display_details">Configurações de exibição</string>
   <string name="wifi_display_options_title">Opções de exibição sem fio</string>
-  <string name="wifi_display_options_forget">Esqueça</string>
+  <string name="wifi_display_options_forget">Esquecer</string>
   <string name="wifi_display_options_done">Feito</string>
   <string name="wifi_display_options_name">Nome</string>
   <string name="wifi_display_certification_heading">Certificação</string>
@@ -605,7 +605,7 @@
   <string name="wifi_menu_scan">Varredura</string>
   <string name="wifi_menu_advanced">Avançado</string>
   <string name="wifi_menu_connect">Se conectar à rede</string>
-  <string name="wifi_menu_forget">Esqueça a rede</string>
+  <string name="wifi_menu_forget">Esquecer rede</string>
   <string name="wifi_menu_modify">Modificar a rede</string>
   <string name="wifi_menu_write_to_nfc">Escrever a tag NFC</string>
   <string name="wifi_empty_list_wifi_off">Para ver as redes disponíveis, ligue o WI-FI.</string>
@@ -678,7 +678,7 @@
   <string name="wifi_hotspot_connect">CONECTAR-SE</string>
   <string name="wifi_connect">Conectar-se</string>
   <string name="wifi_failed_connect_message">Falha ao conectar à rede</string>
-  <string name="wifi_forget">Esqueça</string>
+  <string name="wifi_forget">Esquecer</string>
   <string name="wifi_failed_forget_message">Não conseguiram esquecer a rede</string>
   <string name="wifi_save">Salvar</string>
   <string name="wifi_failed_save_message">Falha ao salvar a rede</string>
@@ -726,7 +726,7 @@
   <string name="wifi_p2p_disconnect_multiple_message">Se você desconectar, sua conexão com %1$s e %2$s outros dispositivos irão terminar.</string>
   <string name="wifi_p2p_cancel_connect_title">Cancelar convite?</string>
   <string name="wifi_p2p_cancel_connect_message">Você quer cancelar o convite para se conectar com %1$s?</string>
-  <string name="wifi_p2p_delete_group_message">Esqueça este grupo?</string>
+  <string name="wifi_p2p_delete_group_message">Esquecer este grupo?</string>
   <string name="wifi_tether_checkbox_text">Portátil WI-Fi hotspot</string>
   <string name="wifi_hotspot_checkbox_text">WI-Fi hotspot</string>
   <string name="wifi_hotspot_checkbox_text_summary">Usar uma conexão móvel para fornecer rede de WI-FI</string>
@@ -1132,7 +1132,7 @@
   <string name="lockpattern_settings_enable_summary">Deve desenhar padrão para desbloquear a tela</string>
   <string name="lockpattern_settings_enable_visible_pattern_title">Ver sequência de desbloqueio</string>
   <string name="lockpattern_settings_enable_tactile_feedback_title">Vibrar no touch</string>
-  <string name="lockpattern_settings_enable_power_button_instantly_locks">Botão liga / desliga instantaneamente bloqueia</string>
+  <string name="lockpattern_settings_enable_power_button_instantly_locks">Bloq. c/ botão ligar/desligar</string>
   <string name="lockpattern_settings_power_button_instantly_locks_summary">Exceto quando mantidos desbloqueado por %1$s</string>
   <string name="lockpattern_settings_choose_lock_pattern">Conjunto padrão de desbloqueio</string>
   <string name="lockpattern_settings_change_lock_pattern">Mudança de desbloqueio padrão</string>
@@ -1443,7 +1443,7 @@
   <string name="accessibility_toggle_screen_magnification_preference_title">Ampliação de tela</string>
   <string name="accessibility_toggle_screen_magnification_auto_update_preference_title">Ampliação de tela de atualização automática</string>
   <string name="accessibility_toggle_screen_magnification_auto_update_preference_summary">Ampliação de tela atualização em transições de app</string>
-  <string name="accessibility_power_button_ends_call_prerefence_title">Botão liga / desliga termina a chamada</string>
+  <string name="accessibility_power_button_ends_call_prerefence_title">Bloq. c/ botão ligar/desligar</string>
   <string name="accessibility_toggle_speak_password_preference_title">Falar senhas</string>
   <string name="accessibility_long_press_timeout_preference_title">Tocar e manter o atraso</string>
   <string name="accessibility_display_inversion_preference_title">Inversão de cor</string>
@@ -1820,7 +1820,7 @@
   <string name="wifi_setup_back">Voltar</string>
   <string name="wifi_setup_detail">Detalhes da rede</string>
   <string name="wifi_setup_connect">Conectar-se</string>
-  <string name="wifi_setup_forget">Esqueça</string>
+  <string name="wifi_setup_forget">Esquecer</string>
   <string name="wifi_setup_save">Salvar</string>
   <string name="wifi_setup_cancel">Cancelar</string>
   <string name="wifi_setup_status_scanning">Digitalização de redes...</string>
