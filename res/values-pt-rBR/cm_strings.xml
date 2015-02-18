@@ -408,7 +408,7 @@
   
   <!-- Battery light settings -->
   <string name="battery_light_title">Luz da bateria</string>
-  <string name="battery_low_pulse_title">Se o pulso bateria baixa</string>
+  <string name="battery_low_pulse_title">Pulsar luz de bateria baixa</string>
   <string name="battery_light_list_title">Cores</string>
   <string name="battery_light_low_color_title">Bateria baixa</string>
   <string name="battery_light_medium_color_title">Carregamento</string>
@@ -477,7 +477,7 @@
   <string name="app_ops_summaries_monitor_high_power_location">Monitorar a localização de alta potência</string>
   <string name="app_ops_summaries_get_usage_stats">Obter estatísticas de uso do app</string>
   <string name="app_ops_summaries_mute_unmute_microphone">Microfone mudo/não mudo</string>
-  <string name="app_ops_summaries_toast_window">Exibir brindes</string>
+  <string name="app_ops_summaries_toast_window">Exibir alertas</string>
   <string name="app_ops_summaries_project_media">Projeto mídia</string>
   <string name="app_ops_summaries_activate_vpn">Ativar a VPN</string>
   <string name="app_ops_summaries_wifi_change">Mudança de Wi\u2011Fi</string>
@@ -503,7 +503,7 @@
   <string name="app_ops_labels_modify_call_log">Modificar o registo de chamadas</string>
   <string name="app_ops_labels_read_calendar">Ler calendário</string>
   <string name="app_ops_labels_modify_calendar">Modificar o calendário</string>
-  <string name="app_ops_labels_notification_toast">Notificação/brinde</string>
+  <string name="app_ops_labels_notification_toast">Notificação/alerta</string>
   <string name="app_ops_labels_call_phone">Ligar para o telefone</string>
   <string name="app_ops_labels_read_sms_db">Ler SMS DB</string>
   <string name="app_ops_labels_write_sms_db">Escrever SMS DB</string>
@@ -530,7 +530,7 @@
   <string name="app_ops_labels_keep_awake">Manter acordado</string>
   <string name="app_ops_labels_get_usage_stats">Obter estatísticas de uso do app</string>
   <string name="app_ops_labels_mute_unmute_microphone">Microfone mudo/não mudo</string>
-  <string name="app_ops_labels_toast_window">Exibir brindes</string>
+  <string name="app_ops_labels_toast_window">Exibir alertas</string>
   <string name="app_ops_labels_project_media">Projeto mídia</string>
   <string name="app_ops_labels_activate_vpn">Ativar a VPN</string>
   <string name="app_ops_labels_wifi_change">Mudança de Wi\u2011Fi</string>
@@ -567,7 +567,7 @@
   <!-- Wifi connection notifications -->
   <string name="wifi_notify_changed_networks">Notificação de Wi\u2011Fi ligado</string>
   <string name="notify_changed_networks_default">Desligado (padrão)</string>
-  <string name="notify_changed_networks_toast">Brinde</string>
+  <string name="notify_changed_networks_toast">Alerta</string>
   <string name="notify_changed_networks_notification">Notificação</string>
   <string name="notify_changed_networks_notification_sound">Notificação com som</string>
   
@@ -684,11 +684,11 @@
   <string name="bluetooth_sap_profile_summary_use_for">Uso para acesso ao SIM</string>
   
   <!-- SIM lock settings title  [CHAR LIMIT=40] -->
-  <string name="sim_lock_settings_cm">Configurações de bloqueio do cartão SIM/RUIM</string>
+  <string name="sim_lock_settings_cm">Configurações de bloqueio do cartão SIM</string>
   <!-- Security & location settings screen, setting option name  [CHAR LIMIT=40] -->
-  <string name="sim_lock_settings_category_cm">Configurar o bloqueio do cartão SIM/RUIM</string>
+  <string name="sim_lock_settings_category_cm">Configurar o bloqueio do cartão SIM</string>
   <!-- Security & location settings screen, section heading for settings related to sim card locking  [CHAR LIMIT=40] -->
-  <string name="sim_lock_settings_title_cm">Bloqueio do cartão SIM/RUIM</string>
+  <string name="sim_lock_settings_title_cm">Bloqueio do cartão SIM</string>
   
   <!-- SIM card lock settings screen, SIM PIN dialog message when PIN disable fails-->
   <string name="sim_pin_disable_failed">Não é possível desabilitar o pino.</string>
@@ -696,9 +696,9 @@
   <string name="sim_pin_enable_failed">Não é possível habilitar o pino.</string>
   
   <!-- SIM password can't be changed as SIM LOCK is not enabled: -->
-  <string name="sim_pin_change_failed_enable_sim_lock">Para alterar o PIN do SIM/RUIM, habilite o bloqueio SIM/RUIM primeiro.</string>
+  <string name="sim_pin_change_failed_enable_sim_lock">Para alterar o PIN do SIM, habilite o bloqueio SIM primeiro.</string>
   <!-- SIM lock can't be changed - not supported -->
-  <string name="sim_enable_disable_lock_not_supported">Bloqueio do SIM/RUIM não é suportado pelo cartão.</string>
+  <string name="sim_enable_disable_lock_not_supported">Bloqueio do SIM não é suportado pelo cartão.</string>
   <!-- SIM card lock settings screen, toast displayed on wrong PIN1: -->
   <string name="sim_pin_attempts">\nAttempts restantes:</string>
   <!-- SIM card lock settings screen, toast displayed on PIN1 enable: -->
@@ -875,7 +875,7 @@
   <string name="settings_cmlicense_activity_title">CyanogenMod Legal</string>
   <string name="settings_cmlicense_activity_unreachable">Você não tem uma conexão de dados. Para exibir essas informações agora, vá para %s de qualquer computador conectado à Internet.</string>
   
-  <string name="link_volume_option_title">Link ringtone e notificação volumes</string>
+  <string name="link_volume_option_title">Unir volumes ringtone e notificação</string>
   <string name="notification_volume_option_title">Volume de notificação</string>
   
   <!-- Notification drawer -->
@@ -922,9 +922,9 @@
   <string name="qs_main_tiles_summary_on">Dois atalhos principais na primeira linha</string>
   <string name="qs_main_tiles_summary_off">Três atalhos em cada linha</string>
   
-  <string name="qs_wifi_detail_title">Detalhado Wi\u2011Fi view</string>
+  <string name="qs_wifi_detail_title">Configurações avançadas de Wi\u2011Fi</string>
   <string name="qs_wifi_detail_summary">Ativar visualização detalhada para Wi\u2011Fi em Definições Rápidas</string>
-  <string name="qs_advanced_location_title">Configurações de localização avançada</string>
+  <string name="qs_advanced_location_title">Configurações avançadas de localização</string>
   <string name="qs_advanced_location_summary">Ativar as configurações avançadas para localização em configurações rápidas</string>
   <string name="qs_screenshot_tile">Screenshot</string>
   <string name="qs_sync_tile">Sincronização</string>
