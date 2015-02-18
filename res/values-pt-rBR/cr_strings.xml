@@ -110,8 +110,8 @@
   <string name="screenshot_sound_summary">Efeito de son ao tirar uma Screenshot</string>
   
   <!-- Toast animations -->
-  <string name="toast_animation_title">Animações de brinde</string>
-  <string name="toast_animation_summary">Selecionar e visualizar a animação de brinde do sistema</string>
+  <string name="toast_animation_title">Animações de alertas</string>
+  <string name="toast_animation_summary">Selecionar e visualizar a animação de alertas do sistema</string>
   <string name="toast_none_animation">Nenhum</string>
   <string name="toast_default_animation">Padrão</string>
   <string name="toast_fade_animation">Fade animação</string>
@@ -582,9 +582,9 @@
   <!-- App Circle sidebar -->
   <string name="category_app_circle_bar_title">App launcher</string>
   <string name="app_circle_bar_title">App circle bar</string>
-  <string name="app_circle_bar_summary">Visualizar círculo app launcher depois de tocar o lado direito da tela</string>
+  <string name="app_circle_bar_summary">Visualizar um launcher circular depois de tocar o lado direito da tela</string>
   <string name="app_circle_bar_included_apps_title">Aplicativos incluídos</string>
-  <string name="app_circle_bar_included_apps_summary">Apps mostrará no bar do círculo de app</string>
+  <string name="app_circle_bar_included_apps_summary">Aplicativos que serão exibidos no app launcher</string>
   <string name="trigger_width_title">Largura de gatilho</string>
   <string name="trigger_width_summary">Ajustar a largura da zona de gatilho</string>
   <string name="trigger_top_title">Posição de gatilho</string>
