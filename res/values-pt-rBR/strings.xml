@@ -1612,7 +1612,7 @@
   <string name="battery_sugg_bluetooth_headset">Tente se conectar a um dispositivo Bluetooth diferente</string>
   <string name="battery_desc_apps">Bateria usada por app</string>
   <string name="battery_sugg_apps_info">Parar ou desinstalar o app</string>
-  <string name="battery_sugg_apps_gps">Selecione o modo de economia de bateria</string>
+  <string name="battery_sugg_apps_gps">Selecione o modo de Economia de bateria</string>
   <string name="battery_sugg_apps_settings">O app pode oferecer configurações para reduzir o uso de bateria</string>
   <string name="battery_desc_users">Bateria usada pelo usuário</string>
   <string name="battery_desc_unaccounted">Uso de energia de diversos</string>
@@ -1625,7 +1625,7 @@
   <string name="menu_stats_refresh">Atualizar</string>
   <string name="process_kernel_label">Sistema operacional Android</string>
   <string name="process_mediaserver_label">MediaServer</string>
-  <string name="battery_saver">economia de bateria</string>
+  <string name="battery_saver">Economia de bateria</string>
   <string name="battery_saver_turn_on_automatically_title">Liga-se automaticamente</string>
   <string name="battery_saver_turn_on_automatically_never">Nunca</string>
   <string name="battery_saver_turn_on_automatically_pct">A bateria de %1$d%%</string>

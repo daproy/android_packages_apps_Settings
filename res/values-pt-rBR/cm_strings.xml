@@ -143,34 +143,33 @@
   <string name="hardware_keys_action_sleep">Desligar a tela</string>
   <string name="hardware_keys_action_last_app">Último app</string>
   <string name="swap_volume_buttons_title">Reorientar</string>
-  <string name="swap_volume_buttons_summary">Trocar os botões de volume quando a tela é girada</string>
-  <string name="power_end_call_title">Finalizar chamada com Power</string>
-  <string name="power_end_call_summary">Pressionar o botão liga / desliga terminará a chamada atual</string>
+  <string name="swap_volume_buttons_summary">Inverter botões de volume quando virar a tela</string>
+  <string name="power_end_call_title">Encerrar chamada</string>
+  <string name="power_end_call_summary">Pressionar o botão liga/desliga encerrará a chamada em andamento</string>
   <string name="button_wake_title">Acorda o dispositivo</string>
   <string name="home_answer_call_title">Atender chamada</string>
   <string name="home_answer_call_summary">Pressionar o botão home irá atender à chamada de entrada atual</string>
   
   <!-- Key backlight -->
   <string name="button_backlight_title">Luz de fundo</string>
-  <string name="button_backlight_enabled">Iluminar-se botões</string>
+  <string name="button_backlight_enabled">Iluminar botões</string>
   <string name="keyboard_backlight_enabled">Iluminar o teclado</string>
-  <string name="button_backlight_seekbar_title">Brilho de botão</string>
+  <string name="button_backlight_seekbar_title">Brilho dos botão</string>
   <string name="keyboard_backlight_seekbar_title">Brilho de teclado</string>
-  <string name="backlight_timeout_title">Tempo limite de iluminação</string>
+  <string name="backlight_timeout_title">Duração do brilho</string>
   <string name="backlight_timeout_unlimited">Não desligue</string>
   <string name="backlight_summary_disabled">Desativado</string>
-  <string name="backlight_summary_enabled_with_timeout">Habilitado para <xliff:g id="timeout">%s </xliff:g></string>
-  <string name="backlight_summary_enabled">Habilitado</string>
+  <string name="backlight_summary_enabled_with_timeout">Ativado por para <xliff:g id="timeout">%s </xliff:g></string>
+  <string name="backlight_summary_enabled">Ativado</string>
   
   <!-- Power menu -->
-  <string name="power_menu_title">Power menu</string>
-  <string name="power_menu_power_title">Power off</string>
-  <string name="power_menu_reboot_title">Reboot menu</string>
-  <string name="power_menu_screenshot_title">Screenshot</string>
+  <string name="power_menu_title">Menu de energia</string>
+  <string name="power_menu_reboot_title">Menu de reinicialização</string>
+  <string name="power_menu_screenshot_title">Captura de tela</string>
   <string name="power_menu_profiles_title">Alternador de perfil</string>
   <string name="power_menu_airplane_title">Modo avião</string>
   <string name="power_menu_users_title">Alternador de usuário</string>
-  <string name="power_menu_settings_title">Atalho de configurações</string>
+  <string name="power_menu_settings_title">Atalho para as configurações</string>
   <string name="power_menu_lockdown_title">Bloqueio de dispositivo</string>
   <string name="power_menu_sound_title">Painel de som</string>
   <string name="power_menu_profiles_disabled">Perfis de sistema estão desativados</string>
@@ -180,8 +179,8 @@
   <string name="adaptive_backlight_summary">Dinamicamente ajustar o brilho da luz de fundo do visor para maximizar a vida útil da bateria, mantendo a usabilidade</string>
   
   <!-- Sunlight readability enhancement screen -->
-  <string name="sunlight_enhancement_title">Aprimoramento de luz solar</string>
-  <string name="sunlight_enhancement_summary">Aumentar a luminosidade do ecrã e legibilidade sob luz solar brilhante</string>
+  <string name="sunlight_enhancement_title">Realçar com luz solar</string>
+  <string name="sunlight_enhancement_summary">Realça o brilho da tela e a legibilidade sobre o brilho da luz solar</string>
   
   <!-- Color enhancement settings screen -->
   <string name="color_enhancement_title">Realce de cor</string>
@@ -203,25 +202,25 @@
   <string name="blacklist_private_numbers_summary_disabled">Não bloquear chamadas de números privados</string>
   <string name="blacklist_private_numbers_summary">Bloquear a entrada de <xliff:g id="type">%s </xliff:g> de números privados</string>
   <string name="blacklist_unknown_numbers_title">Número desconhecido</string>
-  <string name="blacklist_unknown_numbers_summary_disabled">Não bloquear chamadas ou mensagens de números não está na lista de contatos</string>
-  <string name="blacklist_unknown_numbers_summary">Bloquear a entrada de <xliff:g id="type">%s </xliff:g> de números não está na lista de contatos</string>
+  <string name="blacklist_unknown_numbers_summary_disabled">Não bloquear chamadas ou mensagens de números que não estão na lista de contatos</string>
+  <string name="blacklist_unknown_numbers_summary">Bloquear <xliff:g xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" id="type">%s</xliff:g> recebidas de números que não estão na lista de contatos</string>
   <string name="blacklist_summary_type_calls_only">chamadas</string>
   <string name="blacklist_summary_type_messages_only">Mensagens</string>
   <string name="blacklist_summary_type_calls_and_messages">Chamadas e mensagens</string>
-  <string name="blacklist_regex_title">Usar caracteres curinga</string>
-  <string name="blacklist_regex_summary">Use. como uma curinga e * para repetição. Por exemplo, 123.* bloqueia números que começam com 123 e. * 123.* bloqueia números contendo 123</string>
+  <string name="blacklist_regex_title">Usar wildcards</string>
+  <string name="blacklist_regex_summary">Usar . como um wildcard e * para repetição. Ex. 123.* bloqueia números que começam com 123 e .*123.* bloqueia números que contém 123</string>
   <string name="blacklist_policy_block_calls">Bloquear chamadas recebidas</string>
   <string name="blacklist_policy_block_messages">Bloquear mensagens de entrada</string>
   <string name="blacklist_bad_number_add">Não é possível adicionar um número inválido para a lista negra</string>
   
   <!-- Blacklist management -->
-  <string name="remove_blacklist_number_title">Remover o número</string>
-  <string name="remove_blacklist_entry">Você quer remover esta entrada da lista negra?</string>
-  <string name="select_contact">Selecione o contato</string>
+  <string name="remove_blacklist_number_title">Remover número</string>
+  <string name="remove_blacklist_entry">Você deseja remover este número da lista de bloqueio?</string>
+  <string name="select_contact">Selecionar contato</string>
   
   <!-- Protected apps lockpattern reset button -->
-  <string name="lockpattern_reset_button">Redefinir o padrão</string>
-  <string name="lockpattern_settings_reset_summary">Digite a conta de e-mail principal e senha associada para redefinir o bloqueio padrão</string>
+  <string name="lockpattern_reset_button">Redefinir padrão</string>
+  <string name="lockpattern_settings_reset_summary">Introduza a conta de e-mail principal e a senha associada para redefinir o bloqueio padrão</string>
   
   <!-- Protected Apps -->
   <string name="menu_hidden_apps_delete">Redefinir</string>
@@ -249,7 +248,7 @@
   <!--- Sms security limit -->
   <string name="app_security_title">Segurança de aplicativo</string>
   <string name="sms_security_check_limit_title">Limite de mensagens SMS</string>
-  <string name="sms_security_check_limit_summary">Apps podem enviar mensagens de %d em 30 minutos antes de exigir confirmação</string>
+  <string name="sms_security_check_limit_summary">Aplicativos podem enviar %d mensagens durante 30 minutos antes de exigir confirmação</string>
   
   <string name="spam_added_title">Adicionado%1$s</string>
   <string name="spam_last_blocked_title">Última bloqueado %1$s</string>
@@ -281,6 +280,7 @@
   
   <!--- Tap To Wake -->
   <string name="double_tap_to_wake_title">Dê um duplo toque para acordar</string>
+  <string name="double_tap_to_wake_summary">Dê um duplo toque na tela para ativar a tela</string>
   
   <!-- Proximity wake -->
   <string name="proximity_wake_title">Evitar despertar acidental</string>
@@ -292,20 +292,19 @@
   <!-- Privacy Guard -->
   <string name="privacy_guard_default_title">Habilitado por padrão</string>
   <string name="privacy_guard_default_summary">Ativar por padrão para aplicativos recém-instalado</string>
-  <string name="privacy_guard_manager_title">Privacy Guard</string>
+  <string name="privacy_guard_manager_title">Proteção à Privacidade</string>
   <string name="privacy_guard_manager_summary">Gerenciar os aplicativos que têm acesso aos seus dados pessoais</string>
   <string name="privacy_guard_no_user_apps">Nenhum apps são instalados</string>
   <string name="privacy_guard_help_title">Ajuda</string>
   <string name="privacy_guard_reset_title">Redefinir</string>
   <string name="privacy_guard_reset_text">Redefinir permissões?</string>
-  <string name="privacy_guard_help_text">\"Nesta tela você pode escolher quais aplicativos Privacy Guard deve estar ativo para simplesmente tocando neles. Apps selecionados não será capazes de acessar seus dados pessoais, como contatos, mensagens ou registos de chamadas. Tempo pressionando a entrada de um app abre sua tela de detalhes do aplicativo.  Built-in apps não são mostrados por padrão, mas podem ser revelados, selecionando a opção do menu respectivo.\".</string>
+  <string name="privacy_guard_help_text">Nesta tela você pode escolher quais aplicativos a Proteção à Privacidade deve estar ativa ao simplesmente tocar neles. Os aplicativos selecionados não serão capazes de acessar seus dados pessoais, como contatos, mensagens ou registos de chamadas. Pressionando e segurando um item de aplicativo, abre a tela de detalhes do aplicativo.\n\nAplicativos do sistema não são exibidos por padrão, mas podem ser exibidos selecionando a respectiva opção no menu.</string>
   <string name="privacy_guard_manager_show_system_apps">Mostrar apps built-in</string>
-  <string name="privacy_guard_advanced_settings_title">Avançado</string>
   
   <!-- Increasing ring tone volume -->
-  <string name="increasing_ring_volume_option_title">Aumentar o volume do toque</string>
-  <string name="increasing_ring_min_volume_title">Início volume</string>
-  <string name="increasing_ring_ramp_up_time_title">Tempo de rampa</string>
+  <string name="increasing_ring_volume_option_title">Aumento gradativo do volume do toque</string>
+  <string name="increasing_ring_min_volume_title">Volume inicial</string>
+  <string name="increasing_ring_ramp_up_time_title">Intervalo de aumento</string>
   
   <!-- Advanced reboot options -->
   <string name="advanced_reboot_title">Reinicialização avançada</string>
@@ -430,6 +429,10 @@
   <!-- High touch sensitivity -->
   <string name="high_touch_sensitivity_title">Toque de alta sensibilidade</string>
   <string name="high_touch_sensitivity_summary">Aumentar a sensibilidade do touchscreen, então ele pode ser usado enquanto usava luvas</string>
+  
+  <!-- Touchscreen hovering -->
+  <string name="touchscreen_hovering_title">Touchscreen pairando</string>
+  <string name="touchscreen_hovering_summary">Permite que você passe o mouse na tela em navegadores web, desktops remotos, etc.</string>
   
   <!-- App ops -->
   <string name="app_ops_summaries_coarse_location">Localização grosseira</string>
@@ -812,23 +815,22 @@
   
   <!-- Voice Wakeup -->
   <string name="voice_wakeup_settings_title">Despertar voz</string>
-  <string name="voice_wakeup_retrain_title">Treinar a sua voz</string>
-  <string name="voice_wakeup_activity_title">Atividade de lançamento</string>
-  <string name="voice_wakeup_default_activity">Google agora</string>
+  <string name="voice_wakeup_retrain_title">Re-treinar sua voz</string>
+  <string name="voice_wakeup_activity_title">Atividade para iniciar</string>
+  <string name="voice_wakeup_default_activity">Google now</string>
   
   <string name="picker_activities">Atividades</string>
-  <string name="select_custom_app_title">Selecione o aplicativo personalizado</string>
-  <string name="select_custom_activity_title">Selecione a atividade personalizada</string>
+  <string name="select_custom_app_title">Selecione a aplicação personalizada</string>
+  <string name="select_custom_activity_title">Selecione atividade personalizada</string>
   
   <!-- Performance settings -->
-  <string name="title_tile_performance_profile">Perfil de desempenho</string>
   <string name="performance_settings_title">Performance</string>
   
   <!-- Performance Settings : I/O scheduler settings title -->
-  <string name="io_scheds_title">I/O schedule</string>
+  <string name="io_scheds_title">Escalonador de I/O</string>
   
   <!-- Performance Settings : I/O scheduler settings sub items -->
-  <string name="io_sched_title">I/O schedule</string>
+  <string name="io_sched_title">Escalonador I/O</string>
   <string name="io_sched_summary" translatable="false">%S</string>
   
   <!-- Performance Settings : I/O scheduler settings sub items -->
@@ -885,18 +887,18 @@
   <string name="status_bar_quick_qs_pulldown_summary">Borda direita da barra de status vai baixando configurações rápidas</string>
   
   <!-- Weather in status bar header -->
-  <string name="status_bar_show_weather_title">Mostrar tempo</string>
-  <string name="status_bar_show_weather_summary">Mostrar o tempo no cabeçalho da barra de status</string>
+  <string name="status_bar_show_weather_title">Mostrar o tempo</string>
+  <string name="status_bar_show_weather_summary">Mostrar o tempo acima do painel de Configurações Rápidas</string>
   
   <string name="qs_category_title">Painel de configurações rápido</string>
   
   <!-- Quick Settings -->
-  <string name="qs_order_title">Selecione e ordene as Telhas</string>
-  <string name="add_qs">Adicionar nova telha</string>
+  <string name="qs_order_title">Selecionar e ordenar os botões</string>
+  <string name="add_qs">Adicionar novo botão</string>
   
   <string name="qs_action_delete">Excluir</string>
   <string name="qs_action_add">Adicionar</string>
-  <string name="qs_action_no_more_tiles">Telhas não disponíveis</string>
+  <string name="qs_action_no_more_tiles">Não há mais botões disponíveis</string>
   
   <string name="qs_tile_wifi">Wi\u2011Fi</string>
   <string name="qs_tile_bluetooth">Bluetooth</string>
@@ -912,28 +914,28 @@
   <string name="qs_tile_profiles">Perfis de sistema</string>
   <string name="qs_tile_performance">Performance</string>
   <string name="qs_tile_nfc">NFC</string>
-  <string name="qs_tile_compass">Bússula</string>
-  <string name="qs_tile_lockscreen">Lock screen</string>
+  <string name="qs_tile_compass">Bússola</string>
+  <string name="qs_tile_lockscreen">Tela de bloqueio</string>
   <string name="qs_tile_lte">LTE</string>
   <string name="qs_tile_visualizer" translatable="false">AudioFX</string>
-  <string name="qs_tile_screen_timeout">Tempo limite da tela</string>
+  <string name="qs_tile_screen_timeout">Tempo limite de tela</string>
   
   <string name="qs_main_tiles_title">Ampliar primeira linha</string>
-  <string name="qs_main_tiles_summary_on">Dois atalhos principais na primeira linha</string>
-  <string name="qs_main_tiles_summary_off">Três atalhos em cada linha</string>
+  <string name="qs_main_tiles_summary_on">Dois botões principais na primeira linha</string>
+  <string name="qs_main_tiles_summary_off">Três botões em cada fileira</string>
   
   <string name="qs_wifi_detail_title">Configurações avançadas de Wi\u2011Fi</string>
   <string name="qs_wifi_detail_summary">Ativar visualização detalhada para Wi\u2011Fi em Definições Rápidas</string>
   <string name="qs_advanced_location_title">Configurações avançadas de localização</string>
   <string name="qs_advanced_location_summary">Ativar as configurações avançadas para localização em configurações rápidas</string>
-  <string name="qs_screenshot_tile">Screenshot</string>
+  <string name="qs_screenshot_tile">Captura de tela</string>
   <string name="qs_sync_tile">Sincronização</string>
-  <string name="qs_tile_powermenu">Power Menu</string>
+  <string name="qs_tile_powermenu">Menu de reinicialização</string>
   <string name="qs_battery_saver_tile">Economia de bateria</string>
   <string name="qs_brightness_tile">Brilho</string>
   <string name="qs_expanded_desktop_tile">Àrea de trabalho expandida</string>
   <string name="qs_notifications_tile">Notificações</string>
-  <string name="qs_screen_off_tile">Screen off</string>
+  <string name="qs_screen_off_tile">Tempo limite da tela</string>
   
   <!-- Gesture Settings -->
   <!-- Settings main menu entry -->
@@ -966,8 +968,11 @@
   <string name="expanded_hide_both">Esconder ambos</string>
   <string name="expanded_nothing_to_show">Para adicionar uma configuração de aplicativo personalizado para estado expandido, defina \"Ativar para todos\" para a posição fechada</string>
   <string name="expanded_enabled_for_all">Habilitado para todos</string>
+  <string name="expanded_desktop_style">Estilo da área de trabalho expandida</string>
+  <string name="expanded_desktop_style_description">Escolha o estilo padrão da área de trabalho expandida</string>
+  <string name="expanded_desktop_title">Opções da área de trabalho expandida</string>
   
-  <string name="lockscreen_targets_message">Atalhos de lockscreen</string>
+  <string name="lockscreen_targets_message">Atalhos da tela de bloqueio</string>
   <string name="lockscreen_default_target">Padrão</string>
   <string name="lockscreen_none_target">Nenhum</string>
   <string name="lockscreen_message">Toque em um ícone da esquerda ou direita para reatribuir um atalho de tela de bloqueio.</string>
@@ -1008,4 +1013,19 @@
 
  <!-- Stylus gestures -->
  <string name="stylus_app_not_installed">%s não está instalado</string>
+ 
+ <string name="advanced">Avançado</string>
+ <string name="advanced_mode_title">Modo Avançado</string>
+
+ <string name="category_misc">Diversos</string>
+ <string name="category_vibrate">Vibar</string>
+ <string name="category_volume">Volume</string>
+ <string name="category_sounds">Sons</string>
+ <string name="category_interface">Interface</string>
+ <string name="category_calibration">Calibração</string>
+ <string name="display_and_lights">Tela e Luzes</string>
+ <string name="notification_manager">Gerenciar Notificações</string>
+ <string name="lockscreen_settings">Lock screen</string>
+ <string name="category_lights">Luzes</string>
+ <string name="power_usage_history_title">Uso da bateria</string>
 </resources>
