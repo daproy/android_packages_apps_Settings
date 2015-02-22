@@ -820,13 +820,12 @@ sword is entered</string>
     <string name="heads_up_touch_outside_summary_enabled">Hide notification on touch outside and on home button press</string>
     <string name="heads_up_touch_outside_summary_disabled">Do not hide notification after touch outside or on home button press</string>
 
-    <!-- Doze options -->
-    <string name="display_category_doze_options_title">Ambient display (doze) options</string>
-    <string name="doze_timeout_title">Doze pulse timeout</string>
+    <!-- Doze pulse (ambient display) notification timeout -->
+    <string name="doze_timeout_title">Ambient display timeout</string>
     <string name="doze_timeout_summary">Time that the screen stays on for notification pulse</string>
-    <string name="doze_trigger_motion_title">Doze TriggerSensors</string>
-    <string name="doze_trigger_motion_summary_on">Doze pulse will be triggered by pick up gesture/significant motion sensor and notifications</string>
-    <string name="doze_trigger_motion_summary_off">Doze pulse will only be triggered by notifications</string>
+
+    <!-- Doze (ambient display) preference category -->
+    <string name="display_category_doze_options_title">Ambient display options</string>
 
     <!-- The volume key answer -->
     <string name="volume_answer_call_title">Volume key Answer</string>
