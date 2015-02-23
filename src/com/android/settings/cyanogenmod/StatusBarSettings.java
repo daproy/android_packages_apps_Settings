@@ -33,8 +33,9 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Toast;
 
-import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.R;
+import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.Utils;
 
 import java.util.Locale;
 
@@ -47,11 +48,13 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
 
     private static final String STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
     private static final String STATUS_BAR_SHOW_BATTERY_PERCENT = "status_bar_show_battery_percent";
+    private static final String KEY_CARRIERLABEL_PREFERENCE = "carrier_options";
 
     private static final int STATUS_BAR_BATTERY_STYLE_HIDDEN = 4;
     private static final int STATUS_BAR_BATTERY_STYLE_TEXT = 6;
 
     private PreferenceScreen mClockStyle;
+    private PreferenceScreen mCarrierLabel;
 
     private ListPreference mStatusBarBattery;
     private ListPreference mStatusBarBatteryShowPercent;
@@ -66,6 +69,11 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
 
         mClockStyle = (PreferenceScreen) prefSet.findPreference(KEY_STATUS_BAR_CLOCK);
         updateClockStyleDescription();
+
+        mCarrierLabel = (PreferenceScreen) prefSet.findPreference(KEY_CARRIERLABEL_PREFERENCE);
+        if (Utils.isWifiOnly(getActivity())) {
+            prefSet.removePreference(mCarrierLabel);
+        }
 
         mStatusBarBattery = (ListPreference) findPreference(STATUS_BAR_BATTERY_STYLE);
         mStatusBarBatteryShowPercent =
