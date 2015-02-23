@@ -117,7 +117,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private Preference mScreenSaverPreference;
     private SwitchPreference mAccelerometer;
     private SwitchPreference mLiftToWakePreference;
-    private PreferenceScreen mDozeFragement;
+    private PreferenceScreen mDozeFragment;
     private SwitchPreference mAutoBrightnessPreference;
     private SwitchPreference mTapToWake;
     // private SwitchPreference mDisableIM;
@@ -245,10 +245,10 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             }
         }
 
-        mDozeFragement = (PreferenceScreen) findPreference(KEY_DOZE_FRAGMENT);
+        mDozeFragment = (PreferenceScreen) findPreference(KEY_DOZE_FRAGMENT);
         if (!isDozeAvailable(activity)) {
-            displayPrefs.removePreference(mDozeFragement);
-            mDozeFragement = null;
+            displayPrefs.removePreference(mDozeFragment);
+            mDozeFragment = null;
         }
 
         mTapToWake = (SwitchPreference) findPreference(KEY_TAP_TO_WAKE);
