@@ -233,12 +233,7 @@
     <string name="media_scanner_on_boot_ask">Спрашивать (уведомление)</string>
     <string name="media_scanner_on_boot_disabled">Не сканировать медиа</string>
 
-    <!-- QuickSettings: Quick Pulldown -->
-    <string name="title_quick_pulldown">Быстрый доступ</string>
-    <string name="summary_quick_pulldown">%1$s край строки уведомлений при опускании вниз открывает панель быстрых настроек</string>
-    <string name="quick_pulldown_off">Выключен</string>
-    <string name="quick_pulldown_left">Левый</string>
-    <string name="quick_pulldown_right">Правый</string>
+    <!-- QuickSettings -->
     <string name="block_on_secure_keyguard_title">Быстрые настройки</string>
     <string name="block_on_secure_keyguard_summary">Отключить быстрые настройки на экране блокировки с паролем</string>
 
