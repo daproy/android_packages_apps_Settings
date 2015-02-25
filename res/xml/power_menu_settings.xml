@@ -19,44 +19,55 @@
     android:title="@string/power_menu_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <SwitchPreference
-        android:key="reboot"
-        android:title="@string/power_menu_reboot_title"
+    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+        android:key="lockscreen_enable_power_menu"
+        android:title="@string/lockscreen_enable_power_menu_title"
         android:defaultValue="true" />
 
-    <SwitchPreference
-        android:key="screenshot"
-        android:title="@string/power_menu_screenshot_title"
-        android:defaultValue="false" />
+    <PreferenceCategory
+        android:key="action_category"
+        android:title="@string/actions_category" >
 
-    <SwitchPreference
-        android:key="profile"
-        android:title="@string/power_menu_profiles_title"
-        android:defaultValue="false" />
+        <SwitchPreference
+            android:key="reboot"
+            android:title="@string/power_menu_reboot_title"
+            android:defaultValue="true" />
 
-    <SwitchPreference
-        android:key="airplane"
-        android:title="@string/power_menu_airplane_title"
-        android:defaultValue="true" />
+        <SwitchPreference
+            android:key="screenshot"
+            android:title="@string/power_menu_screenshot_title"
+            android:defaultValue="false" />
 
-    <SwitchPreference
-        android:key="users"
-        android:title="@string/power_menu_users_title"
-        android:defaultValue="false" />
+        <SwitchPreference
+            android:key="profile"
+            android:title="@string/power_menu_profiles_title"
+            android:defaultValue="false" />
 
-    <SwitchPreference
-        android:key="settings"
-        android:title="@string/power_menu_settings_title"
-        android:defaultValue="false" />
+        <SwitchPreference
+            android:key="airplane"
+            android:title="@string/power_menu_airplane_title"
+            android:defaultValue="true" />
 
-    <SwitchPreference
-        android:key="lockdown"
-        android:title="@string/power_menu_lockdown_title"
-        android:defaultValue="false" />
+        <SwitchPreference
+            android:key="users"
+            android:title="@string/power_menu_users_title"
+            android:defaultValue="false" />
 
-    <SwitchPreference
-        android:key="silent"
-        android:title="@string/power_menu_sound_title"
-        android:defaultValue="true" />
+        <SwitchPreference
+            android:key="settings"
+            android:title="@string/power_menu_settings_title"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="lockdown"
+            android:title="@string/power_menu_lockdown_title"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="silent"
+            android:title="@string/power_menu_sound_title"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>

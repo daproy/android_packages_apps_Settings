@@ -281,9 +281,9 @@
     <string name="restart_systemui">Restart SystemUI</string>
 
     <!--Power menu -->
-    <string name="power_category">Power key</string>
-    <string name="lockscreen_enable_power_menu_title">Show power menu lock screen</string>
-    <string name="lockscreen_enable_power_menu_summary">This option will disable the power menu only on secure lock screens</string>
+    <string name="power_category">Power button</string>
+    <string name="lockscreen_enable_power_menu_title">Enable on lock screen</string>
+    <string name="actions_category">Actions</string>
 
     <!-- Search Bar Switcher -->
     <string name="recents_show_searchbar">Show Search Bar in Recents</string>
