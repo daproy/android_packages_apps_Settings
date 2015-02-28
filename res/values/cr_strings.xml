@@ -918,4 +918,8 @@
     <!-- Data activity icons -->
     <string name="status_bar_show_network_activity_title">Network activity arrows</string>
 
+    <!-- Show bluetooth icon when disconnected -->
+    <string name="status_bar_bluetooth_icon">Show Bluetooth icon</string>
+    <string name="status_bar_bluetooth_icon_summary">Display the bluetooth icon when it is enabled but not connected</string>
+
 </resources>

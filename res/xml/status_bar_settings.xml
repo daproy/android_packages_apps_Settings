@@ -82,6 +82,12 @@
             android:summary="@string/su_indicator_summary"
             android:defaultValue="true" />
 
+        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="show_bluetooth_icon"
+            android:title="@string/status_bar_bluetooth_icon"
+            android:summary="@string/status_bar_bluetooth_icon_summary"
+            android:defaultValue="true" />
+ 
         <SwitchPreference
             android:key="status_bar_show_network_activity"
             android:title="@string/status_bar_show_network_activity_title"
