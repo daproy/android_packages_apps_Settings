@@ -37,6 +37,11 @@
             android:title="@string/qs_four_columns_title"
             android:defaultValue="false" />
 
+        <PreferenceScreen
+            android:key="qs_colors"
+            android:title="@string/qs_colors_title"
+            android:fragment="com.android.settings.temasek.QSColors" />
+
         <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
             android:key="quick_settings_vibrate"
             android:title="@string/quick_settings_vibrate_title"
