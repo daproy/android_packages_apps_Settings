@@ -66,4 +66,11 @@
          android:fragment="com.android.settings.temasek.ScreenAndAnimations"
          android:title="@string/screen_and_animations_title"/>
 
+    <!-- Smart Control -->
+    <PreferenceScreen
+         android:id="@+id/smartcontrol_settings"
+         android:title="@string/smartcontrol_settings_title"
+         android:fragment="com.android.settings.temasek.SmartControl"
+         android:icon="@drawable/ic_settings_smartcontrol" />
+
 </PreferenceScreen>
