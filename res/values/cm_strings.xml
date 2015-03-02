@@ -943,6 +943,7 @@
     <string name="qs_notifications_tile">Notifications</string>
     <string name="qs_screen_off_tile">Screen off</string>
     <string name="qs_tile_reboot">Reboot</string>
+    <string name="qs_ambient_display_tile">Ambient display</string>
 
     <!-- Gesture Settings -->
     <!-- Settings main menu entry -->
