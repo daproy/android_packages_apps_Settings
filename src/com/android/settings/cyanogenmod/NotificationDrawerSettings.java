@@ -112,25 +112,25 @@ public class NotificationDrawerSettings extends SettingsPreferenceFragment imple
                     qsTileCount, qsTileCount));
     }
 
-    public boolean onPreferenceChange(Preference preference, Object objValue) {
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        ContentResolver resolver = getContentResolver();
         if (preference == mQuickPulldown) {
-            int quickPulldownValue = Integer.valueOf((String) objValue);
-            Settings.System.putIntForUser(getContentResolver(),
-                    Settings.System.QS_QUICK_PULLDOWN,
+            int quickPulldownValue = Integer.valueOf((String) newValue);
+            Settings.System.putIntForUser(resolver, Settings.System.QS_QUICK_PULLDOWN,
                     quickPulldownValue, UserHandle.USER_CURRENT);
             updatePulldownSummary(quickPulldownValue);
             return true;
         } else if (preference == mSmartPulldown) {
-            int smartPulldown = Integer.valueOf((String) objValue);
-            Settings.System.putInt(getContentResolver(),
+            int smartPulldown = Integer.valueOf((String) newValue);
+            Settings.System.putInt(resolver,
                     Settings.System.QS_SMART_PULLDOWN,
                     smartPulldown);
             updateSmartPulldownSummary(smartPulldown);
             return true;
         } else if (preference == mBlockOnSecureKeyguard) {
-            Settings.Secure.putInt(getContentResolver(),
+            Settings.Secure.putInt(resolver,
                     Settings.Secure.STATUS_BAR_LOCKED_ON_SECURE_KEYGUARD,
-                    (Boolean) objValue ? 1 : 0);
+                    (Boolean) newValue ? 1 : 0);
             return true;
         }
         return false;
