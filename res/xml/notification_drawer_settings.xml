@@ -48,14 +48,14 @@
             android:summary="@string/quick_settings_vibrate_summary"
             android:defaultValue="false"/>
 
-        <com.android.settings.cyanogenmod.SystemSettingListPreference
+        <ListPreference
             android:key="quick_pulldown"
             android:title="@string/quick_pulldown_title"
             android:entries="@array/quick_pulldown_entries"
             android:entryValues="@array/quick_pulldown_values"
             android:persistent="false" />
 
-        <com.android.settings.cyanogenmod.SystemSettingListPreference
+        <ListPreference
             android:key="smart_pulldown"
             android:title="@string/smart_pulldown_title"
             android:entries="@array/smart_pulldown_entries"
@@ -68,7 +68,7 @@
             android:summary="@string/quick_settings_collapse_summary"
             android:defaultValue="false"/>
 
-        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+        <SwitchPreference
             android:key="block_on_secure_keyguard"
             android:title="@string/block_on_secure_keyguard_title"
             android:summary="@string/block_on_secure_keyguard_summary"
