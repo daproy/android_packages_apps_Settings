@@ -554,13 +554,13 @@
   <string name="bluetooth_pbap_profile_summary_use_for">Use para compartilhamento de contato</string>
   <string name="bluetooth_sap_profile_summary_use_for">Utilizar para acesso ao SIM</string>
   <string name="bluetooth_accept_all_files">Aceitar todos os tipos de arquivo</string>
-  <string name="sim_lock_settings_cm">Configurações de bloqueio do cartão SIM/RUIM</string>
-  <string name="sim_lock_settings_category_cm">Configurar o bloqueio do cartão SIM/RUIM</string>
-  <string name="sim_lock_settings_title_cm">Bloqueio do cartão SIM/RUIM</string>
+  <string name="sim_lock_settings_cm">Configurações de bloqueio do cartão SIM</string>
+  <string name="sim_lock_settings_category_cm">Configurar o bloqueio do cartão SIM</string>
+  <string name="sim_lock_settings_title_cm">Bloqueio do cartão SIM</string>
   <string name="sim_pin_disable_failed">Não é possível desativar o PIN.</string>
   <string name="sim_pin_enable_failed">Não é possível ativar o PIN.</string>
-  <string name="sim_pin_change_failed_enable_sim_lock">Para alterar o PIN do SIM/RUIM, ative antes o bloqueio do SIM/RUIM.</string>
-  <string name="sim_enable_disable_lock_not_supported">Bloqueio do SIM/RUIM não é suportado pelo cartão.</string>
+  <string name="sim_pin_change_failed_enable_sim_lock">Para alterar o PIN do SIM, ative antes o bloqueio do SIM.</string>
+  <string name="sim_enable_disable_lock_not_supported">Bloqueio do SIM não é suportado pelo cartão.</string>
   <string name="sim_pin_attempts">\nTentativas restantes:</string>
   <string name="sim_pin_enabled">PIN1 ativado</string>
   <string name="sim_pin_disabled">PIN1 desativado</string>
@@ -794,4 +794,9 @@
   <string name="live_display_low_power_summary">Ajustar exibição para menor consumo de energia, sem degradação</string>
   <string name="live_display_enhance_color_title">Realçar cores</string>
   <string name="live_display_enhance_color_summary">Melhorar a vivacidade da cor de tons de pele, cenário, e outras imagens</string>
+  <string name="wifi_notify_changed_networks">Notificar ao conectar o Wi-Fi</string>
+  <string name="notify_changed_networks_default">Desligado (padrão)</string>
+  <string name="notify_changed_networks_toast">Alerta</string>
+  <string name="notify_changed_networks_notification">Notificação</string>
+  <string name="notify_changed_networks_notification_sound">Notificação com som</string>
 </resources>
