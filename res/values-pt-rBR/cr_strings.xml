@@ -8,7 +8,7 @@
 	
 	
   <!-- temasek spare parts -->
-  <string name="temasek_settings_title">Temasek spare parts</string>
+  <string name="temasek_settings_title">Temasek extras</string>
   <string name="status_bar_title">Barra de status</string>
   <string name="status_bar_style_title">Estilo</string>
   <string name="status_bar_settings">Configurações da barra de status</string>
@@ -708,7 +708,7 @@
   
   <!-- QuickSettings haptic feedback -->
   <string name="quick_settings_vibrate_title">Vibrar no toque</string>
-  <string name="quick_settings_vibrate_summary">Vibrar ao tocar as telhas</string>
+  <string name="quick_settings_vibrate_summary">Vibrar ao tocar os botões</string>
   
   <!-- Superuser indicator on status bar -->
   <string name="su_indicator">Indicador de superusuário</string>
@@ -777,10 +777,10 @@
   <string name="quick_settings_collapse_summary">Fechar o painel quando ativar o Quick Settings</string>
 	
   <!-- QuickSettings 4 columns -->
-  <string name="qs_four_columns_title">Mostrar quatro telhas por linha</string>
+  <string name="qs_four_columns_title">Mostrar quatro botões por linha</string>
    
   <!-- Heads Up -->
-  <string name="category_heads_up">Heads up notificações</string>
+  <string name="category_heads_up">Notificações Heads up</string>
   <string name="summary_heads_up_enabled">Notificações pop-up estão habilitados</string>
   <string name="summary_heads_up_disabled">Notificações pop-up estão desativados</string>
   <string name="add_heads_up_package">Adicionar aplicações</string>
@@ -826,8 +826,8 @@
 	
 	<!-- Volume pane timeout -->
     <string name="category_panel_time_out">Painel de tempo limite</string>
-    <string name="volume_panel_time_out_title">Painel de volume tempo limite</string>
-    <string name="volume_panel_time_out_summary">Esconder antes <xliff:g id="number">%d</xliff:g> segundos. Ocultar automaticamente ao tocar fora</string>
+    <string name="volume_panel_time_out_title">Tempo limite do painel de volume</string>
+    <string name="volume_panel_time_out_summary">Esconder em <xliff:g id="number">%d</xliff:g> segundos. Ocultar automaticamente ao tocar fora</string>
     <string name="volume_panel_time_out_3sec">3 segundos (padrão)</string>
     <string name="volume_panel_time_out_5sec">5 segundos</string>
     <string name="volume_panel_time_out_8sec">8 segundos</string>
@@ -854,9 +854,9 @@
     <string name="doze_pulse_on_notifications_title">Pulsar em notificações</string>
     <string name="doze_pulse_on_notifications_summary">Ativação do gatilho apenas em notificações pendentes</string>
 
-    <string name="doze_shake_title">configurações de Agite</string>
+    <string name="doze_shake_title">>Ajustes para agitar</string>
     <string name="doze_shake_mode_title">Modo de Agitar</string>
-    <string name="doze_shake_mode_summary">Use a trepidação do sensor para desencadear a ativação</string>
+    <string name="doze_shake_mode_summary">Usar o valor do sensor de agito para desencadear a ativação</string>
     <string name="doze_shake_mode_test_summary">Você quer testar o sensor de trepidação?</string>
     <string name="doze_shake_mode_test_result">Aplicar o valor atual?</string>
     <string name="doze_shake_test">Agite seu dispositivo agora</string>
@@ -882,11 +882,11 @@
     <string name="fourhalf_second">4.5 s</string>
     <string name="five_second">5 s</string>
 
-    <string name="veryeasy_shake">Muito fácil</string>
-    <string name="easy_shake">fácil</string>
+    <string name="veryeasy_shake">Muito fraco</string>
+    <string name="easy_shake">Fraco</string>
     <string name="medium_shake">Padrão</string>
-    <string name="hard_shake">Difícil</string>
-    <string name="veryhard_shake">Muito difícil</string>
+    <string name="hard_shake">Firme</string>
+    <string name="veryhard_shake">Muito firme</string>
     <string name="strong_shake">Forte</string>
 
     <string name="fully_mode">Modo completo</string>
@@ -894,6 +894,49 @@
     <string name="pocket_pulse_mode">Bolso e pulso</string>
     <string name="pocket_only_mode">Bolso</string>
     <string name="shake_pulse_mode">Agitar e pulsar</string>
-    <string name="pulse_only_mode">Pusar (Padrão)</string>
-  
+    <string name="pulse_only_mode">Pulsar (Padrão)</string>
+
+
+    <!-- Show carrier label and custom -->
+    <string name="carrier_options">Nome da operadora</string>
+    <string name="show_status_bar_carrier_title">Operadora</string>
+    <string name="show_status_bar_carrier_summary">Mostrar operadora na barra de status</string>
+    <string name="custom_carrier_label_title">Personalizar nome da operadora</string>
+    <string name="custom_carrier_label_explain">Inserir um título. Deixe em branco para reverter ao nome original.</string>
+    <string name="custom_carrier_label_notset">Nome original da operadora</string>
+    <string name="status_bar_carrier_color">Cor de exibição</string>
+
+    <!-- Data activity icons -->
+    <string name="status_bar_show_network_activity_title">Indicador de atividade da rede</string>
+
+    <!-- Show bluetooth icon when disconnected -->
+    <string name="status_bar_bluetooth_icon">Mostrar ícone bluetooth</string>
+    <string name="status_bar_bluetooth_icon_summary">Mostrar ícone bluetooth quando está ligado, mas não conectado</string>
+
+    <!-- Status bar greeting -->
+    <string name="status_bar_greeting_category_title">Saudação na barra de status</string>
+    <string name="status_bar_greeting_title">Saudação</string>
+    <string name="status_bar_greeting_summary">Mostrar uma saudação na barra de status após desbloquear o dispositivo</string>
+    <string name="status_bar_greeting_dialog">Configurar saudação</string>
+    <string name="status_bar_greeting_main">Flash ON!!!</string>
+    <string name="status_bar_greeting_timeout_title">Tempo de exibição</string>
+
+    <!-- Smart Control -->
+    <string name="smartcontrol_settings_title">Smart Control</string>
+    <string name="direct_control_title">Direct control</string>
+    <string name="direct_call_for_dialer_title">Ligar automaticamente no discador</string>
+    <string name="direct_call_for_dialer_summary">Leve o telefone até a orelha após digitar um número no discador para iniciar a ligação</string>
+    <string name="direct_call_for_mms_title">Ligar automaticamente em MMS</string>
+    <string name="direct_call_for_mms_summary">Levar o telefone até a orelha irá ligar para o contato</string>
+
+    <!-- Long press on lock screen lock icon to sleep -->
+    <string name="longpress_lock_icon_to_sleep_title">Pressionar ícone de desbloqueio para dormir</string>
+    <string name="longpress_lock_icon_to_sleep_summary">Esta opção não funcionará se o Smart Lock ou Explorar por Toque estiverem habilitados</string>
+
+    <!-- Force expand notifications -->
+    <string name="notification_force_expand_title">Forçar notificações expandidas</string>
+    <string name="notification_force_expand_summary">Forçar notificações expandidas em todos os aplicativos que suportarem</string>
+
+
+
 </resources>
