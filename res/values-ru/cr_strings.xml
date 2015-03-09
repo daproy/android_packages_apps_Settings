@@ -16,12 +16,15 @@
 
     <!-- General strings -->
     <string name="attention">Внимание</string>
-    <string name="default_string">По умолчанию</string>
-    <string name="help">Помощь</string>
     <string name="reset">Сброс</string>
+    <string name="help">Помощь</string>
+    <string name="default_string">По умолчанию</string>
     <string name="enabled">Включено</string>
     <string name="disabled">Выключено</string>
     <string name="reset_message">Сбросить все значения по умолчанию?</string>
+    <string name="ok">ОК</string>
+    <string name="dialog_restart">Перезагрузить</string>
+    <string name="dialog_cancel">Отмена</string>
 
     <!-- Sound settings -->
     <string name="sound_title">Звук</string>
@@ -175,6 +178,7 @@
     <string name="enable_clock_weekday_summary">Сокращённый день недели для отображения</string>
     <string name="right_clock">Часы справа</string>
     <string name="center_clock">Часы по центру</string>
+    <string name="left_clock">Часы слева</string>
     <string name="dont_show">Не показывать</string>
     <string name="clock_date_display">Дата</string>
     <string name="clock_date_display_summary">Пользовательские настройки даты</string>
@@ -201,6 +205,7 @@
     <string name="clock_font_light">Тонкий</string>
     <string name="clock_font_light_italic">Тонкий курсив</string>
     <string name="clock_font_normal">Обычный</string>
+    <string name="status_bar_show_clock_second_title">Показывать секунды</string>
 
     <!-- Partition Info -->
     <string name="partition_info_title">Информация о разделах</string>
@@ -212,15 +217,14 @@
     <string name="partition_info_sdext">/sd-ext (EXT)</string>
     <string name="partition_info_used_of">/</string>
 
-    
-    <!-- Display density -->
-    <string name="display_density">Плотность экрана</string>
-    <string name="display_density_summary">Переопределить плотность пикселей экрана (0 для выключения, требует перезагрузки)</string>
-
     <!-- UI debug setting: show CPU info? [CHAR LIMIT=25] -->
     <string name="show_cpu_info">Показать информацию процессора</string>
     <!-- UI debug setting: show cpu usage summary [CHAR LIMIT=50] -->
     <string name="show_cpu_info_summary">Экран наложения показывает текущую информацию процессора</string>
+    
+    <!-- Display density -->
+    <string name="display_density">Плотность экрана</string>
+    <string name="display_density_summary">Переопределить плотность пикселей экрана (0 для выключения, требует перезагрузки)</string>
 
     <!-- Camera sound switch -->
     <string name="camera_sounds_summary">Включение звука затвора камеры</string>
@@ -265,7 +269,7 @@
      <!--Power menu -->
     <string name="power_category">Кнопка питания</string>
     <string name="lockscreen_enable_power_menu_title">Меню перезагрузки</string>
-    <string name="lockscreen_enable_power_menu_summary">Отключить меню перезагрузки на экране блокировки</string>
+    <string name="actions_category">действия</string>
 
     <!-- Search Bar Switcher -->
     <string name="recents_show_searchbar">Строка поиска в недав.</string>
@@ -401,32 +405,11 @@
     <string name="show_unac_and_overcounted_stats_title">Переучтенная статистика</string>
     <string name="show_unac_and_overcounted_stats_summary">Показывать в статистике батареи переучтенную статистику.</string>
 
-     <!-- About device screen, CPU and RAM info. -->
+    <!-- About device screen, CPU and RAM info. -->
     <string name="cpu_info">ЦПУ</string>
     <string name="mem_info">ОЗУ</string>
 
-    <!-- Heads up -->
-    <string name="heads_up_title">Всплывающие уведомления</string>
-    <string name="app_notification_enable_heads_up_title">Всплывающие уведомления</string>
-    <string name="app_notification_enable_heads_up_summary">Разрешить приложению использовать всплывающие уведомления</string>
-    <string name="heads_up_snooze_title">Длительность \"Отложить\"</string>
-    <string name="heads_up_snooze_summary">При нажатии кнопки \"Отложить\" всплывающие уведомления будут приостановлены на <xliff:g id="number">%d</xliff:g> минут.</string>
-    <string name="heads_up_snooze_disabled_summary">Функция \"Отложить\" отключена.</string>
-    <string name="heads_up_snooze_3min">3 минуты</string>
-    <string name="heads_up_snooze_5min">5 минут</string>
-    <string name="heads_up_snooze_10min">10 минут</string>
-    <string name="heads_up_snooze_15min">15 минут</string>
-    <string name="heads_up_snooze_20min">20 минут</string>
-    <string name="heads_up_time_out_title">Длительность</string>
-    <string name="heads_up_time_out_summary">Всплывающее уведомление будет показываться в течение <xliff:g id="number">%d</xliff:g> секунд.</string>
-    <string name="heads_up_time_out_never_summary">Всплывающее уведомление будет показываться, пока не будет закрыто.</string>
-    <string name="heads_up_time_out_4sec">4 секунды</string>
-    <string name="heads_up_time_out_6sec">6 секунд</string>
-    <string name="heads_up_time_out_8sec">8 секунд</string>
-    <string name="heads_up_time_out_10sec">10 секунд</string>
-    <string name="heads_up_time_out_never">Никогда</string>
-
-     <!-- Option to enable/disable scrolling cache -->
+    <!-- Option to enable/disable scrolling cache -->
     <string name="pref_scrollingcache_title">Кэш прокрутки</string>
     <string name="pref_scrollingcache_summary">Кэш прокрутки может улучшить производительность за счет памяти</string>
     <string name="pref_scrollingcache_force_enable">Включить принудительно</string>
@@ -470,7 +453,7 @@
     <string name="unlock_set_unlock_gesture_summary">Низкий уровень защиты (экспериментальная функция)</string>
     <string name="unlock_set_unlock_mode_gesture">Жест</string>
 
-     <!-- Gesture Anywhere -->
+    <!-- Gesture Anywhere -->
     <string name="gesture_anywhere_title">Жест в любом месте</string>
     <string name="gesture_anywhere_summary">Пользовательский экран жестов для выполнения действий</string>
     <string name="gesture_anywhere_enabled_title">Жест в любом месте</string>
@@ -626,5 +609,214 @@
     <string name="battery_bar_bottomnavbar">Внизу панели навигации</string>
     <string name="battery_bar_regular">Обычный</string>
     <string name="battery_bar_center_mirrored">Зеркальный по центру</string>
+
+    <!-- OmniSwitch -->
+    <string name="omniswitch_settings_title">OmniSwitch</string>
+    <string name="recents_use_omniswitch_title">Использовать как \"Недавние приложения\"</string>
+    <string name="recents_use_omniswitch_summary">Использовать OmniSwitch вместо стандартных \"Недавних приложений\"</string>
+    <string name="omniswitch_start_settings_title">Настройки</string>
+    <string name="omniswitch_start_settings_summary">Открыть настройки OmniSwitch</string>
+    <string name="omniswitch_first_time_title">Информация</string>
+    <string name="omniswitch_first_time_message">Убедитесь, что вы включили OmniSwitch. Это можно сделать с помощью настроек снизу</string>
+
+    <!-- Lockscreen weather -->
+    <string name="lockscreen_weather_title">Погода на экране блокировки</string>
+    <string name="lockscreen_weather_summary">Графический интерфейс будет перезапущен!</string>
+
+    <!-- [CHAR LIMIT=40] Sound & display settings screen, title of dialog for picking LCD density -->
+    <!-- temasek display settings screen, setting option name to change LCD density -->
+    <string name="lcd_density">Плотность экрана</string>
+    <string name="dialog_title_lcd_density">Плотность экрана</string>
+    <!-- temasek display settings screen, setting option summary to change LCD density -->
+    <string name="lcd_density_summary">xxx DPI</string>
+    <string name="custom_density_title">Задайте своё значение</string>
+    <string name="custom_density_summary">При любых проблемах с совместимостью Play Store, убедитесь, что у вас установлена Multi-DPI версия Play Store</string>
+    <string name="custom_density_summary_invalid">\"НЕДОПУСТИМОЕ ЗНАЧЕНИЕ DPI!\"</string>
+    <string name="custom_density">Пользовательская</string>
+    <string name="set_custom_density_title">Задать своё значение DPI</string>
+    <string name="set_custom_density_set">Задать</string>
+    <string name="custom_density_dialog_title">ВНИМАНИЕ!</string>
+    <string name="custom_density_dialog_summary">Изменение стандартной плотности экрана может приводить к некорректной работе некоторых приложений, и/или в Play Store будет писать, что некоторые программы несовместимы с вашим устройством.</string>
+    <string name="dpi">DPI</string>
+    <string name="custom_density_warning">Перезагрузить систему и применить выбранное значение DPI?</string>
+
+    <!-- Privacy guard notification -->
+    <string name="privacy_guard_notification_title">Уведомление</string>
+    <string name="privacy_guard_notifiation_summary">Показывать уведомление, когда защищённый режим активен</string>
+
+    <!-- QuickSettings collapse panel -->
+    <string name="quick_settings_collapse_title">Авто закрытие панели</string>
+    <string name="quick_settings_collapse_summary">Закрытие панели после нажатия</string>
+  
+    <!-- QuickSettings 4 columns -->
+    <string name="qs_four_columns_title">Показывать четыре плитки в ряд</string>
+  
+    <!-- QuickSettings colors -->
+    <string name="background_title">Фон</string>
+    <string name="icon_title">Иконка</string>
+    <string name="qs_colors_title">Настройка цвета</string>
+    <string name="reset_android">Android</string>
+    <string name="reset_swag">Swag</string>
+    <string name="colors_title">Цвета</string>
+    <string name="text_title">Текст</string>
+    <string name="qs_transparent_shade_title">Прозрачность</string>
+    <string name="qs_transparent_shade_summary">Возможность делать панель прозрачной.</string>
+    <string name="qs_color_switch_title">Переключение пользовательского цвета</string>
+    <string name="qs_color_switch_summary">Системный интерфейс будет презапущен!</string>
+
+    <!-- Heads Up -->
+    <string name="category_heads_up">Всплывающие уведомления</string>
+    <string name="summary_heads_up_enabled">\"Всплывающие уведомления\" включены</string>
+    <string name="summary_heads_up_disabled">\"Всплывающие уведомления\" выключены</string>
+    <string name="add_heads_up_package">Добавить приложение</string>
+    <string name="add_heads_up_dnd_summary">Не показывать всплывающие уведомления при работе с этими приложениями</string>
+    <string name="add_heads_up_blacklist_summary">Не показывать всплывающие уведомления от этих приложений</string>
+    <string name="heads_up_dnd_title">Не беспокоить</string>
+    <string name="heads_up_blacklist_title">Чёрный список</string>
+    <string name="heads_up_disabled_notice">\"Всплывающие уведомления\" позволяют отображать интерактивные уведомления от приложений во всплывающем окне.</string>
+    <string name="heads_up_dismiss_on_remove_title">Поведение при свайпе</string>
+    <string name="heads_up_dismiss_on_remove_summary_enabled">Скрывать уведомление вместо удаления</string>
+    <string name="heads_up_dismiss_on_remove_summary_disabled">Скрывать и удалять уведомление</string>
+    
+    <!-- Heads up timeout -->
+    <string name="heads_up_time_out_title">Длительность</string>
+    <string name="heads_up_time_out_summary">\"Всплывающее уведомление\" будет показываться в течение <xliff:g id="number">%d</xliff:g> секунд.</string>
+    <string name="heads_up_time_out_never_summary">\"Всплывающее уведомление\" будет показываться опр. время, пока не будет закрыто.</string>
+    <string name="heads_up_time_out_2sec">2 секунды</string>
+    <string name="heads_up_time_out_4sec">4 секунды</string>
+    <string name="heads_up_time_out_6sec">6 секунд</string>
+    <string name="heads_up_time_out_8sec">8 секунд</string>
+    <string name="heads_up_time_out_10sec">10 секунд</string>
+    <string name="heads_up_time_out_never">Никогда</string>
+
+    <!-- Changelog -->
+    <string name="changelog_temasek_title">Список изменений</string>
+    <string name="changelog_temasek_error">Не удаётся загрузить список изменений</string>
+
+    <!-- Captive Portal -->
+    <string name="captive_portal_detection">Принудительное обнаружение сервера</string>
+    <string name="captive_portal_detection_summary">Если отключено, то соединение с серверами Google не требуется для того, чтобы обнаружить передачу данных.</string>
+
+    <!-- Navring targets (enable/disable) -->
+    <string name="navigation_ring_enable_title">Включить ярлыки кольца панели навигации</string>
+
+    <!-- Heads up touch outside -->
+    <string name="heads_up_touch_outside_title">Поведение при внешнем нажатии</string>
+    <string name="heads_up_touch_outside_summary_enabled">Скрывать уведомление при нажатии за пределами уведомления или при нажатии кнопки \"Домой\"</string>
+    <string name="heads_up_touch_outside_summary_disabled">НЕ скрывать уведомление при нажатии за пределами уведомления или при нажатии кнопки \"Домой\"</string>
+
+    <!-- The volume key answer -->
+    <string name="volume_answer_call_title">Ответ кнопкой громкости</string>
+    <string name="volume_answer_call_summary">Ответ кнопкой увеличения громкости</string>
+
+    <!-- Volume pane timeout -->
+    <string name="category_panel_time_out">Таймаут панели</string>
+    <string name="volume_panel_time_out_title">Длительность показа панели громкости</string>
+    <string name="volume_panel_time_out_summary">Скрыть после <xliff:g id="number">%d</xliff:g> сек. Автоматически скрывать при внешнем нажатии</string>
+    <string name="volume_panel_time_out_3sec">3 секунды (по умолчанию)</string>
+    <string name="volume_panel_time_out_5sec">5 секунд</string>
+    <string name="volume_panel_time_out_8sec">8 секунд</string>
+    <string name="volume_panel_time_out_12sec">12 секунд</string>
+    <string name="volume_panel_time_out_15sec">15 секунд</string>
+
+    <!-- Doze pulse (ambient display) options -->
+    <string name="doze_overwrite_value_title">Перезаписывать значение</string>
+    <string name="doze_overwrite_value_summary">Разрешить перезаписывать стандартные значения пользовательскими</string>
+
+    <string name="doze_list_mode_title">Режим бездействия</string>
+    <string name="doze_list_mode_summary">Настройка \"Режима бездействия\"</string>
+
+    <string name="doze_pulse_title">Настройки пульсации</string>
+    <string name="doze_pulse_duration_in_title">Появление</string>
+    <string name="doze_pulse_duration_in_summary"></string>
+
+    <string name="doze_pulse_duration_visible_title">Время отображения</string>
+    <string name="doze_pulse_duration_visible_summary"></string>
+
+    <string name="doze_pulse_duration_out_title">Затухание</string>
+    <string name="doze_pulse_duration_out_summary"></string>
+
+    <string name="doze_pulse_on_notifications_title">Пульсировать при уведомлениях</string>
+    <string name="doze_pulse_on_notifications_summary">Пульсация дисплея при непросмотренных уведомлениях</string>
+
+    <string name="doze_shake_title">Настройки встряхивания</string>
+    <string name="doze_shake_mode_title">Режим встряхивания</string>
+    <string name="doze_shake_mode_summary">Использовать датчик движения для активации дисплея</string>
+    <string name="doze_shake_mode_test_summary">Хотите протестировать датчик движения?</string>
+    <string name="doze_shake_mode_test_result">Применить текущее значение?</string>
+    <string name="doze_shake_test">Встряхните ваше устройство</string>
+    <string name="doze_shake_it">Встряхивание обнаружено!</string>
+
+    <string name="doze_shake_acc_threshold_title">Сила встряхивания</string>
+    <string name="doze_shake_acc_threshold_summary">Настроить силу встряхивания для активации дисплея</string>
+
+    <string name="doze_time_mode_title">Показывать время и дату</string>
+    <string name="doze_time_mode_summary">Показывать время и дату, даже когда нет уведомлений</string>
+
+    <string name="twohundred_ms">200 мс</string>
+    <string name="fivehundred_ms">500 мс</string>
+    <string name="one_second">1 с</string>
+    <string name="one_second_default">1 с (по умолчанию)</string>
+    <string name="onehalf_second">1.5 с</string>
+    <string name="two_second">2 с</string>
+    <string name="twohalf_second">2.5 с</string>
+    <string name="three_second">3 с</string>
+    <string name="three_second_default">3 с (по умолчанию)</string>
+    <string name="threehalf_second">3.5 с</string>
+    <string name="four_second">4 с</string>
+    <string name="fourhalf_second">4.5 с</string>
+    <string name="five_second">5 с</string>
+
+    <string name="veryeasy_shake">Очень слабо</string>
+    <string name="easy_shake">Слабо</string>
+    <string name="medium_shake">По умолчанию</string>
+    <string name="hard_shake">Сильно</string>
+    <string name="veryhard_shake">Очень сильно</string>
+    <string name="strong_shake">Мощно</string>
+
+    <string name="fully_mode">Полный режим</string>
+    <string name="pocket_shake_mode">Режим \"В кармане\" и встряхивание</string>
+    <string name="pocket_pulse_mode">Режим \"В кармане\" и пульсация</string>
+    <string name="pocket_only_mode">Режим \"В кармане\"</string>
+    <string name="shake_pulse_mode">Встряхивание и пульсация</string>
+    <string name="pulse_only_mode">Пульсация (по умолчанию)</string>
+
+    <!-- Double Tap Navbar to Sleep -->
+    <string name="double_tap_sleep_nav_bar_title">Двойное нажатие для сна</string>
+    <string name="double_tap_sleep_nav_bar_summary">Двойное нажатие по панели навигации выключает экран</string>
+
+    <!-- Show carrier label and custom -->
+    <string name="carrier_options">Логотип оператора</string>
+    <string name="show_status_bar_carrier_title">Логотип оператора в строке состояния</string>
+    <string name="show_status_bar_carrier_summary">Показывать логотип в строке состояния</string>
+    <string name="custom_carrier_label_title">Свой логотип</string>
+    <string name="custom_carrier_label_explain">Пожалуйста, введите своё имя оператора. Оставить пустым для отображения по умолчанию.</string>
+    <string name="custom_carrier_label_notset">Пользовательский логотип не установлен</string>
+    <string name="status_bar_carrier_color">Цвет логотипа</string>
+
+    <!-- Data activity icons -->
+    <string name="status_bar_show_network_activity_title">Индикаторы сетевой активности</string>
+
+    <!-- Status bar greeting -->
+    <string name="status_bar_greeting_category_title">Приветсвие в строке состояния</string>
+    <string name="status_bar_greeting_title">Приветсвие</string>
+    <string name="status_bar_greeting_summary">Показывать пользовательское приветсвие в строке состояния после разблокировки устройства</string>
+    <string name="status_bar_greeting_dialog">Установить своё приветсвие</string>
+    <string name="status_bar_greeting_main">Вспышка!!!</string>
+    <string name="status_bar_greeting_timeout_title">Таймаут приветсвия</string>
+
+    <!-- Long press on lock screen lock icon to sleep -->
+    <string name="longpress_lock_icon_to_sleep_title">Долгое нажатие на иконку блокировки для сна</string>
+    <string name="longpress_lock_icon_to_sleep_summary">эта опция не будет работать, если включен защищенный режим</string>
+
+    <!-- Force expand notifications -->
+    <string name="notification_force_expand_title">Принудительно развернутое уведомление</string>
+    <string name="notification_force_expand_summary">Принудительное развертывание уведомлений для всех приложений, которые это поддерживают</string>
+
+    <!-- Slim Shortcuts -->
+    <string name="slim_shortcut_picker">Действия</string>
+    <string name="qs_tile_slimaction">Действие</string>
+    <string name="qs_slim_action_summary">Добавить и установить порядок действий</string>
+    <string name="qs_slim_action_title">>Действия</string>
 
 </resources>
