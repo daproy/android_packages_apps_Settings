@@ -451,7 +451,6 @@
   
   <!-- Battery saver -->
   <string name="battery_saver_title">Cor de aviso</string>
-  <string name="battery_saver_style_reset_message">Redefinir cor do aviso de Economia de bateria?</string>
   
   <!-- Lock Gesture settings -->
   <!-- Security & location settings screen, setting option name -->

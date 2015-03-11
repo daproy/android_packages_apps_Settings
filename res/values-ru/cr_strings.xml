@@ -419,7 +419,6 @@
 
     <!-- Battery saver -->
     <string name="battery_saver_title">Цвет энергосбережения</string>
-    <string name="battery_saver_style_reset_message">Сбросить цвет в режиме энергосбережения по умолчанию?</string>
 
     <!-- Lock Gesture settings -->
     <string name="lockgesture_change_lock_pattern_label">Изменить жест разблокировки</string>

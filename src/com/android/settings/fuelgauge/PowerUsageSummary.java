@@ -60,6 +60,8 @@ import com.android.settings.SettingsPreferenceFragment;
 
 import java.util.List;
 
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
+
 /**
  * Displays a list of apps and subsystems that consume power, ordered by how much power was
  * consumed since the last time it was unplugged.
@@ -79,6 +81,8 @@ public class PowerUsageSummary extends SettingsPreferenceFragment
 
     private static final String BATTERY_HISTORY_FILE = "tmp_bat_history.bin";
 
+    private static final String PREF_COLOR_PICKER = "battery_saver_color";
+
     private static final int MENU_STATS_TYPE = Menu.FIRST;
     private static final int MENU_STATS_REFRESH = Menu.FIRST + 1;
     private static final int MENU_BATTERY_SAVER = Menu.FIRST + 2;
@@ -91,6 +95,7 @@ public class PowerUsageSummary extends SettingsPreferenceFragment
     private String mBatteryLevel;
     private String mBatteryStatus;
     private boolean mBatteryPluggedIn;
+    private ColorPickerPreference mColorPicker;
 
     private int mStatsType = BatteryStats.STATS_SINCE_CHARGED;
 
@@ -155,6 +160,10 @@ public class PowerUsageSummary extends SettingsPreferenceFragment
         addPreferencesFromResource(R.xml.power_usage_summary);
         mAppListGroup = (PreferenceGroup) findPreference(KEY_APP_LIST);
         setHasOptionsMenu(true);
+
+        mColorPicker = (ColorPickerPreference) findPreference(PREF_COLOR_PICKER);
+        mColorPicker.setOnPreferenceChangeListener(this);
+        initColorPicker();
 
         mPerfProfilePref = (ListPreference) findPreference(KEY_PERF_PROFILE);
         mBatterySaverPref = (SwitchPreference) findPreference(KEY_BATTERY_SAVER);
@@ -255,13 +264,35 @@ public class PowerUsageSummary extends SettingsPreferenceFragment
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 
+    private void initColorPicker() {
+        int intColor = Settings.System.getInt(getActivity().getContentResolver(),
+                    Settings.System.BATTERY_SAVER_MODE_COLOR, -2);
+        if (intColor == -2) {
+            intColor = getResources().getColor(
+                    com.android.internal.R.color.battery_saver_mode_color);
+            mColorPicker.setSummary(getResources().getString(R.string.default_string));
+        } else {
+            String hexColor = String.format("#%08x", (0xffffffff & intColor));
+            mColorPicker.setSummary(hexColor);
+        }
+        mColorPicker.setNewPreviewColor(intColor);
+    }
+
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (newValue != null) {
-            if (preference == mPerfProfilePref) {
-                mPowerManager.setPowerProfile(String.valueOf(newValue));
-                updatePerformanceSummary();
-                return true;
+        if (preference == mColorPicker) {
+            String hex = ColorPickerPreference.convertToARGB(Integer.valueOf(String
+                    .valueOf(newValue)));
+            preference.setSummary(hex);
+            int intHex = ColorPickerPreference.convertToColorInt(hex);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.BATTERY_SAVER_MODE_COLOR, intHex);
+            return true;
+        } else if (newValue != null) {
+               if (preference == mPerfProfilePref) {
+                   mPowerManager.setPowerProfile(String.valueOf(newValue));
+                   updatePerformanceSummary();
+                   return true;
             }
         }
         return false;
