@@ -70,7 +70,6 @@
     <PreferenceScreen
          android:id="@+id/smartcontrol_settings"
          android:title="@string/smartcontrol_settings_title"
-         android:fragment="com.android.settings.temasek.SmartControl"
-         android:icon="@drawable/ic_settings_smartcontrol" />
+         android:fragment="com.android.settings.temasek.SmartControl" />
 
 </PreferenceScreen>
