@@ -688,16 +688,6 @@
   <string name="qs_main_tiles_summary_off">Три плитки на каждом ряду</string>
   <string name="qs_advanced_location_title">Расширенные настройки местоположения</string>
   <string name="qs_advanced_location_summary">Включить расширенные настройки для местоположения в быстрых настройках</string>
-  <string name="qs_screenshot_tile">Скриншот</string>
-  <string name="qs_sync_tile">Синхронизация</string>
-  <string name="qs_tile_powermenu">Меню питания</string>
-  <string name="qs_battery_saver_tile">Режим энергосбережения</string>
-  <string name="qs_brightness_tile">Яркость</string>
-  <string name="qs_expanded_desktop_tile">Расширенный экран</string>
-  <string name="qs_notifications_tile">Уведомления</string>
-  <string name="qs_screen_off_tile">Выключение экрана</string>
-  <string name="qs_tile_reboot">перезагрузка</string>
-  <string name="qs_ambient_display_tile">Запрет спящего режима</string>
 
   <string name="gesture_settings_title">Жесты</string>
   <string name="themes_settings_title">Темы</string>

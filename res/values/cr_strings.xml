@@ -791,6 +791,18 @@
     <string name="qs_transparent_shade_summary">Ability to apply color alpha value and make notification shade transparent.</string>
     <string name="qs_color_switch_title">Custom color switch</string>
 
+    <!-- Quick Settings Tiles -->
+    <string name="qs_screenshot_tile">Screenshot</string>
+    <string name="qs_sync_tile">Sync</string>
+    <string name="qs_tile_powermenu">Power Menu</string>
+    <string name="qs_battery_saver_tile">Battery saver</string>
+    <string name="qs_brightness_tile">Brightness</string>
+    <string name="qs_expanded_desktop_tile">Expanded desktop</string>
+    <string name="qs_notifications_tile">Notifications</string>
+    <string name="qs_screen_off_tile">Screen off</string>
+    <string name="qs_tile_reboot">Reboot</string>
+    <string name="qs_ambient_display_tile">Ambient display</string>
+
     <!-- Heads Up -->
     <string name="category_heads_up">Heads up notifications</string>
     <string name="summary_heads_up_enabled">Pop-up notifications are enabled</string>
