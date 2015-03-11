@@ -128,13 +128,13 @@
   <string name="bluetooth_rename_device">Renomear este dispositivo</string>
   <string name="bluetooth_rename_button">Renomear</string>
   <string name="bluetooth_disconnect_title">Desconectar?</string>
-  <string name="bluetooth_disconnect_all_profiles">Isso acabará com sua conexão com: <br><b>%1$s</b></string>
+  <string name="bluetooth_disconnect_all_profiles">Isso acabará com sua conexão com: &lt; br &gt;&lt; b &gt;%1$s &lt;/b &gt;</string>
   <string name="bluetooth_empty_list_user_restricted">"Você não tem permissão para alterar as configurações de Bluetooth."</string>
   <string name="bluetooth_is_visible_message">%1$s é visível para dispositivos nas proximidades enquanto a configuração de Bluetooth estiver aberta.</string>
   <string name="bluetooth_is_disconnect_question">Desligue o %1$s?</string>
   <string name="bluetooth_broadcasting">Radiodifusão</string>
   <string name="bluetooth_disable_profile_title">Desativar seu perfil?</string>
-  <string name="bluetooth_disable_profile_message">Isto desativará: <br><b>%1$s</b> <br><br>de: <br><b>%2$s </b></string>
+  <string name="bluetooth_disable_profile_message">Isto irá desativar: &lt; br &gt;&lt; b &gt;%1$s &lt;/b &gt;&lt; br &gt;&lt; br &gt; de: &lt; br &gt;&lt; b &gt;%2$s &lt;/b &gt;</string>
   <string name="bluetooth_connected">Conectado</string>
   <string name="bluetooth_connected_no_headset">Conectado (sem telefone)</string>
   <string name="bluetooth_connected_no_a2dp">Conectado (sem mídia)</string>
