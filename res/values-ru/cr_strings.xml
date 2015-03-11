@@ -662,7 +662,6 @@
     <string name="qs_transparent_shade_title">Прозрачность</string>
     <string name="qs_transparent_shade_summary">Возможность делать панель прозрачной.</string>
     <string name="qs_color_switch_title">Переключение пользовательского цвета</string>
-    <string name="qs_color_switch_summary">Системный интерфейс будет презапущен!</string>
 
     <!-- Heads Up -->
     <string name="category_heads_up">Всплывающие уведомления</string>
@@ -814,7 +813,7 @@
     <string name="notification_force_expand_summary">Принудительное развертывание уведомлений для всех приложений, которые это поддерживают</string>
 
     <!-- Slim Shortcuts -->
-    <string name="slim_shortcut_picker">Действия</string>
+    <string name="slim_shortcut_picker">Дополнительные действия</string>
     <string name="qs_tile_slimaction">Действие</string>
     <string name="qs_slim_action_summary">Добавить и установить порядок действий</string>
     <string name="qs_slim_action_title">>Действия</string>
