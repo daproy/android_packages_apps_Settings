@@ -19,6 +19,24 @@
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
         android:title="@string/temasek_lockscreen_title">
 
+    <!-- Weather -->
+    <PreferenceCategory
+        android:key="status_bar_show_weather_category"
+        android:title="@string/status_bar_show_weather_category" >
+
+        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="status_bar_show_weather"
+            android:title="@string/status_bar_show_weather_title"
+            android:summary="@string/status_bar_show_weather_summary"
+            android:defaultValue="true" />
+
+        <PreferenceScreen
+            android:key="lockscreen_weather"
+            android:title="@string/lock_screen_weather_settings_title"
+            android:fragment="com.android.settings.temasek.LockScreenWeatherSettings" />
+
+    </PreferenceCategory>
+
     <PreferenceCategory
         android:key="lockscreen_shortcuts_category"
         android:title="@string/temasek_lockscreen_shortcuts_category" >
