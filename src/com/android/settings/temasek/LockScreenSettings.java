@@ -51,7 +51,7 @@ public class LockScreenSettings extends SettingsPreferenceFragment
         // Lockscreen weather
         mLockscreenWeather = (SwitchPreference) findPreference(KEY_LOCKSCREEN_WEATHER);
         mLockscreenWeather.setChecked(Settings.System.getIntForUser(resolver,
-            Settings.System.LOCKSCREEN_WEATHER, 1, UserHandle.USER_CURRENT) == 1);
+            Settings.System.LOCKSCREEN_WEATHER, 0, UserHandle.USER_CURRENT) == 1);
         mLockscreenWeather.setOnPreferenceChangeListener(this);
     }
 
@@ -74,7 +74,7 @@ public class LockScreenSettings extends SettingsPreferenceFragment
         if (preference == mLockscreenWeather) {
             boolean value = (Boolean) objValue;
             Settings.System.putIntForUser(getActivity().getContentResolver(),
-                    Settings.System.LOCKSCREEN_WEATHER, value ? 1 : 0, UserHandle.USER_CURRENT);
+                    Settings.System.LOCKSCREEN_WEATHER, value ? 0 : 1, UserHandle.USER_CURRENT);
             Helpers.restartSystemUI();
         }
         return false;
