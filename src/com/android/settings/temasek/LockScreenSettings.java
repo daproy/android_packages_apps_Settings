@@ -16,43 +16,25 @@
 
 package com.android.settings.temasek;
 
-import android.content.ContentResolver;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.os.Bundle;
-import android.os.UserHandle;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
-import android.preference.Preference.OnPreferenceChangeListener;
-import android.preference.SwitchPreference;
-import android.provider.Settings;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.util.Helpers;
 
 public class LockScreenSettings extends SettingsPreferenceFragment
-        implements OnSharedPreferenceChangeListener,
-        Preference.OnPreferenceChangeListener {
+        implements OnSharedPreferenceChangeListener {
 
     private static final String TAG = "LockScreenSettings";
-
-    private static final String KEY_LOCKSCREEN_WEATHER = "lockscreen_weather";
-
-    private SwitchPreference mLockscreenWeather;
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.temasek_lockscreen);
-
-        ContentResolver resolver = getActivity().getContentResolver();
-
-        // Lockscreen weather
-        mLockscreenWeather = (SwitchPreference) findPreference(KEY_LOCKSCREEN_WEATHER);
-        mLockscreenWeather.setChecked(Settings.System.getIntForUser(resolver,
-            Settings.System.LOCKSCREEN_WEATHER, 0, UserHandle.USER_CURRENT) == 1);
-        mLockscreenWeather.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -67,16 +49,5 @@ public class LockScreenSettings extends SettingsPreferenceFragment
 
     @Override
     public void onSharedPreferenceChanged(SharedPreferences preferences, String key) {
-    }
-
-    @Override
-    public boolean onPreferenceChange(Preference preference, Object objValue) {
-        if (preference == mLockscreenWeather) {
-            boolean value = (Boolean) objValue;
-            Settings.System.putIntForUser(getActivity().getContentResolver(),
-                    Settings.System.LOCKSCREEN_WEATHER, value ? 0 : 1, UserHandle.USER_CURRENT);
-            Helpers.restartSystemUI();
-        }
-        return false;
     }
 }
