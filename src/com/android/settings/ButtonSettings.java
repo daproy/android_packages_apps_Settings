@@ -442,6 +442,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
 
     private ListPreference initRecentsLongPressAction(String key) {
         ListPreference list = (ListPreference) getPreferenceScreen().findPreference(key);
+        if (list == null) return null;
         list.setOnPreferenceChangeListener(this);
 
         // Read the componentName from Settings.Secure, this is the user's prefered setting
