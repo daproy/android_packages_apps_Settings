@@ -1002,4 +1002,7 @@
     <string name="lid_controls_wake_title">Control wake</string>
     <string name="lid_controls_wake_summary">Turn screen on when lid opens</string>
 
+    <!-- OTA update -->
+    <string name="ota_title">OTA update</string>
+
 </resources>

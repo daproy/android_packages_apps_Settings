@@ -1263,6 +1263,17 @@ public class SettingsActivity extends Activity
                     if (!supported) {
                         removeTile = true;
                     }
+                } else if (id == R.id.ota_settings) {
+                    // Embedding into Settings only if app exists (user could manually remove it)
+                    boolean supported = false;
+                    try {
+                        supported = (getPackageManager().getPackageInfo("com.ota.updates", 0).versionCode >= 231);
+                    } catch (PackageManager.NameNotFoundException e) {
+ 
+                    }
+                    if (!supported) {
+                        removeTile = true;
+                    }
                 } else if (id == R.id.performance_settings) {
                     final boolean forceHide =
                             getResources().getBoolean(R.bool.config_hidePerformanceSettings);

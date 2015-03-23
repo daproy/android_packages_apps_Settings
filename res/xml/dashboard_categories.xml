@@ -389,6 +389,17 @@
                 android:icon="@drawable/ic_settings_development"
                 />
 
+        <!-- OTA Update -->
+        <dashboard-tile
+            android:id="@+id/ota_settings"
+            android:icon="@drawable/ic_settings_viper"
+            android:title="@string/ota_title">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="com.ota.updates"
+                android:targetClass="com.ota.updates.activities.MainActivity" />
+        </dashboard-tile>
+
         <!-- About Device -->
         <dashboard-tile
                 android:id="@+id/about_settings"
