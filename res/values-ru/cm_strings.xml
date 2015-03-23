@@ -290,6 +290,7 @@
   <string name="status_bar_battery_style_icon_portrait">Вертикальный значок</string>
   <string name="status_bar_battery_style_icon_landscape">Горизонтальный значок</string>
   <string name="status_bar_battery_style_circle">Круг</string>
+  <string name="status_bar_battery_style_dotted_circle">Пунктирный круг</string>
   <string name="status_bar_battery_style_text">Текст</string>
   <string name="status_bar_battery_style_hidden">Не показывать индикатор</string>
   <string name="status_bar_battery_percentage_title">Процент заряда батареи</string>
@@ -684,6 +685,7 @@
   <string name="status_bar_show_weather_summary">Показывать погоду над панелью быстрых настроек</string>
   <string name="qs_category_title">Панель быстрых настроек</string>
   <string name="qs_brightness_slider_title">Показывать регулятор яркости</string>
+  <string name="qs_brightness_slider_summary">Показать ползунок яркости в панели быстрых настроек</string>
   <string name="qs_order_title">Выбрать и упорядочить плитки</string>
   <string name="add_qs">Добавление плитки</string>
   <string name="qs_action_delete">Удалить</string>
@@ -708,6 +710,8 @@
   <string name="qs_tile_lte">LTE</string>
   <string name="qs_tile_screen_timeout">Спящий режим</string>
   <string name="qs_main_tiles_title">Увеличить первый ряд</string>
+  <string name="qs_wifi_detail_title">Подробный просмотр Wi\u2011Fi</string>
+  <string name="qs_wifi_detail_summary">Включить подробное описание соединения Wi\u2011Fi в панели быстрых настроек</string>
   <string name="qs_main_tiles_summary_on">Две главные плитки на первом ряду</string>
   <string name="qs_main_tiles_summary_off">Три плитки на каждом ряду</string>
   <string name="qs_advanced_location_title">Расширенные настройки местоположения</string>

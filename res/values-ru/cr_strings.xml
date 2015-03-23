@@ -255,6 +255,9 @@
     <string name="navigation_bar_size_48_dp_default">48 dp (по умолчанию)</string>
     <string name="navigation_bar_size_0_dp">0 dp (скрыть)</string>
 
+    <!-- Navigation bar button color -->
+    <string name="navbar_button_tint_title">Цвет кнопок</string>
+
     <!-- QuickSettings: Smart Pulldown -->
     <string name="smart_pulldown_title">Умный доступ</string>
     <string name="smart_pulldown_summary">Открывать быстрые настройки, если %1$s уведомлений</string>
@@ -395,7 +398,13 @@
     <string name="shortcuts_icon_picker_twitter">Twitter</string>
     <string name="shortcuts_icon_picker_unlock">Разблокировка</string>
     
-    <!-- Lockscreen Shortcuts -->
+    <!-- Temasek lockscreen -->
+    <string name="temasek_lockscreen_title">Экран Блокировки</string>
+    <string name="temasek_lockscreen_shortcuts_category">Ярлыки</string>
+    <!-- CM lockscreen shortcuts -->
+    <string name="cm_lockscreen_shortcuts_title">Ярлыки экрана блокировки</string>
+    <string name="cm_lockscreen_shortcuts_summary">Просмотр и изменение ярлыков в нижних углах экрана блокировки</string>
+    <!-- Slim lockscreen shortcuts -->
     <string name="lockscreen_shortcuts_title">Ярлыки</string>
     <string name="lockscreen_shortcuts_summary">Просмотреть/изменить ярлыки экрана блокировки</string>
     <string name="lockscreen_shorcuts_longpress_title">Долгое нажатие на ярлык</string>
@@ -592,6 +601,32 @@
     <string name="su_indicator">Иконка Superuser</string>
     <string name="su_indicator_summary">Показывать иконку Superuser при активации сессии</string>
 
+    <!-- Lockscreen weather -->
+    <string name="status_bar_show_weather_category">Погода</string>
+    <string name="lock_screen_weather_settings_title">Погода на экране блокировки</string>
+    <string name="lock_screen_colors_title">Цвета экрана блокировки</string>
+    <string name="lock_screen_color_settings_summary">Настройка цветов</string>
+    <string name="weather_show_weather_title">Показывать Погоду</string>
+    <string name="weather_show_weather_summary">Включить отображение информации о погоде</string>
+    <string name="weather_show_location_title">Показывать Расположение</string>
+    <string name="weather_show_location_summary">Включить отображение местоположения</string>
+    <string name="weather_show_timestamp_title">Показывать Время</string>
+    <string name="weather_show_timestamp_summary">Включить отображение времени</string>
+    <string name="weather_condition_icon_title">Стиль Иконок</string>
+    <string name="weather_condition_icon_dlg_title">Выберете стиль иконок для отображения погоды</string>
+    <string name="weather_condition_icon_monochrome_title">Монохромные</string>
+    <string name="weather_condition_icon_colored_title">Цветные</string>
+    <string name="weather_condition_icon_vclouds_title">Объёмные</string>
+    <string name="weather_colorize_all_icons_title">Раскрасить все иконки</string>
+    <string name="weather_colorize_all_icons_summary">Включить для раскраски всех иконок. Выключить для раскраски только монохромных иконок</string>
+    <string name="icons_title">Icons</string>
+    <string name="position_right_title">Right</string>
+    <string name="position_centered_title">Centered</string>
+    <string name="hidden_title">Hidden</string>
+    <string name="dlg_reset_values_message">Reset values to\nAndroid- or temasek default?</string>
+    <string name="dlg_reset_android">Android</string>
+    <string name="dlg_reset_temasek">temasek</string>
+
     <!-- Battery Bar -->
     <string name="status_bar_battery_cat_title">Батарея</string>
     <string name="battery_bar_title">Полоса батареи</string>
@@ -617,6 +652,9 @@
     <string name="omniswitch_start_settings_summary">Открыть настройки OmniSwitch</string>
     <string name="omniswitch_first_time_title">Информация</string>
     <string name="omniswitch_first_time_message">Убедитесь, что вы включили OmniSwitch. Это можно сделать с помощью настроек снизу</string>
+
+    <!-- Default alarm ringtone -->
+    <string name="alarm_ringtone_title">Стандартные мелодии Будильника</string>
 
     <!-- Lockscreen weather -->
     <string name="lockscreen_weather_title">Погода на экране блокировки</string>
@@ -730,6 +768,8 @@
     <string name="volume_panel_time_out_15sec">15 секунд</string>
 
     <!-- Doze pulse (ambient display) options -->
+    <string name="summary_doze_enabled">Включено</string>
+    <string name="summary_doze_disabled">Выключено</string>
     <string name="doze_overwrite_value_title">Перезаписывать значение</string>
     <string name="doze_overwrite_value_summary">Разрешить перезаписывать стандартные значения пользовательскими</string>
 
@@ -807,6 +847,10 @@
     <!-- Data activity icons -->
     <string name="status_bar_show_network_activity_title">Индикаторы сетевой активности</string>
 
+    <!-- Show bluetooth icon when disconnected -->
+    <string name="status_bar_bluetooth_icon">Показывать иконку Bluetooth</string>
+    <string name="status_bar_bluetooth_icon_summary">Отображать иконку Bluetooth, когда он включен, но не соединён</string>
+
     <!-- Status bar greeting -->
     <string name="status_bar_greeting_category_title">Приветсвие в строке состояния</string>
     <string name="status_bar_greeting_title">Приветсвие</string>
@@ -814,6 +858,14 @@
     <string name="status_bar_greeting_dialog">Установить своё приветсвие</string>
     <string name="status_bar_greeting_main">Вспышка!!!</string>
     <string name="status_bar_greeting_timeout_title">Таймаут приветсвия</string>
+
+    <!-- Smart Control -->
+    <string name="smartcontrol_settings_title">Интеллектуальное Управление</string>
+    <string name="direct_control_title">Быстрый Набор</string>
+    <string name="direct_call_for_dialer_title">Быстрый вызов</string>
+    <string name="direct_call_for_dialer_summary">Поднести телефон к уху после ввода номера, чтобы сразу позвонить</string>
+    <string name="direct_call_for_mms_title">Быстрый вызов в MMS</string>
+    <string name="direct_call_for_mms_summary">Поднеся телефон к уху произойдет автоматический вызов текущего контака</string>
 
     <!-- Long press on lock screen lock icon to sleep -->
     <string name="longpress_lock_icon_to_sleep_title">Долгое нажатие на иконку блокировки для сна</string>
@@ -828,5 +880,13 @@
     <string name="qs_tile_slimaction">Действие</string>
     <string name="qs_slim_action_summary">Добавить и установить порядок действий</string>
     <string name="qs_slim_action_title">>Действия</string>
+
+    <!-- Smart cover -->
+    <string name="smart_cover_title">смарт-обложка</string>
+    <string name="lid_settings_title">Крышка</string>
+    <string name="lid_controls_sleep_title">Управление сном</string>
+    <string name="lid_controls_sleep_summary">Выключение экрана при закрытии крышки</string>
+    <string name="lid_controls_wake_title">Пробуждение экрана</string>
+    <string name="lid_controls_wake_summary">Включить экран при открытии крышки</string>
 
 </resources>
