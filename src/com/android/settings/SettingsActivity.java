@@ -1267,7 +1267,7 @@ public class SettingsActivity extends Activity
                     // Embedding into Settings only if app exists (user could manually remove it)
                     boolean supported = false;
                     try {
-                        supported = (getPackageManager().getPackageInfo("com.ota.updates", 0).versionCode >= 231);
+                        supported = (getPackageManager().getPackageInfo("com.ota.updates", 0).versionCode >= 0);
                     } catch (PackageManager.NameNotFoundException e) {
  
                     }
